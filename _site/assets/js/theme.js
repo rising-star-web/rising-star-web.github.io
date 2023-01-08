@@ -46,7 +46,7 @@ var theme = {
     var navbar = document.querySelector(".navbar");
     if (navbar == null) return;
     var options = {
-      offset: 350,
+      offset: 50,
       offsetSide: 'top',
       classes: {
         clone: 'navbar-clone fixed',
@@ -55,9 +55,13 @@ var theme = {
       },
       onStick: function() {
         var navbarClonedClass = this.clonedElem.classList;
+        navbar.style.opacity = "0";
         if (navbarClonedClass.contains('transparent') && navbarClonedClass.contains('navbar-dark')) {
           this.clonedElem.className = this.clonedElem.className.replace("navbar-dark","navbar-light");
         }
+      },
+      onUnstick: function(){
+        navbar.style.opacity = "1";
       }
     };
     var banner = new Headhesive('.navbar', options);
