@@ -33,6 +33,9 @@ github_username:  jekyll
 theme: minima
 plugins:
   - jekyll-feed
+  
+sass:
+  sass_dir: _sass
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -53,3 +56,21 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+exclude:
+  # other stuff you're excluding
+  - assets/css/main.scss
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  
+keep_files:
+  # other stuff you're keeping
+  - assets/css/main.css

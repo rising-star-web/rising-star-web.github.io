@@ -1,0 +1,12 @@
+.nav-text-solid{
+    color: #424242
+}
+
+.nav-text-solid:hover{
+    color: #424242;
+    opacity: 0.5;
+}
+
+.nav-solid-image{
+    content:url("/assets/img/codingmindsacademylogo.png");
+}

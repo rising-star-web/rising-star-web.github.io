@@ -55,14 +55,10 @@ var theme = {
       },
       onStick: function() {
         var navbarClonedClass = this.clonedElem.classList;
-        navbar.style.opacity = "0";
         if (navbarClonedClass.contains('transparent') && navbarClonedClass.contains('navbar-dark')) {
           this.clonedElem.className = this.clonedElem.className.replace("navbar-dark","navbar-light");
         }
       },
-      onUnstick: function(){
-        navbar.style.opacity = "1";
-      }
     };
     var banner = new Headhesive('.navbar', options);
   },
