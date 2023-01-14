@@ -1,3 +1,8 @@
-.navbar-solid a{
-    color:#4c4c4c;
+#navbar{
+    transition: all 0.5s ease-out;
+}
+
+.bg-custom{
+    background: rgb(246,247,249);
+    background: linear-gradient(180deg, rgba(246,247,249,1) 18%, rgba(222,237,255,1) 80%);
 }
