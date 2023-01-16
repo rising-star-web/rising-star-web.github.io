@@ -6,3 +6,23 @@
     background: rgb(246,247,249);
     background: linear-gradient(180deg, rgba(246,247,249,1) 18%, rgba(222,237,255,1) 80%);
 }
+
+.free-trial-wrap{
+    position: fixed;
+    right: 8rem;
+    bottom: 3.6rem;
+    width: 4.6rem;
+    height: 4.6rem;
+    display: block;
+    border-radius: 100%;
+    z-index: 1010;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0.75rem);
+    transition: all 200ms linear, margin-right 0ms;
+}
+
+.show-trial{
+    opacity: 1;
+    visibility: visible;
+}

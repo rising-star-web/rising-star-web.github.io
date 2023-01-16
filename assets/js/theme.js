@@ -597,6 +597,19 @@ var theme = {
    */
   pageProgress: () => {
     var progressWrap = document.querySelector('.progress-wrap');
+    var freeTrial = document.querySelector('.free-trial-wrap');
+    if(freeTrial !=null){
+      var offset = 50;
+      window.addEventListener("scroll", function(event) {
+        var scrollElementPos = document.body.scrollTop || document.documentElement.scrollTop;
+        if(scrollElementPos >= offset) {
+          freeTrial.classList.add("show-trial")
+        } else {
+          freeTrial.classList.remove("show-trial")
+        }
+      });
+
+    }
     if(progressWrap != null) {
       var progressPath = document.querySelector('.progress-wrap path');
       var pathLength = progressPath.getTotalLength();
