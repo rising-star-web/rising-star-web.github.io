@@ -44,9 +44,9 @@ var theme = {
   */
   stickyHeader: () => {
     var navbar = document.querySelector(".navbar");
-    if (navbar == null) return;
+    const mq = window.matchMedia( "(min-width: 576px)" );    if (navbar == null) return;
     var options = {
-      offset: 50,
+      offset: 100,
       offsetSide: 'top',
       classes: {
         clone: 'navbar-clone fixed',
@@ -55,10 +55,18 @@ var theme = {
       },
       onStick: function() {
         var navbarClonedClass = this.clonedElem.classList;
+        if(mq.matches) {
+          navbar.style.opacity = "0";
+        }
         if (navbarClonedClass.contains('transparent') && navbarClonedClass.contains('navbar-dark')) {
           this.clonedElem.className = this.clonedElem.className.replace("navbar-dark","navbar-light");
         }
       },
+      onUnstick: function() {
+        if(mq.matches) {
+          navbar.style.opacity = "1";
+        }
+      }
     };
     var banner = new Headhesive('.navbar', options);
   },

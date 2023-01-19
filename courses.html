@@ -1,0 +1,107 @@
+---
+layout: default
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+  <div class="content-wrapper pt-12 pt-md-16"> 
+    <!-- section -->
+    <section class="wrapper bg-light">
+      <div class="container pb-14 pb-md-16 pt-6">
+        <div class="row gy-10">
+          <div class="col">
+            <div class="row align-items-center mb-10 position-relative zindex-1">
+              <div class="col-md-7 col-xl-8 pe-xl-20">
+                <h2 class="display-6 mb-1">Courses</h2>
+                {% if site.courses.size == 1 %}
+                <p class="mb-0 text-muted">
+                    Showing {{site.courses.size}} result
+                </p>
+                {% else %}
+                <p class="mb-0 text-muted">
+                  Showing {{site.courses.size}} results
+                </p>
+                {% endif %}
+              </div>
+              <!--/column -->
+              <div class="col-md-5 col-xl-4 ms-md-auto text-md-end mt-5 mt-md-0">
+                <div class="form-select-wrapper">
+                  <select class="form-select">
+                    <option value="popularity">Sort by popularity</option>
+                    <option value="rating">Sort by average rating</option>
+                    <option value="newness">Sort by newness</option>
+                    <option value="price: low to high">Sort by price: low to high</option>
+                    <option value="price: high to low">Sort by price: high to low</option>
+                  </select>
+                </div>
+                <!--/.form-select-wrapper -->
+              </div>
+              <!--/column -->
+            </div>
+            <!--/.row -->
+            <div class="grid grid-view projects-masonry shop mb-13">
+              <div class="row g-4 px-0">
+                {% for course in site.courses %}
+                <div class="project item card p-0 col-md-6 col-xl-4">
+                  <div class="inset-shadow-top card-img-top">
+                    <img src="/{{course.bgImageUrl}}"  alt="" class="courseImage"/>
+                  </div>
+                  <div class="card-body post-header p-3">
+                    <div class="d-flex flex-row align-items-center justify-content-between mb-2">
+                      <div class="post-category text-ash mb-0 fs-14">Grade {{course.aboutGradeLevel}}</div>
+                    </div>
+                    <h2 class="post-title h3 fs-20"><a href="course_detail" class="link-dark">{{course.title}}</a></h2>
+                    <p class="fs-14 hideTextOverflow">{{course.courseDescription}}</p>
+                    <hr class="my-2" />
+                    <div class="d-flex flex-row fs-14">
+                      <p class="m-0">{{course.aboutSkillLevel}} |&nbsp</p>
+                      <p class="m-0">{{course.aboutCategory}}</p>
+                    </div>
+                  </div>
+                  <!-- /.post-header -->
+                </div>
+                {% endfor %}
+              </div>
+              <!-- /.row -->
+            </div>
+            <!-- /.grid -->
+            <nav class="d-flex" aria-label="pagination">
+              <ul class="pagination">
+                <li class="page-item disabled">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true"><i class="uil uil-arrow-left"></i></span>
+                  </a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true"><i class="uil uil-arrow-right"></i></span>
+                  </a>
+                </li>
+              </ul>
+              <!-- /.pagination -->
+            </nav>
+            <!-- /nav -->
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+  </div>
+  <!-- /.content-wrapper -->
+  <div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+  <script src="./assets/js/plugins.js"></script>
+  <script src="./assets/js/theme.js"></script>
+</body>
+
+</html>
