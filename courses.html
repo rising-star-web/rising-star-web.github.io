@@ -40,26 +40,28 @@ layout: default
               <!--/column -->
             </div>
             <!--/.row -->
-            <div class="grid grid-view projects-masonry shop mb-13">
-              <div class="row g-4 px-0">
+            <div class="grid grid-view shop mb-13">
+              <div class="row g-4">
                 {% for course in site.courses %}
-                <div class="project item card p-0 col-md-6 col-xl-4">
-                  <div class="inset-shadow-top card-img-top">
-                    <img src="/{{course.bgImageUrl}}"  alt="" class="courseImage"/>
-                  </div>
-                  <div class="card-body post-header p-3">
-                    <div class="d-flex flex-row align-items-center justify-content-between mb-2">
-                      <div class="post-category text-ash mb-0 fs-14">Grade {{course.aboutGradeLevel}}</div>
+                <div class="col-sm col-md-4">
+                    <div class="card h-100">
+                      <div class="inset-shadow-top card-img-top">
+                        <img src="/{{course.bgImageUrl}}"  alt="" class="courseImage"/>
+                      </div>
+                      <div class="card-body post-header p-3">
+                        <div class="d-flex flex-row align-items-center justify-content-between mb-2">
+                          <div class="post-category text-ash mb-0 fs-14">Grade {{course.aboutGradeLevel}}</div>
+                        </div>
+                        <h2 class="post-title h3 fs-20"><a href="course_detail" class="link-dark">{{course.title}}</a></h2>
+                        <p class="fs-14 hideTextOverflow">{{course.courseDescription}}</p>
+                        <hr class="my-2" />
+                        <div class="d-flex flex-row fs-14">
+                          <p class="m-0">{{course.aboutSkillLevel}} |&nbsp</p>
+                          <p class="m-0">{{course.aboutCategory}}</p>
+                        </div>
+                      </div>
+                      <!-- /.post-header -->
                     </div>
-                    <h2 class="post-title h3 fs-20"><a href="course_detail" class="link-dark">{{course.title}}</a></h2>
-                    <p class="fs-14 hideTextOverflow">{{course.courseDescription}}</p>
-                    <hr class="my-2" />
-                    <div class="d-flex flex-row fs-14">
-                      <p class="m-0">{{course.aboutSkillLevel}} |&nbsp</p>
-                      <p class="m-0">{{course.aboutCategory}}</p>
-                    </div>
-                  </div>
-                  <!-- /.post-header -->
                 </div>
                 {% endfor %}
               </div>
