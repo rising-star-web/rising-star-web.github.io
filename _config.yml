@@ -77,3 +77,5 @@ keep_files:
 
 collections:
   courses:
+    output: true
+    permalink: /:collection/:name
