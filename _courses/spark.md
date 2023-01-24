@@ -1,7 +1,7 @@
 ---
 layout: course_detail
-title: "Robotics and Programming with SPRK | Coding Minds Academy"
-courseTitle: "Robotics and Programming with SPRK | Coding Minds Academy"
+title: "Robotics and Programming with SPRK"
+courseTitle: "Robotics and Programming with SPRK"
 courseDescription: "Learn how to program and control a robot, and enter the world of coding"
 topTitleLine1: "Robotics and Programming with SPRK"
 topTitleLine2: ""

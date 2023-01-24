@@ -1,7 +1,7 @@
 ---
 layout: course_detail
-title: "Innovative Programming with MIT Scratch | Coding Minds Academy"
-courseTitle: "Innovative Programming with MIT Scratch | Coding Minds Academy"
+title: "Innovative Programming with MIT Scratch"
+courseTitle: "Innovative Programming with MIT Scratch"
 courseDescription: "Learn to create games and animations with Scratch."
 topTitleLine1: "Innovative Programming"
 topTitleLine2: "with MIT Scratch"
