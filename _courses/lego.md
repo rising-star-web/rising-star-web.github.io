@@ -2,7 +2,7 @@
 layout: course_detail
 title: "Robotics and Programming with LEGO Mindstorms"
 courseTitle: "Robotics and Programming with LEGO Mindstorms"
-courseDescription: "Build and program your own EV3 robot!"
+courseDescription: "Build and program your own EV3 robot! This course allows students to build and program the EV3 robots, implementing sensors and motors."
 topTitleLine1: "Robotics and Programming"
 topTitleLine2: "with LEGO Mindstorms"
 topGradeLevel: "Grade k - 3"

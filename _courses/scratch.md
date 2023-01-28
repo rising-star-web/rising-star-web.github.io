@@ -2,7 +2,7 @@
 layout: course_detail
 title: "Innovative Programming with MIT Scratch"
 courseTitle: "Innovative Programming with MIT Scratch"
-courseDescription: "Learn to create games and animations with Scratch."
+courseDescription: "Learn to create games and animations with Scratch. Scratch helps young people think creatively, logically, and work collaboratively, which are essential skills in the 21st century."
 topTitleLine1: "Innovative Programming"
 topTitleLine2: "with MIT Scratch"
 topGradeLevel: "Grade k - 6"
