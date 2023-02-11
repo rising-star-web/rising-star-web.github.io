@@ -98,3 +98,55 @@ h1,h2,h3,h4,h5,.customFont{
         font-size: 3.3vw !important;
     }
 }
+
+.searchBar:focus-within {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+}
+
+.searchBar1{
+    border: none !important;
+    border-right: 0 !important; 
+    border-top-right-radius:0 !important;
+    border-bottom-right-radius:0 !important;
+}
+
+.searchBar2{
+    border: none !important;
+    background-color: white !important;
+}
+
+.resultsContainer{ 
+    position: absolute;
+    background-color: white;
+    width:100%;
+    margin: 0;
+}
+
+.searchResults{
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    margin: 0;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    overflow: hidden;
+}
+
+.searchResults li{
+    list-style-type: none; 
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.searchResultItem{
+    font-weight: 600;
+    color: #324058 ;
+}
+
+.searchResultItem:hover{
+    color: #4494f5 ;
+}
+
+.searchResultParent{
+    position: relative;
+}

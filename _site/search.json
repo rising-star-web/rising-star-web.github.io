@@ -1,0 +1,38 @@
+[
+  
+  {
+    "title"    : "Robotics and Programming with LEGO Mindstorms",
+    "url"      : "/courses/lego",
+    "category" : "Robotics | Programming",
+    "description" : "Build and program your own EV3 robot! This course allows students to build and program the EV3 robots, implementing sensors and motors."
+  },
+  
+  {
+    "title"    : "Minecraft Programming with MakeCode",
+    "url"      : "/courses/minecode",
+    "category" : "Game Development",
+    "description" : "Learn through block programming and make changes on your favorite game."
+  },
+  
+  {
+    "title"    : "Minecraft World Building and Instruction Programming",
+    "url"      : "/courses/minecraft",
+    "category" : "Game Development",
+    "description" : "Through the creation of the learning world, Minecraft command-line command control, and MakeCode graphical programming platform, gradually bring your child into the programming world."
+  },
+  
+  {
+    "title"    : "Innovative Programming with MIT Scratch",
+    "url"      : "/courses/scratch",
+    "category" : "Block Programming",
+    "description" : "Learn to create games and animations with Scratch. Scratch helps young people think creatively, logically, and work collaboratively, which are essential skills in the 21st century."
+  },
+  
+  {
+    "title"    : "Robotics and Programming with SPRK",
+    "url"      : "/courses/spark",
+    "category" : "Robotics | Programming",
+    "description" : "Learn how to program and control a robot, and enter the world of coding."
+  }
+  
+]

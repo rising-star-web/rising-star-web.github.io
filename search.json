@@ -1,0 +1,12 @@
+---
+---
+[
+  {% for course in site.courses %}
+  {
+    "title"    : "{{ course.title | strip_html | escape }}",
+    "url"      : "{{ course.url }}",
+    "category" : "{{course.aboutCategory | join: ', '}}",
+    "description" : "{{course.courseDescription | strip_html | strip_newlines | escape }}"
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
