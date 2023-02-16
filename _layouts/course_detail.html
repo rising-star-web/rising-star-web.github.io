@@ -311,7 +311,8 @@ layout: default
         <div class="swiper-container mb-10" data-margin="30" data-nav="true" data-dots="true" data-items-xl="3" data-items-md="2" data-items-xs="1">
           <div class="swiper">
             <div class="swiper-wrapper">
-              {% for course in site.courses %}
+              {%- assign courses = site.courses | where:'aboutLevel', page.aboutLevel %}
+              {% for course in courses %}
               {% unless course.title == page.title %}
               <div class="swiper-slide">
                 {% include course.html %}

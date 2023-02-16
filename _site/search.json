@@ -33,6 +33,27 @@
     "url"      : "/courses/spark",
     "category" : "Robotics | Programming",
     "description" : "Learn how to program and control a robot, and enter the world of coding."
+  },
+  
+  {
+    "title"    : "Javascript Programming 1: Minecraft MakeCode",
+    "url"      : "/courses/minecraft2",
+    "category" : "Game Development",
+    "description" : "Through the creation of the learning world, Minecraft command-line command control, and MakeCode graphical programming platform, gradually bring your child into the programming world."
+  },
+  
+  {
+    "title"    : "Advanced Roblox Game Development and Lua Programming | Coding Minds Academy",
+    "url"      : "/courses/roblox3",
+    "category" : "Game Development",
+    "description" : "Learn programming fundamentals and create your own games with Roblox Studio!"
+  },
+  
+  {
+    "title"    : "Mobile App Programming with MIT App Inventor | Coding Minds Academy",
+    "url"      : "/courses/mobile",
+    "category" : "Programming | Mobile",
+    "description" : "Learn how to program and develop mobile apps. Become the next young entrepreneurs"
   }
   
 ]

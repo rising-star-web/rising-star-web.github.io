@@ -143,10 +143,42 @@ h1,h2,h3,h4,h5,.customFont{
     color: #324058 ;
 }
 
+.noSearchResultItem{
+    font-weight: 600;
+    color: #324058 ;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 .searchResultItem:hover{
     color: #4494f5 ;
 }
 
 .searchResultParent{
+    display: block;
     position: relative;
+    z-index: 1000;
+}
+
+.z-0{
+    z-index: 0 !important;
+}
+
+.courseLabel{
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    background-color: #4494f5;
+    color: white;
+    text-transform: uppercase;
+    height: 26px;
+    min-width: 65px;
+    padding: 2px 10px;
+    text-align: center;
+    border-radius: 50px;
+    position: absolute;
+    z-index: 3;
+    top: 1.23809524em;
+    right: 1.23809524em;
 }
