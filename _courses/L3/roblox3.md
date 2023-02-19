@@ -1,7 +1,7 @@
 --- 
 layout: course_detail 
-title: "Advanced Roblox Game Development and Lua Programming | Coding Minds Academy" 
-courseTitle: "Advanced Roblox Game Development and Lua Programming | Coding Minds Academy" 
+title: "Advanced Roblox Game Development and Lua Programming" 
+courseTitle: "Advanced Roblox Game Development and Lua Programming" 
 courseDescription: "Learn programming fundamentals and create your own games with Roblox Studio!" 
 topTitleLine1: "Roblox" 
 topTitleLine2: "Game Development and Lua Programming" 

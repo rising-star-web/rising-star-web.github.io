@@ -1,7 +1,7 @@
 --- 
 layout: course_detail 
-title: "Mobile App Programming with MIT App Inventor | Coding Minds Academy" 
-courseTitle: "Mobile App Programming with MIT App Inventor | Coding Minds Academy" 
+title: "Mobile App Programming with MIT App Inventor" 
+courseTitle: "Mobile App Programming with MIT App Inventor" 
 courseDescription: "Learn how to program and develop mobile apps. Become the next young entrepreneurs" 
 topTitleLine1: "Mobile App Programming " 
 topTitleLine2: "with MIT App Inventor" 

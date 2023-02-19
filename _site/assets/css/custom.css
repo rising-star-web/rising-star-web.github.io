@@ -89,8 +89,24 @@ h1,h2,h3,h4,h5,.customFont{
 
 .courseImage{
     width: 100%;
-    height: 11rem !important;
+    height: 12rem !important;
     object-fit: cover;
+}
+
+.courseImage:hover{
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    cursor: pointer !important;
+    opacity: 0;
+    z-index: 4;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 34, 40, 0.6);
 }
 
 @media screen and (max-width: 600px) {
@@ -106,6 +122,8 @@ h1,h2,h3,h4,h5,.customFont{
 .searchBar1{
     border: none !important;
     border-right: 0 !important; 
+    border-top-left-radius: 50rem !important;
+    border-bottom-left-radius: 50rem !important;
     border-top-right-radius:0 !important;
     border-bottom-right-radius:0 !important;
 }
@@ -113,6 +131,8 @@ h1,h2,h3,h4,h5,.customFont{
 .searchBar2{
     border: none !important;
     background-color: white !important;
+    border-bottom-right-radius:50rem !important;
+    border-top-right-radius:50rem !important;
 }
 
 .resultsContainer{ 
@@ -169,7 +189,7 @@ h1,h2,h3,h4,h5,.customFont{
     font-size: 12px;
     font-weight: 700;
     letter-spacing: .5px;
-    background-color: #4494f5;
+    background-color: #324058;
     color: white;
     text-transform: uppercase;
     height: 26px;
@@ -182,3 +202,4 @@ h1,h2,h3,h4,h5,.customFont{
     top: 1.23809524em;
     right: 1.23809524em;
 }
+

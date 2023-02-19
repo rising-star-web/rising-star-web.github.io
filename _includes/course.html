@@ -1,4 +1,4 @@
-<div class="card h-100">
+<!-- <div class="card h-100">
     <a href="{{course.url}}" class="inset-shadow-top card-img-top hover-scale">
       <img src="/{{course.bgImageUrl}}"  alt="" class="courseImage"/>
       <span class="courseLabel">{{course.aboutLevel}}</span>
@@ -17,5 +17,32 @@
         <p class="m-0">{{course.aboutCategory}}</p>
       </div>
     </div>
-    <!-- /.post-header -->
-  </div>
+  </div> -->
+
+  <article>
+    <figure class="overlay overlay-1 hover-scale rounded mb-4"><a href="{{course.url}}"> 
+      <img src="/{{course.bgImageUrl}}" alt="" class="courseImage"/> 
+      <span class="courseLabel">{{course.aboutLevel}}</span>
+      <span class="bg"></span>
+    </a>
+      <figcaption>
+        <h5 class="from-top mb-0">{{course.courseDescription}}</h5>
+      </figcaption>
+    </figure>
+    <div class="flex-grow-1 ">
+        <!-- /.post-header -->
+        <div class="post-footer">
+          <ul class="post-meta">
+            <li class="post-lvl"><i class="uil uil-graduation-cap"></i><span>Grade </span><span class="text-uppercase">{{course.aboutGradeLevel}}</span></li>
+            <li class="post-comments"><i class="uil uil-file-alt fs-15"></i><span class="">{{course.aboutCategory}}</span>
+            </li>
+          </ul>
+          <!-- /.post-meta -->
+        </div>
+        <!-- /.post-footer -->
+        <div class="post-header">
+          <h2 class="post-title h3 mb-3 "><a class="link-dark fs-20" href="{{course.url}}">{{course.title}}</a></h2>
+        </div>
+    </div>
+  </article>
+  <!-- /article -->
