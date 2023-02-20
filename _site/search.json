@@ -43,6 +43,13 @@
   },
   
   {
+    "title"    : "Advanced Python Programming: Introduction to Algorithms",
+    "url"      : "/courses/python",
+    "category" : "Programming | Problem Solving",
+    "description" : "Learn the most popular programming language in the industry"
+  },
+  
+  {
     "title"    : "Advanced Roblox Game Development and Lua Programming",
     "url"      : "/courses/roblox3",
     "category" : "Game Development",
