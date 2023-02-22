@@ -17,7 +17,7 @@ aboutText: "Learn to program your own EV3 robot to complete tasks and challenges
 aboutCategoryTitle: "Category"
 aboutCategory: "Robotics | Programming"
 aboutGradeLevelTitle: "Grade"
-aboutGradeLevel: "k - 3"
+aboutGradeLevel: "K - 3"
 aboutLevel: "L1 Block Coding"
 aboutSkillLevelTitle: "Skill Level"
 aboutSkillLevel: "Beginning to Intermediate"
