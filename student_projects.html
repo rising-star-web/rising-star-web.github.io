@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+{%- assign projects = site.projects %}
+
+    <section class="wrapper bg-light pt-12 pt-md-16">
+      <div class="container pt-10 pt-md-14">
+        <div class="row">
+          <div class="col-md-8 col-lg-7 col-xl-6 col-xxl-5">
+            <h1 class="display-1 mb-3">Student Projects</h1>
+            <p class="lead fs-lg pe-lg-15 pe-xxl-12">Explore featured projects created by Coding Mind students!</p>
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+    <section class="wrapper bg-light">
+      <div class="container pt-6 pb-14">
+        <div class="grid grid-view projects-masonry">
+          <div class="isotope-filter filter mb-10 d-flex flex-column flex-md-row align-items-center">
+            <!-- <p class="pillholder blue-gradient1 rounded-pill">Filter</p> -->
+            <ul>
+              <li><a class="filter-item active" data-filter="*">All</a></li>
+              <li><a class="filter-item" data-filter=".trending">Trending</a></li>
+              <li><a class="filter-item" data-filter=".mobiledev">Mobile Dev</a></li>
+              <li><a class="filter-item" data-filter=".gamedev">Game Dev</a></li>
+              <li><a class="filter-item" data-filter=".robotics">Robotics</a></li>
+            </ul>
+          </div>
+          <div class="row gx-md-8 gy-10 gy-md-13 isotope">
+
+            {% for project in projects %}
+              {% include project.html %}
+            {% endfor %}
+            
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.grid -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+  <!-- /.content-wrapper -->

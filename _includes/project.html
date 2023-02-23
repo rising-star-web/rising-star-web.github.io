@@ -1,0 +1,54 @@
+{%- assign category = project.projectCategory-%}
+  {%- case category -%}
+    {%- when "Trending" -%}
+      {%- assign categoryStyle = 'ig-gradient' %}
+    {%- when "Game Development" -%}
+      {%- assign categoryStyle = 'limegreen-gradient' %}
+    {%- when "Mobile Development" -%}
+      {%- assign categoryStyle = 'sunkissed-gradient' %}
+    {%- when "Robotics" -%}
+      {%- assign categoryStyle = 'aquagreen-gradient' %}
+    {%- else -%}
+      {%- assign categoryStyle = 'blue-gradient1' -%}
+  {%- endcase -%}
+
+{%- assign category = project.projectCategory-%}
+  {%- case category -%}
+    {%- when "Trending" -%}
+      {%- assign categoryFilter = 'trending' %}
+    {%- when "Game Development" -%}
+      {%- assign categoryFilter = 'gamedev' %}
+    {%- when "Mobile Development" -%}
+      {%- assign categoryFilter = 'mobiledev' %}
+    {%- when "Robotics" -%}
+      {%- assign categoryFilter = 'robotics' %}
+    {%- else -%}
+      {%- assign categoryFilter = '*' -%}
+  {%- endcase -%}
+
+<div class="project item col-md-6 col-xl-4 {{categoryFilter}}">
+    <article>
+      <figure class="overlay overlay-1 lift rounded mb-4"><a href="{{project.url}}"> <img src="{{project.coverImage}}" alt="" />
+        <span class="projectLabel {{categoryStyle}}">{{project.projectCategory}}</span>
+      </a>
+        <figcaption>
+          <h5 class="from-top mb-0">{{project.projectDesc}}</h5>
+        </figcaption>
+      </figure>
+      <!-- /figure -->
+      <div class="post-header">
+        <ul class="post-meta">
+          <li class="post-name mb-2"><i class="uil uil-user"></i><span>{{project.studentName}}</span></li>
+        </ul>
+        <!-- /.post-meta -->
+      </div>
+      <!-- /.post-header -->
+      <div class="post-footer">
+        <h2 class="post-title h3"><a class="link-dark" href="{{project.url}}">{{project.projectName}}</a></h2>
+      </div>
+      <!-- /.post-footer -->
+    </article>
+    <!-- /article -->
+  </div>
+  <!--/.project -->
+  
