@@ -22,10 +22,24 @@
   },
   
   {
+    "title"    : "Minecraft World Development and Instructional Programming",
+    "url"      : "/courses/minecraftai",
+    "category" : "Game Programming",
+    "description" : "Through the creation of the learning world, Minecraft command line command control, and the MakeCode graphical programming platform, children are gradually brought into the programming world step by step."
+  },
+  
+  {
     "title"    : "Innovative Programming with MIT Scratch",
     "url"      : "/courses/scratch",
     "category" : "Block Programming",
     "description" : "Learn to create games and animations with Scratch. Scratch helps young people think creatively, logically, and work collaboratively, which are essential skills in the 21st century."
+  },
+  
+  {
+    "title"    : "MIT Scratch Programming 2",
+    "url"      : "/courses/scratch2",
+    "category" : "Game Programming",
+    "description" : "Learn advanced Scratch programming, unleash your creativity, and share your work with young programmers from all over the world"
   },
   
   {
@@ -36,10 +50,10 @@
   },
   
   {
-    "title"    : "Javascript Programming 1: Minecraft MakeCode",
+    "title"    : "Javascript Programming with Minecraft MakeCode",
     "url"      : "/courses/minecraft2",
-    "category" : "Game Development",
-    "description" : "Through the creation of the learning world, Minecraft command-line command control, and MakeCode graphical programming platform, gradually bring your child into the programming world."
+    "category" : "Game Programming",
+    "description" : "Through the creation of the learning world and the MakeCode graphical programming platform, gradually bring children into the learning stage of writing Javascript codes."
   },
   
   {
