@@ -82,3 +82,5 @@ collections:
   projects:
     output: true
     permalink: /:collection/:name
+  reviews:
+    output: true
