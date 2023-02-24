@@ -1,6 +1,6 @@
 {%- assign category = project.projectCategory-%}
   {%- case category -%}
-    {%- when "Trending" -%}
+    {%- when "Newly Added" -%}
       {%- assign categoryStyle = 'ig-gradient' %}
     {%- when "Game Development" -%}
       {%- assign categoryStyle = 'limegreen-gradient' %}
@@ -14,8 +14,8 @@
 
 {%- assign category = project.projectCategory-%}
   {%- case category -%}
-    {%- when "Trending" -%}
-      {%- assign categoryFilter = 'trending' %}
+    {%- when "Newly Added" -%}
+      {%- assign categoryFilter = 'added' %}
     {%- when "Game Development" -%}
       {%- assign categoryFilter = 'gamedev' %}
     {%- when "Mobile Development" -%}
@@ -26,29 +26,37 @@
       {%- assign categoryFilter = '*' -%}
   {%- endcase -%}
 
-<div class="project item col-md-6 col-xl-4 {{categoryFilter}}">
-    <article>
-      <figure class="overlay overlay-1 lift rounded mb-4"><a href="{{project.url}}"> <img src="{{project.coverImage}}" alt="" />
-        <span class="projectLabel {{categoryStyle}}">{{project.projectCategory}}</span>
-      </a>
-        <figcaption>
-          <h5 class="from-top mb-0">{{project.projectDesc}}</h5>
-        </figcaption>
-      </figure>
-      <!-- /figure -->
+
+
+<article class="project item col-md-6 col-xl-4 {{categoryFilter}}">
+  <div class="card shadow-lg lift">
+    <figure class="card-img-top overlay overlay-1"><a href="{{project.url}}"> <img src="{{project.coverImage}}" alt="" />
+      <span class="projectLabel {{categoryStyle}}">{{project.projectCategory}}</span>
+    </a>
+    <figcaption>
+      <h5 class="from-top mb-0">Learn More</h5>
+    </figcaption>
+    </figure>
+    <div class="card-body">
       <div class="post-header">
-        <ul class="post-meta">
-          <li class="post-name mb-2"><i class="uil uil-user"></i><span>{{project.studentName}}</span></li>
-        </ul>
-        <!-- /.post-meta -->
+        <h2 class="post-title mb-2"><a class="link-dark" href="{{project.url}}">{{project.projectName}}</a></h2>
       </div>
       <!-- /.post-header -->
-      <div class="post-footer">
-        <h2 class="post-title h3"><a class="link-dark" href="{{project.url}}">{{project.projectName}}</a></h2>
+      <div class="post-content">
+        <p>{{project.projectDesc}}</p>
       </div>
-      <!-- /.post-footer -->
-    </article>
-    <!-- /article -->
+      <!-- /.post-content -->
+    </div>
+    <!--/.card-body -->
+    <div class="card-footer">
+      <ul class="post-meta d-flex mb-0">
+        <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{project.pagePostDate}}</span></li>
+        <li class="post-name"><i class="uil uil-user"></i><span>{{project.studentName}}</span></li>
+      </ul>
+      <!-- /.post-meta -->
+    </div>
+    <!-- /.card-footer -->
   </div>
-  <!--/.project -->
-  
+  <!-- /.card -->
+</article>
+<!-- /.post -->

@@ -5,7 +5,7 @@ layout: student_project_detail
 coverImage: "/assets/img/placeholder6.jpg"
 studentName: "Student Name"
 projectName: "Student Project Name"
-projectCategory: "Trending"
+projectCategory: "Newly Added"
 projectDesc: "A brief description of the project."
 
 [//]: # (Project Page/Showcase)

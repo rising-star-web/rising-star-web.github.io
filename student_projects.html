@@ -4,12 +4,14 @@ layout: default
 
 {%- assign projects = site.projects %}
 
-    <section class="wrapper bg-light pt-12 pt-md-16">
+    <section class="wrapper pt-12 pt-md-16">
       <div class="container pt-10 pt-md-14">
         <div class="row">
-          <div class="col-md-8 col-lg-7 col-xl-6 col-xxl-5">
+          <div class="col-md-10 col-lg-9 col-xl-8 col-xxl-7">
             <h1 class="display-1 mb-3">Student Projects</h1>
-            <p class="lead fs-lg pe-lg-15 pe-xxl-12">Explore featured projects created by Coding Mind students!</p>
+            <p class="lead">
+              Welcome to the Student Projects! Explore featured portfolios created by Coding Mind students that showcase their projects, programming ablitities, and more!
+            </p>
           </div>
           <!-- /column -->
         </div>
@@ -25,7 +27,7 @@ layout: default
             <!-- <p class="pillholder blue-gradient1 rounded-pill">Filter</p> -->
             <ul>
               <li><a class="filter-item active" data-filter="*">All</a></li>
-              <li><a class="filter-item" data-filter=".trending">Trending</a></li>
+              <li><a class="filter-item" data-filter=".added">Newly Added</a></li>
               <li><a class="filter-item" data-filter=".mobiledev">Mobile Dev</a></li>
               <li><a class="filter-item" data-filter=".gamedev">Game Dev</a></li>
               <li><a class="filter-item" data-filter=".robotics">Robotics</a></li>
@@ -46,3 +48,25 @@ layout: default
     </section>
     <!-- /section -->
   <!-- /.content-wrapper -->
+
+  <section class="wrapper bg-soft-primary">
+    <div class="container py-10 py-md-12">
+      <div class="d-lg-flex flex-row align-items-lg-center">
+        <h3 class="display-3 ls-sm mb-6 mb-lg-0 pe-lg-20 pe-xl-22 pe-xxl-25">Want to enroll? <br/>
+          <p class="text-primary">Schedule a trial class today!</p>
+        </h3>
+        <a href="/free-trial" class="btn btn-lg btn-primary rounded-pill mb-0 text-nowrap">Try It For Free</a>
+      </div>
+      <!--/div -->
+      </div>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /section -->
+  
+  <div class="free-trial-wrap">
+    <a href="/free-trial" class="btn btn-primary rounded-pill">
+      Request a Free Trial
+      <img src="./assets/img/icons/solid/touchscreen.svg" class="svg-inject icon-svg icon-svg-xs solid-mono w-4 ms-2 text-white h-4" alt="" />
+    </a>
+  </div>
