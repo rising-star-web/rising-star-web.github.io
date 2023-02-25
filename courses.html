@@ -100,10 +100,9 @@ layout: default
 
 <!-- /section -->
 <section class="wrapper">
-  <div class="container pb-8">
+  <div class="container pb-8 mb-8">
     <!--/.row -->
-    <div class=" mb-8">
-      <div id="courses" class="row g-8 row-cols-1 row-cols-md-2 row-cols-lg-3 isotope">
+      <div id="courses" class="row g-6 row-cols-1 row-cols-md-2 row-cols-lg-3 isotope">
           {% for course in courses %}
 
           {%- assign level = course.aboutLevel -%}
@@ -122,14 +121,12 @@ layout: default
                   {%- assign levelFilter = course.aboutLevel -%}
           {%- endcase -%}
 
-          <div class="col course {{levelFilter}}">
+          <div class="course {{levelFilter}}">
             {% include course.html %}
           </div>
           {% endfor %}
       </div>
       <!-- /.row -->
-    </div>
-    <!-- /.grid -->
   </div>
 </section>
 <!-- /section -->

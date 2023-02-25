@@ -24,7 +24,8 @@ var itemSelector = ".course";
 var $checkboxes = $('.filter-item');
 var $container = $('#courses').isotope({ 
     itemSelector: itemSelector,
-    layoutMode: 'fitRows' 
+    percentPosition: true,
+    layoutMode: 'fitRows',
 });
 var $output = $('#output');
 var $outputParent = $('#outputParent');
