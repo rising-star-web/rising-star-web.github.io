@@ -84,3 +84,5 @@ collections:
     permalink: /:collection/:name
   reviews:
     output: true
+  showcases:
+    output: true
