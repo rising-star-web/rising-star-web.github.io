@@ -34,7 +34,7 @@ var $courseLength = $('#courseLength');
 var iso = $container.data('isotope');
 
 //Ascending order
-var itemsPerPage = 6;
+var itemsPerPage = 9;
 var currentTotalItems = 0;
 var currentNumberPages = 1;
 var currentPage = 1;

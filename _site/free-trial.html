@@ -179,11 +179,18 @@
 
             <div class="form-select-wrapper mb-4">
             <label class="mb-2 ms-2"  for="datePickerId">Enter in an Available Start Date *</label>
-            <input class="form-control" type="date" id="datePickerId" name="datePickerId">
+            <input class="form-control" type="date" id="datePickerId" name="datePickerId" required="required">
             <script type="text/javascript">
-              datePickerId.min = new Date().toLocaleDateString('en-ca');
+              var date = new Date();
+              date = new Date(date.setDate(date.getDate() + 1)).toLocaleDateString('fr-ca');
+              datePickerId.min = date;
             </script>
             </div>
+
+            <div class="form-select-wrapper mb-4">
+              <label class="mb-2 ms-2"  for="datePickerId">Enter in an Available Time *</label>
+              <input class="form-control" type="time" id="timePicker" name="timePicker" required="required">
+              </div>
             
             <input type="submit" class="btn btn-primary rounded-pill btn-send mb-3" value="Submit">
             <p class="text-muted"><strong>*</strong> These fields are required.</p>

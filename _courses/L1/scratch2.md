@@ -25,22 +25,22 @@ aboutRatioTitle: "Teacher-student ratio"
 aboutRatio: "less than 1:4" 
 promotion1: 
   enabled: "true" 
-  title: "Learn more practical programming applications with Scratch" 
+  title: "Learn Practical Programming Apps with Scratch" 
   text: "Scratch is an educational platform developed by the well-known MIT Media Lab for primary and middle school students to learn computer programming. Scratch high-level programming provides students with richer application scenarios, not only can it continue to deepen programming concepts, but also more interesting projects can be learned." 
   imageUrl: "img/my/scratch/scratch1.png" 
 promotion2:  
   enabled: "true" 
-  title: "Challenge your creativity" 
+  title: "Challenge Your Creativity" 
   text: "More than a million people in different parts of the world are making their own Scratch projects, and more than 25 million programs have been published on the Scratch sharing platform. Come and join this community to show your creativity." 
   imageUrl: "img/my/scratch/scratch2.png" 
 promotion3:  
   enabled: "true" 
-  title: "Learn the principles of programming with fun" 
+  title: "Learn the Principles of Programming with Fun" 
   text: "Scratch perfectly integrates programming concepts into the production of animation and games. When you complete your own work, you have already mastered the basic concepts of programming such as variables, loops, functions, etc. Get a solid foundation in learning real programming." 
   imageUrl: "img/my/scratch/scratch3.png" 
 promotion4:  
   enabled: "true" 
-  title: "Publish and share your own programs" 
+  title: "Publish and Share Your Own Programs" 
   text: "Publish your program on MIT's Scratch program sharing platform, exchange your work with young programmers from all over the world, and let everyone praise your creativity!" 
   imageUrl: "img/my/scratch/scratch4.png" 
 promotion5:  

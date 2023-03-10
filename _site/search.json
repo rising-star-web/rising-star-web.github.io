@@ -50,6 +50,13 @@
   },
   
   {
+    "title"    : "Microbit: Intro to Electronics Engineering",
+    "url"      : "/courses/microbit",
+    "category" : "Game Programming",
+    "description" : "Relying on the Microsoft platform, JavaScript command line command control, and MakeCode Block Coding platform, gradually bring children into the world of electronic programming."
+  },
+  
+  {
     "title"    : "Javascript Programming with Minecraft MakeCode",
     "url"      : "/courses/minecraft2",
     "category" : "Game Programming",
@@ -57,17 +64,31 @@
   },
   
   {
-    "title"    : "Advanced Python Programming: Introduction to Algorithms",
-    "url"      : "/courses/python",
-    "category" : "Programming | Problem Solving",
-    "description" : "Learn the most popular programming language in the industry"
+    "title"    : "Game Development with Roblox Studio",
+    "url"      : "/courses/roblox",
+    "category" : "Game Development",
+    "description" : "Learn programming fundamentals and create your own games with Roblox Studio!"
   },
   
   {
     "title"    : "Advanced Roblox Game Development and Lua Programming",
-    "url"      : "/courses/roblox3",
+    "url"      : "/courses/roblox2",
     "category" : "Game Development",
     "description" : "Learn programming fundamentals and create your own games with Roblox Studio!"
+  },
+  
+  {
+    "title"    : "Roblox: Preliminary Artificial Intelligence and Lua Practice",
+    "url"      : "/courses/roblox3",
+    "category" : "Game Programming",
+    "description" : "Develop intelligent game AI on the Roblox platform, and start the first step in AI programming learning"
+  },
+  
+  {
+    "title"    : "Advanced Python Programming: Introduction to Algorithms",
+    "url"      : "/courses/python",
+    "category" : "Programming | Problem Solving",
+    "description" : "Learn the most popular programming language in the industry"
   },
   
   {

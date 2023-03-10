@@ -46,25 +46,35 @@ layout: default
           <div class="swiper-container swiper-thumbs-container" data-margin="10" data-dots="false" data-nav="true" data-thumbs="true">
             <div class="swiper bg-navy rounded">
               <div class="swiper-wrapper align-items-center">
+                {% if page.promotion1.enabled == "true" %}
                 <div class="swiper-slide">
                   <figure class="rounded"><img class="rounded-0" src="/{{page.promotion1.imageUrl}}" alt="" /><a class="item-link" href="/{{page.promotion1.imageUrl}}" data-glightbox data-gallery="product-group"><i class="uil uil-focus-add"></i></a></figure>
                 </div>
+                {% endif %}
                 <!--/.swiper-slide -->
+                {% if page.promotion2.enabled == "true" %}
                 <div class="swiper-slide">
                   <figure class="rounded"><img class="rounded-0" src="/{{page.promotion2.imageUrl}}" alt="" /><a class="item-link" href="/{{page.promotion2.imageUrl}}" data-glightbox data-gallery="product-group"><i class="uil uil-focus-add"></i></a></figure>
                 </div>
+                {% endif %}
                 <!--/.swiper-slide -->
+                {% if page.promotion3.enabled == "true" %}
                 <div class="swiper-slide">
                   <figure class="rounded"><img class="rounded-0" src="/{{page.promotion3.imageUrl}}" alt="" /><a class="item-link" href="/{{page.promotion3.imageUrl}}" data-glightbox data-gallery="product-group"><i class="uil uil-focus-add"></i></a></figure>
                 </div>
+                {% endif %}
                 <!--/.swiper-slide -->
+                {% if page.promotion4.enabled == "true" %}
                 <div class="swiper-slide">
                   <figure class="rounded"><img class="rounded-0" src="/{{page.promotion4.imageUrl}}" alt="" /><a class="item-link" href="/{{page.promotion4.imageUrl}}" data-glightbox data-gallery="product-group"><i class="uil uil-focus-add"></i></a></figure>
                 </div>
+                {% endif %}
                 <!--/.swiper-slide -->
+                {% if page.promotion5.enabled == "true" %}
                 <div class="swiper-slide">
                   <figure class="rounded"><img class="rounded-0" src="/{{page.promotion5.imageUrl}}" alt="" /><a class="item-link" href="/{{page.promotion5.imageUrl}}" data-glightbox data-gallery="product-group"><i class="uil uil-focus-add"></i></a></figure>
-                </div>
+                </div>           
+                {% endif %}
                 <!--/.swiper-slide -->
               </div>
               <!--/.swiper-wrapper -->
@@ -72,11 +82,16 @@ layout: default
             <!-- /.swiper -->
             <div class="swiper swiper-thumbs">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="/{{page.promotion1.imageUrl}}" class="rounded h-10" alt="" /></div>
-                <div class="swiper-slide"><img src="/{{page.promotion2.imageUrl}}" class="rounded h-10" alt="" /></div>
-                <div class="swiper-slide"><img src="/{{page.promotion3.imageUrl}}" class="rounded h-10" alt="" /></div>
-                <div class="swiper-slide"><img src="/{{page.promotion4.imageUrl}}" class="rounded h-10" alt="" /></div>
-                <div class="swiper-slide"><img src="/{{page.promotion5.imageUrl}}" class="rounded h-10" alt="" /></div>
+                {% if page.promotion1.enabled == "true" %}
+                <div class="swiper-slide"><img src="/{{page.promotion1.imageUrl}}" class="rounded h-10" alt="" /></div> {% endif %} 
+                {% if page.promotion2.enabled == "true" %}
+                <div class="swiper-slide"><img src="/{{page.promotion2.imageUrl}}" class="rounded h-10" alt="" /></div> {% endif %} 
+                {% if page.promotion3.enabled == "true" %}
+                <div class="swiper-slide"><img src="/{{page.promotion3.imageUrl}}" class="rounded h-10" alt="" /></div> {% endif %} 
+                {% if page.promotion4.enabled == "true" %}
+                <div class="swiper-slide"><img src="/{{page.promotion4.imageUrl}}" class="rounded h-10" alt="" /></div> {% endif %} 
+                {% if page.promotion5.enabled == "true" %}
+                <div class="swiper-slide"><img src="/{{page.promotion5.imageUrl}}" class="rounded h-10" alt="" /></div> {% endif %} 
               </div>
               <!--/.swiper-wrapper -->
             </div>
@@ -196,12 +211,9 @@ layout: default
         <div class="tab-pane fade" id="tab1-2">
           <p>  What you should expect to gain from this course.</p>
           <ul class="unordered-list bullet-primary">
-            <li>{{page.goals[0].text}}</li>
-            <li>{{page.goals[1].text}}</li>
-            <li>{{page.goals[2].text}}</li>
-            <li>{{page.goals[3].text}}</li>
-            <li>{{page.goals[4].text}}</li>
-            <li>{{page.goals[5].text}}</li>
+            {% for goal in page.goals %}
+            <li>{{goal.text}}</li>
+            {% endfor %}
           </ul>
         </div>
 
