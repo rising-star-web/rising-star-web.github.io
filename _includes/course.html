@@ -1,7 +1,23 @@
+{%- assign category = course.aboutLevel-%}
+{%- case category -%}
+  {%- when "L1 Block Coding" -%}
+    {%- assign categoryStyle = 'rosered-gradient' %}
+  {%- when "L2 Introduction to Programming" -%}
+    {%- assign categoryStyle = 'orange-gradient' %}
+  {%- when "L3 Intermediate Programming" -%}
+    {%- assign categoryStyle = 'forestgreen-gradient' %}
+  {%- when "L4 Applied Programming" -%}
+    {%- assign categoryStyle = 'navyblue-gradient' %}
+  {%- when "L5 Advanced Programming" -%}
+    {%- assign categoryStyle = 'aquagreen-gradient' %}
+  {%- else -%}
+    {%- assign categoryStyle = 'blue-gradient1' -%}
+{%- endcase -%}
+
 <article class="">
     <figure class="overlay overlay-1 hover-scale rounded mb-4"><a href="{{course.url}}"> 
       <img src="/{{course.bgImageUrl}}" alt="" class="courseImage"/> 
-      <span class="courseLabel">{{course.aboutLevel}}</span>
+      <span class="courseLabel {{categoryStyle}}">{{course.aboutLevel}}</span>
     </a>
       <figcaption>
         <h5 class="from-top mb-0">{{course.courseDescription}}</h5>
