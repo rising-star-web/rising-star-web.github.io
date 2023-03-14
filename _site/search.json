@@ -96,6 +96,13 @@
     "url"      : "/courses/mobile",
     "category" : "Programming | Mobile",
     "description" : "Learn how to program and develop mobile apps. Become the next young entrepreneurs"
+  },
+  
+  {
+    "title"    : "AP CS Boot Camp: Intro to Java Programming",
+    "url"      : "/courses/apcs",
+    "category" : "AP CS Prep Courses",
+    "description" : ""
   }
   
 ]

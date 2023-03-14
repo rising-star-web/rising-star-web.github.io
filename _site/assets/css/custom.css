@@ -135,6 +135,9 @@ h1,h2,h3,h4,h5,.customFont{
         font-size: 3.3vw !important;
     }
 }
+.searchBar{
+    outline: 2px solid #4494f5;
+}
 
 .searchBar:focus-within {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
@@ -143,8 +146,8 @@ h1,h2,h3,h4,h5,.customFont{
 .searchBar1{
     border: none !important;
     border-right: 0 !important; 
-    border-top-left-radius: 50rem !important;
-    border-bottom-left-radius: 50rem !important;
+    border-top-left-radius: 0.4rem !important;
+    border-bottom-left-radius: 0.4rem !important;
     border-top-right-radius:0 !important;
     border-bottom-right-radius:0 !important;
 }
@@ -152,8 +155,8 @@ h1,h2,h3,h4,h5,.customFont{
 .searchBar2{
     border: none !important;
     background-color: white !important;
-    border-bottom-right-radius:50rem !important;
-    border-top-right-radius:50rem !important;
+    border-bottom-right-radius:0.4rem !important;
+    border-top-right-radius:0.4rem !important;
 }
 
 .resultsContainer{ 
