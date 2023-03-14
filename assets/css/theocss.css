@@ -97,3 +97,12 @@
     top: 1.23809524em;
     right: 1.23809524em;
 }
+
+.bg-darkColor{
+    color: rgb(38, 43, 50);
+}
+
+.bg-darkFade{
+    background: rgb(38, 43, 50);
+    background: linear-gradient(180deg, rgba(38,43,50,1) 15%, rgba(255,255,255,1) 95%);
+}
