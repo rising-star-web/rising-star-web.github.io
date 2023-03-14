@@ -1,7 +1,7 @@
 ---
 headline: "Be an Entrepreneur!"
 header: "Turn an Idea Into a Business"
-description: "Maecenas faucibus mollis interdum sed posuere consectetur est at lobortis. Scelerisque id ligula porta felis euismod semper. Fusce dapibus tellus cursus."
-imageURL: "/assets/img/custom_photos/startup.jpg"
-imageURL2x: "/assets/img/photos/f2@2x.png 2x"
+description: "Starting a business at a young age can provide valuable learning experiences and the opportunity for early financial independence and long-term success."
+imageURL: "/assets/img/showcases/business.png"
+imageURL2x: "/assets/img/showcases/business@2x.png"
 ---

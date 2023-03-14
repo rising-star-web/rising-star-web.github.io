@@ -1,7 +1,7 @@
 ---
-headline: "Be a developer!"
-header: "Publish Apps on The App Store"
-description: "Maecenas faucibus mollis interdum sed posuere consectetur est at lobortis. Scelerisque id ligula porta felis euismod semper."
-imageURL: "/assets/img/custom_photos/publish.jpg"
-imageURL2x: "/assets/img/photos/f4@2x.png"
+headline: "Be a scientist!"
+header: "Research Opportunities"
+description: "Students at Coding Mind gain opportunities to conduct scientific research. Learn how to create published and recognized research papers today!"
+imageURL: "/assets/img/showcases/research.png"
+imageURL2x: "/assets/img/showcases/research@2x.png"
 ---

@@ -1,7 +1,7 @@
 ---
-headline: "Be a scientist!"
-header: "Research Opportunities"
-description: "Students at Coding Mind gain opportunities to conduct scientific research. Learn how to create published and recognized research papers today!"
-imageURL: "/assets/img/be_a_showcase/Group 3.png"
-imageURL2x: "/assets/img/be_a_showcase/Group 3@2x.png"
+headline: "Be a developer!"
+header: "Publish Apps on The App Store"
+description: "Students at Coding Mind have developed apps that are currently in the app store. Learn how to make apps today!"
+imageURL: "/assets/img/showcases/publish.png"
+imageURL2x: "/assets/img/showcases/publish@2x.png"
 ---
