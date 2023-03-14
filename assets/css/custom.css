@@ -16,6 +16,7 @@ h1,h2,h3,h4,h5,.customFont{
     background: rgba(222,237,255,1);
     background: linear-gradient(180deg, rgb(255, 255, 255) 18%, rgba(222,237,255,1) 80%);
 }
+
 .bg-grid{
     background-color:white ;
     top: 0;
