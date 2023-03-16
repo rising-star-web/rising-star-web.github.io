@@ -41,9 +41,9 @@
                     <div>
                       <h6 class="dropdown-header">Our Programs</h6>
                       <ul class="list-unstyled">
-                        <li><a class="dropdown-item" href="/group_courses">Group Classes</a></li>
-                        <li><a class="dropdown-item" href="/1-1_courses">1-on-1 Private Lessons</a></li>
-                        <li><a class="dropdown-item" href="/enrichment">Enrichment Project Programs</a></li>
+                        <li><a class="dropdown-item" href="/group-lessons">Group Lessons</a></li>
+                        <li><a class="dropdown-item" href="/private-lessons">1-on-1 Private Lessons</a></li>
+                        <li><a class="dropdown-item" href="/enrichment-programs">Enrichment Project Programs</a></li>
                       </ul>
                     </div>
                     <!-- /.column -->
@@ -58,7 +58,7 @@
               </li>
 
               <li class="nav-item ">
-                <a class="nav-link nav-text-solid " href="/student_projects">Student Projects</a>
+                <a class="nav-link nav-text-solid " href="/projects">Student Projects</a>
               </li>
 
               <li class="nav-item">
@@ -107,7 +107,7 @@
         <div class="navbar-other w-100 d-flex ms-auto">
           <ul class="navbar-nav flex-row align-items-center ms-auto">
             <li class="nav-item d-none d-md-block">
-              <a href="#" class="btn btn-sm btn-navy rounded-pill" data-bs-toggle="modal" data-bs-target="#modal-signin">Learning Center</a>
+              <a href="#" class="btn btn-sm btn-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#modal-signin">Learning Center</a>
               </li>
               
             <li class="nav-item d-lg-none">
@@ -127,7 +127,7 @@
     <!-- /section -->
     <!-- Overview Description -->
     <section class="wrapper bg-custom">
-      <div class="container py-14 py-md-14">
+      <div class="container pt-10 pt-md-10 pb-14 pb-md-10">
         <div class="row gy-10 gy-sm-13 gx-lg-3 align-items-center mb-8 mb-md-10 mb-lg-13">
           <div class="col-md-8 col-lg-6 position-relative">
             <a href="./assets/media/movie.mp4" class="btn btn-circle btn-primary btn-play ripple mx-auto mb-5 position-absolute" style="top:50%; left: 50%; transform: translate(-50%,-50%); z-index:3;" data-glightbox><i class="icn-caret-right"></i></a>
@@ -137,8 +137,10 @@
           <!--/column -->
           <div class="col-lg-5 offset-lg-1">
             <h2 class="fs-15 text-uppercase text-muted mb-3">Private Classes</h2>
-            <h3 class="display-4 mb-6">1-on-1 Lessons with Instructors</h3>
-            <p class=" mb-6">1-on-1 instruction is designed to address the student's specific needs, learning style, and pace. Our goal is to provide students with personalized attention, focused instruction, and support to help them develop the skills for success.</p>
+            <h3 class="display-2 mb-6">1-on-1 Lessons with Instructors</h3>
+            <p class="mb-6" data-cue="slideInUp">
+              1-on-1 instruction is designed to address the student's specific needs, learning style, and pace. Our goal is to provide students with personalized attention, focused instruction, and support to help them develop the skills for success.
+            </p>
             <div class="row gy-3 gx-xl-8" data-cues="slideInUp" data-group="services">
               <div class="col-xl-6">
                 <ul class="icon-list bullet-bg bullet-soft-primary mb-0" data-cues="slideInUp" data-group="services">
@@ -155,7 +157,7 @@
               </div>
               <!--/column -->
               <div class="text-center">
-                <a href="/free-trial" class="btn btn-primary rounded-pill w-100 mt-8" data-cue="zoomIn">Sign Up</a>
+                <a href="/free-trial" class="btn btn-primary rounded-pill w-100 mt-6" data-cue="zoomIn">Sign Up</a>
               </div>
             </div>
             <!--/.row -->
@@ -180,7 +182,6 @@
         <!-- /.row -->
 
         <!-- LISTED TOP COURSES -->
-        <div data-cue="zoomIn">
           <div class="swiper-container" data-margin="30" data-nav="true" data-dots="true" data-items-xl="3" data-items-md="3" data-items-xs="1">
             <div class="swiper">
               <div class="swiper-wrapper pb-10">
@@ -195,7 +196,7 @@
                 
                 
                 
-                <div class="swiper-slide">
+                <div class="swiper-slide" data-cue="slideInUp">
                   <article class="">
     <figure class="overlay overlay-1 hover-scale rounded mb-4"><a href="/courses/scratch"> 
       <img src="/./assets/img/courses/Scratch.png" alt="" class="courseImage"/> 
@@ -232,7 +233,7 @@
                 
                 
                 
-                <div class="swiper-slide">
+                <div class="swiper-slide" data-cue="slideInUp">
                   <article class="">
     <figure class="overlay overlay-1 hover-scale rounded mb-4"><a href="/courses/minecraft2"> 
       <img src="/img/my/minecraftbasic/bg2.jpg" alt="" class="courseImage"/> 
@@ -269,7 +270,7 @@
                 
                 
                 
-                <div class="swiper-slide">
+                <div class="swiper-slide" data-cue="slideInUp">
                   <article class="">
     <figure class="overlay overlay-1 hover-scale rounded mb-4"><a href="/courses/python"> 
       <img src="/./assets/img/courses/Python.jpg" alt="" class="courseImage"/> 
@@ -300,7 +301,7 @@
                 
                 
                 
-                <div class="swiper-slide">
+                <div class="swiper-slide" data-cue="slideInUp">
                   <article class="">
     <figure class="overlay overlay-1 hover-scale rounded mb-4"><a href="/courses/mobile"> 
       <img src="/./assets/img/courses/MobileAppDevelopment.jpeg" alt="" class="courseImage"/> 
@@ -331,7 +332,7 @@
                 
                 
                 
-                <div class="swiper-slide">
+                <div class="swiper-slide" data-cue="slideInUp">
                   <article class="">
     <figure class="overlay overlay-1 hover-scale rounded mb-4"><a href="/courses/apcs"> 
       <img src="/img/my/coding-space.png" alt="" class="courseImage"/> 
@@ -364,7 +365,6 @@
               </div>
             </div>
           </div>
-        </div>
         <!-- /.swiper-container -->
 
       </div>
@@ -393,7 +393,7 @@
 
                 <div class="swiper-slide">
                   <div class="item-inner">
-                    <div class="card">
+                    <div class="card" data-cue="zoomOut">
                       <div class="card-body text-center">
                         <img class="rounded-circle w-20 mb-7" src="./assets/img/avatars/default.png" srcset="./assets/img/avatars/default.png 2x" alt="" />
                         <h4 class="mb-1">Instructor Name</h4>
@@ -408,7 +408,7 @@
                 <!--/.swiper-slide -->
                 <div class="swiper-slide">
                   <div class="item-inner">
-                    <div class="card">
+                    <div class="card" data-cue="zoomOut">
                       <div class="card-body text-center">
                         <img class="rounded-circle w-20 mb-7" src="./assets/img/avatars/default.png" srcset="./assets/img/avatars/default.png 2x" alt="" />
                         <h4 class="mb-1">Instructor Name</h4>
@@ -423,7 +423,7 @@
                 <!--/.swiper-slide -->
                 <div class="swiper-slide">
                   <div class="item-inner">
-                    <div class="card">
+                    <div class="card" data-cue="zoomOut">
                       <div class="card-body text-center">
                         <img class="rounded-circle w-20 mb-7" src="./assets/img/avatars/default.png" srcset="./assets/img/avatars/default.png 2x" alt="" />
                         <h4 class="mb-1">Instructor Name</h4>
@@ -438,7 +438,7 @@
                 <!--/.swiper-slide -->
                 <div class="swiper-slide">
                   <div class="item-inner">
-                    <div class="card">
+                    <div class="card" data-cue="zoomOut">
                       <div class="card-body text-center">
                         <img class="rounded-circle w-20 mb-7" src="./assets/img/avatars/default.png" srcset="./assets/img/avatars/default.png 2x" alt="" />
                         <h4 class="mb-1">Instructor Name</h4>
@@ -453,7 +453,7 @@
                 <!--/.swiper-slide -->
                 <div class="swiper-slide">
                   <div class="item-inner">
-                    <div class="card">
+                    <div class="card" data-cue="zoomOut">
                       <div class="card-body text-center">
                         <img class="rounded-circle w-20 mb-7" src="./assets/img/avatars/default.png" srcset="./assets/img/avatars/default.png 2x" alt="" />
                         <h4 class="mb-1">Instructor Name</h4>
@@ -468,7 +468,7 @@
                 <!--/.swiper-slide -->
                 <div class="swiper-slide">
                   <div class="item-inner">
-                    <div class="card">
+                    <div class="card" data-cue="zoomOut">
                       <div class="card-body text-center">
                         <img class="rounded-circle w-20 mb-7" src="./assets/img/avatars/default.png" srcset="./assets/img/avatars/default.png 2x" alt="" />
                         <h4 class="mb-1">Instructor Name</h4>
@@ -508,156 +508,153 @@
           <!-- /column -->
         </div>
         <!-- /.row -->
-        <div data-cues="slideInDown">
-          <div class="swiper-container dots-closer mb-6" data-margin="0" data-dots="true" data-items-xl="3" data-items-md="2" data-items-xs="1">
-            <div class="swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="item-inner">
-                    <div class="card">
-                      <div class="card-body">
-                        <span class="ratings five mb-3"></span>
-                        <blockquote class="icon mb-0">
-                          <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Cras justo odio dapibus facilisis sociis natoque.”</p>
-                          <div class="blockquote-details">
-                            <img class="rounded-circle w-12" src="./assets/img/avatars/default.png" srcset="./assets/img/avatars/default.png 2x" alt="" />
-                            <div class="info">
-                              <h5 class="mb-0">Reviewer Name</h5>
-                              <p class="mb-0">Customer (Parent/Student)</p>
-                            </div>
+        <div class="swiper-container dots-closer mb-6" data-margin="0" data-dots="true" data-items-xl="3" data-items-md="2" data-items-xs="1">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="item-inner">
+                  <div class="card">
+                    <div class="card-body">
+                      <span class="ratings five mb-3"></span>
+                      <blockquote class="icon mb-0">
+                        <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Cras justo odio dapibus facilisis sociis natoque.”</p>
+                        <div class="blockquote-details">
+                          <img class="rounded-circle w-12" src="./assets/img/avatars/default.png" srcset="./assets/img/avatars/default.png 2x" alt="" />
+                          <div class="info">
+                            <h5 class="mb-0">Reviewer Name</h5>
+                            <p class="mb-0">Customer (Parent/Student)</p>
                           </div>
-                        </blockquote>
-                      </div>
-                      <!-- /.card-body -->
+                        </div>
+                      </blockquote>
                     </div>
-                    <!-- /.card -->
+                    <!-- /.card-body -->
                   </div>
-                  <!-- /.item-inner -->
+                  <!-- /.card -->
                 </div>
-                <!--/.swiper-slide -->
-                <div class="swiper-slide">
-                  <div class="item-inner">
-                    <div class="card">
-                      <div class="card-body">
-                        <span class="ratings five mb-3"></span>
-                        <blockquote class="icon mb-0">
-                          <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Cras justo odio dapibus facilisis sociis natoque.”</p>
-                          <div class="blockquote-details">
-                            <img class="rounded-circle w-12" src="./assets/img/avatars/default.png" srcset="./assets/img/avatars/default.png 2x" alt="" />
-                            <div class="info">
-                              <h5 class="mb-0">Reviewer Name</h5>
-                              <p class="mb-0">Customer (Parent/Student)</p>
-                            </div>
-                          </div>
-                        </blockquote>
-                      </div>
-                      <!-- /.card-body -->
-                    </div>
-                    <!-- /.card -->
-                  </div>
-                  <!-- /.item-inner -->
-                </div>
-                <!--/.swiper-slide -->
-                <div class="swiper-slide">
-                  <div class="item-inner">
-                    <div class="card">
-                      <div class="card-body">
-                        <span class="ratings five mb-3"></span>
-                        <blockquote class="icon mb-0">
-                          <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Cras justo odio dapibus facilisis sociis natoque.”</p>
-                          <div class="blockquote-details">
-                            <img class="rounded-circle w-12" src="./assets/img/avatars/default.png" srcset="./assets/img/avatars/default.png 2x" alt="" />
-                            <div class="info">
-                              <h5 class="mb-0">Reviewer Name</h5>
-                              <p class="mb-0">Customer (Parent/Student)</p>
-                            </div>
-                          </div>
-                        </blockquote>
-                      </div>
-                      <!-- /.card-body -->
-                    </div>
-                    <!-- /.card -->
-                  </div>
-                  <!-- /.item-inner -->
-                </div>
-                <!--/.swiper-slide -->
-                <div class="swiper-slide">
-                  <div class="item-inner">
-                    <div class="card">
-                      <div class="card-body">
-                        <span class="ratings five mb-3"></span>
-                        <blockquote class="icon mb-0">
-                          <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Cras justo odio dapibus facilisis sociis natoque.”</p>
-                          <div class="blockquote-details">
-                            <img class="rounded-circle w-12" src="./assets/img/avatars/default.png" srcset="./assets/img/avatars/default.png 2x" alt="" />
-                            <div class="info">
-                              <h5 class="mb-0">Reviewer Name</h5>
-                              <p class="mb-0">Customer (Parent/Student)</p>
-                            </div>
-                          </div>
-                        </blockquote>
-                      </div>
-                      <!-- /.card-body -->
-                    </div>
-                    <!-- /.card -->
-                  </div>
-                  <!-- /.item-inner -->
-                </div>
-                <!--/.swiper-slide -->
-                <div class="swiper-slide">
-                  <div class="item-inner">
-                    <div class="card">
-                      <div class="card-body">
-                        <span class="ratings five mb-3"></span>
-                        <blockquote class="icon mb-0">
-                          <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Cras justo odio dapibus facilisis sociis natoque.”</p>
-                          <div class="blockquote-details">
-                            <img class="rounded-circle w-12" src="./assets/img/avatars/default.png" srcset="./assets/img/avatars/default.png 2x" alt="" />
-                            <div class="info">
-                              <h5 class="mb-0">Reviewer Name</h5>
-                              <p class="mb-0">Customer (Parent/Student)</p>
-                            </div>
-                          </div>
-                        </blockquote>
-                      </div>
-                      <!-- /.card-body -->
-                    </div>
-                    <!-- /.card -->
-                  </div>
-                  <!-- /.item-inner -->
-                </div>
-                <!--/.swiper-slide -->
-                <div class="swiper-slide">
-                  <div class="item-inner">
-                    <div class="card">
-                      <div class="card-body">
-                        <span class="ratings five mb-3"></span>
-                        <blockquote class="icon mb-0">
-                          <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Cras justo odio dapibus facilisis sociis natoque.”</p>
-                          <div class="blockquote-details">
-                            <img class="rounded-circle w-12" src="./assets/img/avatars/default.png" srcset="./assets/img/avatars/default.png 2x" alt="" />
-                            <div class="info">
-                              <h5 class="mb-0">Reviewer Name</h5>
-                              <p class="mb-0">Customer (Parent/Student)</p>
-                            </div>
-                          </div>
-                        </blockquote>
-                      </div>
-                      <!-- /.card-body -->
-                    </div>
-                    <!-- /.card -->
-                  </div>
-                  <!-- /.item-inner -->
-                </div>
-                <!--/.swiper-slide -->
+                <!-- /.item-inner -->
               </div>
-              <!-- /.swiper-wrapper -->
+              <!--/.swiper-slide -->
+              <div class="swiper-slide">
+                <div class="item-inner">
+                  <div class="card">
+                    <div class="card-body">
+                      <span class="ratings five mb-3"></span>
+                      <blockquote class="icon mb-0">
+                        <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Cras justo odio dapibus facilisis sociis natoque.”</p>
+                        <div class="blockquote-details">
+                          <img class="rounded-circle w-12" src="./assets/img/avatars/default.png" srcset="./assets/img/avatars/default.png 2x" alt="" />
+                          <div class="info">
+                            <h5 class="mb-0">Reviewer Name</h5>
+                            <p class="mb-0">Customer (Parent/Student)</p>
+                          </div>
+                        </div>
+                      </blockquote>
+                    </div>
+                    <!-- /.card-body -->
+                  </div>
+                  <!-- /.card -->
+                </div>
+                <!-- /.item-inner -->
+              </div>
+              <!--/.swiper-slide -->
+              <div class="swiper-slide">
+                <div class="item-inner">
+                  <div class="card">
+                    <div class="card-body">
+                      <span class="ratings five mb-3"></span>
+                      <blockquote class="icon mb-0">
+                        <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Cras justo odio dapibus facilisis sociis natoque.”</p>
+                        <div class="blockquote-details">
+                          <img class="rounded-circle w-12" src="./assets/img/avatars/default.png" srcset="./assets/img/avatars/default.png 2x" alt="" />
+                          <div class="info">
+                            <h5 class="mb-0">Reviewer Name</h5>
+                            <p class="mb-0">Customer (Parent/Student)</p>
+                          </div>
+                        </div>
+                      </blockquote>
+                    </div>
+                    <!-- /.card-body -->
+                  </div>
+                  <!-- /.card -->
+                </div>
+                <!-- /.item-inner -->
+              </div>
+              <!--/.swiper-slide -->
+              <div class="swiper-slide">
+                <div class="item-inner">
+                  <div class="card">
+                    <div class="card-body">
+                      <span class="ratings five mb-3"></span>
+                      <blockquote class="icon mb-0">
+                        <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Cras justo odio dapibus facilisis sociis natoque.”</p>
+                        <div class="blockquote-details">
+                          <img class="rounded-circle w-12" src="./assets/img/avatars/default.png" srcset="./assets/img/avatars/default.png 2x" alt="" />
+                          <div class="info">
+                            <h5 class="mb-0">Reviewer Name</h5>
+                            <p class="mb-0">Customer (Parent/Student)</p>
+                          </div>
+                        </div>
+                      </blockquote>
+                    </div>
+                    <!-- /.card-body -->
+                  </div>
+                  <!-- /.card -->
+                </div>
+                <!-- /.item-inner -->
+              </div>
+              <!--/.swiper-slide -->
+              <div class="swiper-slide">
+                <div class="item-inner">
+                  <div class="card">
+                    <div class="card-body">
+                      <span class="ratings five mb-3"></span>
+                      <blockquote class="icon mb-0">
+                        <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Cras justo odio dapibus facilisis sociis natoque.”</p>
+                        <div class="blockquote-details">
+                          <img class="rounded-circle w-12" src="./assets/img/avatars/default.png" srcset="./assets/img/avatars/default.png 2x" alt="" />
+                          <div class="info">
+                            <h5 class="mb-0">Reviewer Name</h5>
+                            <p class="mb-0">Customer (Parent/Student)</p>
+                          </div>
+                        </div>
+                      </blockquote>
+                    </div>
+                    <!-- /.card-body -->
+                  </div>
+                  <!-- /.card -->
+                </div>
+                <!-- /.item-inner -->
+              </div>
+              <!--/.swiper-slide -->
+              <div class="swiper-slide">
+                <div class="item-inner">
+                  <div class="card">
+                    <div class="card-body">
+                      <span class="ratings five mb-3"></span>
+                      <blockquote class="icon mb-0">
+                        <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Cras justo odio dapibus facilisis sociis natoque.”</p>
+                        <div class="blockquote-details">
+                          <img class="rounded-circle w-12" src="./assets/img/avatars/default.png" srcset="./assets/img/avatars/default.png 2x" alt="" />
+                          <div class="info">
+                            <h5 class="mb-0">Reviewer Name</h5>
+                            <p class="mb-0">Customer (Parent/Student)</p>
+                          </div>
+                        </div>
+                      </blockquote>
+                    </div>
+                    <!-- /.card-body -->
+                  </div>
+                  <!-- /.card -->
+                </div>
+                <!-- /.item-inner -->
+              </div>
+              <!--/.swiper-slide -->
             </div>
-            <!-- /.swiper -->
+            <!-- /.swiper-wrapper -->
           </div>
-          <!-- /.swiper-container -->
+          <!-- /.swiper -->
         </div>
-        <!-- /div -->
+        <!-- /.swiper-container -->
       </div>
       <!-- /.container -->
     </section>

@@ -106,25 +106,3 @@
     background: rgb(38, 43, 50);
     background: linear-gradient(180deg, rgba(38,43,50,1) 15%, rgba(255,255,255,1) 95%);
 }
-
-.custombtn{
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: #fff;
-    padding: 1.2rem 0.5rem;
-    background-color: #4494f5;
-    border: 2px solid #4494f5;
-    transition : 0.5s;
-    transform: translateY(0);
-    align-items: center;
-    cursor: pointer;
-}
-
-.custombtn:hover{
-    transition : 0.5s;
-    padding: 1.2rem 0.5rem;
-    transform : translateY(-0px);
-    background-color: #fff;
-    color: #4494f5;
-    border: solid 2px #4494f5;
-}
