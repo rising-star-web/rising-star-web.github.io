@@ -1,0 +1,31 @@
+{%- assign shiftLength = career.shiftLength-%}
+  {%- case shiftLength -%}
+    {%- when "Part Time" -%}
+      {%- assign shiftLengthStyle = 'fadedocean-gradient' %}
+    {%- when "Full Time" -%}
+      {%- assign shiftLengthStyle = 'fadedgrass-gradient' %}
+  {%- endcase -%}
+
+{%- assign jobSite = career.jobSite-%}
+  {%- case jobSite -%}
+    {%- when "Remote" -%}
+      {%- assign jobSiteStyle = 'starburstred-gradient' %}
+    {%- when "Hybrid" -%}
+      {%- assign jobSiteStyle = 'limegreen-gradient' %}
+    {%- when "On-Site" -%}
+      {%- assign jobSiteStyle = 'yellowgold-gradient' %}
+  {%- endcase -%}
+
+
+<div class="col-md-6 col-lg-4">
+    <a href="{{career.url}}" class="card shadow-lg lift h-100">
+        <div class="card-body p-5 d-flex flex-row">
+            <div>
+                <span class="badge bg-pale-aqua {{shiftLengthStyle}} rounded py-1 mb-2">{{career.shiftLength}}</span>
+                <span class="badge bg-pale-aqua {{jobSiteStyle}} rounded py-1 mb-2">{{career.jobSite}}</span>
+                <h4 class="mb-1">{{career.jobTitle}}</h4>
+                <p class="mb-0 text-body">{{career.jobLocation}}</p>
+            </div>
+        </div>
+    </a>
+</div>

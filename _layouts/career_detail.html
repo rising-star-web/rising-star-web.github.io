@@ -1,0 +1,229 @@
+---
+layout: default
+---
+    <section class="wrapper bg-custom">
+        <div class="container pt-10 pb-19 pt-md-14 pb-md-20 text-center">
+        <div class="row">
+            <div class="col-md-10 col-xl-8 mx-auto">
+            <div class="post-header">
+                <h1 class="display-1 mb-5">{{page.jobTitle}}</h1>
+                <ul class="post-meta">
+                    <li><i class="uil uil-location-point"></i><span>{{page.jobLocation}}</span></li>
+                    <li><i class="uil uil-map-pin-alt"></i><span>{{page.jobSite}}</span></li>
+                </ul>
+            </div>
+            <!-- /.post-header -->
+            </div>
+            <!-- /column -->
+        </div>
+        <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /section -->
+
+    <section class="wrapper bg-light">
+        <div class="container pb-14 pb-md-16">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+            <div class="blog single mt-n17">
+                <div class="card shadow-lg">
+                <div class="card-body">
+
+                    <!-- Job Description -->
+                    <h2 class="h1 mb-3">Job Description</h2>
+                    <p>{{page.jobDescription}}</p>
+                    
+                    <div class="row gy-3 gx-xl-8">
+                        <!-- Responsibilities -->
+                        <div class="col-xl-6">
+                            <h3 class="h2 mb-3 mt-6">Responsibilities</h3>
+                            <div class="row gy-3 gx-xl-8">
+                                <div class="col">
+                                    <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
+                                        {% for responsibility in page.responsibilities %}
+                                            <li><span><i class="uil uil-rocket"></i></span><span>{{responsibility.text}}</span></li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                <!--/column -->
+                            </div>
+                            <!--/.row -->
+                        </div>
+
+                        <!-- Requirements -->
+                        <div class="col-xl-6">
+                            <h3 class="h2 mb-3 mt-6">Requirements</h3>
+                            <div class="row gy-3 gx-xl-8">
+                                <div class="col">
+                                    <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
+                                        {% for requirement in page.requirements %}
+                                            <li><span><i class="uil uil-check"></i></span><span>{{requirement.text}}</span></li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                <!--/column -->
+                            </div>
+                            <!--/.row -->
+                        </div>
+    
+                        <!-- Preferred Experience -->
+                        <div class="col-xl-6">
+                            <h3 class="h2 mb-3 mt-3">Preferred Experience</h3>
+                            <div class="row gy-3 gx-xl-8">
+                                <div class="col">
+                                    <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
+                                        {% for experience in page.experiences %}
+                                            <li><span><i class="uil uil-thumbs-up"></i></span><span>{{experience.text}}</span></li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                <!--/column -->
+                            </div>
+                            <!--/.row -->
+                        </div>
+
+                        <!-- Benefits -->
+                        <div class="col-xl-6">
+                            <h3 class="h2 mb-3 mt-3">Benefits</h3>
+                            <div class="row gy-3 gx-xl-8">
+                                <div class="col">
+                                    <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
+                                        {% for benefit in page.benefits %}
+                                            <li><span><i class="uil uil-clock"></i></span><span>{{benefit.text}}</span></li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                <!--/column -->
+                            </div>
+                            <!--/.row -->
+                        </div>
+
+                    </div>
+                    
+                    <a href="mailto:jobs@codingmindsacademy.com" class="btn btn-primary rounded-pill mt-9">Apply Now</a>
+                </div>
+                <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.blog -->
+            </div>
+            <!-- /column -->
+        </div>
+        <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /section -->
+
+    <section class="wrapper bg-soft-primary">
+        <div class="container py-14 py-md-16">
+        <div class="row align-items-center mb-6">
+            <div class="col-md-8 col-lg-9 col-xl-8 col-xxl-7 pe-xl-20">
+            <h2 class="display-6 mb-0">More Job Openings</h2>
+            </div>
+            <!--/column -->
+            <div class="col-md-4 col-lg-3 ms-md-auto text-md-end mt-5 mt-md-0">
+            <a href="#" class="btn btn-primary rounded-pill mb-0">Explore Positions</a>
+            </div>
+            <!--/column -->
+        </div>
+        <!--/.row -->
+        <div class="row gy-6">
+            <div class="col-md-6 col-lg-4">
+            <a href="#" class="card shadow-lg lift h-100">
+                <div class="card-body p-5 d-flex flex-row">
+                <div>
+                    <span class="avatar bg-red text-white w-11 h-11 fs-20 me-4">SD</span>
+                </div>
+                <div>
+                    <span class="badge bg-pale-blue text-blue rounded py-1 mb-2">Full Time</span>
+                    <h4 class="mb-1">Senior Graphic Designer</h4>
+                    <p class="mb-0 text-body">San Francisco, US</p>
+                </div>
+                </div>
+            </a>
+            </div>
+            <!--/column -->
+            <div class="col-md-6 col-lg-4">
+            <a href="#" class="card shadow-lg lift h-100">
+                <div class="card-body p-5 d-flex flex-row">
+                <div>
+                    <span class="avatar bg-green text-white w-11 h-11 fs-20 me-4">UX</span>
+                </div>
+                <div>
+                    <span class="badge bg-pale-aqua text-aqua rounded py-1 mb-2">Remote</span>
+                    <h4 class="mb-1">UI/UX Designer</h4>
+                    <p class="mb-0 text-body">Anywhere</p>
+                </div>
+                </div>
+            </a>
+            </div>
+            <!--/column -->
+            <div class="col-md-6 col-lg-4">
+            <a href="#" class="card shadow-lg lift h-100">
+                <div class="card-body p-5 d-flex flex-row">
+                <div>
+                    <span class="avatar bg-yellow text-white w-11 h-11 fs-20 me-4">AN</span>
+                </div>
+                <div>
+                    <span class="badge bg-pale-blue text-blue rounded py-1 mb-2">Full Time</span>
+                    <h4 class="mb-1">Multimedia Artist &amp; Animator</h4>
+                    <p class="mb-0 text-body">Birmingham, UK</p>
+                </div>
+                </div>
+            </a>
+            </div>
+            <!--/column -->
+            <div class="col-md-6 col-lg-4">
+            <a href="#" class="card shadow-lg lift h-100">
+                <div class="card-body p-5 d-flex flex-row">
+                <div>
+                    <span class="avatar bg-purple text-white w-11 h-11 fs-20 me-4">FD</span>
+                </div>
+                <div>
+                    <span class="badge bg-pale-violet text-violet rounded py-1 mb-2">Part Time</span>
+                    <h4 class="mb-1">Front End Developer</h4>
+                    <p class="mb-0 text-body">Sydney, AU</p>
+                </div>
+                </div>
+            </a>
+            </div>
+            <!--/column -->
+            <div class="col-md-6 col-lg-4">
+            <a href="#" class="card shadow-lg lift h-100">
+                <div class="card-body p-5 d-flex flex-row">
+                <div>
+                    <span class="avatar bg-orange text-white w-11 h-11 fs-20 me-4">MD</span>
+                </div>
+                <div>
+                    <span class="badge bg-pale-blue text-blue rounded py-1 mb-2">Full Time</span>
+                    <h4 class="mb-1">Mobile Developer</h4>
+                    <p class="mb-0 text-body">San Francisco, US</p>
+                </div>
+                </div>
+            </a>
+            </div>
+            <!--/column -->
+            <div class="col-md-6 col-lg-4">
+            <a href="#" class="card shadow-lg lift h-100">
+                <div class="card-body p-5 d-flex flex-row">
+                <div>
+                    <span class="avatar bg-pink text-white w-11 h-11 fs-20 me-4">ND</span>
+                </div>
+                <div>
+                    <span class="badge bg-pale-blue text-blue rounded py-1 mb-2">Full Time</span>
+                    <h4 class="mb-1">.NET Developer</h4>
+                    <p class="mb-0 text-body">Manchester, UK</p>
+                </div>
+                </div>
+            </a>
+            </div>
+            <!--/column -->
+        </div>
+        <!--/.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /section -->

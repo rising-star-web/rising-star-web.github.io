@@ -82,6 +82,9 @@ collections:
   projects:
     output: true
     permalink: /:collection/:name
+  careers:
+    output: true
+    permalink: /:collection/:name
   reviews:
     output: true
   showcases:
