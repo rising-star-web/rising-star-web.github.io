@@ -60,7 +60,7 @@ h1,h2,h3,h4,h5,.customFont{
 @media only screen and (max-width: 600px) {
     .free-trial-wrap{
         position: fixed;
-        right: 9.2rem;
+        right: 7.6rem;
         bottom: 4.6rem;
         width: 4.6rem;
         height: 4.6rem;
@@ -243,4 +243,16 @@ h1,h2,h3,h4,h5,.customFont{
 
 #outputParent{
     display: none;
+}
+
+.vh-50 {
+    height: 50vh;
+  }
+
+.vh-75 {
+height: 75vh;
+}
+
+.vh-25 {
+height: 25vh;
 }
