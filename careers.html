@@ -7,32 +7,37 @@ layout: default
     <!-- Job Listings -->
     <section class="wrapper bg-custom">
         <div class="container pt-12 pt-md-12 pb-14 pb-md-14">
-        <div class="row text-center">
-            <div class="col-xl-10 mx-auto">
-            <h1 class="display-2 mb-3">Career Opportunities</h1>
-            <p class="lead mb-10">We are always looking for passionate coding instructors to teach K-12 students in our summer camps, after-school programs, and weekend workshops! Take a look at our current openings.</h3>
+            <div class="row text-center">
+                <div class="col-xl-10 mx-auto">
+                <h1 class="display-2 mb-3">Career Opportunities</h1>
+                <p class="lead mb-10">We are always looking for passionate coding instructors to teach K-12 students in our summer camps, after-school programs, and weekend workshops! Take a look at our current openings.</h3>
+                </div>
+                <!-- /column -->
             </div>
-            <!-- /column -->
-        </div>
-        <!-- /.row -->
-        <div class="row gy-6">
+            <!-- /.row -->
+            <div class="row gy-6">
 
-            {% for career in careers %}
-              {% include career.html %}
-            {% endfor %}
+                {% for career in careers %}
+                {% include career.html %}
+                {% endfor %}
 
-        </div>
-        <!--/.row -->
-        <div class="row mt-11">
-            <div class="col-lg-6 col-xl-5 mx-auto text-center">
-            <h2 class="display-6 mb-3">Can't find the right position?</h2>
-            <p class="lead mb-5 px-md-16 px-lg-3">Feel free to reach out or contact us for more information.</p>
-            <a href="/contact-us" class="btn btn-primary rounded-pill">Get in Touch</a>
             </div>
-            <!-- /column -->
-        </div>
-        <!-- /.row -->
+            <!--/.row -->
         </div>
         <!-- /.container -->
     </section>
     <!-- /section -->
+
+    <section class="wrapper bg-light">
+        <div class="container pt-8 pt-md-8 pb-14 pb-md-14">
+            <div class="row mt-11">
+                <div class="col-lg-6 col-xl-5 mx-auto text-center">
+                <h2 class="display-6 mb-3">Can't find the right position?</h2>
+                <p class="lead mb-5 px-md-16 px-lg-3">Feel free to reach out or contact us for more information.</p>
+                <a href="/contact-us" class="btn btn-primary rounded-pill">Get in Touch</a>
+                </div>
+                <!-- /column -->
+            </div>
+            <!-- /.row -->
+        </div>
+    </section>

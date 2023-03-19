@@ -83,88 +83,86 @@ layout: default
 </section>
 <!-- /section -->
 
-<section class="wrapper bg-light">
-	<div class="container text-center">
-	  <div class="row">
-		<div class="col-md-9 col-lg-7 col-xl-7 mx-auto text-center">
-		  <h2 class="display-4 mb-3">Message Us On WeChat</h2>
-		  <p class="lead fs-lg mb-6 px-xl-10 px-xxl-15">Scan the QR Code to message us.</p>
-		</div>
-		<!-- /column -->
-	  </div>
-	  <!-- /.row -->
-	  <div class="row">
-		<div class="col-md-6 col-lg-5 col-xl-4 mx-auto">
-			<img class="h-75" src="/img/my/qr.jpg" />
-		</div>
-		<!-- /column -->
-	  </div>
-	  <!-- /.row -->
-	</div>
-	<!-- /.container -->
-  </section>
-  <!-- /section -->
-
 
 <section class="wrapper bg-light">
 	<div class="container pb-14 pb-md-16 text-center">
 		<div class="row mb-6 mb-md-8">
-			<div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
-				<h2 class="display-4 mb-3 text-center">Send Us a Message</h2>
-				<p class="lead text-center mb-10">Reach out to us from our contact form and we will get back to you shortly.</p>
-				<form class="contact-form needs-validation" method="post" action="/assets/php/contact.php" novalidate>
-					<div class="messages"></div>
-					<div class="row gx-4">
-						<div class="col-md-6">
-							<div class="form-floating mb-4">
-								<input id="form_name" type="text" name="name" class="form-control" placeholder="Jane" required>
-								<label for="form_name">Name *</label>
-								<div class="valid-feedback">
-									Looks good!
-								</div>
-								<div class="invalid-feedback">
-									Please enter your name.
-								</div>
-							</div>
-						</div>
-						<!-- /column -->
-						<div class="col-md-6">
-							<div class="form-floating mb-4">
-								<input id="form_email" type="email" name="email" class="form-control" placeholder="jane.doe@example.com" required>
-								<label for="form_email">Email *</label>
-								<div class="valid-feedback">
-									Looks good!
-								</div>
-								<div class="invalid-feedback">
-									Please provide a valid email address.
+			<div class="col-xl-6">
+				<div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+					<h2 class="display-4 mb-3 text-center">Send Us a Message</h2>
+					<p class="lead text-center mb-10">Reach out to us from our contact form and we will get back to you shortly.</p>
+					<form class="contact-form needs-validation" method="post" action="/assets/php/contact.php" novalidate>
+						<div class="messages"></div>
+						<div class="row gx-4">
+							<div class="col-md-6">
+								<div class="form-floating mb-4">
+									<input id="form_name" type="text" name="name" class="form-control" placeholder="Jane" required>
+									<label for="form_name">Name *</label>
+									<div class="valid-feedback">
+										Looks good!
+									</div>
+									<div class="invalid-feedback">
+										Please enter your name.
+									</div>
 								</div>
 							</div>
-						</div>
-						<!-- /column -->
-						<div class="col-12">
-							<div class="form-floating mb-4">
-								<textarea id="form_message" name="message" class="form-control" placeholder="Your message" style="height: 150px" required></textarea>
-								<label for="form_message">Message *</label>
-								<div class="valid-feedback">
-									Looks good!
-								</div>
-								<div class="invalid-feedback">
-									Please enter your messsage.
+							<!-- /column -->
+							<div class="col-md-6">
+								<div class="form-floating mb-4">
+									<input id="form_email" type="email" name="email" class="form-control" placeholder="jane.doe@example.com" required>
+									<label for="form_email">Email *</label>
+									<div class="valid-feedback">
+										Looks good!
+									</div>
+									<div class="invalid-feedback">
+										Please provide a valid email address.
+									</div>
 								</div>
 							</div>
+							<!-- /column -->
+							<div class="col-12">
+								<div class="form-floating mb-4">
+									<textarea id="form_message" name="message" class="form-control" placeholder="Your message" style="height: 150px" required></textarea>
+									<label for="form_message">Message *</label>
+									<div class="valid-feedback">
+										Looks good!
+									</div>
+									<div class="invalid-feedback">
+										Please enter your messsage.
+									</div>
+								</div>
+							</div>
+							<!-- /column -->
+							<div class="col-12 text-center">
+								<input type="submit" class="btn btn-primary rounded-pill btn-send mb-3" value="Send message">
+								<p class="text-muted"><strong>*</strong> These fields are required.</p>
+							</div>
+							<!-- /column -->
 						</div>
-						<!-- /column -->
-						<div class="col-12 text-center">
-							<input type="submit" class="btn btn-primary rounded-pill btn-send mb-3" value="Send message">
-							<p class="text-muted"><strong>*</strong> These fields are required.</p>
-						</div>
-						<!-- /column -->
-					</div>
-					<!-- /.row -->
-				</form>
-				<!-- /form -->
+						<!-- /.row -->
+					</form>
+					<!-- /form -->
+				</div>
+				<!-- /column -->
 			</div>
-			<!-- /column -->
+
+			<div class="col-xl-6">
+				<div class="row">
+					<div class="mx-auto mt-8 mt-md-0 text-center">
+					  <h2 class="display-4 mb-3">Message Us On WeChat</h2>
+					  <p class="lead text-center mb-10">Scan the QR Code to message us.</p>
+					</div>
+					<!-- /column -->
+				  </div>
+				  <!-- /.row -->
+				  <div class="row">
+					<div class="mx-auto">
+						<img class="h-50" src="/img/my/qr.jpg" />
+					</div>
+					<!-- /column -->
+				  </div>
+				  <!-- /.row -->
+			</div>
 		</div>
 		<!-- /.row -->
 	</div>

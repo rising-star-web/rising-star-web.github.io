@@ -4,6 +4,8 @@
       {%- assign shiftLengthStyle = 'fadedocean-gradient' %}
     {%- when "Full Time" -%}
       {%- assign shiftLengthStyle = 'fadedgrass-gradient' %}
+    {%- when "Internship" -%}
+      {%- assign shiftLengthStyle = 'lavender-gradient' %}
   {%- endcase -%}
 
 {%- assign jobSite = career.jobSite-%}
@@ -16,13 +18,20 @@
       {%- assign jobSiteStyle = 'yellowgold-gradient' %}
   {%- endcase -%}
 
+  {%- assign internship = career.internship-%}
+  {%- case internship -%}
+    {%- when "Intern" -%}
+      {%- assign internshipStyle = 'lavender-gradient' %}
+  {%- endcase -%}
+
 
 <div class="col-md-6 col-lg-4">
     <a href="{{career.url}}" class="card shadow-lg lift h-100">
         <div class="card-body p-5 d-flex flex-row">
             <div>
-                <span class="badge bg-pale-aqua {{shiftLengthStyle}} rounded py-1 mb-2">{{career.shiftLength}}</span>
-                <span class="badge bg-pale-aqua {{jobSiteStyle}} rounded py-1 mb-2">{{career.jobSite}}</span>
+                <span class="badge {{internshipStyle}} rounded py-1 mb-2">{{career.internship}}</span>
+                <span class="badge {{shiftLengthStyle}} rounded py-1 mb-2">{{career.shiftLength}}</span>
+                <span class="badge {{jobSiteStyle}} rounded py-1 mb-2">{{career.jobSite}}</span>
                 <h4 class="mb-1">{{career.jobTitle}}</h4>
                 <p class="mb-0 text-body">{{career.jobLocation}}</p>
             </div>
