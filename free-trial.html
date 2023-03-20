@@ -12,6 +12,11 @@ layout: default
         <div class="col-lg-6 col-xl-5 offset-xl-1">
           <h2 class="display-2 mb-3">Sign Up for a Trial Class</h2>
           <p class="lead mb-8 pe-xl-10">Schedule for a free trial by filling out this form and we will get back to you shortly. Try out a class to see if it's right for you. </p>
+          
+          <div class="d-flex justify-content-center" >
+            <div id="formSpinner"class="spinner-border text-navy align-self-center" role="status" style="width: 3rem; height: 3rem; display: none;" >
+            </div>
+          </div>
 
           <form id="gform" name="gform" target="hidden_iframe" enctype="text/plain" onsubmit="submitted=true;" class="contact-form needs-validation" action="https://docs.google.com/forms/d/e/1FAIpQLSccHA0yK51cQHtkRXvtua-tpDDagTTs5YsxZ7Za6l5ZpHlhDw/formResponse?" novalidate>
             <div class="messages"></div>
@@ -38,8 +43,8 @@ layout: default
             </div>
 
             <div class="form-floating mb-4">
-              <input id="entry.1005077348" type="email" name="entry.1005077348" class="form-control" placeholder="jane.doe@example.com" required="required" data-error="Valid email is required.">
-              <label for="entry.1005077348">Parent's Email Address *</label>
+              <input id="emailAddress" type="email" name="emailAddress" class="form-control" pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+$" placeholder="jane.doe@example.com" required="required" data-error="Valid email is required.">
+              <label for="emailAddress">Parent's Email Address *</label>
               <div class="valid-feedback">
                 Looks good!
               </div>
@@ -51,7 +56,7 @@ layout: default
             
             <div class="form-floating mb-4">
               <input id="entry.1164819677" type="tel" maxlength="12" id="phone" name="entry.1164819677" class="form-control" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required="required" data-error="Valid phone number is required.">
-              <label for="entry.1164819677">Parent's Phone Number: <i>Ex. 123-456-7890</i> *</label>
+              <label for="entry.1164819677">Parent's Phone Number: <i>Ex. 123-456-7890 (Use dashes)</i> *</label>
               <div class="valid-feedback">
                 Looks good!
               </div>
@@ -85,7 +90,7 @@ layout: default
               <input class="form-control" type="time" id="entry.1827921407" name="entry.1827921407" required="required">
               </div>
             
-            <input type="submit" class="btn btn-primary rounded-pill btn-send mb-3" value="submit">
+            <button type="submit" id="trialButton" class="btn btn-primary rounded-pill btn-send mb-3"> Submit </button>
             <p class="text-muted"><strong>*</strong> These fields are required.</p>
           </form>
           <!-- /form -->
@@ -104,9 +109,4 @@ layout: default
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var submitted=false;
-    $('#gform').on('submit,', function(e){
-      $('#gform *').fadeOut(2000);
-      $('#gform *').prepend('Your request has been processed. We will get back to you shortly.');
-
-    })
   </script>

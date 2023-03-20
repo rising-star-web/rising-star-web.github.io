@@ -788,23 +788,27 @@ var theme = {
               if(isContactForm) {
                 var data = new FormData(form);
                 var alertClass = 'alert-danger';
-                fetch("assets/php/contact.php", {
+                $('#gform *').css("pointer-events","none");
+                $('#gform *').fadeOut(500);
+                $('#formSpinner').css("display", "block");
+                
+                fetch("https://docs.google.com/forms/d/e/1FAIpQLSccHA0yK51cQHtkRXvtua-tpDDagTTs5YsxZ7Za6l5ZpHlhDw/formResponse?", {
+                  mode: "no-cors",
                   method: "post",
                   body: data
-                }).then((data) => {
-                  if(data.ok) {
-                    alertClass = 'alert-success';
+                }).then((response) => {
+                  console.log(response);
+                  if(response.ok) {
+                    console.log('Success.');
                   }
-                  return data.text();
+                  return 'Your free trial request has been processed. We will contact you shortly.';
                 }).then((txt) => {
-                  var alertBox = '<div class="alert ' + alertClass + ' alert-dismissible fade show"><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' + txt + '</div>';
-                  if(alertClass && txt) {
-                    form.querySelector(".messages").insertAdjacentHTML('beforeend', alertBox);
-                    form.reset();
-                    grecaptcha.reset();
-                  }
+                  $('#formSpinner').css("display", "none");
+                  $('#gform').prepend(txt);
                 }).catch((err) => {
                   console.log(err);
+                  $('#formSpinner').css("display", "none");
+                  $('#gform').prepend('An error has occurred. Please contact us for help.');
                 });
               }
             }
