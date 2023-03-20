@@ -5,7 +5,7 @@ layout: student_project_detail
 coverImage: "/assets/img/placeholder5.jpg"
 pagePostDate: "23 Feb 2023"
 studentName: "Student Name"
-projectName: "Student Project Name"
+projectName: "Student Project Name 4"
 projectCategory: "Game Development"
 projectDesc: "A brief description of the project."
 
