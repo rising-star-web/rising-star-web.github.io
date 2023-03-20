@@ -6,7 +6,7 @@ shiftLength: "Part Time"
 jobTitle: "Bilingual Digital Marketing Assistant Internship (Chinese/English)"
 jobLocation: "Irvine, CA"
 jobSite: "Remote"
-internship: "Intern"
+internship: "Internship"
 
 [//]: # (Career Details)
 jobDescription: "We are looking for candidates who are passionate about education, marketing and management."

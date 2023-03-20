@@ -6,6 +6,8 @@
       {%- assign shiftLengthStyle = 'fadedgrass-gradient' %}
     {%- when "Internship" -%}
       {%- assign shiftLengthStyle = 'lavender-gradient' %}
+    {%- else -%}
+      {%- assign shiftLengthStyle = 'bg-primary' %}
   {%- endcase -%}
 
 {%- assign jobSite = career.jobSite-%}
@@ -16,12 +18,16 @@
       {%- assign jobSiteStyle = 'limegreen-gradient' %}
     {%- when "On-Site" -%}
       {%- assign jobSiteStyle = 'yellowgold-gradient' %}
+    {%- else -%}
+      {%- assign jobSiteStyle = 'bg-primary' %}
   {%- endcase -%}
 
   {%- assign internship = career.internship-%}
   {%- case internship -%}
-    {%- when "Intern" -%}
+    {%- when "Internship" -%}
       {%- assign internshipStyle = 'lavender-gradient' %}
+    {%- else -%}
+      {%- assign internshipStyle = 'bg-primary' %}
   {%- endcase -%}
 
 
