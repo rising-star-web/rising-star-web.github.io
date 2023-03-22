@@ -25,7 +25,6 @@ experiences:
 - text: "Familiarity with popular programming languages (Python, Java, C#, HTML/CSS, JavaScript)."
 - text: "AI and Machine Learning."
 - text: "Game Development."
-- text: "Game Development."
 - text: "Web Development."
 - text: "Algorithms."
 benefits:

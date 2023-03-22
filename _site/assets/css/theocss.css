@@ -49,14 +49,15 @@
 
     /* CAREER COLORS */
     .starburstred-gradient {
-        background-image: radial-gradient( circle farthest-corner at 14.2% 24%,  rgba(239,61,78,1) 0%, rgba(239,61,78,0.81) 51.8%, rgba(239,61,78,0.63) 84.6% );
+        background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(239,61,78,1) 0%, rgba(239,61,78,0.81) 51.8%, rgba(239,61,78,0.63) 84.6% );
     }
+
     .yellowgold-gradient {
-        background-image: radial-gradient( circle 957px at 8.7% 50.5%,  rgba(246,191,13,1) 0%, rgba(249,47,47,1) 90% );
+        background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(246, 165, 13) 0%, rgb(245, 202, 62) 90% );
     }
 
     .fadedocean-gradient {
-        background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,84,166,1) 0%, rgba(132,189,201,1) 90% );
+        background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(31, 121, 212) 0%, rgb(115, 183, 235) 90% );
     }
 
     .fadedgrass-gradient {
@@ -64,7 +65,7 @@
     }
 
     .lavender-gradient {
-        background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(109, 102, 251) 0%, rgb(205, 157, 233) 100.2% );
+        background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(109, 102, 251) 0%, rgb(205, 157, 233) 90% );
     }
 
 

@@ -1,17 +1,27 @@
-
+{%- assign category = project.projectCategory-%}
+  {%- case category -%}
+    {%- when "Newly Added" -%}
+      {%- assign categoryStyle = 'ig-gradient' %}
+    {%- when "Game Development" -%}
+      {%- assign categoryStyle = 'limegreen-gradient' %}
+    {%- when "Mobile Development" -%}
+      {%- assign categoryStyle = 'sunkissed-gradient' %}
+    {%- when "Robotics" -%}
+      {%- assign categoryStyle = 'aquagreen-gradient' %}
+    {%- else -%}
+      {%- assign categoryStyle = 'blue-gradient1' -%}
+  {%- endcase -%}
 
 <div class="swiper-slide">
     <article>
-      <figure class="overlay overlay-1 hover-scale rounded mb-5"><a href="{{project.url}}"> <img src="{{project.coverImage}}" alt="" /></a>
+      <figure class="overlay overlay-1 hover-scale rounded mb-5"><a href="{{project.url}}"> <img src="{{project.coverImage}}" alt="" />
+        <span class="projectLabel {{categoryStyle}}">{{project.projectCategory}}</span>
+      </a>
         <figcaption>
           <h5 class="from-top mb-0">Read More</h5>
         </figcaption>
       </figure>
       <div class="post-header">
-        <div class="post-category text-line">
-          <a href="#" class="hover" rel="category">{{project.projectCategory}}</a>
-        </div>
-        <!-- /.post-category -->
         <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="{{project.url}}">{{project.projectName}}</a></h2>
       </div>
       <!-- /.post-header -->

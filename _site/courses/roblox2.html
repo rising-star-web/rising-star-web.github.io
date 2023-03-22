@@ -85,7 +85,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="dropdown-item d-block d-lg-none"href="https://www.sharemyworks.com" target="_blank">Learning Center</a>
+                <a class="nav-link dropdown-item d-block d-lg-none"href="https://www.sharemyworks.com" target="_blank">Learning Center</a>
               </li>
 
             </ul>
@@ -128,7 +128,8 @@
   <!-- /.navbar -->
 </header>
 
-      <section class="wrapper bg-gray pt-6 ">
+      <!--
+  <section class="wrapper bg-gray pt-6 ">
     <div class="container pb-4 pb-md-5">
       <nav class="d-inline-block" aria-label="breadcrumb">
         <ol class="breadcrumb mb-0">
@@ -137,30 +138,42 @@
           <li class="breadcrumb-item active text-muted" aria-current="page">Advanced Roblox Game Development and Lua Programming</li>
         </ol>
       </nav>
-      <!-- /nav -->
     </div>
-    <!-- /.container -->
   </section>
-  <!-- /section -->
+  -->
+
+  <!-- Course Overview -->
   <section class="wrapper bg-light">  
-    <div class="container py-8 py-md-12">
+    <div class="container pt-8 pt-md-12 pb-8 pb-md-8">
+
+      <!-- Breadcrumb Nav Bar -->
+      <nav class="d-inline-block pb-4 pb-md-5" aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item"><a href="/courses">Courses</a></li>
+          <li class="breadcrumb-item active text-muted" aria-current="page">Advanced Roblox Game Development and Lua Programming</li>
+        </ol>
+      </nav>
+      <!-- /nav -->
+
+      <!-- Course Information -->
       <div class="row gx-md-8 gx-xl-12 gy-8 d-flex flex-row justify-content-between">
         <div class="col-lg-6">
           <div class="post-header mb-5">
             <h2 class="post-title display-5">Advanced Roblox Game Development and Lua Programming</h2>
           </div>
 
-          <hr class="my-2" />
-
+          <hr class="my-5" />
           <!-- /.post-header -->
-          <p class="mb-6">Roblox is a massively multiplayer online game creation platform with over six thousand users online every month. Roblox Studio allows users to develop their own games and share it with others in the community.</p>
+
+          <p class="mb-5">Roblox is a massively multiplayer online game creation platform with over six thousand users online every month. Roblox Studio allows users to develop their own games and share it with others in the community.</p>
             <div class="row">
               <div class="col-lg-9 d-flex flex-row pt-2">
                 <div class="me-2">
-                  <a href="/free-trial" class="btn btn-primary btn-icon btn-icon-start rounded w-100 flex-grow-1"> Try a free class!</a>
+                  <a href="/free-trial" class="btn btn-primary btn-icon btn-icon-start rounded-pill"> Try a free class!</a>
                 </div>
                 <div>
-                  <a href="/contact-us" class="btn btn-outline-navy rounded px-3 w-100 h-100">Contact Us</a>
+                  <a href="/contact-us" class="btn btn-navy rounded-pill">Contact Us</a>
                 </div>
               </div>
               <!-- /column -->
@@ -169,7 +182,8 @@
         </div>
         <!-- /column -->
 
-        <div class="col-lg-5">
+        <!-- Carousel -->
+        <div class="col-lg-6">
           <div class="swiper-container swiper-thumbs-container" data-margin="10" data-dots="false" data-nav="true" data-thumbs="true">
             <div class="swiper bg-navy rounded">
               <div class="swiper-wrapper align-items-center">
@@ -207,18 +221,19 @@
               <!--/.swiper-wrapper -->
             </div>
             <!-- /.swiper -->
+
             <div class="swiper swiper-thumbs">
               <div class="swiper-wrapper">
                 
-                <div class="swiper-slide"><img src="/img/my/roblox1/r1.jpg" class="rounded h-10" alt="" /></div>  
+                <div class="swiper-slide"><img src="/img/my/roblox1/r1.jpg" class="rounded h-100" alt="" /></div>  
                 
-                <div class="swiper-slide"><img src="/img/my/roblox1/r6.jpg" class="rounded h-10" alt="" /></div>  
+                <div class="swiper-slide"><img src="/img/my/roblox1/r6.jpg" class="rounded h-100" alt="" /></div>  
                 
-                <div class="swiper-slide"><img src="/img/my/roblox1/r7.jpg" class="rounded h-10" alt="" /></div>  
+                <div class="swiper-slide"><img src="/img/my/roblox1/r7.jpg" class="rounded h-100" alt="" /></div>  
                 
-                <div class="swiper-slide"><img src="/img/my/roblox1/r4.jpg" class="rounded h-10" alt="" /></div>  
+                <div class="swiper-slide"><img src="/img/my/roblox1/r4.jpg" class="rounded h-100" alt="" /></div>  
                 
-                <div class="swiper-slide"><img src="/img/my/roblox1/r5.jpg" class="rounded h-10" alt="" /></div>  
+                <div class="swiper-slide"><img src="/img/my/roblox1/r5.jpg" class="rounded h-100" alt="" /></div>  
               </div>
               <!--/.swiper-wrapper -->
             </div>
@@ -231,8 +246,9 @@
       </div>
       <!-- /.row -->
 
-      <section class="wrapper bg-gray rounded">
-        <div class="container py-3 py-md-5 mt-5">    
+      <!-- Details Bar -->
+      <section class="wrapper bg-soft-primary rounded">
+        <div class="container py-4 py-md-4 mt-12">    
           <div class="d-flex pt-4 fs-sm justify-content-around flex-column flex-md-row">
             <div class="d-flex">
               <img src="/assets/img/icons/solid/3d.svg" class="svg-inject icon-svg icon-svg-xs solid-duo text-navy-sky h-5" alt="" />
@@ -258,7 +274,8 @@
         </div>
       </section>
 
-      <ul class="d-flex nav nav-tabs nav-tabs-basic mt-4">
+      <!-- Tabs -->
+      <ul class="d-flex nav nav-tabs nav-tabs-basic mt-8">
         <li class="nav-item me-2 me-md-0"> 
           <a class="nav-link active" data-bs-toggle="tab" href="#tab1-1">Course Details</a>
         </li>
@@ -270,6 +287,8 @@
         </li>
       </ul>
       <!-- /.nav-tabs -->
+      
+      <!-- Tab Content -->
       <div class="tab-content mt-0 mt-md-5">
         <div class="tab-pane fade show active" id="tab1-1">
           <p>Learn programming with game development. Build your own game without limits.</p>
@@ -337,19 +356,19 @@
         <!--/.tab-pane -->
         <div class="tab-pane fade" id="tab1-2">
           <p>  What you should expect to gain from this course.</p>
-          <ul class="unordered-list bullet-primary">
+          <ul class="icon-list bullet-bg bullet-soft-primary">
             
-            <li>Understanding the process of game development</li>
+            <li><span><i class="uil uil-rocket"></i></span>Understanding the process of game development</li>
             
-            <li>The basics of Lua programming language</li>
+            <li><span><i class="uil uil-rocket"></i></span>The basics of Lua programming language</li>
             
-            <li>Understanding of algorithms and design ideas</li>
+            <li><span><i class="uil uil-rocket"></i></span>Understanding of algorithms and design ideas</li>
             
-            <li>Understanding of (3D) game modeling and algorithms</li>
+            <li><span><i class="uil uil-rocket"></i></span>Understanding of (3D) game modeling and algorithms</li>
             
-            <li>Train students to adapt to new environments</li>
+            <li><span><i class="uil uil-rocket"></i></span>Train students to adapt to new environments</li>
             
-            <li>Preparation of Science Fair projects</li>
+            <li><span><i class="uil uil-rocket"></i></span>Preparation of Science Fair projects</li>
             
           </ul>
         </div>
@@ -361,10 +380,10 @@
           <div class="accordion accordion-wrapper" id="accordionSimpleExample">
             <div class="card plain accordion-item">
               <div class="card-header" id="headingSimpleOne">
-                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseSimpleOne" aria-expanded="true" aria-controls="collapseSimpleOne"> Have Fun </button>
+                <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSimpleOne" aria-expanded="false" aria-controls="collapseSimpleOne"> Have Fun </button>
               </div>
               <!--/.card-header -->
-              <div id="collapseSimpleOne" class="accordion-collapse collapse show" aria-labelledby="headingSimpleOne" data-bs-parent="#accordionSimpleExample">
+              <div id="collapseSimpleOne" class="accordion-collapse collapse" aria-labelledby="headingSimpleOne" data-bs-parent="#accordionSimpleExample">
                 <div class="card-body">
                   <p> Fun programming is our top priority when designing all the content.</p>
                 </div>
@@ -449,11 +468,62 @@
         <!--/.tab-pane -->
       </div>
       <!-- /.tab-content -->
+
+    </div>
   </section>
   <!-- /section -->
-  <section class="wrapper bg-gray">
-    <div class="container py-10">
-      <h3 class="h2 mb-6 text-center">Other Courses You Might Also Like</h3>
+  
+  <!-- General Description/Expectation -->
+  <section class="wrapper bg-soft-primary">
+    <div class="container py-12 py-md-12">
+      <div class="row gx-lg-8 gx-xl-12 gy-8">
+        <div class="col-md-6 col-lg-4">
+          <div class="d-flex flex-row">
+            <div>
+              <img src="/assets/img/icons/solid/discussion.svg" class="svg-inject icon-svg icon-svg-sm solid-mono text-primary me-4" alt="" />
+            </div>
+            <div>
+              <h3 class="mb-1">Designed for Students</h4>
+              <p class="mb-0">Our courses are designed based on the interests of our students.</p>
+            </div>
+          </div>
+        </div>
+        <!--/column -->
+        <div class="col-md-6 col-lg-4">
+          <div class="d-flex flex-row">
+            <div>
+              <img src="/assets/img/icons/solid/employees.svg" class="svg-inject icon-svg icon-svg-sm solid-mono text-primary me-4" alt="" />
+            </div>
+            <div>
+              <h3 class="mb-1">Experienced Instructors</h4>
+              <p class="mb-0">Gain skills and knowledge from professional teachers.</p>
+            </div>
+          </div>
+        </div>
+        <!--/column -->
+        <div class="col-md-6 col-lg-4">
+          <div class="d-flex flex-row">
+            <div>
+              <img src="/assets/img/icons/solid/rocket.svg" class="svg-inject icon-svg icon-svg-sm solid-mono text-primary me-4" alt="" />
+            </div>
+            <div>
+              <h3 class="mb-1">Cultivate Creativity</h4>
+              <p class="mb-0">Beyond learning programming, cultivate creativity and problem solving abilities.</p>
+            </div>
+          </div>
+        </div>
+        <!--/column -->
+      </div>
+      <!--/.row -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /section -->
+
+  <!-- Suggested Courses -->
+  <section class="wrapper bg-light wrapper-border">
+    <div class="container py-12">
+      <h3 class="h1 mb-8 text-center">Other Courses You Might Also Like</h3>
 
       <div class="swiper-container" data-margin="30" data-nav="true" data-dots="true" data-items-xl="3" data-items-md="2" data-items-xs="1">
         <div class="swiper">
@@ -525,7 +595,7 @@
             <div class="swiper-slide">
               <article class="">
     <figure class="overlay overlay-1 hover-scale rounded mb-4"><a href="/courses/roblox"> 
-      <img src="/img/my/roblox1/bg.jpg" alt="" class="courseImage"/> 
+      <img src="/img/my/roblox1/bg-updated.png" alt="" class="courseImage"/> 
       <span class="courseLabel orange-gradient">L2 Introduction to Programming</span>
     </a>
       <figcaption>
@@ -558,7 +628,7 @@
             <div class="swiper-slide">
               <article class="">
     <figure class="overlay overlay-1 hover-scale rounded mb-4"><a href="/courses/roblox3"> 
-      <img src="/img/my/roblox3/bg2-sm.jpg" alt="" class="courseImage"/> 
+      <img src="/img/my/roblox3/bg2-sm-updated.jpg" alt="" class="courseImage"/> 
       <span class="courseLabel orange-gradient">L2 Introduction to Programming</span>
     </a>
       <figcaption>
@@ -592,47 +662,23 @@
     </div>
   </section>
   <!-- /.section -->
-  <section class="wrapper">
-    <div class="container py-12 py-md-14">
-      <div class="row gx-lg-8 gx-xl-12 gy-8">
-        <div class="col-md-6 col-lg-4">
-          <div class="d-flex flex-row">
-            <div>
-              <img src="/assets/img/icons/solid/discussion.svg" class="svg-inject icon-svg icon-svg-sm solid-mono text-navy me-4" alt="" />
-            </div>
-            <div>
-              <h4 class="mb-1">Designed for Students</h4>
-              <p class="mb-0">Our courses are designed based on the interests of our students.</p>
-            </div>
-          </div>
+
+  <!-- Try Coding Mind -->
+  <section class="wrapper bg-soft-primary">
+    <div class="container py-12 py-md-12">
+      <div class="row text-center">
+        <div class="col-md-10 mx-auto">
+          <h3 class="display-4 text-navy">Start learning with Coding Mind!</h3>
+          <p class="lead mb-7 mb-md-7">Turn your child’s passion into a professional skill.</p>
+          <a href="/free-trial" class="btn btn-primary rounded-pill me-0 me-md-4 mb-4 mb-md-0">
+            Book Your First Free Class
+          </a>
+          <a href="/contact-us" class="btn btn-navy rounded-pill me-0 me-md-4 mb-4 mb-md-0">
+            Contact Us
+          </a>
         </div>
-        <!--/column -->
-        <div class="col-md-6 col-lg-4">
-          <div class="d-flex flex-row">
-            <div>
-              <img src="/assets/img/icons/solid/employees.svg" class="svg-inject icon-svg icon-svg-sm solid-mono text-navy me-4" alt="" />
-            </div>
-            <div>
-              <h4 class="mb-1">Experienced Instructors</h4>
-              <p class="mb-0">Gain skills and knowledge from professional teachers.</p>
-            </div>
-          </div>
-        </div>
-        <!--/column -->
-        <div class="col-md-6 col-lg-4">
-          <div class="d-flex flex-row">
-            <div>
-              <img src="/assets/img/icons/solid/rocket.svg" class="svg-inject icon-svg icon-svg-sm solid-mono text-navy me-4" alt="" />
-            </div>
-            <div>
-              <h4 class="mb-1">Cultivate Creativity</h4>
-              <p class="mb-0">Beyond learning programming, cultivate creativity and problem solving abilities.</p>
-            </div>
-          </div>
-        </div>
-        <!--/column -->
       </div>
-      <!--/.row -->
+      <!--/div -->
     </div>
     <!-- /.container -->
   </section>
