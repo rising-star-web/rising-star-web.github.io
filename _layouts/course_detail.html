@@ -98,15 +98,15 @@ layout: default
             <div class="swiper swiper-thumbs">
               <div class="swiper-wrapper">
                 {% if page.promotion1.enabled == "true" %}
-                <div class="swiper-slide"><img src="/{{page.promotion1.imageUrl}}" class="rounded h-100" alt="" /></div> {% endif %} 
+                <div class="swiper-slide"><img src="/{{page.promotion1.imageUrl}}" class="rounded " alt="" /></div> {% endif %} 
                 {% if page.promotion2.enabled == "true" %}
-                <div class="swiper-slide"><img src="/{{page.promotion2.imageUrl}}" class="rounded h-100" alt="" /></div> {% endif %} 
+                <div class="swiper-slide"><img src="/{{page.promotion2.imageUrl}}" class="rounded" alt="" /></div> {% endif %} 
                 {% if page.promotion3.enabled == "true" %}
-                <div class="swiper-slide"><img src="/{{page.promotion3.imageUrl}}" class="rounded h-100" alt="" /></div> {% endif %} 
+                <div class="swiper-slide"><img src="/{{page.promotion3.imageUrl}}" class="rounded" alt="" /></div> {% endif %} 
                 {% if page.promotion4.enabled == "true" %}
-                <div class="swiper-slide"><img src="/{{page.promotion4.imageUrl}}" class="rounded h-100" alt="" /></div> {% endif %} 
+                <div class="swiper-slide"><img src="/{{page.promotion4.imageUrl}}" class="rounded" alt="" /></div> {% endif %} 
                 {% if page.promotion5.enabled == "true" %}
-                <div class="swiper-slide"><img src="/{{page.promotion5.imageUrl}}" class="rounded h-100" alt="" /></div> {% endif %} 
+                <div class="swiper-slide"><img src="/{{page.promotion5.imageUrl}}" class="rounded" alt="" /></div> {% endif %} 
               </div>
               <!--/.swiper-wrapper -->
             </div>
@@ -228,7 +228,7 @@ layout: default
 
         <!--/.tab-pane -->
         <div class="tab-pane fade" id="tab1-2">
-          <p>  What you should expect to gain from this course.</p>
+          <p>  What you should expect to gain from this course:</p>
           <ul class="icon-list bullet-bg bullet-soft-primary">
             {% for goal in page.goals %}
             <li><span><i class="uil uil-rocket"></i></span>{{goal.text}}</li>

@@ -40,7 +40,7 @@
     }
 
     .rosered-gradient {
-        background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(248, 53, 53) 0%, rgb(205, 25, 25) 90% );
+        background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(255, 93, 93) 0%, rgb(223, 32, 32) 90% );
     }
 
     .amethyst-gradient {
