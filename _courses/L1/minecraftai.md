@@ -32,7 +32,7 @@ promotion2:
   enabled: "true"
   title: "Seeking the great principles of programming from command line instructions" 
   text: "Minecraft provides gamers with a series of game control commands. By learning these commands, you can achieve effects that cannot be achieved in the game. Learning these basic commands, you can build a programming thinking foundation unconsciously. " 
-  imageUrl: "img/my/minecraftbasic/mc1.jpg" 
+  imageUrl: "img/my/minecraftbasic/minecraft-1.jpg" 
 promotion3: 
   enabled: "true"
   title: "Graphical programming from primary school" 
