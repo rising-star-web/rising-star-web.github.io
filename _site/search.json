@@ -2,106 +2,22 @@
   
   {
     "title"    : "Robotics and Programming with LEGO Mindstorms",
-    "url"      : "/courses/lego",
+    "url"      : "/courses/lego-robotics",
     "category" : "Robotics | Programming",
-    "description" : "Build and program your own EV3 robot! This course allows students to build and program the EV3 robots, implementing sensors and motors."
+    "description" : ""
   },
   
   {
     "title"    : "Minecraft Programming with MakeCode",
-    "url"      : "/courses/minecode",
+    "url"      : "/courses/minecraft-makecode",
     "category" : "Game Development",
-    "description" : "Learn through block programming and make changes on your favorite game."
-  },
-  
-  {
-    "title"    : "Minecraft World Building and Instruction Programming",
-    "url"      : "/courses/minecraft",
-    "category" : "Game Development",
-    "description" : "Through the creation of the learning world, Minecraft command-line command control, and MakeCode graphical programming platform, gradually bring your child into the programming world."
-  },
-  
-  {
-    "title"    : "Minecraft World Development and Instructional Programming",
-    "url"      : "/courses/minecraftai",
-    "category" : "Game Programming",
-    "description" : "Through the creation of the learning world, Minecraft command line command control, and the MakeCode graphical programming platform, children are gradually brought into the programming world step by step."
+    "description" : ""
   },
   
   {
     "title"    : "Innovative Programming with MIT Scratch",
-    "url"      : "/courses/scratch",
+    "url"      : "/courses/scratch-1",
     "category" : "Block Programming",
-    "description" : "Learn to create games and animations with Scratch. Scratch helps young people think creatively, logically, and work collaboratively, which are essential skills in the 21st century."
-  },
-  
-  {
-    "title"    : "MIT Scratch Programming 2",
-    "url"      : "/courses/scratch2",
-    "category" : "Game Programming",
-    "description" : "Learn advanced Scratch programming, unleash your creativity, and share your work with young programmers from all over the world"
-  },
-  
-  {
-    "title"    : "Robotics and Programming with SPRK",
-    "url"      : "/courses/spark",
-    "category" : "Robotics | Programming",
-    "description" : "Learn how to program and control a robot, and enter the world of coding."
-  },
-  
-  {
-    "title"    : "Microbit: Intro to Electronics Engineering",
-    "url"      : "/courses/microbit",
-    "category" : "Game Programming",
-    "description" : "Relying on the Microsoft platform, JavaScript command line command control, and MakeCode Block Coding platform, gradually bring children into the world of electronic programming."
-  },
-  
-  {
-    "title"    : "Javascript Programming with Minecraft MakeCode",
-    "url"      : "/courses/minecraft2",
-    "category" : "Game Programming",
-    "description" : "Through the creation of the learning world and the MakeCode graphical programming platform, gradually bring children into the learning stage of writing Javascript codes."
-  },
-  
-  {
-    "title"    : "Game Development with Roblox Studio",
-    "url"      : "/courses/roblox",
-    "category" : "Game Development",
-    "description" : "Learn programming fundamentals and create your own games with Roblox Studio!"
-  },
-  
-  {
-    "title"    : "Advanced Roblox Game Development and Lua Programming",
-    "url"      : "/courses/roblox2",
-    "category" : "Game Development",
-    "description" : "Learn programming fundamentals and create your own games with Roblox Studio!"
-  },
-  
-  {
-    "title"    : "Roblox: Preliminary Artificial Intelligence and Lua Practice",
-    "url"      : "/courses/roblox3",
-    "category" : "Game Programming",
-    "description" : "Develop intelligent game AI on the Roblox platform, and start the first step in AI programming learning"
-  },
-  
-  {
-    "title"    : "Advanced Python Programming: Introduction to Algorithms",
-    "url"      : "/courses/python",
-    "category" : "Programming | Problem Solving",
-    "description" : "Learn the most popular programming language in the industry"
-  },
-  
-  {
-    "title"    : "Mobile App Programming with MIT App Inventor",
-    "url"      : "/courses/mobile",
-    "category" : "Programming | Mobile",
-    "description" : "Learn how to program and develop mobile apps. Become the next young entrepreneurs"
-  },
-  
-  {
-    "title"    : "AP CS Boot Camp: Intro to Java Programming",
-    "url"      : "/courses/apcs",
-    "category" : "AP CS Prep Courses",
     "description" : ""
   }
   

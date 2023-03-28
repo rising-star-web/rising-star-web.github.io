@@ -112,4 +112,4 @@ promotionButtonText: "Contact Us"
 promotionUrl: "contact-us-cn.html" 
 engUrl: "scratch2.html" 
 cnUrl: "scratch2c.html" 
----     
+---

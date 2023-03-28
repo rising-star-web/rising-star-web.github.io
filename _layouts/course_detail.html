@@ -16,7 +16,7 @@ layout: default
   -->
 
   <!-- Course Overview -->
-  <section class="wrapper bg-light">  
+  <section class="wrapper bg-light wrapper-border">  
     <div class="container pt-8 pt-md-12 pb-8 pb-md-8">
 
       <!-- Breadcrumb Nav Bar -->
@@ -121,29 +121,58 @@ layout: default
 
       <!-- Details Bar -->
       <section class="wrapper bg-soft-primary rounded">
-        <div class="container py-4 py-md-4 mt-12">    
-          <div class="d-flex pt-4 fs-sm justify-content-around flex-column flex-md-row">
-            <div class="d-flex">
+        <div class="container py-8 py-md-8 mt-12">
+          <div class="row">
+            <div class="col-xl-10 mx-auto">
+              <div class="row align-items-center counter-wrapper gy-6 text-center">
+                <div class="col-md-3">
+                  <h4 class="fs-md">{{page.aboutCategory}}</h4>
+                  <p>{{page.aboutCategoryTitle}}</p>
+                </div>
+                <!--/column -->
+                <div class="col-md-3">
+                  <h4 class="fs-md">{{page.aboutGradeLevel}}</h4>
+                  <p>{{page.aboutGradeLevelTitle}}</p>
+                </div>
+                <!--/column -->
+                <div class="col-md-3">
+                  <h4 class="fs-md">{{page.aboutSkillLevel}}</h4>
+                  <p>{{page.aboutSkillLevelTitle}}</p>
+                </div>
+                <!--/column -->
+                <div class="col-md-3">
+                  <h4 class="fs-md">{{page.aboutRatio}}</h4>
+                  <p>{{page.aboutRatioTitle}}</p>
+                </div>
+                <!--/column -->
+              </div>
+              <!--/.row -->
+            </div>
+            <!-- /column -->
+          </div>
+          <!-- /.row -->
+          <!-- <div class="d-flex fs-sm justify-content-around flex-column flex-md-row bg-green">
+            <div class="d-flex justify-content-center bg-blue">
               <img src="/assets/img/icons/solid/3d.svg" class="svg-inject icon-svg icon-svg-xs solid-duo text-navy-sky h-5" alt="" />
               <p><b>Category:</b>&nbsp</p>
               <p>{{page.aboutCategory}}</p>
             </div>
-            <div class="d-flex flex-row">
+            <div class="d-flex flex-row bg-red">
               <img src="/assets/img/icons/solid/bulb.svg" class="svg-inject icon-svg icon-svg-xs solid-duo text-navy-sky h-5" alt="" />
               <p><b>Grade Level:</b>&nbsp</p>
               <p class="text-uppercase">{{page.aboutGradeLevel}}</p>
             </div>
-            <div class="d-flex flex-row">
+            <div class="d-flex flex-row bg-yellow">
               <img src="/assets/img/icons/solid/bar-chart.svg" class="svg-inject icon-svg icon-svg-xs solid-duo text-navy-sky h-5" alt="" />
               <p><b>Skill Level:</b>&nbsp</p>
               <p>{{page.aboutSkillLevel}}</p>
             </div>
-            <div class="d-flex flex-row">
+            <div class="d-flex flex-row bg-pink">
               <img src="/assets/img/icons/solid/audience.svg" class="svg-inject icon-svg icon-svg-xs solid-duo text-navy-sky h-5" alt="" />
               <p><b>Class Ratio:</b>&nbsp</p>
               <p>{{page.aboutRatio}}</p>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
 
@@ -162,7 +191,9 @@ layout: default
       <!-- /.nav-tabs -->
       
       <!-- Tab Content -->
-      <div class="tab-content mt-0 mt-md-5">
+      <div class="tab-content mt-0 mt-md-5 col-xl-8">
+
+        <!-- Tab 1 -->
         <div class="tab-pane fade show active" id="tab1-1">
           <p>{{page.aboutText}}</p>
           <div class="accordion accordion-wrapper" id="accordionExample">
@@ -225,108 +256,39 @@ layout: default
           </div>
           <!--/.accordion -->
         </div>
-
         <!--/.tab-pane -->
+
+        <!-- Tab 2-->
         <div class="tab-pane fade" id="tab1-2">
           <p>  What you should expect to gain from this course:</p>
           <ul class="icon-list bullet-bg bullet-soft-primary">
             {% for goal in page.goals %}
-            <li><span><i class="uil uil-rocket"></i></span>{{goal.text}}</li>
+              <li>
+                <span>
+                  <i class="uil uil-megaphone"></i>
+                </span>
+                {{goal.text}}
+              </li>
             {% endfor %}
           </ul>
         </div>
-
         <!--/.tab-pane -->
+
+        <!-- Tab 3 -->
         <div class="tab-pane fade" id="tab1-3">      
-          <p> Our methods of instruction promote success. </p>
-      
-          <div class="accordion accordion-wrapper" id="accordionSimpleExample">
-            <div class="card plain accordion-item">
-              <div class="card-header" id="headingSimpleOne">
-                <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSimpleOne" aria-expanded="false" aria-controls="collapseSimpleOne"> Have Fun </button>
-              </div>
-              <!--/.card-header -->
-              <div id="collapseSimpleOne" class="accordion-collapse collapse" aria-labelledby="headingSimpleOne" data-bs-parent="#accordionSimpleExample">
-                <div class="card-body">
-                  <p> Fun programming is our top priority when designing all the content.</p>
-                </div>
-                <!--/.card-body -->
-              </div>
-              <!--/.accordion-collapse -->
-            </div>
-            <!--/.accordion-item -->
-            <div class="card plain accordion-item">
-              <div class="card-header" id="headingSimpleTwo">
-                <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSimpleTwo" aria-expanded="false" aria-controls="collapseSimpleTwo"> Learn With Professionals </button>
-              </div>
-              <!--/.card-header -->
-              <div id="collapseSimpleTwo" class="accordion-collapse collapse" aria-labelledby="headingSimpleTwo" data-bs-parent="#accordionSimpleExample">
-                <div class="card-body">
-                  <p>Learn from real industry experienced instructors and researchers.</p>
-                </div>
-                <!--/.card-body -->
-              </div>
-              <!--/.accordion-collapse -->
-            </div>
-            <!--/.accordion-item -->
-            <div class="card plain accordion-item">
-              <div class="card-header" id="headingSimpleThree">
-                <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSimpleThree" aria-expanded="false" aria-controls="collapseSimpleThree"> Live Interaction </button>
-              </div>
-              <!--/.card-header -->
-              <div id="collapseSimpleThree" class="accordion-collapse collapse" aria-labelledby="headingSimpleThree" data-bs-parent="#accordionSimpleExample">
-                <div class="card-body">
-                  <p>Get your questions answered in class and grow with your classmates in a competitive environment.</p>
-                </div>
-                <!--/.card-body -->
-              </div>
-              <!--/.accordion-collapse -->
-            </div>
-            <!--/.accordion-item -->
-            <div class="card plain accordion-item">
-              <div class="card-header" id="headingSimpleFour">
-                <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSimpleFour" aria-expanded="false" aria-controls="collapseSimpleFour"> Tailored Assignments and Projects </button>
-              </div>
-              <!--/.card-header -->
-              <div id="collapseSimpleFour" class="accordion-collapse collapse" aria-labelledby="headingSimpleFour" data-bs-parent="#accordionSimpleExample">
-                <div class="card-body">
-                  <p> Learn by doing is the key for Computer Science study, all assignments and projects are designed for your goals.</p>
-                </div>
-                <!--/.card-body -->
-              </div>
-              <!--/.accordion-collapse -->
-            </div>
-            <!--/.accordion-item -->
-            <div class="card plain accordion-item">
-              <div class="card-header" id="headingSimpleFive">
-                <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSimpleFive" aria-expanded="false" aria-controls="collapseSimpleFive"> Focus on Imagination and Creativity </button>
-              </div>
-              <!--/.card-header -->
-              <div id="collapseSimpleFive" class="accordion-collapse collapse" aria-labelledby="headingSimpleFive" data-bs-parent="#accordionSimpleExample">
-                <div class="card-body">
-                  <p>Learning programming is not the ultimate goal. We focus on pushing kids' imagination and creativity.</p>
-                </div>
-                <!--/.card-body -->
-              </div>
-              <!--/.accordion-collapse -->
-            </div>
-            <!--/.accordion-item -->
-            <div class="card plain accordion-item">
-              <div class="card-header" id="headingSimpleSix">
-                <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSimpleSix" aria-expanded="false" aria-controls="collapseSimpleSix"> Gain Experience to Boost College Applications </button>
-              </div>
-              <!--/.card-header -->
-              <div id="collapseSimpleSix" class="accordion-collapse collapse" aria-labelledby="headingSimpleSix" data-bs-parent="#accordionSimpleExample">
-                <div class="card-body">
-                  <p> Programming is just the first step for our students' futures. Build projects and attend science fairs will help students get into the top unversities.</p>
-                </div>
-                <!--/.card-body -->
-              </div>
-              <!--/.accordion-collapse -->
-            </div>
-            <!--/.accordion-item -->
-          </div>
-          <!--/.accordion -->
+          <p> We employ effective and innovative instructional methodologies that foster success and optimize learning outcomes. </p>
+
+          <ul class="icon-list bullet-bg bullet-soft-primary">
+            {% for highlight in page.highlights %}
+              <li> 
+                <span>
+                  <i class="uil uil-compass"></i>
+                </span>
+                {{highlight.text}}
+              </li>
+            {% endfor %}
+          </ul>
+    
         </div>
         <!--/.tab-pane -->
       </div>
@@ -337,7 +299,7 @@ layout: default
   <!-- /section -->
   
   <!-- General Description/Expectation -->
-  <section class="wrapper bg-soft-primary">
+  <section class="wrapper bg-soft-primary wrapper-border">
     <div class="container py-12 py-md-12">
       <div class="row gx-lg-8 gx-xl-12 gy-8">
         <div class="col-md-6 col-lg-4">
@@ -408,7 +370,7 @@ layout: default
   <!-- /.section -->
 
   <!-- Try Coding Mind -->
-  <section class="wrapper bg-soft-primary">
+  <section class="wrapper bg-soft-primary wrapper-border">
     <div class="container py-12 py-md-12">
       <div class="row text-center">
         <div class="col-md-10 mx-auto">

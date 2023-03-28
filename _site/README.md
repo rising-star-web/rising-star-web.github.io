@@ -54,7 +54,7 @@ _layouts folder contains the _default page which wraps every web page, and all t
   - This will add the navbar and footer content to the page, as well as all the scripts and stylesheets.
   ```
   ---
-  layout: navbar
+  layout: default
   ---
   ```
     
@@ -63,6 +63,7 @@ _layouts folder contains the _default page which wraps every web page, and all t
   ```
   layout: career_detail
   ```
+- IMPORTANT: Course details images must be in a 16:9 Ratio to stay consistent.
 
 | File  | Usage |
 | ------------- | ------------- | 
