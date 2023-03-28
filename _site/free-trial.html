@@ -182,8 +182,8 @@
 
             
             <div class="form-floating mb-4">
-              <input id="entry.1164819677" type="tel" maxlength="12" id="phone" name="entry.1164819677" class="form-control" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required="required" data-error="Valid phone number is required.">
-              <label for="entry.1164819677">Parent's Phone Number: <i>Ex. 123-456-7890 (Use dashes)</i> *</label>
+              <input id="entry.1164819677" type="tel" maxlength="16" name="entry.1164819677" class="form-control" placeholder="(123)-456-7890" required="required" data-error="Valid phone number is required.">
+              <label for="entry.1164819677">Parent's Phone Number: <i>Ex. 123-456-7890 </i> *</label>
               <div class="valid-feedback">
                 Looks good!
               </div>
@@ -204,19 +204,10 @@
 
             <div class="form-select-wrapper mb-4">
             <label class="mb-2 ms-2"  for="entry.1009660436">Enter in an Available Start Date *</label>
-            <input class="form-control" type="date" id="datePickerId" name="entry.1009660436" required="required">
-            <script type="text/javascript">
-              var date = new Date();
-              date = new Date(date.setDate(date.getDate() + 1)).toLocaleDateString('fr-ca');
-              datePickerId.min = date;
-            </script>
+            <p class="mb-2 ms-2" > A trial class of a course takes 45 minutes. Please list at least three possible times for a trial class according to your child's schedule. Example: Monday-Thursday after 3:30pm, Saturday before 11am  </p>
+            <textarea id="entry.1009660436" name="entry.1009660436" class="form-control" placeholder="Enter availability" style="height: 150px" required></textarea>
             </div>
 
-            <div class="form-select-wrapper mb-4">
-              <label for="entry.1827921407" class="mb-2 ms-2">Enter in an Available Time *</label>
-              <input class="form-control" type="time" id="entry.1827921407" name="entry.1827921407" required="required">
-              </div>
-            
             <button type="submit" id="trialButton" class="btn btn-primary rounded-pill btn-send mb-3"> Submit </button>
             <p class="text-muted"><strong>*</strong> These fields are required.</p>
           </form>
@@ -236,6 +227,50 @@
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var submitted=false;
+  </script>
+  <script type="text/javascript">
+    const isNumericInput = (event) => {
+    const key = event.keyCode;
+    return ((key >= 48 && key <= 57) || // Allow number line
+        (key >= 96 && key <= 105) // Allow number pad
+    );
+    };
+
+    const isModifierKey = (event) => {
+        const key = event.keyCode;
+        return (event.shiftKey === true || key === 35 || key === 36) || // Allow Shift, Home, End
+            (key === 8 || key === 9 || key === 13 || key === 46) || // Allow Backspace, Tab, Enter, Delete
+            (key > 36 && key < 41) || // Allow left, up, right, down
+            (
+                // Allow Ctrl/Command + A,C,V,X,Z
+                (event.ctrlKey === true || event.metaKey === true) &&
+                (key === 65 || key === 67 || key === 86 || key === 88 || key === 90)
+            )
+    };
+
+    const enforceFormat = (event) => {
+        // Input must be of a valid number format or a modifier key, and not longer than ten digits
+        if(!isNumericInput(event) && !isModifierKey(event)){
+            event.preventDefault();
+        }
+    };
+
+    const formatToPhone = (event) => {
+        if(isModifierKey(event)) {return;}
+
+        const input = event.target.value.replace(/\D/g,'').substring(0,10); // First ten digits of input only
+        const areaCode = input.substring(0,3);
+        const middle = input.substring(3,6);
+        const last = input.substring(6,10);
+
+        if(input.length > 6){event.target.value = `(${areaCode}) ${middle} - ${last}`;}
+        else if(input.length > 3){event.target.value = `(${areaCode}) ${middle}`;}
+        else if(input.length > 0){event.target.value = `(${areaCode}`;}
+    };
+
+    const inputElement = document.getElementById('entry.1164819677');
+    inputElement.addEventListener('keydown',enforceFormat);
+    inputElement.addEventListener('keyup',formatToPhone);
   </script>
   </div>
    <footer class="bg-dark text-inverse">
