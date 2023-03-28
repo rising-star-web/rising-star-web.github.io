@@ -63,6 +63,7 @@ _layouts folder contains the _default page which wraps every web page, and all t
   ```
   layout: career_detail
   ```
+- IMPORTANT: Course details images must be in a 16:9 Ratio to stay consistent.
 
 | File  | Usage |
 | ------------- | ------------- | 
