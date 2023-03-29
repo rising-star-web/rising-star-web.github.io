@@ -13,6 +13,9 @@ aboutSkillLevel: "Beginner - Intermediate"
 aboutRatioTitle: "Student to Instructor Ratio"
 aboutRatio: "4 : 1"
 aboutText: "Students acquire proficiency in programming through MakeCode, which provides an accessible and engaging platform for individuals of all ages and skill levels to learn the fundamental concepts and practical applications of coding. Students can embark upon a journey of discovery and exploration as they create their very own unique iteration of the popular and beloved game, Minecraft."
+priceschedule:
+  price: ""
+  scheduleDescription: "A general schedule description detailing available booking hours for the specific course will be placed here. This is currently filler text, please ignore."
 promotion1: 
   enabled: "true"
   title: "No More Gaming Addiction"
@@ -35,8 +38,8 @@ promotion4:
   imageUrl: "img/updated/empty.png"
 promotion5: 
   enabled: "false"
-  title: "It's Not Just About Programming"
-  text: "Computational thinking and programming skill are important in today's society. The kids gain confidence as they learn how to solve problems using programming."
+  title: "More Than Just Programming"
+  text: "Computational thinking and programming skill are important in today's society. Students gain confidence as they learn how to solve problems using programming."
   imageUrl: "img/updated/empty.png"
 curriculum: 
   enabled: "false"

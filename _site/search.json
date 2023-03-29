@@ -19,6 +19,34 @@
     "url"      : "/courses/scratch-1",
     "category" : "Block Programming",
     "description" : ""
+  },
+  
+  {
+    "title"    : "Innovative Programming with MIT Scratch 2",
+    "url"      : "/courses/scratch-2",
+    "category" : "Block Programming",
+    "description" : ""
+  },
+  
+  {
+    "title"    : "Roblox: Preliminary Artificial Intelligence and Lua Practice",
+    "url"      : "/courses/roblox-ai",
+    "category" : "Game Programming",
+    "description" : ""
+  },
+  
+  {
+    "title"    : "Game Development with Roblox Studio",
+    "url"      : "/courses/roblox-game-dev-beg",
+    "category" : "Game Development",
+    "description" : ""
+  },
+  
+  {
+    "title"    : "Advanced Python Programming: Introduction to Algorithms",
+    "url"      : "/courses/python-adv",
+    "category" : "Advanced Programming",
+    "description" : ""
   }
   
 ]

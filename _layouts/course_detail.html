@@ -17,7 +17,7 @@ layout: default
 
   <!-- Course Overview -->
   <section class="wrapper bg-light wrapper-border">  
-    <div class="container pt-8 pt-md-12 pb-8 pb-md-8">
+    <div class="container pt-8 pt-md-12 pb-12 pb-md-12">
 
       <!-- Breadcrumb Nav Bar -->
       <nav class="d-inline-block pb-4 pb-md-5" aria-label="breadcrumb">
@@ -176,123 +176,181 @@ layout: default
         </div>
       </section>
 
-      <!-- Tabs -->
-      <ul class="d-flex nav nav-tabs nav-tabs-basic mt-8">
-        <li class="nav-item me-2 me-md-0"> 
-          <a class="nav-link active" data-bs-toggle="tab" href="#tab1-1">Course Details</a>
-        </li>
-        <li class="nav-item me-2 me-md-0"> 
-          <a class="nav-link" data-bs-toggle="tab" href="#tab1-2">Course Objectives</a> 
-        </li>
-        <li class="nav-item me-2 me-md-0"> 
-          <a class="nav-link" data-bs-toggle="tab" href="#tab1-3">Teaching Methods</a> 
-        </li>
-      </ul>
-      <!-- /.nav-tabs -->
-      
-      <!-- Tab Content -->
-      <div class="tab-content mt-0 mt-md-5 col-xl-8">
+      <!-- Breakdown/Pricing -->
+      <div class="container mt-12">
 
-        <!-- Tab 1 -->
-        <div class="tab-pane fade show active" id="tab1-1">
-          <p>{{page.aboutText}}</p>
-          <div class="accordion accordion-wrapper" id="accordionExample">
-            <div class="card plain accordion-item">
-              <div class="card-header" id="headingOne">
-                <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"> {{page.promotion1.title}} </button>
-              </div>
-              <!--/.card-header -->
-              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="card-body">
-                  <p>{{page.promotion1.text}}</p>
+        <div class="row">
+          <!-- Tabs -->
+          <div class="container col-xl-6">
+            <!-- Tabs -->
+            <ul class="d-flex nav nav-tabs nav-tabs-basic">
+              <li class="nav-item me-2 me-md-0"> 
+                <a class="nav-link active" data-bs-toggle="tab" href="#tab1-1">Course Details</a>
+              </li>
+              <li class="nav-item me-2 me-md-0"> 
+                <a class="nav-link" data-bs-toggle="tab" href="#tab1-2">Course Objectives</a> 
+              </li>
+              <li class="nav-item me-2 me-md-0"> 
+                <a class="nav-link" data-bs-toggle="tab" href="#tab1-3">Teaching Methods</a> 
+              </li>
+            </ul>
+            <!-- /.nav-tabs -->
+          
+            <!-- Tab Content -->
+            <div class="tab-content mt-0 mt-md-5">
+
+              <!-- Tab 1 -->
+              <div class="tab-pane fade show active" id="tab1-1">
+                <p>{{page.aboutText}}</p>
+                <div class="accordion accordion-wrapper" id="accordionExample">
+                  <div class="card plain accordion-item">
+                    <div class="card-header" id="headingOne">
+                      <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"> {{page.promotion1.title}} </button>
+                    </div>
+                    <!--/.card-header -->
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="card-body">
+                        <p>{{page.promotion1.text}}</p>
+                      </div>
+                      <!--/.card-body -->
+                    </div>
+                    <!--/.accordion-collapse -->
+                  </div>
+                  <!--/.accordion-item -->
+                  <div class="card plain accordion-item">
+                    <div class="card-header" id="headingTwo">
+                      <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> {{page.promotion2.title}} </button>
+                    </div>
+                    <!--/.card-header -->
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                      <div class="card-body">
+                        <p>{{page.promotion2.text}}</p>
+                      </div>
+                      <!--/.card-body -->
+                    </div>
+                    <!--/.accordion-collapse -->
+                  </div>
+                  <!--/.accordion-item -->
+                  <div class="card plain accordion-item">
+                    <div class="card-header" id="headingThree">
+                      <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> {{page.promotion3.title}}  </button>
+                    </div>
+                    <!--/.card-header -->
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                      <div class="card-body">
+                        <p>{{page.promotion3.text}}</p>
+                      </div>
+                      <!--/.card-body -->
+                    </div>
+                    <!--/.accordion-collapse -->
+                  </div>
+                  <!--/.accordion-item -->
+                  <div class="card plain accordion-item">
+                    <div class="card-header" id="headingFour">
+                      <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"> {{page.promotion4.title}}  </button>
+                    </div>
+                    <!--/.card-header -->
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                      <div class="card-body">
+                        <p> {{page.promotion4.text}}</p>
+                      </div>
+                      <!--/.card-body -->
+                    </div>
+                    <!--/.accordion-collapse -->
+                  </div>
+                  <!--/.accordion-item -->
+                  <div class="card plain accordion-item">
+                    <div class="card-header" id="headingFive">
+                      <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"> {{page.promotion5.title}}  </button>
+                    </div>
+                    <!--/.card-header -->
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                      <div class="card-body">
+                        <p> {{page.promotion5.text}}</p>
+                      </div>
+                      <!--/.card-body -->
+                    </div>
+                    <!--/.accordion-collapse -->
+                  </div>
+                  <!--/.accordion-item -->
                 </div>
-                <!--/.card-body -->
+                <!--/.accordion -->
               </div>
-              <!--/.accordion-collapse -->
+              <!--/.tab-pane -->
+
+              <!-- Tab 2-->
+              <div class="tab-pane fade" id="tab1-2">
+                <p>  What you should expect to gain from this course:</p>
+                <ul class="icon-list bullet-bg bullet-soft-primary">
+                  {% for goal in page.goals %}
+                    <li>
+                      <span>
+                        <i class="uil uil-megaphone"></i>
+                      </span>
+                      {{goal.text}}
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+              <!--/.tab-pane -->
+
+              <!-- Tab 3 -->
+              <div class="tab-pane fade" id="tab1-3">      
+                <p> We employ effective and innovative instructional methodologies that foster success and optimize learning outcomes. </p>
+
+                <ul class="icon-list bullet-bg bullet-soft-primary">
+                  {% for highlight in page.highlights %}
+                    <li> 
+                      <span>
+                        <i class="uil uil-compass"></i>
+                      </span>
+                      {{highlight.text}}
+                    </li>
+                  {% endfor %}
+                </ul>
+          
+              </div>
+              <!--/.tab-pane -->
             </div>
-            <!--/.accordion-item -->
-            <div class="card plain accordion-item">
-              <div class="card-header" id="headingTwo">
-                <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> {{page.promotion2.title}} </button>
-              </div>
-              <!--/.card-header -->
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                <div class="card-body">
-                  <p>{{page.promotion2.text}}</p>
-                </div>
-                <!--/.card-body -->
-              </div>
-              <!--/.accordion-collapse -->
-            </div>
-            <!--/.accordion-item -->
-            <div class="card plain accordion-item">
-              <div class="card-header" id="headingThree">
-                <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> {{page.promotion3.title}}  </button>
-              </div>
-              <!--/.card-header -->
-              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                <div class="card-body">
-                  <p>{{page.promotion3.text}}</p>
-                </div>
-                <!--/.card-body -->
-              </div>
-              <!--/.accordion-collapse -->
-            </div>
-            <!--/.accordion-item -->
-            <div class="card plain accordion-item">
-              <div class="card-header" id="headingFour">
-                <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"> {{page.promotion4.title}}  </button>
-              </div>
-              <!--/.card-header -->
-              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                <div class="card-body">
-                  <p> {{page.promotion4.text}}</p>
-                </div>
-                <!--/.card-body -->
-              </div>
-              <!--/.accordion-collapse -->
-            </div>
-            <!--/.accordion-item -->
+            <!-- /.tab-content -->
           </div>
-          <!--/.accordion -->
-        </div>
-        <!--/.tab-pane -->
+          <!--/.container -->
 
-        <!-- Tab 2-->
-        <div class="tab-pane fade" id="tab1-2">
-          <p>  What you should expect to gain from this course:</p>
-          <ul class="icon-list bullet-bg bullet-soft-primary">
-            {% for goal in page.goals %}
-              <li>
-                <span>
-                  <i class="uil uil-megaphone"></i>
-                </span>
-                {{goal.text}}
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
-        <!--/.tab-pane -->
+          <!-- Pricing -->
+          <div class="container col-xl-6 mt-4 mt-md-0">
+            <div class="card bg-soft-primary mx-n3">
+              <div class="card-body">
+                <h3>Starting at</h3>
+                <div class="price price-show my-n2">
+                  <span class="fs-40 text-primary">${{page.priceschedule.price}}</span>
+                  <span class="fs-20"> / month</span>
+                </div>
 
-        <!-- Tab 3 -->
-        <div class="tab-pane fade" id="tab1-3">      
-          <p> We employ effective and innovative instructional methodologies that foster success and optimize learning outcomes. </p>
+              </div>
 
-          <ul class="icon-list bullet-bg bullet-soft-primary">
-            {% for highlight in page.highlights %}
-              <li> 
-                <span>
-                  <i class="uil uil-compass"></i>
-                </span>
-                {{highlight.text}}
-              </li>
-            {% endfor %}
-          </ul>
-    
+              <div class="card-footer">
+                <ul class="post-meta text-dark d-flex mb-0">
+                  <li class="post-desc1 fs-16"><i class="uil uil-gift"></i><span>First Class Is Free!</span></li>
+                  <li class="post-desc2 fs-16"><i class="uil uil-calendar-slash"></i><span>Cancel Anytime</span></li>
+                </ul>
+                <!-- /.post-meta -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+
+            <div class="card bg-soft-primary mt-4 mx-n3">
+              <div class="card-body">
+                <h3>Scheduling</h3>
+                <p>{{page.priceschedule.scheduleDescription}}</p>
+              </div>
+            </div>
+
+          </div>
+          <!--/.container -->
+
         </div>
-        <!--/.tab-pane -->
+
       </div>
-      <!-- /.tab-content -->
 
     </div>
   </section>
@@ -308,7 +366,7 @@ layout: default
               <img src="/assets/img/icons/solid/discussion.svg" class="svg-inject icon-svg icon-svg-sm solid-mono text-primary me-4" alt="" />
             </div>
             <div>
-              <h3 class="mb-1">Designed for Students</h4>
+              <h3 class="mb-1">Designed for Students</h3>
               <p class="mb-0">Our courses are designed based on the interests of our students.</p>
             </div>
           </div>
@@ -320,7 +378,7 @@ layout: default
               <img src="/assets/img/icons/solid/employees.svg" class="svg-inject icon-svg icon-svg-sm solid-mono text-primary me-4" alt="" />
             </div>
             <div>
-              <h3 class="mb-1">Experienced Instructors</h4>
+              <h3 class="mb-1">Experienced Instructors</h3>
               <p class="mb-0">Gain skills and knowledge from professional teachers.</p>
             </div>
           </div>
@@ -332,7 +390,7 @@ layout: default
               <img src="/assets/img/icons/solid/rocket.svg" class="svg-inject icon-svg icon-svg-sm solid-mono text-primary me-4" alt="" />
             </div>
             <div>
-              <h3 class="mb-1">Cultivate Creativity</h4>
+              <h3 class="mb-1">Cultivate Creativity</h3>
               <p class="mb-0">Beyond learning programming, cultivate creativity and problem solving abilities.</p>
             </div>
           </div>
@@ -376,10 +434,10 @@ layout: default
         <div class="col-md-10 mx-auto">
           <h3 class="display-4 text-navy">Start learning with Coding Mind!</h3>
           <p class="lead mb-7 mb-md-7">Turn your child’s passion into a professional skill.</p>
-          <a href="/free-trial" class="btn btn-primary rounded-pill me-0 me-md-4 mb-4 mb-md-0">
+          <a href="/free-trial" class="btn btn-primary rounded-pill me-2 me-md-2 mb-4 mb-md-0">
             Book Your First Free Class
           </a>
-          <a href="/contact-us" class="btn btn-navy rounded-pill me-0 me-md-4 mb-4 mb-md-0">
+          <a href="/contact-us" class="btn btn-navy rounded-pill me-2 me-md-2 mb-4 mb-md-0">
             Contact Us
           </a>
         </div>
