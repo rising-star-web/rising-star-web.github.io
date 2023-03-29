@@ -21,7 +21,7 @@
 //   };
 
 var itemSelector = ".isotopeItem"; 
-var $checkboxes = $('.filter-item');
+var $filterItem = $('.filter-item');
 var $container = $('#isotopeContainer').isotope({ 
     itemSelector: itemSelector,
     percentPosition: true,
@@ -50,52 +50,20 @@ function changeFilter(selector) { $container.isotope({ filter: selector }); }
 //grab all checked filters and goto page on fresh isotope output
 function goToPage(n) {
     currentPage = n;
-    var inclusives = [];
     var output = [];
+    var selector = "";
 
-    var wordPage = currentPage.toString();
         // for each box checked, add its value and push to array
-        $checkboxes.each(function (i, elem) {
-            if (elem.checked) {
-                inclusives.push('.'+elem.value+'.'+wordPage);
-                output.push(elem.value.replace(/([a-z])(\d)/gi, '$1 $2'))
-            }
-        });
+        selector = itemSelector + '.'+ currentFilter;
 
         // smash all values back together for 'and' filtering
-        filterValue = inclusives.length ? inclusives.join(',') : '*';
+        filterValue = ( currentFilter != '*' ) ? selector : '*';
+        var wordPage = currentPage.toString();
         filterValue += '.' +wordPage;
-        outputValue = output.length ? output.join(', ') : '';
+        console.log(filterValue);
 
-    $output.text( outputValue );
-        
-    if($output.text() == ""){
-        $outputParent.hide();
-    }
-    else{
-        $outputParent.css('display', 'inline-block');
-    }
     changeFilter(filterValue);
 }
-
-function updateFilterCount() {
-    var itemText = "";
-    var itemsLength = $container.children(itemSelector).length;
-    if(iso.filteredItems.length>1){
-        itemText = " items";
-    }
-    else{
-        itemText = " item";
-    }
-
-    if(currentNumberPages>1){
-        itemText += (" out of " + currentTotalItems);
-    }
-    iso.filteredItems.length ? 
-    $containerLength.text( iso.filteredItems.length + itemText)   
-    :
-    $containerLength.text( "no items" );   
-  }
 
 function setPagination() {
 
@@ -104,16 +72,11 @@ function setPagination() {
         var pages = Math.ceil(itemsLength / itemsPerPage);
         var item = 1;
         var page = 1;
-        var inclusives = [];
+        var selector = "";
+
             // for each box checked, add its value and push to array
-            $checkboxes.each(function (i, elem) {
-                if (elem.checked) {
-                    inclusives.push('.'+elem.value);
-                }
-            });
-            // smash all values back together for 'and' filtering
-            filterValue = inclusives.length ? inclusives.join(',') : '*';
-            // find each child element with current filter values
+            selector = itemSelector + '.'+ currentFilter;
+            filterValue = ( currentFilter != '*' ) ? selector : '*';
 
             currentTotalItems = $container.children(filterValue).length;
             $container.children(filterValue).each(function(){
@@ -162,7 +125,6 @@ function setPagination() {
             onPageClick: function (event, page) {
             //fetch content and render here
             goToPage(page);
-            updateFilterCount();
         }
     });
 
@@ -177,11 +139,6 @@ function setPagination() {
     
 // remove checks from all boxes and refilter
 function clearAll(){
-    $checkboxes.each(function (i, elem) {
-        if (elem.checked) {
-            elem.checked = null;
-        }
-    });
     currentFilter = '*';
     setPagination();
     goToPage(1);
@@ -189,17 +146,14 @@ function clearAll(){
 
 setPagination();
 goToPage(1);
-updateFilterCount();
 
 //event handlers
-$checkboxes.change(function(){
+$filterItem.click(function(){
     var filter = $(this).attr(filterAttribute);
     currentFilter = filter;
     setPagination();
     goToPage(1);
-    updateFilterCount();
 });
 
 $('#clear-filters').click(function(){clearAll()});
-$('#clear-filters2').click(function(){clearAll()});
 

@@ -20,9 +20,9 @@
 //     this._isLayoutInited = true;
 //   };
 
-var itemSelector = ".course"; 
+var itemSelector = ".isotopeItem"; 
 var $checkboxes = $('.filter-item');
-var $container = $('#courses').isotope({ 
+var $container = $('#isotopeContainer').isotope({ 
     itemSelector: itemSelector,
     percentPosition: true,
     layoutMode: 'fitRows',
@@ -30,11 +30,11 @@ var $container = $('#courses').isotope({
 var $output = $('#output');
 var $outputParent = $('#outputParent');
 
-var $courseLength = $('#courseLength');
+var $containerLength = $('#containerLength');
 var iso = $container.data('isotope');
 
 //Ascending order
-var itemsPerPage = 9;
+var itemsPerPage = $('#isotopeContainer').data("length") ;
 var currentTotalItems = 0;
 var currentNumberPages = 1;
 var currentPage = 1;
@@ -82,19 +82,19 @@ function updateFilterCount() {
     var itemText = "";
     var itemsLength = $container.children(itemSelector).length;
     if(iso.filteredItems.length>1){
-        itemText = " courses";
+        itemText = " items";
     }
     else{
-        itemText = " course";
+        itemText = " item";
     }
 
     if(currentNumberPages>1){
         itemText += (" out of " + currentTotalItems);
     }
     iso.filteredItems.length ? 
-    $courseLength.text( iso.filteredItems.length + itemText)   
+    $containerLength.text( iso.filteredItems.length + itemText)   
     :
-    $courseLength.text( "no courses" );   
+    $containerLength.text( "no items" );   
   }
 
 function setPagination() {
@@ -189,6 +189,7 @@ function clearAll(){
 
 setPagination();
 goToPage(1);
+updateFilterCount();
 
 //event handlers
 $checkboxes.change(function(){
