@@ -60,7 +60,6 @@ function goToPage(n) {
         filterValue = ( currentFilter != '*' ) ? selector : '*';
         var wordPage = currentPage.toString();
         filterValue += '.' +wordPage;
-        console.log(filterValue);
 
     changeFilter(filterValue);
 }
@@ -149,11 +148,23 @@ goToPage(1);
 
 //event handlers
 $filterItem.click(function(){
+    $filterItem.each(function(index){
+        $(this).removeClass( "active" );
+    })
+    $('#clear-filters').removeClass( "active" );
     var filter = $(this).attr(filterAttribute);
+    $(this).addClass( "active" );
     currentFilter = filter;
     setPagination();
     goToPage(1);
+
 });
 
-$('#clear-filters').click(function(){clearAll()});
+$('#clear-filters').click(function(){
+    $filterItem.each(function(index){
+        $(this).removeClass( "active" );
+    })
+    clearAll();
+    $(this).addClass( "active" );
+});
 
