@@ -14,7 +14,9 @@ aboutRatioTitle: "Student to Instructor Ratio"
 aboutRatio: "4 : 1"
 aboutText: "Learn how to program your own EV3 robot to complete various tasks and challenges. Students will learn the principles of programming and robotics engineering through hands-on experience with the latest technology and instructional resources."
 priceschedule:
-  price: ""
+  monthlyPrice: ""
+  classPrice: ""
+  classPerMonth: ""
   scheduleDescription: "A general schedule description detailing available booking hours for the specific course will be placed here. This is currently filler text, please ignore."
 promotion1: 
   enabled: "true"

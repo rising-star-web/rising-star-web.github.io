@@ -14,7 +14,9 @@ aboutRatioTitle: "Student to Instructor Ratio"
 aboutRatio: "4 : 1"
 aboutText: "By leveraging the tools and resources available on the Roblox platform, students will have the opportunity to explore the intricacies of AI programming in a practical and hands-on manner. Through the process of designing, building, and testing intelligent game AI, students will gain invaluable insights into the underlying principles of AI programming, including the concepts of machine learning, decision-making, and data analysis."
 priceschedule:
-  price: ""
+  monthlyPrice: ""
+  classPrice: ""
+  classPerMonth: ""
   scheduleDescription: "A general schedule description detailing available booking hours for the specific course will be placed here. This is currently filler text, please ignore."
 promotion1: 
   enabled: "true"

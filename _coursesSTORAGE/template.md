@@ -14,7 +14,9 @@ aboutRatioTitle: "Student to Instructor Ratio"
 aboutRatio: ""
 aboutText: ""
 priceschedule:
-  price: ""
+  monthlyPrice: ""
+  classPrice: ""
+  classPerMonth: ""
   scheduleDescription: "A general schedule description detailing available booking hours for the specific course will be placed here. This is currently filler text, please ignore."
 promotion1: 
   enabled: "true"

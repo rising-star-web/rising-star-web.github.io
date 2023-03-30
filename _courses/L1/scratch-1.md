@@ -14,7 +14,9 @@ aboutRatioTitle: "Student to Instructor Ratio"
 aboutRatio: "4 : 1"
 aboutText: "Acquire proficiency in Scratch, the beginner-friendly programming language designed to enable creative expression and innovation, and transform your imaginative concepts into tangible, interactive experiences. Scratch empowers students to explore, experiment, and communicate in ways that are both engaging and impactful through coding."
 priceschedule:
-  price: ""
+  monthlyPrice: ""
+  classPrice: ""
+  classPerMonth: ""
   scheduleDescription: "A general schedule description detailing available booking hours for the specific course will be placed here. This is currently filler text, please ignore."
 promotion1: 
   enabled: "true"
