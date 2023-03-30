@@ -14,7 +14,9 @@ aboutRatioTitle: "Student to Instructor Ratio"
 aboutRatio: "4 : 1"
 aboutText: "Students will learn how to use Roblox Studio's tools to build and customize game worlds, create and program characters, and implement game mechanics such as scoring and player movement. They will also learn how to publish their game to the Roblox platform and make it available to other players around the world."
 priceschedule:
-  price: ""
+  monthlyPrice: ""
+  classPrice: ""
+  classPerMonth: ""
   scheduleDescription: "A general schedule description detailing available booking hours for the specific course will be placed here. This is currently filler text, please ignore."
 promotion1: 
   enabled: "true"

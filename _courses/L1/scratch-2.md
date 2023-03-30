@@ -14,7 +14,9 @@ aboutRatioTitle: "Student to Instructor Ratio"
 aboutRatio: "4 : 1"
 aboutText: "Acquire the expertise of advanced Scratch programming techniques, delve into the intricate nuances of the software, and hone your skills to unleash a torrent of creativity that knows no bounds. With the mastery of Scratch programming, the possibilities are infinite and the only limit is the scope of your imagination."
 priceschedule:
-  price: ""
+  monthlyPrice: ""
+  classPrice: ""
+  classPerMonth: ""
   scheduleDescription: "A general schedule description detailing available booking hours for the specific course will be placed here. This is currently filler text, please ignore."
 promotion1: 
   enabled: "true"
