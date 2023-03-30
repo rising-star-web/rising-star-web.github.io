@@ -22,11 +22,13 @@
 
 var itemSelector = ".isotopeItem"; 
 var $filterItem = $('.filter-item');
-var $container = $('#isotopeContainer').isotope({ 
-    itemSelector: itemSelector,
-    percentPosition: true,
-    layoutMode: 'fitRows',
-});
+var $container = 
+    $('#isotopeContainer').isotope({ 
+        itemSelector: itemSelector,
+        percentPosition: true,
+        layoutMode: 'fitRows',
+    });
+
 var $output = $('#output');
 var $outputParent = $('#outputParent');
 
@@ -50,7 +52,6 @@ function changeFilter(selector) { $container.isotope({ filter: selector }); }
 //grab all checked filters and goto page on fresh isotope output
 function goToPage(n) {
     currentPage = n;
-    var output = [];
     var selector = "";
 
         // for each box checked, add its value and push to array
@@ -143,9 +144,6 @@ function clearAll(){
     goToPage(1);
 }
 
-setPagination();
-goToPage(1);
-
 //event handlers
 $filterItem.click(function(){
     $filterItem.each(function(index){
@@ -168,3 +166,7 @@ $('#clear-filters').click(function(){
     $(this).addClass( "active" );
 });
 
+$(document).ready( function(){ 
+    setPagination();
+    goToPage(1);    
+ });
