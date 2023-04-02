@@ -15,6 +15,13 @@
   },
   
   {
+    "title"    : "[WIP] Minecraft World Building and Instruction Programming",
+    "url"      : "/courses/minecraft",
+    "category" : "Game Development",
+    "description" : ""
+  },
+  
+  {
     "title"    : "Innovative Programming with MIT Scratch",
     "url"      : "/courses/scratch-1",
     "category" : "Block Programming",
@@ -43,9 +50,16 @@
   },
   
   {
-    "title"    : "Advanced Python Programming: Introduction to Algorithms",
-    "url"      : "/courses/python-adv",
+    "title"    : "[WIP] Advanced Python Programming: Introduction to Algorithms",
+    "url"      : "/courses/python-adv-wip",
     "category" : "Advanced Programming",
+    "description" : ""
+  },
+  
+  {
+    "title"    : "[WIP] AP CS Boot Camp: Intro to Java Programming",
+    "url"      : "/courses/ap-cs-boot-camp-wip",
+    "category" : "AP CS Prep Courses",
     "description" : ""
   }
   

@@ -14,9 +14,9 @@ aboutRatioTitle: "Student to Instructor Ratio"
 aboutRatio: "4 : 1"
 aboutText: "Students acquire proficiency in programming through MakeCode, which provides an accessible and engaging platform for individuals of all ages and skill levels to learn the fundamental concepts and practical applications of coding. Students can embark upon a journey of discovery and exploration as they create their very own unique iteration of the popular and beloved game, Minecraft."
 priceschedule:
-  monthlyPrice: "200"
-  classPrice: "50"
-  classPerMonth: "4"
+  monthlyPrice: ""
+  classPrice: ""
+  classPerMonth: ""
   scheduleDescription: "A general schedule description detailing available booking hours for the specific course will be placed here. This is currently filler text, please ignore."
 promotion1: 
   enabled: "true"
@@ -58,6 +58,4 @@ highlights:
 - text: "Learn by doing is the key for all Computer Science studies. All the assignments and projects are design for the goals of the course."
 - text: "We focus on pushing our students' imagination and creativity while they learn how to program."
 - text: "Programming is just the first step. Building projects and attending science fairs/seminars will help students get into top unversities and jobs."
-engUrl: "minecraft-makecode.html"
-cnUrl: "minecraft-makecode-c.html"
 ---

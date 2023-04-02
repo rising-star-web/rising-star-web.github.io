@@ -58,6 +58,4 @@ highlights:
 - text: "Learn by doing is the key for all Computer Science studies. All the assignments and projects are design for the goals of the course."
 - text: "We focus on pushing our students' imagination and creativity while they learn how to program."
 - text: "Programming is just the first step. Building projects and attending science fairs/seminars will help students get into top unversities and jobs."
-engUrl: "scratch-1.html"
-cnUrl: "scratch-1-c.html"
 ---
