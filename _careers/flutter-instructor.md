@@ -2,10 +2,10 @@
 layout: career_detail
 
 [//]: # (Career Card)
-shiftLength: "Part Time"
-jobTitle: "Flutter Mobile Development Developer/Instructor"
-jobLocation: "Irvine, CA"
-jobSite: "Remote"
+shiftLength: ""
+jobTitle: "Part-Time Flutter Mobile Developer/Instructor"
+jobLocation: "Irvine, CA or Remote"
+jobSite: "On-Site or Remote"
 
 [//]: # (Career Details)
 jobDescription: "We are looking for passionate Flutter coding instructors to teach project-based K-12 students in after-school programs, weekend workshops, and camps. You don't have to be professional on Flutter dev, but you need at least to be willing to learn and communicate with students. We will have Bootstrap training for qualified candidates, the experience in Flutter and Mobile Devopment is preferred. We maintain a low teacher-student ratio (about 1:1 or 1:3) where possible and keep students and instructors together throughout an entire course for a meaningful experience."

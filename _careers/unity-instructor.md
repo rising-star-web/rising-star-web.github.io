@@ -2,10 +2,10 @@
 layout: career_detail
 
 [//]: # (Career Card)
-shiftLength: "Part Time"
-jobTitle: "Unity Game Development Developer/Instructor"
-jobLocation: "Irvine, CA"
-jobSite: "Remote"
+shiftLength: ""
+jobTitle: "Part-Time Unity Game Developer/Instructor"
+jobLocation: "Irvine, CA or Remote"
+jobSite: "On-Site or Remote"
 
 [//]: # (Career Details)
 jobDescription: "We are looking for passionate Unity game development instructors to teach project-based K-12 students in after-school programs, weekend workshops, and camps. You don't have to be professional on Unity, but you need at least to be willing to learn and communicate with students. We will have bootstrap training for Qualified candidates, the experience in Unity and Game Development is preferred. We maintain a low teacher-student ratio (about 1:1 or 1:2) where possible and keep students and instructors together throughout an entire course for a meaningful experience."

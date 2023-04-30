@@ -2,11 +2,11 @@
 layout: career_detail
 
 [//]: # (Career Card)
-shiftLength: "Part Time"
-jobTitle: "Bilingual Digital Marketing Assistant Internship (Chinese/English)"
-jobLocation: "Irvine, CA"
-jobSite: "Remote"
-internship: "Internship"
+shiftLength: ""
+jobTitle: "Part-Time Bilingual Digital Marketing Assistant Internship (Chinese/English)"
+jobLocation: "Irvine, CA or Remote"
+jobSite: "On-Site or Remote"
+internship: ""
 
 [//]: # (Career Details)
 jobDescription: "We are looking for candidates who are passionate about education, marketing and management."

@@ -8,6 +8,13 @@
   },
   
   {
+    "title"    : "Minecraft MakeCode: Introuction to AI",
+    "url"      : "/courses/minecraft-ai",
+    "category" : "Game Programming",
+    "description" : ""
+  },
+  
+  {
     "title"    : "Minecraft Programming with MakeCode",
     "url"      : "/courses/minecraft-makecode",
     "category" : "Game Development",

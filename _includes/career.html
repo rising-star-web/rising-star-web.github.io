@@ -35,15 +35,15 @@
       <a href="{{career.url}}" class="card shadow-lg lift h-100">
           <div class="card-body p-5 d-flex flex-row">
               <div class="post-content">
+                  <h4 class="mb-1">{{career.jobTitle}}</h4>
                   <span class="badge {{internshipStyle}} rounded py-1 mb-2">{{career.internship}}</span>
                   <span class="badge {{shiftLengthStyle}} rounded py-1 mb-2">{{career.shiftLength}}</span>
                   <span class="badge {{jobSiteStyle}} rounded py-1 mb-2">{{career.jobSite}}</span>
-                  <h4 class="mb-1">{{career.jobTitle}}</h4>
               </div>
           </div>
           <div class="card-footer px-5">
             <ul class="post-meta text-dark d-flex mb-0">
-              <li class="post-location"><span>Located in {{career.jobLocation}}</span></li>
+              <li class="post-location"><span>Location(s): {{career.jobLocation}}</span></li>
             </ul>
             <!-- /.post-meta -->
           </div>

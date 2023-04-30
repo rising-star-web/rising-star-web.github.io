@@ -2,10 +2,10 @@
 layout: career_detail
 
 [//]: # (Career Card)
-shiftLength: "Part Time"
-jobTitle: "Coding Instructor"
-jobLocation: "Irvine, CA"
-jobSite: "Remote"
+shiftLength: ""
+jobTitle: "Part-Time Coding Instructor"
+jobLocation: "Irvine CA, Arcadia CA, Rancho Cucamonga CA"
+jobSite: "On-Site"
 
 [//]: # (Career Details)
 jobDescription: "We are looking for passionate coding instructors to teach K-12 students in after-school programs, weekend workshops, and camps. We maintain a low teacher-student ratio (about 1:4) where possible, and keep students and instructors together throughout an entire course for a meaningful experience."
