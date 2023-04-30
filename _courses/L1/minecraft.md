@@ -2,7 +2,7 @@
 layout: course_detail
 title: "[WIP] Minecraft World Building and Instruction Programming"
 topIntroText: ""
-bgImageUrl: "img/updated/L1/minecraft/minecraft-bg.jpg"
+bgImageUrl: "img/updated/L1/minecraft-bg.jpg"
 aboutLevel: "L1 Block Coding"
 aboutCategoryTitle: "Course Category"
 aboutCategory: "Game Development"
@@ -22,17 +22,17 @@ promotion1:
   enabled: "true"
   title: "Build Your Own World"
   text: ""
-  imageUrl: "img/updated/L1/minecraft/minecraft-bg.jpg"
+  imageUrl: "img/updated/L1/minecraft-bg.jpg"
 promotion2: 
   enabled: "true"
   title: "Learn Programming Fundamentals"
   text: ""
-  imageUrl: "img/updated/L1/minecraft/minecraft-1.jpg"
+  imageUrl: "img/updated/L1/minecraft-1.jpg"
 promotion3: 
   enabled: "true"
   title: "Graphical Programming For Young Students"
   text: ""
-  imageUrl: "img/updated/L1/minecraft/minecraft-2.jpg"
+  imageUrl: "img/updated/L1/minecraft-2.jpg"
 promotion4: 
   enabled: "false"
   title: "Showcase Your Creations"

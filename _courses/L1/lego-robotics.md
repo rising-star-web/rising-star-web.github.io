@@ -2,7 +2,7 @@
 layout: course_detail
 title: "Robotics and Programming with LEGO Mindstorms"
 topIntroText: "This course is a hands-on experience that centers on constructing and programming EV3 robots using LEGO Mindstorms. In this course, participants will learn how to implement sensors and motors to make their robots perform specific tasks. Moreover, they will exercise their creativity by designing and building custom robots while learning to program them using the Mindstorms software. The course is ideal for individuals interested in exploring the fascinating world of robotics and programming."
-bgImageUrl: "img/updated/L1/lego/lego-bg.jpg"
+bgImageUrl: "img/updated/L1/lego-bg.jpg"
 aboutLevel: "L1 Block Coding"
 aboutCategoryTitle: "Course Category"
 aboutCategory: "Robotics | Programming"
@@ -22,17 +22,17 @@ promotion1:
   enabled: "true"
   title: "Learn With Your Robot Friend"
   text: "Through a variety of engaging and stimulating activities, our students can develop a comprehensive understanding of programming concepts and techniques, all while having fun and exploring the fascinating world of robotics."
-  imageUrl: "img/updated/L1/lego/lego-bg.jpg"
+  imageUrl: "img/updated/L1/lego-bg.jpg"
 promotion2: 
   enabled: "true"
   title: "From Legos To Real Robots"
   text: "Have you ever pondered the possibility of constructing a highly advanced and sophisticated robot akin to those marvels of engineering developed by Boston Dynamics? If so, then embarking on the journey of programming a LEGO Mindstorms robot can serve as a crucial stepping stone in your pursuit of a professional career in the field of robotics."
-  imageUrl: "img/updated/L1/lego/lego-1.jpg"
+  imageUrl: "img/updated/L1/lego-1.jpg"
 promotion3: 
   enabled: "true"
   title: "Think Like An Engineer"
   text: "Engaging in the process of learning Lego Mindstorms can serve as a highly effective means to pave the way towards achieving your desired goal of becoming an adept engineer. Through the comprehensive understanding and hands-on experience garnered from this educational pursuit, students can gain a strong foundation of engineering principles and develop practical skills that are essential for success in this field."
-  imageUrl: "img/updated/L1/lego/lego-2.jpg"
+  imageUrl: "img/updated/L1/lego-2.jpg"
 promotion4: 
   enabled: "false"
   title: "Learn By Doing"
@@ -42,7 +42,7 @@ promotion5:
   enabled: "true"
   title: "Promote Yourself In Competitions"
   text: "The LEGO Robotics Challenge is held regularly around the world. Students find motivation to learn and compete with other students to create the best robot."
-  imageUrl: "img/updated/L1/lego/lego-4.jpg"
+  imageUrl: "img/updated/L1/lego-4.jpg"
 curriculum: 
   enabled: "false"
 goals: 

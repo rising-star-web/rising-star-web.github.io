@@ -2,7 +2,7 @@
 layout: course_detail
 title: "[WIP] Advanced Python Programming: Introduction to Algorithms"
 topIntroText: "This course is designed for students who have a solid foundation in Python programming, focused on introducing students to algorithms, which are essential tools for solving complex problems in computer science and beyond. The course is highly interactive, with hands-on coding exercises and projects that allow students to apply what they have learned. By the end of the course, students will have a deep understanding of algorithms and how they can be used to solve real-world problems."
-bgImageUrl: "img/updated/L3/python-adv/python-adv-bg-v2.png"
+bgImageUrl: "img/updated/L3/python-adv-bg-v2.png"
 aboutLevel: "L3 Intermediate Programming"
 aboutCategoryTitle: "Course Category"
 aboutCategory: "Advanced Programming"
@@ -22,12 +22,12 @@ promotion1:
   enabled: "true"
   title: "Enter The World Of Coding"
   text: "You are going to learn the real programming — the same type of programming Google engineers are doing. With Python, you can accomplish any challenging tasks by writing the code."
-  imageUrl: "img/updated/L3/python-adv/python-adv-bg-v2.png"
+  imageUrl: "img/updated/L3/python-adv-bg-v2.png"
 promotion2: 
   enabled: "true"
   title: "From The Basic To The Practical"
   text: "You will start with learning the fundamental concepts of Python and the basic language contructs. However, we will lead you to the practical and exciting side of Python quickly and let you make real world applications on machine learning, game development and web servers."
-  imageUrl: "img/updated/L3/python-adv/python-adv-1.png"
+  imageUrl: "img/updated/L3/python-adv-1.png"
 promotion3: 
   enabled: "false"
   title: "Machine Learning With Python"
@@ -42,7 +42,7 @@ promotion5:
   enabled: "true"
   title: "Web Server Programming with Python"
   text: "To make your program more powerful, you need to turn it into a server program, so that people from all over the world can access it through the Internet. This is another core skill you will learn from the Python programming camp."
-  imageUrl: "img/updated/L3/python-adv/python-adv-4.png"
+  imageUrl: "img/updated/L3/python-adv-4.png"
 curriculum: 
   enabled: "false"
 goals: 

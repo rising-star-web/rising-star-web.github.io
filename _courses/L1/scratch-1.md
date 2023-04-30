@@ -2,7 +2,7 @@
 layout: course_detail
 title: "Innovative Programming with MIT Scratch"
 topIntroText: "In this course, students will learn how to use Scratch, the user-friendly visual programming language created by MIT, to design and develop their own interactive stories, games, and animations. Through hands-on exercises and projects, students will gain a solid understanding of basic programming concepts, including logic, sequencing, loops, events, and conditionals, while unleashing your creativity and imagination."
-bgImageUrl: "img/updated/L1/scratch/scratch-bg.png"
+bgImageUrl: "img/updated/L1/scratch-bg.png"
 aboutLevel: "L1 Block Coding"
 aboutCategoryTitle: "Course Category"
 aboutCategory: "Block Programming"
@@ -22,22 +22,22 @@ promotion1:
   enabled: "true"
   title: "The Most Popular Programming Platform"
   text: "Scratch is a specially designed education platform created by the renowned MIT Media Lab to teach young students about computer programming. Scratch provides a fun and exciting way for young students to learn and acquire the fundamental principles of coding and programming, empowering them to explore and develop their creativity, problem-solving skills, and critical thinking abilities, all of which are vital for success in the modern digital age."
-  imageUrl: "img/updated/L1/scratch/scratch-bg.png"
+  imageUrl: "img/updated/L1/scratch-bg.png"
 promotion2: 
   enabled: "true"
   title: "Challenge Your Creativity"
   text: "Millions of people are creating their own Scratch programs and more than 2,500 programs are shared in the online community. Students will be able to join the world of Scratch and demonstrate their creative thinking."
-  imageUrl: "img/updated/L1/scratch/scratch-3.png"
+  imageUrl: "img/updated/L1/scratch-3.png"
 promotion3: 
   enabled: "true"
   title: "Learning Programming Can Be Fun"
   text: "Scratch perfectly integrates programming concepts into animations and game development. When students finish their work of art, they've also unwittingly grasped the basic concepts of programming (including variables, loops, and functions), laying a solid foundation to learn real programming."
-  imageUrl: "img/updated/L1/scratch/scratch-1.png"
+  imageUrl: "img/updated/L1/scratch-1.png"
 promotion4: 
   enabled: "true"
   title: "Share Your Creations"
   text: "Students will post their programs and share it with MIT Scratch's community so fellow programmers from around the world can view and appreciate their creativity."
-  imageUrl: "img/updated/L1/scratch/scratch-2.png"
+  imageUrl: "img/updated/L1/scratch-2.png"
 promotion5: 
   enabled: "false"
   title: "More Than Just Programming"

@@ -2,7 +2,7 @@
 layout: course_detail
 title: "Innovative Programming with MIT Scratch 2"
 topIntroText: "Scratch is a programming platform designed for younger audiences developed by MIT. With Scratch, users can create personalized interactive media, including but not limited to games, animations, and stories, and subsequently share their creations with a global audience. This is an upper-division course for Scratch, intended to equip students with a diverse array of new and engaging applications within the platform."
-bgImageUrl: "img/updated/L1/scratch2/scratch2-bg.png"
+bgImageUrl: "img/updated/L1/scratch2-bg.png"
 aboutLevel: "L1 Block Coding"
 aboutCategoryTitle: "Course Category"
 aboutCategory: "Block Programming"
@@ -22,22 +22,22 @@ promotion1:
   enabled: "true"
   title: "Learn Practical Programming Apps With Scratch"
   text: "Scratch is an educational platform developed by the well-known MIT Media Lab for primary and middle school students to learn computer programming. Scratch high-level programming provides students with richer application scenarios; Not only can it continue to deepen programming concepts, but it can also lead to more interesting projects."
-  imageUrl: "img/updated/L1/scratch2/scratch2-bg.png"
+  imageUrl: "img/updated/L1/scratch2-bg.png"
 promotion2: 
   enabled: "true"
   title: "Challenge Your Creativity"
   text: "Millions of people are creating their own Scratch programs and more than 2,500 programs are shared in the online community. Students will be able to join the world of Scratch and demonstrate their creative thinking."
-  imageUrl: "img/updated/L1/scratch2/scratch2-1.png"
+  imageUrl: "img/updated/L1/scratch2-1.png"
 promotion3: 
   enabled: "true"
   title: "Learning Programming Can Be Fun"
   text: "Scratch perfectly integrates programming concepts into animations and game development. When students finish their work of art, they've also unwittingly grasped the basic concepts of programming (including variables, loops, and functions), laying a solid foundation to learn real programming."
-  imageUrl: "img/updated/L1/scratch2/scratch2-2.png"
+  imageUrl: "img/updated/L1/scratch2-2.png"
 promotion4: 
   enabled: "true"
   title: "Share Your Creations"
   text: "Students will post their programs and share it with MIT Scratch's community so fellow programmers from around the world can view and appreciate their creativity."
-  imageUrl: "img/updated/L1/scratch2/scratch2-3.png"
+  imageUrl: "img/updated/L1/scratch2-3.png"
 promotion5: 
   enabled: "false"
   title: "More Than Just Programming"

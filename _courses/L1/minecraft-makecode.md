@@ -2,7 +2,7 @@
 layout: course_detail
 title: "Minecraft Programming with MakeCode"
 topIntroText: "In this course, students will learn how to program in Minecraft using Microsoft's programming platform, MakeCode. Throughout the course, students will explore the fundamentals of computer programming, such as loops, variables, and conditional statements, as they apply to Minecraft. Students will learn how to use MakeCode to build and modify Minecraft structures, as well as how to create interactive games within the Minecraft environment."
-bgImageUrl: "img/updated/L1/makecode/makecode-bg.jpg"
+bgImageUrl: "img/updated/L1/makecode-bg.jpg"
 aboutLevel: "L1 Block Coding"
 aboutCategoryTitle: "Course Category"
 aboutCategory: "Game Development"
@@ -22,17 +22,17 @@ promotion1:
   enabled: "true"
   title: "No More Gaming Addiction"
   text: "Minecraft is a fun game, but kids can be addicted to playing it. With MakeCode, kids can start learning how to program while playing their favorite game."
-  imageUrl: "img/updated/L1/makecode/makecode-bg.jpg"
+  imageUrl: "img/updated/L1/makecode-bg.jpg"
 promotion2: 
   enabled: "true"
   title: "Learn Real Programming Concepts"
   text: "Through the use of MakeCode, students will acquire a deep understanding of the professional programming concepts and principles that form the foundation of computer science and software development. As they play and experiment with Minecraft using MakeCode, they will be able to customize the game to their own unique specifications and unleash their imagination, all while gaining valuable insight and expertise in the world of programming."
-  imageUrl: "img/updated/L1/makecode/makecode-1.png"
+  imageUrl: "img/updated/L1/makecode-1.png"
 promotion3: 
   enabled: "true"
   title: "Challenge Your Imagination"
   text: "With the open platform provided by Minecraft, you can program anything you want with your imagination, and change the game into a version you have never seen before."
-  imageUrl: "img/updated/L1/makecode/makecode-2.jpg"
+  imageUrl: "img/updated/L1/makecode-2.jpg"
 promotion4: 
   enabled: "false"
   title: "Publish/Showcase Your Game"

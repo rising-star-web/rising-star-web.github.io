@@ -1,0 +1,68 @@
+# config.yml
+backend:
+  name: github
+  repo: rising-star-web/rising-star-web.github.io
+  branch: main # Branch to update (optional; defaults to master)
+  site_domain: https://stellular-kashata-891aa9.netlify.app
+display_url: https://codingmind.com
+site_url: https://codingmind.com
+logo_url: https://codingmind.com/assets/img/codingmindlogo.svg
+media_folder: 'assets/img/uploaded'
+public_folder: 'assets/img/uploaded'
+collections:
+  - name: 'L1 courses'
+    label: 'L1 Courses'
+    folder: '_courses/L1'
+    create: true 
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "course_detail"}
+      - {label: "Top Intro Text", name: "topIntroText", widget: "string"}
+      - {label: "Bg Image Url", name: "bgImageUrl", widget: "image", media_folder: "/img/updated/L1/", choose_url: false }
+
+
+################################
+  - name: 'L2 courses'
+    label: 'L2 Courses'
+    folder: '_courses/L2'
+    create: true 
+    fields:
+      - { name: Title }
+################################
+  - name: 'L3 courses'
+    label: 'L3 Courses'
+    folder: '_courses/L3'
+    create: true 
+    fields:
+      - { name: Title }
+################################
+  - name: 'L4 courses'
+    label: 'L4 Courses'
+    folder: '_courses/L4'
+    create: true 
+    fields:
+      - { name: Title }
+################################
+  - name: 'L5 courses'
+    label: 'L5 Courses'
+    folder: '_courses/L5'
+    create: true 
+    fields:
+      - { name: Title }
+################################
+  - name: 'careers'
+    label: 'Careers'
+    folder: '_careers'
+    create: true 
+    preview_path: '/careers'
+    fields:
+      - {label: "Title", name: "jobTitle", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "career_detail"}
+      - {label: "Job Location", name: "jobLocation", widget: "string"}
+      - {label: "job Description", name: "jobDescription", widget: "string"}
+      - {label: "Responsibilities:", name: "responsibilities", widget: "list", field: { label: 'Responsibility Bullet Point', name: 'text', widget: 'text' }}
+      - {label: "Requirements:", name: "requirements", widget: "list", field: { label: 'Requirement Bullet Point', name: 'text', widget: 'text' }}
+      - {label: "Experiences:", name: "experiences", widget: "list", field: { label: 'Experience Bullet Point', name: 'text', widget: 'text' }}
+      - {label: "Benefits:", name: "benefits", widget: "list", field: { label: 'Benefit Bullet Point', name: 'text', widget: 'text' }}
+
+################################

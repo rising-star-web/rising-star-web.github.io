@@ -2,7 +2,7 @@
 layout: course_detail
 title: "Roblox: Preliminary Artificial Intelligence and Lua Practice"
 topIntroText: "The future world is the world of artificial intelligence, but do you know that AI can also be used in Roblox Game Development? This course is an introductory course for Artificial Intelligence (AI) and an advanced course for the Lua programming language. Students will delve into using the Lua programming language in their projects and utilize AI functions in their games."
-bgImageUrl: "img/updated/L2/roblox-ai/roblox-ai-bg.png"
+bgImageUrl: "img/updated/L2/roblox-ai-bg.png"
 aboutLevel: "L2 Introduction to Programming"
 aboutCategoryTitle: "Course Category"
 aboutCategory: "Game Programming"
@@ -22,17 +22,17 @@ promotion1:
   enabled: "true"
   title: "Understand Artificial Intelligence From A Theoretical Level"
   text: "Artificial intelligence is popular all over the world, mastering the concept of artificial intelligence from an early age is equivalent to mastering tomorrow."
-  imageUrl: "img/updated/L2/roblox-ai/roblox-ai-bg.png"
+  imageUrl: "img/updated/L2/roblox-ai-bg.png"
 promotion2: 
   enabled: "true"
   title: "Learning Programming And Algorithms In Game Engines"
   text: "Through designing game logic, applying the principles and foundations of computer algorithms, and utilizing creativity, students will further their understanding of advanced programming. This will reflect in their works of art as they shape and transform a world in Roblox to their own liking/specifications."
-  imageUrl: "img/updated/L2/roblox-ai/roblox-ai-1.png"
+  imageUrl: "img/updated/L2/roblox-ai-1.png"
 promotion3: 
   enabled: "true"
   title: "Advanced Programming and Game Development"
   text: "Roblox uses the novel programming language Lua. By completing a variety of challenges, students will be able to fully master the advanced programming concepts and techniques of Lua while making their own games."
-  imageUrl: "img/updated/L2/roblox-ai/roblox-ai-2.png"
+  imageUrl: "img/updated/L2/roblox-ai-2.png"
 promotion4: 
   enabled: "true"
   title: "Share Your Projects"
