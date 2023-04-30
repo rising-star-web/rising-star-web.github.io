@@ -3,7 +3,7 @@ backend:
   name: github
   repo: rising-star-web/rising-star-web.github.io
   branch: main # Branch to update (optional; defaults to master)
-  site_domain: https://stellular-kashata-891aa9.netlify.app
+  site_domain: stellular-kashata-891aa9.netlify.app
 display_url: https://codingmind.com
 site_url: https://codingmind.com
 logo_url: https://codingmind.com/assets/img/codingmindlogo.svg
@@ -19,7 +19,6 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "course_detail"}
       - {label: "Top Intro Text", name: "topIntroText", widget: "string"}
       - {label: "Bg Image Url", name: "bgImageUrl", widget: "image", media_folder: "/img/updated/L1/", choose_url: false }
-
 
 ################################
   - name: 'L2 courses'
