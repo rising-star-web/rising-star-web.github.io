@@ -20,7 +20,6 @@ collections:
       - {label: "Top Intro Text", name: "topIntroText", widget: "string"}
       - {label: "Bg Image Url", name: "bgImageUrl", widget: "image", media_folder: "/img/updated/L1/", choose_url: false }
 
-
 ################################
   - name: 'L2 courses'
     label: 'L2 Courses'
