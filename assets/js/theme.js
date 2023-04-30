@@ -801,7 +801,7 @@ var theme = {
                   if(response.ok) {
                     console.log('Success.');
                   }
-                  return 'Your free trial request has been processed. We will contact you shortly.';
+                  return 'Your free trial request has been processed. We will contact you shortly. Meanwhile, feel free to reach out us by +1 (949) 236-7896 if you have any questions.';
                 }).then((txt) => {
                   $('#formSpinner').css("display", "none");
                   $('#gform').prepend(txt);
