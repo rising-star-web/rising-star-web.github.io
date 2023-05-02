@@ -3,7 +3,7 @@ layout: career_detail
 
 [//]: # (Career Card)
 shiftLength: ""
-jobTitle: "Part-Time Unity Game Developer/Instructor"
+jobTitle: "Unity Game Developer/Instructor"
 jobLocation: "Irvine, CA or Remote"
 jobSite: "On-Site or Remote"
 

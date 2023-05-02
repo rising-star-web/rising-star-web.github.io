@@ -3,7 +3,7 @@ layout: career_detail
 
 [//]: # (Career Card)
 shiftLength: ""
-jobTitle: "Full-Time STEM Curriculum Designer"
+jobTitle: "STEM Curriculum Designer"
 jobLocation: "Irvine, CA"
 jobSite: "On-Site"
 

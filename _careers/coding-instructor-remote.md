@@ -3,7 +3,7 @@ layout: career_detail
 
 [//]: # (Career Card)
 shiftLength: ""
-jobTitle: "Part-Time Coding Instructor"
+jobTitle: "Coding Instructor"
 jobLocation: "Work From Home"
 jobSite: "Remote"
 

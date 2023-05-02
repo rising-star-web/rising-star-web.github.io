@@ -3,7 +3,7 @@ layout: career_detail
 
 [//]: # (Career Card)
 shiftLength: ""
-jobTitle: "Part-Time AI & Data Science Developer/Instructor"
+jobTitle: "AI & Data Science Developer/Instructor"
 jobLocation: "Irvine, CA or Remote"
 jobSite: "On-Site or Remote"
 

@@ -3,7 +3,7 @@ layout: career_detail
 
 [//]: # (Career Card)
 shiftLength: ""
-jobTitle: "Part-Time Flutter Mobile Developer/Instructor"
+jobTitle: "Flutter Mobile Developer/Instructor"
 jobLocation: "Irvine, CA or Remote"
 jobSite: "On-Site or Remote"
 

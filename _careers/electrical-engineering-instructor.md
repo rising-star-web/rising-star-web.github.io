@@ -3,7 +3,7 @@ layout: career_detail
 
 [//]: # (Career Card)
 shiftLength: ""
-jobTitle: "Part-Time Electrical Engineering Instructor"
+jobTitle: "Electrical Engineering Instructor"
 jobLocation: "Irvine, CA or Remote"
 jobSite: "On-Site or Remote"
 
