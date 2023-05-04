@@ -24,7 +24,7 @@ experiences:
 - text: "Have experience with Tensorflow and Keras."
 - text: "Have experience with Cloud-based AI services using Google Cloud or AWS."
 benefits:
-- text: "Salary is $20-$30/hr based on experience level and performance."
+- text: "Competitive salary based on experience level and performance."
 - text: "Project bonus based on the project milestones and deliverables."
 - text: "Flexible class schedule that can fit your availability."
 - text: "Enrich your own resume with the published applications."

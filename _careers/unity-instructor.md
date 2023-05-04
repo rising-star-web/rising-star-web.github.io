@@ -24,7 +24,7 @@ experiences:
 - text: "Have experience with publishing games in itch.io, Apple Store, Steam, Google Play."
 - text: "Other coding languages like Python, Java and etc."
 benefits:
-- text: "Salary is $20-$25/hr based on experience level and performance."
+- text: "Competitive salary based on experience level and performance."
 - text: "Project bonus based on the project milestones and deliverables."
 - text: "Flexible class schedule that can fit your availability."
 - text: "Enrich your own resume with the published applications."

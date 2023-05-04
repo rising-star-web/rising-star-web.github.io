@@ -28,7 +28,7 @@ experiences:
 - text: "Web Development."
 - text: "Algorithms."
 benefits:
-- text: "Salary is $20-$25/hr based on experience-level and performance."
+- text: "Competitive salary based on experience level and performance."
 - text: "Flexible class schedule that can fit your availability."
 - text: "Have a positive impact on the next generation of programmers."
 - text: "Develop new skills in a community centered on learning."

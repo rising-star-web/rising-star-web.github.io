@@ -23,5 +23,5 @@ requirements:
 experiences:
 - text: "Familiar with PhotoShop is preferred."
 benefits:
-- text: "Place here."
+- text: "Competitive salary based on experience level and performance."
 ---
