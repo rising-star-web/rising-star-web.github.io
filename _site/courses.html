@@ -74,7 +74,7 @@
                         <li><a class="dropdown-item" href="/about-us">About Us</a></li>
                         <li><a class="dropdown-item" href="/instructors">Instructors</a></li>
                         <li><a class="dropdown-item" href="/careers">Jobs & Careers</a></li>
-                        <li><a class="dropdown-item" href="/faq">Help & FAQ</a></li>
+                        <li><a class="dropdown-item" href="/faq">FAQ</a></li>
                         <li><a class="dropdown-item" href="/contact-us">Contact Us</a></li>
                       </ul>
                     </div>  
@@ -186,24 +186,9 @@
           </div>
           <!-- /.container -->
         </div>
-        <!-- HTML elements for search -->
-          <div id="search-container form-floating">
-            <div class="input-group mb-3 mt-3 searchBar rounded">
-              <div class="input-group-prepend">
-                <span class="searchBar1 input-group-text bg-primary" id="basic-addon1"><i class="uil uil-search fs-25 text-white"></i></span>
-              </div>
-              <input class="form-control searchBar2 " type="text" id="search-input" placeholder="Search for your course">
-            </div>
-            <div class="searchResultParent">
-              <div class="resultsContainer rounded shadow-lg">
-                <ul class="searchResults" id="results-container"></ul>
-              </div>
-            </div>
-          </div>
-        <!-- HTML elements for search -->
+
         <div class="col-md-5 col-xl-4 mt-3">
-          <span>Results: </span>
-          <p class="course-results"> Showing <span id="containerLength"></span></p>
+          <p class="course-results"> <span>Results: </span> <span id="containerLength"></span></p>
           <div id="outputParent" class="pathwayTag">
             <div class="d-flex flex-row align-items-center"> 
               <span id="clear-filters2" role="button"><i class="uil uil-times-circle fs-16 pe-1 px-2"></i></span>
@@ -581,17 +566,6 @@
 <script src="/assets/js/search-script.js" type="text/javascript"></script>
 
 <!-- Configuration -->
-<script>
-SimpleJekyllSearch({
-  searchInput: document.getElementById('search-input'),
-  resultsContainer: document.getElementById('results-container'),
-  json: '/search.json',
-  searchResultTemplate: '<li><a class="searchResultItem" href="{url}">{title}</a></li>',
-  noResultsText :'<div class="noSearchResultItem"">No results were found for that course.</div> ',
-  limit: 6,
-})
-</script>
-
 <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 <script src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
 <script src="/assets/js/pagination.js"></script>

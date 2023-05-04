@@ -82,10 +82,10 @@ function updateFilterCount() {
     var itemText = "";
     var itemsLength = $container.children(itemSelector).length;
     if(iso.filteredItems.length>1){
-        itemText = " items";
+        itemText = " courses";
     }
     else{
-        itemText = " item";
+        itemText = " course";
     }
 
     if(currentNumberPages>1){

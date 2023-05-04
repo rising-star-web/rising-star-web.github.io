@@ -22,7 +22,7 @@ promotion1:
   enabled: "true"
   title: ""
   text: ""
-  imageUrl: "img/updated/L5/apcs/apcs-bg.png"
+  imageUrl: "img/updated/L5/apcs-bg.png"
 promotion2: 
   enabled: "false"
   title: ""
