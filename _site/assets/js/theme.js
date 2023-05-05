@@ -819,16 +819,19 @@ var theme = {
 
                 console.log(accountData);
 
-                fetch(baseUrl+ "Account", {
+                fetch(baseUrl+ `Account`, {
                   mode: "no-cors",
                   method: "post",
-                  data: accountData
+                  body: JSON.stringify(accountData),
+                  headers: {
+                    'Content-Type': 'application/json'
+                  }
                 }).then(function successCallback(response) {
                   console.log('user created', response);
                   console.log('start login');
                   let studentId = response.data.id;
                   
-                  fetch(baseUrl+ "TrialClasses", {
+                  fetch(baseUrl+ `TrialClasses`, {
                     mode: "no-cors",
                     method: "post",
                     data: {
