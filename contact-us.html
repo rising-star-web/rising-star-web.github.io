@@ -87,37 +87,6 @@ layout: default
 </section>
 <!-- /section -->
 
-<a href="#" class="btn btn-primary rounded-pill mx-1 mb-2 mb-md-0" data-bs-toggle="modal" data-bs-target="#modal-message-sent" style="display: none;"></a>
-
-<!-- Success Modal -->
-<div class="modal fade" id="modal-message-sent" tabindex="-1">
-	<div class="modal-dialog modal-dialog-centered  modal-xl">
-	  <div class="modal-content">
-		<div class="modal-body p-6">
-		  <div class="row">
-			<div class="col-md-12 col-lg-8 mb-4 mb-lg-0 my-auto align-items-center">
-			  <h4 class="mb-2">Sent Message!</h4>
-			  <p class="mb-0">Kindly wait for a reply.</p>
-			</div>
-			<!--/column -->
-			<div class="col-md-5 col-lg-4 text-lg-end my-auto">
-			  <a href="#" class="btn btn-primary rounded-pill" data-bs-dismiss="modal" aria-label="Close" onclick="closeModal()">Okay</a>
-			</div>
-			<!--/column -->
-		  </div>
-		  <!--/.row -->
-		</div>
-		<!--/.modal-body -->
-	  </div>
-	  <!--/.modal-content -->
-	</div>
-	<!--/.modal-dialog -->
-  </div>
-
-<div class="modal-backdrop fade show" id="backdrop" style="display: none;"></div>
-<!--/.modal -->
-
-
 <section class="wrapper bg-light">
 	<div class="container pb-0 pb-md-6 text-center">
 		<div class="row">
@@ -125,11 +94,8 @@ layout: default
 				<div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
 					<h2 class="display-4 mb-3 text-center">Send Us a Message</h2>
 					<p class="lead text-center mb-10">Reach out to us from our contact form and we will get back to you shortly.</p>
-					<form method="post" action="https://api.staticforms.xyz/submit">
-						 <!-- <input type="hidden" name="accessKey" value="58f1268b-c2cb-4c81-9b28-60d0bce7042f"> Theo's Key -->
-						 <input type="hidden" name="accessKey" value="e5662aba-2370-4db2-b531-bd71d73524b2"> 
+					<form action="https://formspree.io/yu.sun.cs@gmail.com" method="POST">
 
-						<div class="messages"></div>
 						<div class="row gx-4">
 							<div class="col-md-6">
 								<div class="form-floating mb-4">
@@ -159,7 +125,7 @@ layout: default
 							<!-- /column -->
 							<div class="col-12">
 								<div class="form-floating mb-4">
-									<textarea id="form_message" name="message" class="form-control" placeholder="Your message" style="height: 150px" required></textarea>
+									<textarea id="form_message" name="description" class="form-control" placeholder="Your message" style="height: 150px" required></textarea>
 									<label for="form_message">Message *</label>
 									<div class="valid-feedback">
 										Looks good!
@@ -177,9 +143,6 @@ layout: default
 							<!-- /column -->
 						</div>
 						<!-- /.row -->
-
-						<input type="hidden" name="redirectTo" id="redirectValue" value="">
-						<input type="text" name="honeypot" style="display: none;"> <!-- Optional -->
 					</form>
 					<!-- /form -->
 				</div>
@@ -209,29 +172,3 @@ layout: default
 	<!-- /.container -->
 </section>
 <!-- /section -->
-
-<script type="text/javascript">
-    window.onload = (event) => {
-  		console.log("page is fully loaded");
-		if(window.location.hash != '#message-sent'){
-			var url = window.location.href.toString();
-			url = url + "#message-sent";
-			console.log(window.location.hash);
-			document.getElementById('redirectValue').value = url;
-		}
-		else{
-			var url = window.location.href.toString();
-			document.getElementById('redirectValue').value = url;
-			document.getElementById("backdrop").style.display = "block"
-			document.getElementById("modal-message-sent").style.display = "block";
-			document.getElementById("modal-message-sent").classList.add("show");
-		}
-		
-	};
-
-	function closeModal() {
-		document.getElementById("backdrop").style.display = "none";
-		document.getElementById("modal-message-sent").style.display = "none";
-		document.getElementById("modal-message-sent").classList.remove("show");
-    }
-</script>
