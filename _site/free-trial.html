@@ -145,11 +145,11 @@
             </div>
           </div>
 
-          <form id="gform" name="gform" target="hidden_iframe" enctype="text/plain" onsubmit="submitted=true;" class="contact-form needs-validation" action="https://docs.google.com/forms/d/e/1FAIpQLSccHA0yK51cQHtkRXvtua-tpDDagTTs5YsxZ7Za6l5ZpHlhDw/formResponse?" novalidate>
+          <form id="form" enctype="text/plain" class="contact-form needs-validation" novalidate>
             <div class="messages"></div>
             <div class="form-floating mb-4">
-              <input id="entry.1149055648" type="text" name="entry.1149055648" class="form-control" placeholder="Jane" required="required" data-error="Name is required.">
-              <label for="entry.1149055648">Student's Name *</label>
+              <input id="studentName" type="text" name="studentName" class="form-control" placeholder="Jane" required="required" data-error="Name is required.">
+              <label for="studentName">Student's Name *</label>
               <div class="valid-feedback">
                 Looks good!
               </div>
@@ -159,8 +159,8 @@
             </div>
 
             <div class="form-floating mb-4">
-              <input id="entry.889121019" type="text" name="entry.889121019" class="form-control" placeholder="Ex: 5th Grade" required="required" data-error="Valid grade level is required.">
-              <label for="entry.889121019">Student's Grade Level *</label>
+              <input id="studentGrade" type="text" name="studentGrade" class="form-control" placeholder="Ex: 5th Grade" required="required" data-error="Valid grade level is required.">
+              <label for="studentGrade">Student's Grade Level *</label>
               <div class="valid-feedback">
                 Looks good!
               </div>
@@ -182,8 +182,8 @@
 
             
             <div class="form-floating mb-4">
-              <input id="entry.1164819677" type="tel" maxlength="16" name="entry.1164819677" class="form-control" placeholder="(123)-456-7890" required="required" data-error="Valid phone number is required.">
-              <label for="entry.1164819677">Parent's Phone Number: <i>Ex. 123-456-7890 </i> *</label>
+              <input id="phoneNumber" type="tel" maxlength="16" name="phoneNumber" class="form-control" placeholder="(123)-456-7890" required="required" data-error="Valid phone number is required.">
+              <label for="phoneNumber">Parent's Phone Number: <i>Ex. 123-456-7890 </i> *</label>
               <div class="valid-feedback">
                 Looks good!
               </div>
@@ -193,24 +193,22 @@
             </div>
 
             <div class="form-select-wrapper mb-4">
-              <select class="form-select" aria-label="Default select example" required="required" id="entry.1686886734" name="entry.1686886734">
+              <select class="form-select" aria-label="Default select example" required="required" id="experience" name="experience">
                 <option value="" >Describe the student's coding experience *</option>
-                <option value="Never Learned Before">Never Learned Before</option>
-                <option value="Very Basic Exposure">Very Basic Exposure</option>
-                <option value="Knows At Least One Programming Language Very Well">Know's at Least One Programming Language Very Well</option>
-                <option value="Hacker!">Hacker!</option>
+                <option id="1" value="Never Learned Before">Never Learned Before</option>
+                <option id="2" value="Very Basic Exposure">Very Basic Exposure</option>
+                <option id="3" value="Knows At Least One Programming Language Very Well">Know's at Least One Programming Language Very Well</option>
+                <option id="4" value="Hacker!">Hacker!</option>
               </select>
             </div>
 
             <div class="form-select-wrapper mb-4">
-            <textarea id="entry.1009660436" name="entry.1009660436" class="form-control" placeholder="Trial Availability Ex: Mon-Thu after 3pm, Sat before 11am" style="height: 150px" required></textarea>
+            <textarea id="availability" name="availability" class="form-control" placeholder="Trial Availability Ex: Mon-Thu after 3pm, Sat before 11am" style="height: 150px" required></textarea>
             </div>
 
             <button type="submit" id="trialButton" class="btn btn-primary rounded-pill btn-send mb-3"> Submit </button>
           </form>
           <!-- /form -->
-
-          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){}"></iframe>
 
         </div>
         <!--/column -->
@@ -221,10 +219,8 @@
   </section>
   <!-- /section -->
 
+  <!-- Form submission code is located in assets/js/theme.js line 761 -->
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-  <script type="text/javascript">
-    var submitted=false;
-  </script>
   <script type="text/javascript">
     const isNumericInput = (event) => {
     const key = event.keyCode;
@@ -265,10 +261,11 @@
         else if(input.length > 0){event.target.value = `(${areaCode}`;}
     };
 
-    const inputElement = document.getElementById('entry.1164819677');
+    const inputElement = document.getElementById('phoneNumber');
     inputElement.addEventListener('keydown',enforceFormat);
     inputElement.addEventListener('keyup',formatToPhone);
   </script>
+
   </div>
    <footer class="bg-dark text-inverse">
     <div class="container py-13 py-md-15">

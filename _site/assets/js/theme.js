@@ -786,29 +786,74 @@ var theme = {
               // Send message only if the form has class .contact-form
               var isContactForm = form.classList.contains('contact-form');
               if(isContactForm) {
-                var data = new FormData(form);
                 var alertClass = 'alert-danger';
-                $('#gform *').css("pointer-events","none");
-                $('#gform *').fadeOut(500);
+                $('#form *').css("pointer-events","none");
+                $('#form *').fadeOut(500);
                 $('#formSpinner').css("display", "block");
-                
-                fetch("https://docs.google.com/forms/d/e/1FAIpQLSccHA0yK51cQHtkRXvtua-tpDDagTTs5YsxZ7Za6l5ZpHlhDw/formResponse?", {
+
+                const name = document.getElementById('studentName').value;
+                const email = document.getElementById('emailAddress').value;
+                const phone = document.getElementById('phoneNumber').value;
+                const grade = document.getElementById('studentGrade').value;
+                const experienceField = document.getElementById('experience');
+                const experience = experienceField.options[experienceField.selectedIndex].id;
+                const availability = document.getElementById('availability').value;
+
+                let baseUrl = 'https://prod-sharemyworks-backend.herokuapp.com/api/';
+                let username = name.replace(' ','') + Date.now();
+                let firstName = name.split(' ')[0];
+                let lastName = name.split(' ')[1]? name.split(' ')[1]: ' ';
+
+                let accountData = {
+                  email2: email,
+                  email: email,
+                  phone2: phone,
+                  username: username,
+                  firstName: firstName,
+                  lastName: lastName,
+                  password: '123',
+                  dateOfBirth: new Date(),
+                  grade: grade,
+                  preferedLanguage: 'English'
+                };
+
+                console.log(accountData);
+
+                fetch(baseUrl+ "Account", {
                   mode: "no-cors",
                   method: "post",
-                  body: data
-                }).then((response) => {
-                  console.log(response);
-                  if(response.ok) {
-                    console.log('Success.');
-                  }
-                  return 'Your free trial request has been processed. We will contact you shortly. Meanwhile, feel free to reach out us by +1 (949) 236-7896 if you have any questions.';
-                }).then((txt) => {
-                  $('#formSpinner').css("display", "none");
-                  $('#gform').prepend(txt);
+                  data: accountData
+                }).then(function successCallback(response) {
+                  console.log('user created', response);
+                  console.log('start login');
+                  let studentId = response.data.id;
+                  
+                  fetch(baseUrl+ "TrialClasses", {
+                    mode: "no-cors",
+                    method: "post",
+                    data: {
+                      codingExperience: experience,
+                      availability: availability,
+                      comment: "",
+                      signupTime: new Date(),
+                      accountId: studentId,
+                    }
+                  }).then(function successCallback(response) {
+                    console.log(response);
+                    $('#formSpinner').css("display", "none");
+                    $('#form').prepend(
+                      'Your free trial request has been processed. We will contact you shortly. Meanwhile, feel free to reach out us by +1 (949) 236-7896 if you have any questions.'
+                    );
+                  }).catch(function err(err) {
+                    $('#formSpinner').css("display", "none");
+                    $('#form').prepend('An error has occurred. Please contact us at +1 (949) 236-7896 for help.');  
+                    console.log(err)
+                  })
+
                 }).catch((err) => {
                   console.log(err);
                   $('#formSpinner').css("display", "none");
-                  $('#gform').prepend('An error has occurred. Please contact us for help.');
+                  $('#form').prepend('An error has occurred. Please contact us at +1 (949) 236-7896 for help.');
                 });
               }
             }
