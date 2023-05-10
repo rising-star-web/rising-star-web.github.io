@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/placeholder1.jpg"
+coverImage: "/img/updated/projects/minecraft.jpg"
 pagePostDate: "2023年2月23日"
 studentName: "学生姓名"
 projectName: "学生项目名称 1"
