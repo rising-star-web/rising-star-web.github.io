@@ -4,8 +4,13 @@ projects:
   header: Student Projects
   lead: Welcome to the Student Projects! Explore featured portfolios created by Coding Mind students that showcase their projects, programming ablitities, and more!
   allTag: All
-  newTag: Newly Added
-  mobileTag: Mobile Dev
-  gamedevTag: Game Dev
-  roboticsTag: Robotics
+  tag1: AI
+  tag2: App Dev
+  tag3: Game Dev
+  tag4: Robotics
+
+projectdetail:
+  testimonial: Student Testimonial
+  more: More About This Project + Accolades
+  recommended: You Might Also Like
 

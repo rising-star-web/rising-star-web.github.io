@@ -9,7 +9,23 @@ layout: default
         <div class="col-md-10 col-xl-8 mx-auto">
           <div class="post-header">
             <div class="post-category mb-4">
-              {{page.projectCategory}}
+              {%- assign category = page.projectCategory-%}
+              {%- if page.locale == "cn" -%}
+                  {%- case category -%}
+                    {%- when "Artificial Intelligence" -%}
+                      {%- assign category = '人工智能' -%}
+                    {%- when "App Development" -%}
+                      {%- assign category = '应用开发' -%}
+                    {%- when "Game Development" -%}
+                      {%- assign category = '游戏开发' -%}
+                    {%- when "Robotics" -%}
+                      {%- assign category = '机器人技术' -%}
+                    {%- else -%}
+                      {%- assign category = '其他' -%}
+                  {%- endcase -%}
+              {%- endif -%}
+
+              {{category}}
             </div>
             <!-- /.post-category -->
             <h1 class="display-1 mb-4">{{page.projectName}}</h1>
@@ -41,26 +57,22 @@ layout: default
                     <div class="post-content mb-5">
                       <h2 class="h2 mb-4">{{page.headerTitle}}</h2>
                       <p>{{page.bodyText1}}</p>
+                      <h3 class="h2 mb-4">{{ site.data.projects[page.locale].projectdetail.testimonial }}</h3>
                       <p>{{page.bodyText2}}</p>
                       <div class="row g-6 mt-3 mb-10">
                         <div class="col-md-6">
-                          <figure class="hover-scale rounded cursor-dark"><a href="/assets/img/photos/b8-full.jpg" data-glightbox="title: Heading; description: Purus Vulputate Sem Tellus Quam" data-gallery="post"> <img src="/assets/img/photos/b8.jpg" alt="" /></a></figure>
+                          <figure class="hover-scale rounded cursor-dark"><a href="{{page.contentImage}}" data-glightbox="title: Heading; description: Purus Vulputate Sem Tellus Quam" data-gallery="post"> <img src="{{page.contentImage}}" alt="" /></a></figure>
                         </div>
                         <!--/column -->
                         <div class="col-md-6">
-                          <figure class="hover-scale rounded cursor-dark"><a href="/assets/img/photos/b9-full.jpg" data-glightbox data-gallery="post"> <img src="/assets/img/photos/b9.jpg" alt="" /></a></figure>
+                          <figure class="hover-scale rounded cursor-dark"><a href="{{page.contentImage2}}" data-glightbox data-gallery="post"> <img src="{{page.contentImage2}}" alt="" /></a></figure>
                         </div>
                         <!--/column -->
                       </div>
                       <!-- /.row -->
-                      <p>{{page.bodyText3}}</p>
-                      <blockquote class="fs-lg my-8">
-                        <p>{{page.quote}}</p>
-                        <footer class="blockquote-footer">{{page.quoterName}}</footer>
-                      </blockquote>
-                      <h3 class="h2 mb-4">{{page.header2Title}}</h3>
-                      <p>{{page.bodyText4}}</p>
-                      <p>{{page.bodyText5}}</p>
+                      <h3 class="h2 mb-4">{{ site.data.projects[page.locale].projectdetail.more }}</h3>
+                      <a href="{{page.projectURL}}" class="hover more">{{page.URLDescription}}</a>
+                      <p>{{page.awardsDesc}}</p>
                     </div>
                     <!-- /.post-content -->
                   </article>
@@ -68,11 +80,11 @@ layout: default
                 </div>
                 <!-- /.classic-view -->
                 <hr class="mt-md-10 mb-md-10"/>
-                <h3 class="h2 mb-6">You Might Also Like</h3>
+                <h3 class="h2 mb-6">{{ site.data.projects[page.locale].projectdetail.recommended }}</h3>
                 <div class="swiper-container blog grid-view" data-margin="30" data-dots="true" data-items-md="2" data-items-xs="1">
                   <div class="swiper">
                     <div class="swiper-wrapper mb-12">
-                      {%- assign projects = site.projects | where:'projectCategory', page.projectCategory %}
+                      {%- assign projects = site.projects | where:'projectCategory', page.projectCategory | where: "locale", page.locale %}
                       {% for project in projects %}
                       {% unless project.projectName == page.projectName %}
                       <div class="swiper-slide">
