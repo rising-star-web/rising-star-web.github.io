@@ -3,11 +3,11 @@ layout: student_project_detail
 
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/minecraft.jpg"
-pagePostDate: "2023年2月23日"
-studentName: "学生姓名"
-projectName: "学生项目名称 1"
+pagePostDate: "2023年5月10日"
+studentName: "Minyu Chen"
+projectName: "Test project"
 projectCategory: "App Development"
-projectDesc: "项目的简要描述。"
+projectDesc: "背景提升项目"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "标题"
