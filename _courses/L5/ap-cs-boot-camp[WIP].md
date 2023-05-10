@@ -3,7 +3,7 @@ layout: course_detail
 title: "[WIP] AP CS Boot Camp: Intro to Java Programming"
 topIntroText: "Java programming basic training camp is specially designed for high school students with zero programming foundation or who have never been exposed to Java programming. The goal is to help students develop solid programming basic skills for high school AP CS courses and exams. It is also for higher stages Project development, fully prepared to participate in science competitions."
 bgImageUrl: "img/updated/L5/apcs-bg.png"
-aboutLevel: "L5 Advanced Programming"
+aboutLevel: "L5 Competitive Programming"
 aboutCategoryTitle: "Course Category"
 aboutCategory: "AP CS Prep Courses"
 aboutGradeLevelTitle: "Grade Level"

@@ -3,7 +3,7 @@ layout: course_detail
 title: "Minecraft MakeCode: Introuction to AI"
 topIntroText: "Today's teens have a variety of interests, but if you're looking for a common interest, it's Minecraft. This course is based on the Minecraft game, through introducing world creation, Minecraft command line commands Control, and the MakeCode graphical programming platform, gradually bring children into the world of programming."
 bgImageUrl: "img/my/minecode/mcai.jpg"
-aboutLevel: "L1 Block Coding"
+aboutLevel: "L1 Block Based Programming"
 aboutCategoryTitle: "Course Category"
 aboutCategory: "Game Programming"
 aboutGradeLevelTitle: "Grade Level"

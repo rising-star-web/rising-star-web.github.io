@@ -1,0 +1,21 @@
+name: 中文
+
+courses:
+  header: 探索我们的课程
+  lead: 我们提供40多门编程、游戏开发、机器人技术、计算机科学和技术课程，可以增强我们的学生技能、培养创造力，并利用 Microsoft + Minecraft、MIT + Scratch、Roblox 等最新工具。
+  L1title: "L1: 图形化编程"
+  L1description: " MIT的Media Lab发明的图形化编程是适合初学者的编程平台，通过简单的图形编程指令，学生能快速掌握编程概念和思维方式。"
+  L2title: "L2: 简洁代码编程"
+  L2description: " 简洁代码编程侧重于使用脚本语言例如Javascript或者Lua来使学生开始学习真正的代码，为后面专业的代码编程打下基础"
+  L3title: "L3: 代码编程"
+  L3description: " 开始学习高级的编程语言Python，并且逐步练习编写程序代码来进行复杂问题的解决与实现"
+  L4title: "L4: 应用主题编程"
+  L4description: " 拥有一定的代码编程能力，学生可以进行应用主题的专项编程学习，在自己喜欢的方向上面开发专业的项目作品 "
+  L5title: "L5: 竞技编程"
+  L5description: " 带领学生对各种信息学算法竞赛、科学竞赛、高中AP计算机考试、以及背景提升项目的专项准备与冲刺 "
+  results: "结果："
+
+filter:
+  filterButton: "筛选：路径级别"
+  filterTag: "按路径筛选"
+  clearFilters: "清除所有筛选条件"

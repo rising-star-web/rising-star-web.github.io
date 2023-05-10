@@ -79,14 +79,52 @@ keep_files:
 collections:
   courses:
     output: true
-    permalink: /:collection/:name
   projects:
     output: true
-    permalink: /:collection/:name
   careers:
     output: true
-    permalink: /:collection/:name
   reviews:
     output: true
   showcases:
     output: true
+
+defaults:
+  - values: 
+      locale: en
+  - scope:
+      path: ""
+      type: courses
+    values:
+      locale: en
+      permalink: /courses/:name
+  - scope:
+      path: ""
+      type: projects
+    values:
+      locale: en
+      permalink: /projects/:name
+  - scope:
+      path: ""
+      type: careers
+    values:
+      locale: en
+      permalink: /careers/:name
+  - scope:
+      path: "_courses/cn/**"
+      type: courses
+    values:
+      locale: cn
+      permalink: /cn/courses/:name
+  - scope:
+      path: "_projects/cn/**"
+      type: projects
+    values:
+      locale: cn
+      permalink: /cn/projects/:name
+  - scope:
+      path: "_careers/cn/**"
+      type: careers
+    values:
+      locale: cn
+      permalink: /cn/careers/:name
+

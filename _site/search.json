@@ -68,6 +68,13 @@
     "url"      : "/courses/ap-cs-boot-camp-wip",
     "category" : "AP CS Prep Courses",
     "description" : ""
+  },
+  
+  {
+    "title"    : "Robotics and Programming with LEGO Mindstorms",
+    "url"      : "/cn/courses/lego-robotics",
+    "category" : "Robotics | Programming",
+    "description" : ""
   }
   
 ]

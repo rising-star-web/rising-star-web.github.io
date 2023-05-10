@@ -3,7 +3,7 @@ layout: course_detail
 title: "Minecraft Programming with MakeCode"
 topIntroText: "In this course, students will learn how to program in Minecraft using Microsoft's programming platform, MakeCode. Throughout the course, students will explore the fundamentals of computer programming, such as loops, variables, and conditional statements, as they apply to Minecraft. Students will learn how to use MakeCode to build and modify Minecraft structures, as well as how to create interactive games within the Minecraft environment."
 bgImageUrl: "img/updated/L1/makecode-bg.jpg"
-aboutLevel: "L1 Block Coding"
+aboutLevel: "L1 Block Based Programming"
 aboutCategoryTitle: "Course Category"
 aboutCategory: "Game Development"
 aboutGradeLevelTitle: "Grade Level"

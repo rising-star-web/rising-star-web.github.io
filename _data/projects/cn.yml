@@ -1,0 +1,10 @@
+name: 中文
+
+projects:
+  header: 学生作品
+  lead: 欢迎来到学生项目！探索由Coding Mind学生创建的特色作品集，展示他们的项目、编程能力等等！
+  allTag: 全部
+  newTag: 最新添加
+  mobileTag: 移动开发
+  gamedevTag: 游戏开发
+  roboticsTag: 机器人技术

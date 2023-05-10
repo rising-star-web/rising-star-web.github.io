@@ -3,7 +3,7 @@ layout: course_detail
 title: "Innovative Programming with MIT Scratch"
 topIntroText: "In this course, students will learn how to use Scratch, the user-friendly visual programming language created by MIT, to design and develop their own interactive stories, games, and animations. Through hands-on exercises and projects, students will gain a solid understanding of basic programming concepts, including logic, sequencing, loops, events, and conditionals, while unleashing your creativity and imagination."
 bgImageUrl: "img/updated/L1/scratch-bg.png"
-aboutLevel: "L1 Block Coding"
+aboutLevel: "L1 Block Based Programming"
 aboutCategoryTitle: "Course Category"
 aboutCategory: "Block Programming"
 aboutGradeLevelTitle: "Grade Level"

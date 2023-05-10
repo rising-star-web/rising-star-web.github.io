@@ -81,20 +81,42 @@ function goToPage(n) {
 function updateFilterCount() {
     var itemText = "";
     var itemsLength = $container.children(itemSelector).length;
-    if(iso.filteredItems.length>1){
-        itemText = " courses";
+    console.log(window.location.pathname);
+    if(window.location.pathname == "/courses/" || window.location.pathname == "/courses.html" || window.location.pathname == "/courses.html/"){
+        if(iso.filteredItems.length>1){
+            itemText = " courses";
+        }
+        else{
+            itemText = " course";
+        }
+        if(currentNumberPages>1){
+            itemText += (" out of " + currentTotalItems);
+        }
+            iso.filteredItems.length ? 
+        $containerLength.text( iso.filteredItems.length + itemText)   
+        :
+        $containerLength.text( "no items" );   
     }
     else{
-        itemText = " course";
+        if(iso.filteredItems.length>1){
+            itemText = "门";
+        }
+        else{
+            itemText = "门";
+        }
+        if(currentNumberPages>1){
+            itemText = (currentTotalItems+"门"+ "课程中的") + itemText;
+        }
+        if(iso.filteredItems.length > 1){
+            $containerLength.text( itemText + iso.filteredItems.length )   
+        }
+        else if(iso.filteredItems.length == 1)
+        $containerLength.text( iso.filteredItems.length + itemText )   
+        else{
+        $containerLength.text( "未找到任何结果。" );   
+        }
     }
 
-    if(currentNumberPages>1){
-        itemText += (" out of " + currentTotalItems);
-    }
-    iso.filteredItems.length ? 
-    $containerLength.text( iso.filteredItems.length + itemText)   
-    :
-    $containerLength.text( "no items" );   
   }
 
 function setPagination() {

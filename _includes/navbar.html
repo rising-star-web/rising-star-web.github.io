@@ -2,7 +2,7 @@
   <nav id="navbar" class="navbar navbar-expand-lg center-nav transparent navbar-light pb-1">
       <div class="container flex-lg-row flex-nowrap align-items-center">
         <div class="navbar-brand w-100">
-          <a href="/">
+          <a href="{{ site.data.nav[page.locale].nav.URL }}">
             <img  class="h-9" src="/assets/img/codingmindlogo.svg" alt="" />
           </a>
         </div>
@@ -15,15 +15,15 @@
             <ul class="navbar-nav">
 
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle nav-text-solid " data-bs-toggle="dropdown">{{ site.data.locales[page.locale].nav.programs }}</a>
+                <a class="nav-link dropdown-toggle nav-text-solid " data-bs-toggle="dropdown">{{ site.data.nav[page.locale].nav.programs }}</a>
                 <div class="dropdown-menu">
                   <div class="dropdown-content">
                     <div>
-                      <h6 class="dropdown-header">{{ site.data.locales[page.locale].nav.ourPrograms }}</h6>
+                      <h6 class="dropdown-header">{{ site.data.nav[page.locale].nav.ourPrograms }}</h6>
                       <ul class="list-unstyled">
-                        <li><a class="dropdown-item" href="/group-lessons">{{ site.data.locales[page.locale].nav.group }}</a></li>
-                        <li><a class="dropdown-item" href="/private-lessons">{{ site.data.locales[page.locale].nav.oneonone }}</a></li>
-                        <li><a class="dropdown-item" href="/enrichment-programs">{{ site.data.locales[page.locale].nav.enrichment }}</a></li>
+                        <li><a class="dropdown-item" href="{{ site.data.nav[page.locale].nav.URL }}group-lessons">{{ site.data.nav[page.locale].nav.group }}</a></li>
+                        <li><a class="dropdown-item" href="{{ site.data.nav[page.locale].nav.URL }}private-lessons">{{ site.data.nav[page.locale].nav.oneonone }}</a></li>
+                        <li><a class="dropdown-item" href="{{ site.data.nav[page.locale].nav.URL }}enrichment-programs">{{ site.data.nav[page.locale].nav.enrichment }}</a></li>
                       </ul>
                     </div>
                     <!-- /.column -->
@@ -34,28 +34,28 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link nav-text-solid " href="/courses">{{ site.data.locales[page.locale].nav.courses }}</a>
+                <a class="nav-link nav-text-solid " href="{{ site.data.nav[page.locale].nav.URL }}courses">{{ site.data.nav[page.locale].nav.courses }}</a>
               </li>
 
               <li class="nav-item ">
-                <a class="nav-link nav-text-solid " href="/projects">{{ site.data.locales[page.locale].nav.studentProjects }}</a>
+                <a class="nav-link nav-text-solid " href="{{ site.data.nav[page.locale].nav.URL }}projects">{{ site.data.nav[page.locale].nav.studentProjects }}</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link nav-text-solid " href="/free-trial" id="nav-text-solid">{{ site.data.locales[page.locale].nav.freeTrial }}</a>
+                <a class="nav-link nav-text-solid " href="{{ site.data.nav[page.locale].nav.URL }}free-trial" id="nav-text-solid">{{ site.data.nav[page.locale].nav.freeTrial }}</a>
               </li>
 
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle nav-text-solid " data-bs-toggle="dropdown">{{ site.data.locales[page.locale].nav.more }}</a>
+                <a class="nav-link dropdown-toggle nav-text-solid " data-bs-toggle="dropdown">{{ site.data.nav[page.locale].nav.more }}</a>
                 <div class="dropdown-menu">
                   <div class="dropdown-content">
                     <div>
                       <ul class="list-unstyled">
-                        <li><a class="dropdown-item" href="/about-us">{{ site.data.locales[page.locale].nav.aboutUs }}</a></li>
-                        <li><a class="dropdown-item" href="/instructors">{{ site.data.locales[page.locale].nav.instructors }}</a></li>
-                        <li><a class="dropdown-item" href="/careers">{{ site.data.locales[page.locale].nav.jobs }}</a></li>
-                        <li><a class="dropdown-item" href="/faq">{{ site.data.locales[page.locale].nav.FAQ }}</a></li>
-                        <li><a class="dropdown-item" href="/contact-us">{{ site.data.locales[page.locale].nav.contactUs }}</a></li>
+                        <li><a class="dropdown-item" href="{{ site.data.nav[page.locale].nav.URL }}about-us">{{ site.data.nav[page.locale].nav.aboutUs }}</a></li>
+                        <li><a class="dropdown-item" href="{{ site.data.nav[page.locale].nav.URL }}instructors">{{ site.data.nav[page.locale].nav.instructors }}</a></li>
+                        <li><a class="dropdown-item" href="{{ site.data.nav[page.locale].nav.URL }}careers">{{ site.data.nav[page.locale].nav.jobs }}</a></li>
+                        <li><a class="dropdown-item" href="{{ site.data.nav[page.locale].nav.URL }}faq">{{ site.data.nav[page.locale].nav.FAQ }}</a></li>
+                        <li><a class="dropdown-item" href=" {{ site.data.nav[page.locale].nav.URL }}contact-us">{{ site.data.nav[page.locale].nav.contactUs }}</a></li>
                       </ul>
                     </div>  
                     <!-- /.column -->
@@ -65,7 +65,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link dropdown-item d-block d-lg-none"href="https://www.sharemyworks.com" target="_blank">{{ site.data.locales[page.locale].nav.learningCenter }}</a>
+                <a class="nav-link dropdown-item d-block d-lg-none"href="https://www.sharemyworks.com" target="_blank">{{ site.data.nav[page.locale].nav.learningCenter }}</a>
               </li>
 
             </ul>
@@ -92,21 +92,21 @@
           <ul class="navbar-nav flex-row align-items-center ms-auto">
             <li class="nav-item dropdown language-select text-uppercase">
               <a class="nav-link dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                {{ site.data.locales[page.locale].name }}
+                {{ site.data.nav[page.locale].name }}
               </a>
               <ul class="dropdown-menu">
                 <li class="nav-item"><a class="dropdown-item" href="#">
-                  {{ site.data.locales[page.locale].name }}
+                  {{ site.data.nav[page.locale].name }}
                 </a></li>
-                <li class="nav-item"><a class="dropdown-item" href=" {{ site.data.locales[page.locale].nav.switchLangURL }}{{page.name}} ">                  
-                {{ site.data.locales[page.locale].nav.switchLang }}
+                <li class="nav-item"><a class="dropdown-item" href=" {{ site.data.nav[page.locale].nav.switchLangURL }}{{page.name}} ">      
+                  {{ site.data.nav[page.locale].nav.switchLang }}
                 </a></li>
               </ul>
 
             </li>
 
             <li class="nav-item d-none d-md-block">
-              <a href="https://www.sharemyworks.com" target="_blank" class="btn btn-sm btn-primary rounded-pill">{{ site.data.locales[page.locale].nav.learningCenter }}</a>
+              <a href="https://www.sharemyworks.com" target="_blank" class="btn btn-sm btn-primary rounded-pill">{{ site.data.nav[page.locale].nav.learningCenter }}</a>
               </li>
               
             <li class="nav-item d-lg-none">

@@ -3,7 +3,7 @@ layout: course_detail
 title: "Innovative Programming with MIT Scratch 2"
 topIntroText: "Scratch is a programming platform designed for younger audiences developed by MIT. With Scratch, users can create personalized interactive media, including but not limited to games, animations, and stories, and subsequently share their creations with a global audience. This is an upper-division course for Scratch, intended to equip students with a diverse array of new and engaging applications within the platform."
 bgImageUrl: "img/updated/L1/scratch2-bg.png"
-aboutLevel: "L1 Block Coding"
+aboutLevel: "L1 Block Based Programming"
 aboutCategoryTitle: "Course Category"
 aboutCategory: "Block Programming"
 aboutGradeLevelTitle: "Grade Level"

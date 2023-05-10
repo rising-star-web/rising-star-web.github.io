@@ -3,7 +3,7 @@ layout: course_detail
 title: "[WIP] Minecraft World Building and Instruction Programming"
 topIntroText: ""
 bgImageUrl: "img/updated/L1/minecraft-bg.jpg"
-aboutLevel: "L1 Block Coding"
+aboutLevel: "L1 Block Based Programming"
 aboutCategoryTitle: "Course Category"
 aboutCategory: "Game Development"
 aboutGradeLevelTitle: "Grade Level"

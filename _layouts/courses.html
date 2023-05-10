@@ -1,0 +1,174 @@
+---
+layout: default
+---
+
+{% assign courses = site.courses | where: "locale", page.locale %}
+
+<!-- section -->
+<section class="wrapper">
+  <div class="container pt-8 pt-md-12">
+    <div class="mb-8"> 
+      <div class="row align-items-center position-relative zindex-1 ">
+        <div class="col-md-7 col-xl-8 pe-xl-20">
+          <h2 class="display-2 mb-3"> {{ site.data.courses[page.locale].courses.header }}</h2>
+        </div>
+        <div>
+          <p class="lead mb-3">  {{ site.data.courses[page.locale].courses.lead }}</p>
+        </div>
+
+        <div class="wrapper">
+          <div class="bg-custom4 rounded container my-4 p-6 shadow-md">
+            <div class="row process-wrapper line" data-cues="slideInUp">
+              <div class="col-lg"> 
+                <span class="icon btn btn-circle btn-lg rosered-gradient text-white p-6 mb-4">
+                  <i class="uil uil-puzzle-piece"></i>
+                </span>
+                <h4 class="mb-1"> {{ site.data.courses[page.locale].courses.L1title }}</h4>
+                <p class="fs-15 mb-0"> {{ site.data.courses[page.locale].courses.L1description }}</p>
+              </div>
+              <!--/column -->
+              <div class="col-lg"> <span class="icon btn btn-circle btn-lg orange-gradient text-white p-6 mb-4 mt-4 mt-lg-0">
+                <i class="uil uil-window"></i>
+              </span>
+                <h4 class="mb-1"> {{ site.data.courses[page.locale].courses.L2title }}</h4>
+                <p class="fs-15 mb-0"> {{ site.data.courses[page.locale].courses.L2description }}</p>
+              </div>
+              <!--/column -->
+              <div class="col-lg"> <span class="icon btn btn-circle btn-lg forestgreen-gradient text-white p-6 mb-4 mt-4 mt-lg-0">
+                <i class="uil uil-brackets-curly"></i>
+              </span>
+                <h4 class="mb-1"> {{ site.data.courses[page.locale].courses.L3title }}</h4>
+                <p class="fs-15 mb-0"> {{ site.data.courses[page.locale].courses.L3description }}</p>
+              </div>
+              <!--/column -->
+              <div class="col-lg"> <span class="icon btn btn-circle btn-lg navyblue-gradient text-white p-6 mb-4 mt-4 mt-lg-0">
+                <i class="uil uil-cloud-check"></i>
+              </span>
+                <h4 class="mb-1"> {{ site.data.courses[page.locale].courses.L4title }}</h4>
+                <p class="fs-15 mb-0"> {{ site.data.courses[page.locale].courses.L4description }}</p>
+              </div>  
+              <!--/column -->
+              <div class="col-lg"> <span class="icon btn btn-circle btn-lg amethyst-gradient text-white p-6 mb-4 mt-4 mt-lg-0">
+                <i class="uil uil-rocket"></i>
+              </span>
+                <h4 class="mb-1"> {{ site.data.courses[page.locale].courses.L5title }}</h4>
+                <p class="fs-15 mb-0"> {{ site.data.courses[page.locale].courses.L5description }}</p>
+              </div>
+              <!--/column -->
+            </div>
+            <!--/.row -->
+          </div>
+          <!-- /.container -->
+        </div>
+
+        <div class="col-md-5 col-xl-4 mt-3">
+          <p class="course-results"> <span>{{ site.data.courses[page.locale].courses.results }} </span> <span id="containerLength"></span></p>
+          <div id="outputParent" class="pathwayTag">
+            <div class="d-flex flex-row align-items-center"> 
+              <span id="clear-filters2" role="button"><i class="uil uil-times-circle fs-16 pe-1 px-2"></i></span>
+              <span id="output" class="pe-2">
+              </span>
+            </div>
+          </div>
+
+
+        </div>
+
+        <!--/column -->
+        <div class="col-md-5 col-xl-4 ms-md-auto mt-5 mt-md-0 d-lg-flex flex-lg-row justify-content-end">
+          <a class="btn btn-outline-primary rounded bg-white text-navy z-0" href="#" data-bs-toggle="collapse" data-bs-target="#dropdown-menu">{{ site.data.courses[page.locale].filter.filterButton }}
+            <i class="uil uil-angle-down text-navy"></i>
+          </a> 
+            <div class="dropdown-menu mt-lg-10 pb-0" id="dropdown-menu">
+              <h6 class="dropdown-header">{{ site.data.courses[page.locale].filter.filterTag }}</h6>
+              <ul class="list-unstyled">
+                <li class="dropdown-item">
+                  <div class="form-check">
+                    <input class="form-check-input filter-item" type="checkbox" value="Level1" id="flexCheckDefault">
+                    <label class="form-check-label"  for="flexCheckDefault"> {{ site.data.courses[page.locale].courses.L1title }} </label>
+                  </div>
+                </li>
+                <li class="dropdown-item">
+                  <div class="form-check">
+                    <input class="form-check-input filter-item" type="checkbox" value="Level2" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault"> {{ site.data.courses[page.locale].courses.L2title }} </label>
+                  </div>
+                </li>
+                <li class="dropdown-item">
+                  <div class="form-check">
+                    <input class="form-check-input filter-item" type="checkbox" value="Level3" id="flexCheckDefault">
+                    <label class="form-check-label"  for="flexCheckDefault"> {{ site.data.courses[page.locale].courses.L3title }} </label>
+                  </div>
+                </li>
+                <li class="dropdown-item">
+                  <div class="form-check">
+                    <input class="form-check-input filter-item" type="checkbox" value="Level4" id="flexCheckDefault">
+                    <label class="form-check-label"  for="flexCheckDefault"> {{ site.data.courses[page.locale].courses.L4title }} </label>
+                  </div>
+                </li>
+                <li class="dropdown-item">
+                  <div class="form-check">
+                    <input class="form-check-input filter-item" type="checkbox" value="Level5" id="flexCheckDefault">
+                    <label class="form-check-label"  for="flexCheckDefault"> {{ site.data.courses[page.locale].courses.L5title }} </label>
+                  </div>
+                </li>
+                <li class="dropdown-item">
+                  <span id="clear-filters" role="button"><span class="fas fa-times-circle"></span>Clear All filters</span>
+                </li>
+              </ul>
+            </div>
+          <!--/.form-select-wrapper -->
+      </div>
+        <!--/column -->
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->
+
+<!-- /section -->
+<section class="wrapper">
+  <div class="container pb-8 mb-8">
+    <!--/.row -->
+      <div id="isotopeContainer" data-length="9" class="row g-6 row-cols-1 row-cols-md-2 row-cols-lg-3 isotope">
+          {% for course in courses %}
+
+          {%- assign level = course.aboutLevel -%}
+          {%- case level -%}
+              {%- when "L1 Block Coding" -%}
+                  {%- assign levelFilter = 'Level1' %}
+              {%- when "L2 Introduction to Programming" -%}
+                  {%- assign levelFilter = 'Level2' %}
+              {%- when "L3 Intermediate Programming" -%}
+                  {%- assign levelFilter = 'Level3' %}
+              {%- when "L4 Applied Programming" -%}
+                  {%- assign levelFilter = 'Level4' %}
+              {%- when "L5 Advanced Programming" -%}
+                  {%- assign levelFilter = 'Level5' %}
+              {%- else -%}
+                  {%- assign levelFilter = course.aboutLevel -%}
+          {%- endcase -%}
+
+          <div class="isotopeItem {{levelFilter}}">
+            {% include course.html %}
+          </div>
+          {% endfor %}
+      </div>
+      <!-- /.row -->
+  </div>
+</section>
+<!-- /section -->
+
+<section class="wrapper">
+  <div class="container pb-14 d-flex justify-content-center">
+    <ul id="pagination-demo" class="pagination pagination-alt mb-0"></ul>  
+  </div>
+</section>
+<!-- /section -->
+
+<!-- Configuration -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<script src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+<script src="/assets/js/pagination.js"></script>
+<script src="/assets/js/custom-filter.js"></script>

@@ -38,10 +38,10 @@
     </figure>
     <div class="card-body">
       <div class="post-header">
-        <h2 class="post-title mb-2"><a class="link-dark" href="{{project.url}}">{{project.projectName}}</a></h2>
+        <h2 class="post-title mb-2 text-truncate"><a class="link-dark" href="{{project.url}}">{{project.projectName}}</a></h2>
       </div>
       <!-- /.post-header -->
-      <div class="post-content">
+      <div class="post-content text-truncate">
         <p>{{project.projectDesc}}</p>
       </div>
       <!-- /.post-content -->
@@ -50,7 +50,7 @@
     <div class="card-footer">
       <ul class="post-meta text-dark d-flex mb-0">
         <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{project.pagePostDate}}</span></li>
-        <li class="post-name"><i class="uil uil-user"></i><span>{{project.studentName}}</span></li>
+        <li class="post-name"><i class="uil uil-user text-truncate"></i><span>{{project.studentName}}</span></li>
       </ul>
       <!-- /.post-meta -->
     </div>

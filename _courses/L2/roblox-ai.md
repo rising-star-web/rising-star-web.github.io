@@ -3,7 +3,7 @@ layout: course_detail
 title: "Roblox: Preliminary Artificial Intelligence and Lua Practice"
 topIntroText: "The future world is the world of artificial intelligence, but do you know that AI can also be used in Roblox Game Development? This course is an introductory course for Artificial Intelligence (AI) and an advanced course for the Lua programming language. Students will delve into using the Lua programming language in their projects and utilize AI functions in their games."
 bgImageUrl: "img/updated/L2/roblox-ai-bg.png"
-aboutLevel: "L2 Introduction to Programming"
+aboutLevel: "L2 Script Based Programming"
 aboutCategoryTitle: "Course Category"
 aboutCategory: "Game Programming"
 aboutGradeLevelTitle: "Grade Level"

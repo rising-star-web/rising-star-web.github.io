@@ -3,7 +3,7 @@ layout: course_detail
 title: "Game Development with Roblox Studio"
 topIntroText: "This course is designed to teach you the basics of Game Development using Roblox Studio. Roblox is a popular gaming platform that allows users to create their own games and share them with the world. With Roblox Studio, students can create their own unique games, characters, and environments, all with no prior coding experience necessary."
 bgImageUrl: "img/updated/L2/roblox-beg-bg.png"
-aboutLevel: "L2 Introduction to Programming"
+aboutLevel: "L2 Script Based Programming"
 aboutCategoryTitle: "Course Category"
 aboutCategory: "Game Development"
 aboutGradeLevelTitle: "Grade Level"
