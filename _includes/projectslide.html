@@ -1,21 +1,42 @@
 {%- assign category = project.projectCategory-%}
   {%- case category -%}
-    {%- when "Newly Added" -%}
-      {%- assign categoryStyle = 'ig-gradient' %}
+    {%- when "Artificial Intelligence" -%}
+      {%- assign categoryStyle = 'sunkissed-gradient' -%}
+      {%- assign categoryFilter = 'artificiali' -%}
+    {%- when "App Development" -%}
+      {%- assign categoryStyle = 'ig-gradient' -%}
+      {%- assign categoryFilter = 'softwareapp' -%}
     {%- when "Game Development" -%}
-      {%- assign categoryStyle = 'limegreen-gradient' %}
-    {%- when "Mobile Development" -%}
-      {%- assign categoryStyle = 'sunkissed-gradient' %}
+      {%- assign categoryStyle = 'limegreen-gradient' -%}
+      {%- assign categoryFilter = 'gamedev' -%}
     {%- when "Robotics" -%}
-      {%- assign categoryStyle = 'aquagreen-gradient' %}
+      {%- assign categoryStyle = 'aquagreen-gradient' -%}
+      {%- assign categoryFilter = 'robotics' -%}
     {%- else -%}
       {%- assign categoryStyle = 'blue-gradient1' -%}
+      {%- assign categoryFilter = '*' -%}
   {%- endcase -%}
+
+{%- if page.locale == "cn" -%}
+  {%- assign category2 = project.projectCategory-%}
+    {%- case category2 -%}
+      {%- when "Artificial Intelligence" -%}
+        {%- assign category = '人工智能' -%}
+      {%- when "App Development" -%}
+        {%- assign category = '应用开发' -%}
+      {%- when "Game Development" -%}
+        {%- assign category = '游戏开发' -%}
+      {%- when "Robotics" -%}
+        {%- assign category = '机器人技术' -%}
+      {%- else -%}
+        {%- assign category = '其他' -%}
+    {%- endcase -%}
+{%- endif -%}
 
 <div class="swiper-slide">
     <article>
-      <figure class="overlay overlay-1 hover-scale rounded mb-5"><a href="{{project.url}}"> <img src="{{project.coverImage}}" alt="" />
-        <span class="projectLabel {{categoryStyle}}">{{project.projectCategory}}</span>
+      <figure class="overlay overlay-1 hover-scale rounded mb-5"><a href="{{project.url}}"> <img src="{{project.coverImage}}" alt="" class="courseImage" />
+        <span class="projectLabel {{categoryStyle}}">{{category}}</span>
       </a>
         <figcaption>
           <h5 class="from-top mb-0">Read More</h5>

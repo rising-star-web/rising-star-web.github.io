@@ -82,7 +82,7 @@ function updateFilterCount() {
     var itemText = "";
     var itemsLength = $container.children(itemSelector).length;
     console.log(window.location.pathname);
-    if(window.location.pathname == "/courses/" || window.location.pathname == "/courses.html" || window.location.pathname == "/courses.html/"){
+    if( window.location.pathname == "/courses" || window.location.pathname == "/courses/" || window.location.pathname == "/courses.html" || window.location.pathname == "/courses.html/"){
         if(iso.filteredItems.length>1){
             itemText = " courses";
         }
