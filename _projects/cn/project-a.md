@@ -4,7 +4,7 @@ layout: student_project_detail
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/minecraft.jpg"
 pagePostDate: "2023年5月10日"
-studentName: "Minyu Chen"
+studentName: "Joanna"
 projectName: "Test project"
 projectCategory: "App Development"
 projectDesc: "背景提升项目"
