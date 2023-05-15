@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-05-15 上午7.27.03.png"
+coverImage: "IMG_2347.JPG"
 pagePostDate: "2023年3月3日"
 studentName: "Ryder Wei"
 projectName: "手机游戏Chess Pro 3D"
@@ -16,7 +16,7 @@ bodyText2: "学员Ryder Wei是一位才华横溢的初中生,从小喜欢象棋�
 URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
 awardsDesc: "该项目成功帮助学员申请到顶尖私校Sage Hill高中和Cate高中"
-contentImage: "/img/updated/projects/截屏2023-05-15 上午7.27.03.png"
-contentImage2: "/img/updated/projects/截屏2023-05-15 上午7.27.03.png"
+contentImage: "/img/updated/projects/IMG_2352.jpg"
+contentImage2: "/img/updated/projects/IMG_2348.JPG"
 
 ---
