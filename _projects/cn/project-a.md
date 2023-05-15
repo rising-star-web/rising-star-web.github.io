@@ -3,21 +3,19 @@ layout: student_project_detail
 
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/截屏2023-05-15 上午7.27.03.png"
-pagePostDate: "2022年7月18日"
-studentName: "Amy Tang"
-projectName: "iOS Shopping App"
+pagePostDate: "2023年3月3日"
+studentName: "Ryder Wei"
+projectName: "手机游戏Chess Pro 3D"
 projectCategory: "App Development"
 projectDesc: "背景提升项目"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "学员Amy Tang自主研发Shopping App"
-bodyText1: "此次Amy独立开发并成功发布的购物应用，无疑是她技术能力和创新精神的完美体现。她的这款应用利用了先进的算法和数据分析技术，为用户提供个性化的购物体验，同时还考虑了用户的安全和隐私保护。"
-bodyText2: "学员Amy Tang是一位才华横溢的初中生，拥有深厚的计算机科学背景和丰富的编程经验。她的技术能力不仅限于编程，还包括用户体验设计、数据分析和机器学习等领域。
-Amy一直对科技有着浓厚的兴趣，认为科技是解决生活中问题的关键。她致力于开发能够改变人们生活的应用程序，特别是那些能够提高效率、简化流程的工具。
-Amy对技术的热爱和对提高人们生活质量的执着，使她在这个领域独树一帜。我们期待Amy未来能够为我们带来更多创新的应用程序，进一步推动科技为社会带来更多的便利。"
+headerTitle: "八年级学生Ryder开发手机游戏Chess Pro 3D"
+bodyText1: "Ryder从小就喜欢国际象棋，因此想开发一个国际象棋游戏。他遇到的最大困难是将操纵杆移入手机游戏中，但最终通过简单的代码解决了这个问题。"
+bodyText2: "学员Ryder Wei是一位才华横溢的初中生,从小喜欢象棋的他一直想有一款属于自己的象棋训练游戏。今年八年级的Ryder将兴趣与爱好结合开发出象棋训练项目，让训练象棋变得方便和简单，目前该项目已经在App Store发布。Ryder也成功拿到了多所顶尖私校的录取"
 URLDescription: "链接到项目"
-projectURL: "https://youtu.be/kQUbTcEEn8E"
-awardsDesc: "该项目成功帮助学员申请私校背景提升"
+projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
+awardsDesc: "该项目成功帮助学员申请到顶尖私校Sage Hill高中和Cate高中"
 contentImage: "/img/updated/projects/截屏2023-05-15 上午7.27.03.png"
 contentImage2: "/img/updated/projects/截屏2023-05-15 上午7.27.03.png"
 
