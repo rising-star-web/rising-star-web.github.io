@@ -16,7 +16,7 @@ bodyText2: "学员Ryder Wei是一位才华横溢的初中生,从小喜欢象棋�
 URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
 awardsDesc: "该项目成功帮助学员申请到顶尖私校Sage Hill高中和Cate高中,并且在苹果APP发布"
-contentImage: "/img/updated/projects/IMG_2347.JPG"
+contentImage: "/img/updated/projects/IMG_2349.JPG"
 contentImage2: "/img/updated/projects/IMG_2348.JPG"
 
 ---
