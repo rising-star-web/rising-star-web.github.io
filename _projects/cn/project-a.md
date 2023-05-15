@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "IMG_2347.JPG"
+coverImage: "/img/updated/projects/IMG_2352.jpg"
 pagePostDate: "2023年3月3日"
 studentName: "Ryder Wei"
 projectName: "Chess Pro 3D"
