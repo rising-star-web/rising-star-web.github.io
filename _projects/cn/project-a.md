@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/minecraft.jpg"
+coverImage: "/img/updated/projects/截屏2023-05-15 上午7.27.03.png"
 pagePostDate: "2022年7月18日"
 studentName: "Amy Tang"
 projectName: "iOS Shopping App"
@@ -18,7 +18,7 @@ Amy对技术的热爱和对提高人们生活质量的执着，使她在这个�
 URLDescription: "链接到项目"
 projectURL: "https://youtu.be/kQUbTcEEn8E"
 awardsDesc: "该项目成功帮助学员申请私校背景提升"
-contentImage: "/img/updated/projects/minecraft.jpg"
-contentImage2: "/img/updated/projects/minecraft.jpg"
+contentImage: "/img/updated/projects/截屏2023-05-15 上午7.27.03.png"
+contentImage2: "/img/updated/projects/截屏2023-05-15 上午7.27.03.png"
 
 ---
