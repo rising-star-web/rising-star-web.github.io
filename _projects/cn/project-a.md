@@ -7,7 +7,7 @@ pagePostDate: "2023年3月3日"
 studentName: "Ryder Wei"
 projectName: "Chess Pro 3D"
 projectCategory: "App Development"
-projectDesc: "背景提升项目"
+projectDesc: "Ryder将兴趣与爱好结合开发出象棋训练项目，让训练象棋变得方便和简单，目前该项目已经在App Store发布。Ryder也成功拿到了多所顶尖私校的录取"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "八年级学生Ryder开发手机游戏Chess Pro 3D"
