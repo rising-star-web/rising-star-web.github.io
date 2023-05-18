@@ -3,11 +3,11 @@ layout: student_project_detail
 
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/placeholder2.jpg"
-pagePostDate: "2023年2月23日"
-studentName: "学生姓名"
-projectName: "学生项目名称 2"
+pagePostDate: "2022年12月15日"
+studentName: "Andy Ma"
+projectName: "Food Truck 商业教育平台"
 projectCategory: "App Development"
-projectDesc: "项目的简要描述。"
+projectDesc: "11年级学员Andy独立开发创业项目"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "标题"
