@@ -5,7 +5,7 @@ layout: student_project_detail
 coverImage: "/img/updated/projects/IMG_2347.JPG"
 pagePostDate: "2023年3月3日"
 studentName: "Ryder Wei"
-projectName: "Chess Pro 3D"
+projectName: "顶尖私校录取"
 projectCategory: "App Development"
 projectDesc: "背景提升象棋训练项目"
 
