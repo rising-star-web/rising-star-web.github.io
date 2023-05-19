@@ -4,8 +4,8 @@ layout: student_project_detail
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/placeholder1.jpg"
 pagePostDate: "23 Feb 2023"
-studentName: "Student Name"
-projectName: "Student Project Name 1"
+studentName: "Ryder Wei"
+projectName: "Chess Pro 3D"
 projectCategory: "App Development"
 projectDesc: "A brief description of the project."
 
