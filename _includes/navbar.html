@@ -103,7 +103,7 @@
                 <li class="nav-item"><a class="dropdown-item" 
                   href=
                   "
-                  {% if page.name == "index" %}
+                  {% if page.name == "index.html" %}
                     {{ site.data.nav[page.locale].nav.switchLangURL }}{{page.name | replace:'index.html','' }}
                   {% elsif page.collection.size %}
                     {{ site.data.nav[page.locale].nav.switchLangURL }}{{page.collection}}/{{page.slug}}
