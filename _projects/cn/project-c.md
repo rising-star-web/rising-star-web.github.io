@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/placeholder4.jpg"
+coverImage: "/img/updated/projects/IMG_1737.jpg"
 pagePostDate: "2023年5月18日"
 studentName: "Jenny"
 projectName: "UC伯克利录取项目"
@@ -16,7 +16,7 @@ bodyText2: "高中生JEnny的成就不仅仅是她个人的荣誉，也是青年
 URLDescription: "链接到项目"
 projectURL: "https://www.google.com/"
 awardsDesc: "该项目帮助Jenny成功被UC伯克利录取"
-contentImage: "/img/updated/projects/placeholder4.jpg"
-contentImage2: "/img/updated/projects/placeholder4.jpg"
+contentImage: "/img/updated/projects/IMG_1738.jpg"
+contentImage2: "/img/updated/projects/IMG_1740.jpg"
 
 ---
