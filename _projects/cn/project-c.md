@@ -3,11 +3,11 @@ layout: student_project_detail
 
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/placeholder4.jpg"
-pagePostDate: "2023年2月23日"
-studentName: "学生姓名"
-projectName: "学生项目名称 3"
+pagePostDate: "2023年5月18日"
+studentName: "Jenny"
+projectName: "UC伯克利录取项目"
 projectCategory: "App Development"
-projectDesc: "项目的简要描述。"
+projectDesc: "高中生将兴趣和爱好结合研发化妆品APP。"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "标题"
