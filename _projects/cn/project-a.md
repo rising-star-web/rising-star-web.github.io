@@ -2,21 +2,21 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/minecraft.jpg"
-pagePostDate: "2023年5月10日"
-studentName: "Minyu Chen"
-projectName: "Test project"
+coverImage: "/img/updated/projects/IMG_2347.JPG"
+pagePostDate: "2023年3月3日"
+studentName: "Ryder Wei"
+projectName: "顶尖私校录取项目"
 projectCategory: "App Development"
-projectDesc: "背景提升项目"
+projectDesc: "背景提升象棋训练项目"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "标题"
-bodyText1: "亲爱的朋友们，本人因某些原因，正在为网站添加一些假文字。Lorem Ipsum文本是印刷及排版业所常用的假文字，也被称为乱数假文。"
-bodyText2: "亲爱的朋友们，本人因某些原因，正在为网站添加一些假文字。Lorem Ipsum文本是印刷及排版业所常用的假文字，也被称为乱数假文。"
+headerTitle: "八年级学员Ryder开发手机游戏Chess Pro 3D"
+bodyText1: "Ryder从小就喜欢国际象棋，因此想开发一个国际象棋游戏。他遇到的最大困难是将操纵杆移入手机游戏中，但最终通过简单的代码解决了这个问题。"
+bodyText2: "学员Ryder Wei是一位才华横溢的初中生,从小喜欢象棋的他一直想有一款属于自己的象棋训练游戏。今年八年级的Ryder将兴趣与爱好结合开发出象棋训练项目，让训练象棋变得方便和简单，目前该项目已经在App Store发布。Ryder也成功拿到了多所顶尖私校的录取"
 URLDescription: "链接到项目"
-projectURL: "https://youtu.be/rQxr1XRZ2FY"
-awardsDesc: "该项目参加了全国比赛。该学生在来自不同州的100名学生中获得了总冠军。"
-contentImage: "/img/updated/projects/minecraft.jpg"
-contentImage2: "/img/updated/projects/minecraft.jpg"
+projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
+awardsDesc: "该项目成功帮助学员申请到顶尖私校Sage Hill高中和Cate高中,并且在苹果APP发布"
+contentImage: "/img/updated/projects/IMG_2349.JPG"
+contentImage2: "/img/updated/projects/IMG_2348.JPG"
 
 ---
