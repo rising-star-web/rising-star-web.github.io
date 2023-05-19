@@ -98,7 +98,19 @@
                 <li class="nav-item"><a class="dropdown-item" href="#">
                   {{ site.data.nav[page.locale].name }}
                 </a></li>
-                <li class="nav-item"><a class="dropdown-item" href=" {{ site.data.nav[page.locale].nav.switchLangURL }}{{page.name}} ">      
+                
+                <!-- Language Change Liquid Code 1.Index 2.Collection Items 3.General Pages -->
+                <li class="nav-item"><a class="dropdown-item" 
+                  href=
+                  "
+                  {% if page.name == "index" %}
+                    {{ site.data.nav[page.locale].nav.switchLangURL }}{{page.name | replace:'index.html','' }}
+                  {% elsif page.collection.size %}
+                    {{ site.data.nav[page.locale].nav.switchLangURL }}{{page.collection}}/{{page.slug}}
+                  {% else %}
+                    {{ site.data.nav[page.locale].nav.switchLangURL }}{{page.name | replace:'.html','' }}
+                  {% endif %}
+                  ">      
                   {{ site.data.nav[page.locale].nav.switchLang }}
                 </a></li>
               </ul>
