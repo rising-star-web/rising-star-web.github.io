@@ -2,20 +2,20 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/placeholder4.jpg"
-pagePostDate: "23 Feb 2023"
-studentName: "Student Name"
-projectName: "Student Project Name 3"
+coverImage: "/img/updated/projects/IMG_1737.jpg"
+pagePostDate: "18 May 2023"
+studentName: "Jenny"
+projectName: "UC Berkeley admitted project"
 projectCategory: "App Development"
-projectDesc: "A brief description of the project."
+projectDesc: "Development of cosmetics APP"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "Header Title Here"
-bodyText1: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget porta ac consectetur vestibulum."
-bodyText2: "Donec sed odio dui consectetur adipiscing elit. Etiam adipiscing tincidunt elit, eu convallis felis suscipit ut. Phasellus rhoncus tincidunt auctor. Nullam eu sagittis mauris. Donec non dolor ac elit aliquam tincidunt at at sapien. Aenean tortor libero, condimentum ac laoreet vitae, varius tempor nisi. Duis non arcu vel lectus urna mollis ornare vel eu leo."
+headerTitle: "UC Berkeley Rising Star"
+bodyText1: "With her talent and her love for technology, Jenny managed to create a makeup app. The APP not only collects information on the types, functions and prices of cosmetics, but also recommends products suitable for users through intelligent algorithms, making it an essential tool for cosmetics buyers. She has successfully combined technology with life so that cosmetic consumers can better understand and choose products that suit them while enjoying the convenience brought by technology. Her innovative consciousness and practical spirit have shown us the infinite possibilities of young people in the new era."
+bodyText2: "The achievement of high school student JEnny is not only her personal honor, but also a proof of the continuous development of the younger generation in the field of technological innovation. Jenny's experience tells us that as long as you have dreams and perseverance, you can create your own world and bring positive impact to society. We are full of expectations for Jenny's future, and believe that she will continue to show her talent and charm in her study and life at UC Berkeley, and become an outstanding representative of the new generation of technological innovators."
 URLDescription: "Link to Project"
 projectURL: "https://www.google.com/"
-awardsDesc: "This project was submitted to the National Competition. The student won 1st Place Overall winning amongst 100 students from different states."
-contentImage: "/img/updated/projects/placeholder4.jpg"
-contentImage2: "/img/updated/projects/placeholder4.jpg"
+awardsDesc: "The project helped Jenny get admitted to UC Berkeley"
+contentImage: "/img/updated/projects/IMG_1738.jpg"
+contentImage2: "/img/updated/projects/IMG_1740.jpg"
 ---
