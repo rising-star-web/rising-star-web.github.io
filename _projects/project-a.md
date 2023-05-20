@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/placeholder1.jpg"
+coverImage: "/img/updated/projects/IMG_2347.JPG"
 pagePostDate: "23 Feb 2023"
 studentName: "Ryder Wei"
 projectName: "Chess Pro 3D"
@@ -16,6 +16,6 @@ bodyText2: "Ryder Wei is a talented junior high school student who has loved che
 URLDescription: "Link to Project"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
 awardsDesc: "Ryder has also successfully received admission from many top private schools，Cate and Sage Hill"
-contentImage: "/img/updated/projects/placeholder1.jpg"
-contentImage2: "/img/updated/projects/placeholder1.jpg"
+contentImage: "/img/updated/projects/IMG_2349.JPG"
+contentImage2: "/img/updated/projects/IMG_2348.JPG"
 ---
