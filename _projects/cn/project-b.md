@@ -5,7 +5,7 @@ layout: student_project_detail
 coverImage: "/img/updated/projects/IMG_2424.jpg"
 pagePostDate: "2022年12月15日"
 studentName: "Andy Ma"
-projectName: "Food Truck 商业教育平台"
+projectName: "开发商业教育平台"
 projectCategory: "App Development"
 projectDesc: "11年级学员Andy独立开发创业项目"
 
