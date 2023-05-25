@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/minecraft.jpg"
+coverImage: "/img/updated/projects/IMG_0663 3.JPG"
 pagePostDate: "2023年3月18日"
 studentName: "Richard"
 projectName: "UCLA录取案例"
