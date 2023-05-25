@@ -17,6 +17,6 @@ URLDescription: "链接到项目"
 projectURL: "https://youtu.be/rQxr1XRZ2FY"
 awardsDesc: "该项目帮助Richard从16万申请UCLA的同学中拿到录取"
 contentImage: "/img/updated/projects/IMG_0664 3.JPG"
-contentImage2: "/img/updated/projects/minecraft.jpg"
+contentImage2: "/img/updated/projects/IMG_0667 3.JPG"
 
 ---
