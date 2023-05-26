@@ -2,21 +2,21 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/IMG_2347.JPG"
-pagePostDate: "2023年3月3日"
-studentName: "Ryder Wei"
-projectName: "顶尖私校录取项目"
+coverImage: "/img/updated/projects/IMG_2617.JPG"
+pagePostDate: "2023年2月15日"
+studentName: "Shania"
+projectName: "南加大12万奖录取"
 projectCategory: "App Development"
 projectDesc: "背景提升象棋训练项目"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "八年级学员Ryder开发手机游戏Chess Pro 3D"
-bodyText1: "Ryder从小就喜欢国际象棋，因此想开发一个国际象棋游戏。他遇到的最大困难是将操纵杆移入手机游戏中，但最终通过简单的代码解决了这个问题。"
-bodyText2: "学员Ryder Wei是一位才华横溢的初中生,从小喜欢象棋的他一直想有一款属于自己的象棋训练游戏。今年八年级的Ryder将兴趣与爱好结合开发出象棋训练项目，让训练象棋变得方便和简单，目前该项目已经在App Store发布。Ryder也成功拿到了多所顶尖私校的录取"
+headerTitle: "钢琴乐谱管理系统"
+bodyText1: "Shania以其卓越的技术天赋和无数的计算机项目赢得了南加大的录取和12万美元的奖学金。她展示的项目多种多样，包括开发3D模拟游戏，创建钢琴乐谱管理系统，以及设计血糖AI预测模型。这些令人印象深刻的成就使她在南加大的录取中毫无悬念，我们期待着Shania未来的更多好消息。"
+bodyText2: "Shania的计算机科学技术和创新思维令人赞叹。她通过一系列项目，从3D模拟游戏到AI预测模型，展示了自己的才华和深厚的专业知识。这使她在南加大的申请中胜出，获得了丰厚的奖学金。我们期待她未来会在科技领域取得更大的成就，为世界带来更多的变革。"
 URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
-awardsDesc: "该项目成功帮助学员申请到顶尖私校Sage Hill高中和Cate高中,并且在苹果APP发布"
-contentImage: "/img/updated/projects/IMG_2349.JPG"
-contentImage2: "/img/updated/projects/IMG_2348.JPG"
+awardsDesc: "学员被南加州大学赠12万奖学金录取"
+contentImage: "/img/updated/projects/IMG_2618.JPG"
+contentImage2: "/img/updated/projects/IMG_2619.JPG"
 
 ---
