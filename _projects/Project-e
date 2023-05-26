@@ -2,19 +2,19 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/IMG_0663 3.JPG"
-pagePostDate: "18 March 2023"
-studentName: "Richard"
-projectName: "UCLA Admitted Project "
+coverImage: "/img/updated/projects/IMG_2617.JPG"
+pagePostDate: "15 Feb 2023"
+studentName: "Shania"
+projectName: "USC Admitted Project "
 projectCategory: "App Development"
 projectDesc: "Development of cosmetics APP"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "Catus Reading"
-bodyText1: "Richard successfully developed a unique language and reading AI called Cactus Reading. This innovative program aims to help people improve their reading and comprehension skills, reducing complex texts into easy-to-understand information. Because of his outstanding achievement, Richard stood out from the 160,000 students who applied to UCLA and was admitted successfully."
-bodyText2: "Richard's talent and innovative spirit are impressive. His Cactus Reading project showcases his technical prowess and passion for improving human reading comprehension. Such outstanding intelligence makes him unique in the highly competitive UCLA application. We look forward to seeing how he will use his intelligence and enthusiasm to bring more influence to the world in the future."
+headerTitle: "Music Management"
+bodyText1: "Shania won USC admission and a $120,000 scholarship for her outstanding technical talent and numerous computer programs. The projects she presented were as diverse as developing a 3D simulation game, creating a piano score management system, and designing an AI predictive model for blood sugar. These impressive achievements make her admission to USC no doubt, we look forward to more good news for Shania in the future"
+bodyText2: "Shania's computer science skills and innovative thinking are amazing. She has demonstrated her talent and deep expertise through a range of projects ranging from 3D simulation games to AI predictive models. This allowed her to win the USC application and get a generous scholarship. We expect her to make greater achievements in the field of science and technology in the future and bring more changes to the world"
 projectURL: "https://www.google.com/"
-awardsDesc: "The project helped Richard get admitted to UCLA "
-contentImage: "/img/updated/projects/IMG_0664 3.JPG"
-contentImage2: "/img/updated/projects/IMG_0667 3.JPG"
+awardsDesc: "The project helped Shania get admitted to USC "
+contentImage: "/img/updated/projects/IMG_2618.JPG"
+contentImage2: "/img/updated/projects/IMG_2619.JPG"
 ---
