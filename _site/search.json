@@ -1,79 +1,16 @@
 [
   
   {
-    "title"    : "Robotics and Programming with LEGO Mindstorms",
-    "url"      : "/courses/lego-robotics",
-    "category" : "Robotics | Programming",
-    "description" : ""
-  },
-  
-  {
-    "title"    : "Minecraft MakeCode: Introuction to AI",
-    "url"      : "/courses/minecraft-ai",
-    "category" : "Game Programming",
-    "description" : ""
-  },
-  
-  {
-    "title"    : "Minecraft Programming with MakeCode",
+    "title"    : "Minecraft Makecode",
     "url"      : "/courses/minecraft-makecode",
-    "category" : "Game Development",
+    "category" : "",
     "description" : ""
   },
   
   {
-    "title"    : "[WIP] Minecraft World Building and Instruction Programming",
-    "url"      : "/courses/minecraft",
-    "category" : "Game Development",
-    "description" : ""
-  },
-  
-  {
-    "title"    : "Innovative Programming with MIT Scratch",
-    "url"      : "/courses/scratch-1",
-    "category" : "Block Programming",
-    "description" : ""
-  },
-  
-  {
-    "title"    : "Innovative Programming with MIT Scratch 2",
-    "url"      : "/courses/scratch-2",
-    "category" : "Block Programming",
-    "description" : ""
-  },
-  
-  {
-    "title"    : "Roblox: Preliminary Artificial Intelligence and Lua Practice",
-    "url"      : "/courses/roblox-ai",
-    "category" : "Game Programming",
-    "description" : ""
-  },
-  
-  {
-    "title"    : "Game Development with Roblox Studio",
-    "url"      : "/courses/roblox-game-dev-beg",
-    "category" : "Game Development",
-    "description" : ""
-  },
-  
-  {
-    "title"    : "[WIP] Advanced Python Programming: Introduction to Algorithms",
-    "url"      : "/courses/python-adv-wip",
-    "category" : "Advanced Programming",
-    "description" : ""
-  },
-  
-  {
-    "title"    : "[WIP] AP CS Boot Camp: Intro to Java Programming",
-    "url"      : "/courses/ap-cs-boot-camp-wip",
-    "category" : "AP CS Prep Courses",
-    "description" : ""
-  },
-  
-  {
-    "title"    : "Robotics and Programming with LEGO Mindstorms",
-    "url"      : "/cn/courses/lego-robotics",
-    "category" : "Robotics | Programming",
+    "title"    : "Minecraft Makecode",
+    "url"      : "/cn/courses/minecraft-makecode",
+    "category" : "",
     "description" : ""
   }
   

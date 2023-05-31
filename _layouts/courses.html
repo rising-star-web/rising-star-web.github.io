@@ -134,20 +134,20 @@ layout: default
       <div id="isotopeContainer" data-length="9" class="row g-6 row-cols-1 row-cols-md-2 row-cols-lg-3 isotope">
           {% for course in courses %}
 
-          {%- assign level = course.aboutLevel -%}
+          {%- assign level = course.gradeLevel -%}
           {%- case level -%}
-              {%- when "L1 Block Coding" -%}
+              {%- when site.data.courses[page.locale].courses.L1Filter -%}
                   {%- assign levelFilter = 'Level1' %}
-              {%- when "L2 Introduction to Programming" -%}
+              {%- when site.data.courses[page.locale].courses.L2Filter -%}
                   {%- assign levelFilter = 'Level2' %}
-              {%- when "L3 Intermediate Programming" -%}
+              {%- when site.data.courses[page.locale].courses.L3Filter -%}
                   {%- assign levelFilter = 'Level3' %}
-              {%- when "L4 Applied Programming" -%}
+              {%- when site.data.courses[page.locale].courses.L4Filter -%}
                   {%- assign levelFilter = 'Level4' %}
-              {%- when "L5 Advanced Programming" -%}
+              {%- when site.data.courses[page.locale].courses.L5Filter -%}
                   {%- assign levelFilter = 'Level5' %}
               {%- else -%}
-                  {%- assign levelFilter = course.aboutLevel -%}
+                  {%- assign levelFilter = course.gradeLevel -%}
           {%- endcase -%}
 
           <div class="isotopeItem {{levelFilter}}">

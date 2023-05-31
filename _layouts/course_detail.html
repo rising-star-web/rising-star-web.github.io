@@ -24,7 +24,7 @@ layout: default
         <ol class="breadcrumb mb-0">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
           <li class="breadcrumb-item"><a href="/courses">Courses</a></li>
-          <li class="breadcrumb-item active text-muted" aria-current="page">{{page.title}}</li>
+          <li class="breadcrumb-item active text-muted" aria-current="page">{{page.name}}</li>
         </ol>
       </nav>
       <!-- /nav -->
@@ -33,20 +33,17 @@ layout: default
       <div class="row gx-md-8 gx-xl-12 gy-8 d-flex flex-row justify-content-between">
         <div class="col-lg-6">
           <div class="post-header mb-5">
-            <h2 class="post-title display-5">{{page.title}}</h2>
+            <h2 class="post-title display-5">{{page.name}}</h2>
           </div>
 
           <hr class="my-5" />
           <!-- /.post-header -->
 
-          <p class="mb-5">{{page.topIntroText}}</p>
+          <p class="mb-5">{{page.description}}</p>
             <div class="row">
               <div class="col-lg-9 d-flex flex-row pt-2">
                 <div class="me-2">
-                  <a href="/free-trial" class="btn btn-primary btn-icon btn-icon-start rounded-pill"> Try a Free Class</a>
-                </div>
-                <div>
-                  <a href="/contact-us" class="btn btn-navy rounded-pill">Contact Us</a>
+                  <a href="/free-trial" class="btn btn-primary btn-icon btn-icon-start rounded-pill">{{ site.data.courses[page.locale].coursedetail.trialButton }}</a>
                 </div>
               </div>
               <!-- /column -->
@@ -57,62 +54,14 @@ layout: default
 
         <!-- Carousel -->
         <div class="col-lg-6">
-          <div class="swiper-container swiper-thumbs-container" data-margin="10" data-dots="false" data-nav="true" data-thumbs="true">
-            <div class="swiper bg-navy rounded">
-              <div class="swiper-wrapper align-items-center">
-                {% if page.promotion1.enabled == "true" %}
-                <div class="swiper-slide">
-                  <figure class="rounded"><img class="rounded-0 courseImage2" src="/{{page.promotion1.imageUrl}}" alt="" /><a class="item-link" href="/{{page.promotion1.imageUrl}}" data-glightbox data-gallery="product-group"><i class="uil uil-focus-add"></i></a></figure>
-                </div>
-                {% endif %}
-                <!--/.swiper-slide -->
-                {% if page.promotion2.enabled == "true" %}
-                <div class="swiper-slide">
-                  <figure class="rounded"><img class="rounded-0 courseImage2" src="/{{page.promotion2.imageUrl}}" alt="" /><a class="item-link" href="/{{page.promotion2.imageUrl}}" data-glightbox data-gallery="product-group"><i class="uil uil-focus-add"></i></a></figure>
-                </div>
-                {% endif %}
-                <!--/.swiper-slide -->
-                {% if page.promotion3.enabled == "true" %}
-                <div class="swiper-slide">
-                  <figure class="rounded"><img class="rounded-0 courseImage2" src="/{{page.promotion3.imageUrl}}" alt="" /><a class="item-link" href="/{{page.promotion3.imageUrl}}" data-glightbox data-gallery="product-group"><i class="uil uil-focus-add"></i></a></figure>
-                </div>
-                {% endif %}
-                <!--/.swiper-slide -->
-                {% if page.promotion4.enabled == "true" %}
-                <div class="swiper-slide">
-                  <figure class="rounded"><img class="rounded-0 courseImage2" src="/{{page.promotion4.imageUrl}}" alt="" /><a class="item-link" href="/{{page.promotion4.imageUrl}}" data-glightbox data-gallery="product-group"><i class="uil uil-focus-add"></i></a></figure>
-                </div>
-                {% endif %}
-                <!--/.swiper-slide -->
-                {% if page.promotion5.enabled == "true" %}
-                <div class="swiper-slide">
-                  <figure class="rounded"><img class="rounded-0 courseImage2" src="/{{page.promotion5.imageUrl}}" alt="" /><a class="item-link" href="/{{page.promotion5.imageUrl}}" data-glightbox data-gallery="product-group"><i class="uil uil-focus-add"></i></a></figure>
-                </div>           
-                {% endif %}
-                <!--/.swiper-slide -->
-              </div>
-              <!--/.swiper-wrapper -->
-            </div>
-            <!-- /.swiper -->
-
-            <div class="swiper swiper-thumbs">
-              <div class="swiper-wrapper">
-                {% if page.promotion1.enabled == "true" %}
-                <div class="swiper-slide"><img src="/{{page.promotion1.imageUrl}}" class="rounded " alt="" /></div> {% endif %} 
-                {% if page.promotion2.enabled == "true" %}
-                <div class="swiper-slide"><img src="/{{page.promotion2.imageUrl}}" class="rounded" alt="" /></div> {% endif %} 
-                {% if page.promotion3.enabled == "true" %}
-                <div class="swiper-slide"><img src="/{{page.promotion3.imageUrl}}" class="rounded" alt="" /></div> {% endif %} 
-                {% if page.promotion4.enabled == "true" %}
-                <div class="swiper-slide"><img src="/{{page.promotion4.imageUrl}}" class="rounded" alt="" /></div> {% endif %} 
-                {% if page.promotion5.enabled == "true" %}
-                <div class="swiper-slide"><img src="/{{page.promotion5.imageUrl}}" class="rounded" alt="" /></div> {% endif %} 
-              </div>
-              <!--/.swiper-wrapper -->
-            </div>
-            <!-- /.swiper -->
+          <div class="player" id="player">
+            <iframe
+              src="{{page.videoIntro}}"
+              allowfullscreen
+              allowtransparency
+              allow="autoplay"
+            ></iframe>
           </div>
-          <!-- /.swiper-container -->
         </div>
         <!-- /column -->
         
@@ -126,23 +75,27 @@ layout: default
             <div class="col-xl-10 mx-auto">
               <div class="row align-items-center counter-wrapper gy-6 text-center">
                 <div class="col-md-3">
-                  <h4 class="fs-md">{{page.aboutCategory}}</h4>
-                  <p>{{page.aboutCategoryTitle}}</p>
+                  <i class="uil uil-lightbulb fs-25 text-primary"></i>
+                  <h4 class="fs-md">{{ site.data.courses[page.locale].coursedetail.levelTag }}</h4>
+                  <p>{{page.gradeLevel}}</p>
                 </div>
                 <!--/column -->
                 <div class="col-md-3">
-                  <h4 class="fs-md">{{page.aboutGradeLevel}}</h4>
-                  <p>{{page.aboutGradeLevelTitle}}</p>
+                  <i class="uil uil-books fs-25 text-primary"></i>
+                  <h4 class="fs-md">{{ site.data.courses[page.locale].coursedetail.pathwayTag }}</h4>
+                  <p>{{page.pathway}}</p>
                 </div>
                 <!--/column -->
                 <div class="col-md-3">
-                  <h4 class="fs-md">{{page.aboutSkillLevel}}</h4>
-                  <p>{{page.aboutSkillLevelTitle}}</p>
+                  <i class="uil uil-tachometer-fast-alt fs-25 text-primary"></i>
+                  <h4 class="fs-md">{{ site.data.courses[page.locale].coursedetail.skillTag }}</h4>
+                  <p>{{page.skillLevel}}</p>
                 </div>
                 <!--/column -->
                 <div class="col-md-3">
-                  <h4 class="fs-md">{{page.aboutRatio}}</h4>
-                  <p>{{page.aboutRatioTitle}}</p>
+                  <i class="uil uil-users-alt fs-25 text-primary"></i>
+                  <h4 class="fs-md">{{ site.data.courses[page.locale].coursedetail.classSizeTag }}</h4>
+                  <p>{{ site.data.courses[page.locale].coursedetail.classSize}}</p>
                 </div>
                 <!--/column -->
               </div>
@@ -151,206 +104,71 @@ layout: default
             <!-- /column -->
           </div>
           <!-- /.row -->
-          <!-- <div class="d-flex fs-sm justify-content-around flex-column flex-md-row bg-green">
-            <div class="d-flex justify-content-center bg-blue">
-              <img src="/assets/img/icons/solid/3d.svg" class="svg-inject icon-svg icon-svg-xs solid-duo text-navy-sky h-5" alt="" />
-              <p><b>Category:</b>&nbsp</p>
-              <p>{{page.aboutCategory}}</p>
-            </div>
-            <div class="d-flex flex-row bg-red">
-              <img src="/assets/img/icons/solid/bulb.svg" class="svg-inject icon-svg icon-svg-xs solid-duo text-navy-sky h-5" alt="" />
-              <p><b>Grade Level:</b>&nbsp</p>
-              <p class="text-uppercase">{{page.aboutGradeLevel}}</p>
-            </div>
-            <div class="d-flex flex-row bg-yellow">
-              <img src="/assets/img/icons/solid/bar-chart.svg" class="svg-inject icon-svg icon-svg-xs solid-duo text-navy-sky h-5" alt="" />
-              <p><b>Skill Level:</b>&nbsp</p>
-              <p>{{page.aboutSkillLevel}}</p>
-            </div>
-            <div class="d-flex flex-row bg-pink">
-              <img src="/assets/img/icons/solid/audience.svg" class="svg-inject icon-svg icon-svg-xs solid-duo text-navy-sky h-5" alt="" />
-              <p><b>Class Ratio:</b>&nbsp</p>
-              <p>{{page.aboutRatio}}</p>
-            </div>
-          </div> -->
         </div>
       </section>
 
       <!-- Breakdown/Pricing -->
-      <div class="container mt-12">
+      <div class="mt-12">
+        <div class="row d-flex gx-12 justify-content-between"> 
 
-        <div class="row">
-          <!-- Tabs -->
-          <div class="container col-xl-8">
-            <!-- Tabs -->
-            <ul class="d-flex nav nav-tabs nav-tabs-basic">
-              <li class="nav-item me-2 me-md-0"> 
-                <a class="nav-link active" data-bs-toggle="tab" href="#tab1-1">Course Details</a>
-              </li>
-              <li class="nav-item me-2 me-md-0"> 
-                <a class="nav-link" data-bs-toggle="tab" href="#tab1-2">Course Objectives</a> 
-              </li>
-              <li class="nav-item me-2 me-md-0"> 
-                <a class="nav-link" data-bs-toggle="tab" href="#tab1-3">Teaching Methods</a> 
-              </li>
-            </ul>
-            <!-- /.nav-tabs -->
-          
-            <!-- Tab Content -->
-            <div class="tab-content mt-0 mt-md-5 pe-md-10 pe-0">
-
-              <!-- Tab 1 -->
-              <div class="tab-pane fade show active" id="tab1-1">
-                <p>{{page.aboutText}}</p>
-                <div class="accordion accordion-wrapper" id="accordionExample">
-                  <div class="card plain accordion-item">
-                    <div class="card-header" id="headingOne">
-                      <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"> {{page.promotion1.title}} </button>
-                    </div>
-                    <!--/.card-header -->
-                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                      <div class="card-body">
-                        <p>{{page.promotion1.text}}</p>
-                      </div>
-                      <!--/.card-body -->
-                    </div>
-                    <!--/.accordion-collapse -->
-                  </div>
-                  <!--/.accordion-item -->
-                  <div class="card plain accordion-item">
-                    <div class="card-header" id="headingTwo">
-                      <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> {{page.promotion2.title}} </button>
-                    </div>
-                    <!--/.card-header -->
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                      <div class="card-body">
-                        <p>{{page.promotion2.text}}</p>
-                      </div>
-                      <!--/.card-body -->
-                    </div>
-                    <!--/.accordion-collapse -->
-                  </div>
-                  <!--/.accordion-item -->
-                  <div class="card plain accordion-item">
-                    <div class="card-header" id="headingThree">
-                      <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> {{page.promotion3.title}}  </button>
-                    </div>
-                    <!--/.card-header -->
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                      <div class="card-body">
-                        <p>{{page.promotion3.text}}</p>
-                      </div>
-                      <!--/.card-body -->
-                    </div>
-                    <!--/.accordion-collapse -->
-                  </div>
-                  <!--/.accordion-item -->
-                  <div class="card plain accordion-item">
-                    <div class="card-header" id="headingFour">
-                      <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"> {{page.promotion4.title}}  </button>
-                    </div>
-                    <!--/.card-header -->
-                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                      <div class="card-body">
-                        <p> {{page.promotion4.text}}</p>
-                      </div>
-                      <!--/.card-body -->
-                    </div>
-                    <!--/.accordion-collapse -->
-                  </div>
-                  <!--/.accordion-item -->
-                  <div class="card plain accordion-item">
-                    <div class="card-header" id="headingFive">
-                      <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"> {{page.promotion5.title}}  </button>
-                    </div>
-                    <!--/.card-header -->
-                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                      <div class="card-body">
-                        <p> {{page.promotion5.text}}</p>
-                      </div>
-                      <!--/.card-body -->
-                    </div>
-                    <!--/.accordion-collapse -->
-                  </div>
-                  <!--/.accordion-item -->
-                </div>
-                <!--/.accordion -->
-              </div>
-              <!--/.tab-pane -->
-
-              <!-- Tab 2-->
-              <div class="tab-pane fade" id="tab1-2">
-                <p>  What you should expect to gain from this course:</p>
+          <div class="col-xl-6 mb-14">
+            <div class="card shadow-lg">
+              <div class="card-body">
+                <h3 class="display-4 mb-4">{{ site.data.courses[page.locale].coursedetail.learningObjectives}}</h3>
                 <ul class="icon-list bullet-bg bullet-soft-primary">
-                  {% for goal in page.goals %}
-                    <li>
-                      <span>
-                        <i class="uil uil-megaphone"></i>
-                      </span>
-                      {{goal.text}}
-                    </li>
+                  {% for objective in page.learningGoals %}
+                  <li>
+                    <span><i class="uil uil-check"></i></span>
+                    <span>{{objective}}</span>
+                  </li>
                   {% endfor %}
                 </ul>
               </div>
-              <!--/.tab-pane -->
-
-              <!-- Tab 3 -->
-              <div class="tab-pane fade" id="tab1-3">      
-                <p> We employ effective and innovative instructional methodologies that foster success and optimize learning outcomes. </p>
-
-                <ul class="icon-list bullet-bg bullet-soft-primary">
-                  {% for highlight in page.highlights %}
-                    <li> 
-                      <span>
-                        <i class="uil uil-compass"></i>
-                      </span>
-                      {{highlight.text}}
-                    </li>
-                  {% endfor %}
-                </ul>
-          
-              </div>
-              <!--/.tab-pane -->
             </div>
-            <!-- /.tab-content -->
           </div>
-          <!--/.container -->
 
-          <!-- Pricing / Schedule -->
-          <div class="container col-xl-4 mt-8 mt-md-4 mt-lg-0">
-            <div class="card bg-soft-primary mx-n3">
-              <div class="card-body">
-                <h3>Starting at</h3>
-                <div class="price price-show my-n2">
-                  <span class="fs-40 text-primary">${{page.priceschedule.monthlyPrice}}</span>
-                  <span class="fs-20"> / month</span>
+            <!-- Pricing / Schedule -->
+            <div class="col-xl-6 mb-14">
+              <div class="card bg-soft-primary">
+                <div class="card-body">
+                  <h3>{{ site.data.courses[page.locale].coursedetail.startingAt}}</h3>
+                  <div class="price price-show my-n2">
+                    <span class="fs-40 text-primary">$240</span>
+                    <span class="fs-20"> {{ site.data.courses[page.locale].coursedetail.perMonth}}</span>
+                  </div>
+                  <div class="fs-14 mt-2 mb-n2">{{ site.data.courses[page.locale].coursedetail.classes}}</div>
+
                 </div>
-                <div class="fs-14 mt-2 mb-n2">{{page.priceschedule.classPerMonth}} classes / month &nbsp x &nbsp ${{page.priceschedule.classPrice}} / class</div>
 
+                <div class="card-footer">
+                  <ul class="post-meta text-dark d-flex mb-0">
+                    <li class="post-desc1 fs-16"><i class="uil uil-gift text-primary"></i><span>{{ site.data.courses[page.locale].coursedetail.trial}}</span></li>
+                    <li class="post-desc2 fs-16"><i class="uil uil-calendar-slash text-primary"></i><span>{{ site.data.courses[page.locale].coursedetail.cancel}}</span></li>
+                  </ul>
+                  <!-- /.post-meta -->
+                </div>
+                <!-- /.card-footer -->
               </div>
 
-              <div class="card-footer">
-                <ul class="post-meta text-dark d-flex mb-0">
-                  <li class="post-desc1 fs-16"><i class="uil uil-gift"></i><span>First Class Is Free!</span></li>
-                  <li class="post-desc2 fs-16"><i class="uil uil-calendar-slash"></i><span>Cancel Anytime</span></li>
-                </ul>
-                <!-- /.post-meta -->
+              <div class="card image-wrapper bg-image bg-full mt-4" data-image-src="/img/updated/schedule-bg.png">
+                <div class="card-body">
+                  <h3>{{ site.data.courses[page.locale].coursedetail.scheduleTitle}}</h3>
+                  <p>{{ site.data.courses[page.locale].coursedetail.scheduleDescription}} </p>
+                </div>
               </div>
-              <!-- /.card-footer -->
+
             </div>
+            <!-- Pricing / Schedule -->
 
-            <div class="card image-wrapper bg-image bg-full mt-4 mx-n3" data-image-src="/img/updated/schedule-bg.png">
-              <div class="card-body">
-                <h3>Scheduling</h3>
-                <p>{{page.priceschedule.scheduleDescription}}</p>
-              </div>
-            </div>
-
-          </div>
-          <!--/.container -->
-
+          {% for promotion in page.promotions %}
+          {% assign value = forloop.index | modulo:2 %}
+            {% if value == 1 %}
+              {% include promotion.html %}
+            {% else %}
+              {% include promotion2.html %}
+            {% endif %}
+          {% endfor %}
         </div>
-
       </div>
 
     </div>
@@ -367,8 +185,8 @@ layout: default
               <img src="/assets/img/icons/solid/discussion.svg" class="svg-inject icon-svg icon-svg-sm solid-mono text-primary me-4" alt="" />
             </div>
             <div>
-              <h3 class="mb-1">Designed for Students</h3>
-              <p class="mb-0">Our courses are designed based on the interests of our students.</p>
+              <h3 class="mb-1">{{ site.data.courses[page.locale].coursedetail.projectTitle}} </h3>
+              <p class="mb-0">{{ site.data.courses[page.locale].coursedetail.projectDescription}} </p>
             </div>
           </div>
         </div>
@@ -379,8 +197,8 @@ layout: default
               <img src="/assets/img/icons/solid/employees.svg" class="svg-inject icon-svg icon-svg-sm solid-mono text-primary me-4" alt="" />
             </div>
             <div>
-              <h3 class="mb-1">Experienced Instructors</h3>
-              <p class="mb-0">Gain skills and knowledge from professional teachers.</p>
+              <h3 class="mb-1">{{ site.data.courses[page.locale].coursedetail.instructorTitle}} </h3>
+              <p class="mb-0">{{ site.data.courses[page.locale].coursedetail.instructorDescription}} </p>
             </div>
           </div>
         </div>
@@ -391,8 +209,8 @@ layout: default
               <img src="/assets/img/icons/solid/rocket.svg" class="svg-inject icon-svg icon-svg-sm solid-mono text-primary me-4" alt="" />
             </div>
             <div>
-              <h3 class="mb-1">Cultivate Creativity</h3>
-              <p class="mb-0">Beyond learning programming, cultivate creativity and problem solving abilities.</p>
+              <h3 class="mb-1">{{ site.data.courses[page.locale].coursedetail.competitionTitle}} </h3>
+              <p class="mb-0">{{ site.data.courses[page.locale].coursedetail.competitionDescription}} </p>
             </div>
           </div>
         </div>
@@ -407,7 +225,7 @@ layout: default
   <!-- Suggested Courses -->
   <section class="wrapper bg-light wrapper-border">
     <div class="container py-12">
-      <h3 class="h1 mb-8 text-center">Other Courses You Might Also Like</h3>
+      <h3 class="h1 mb-8 text-center">{{ site.data.courses[page.locale].coursedetail.otherCourses}}</h3>
 
       <div class="swiper-container" data-margin="30" data-nav="true" data-dots="true" data-items-xl="3" data-items-md="2" data-items-xs="1">
         <div class="swiper">
@@ -433,13 +251,10 @@ layout: default
     <div class="container py-12 py-md-12">
       <div class="row text-center">
         <div class="col-md-10 mx-auto">
-          <h3 class="display-4 text-navy">Start learning with Coding Mind!</h3>
-          <p class="lead mb-7 mb-md-7">Turn your child’s passion into a professional skill.</p>
+          <h3 class="display-4 text-navy">{{ site.data.courses[page.locale].coursedetail.trialTitle}}</h3>
+          <p class="lead mb-7 mb-md-7">{{ site.data.courses[page.locale].coursedetail.trialSubTitle}}</p>
           <a href="/free-trial" class="btn btn-primary rounded-pill me-2 me-md-2 mb-4 mb-md-0">
-            Book Your First Free Class
-          </a>
-          <a href="/contact-us" class="btn btn-navy rounded-pill me-2 me-md-2 mb-4 mb-md-0">
-            Contact Us
+            {{ site.data.courses[page.locale].coursedetail.trialButton2}}
           </a>
         </div>
       </div>

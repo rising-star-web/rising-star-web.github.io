@@ -1,4 +1,4 @@
-{%- assign category = course.aboutLevel-%}
+{%- assign category = course.gradeLevel-%}
 {%- case category -%}
   {%- when "L1 Block Based Programming" -%}
     {%- assign categoryStyle = 'rosered-gradient' %}
@@ -14,11 +14,30 @@
     {%- assign categoryStyle = 'bg-primary' -%}
 {%- endcase -%}
 
+{%- if page.locale == "cn" -%}
+  {%- assign category2 = course.gradeLevel-%}
+  {%- case category2 -%}
+    {%- when "L1图形化编程" -%}
+      {%- assign categoryStyle = 'rosered-gradient' %}
+    {%- when "L2简洁代码编程" -%}
+      {%- assign categoryStyle = 'orange-gradient' %}
+    {%- when "L3代码编程" -%}
+      {%- assign categoryStyle = 'forestgreen-gradient' %}
+    {%- when "L4应用主题编程" -%}
+      {%- assign categoryStyle = 'navyblue-gradient' %}
+    {%- when "L5竞技编程" -%}
+      {%- assign categoryStyle = 'amethyst-gradient' %}
+    {%- else -%}
+      {%- assign categoryStyle = 'bg-primary' -%}
+  {%- endcase -%}
+{%- endif -%}
+
+
 <article class="">
     <figure class="overlay overlay-1 hover-scale rounded mb-4">
       <a href="{{course.url}}"> 
-        <img src="/{{course.bgImageUrl}}" alt="" class="courseImage"/> 
-        <span class="courseLabel {{categoryStyle}}">{{course.aboutLevel}}</span>
+        <img src="/{{course.promotions[0].imageURL}}" alt="" class="courseImage"/> 
+        <span class="courseLabel {{categoryStyle}}">{{course.gradeLevel}}</span>
       </a>
       <figcaption>
         <h5 class="from-top mb-0">Learn More</h5>
@@ -29,14 +48,14 @@
         <div class="post-footer">
           <!-- /.post-meta -->
           <ul class="post-meta">
-            <li class="post-lvl"><i class="uil uil-graduation-cap"></i><span>Grade </span><span class="text-uppercase">{{course.aboutGradeLevel}}</span></li>
-            <li class="post-comments mb-2"><i class="uil uil-file-alt fs-15"></i><span class="">{{course.aboutCategory}}</span>
+            <li class="post-lvl"><i class="uil uil-graduation-cap"></i><span></span><span class="">{{course.skillLevel}}</span></li>
+            <li class="post-comments mb-2"><i class="uil uil-file-alt fs-15"></i><span class="">{{course.pathway}}</span>
             </li>
           </ul>
         </div>
         <!-- /.post-title -->
         <div class="post-header">
-          <h2 class="post-title h3 mb-3 "><a class="link-dark fs-20" href="{{course.url}}">{{course.title}}</a></h2>
+          <h2 class="post-title h3 mb-3 "><a class="link-dark fs-20" href="{{course.url}}">{{course.name}}</a></h2>
         </div>
     </div>
   </article>
