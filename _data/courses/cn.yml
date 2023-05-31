@@ -19,6 +19,7 @@ courses:
   L3Filter: "L3代码编程"
   L4Filter: "L4应用主题编程"
   L5Filter: "L5竞技编程"
+  learnMore: "了解更多"
 
 filter:
   filterButton: "筛选：路径级别"
