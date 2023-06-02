@@ -1,5 +1,9 @@
 ---
 layout: course_detail
+courseId: "CS101"
+courseIconURL: "TBD - not used yet"
+price: "TBD - not used yet"
+extra: "TBD - a backup field not used yet"
 name: "Minecraft Programming with MakeCode"
 coverImageURL: "img/updated/L1/makecode-bg.jpg"
 gradeLevel: "L1 Block Based Programming"
