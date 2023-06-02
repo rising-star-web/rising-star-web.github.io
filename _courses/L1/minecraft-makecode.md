@@ -1,16 +1,13 @@
 ---
 layout: course_detail
 name: "Minecraft Programming with MakeCode"
-shortName: "MakeCode 1"
-title1: "Minecraft Programming"
-title2: "with MakeCode"
+coverImageURL: "img/updated/L1/makecode-bg.jpg"
 gradeLevel: "L1 Block Based Programming"
 pathway: "Game Development"
 skillLevel: "Beginner - Intermediate"
 shortDescription : "Learn the latest kids-coding platform - MakeCode from Microsoft, and become a Minecraft game developer to change the game in your dream way."
-description: "Are you ready to embark on an exciting coding journey? Look no further than Microsoft's MakeCode, the platform designed to ignite a passion for programming among young minds. Our interactive and engaging courses empower students, particularly those in elementary and middle school, to unleash their creativity and take control of their very own Minecraft games. With MakeCode, the world of Minecraft becomes a canvas for your imagination to come to life. Join us and become a Minecraft game developer, transforming your ideas into captivating realities. Embrace the endless possibilities and start your coding adventure today!"
+description: "Are you ready to embark on an exciting coding journey? Look no further than Microsoft's MakeCode, the platform designed to ignite a passion for programming among young minds. Our interactive and engaging courses empower students, particularly those in elementary and middle school, to unleash their creativity and take control of their very own Minecraft games."
 videoIntro : "https://www.youtube.com/embed/bV9rn-BN8FM"
-completion: "Minecraft MakeCode programming has been an incredibly popular and engaging topic among our students at the L1 level. Throughout the course, our talented students have become true masters of Microsoft's MakeCode development platform. They have embraced the world of graphical programming, unlocking their creativity to develop and craft amazing games within Minecraft. It's truly remarkable to witness the unique functionalities and innovative ideas they have brought to life through their coding skills. Their dedication and hard work have paid off as they proudly shared and published their own captivating game programs. We applaud their achievements and look forward to seeing the incredible paths they will continue to forge in the world of programming and game development. Keep up the fantastic work!"
 learningGoals:
 - "Understand and master Microsoft's MakeCode development platform"
 - "Familiarize yourself with various instructions and control logic in graphical programming"

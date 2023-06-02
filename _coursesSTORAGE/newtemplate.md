@@ -1,16 +1,13 @@
 ---
 layout: course_detail
 name: ""
-shortName: ""
-title1: ""
-title2: ""
+coverImageURL: ""
 gradeLevel: ""
 pathway: ""
 skillLevel: ""
 shortDescription : ""
 description: ""
 videoIntro : ""
-completion: ""
 learningGoals:
 - ""
 - ""

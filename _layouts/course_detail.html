@@ -1,20 +1,6 @@
 ---
 layout: default
 ---
-  <!--
-  <section class="wrapper bg-gray pt-6 ">
-    <div class="container pb-4 pb-md-5">
-      <nav class="d-inline-block" aria-label="breadcrumb">
-        <ol class="breadcrumb mb-0">
-          <li class="breadcrumb-item"><a href="/">Home</a></li>
-          <li class="breadcrumb-item"><a href="/courses">Courses</a></li>
-          <li class="breadcrumb-item active text-muted" aria-current="page">{{page.title}}</li>
-        </ol>
-      </nav>
-    </div>
-  </section>
-  -->
-
   <!-- Course Overview -->
   <section class="wrapper bg-light wrapper-border">  
     <div class="container pt-8 pt-md-12 pb-12 pb-md-12">
@@ -22,8 +8,8 @@ layout: default
       <!-- Breadcrumb Nav Bar -->
       <nav class="d-inline-block pb-4 pb-md-5" aria-label="breadcrumb">
         <ol class="breadcrumb mb-0">
-          <li class="breadcrumb-item"><a href="/">Home</a></li>
-          <li class="breadcrumb-item"><a href="/courses">Courses</a></li>
+          <li class="breadcrumb-item"><a href="{{ site.data.nav[page.locale].nav.URL }}">{{ site.data.courses[page.locale].coursedetail.homePage }}</a></li>
+          <li class="breadcrumb-item"><a href="{{ site.data.nav[page.locale].nav.URL }}courses">{{ site.data.courses[page.locale].coursedetail.coursesPage }}</a></li>
           <li class="breadcrumb-item active text-muted" aria-current="page">{{page.name}}</li>
         </ol>
       </nav>
@@ -43,7 +29,7 @@ layout: default
             <div class="row">
               <div class="col-lg-9 d-flex flex-row pt-2">
                 <div class="me-2">
-                  <a href="/free-trial" class="btn btn-primary btn-icon btn-icon-start rounded-pill">{{ site.data.courses[page.locale].coursedetail.trialButton }}</a>
+                  <a href="{{ site.data.nav[page.locale].nav.URL }}free-trial" class="btn btn-primary btn-icon btn-icon-start rounded-pill">{{ site.data.courses[page.locale].coursedetail.trialButton }}</a>
                 </div>
               </div>
               <!-- /column -->
@@ -111,11 +97,21 @@ layout: default
       <div class="mt-12">
         <div class="row d-flex gx-12 justify-content-between"> 
 
+          {% for promotion in page.promotions %}
+          {% assign value = forloop.index | modulo:2 %}
+            {% if value == 1 %}
+              {% include promotion.html %}
+            {% else %}
+              {% include promotion2.html %}
+            {% endif %}
+          {% endfor %}
+
           <div class="col-xl-6 mb-14">
             <div class="card shadow-lg">
               <div class="card-body">
                 <h3 class="display-4 mb-4">{{ site.data.courses[page.locale].coursedetail.learningObjectives}}</h3>
                 <ul class="icon-list bullet-bg bullet-soft-primary">
+                  <p>{{page.shortDescription}}</p>
                   {% for objective in page.learningGoals %}
                   <li>
                     <span><i class="uil uil-check"></i></span>
@@ -160,14 +156,6 @@ layout: default
             </div>
             <!-- Pricing / Schedule -->
 
-          {% for promotion in page.promotions %}
-          {% assign value = forloop.index | modulo:2 %}
-            {% if value == 1 %}
-              {% include promotion.html %}
-            {% else %}
-              {% include promotion2.html %}
-            {% endif %}
-          {% endfor %}
         </div>
       </div>
 
@@ -230,9 +218,9 @@ layout: default
       <div class="swiper-container" data-margin="30" data-nav="true" data-dots="true" data-items-xl="3" data-items-md="2" data-items-xs="1">
         <div class="swiper">
           <div class="swiper-wrapper pb-10">
-            {%- assign courses = site.courses | where:'aboutLevel', page.aboutLevel %}
+            {%- assign courses = site.courses | where:'gradeLevel', page.gradeLevel %}
             {% for course in courses %}
-            {% unless course.title == page.title %}
+            {% unless course.name == page.name %}
             <div class="swiper-slide">
               {% include course.html %}
             </div>
@@ -253,7 +241,7 @@ layout: default
         <div class="col-md-10 mx-auto">
           <h3 class="display-4 text-navy">{{ site.data.courses[page.locale].coursedetail.trialTitle}}</h3>
           <p class="lead mb-7 mb-md-7">{{ site.data.courses[page.locale].coursedetail.trialSubTitle}}</p>
-          <a href="/free-trial" class="btn btn-primary rounded-pill me-2 me-md-2 mb-4 mb-md-0">
+          <a href="{{ site.data.nav[page.locale].nav.URL }}/free-trial" class="btn btn-primary rounded-pill me-2 me-md-2 mb-4 mb-md-0">
             {{ site.data.courses[page.locale].coursedetail.trialButton2}}
           </a>
         </div>

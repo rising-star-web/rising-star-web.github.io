@@ -1,16 +1,13 @@
 ---
 layout: course_detail
 name: "Minecraft创新编程与实践:用最流行的游戏学编程"
-shortName: "Minecraft创新编程与实践1"
-title1: "Minecraft创新编程与实践"
-title2: "用最流行的游戏学编程"
+coverImageURL: "img/updated/L1/makecode-bg.jpg"
 gradeLevel: "L1图形化编程"
 pathway: "游戏开发"
 skillLevel: "初学者 - 中级"
 shortDescription : "使用图形化的编程语言来控制制作自己的Minecraft游戏,把自己对Minecraft的游戏设想变为现实"
 description: "微软公司为了普及和引导青少年学习编程的热情，推出MakeCode的趣味编程平台，使中小学生使用图形化的编程语言来控制制作自己的Minecraft游戏。使用MakeCode，你可以把自己对Minecraft的游戏设想变为现实，成为一名Minecraft游戏的小开发者。"
 videoIntro : "https://www.youtube.com/embed/gMITkiEASpk"
-completion: "Minecraft MakeCode编程是L1级别最受大家欢迎的题目，通过课程的学习，同学已经掌握了微软的MakeCode开发平台，熟悉如何通过图形化编程，进行Minecraft游戏的开发与制作。同学通过编程动手实现了自己在Minecraft游戏里面所没有的功能和想法，并且发布了自己的游戏程序。"
 learningGoals:
 - "了解并掌握微软的MakeCode开发平台"
 - "熟悉掌握图形化编程的各种指令与控制逻辑"
