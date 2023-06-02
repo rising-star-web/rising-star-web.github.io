@@ -1,5 +1,9 @@
 ---
 layout: course_detail
+courseId: "CS101"
+courseIconURL: "TBD - not used yet"
+price: "TBD - not used yet"
+extra: "TBD - a backup field not used yet"
 name: "Minecraft创新编程与实践:用最流行的游戏学编程"
 coverImageURL: "img/updated/L1/makecode-bg.jpg"
 gradeLevel: "L1图形化编程"
