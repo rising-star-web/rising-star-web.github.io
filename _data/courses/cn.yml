@@ -14,11 +14,11 @@ courses:
   L5title: "L5: 竞技编程"
   L5description: " 带领学生对各种信息学算法竞赛、科学竞赛、高中AP计算机考试、以及背景提升项目的专项准备与冲刺 "
   results: "结果："
-  L1Filter: "L1图形化编程"
-  L2Filter: "L2简洁代码编程"
-  L3Filter: "L3代码编程"
-  L4Filter: "L4应用主题编程"
-  L5Filter: "L5竞技编程"
+  L1Filter: "L1 图形化编程"
+  L2Filter: "L2 简洁代码编程"
+  L3Filter: "L3 代码编程"
+  L4Filter: "L4 应用主题编程"
+  L5Filter: "L5 竞技编程"
   learnMore: "了解更多"
 
 filter:
