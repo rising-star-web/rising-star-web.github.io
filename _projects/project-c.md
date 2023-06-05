@@ -2,10 +2,10 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/IMG_1737.jpg"
+coverImage: "/img/updated/projects/IMG_2859.jpg"
 pagePostDate: "18 May 2023"
 studentName: "Jenny"
-projectName: "UC Berkeley admitted project"
+projectName: "UC Berkeley Rising Star"
 projectCategory: "App Development"
 projectDesc: "Development of cosmetics APP"
 
