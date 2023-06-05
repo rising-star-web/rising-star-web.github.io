@@ -2,10 +2,10 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/IMG_2617.JPG"
+coverImage: "/img/updated/projects/33dd555748c1dffd65152834527c04c7.JPG"
 pagePostDate: "15 Feb 2023"
 studentName: "Shania"
-projectName: "USC Admitted Project "
+projectName: "USC And Music Management "
 projectCategory: "App Development"
 projectDesc: "Development of cosmetics APP"
 
