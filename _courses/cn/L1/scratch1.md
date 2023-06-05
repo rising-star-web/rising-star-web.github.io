@@ -30,8 +30,8 @@ promotions:
   imageURL: "img/updated/L1/scratch-3.png"
 - title: "发布和分享你自己的程序"
   text: "把自己的程序发布在MIT的Scratch程序分享平台，和来自世界各地的小程序员交流你的作品，让大家为你的创意点赞！"
-  imageURL: ""
+  imageURL: "img/updated/L1/scratch2-3.png"
 - title: "学习的不仅仅是编程"
   text: "计算器编程能力是现今社会文化的组成要素，因为学习编程的同时培养的是逻辑思维、计算能力、创新和想象力。孩子们在编程解决问题的同时，同时得到的是信心！"
-  imageURL: ""
+  imageURL: "img/updated/L1/scratch2-2.png"
 ---
