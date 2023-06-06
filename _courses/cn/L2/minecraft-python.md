@@ -1,8 +1,8 @@
 ---
 layout: course_detail
 courseId: "CS299"
-courseIconURL: ""TBD - not used yet"
-price: ""TBD - not used yet"
+courseIconURL: "TBD - not used yet"
+price: "TBD - not used yet"
 extra: "TBD - a backup field not used yet"
 name: "Minecraft MakeCode Python编程课程"
 coverImageURL: "img/my/minecraftbasic/bg.jpg"
