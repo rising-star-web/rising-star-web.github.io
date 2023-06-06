@@ -5,9 +5,9 @@ layout: student_project_detail
 coverImage: "/img/updated/projects/IMG_0663 3.JPG"
 pagePostDate: "2023年3月18日"
 studentName: "Richard"
-projectName: "UCLA录取案例"
+projectName: "语言文字与阅读AI结合"
 projectCategory: "App Development"
-projectDesc: "背景提升项目"
+projectDesc: "从16万申请UCLA的同学中脱颖而出"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "Catus Reading"
