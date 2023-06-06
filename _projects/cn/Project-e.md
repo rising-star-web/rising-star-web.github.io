@@ -5,9 +5,9 @@ layout: student_project_detail
 coverImage: "/img/updated/projects/IMG_2617.JPG"
 pagePostDate: "2023年2月15日"
 studentName: "Shania"
-projectName: "南加大12万奖录取"
+projectName: "钢琴乐谱管理系统发布"
 projectCategory: "App Development"
-projectDesc: "背景提升象棋训练项目"
+projectDesc: "该项目成功获得12万奖学金南加大录取"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "钢琴乐谱管理系统"
