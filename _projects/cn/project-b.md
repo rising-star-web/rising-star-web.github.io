@@ -5,9 +5,9 @@ layout: student_project_detail
 coverImage: "/img/updated/projects/IMG_2424.jpg"
 pagePostDate: "2022年12月15日"
 studentName: "Andy Ma"
-projectName: "开发商业教育平台"
+projectName: "商业教育平台创业项目"
 projectCategory: "App Development"
-projectDesc: "11年级学员Andy独立开发创业项目"
+projectDesc: "编程助力夺得纽约大学Stern录取"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "食品卡车模拟器"
