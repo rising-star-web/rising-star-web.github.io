@@ -20,7 +20,7 @@ learningGoals:
 - "能够独立设计和开发Python相关的课程项目"
 promotions:
 - title: "进入真正的编程世界"
-  text: "学习到最基本的编程概念和技巧，并锻炼数学思维。"
+  text: "学习到最基本的编程概念和技巧，并锻炼逻辑思维能力，培养编程思维。"
   imageURL: "img/updated/L3/python-adv-1.png"
 - title: "小程序做大事情"
   text: "Python作为初学编程的首选主要得益于它的简洁但是强大的功能。学生往往可以通过简短的代码来迅速实现复杂的功能。"
