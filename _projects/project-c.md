@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/IMG_2859.jpg"
+coverImage: "/img/updated/projects/截屏2023-06-06 上午1.08.30.png"
 pagePostDate: "18 May 2023"
 studentName: "Jenny"
 projectName: "UC Berkeley Rising Star"
