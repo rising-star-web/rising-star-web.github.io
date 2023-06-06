@@ -5,9 +5,9 @@ layout: student_project_detail
 coverImage: "/img/updated/projects/IMG_1737.jpg"
 pagePostDate: "2023年5月18日"
 studentName: "Jenny"
-projectName: "UC伯克利录取项目"
+projectName: "化妆品APP成功发布"
 projectCategory: "App Development"
-projectDesc: "高中生研发化妆品APP。"
+projectDesc: "高中生自主创业被UC伯克利录取"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "创新才俊：UC伯克利新星"
