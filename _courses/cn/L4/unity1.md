@@ -14,7 +14,7 @@ description: "Unity3D游戏开发是L4应用主题编程级别游戏动画方向
 videoIntro : "https://www.youtube.com/embed/f9ucoZB4a2g"
 learningGoals:
 - "掌握Unity3D游戏制作基础"
-- "学习C#编程初步以及在游戏中的应用技巧"
+- "学习C#编程在游戏中的初步应用技巧"
 - "培养游戏算法和3D制作的基本功"
 - "学习VR和AR的开发过程"
 - "为编程项目竞赛提早做准备"
