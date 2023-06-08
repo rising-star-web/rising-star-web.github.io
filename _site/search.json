@@ -8,8 +8,43 @@
   },
   
   {
+    "title"    : "Lego Mindstorm",
+    "url"      : "/cn/courses/lego-mindstorm",
+    "category" : "",
+    "description" : ""
+  },
+  
+  {
     "title"    : "Minecraft Makecode",
     "url"      : "/cn/courses/minecraft-makecode",
+    "category" : "",
+    "description" : ""
+  },
+  
+  {
+    "title"    : "Scratch1",
+    "url"      : "/cn/courses/scratch1",
+    "category" : "",
+    "description" : ""
+  },
+  
+  {
+    "title"    : "Scratch2",
+    "url"      : "/cn/courses/scratch2",
+    "category" : "",
+    "description" : ""
+  },
+  
+  {
+    "title"    : "Microbit",
+    "url"      : "/cn/courses/microbit",
+    "category" : "",
+    "description" : ""
+  },
+  
+  {
+    "title"    : "Minecraft Python",
+    "url"      : "/cn/courses/minecraft-python",
     "category" : "",
     "description" : ""
   },
@@ -24,6 +59,83 @@
   {
     "title"    : "Roblox2",
     "url"      : "/cn/courses/roblox2",
+    "category" : "",
+    "description" : ""
+  },
+  
+  {
+    "title"    : "Python1",
+    "url"      : "/cn/courses/python1",
+    "category" : "",
+    "description" : ""
+  },
+  
+  {
+    "title"    : "Python2",
+    "url"      : "/cn/courses/python2",
+    "category" : "",
+    "description" : ""
+  },
+  
+  {
+    "title"    : "Python3",
+    "url"      : "/cn/courses/python3",
+    "category" : "",
+    "description" : ""
+  },
+  
+  {
+    "title"    : "Roblox3",
+    "url"      : "/cn/courses/roblox3",
+    "category" : "",
+    "description" : ""
+  },
+  
+  {
+    "title"    : "Ai1",
+    "url"      : "/cn/courses/ai1",
+    "category" : "",
+    "description" : ""
+  },
+  
+  {
+    "title"    : "Ai2",
+    "url"      : "/cn/courses/ai2",
+    "category" : "",
+    "description" : ""
+  },
+  
+  {
+    "title"    : "App Thunkable",
+    "url"      : "/cn/courses/app-thunkable",
+    "category" : "",
+    "description" : ""
+  },
+  
+  {
+    "title"    : "Unity1",
+    "url"      : "/cn/courses/unity1",
+    "category" : "",
+    "description" : ""
+  },
+  
+  {
+    "title"    : "Unity2",
+    "url"      : "/cn/courses/unity2",
+    "category" : "",
+    "description" : ""
+  },
+  
+  {
+    "title"    : "Unity3",
+    "url"      : "/cn/courses/unity3",
+    "category" : "",
+    "description" : ""
+  },
+  
+  {
+    "title"    : "Unity4",
+    "url"      : "/cn/courses/unity4",
     "category" : "",
     "description" : ""
   }

@@ -35,36 +35,28 @@ var iso = $container.data('isotope');
 
 //Ascending order
 var itemsPerPage = $('#isotopeContainer').data("length") ;
-var currentTotalItems = 0;
-var currentNumberPages = 1;
-var currentPage = 1;
 var currentFilter = '*';
 var filterAttribute = 'data-filter';
 var filterValue = "";
-var pageAttribute = 'data-page';
-var pagerClass = 'isotope-pager';
 
 // update items based on current filters    
 function changeFilter(selector) { $container.isotope({ filter: selector }); }
 
 //grab all checked filters and goto page on fresh isotope output
-function goToPage(n) {
-    currentPage = n;
+function loadItems() {
     var inclusives = [];
     var output = [];
 
-    var wordPage = currentPage.toString();
         // for each box checked, add its value and push to array
         $checkboxes.each(function (i, elem) {
             if (elem.checked) {
-                inclusives.push('.'+elem.value+'.'+wordPage);
+                inclusives.push('.'+elem.value);
                 output.push(elem.value.replace(/([a-z])(\d)/gi, '$1 $2'))
             }
         });
 
         // smash all values back together for 'and' filtering
         filterValue = inclusives.length ? inclusives.join(',') : '*';
-        filterValue += '.' +wordPage;
         outputValue = output.length ? output.join(', ') : '';
 
     $output.text( outputValue );
@@ -89,9 +81,6 @@ function updateFilterCount() {
         else{
             itemText = " course";
         }
-        if(currentNumberPages>1){
-            itemText += (" out of " + currentTotalItems);
-        }
             iso.filteredItems.length ? 
         $containerLength.text( iso.filteredItems.length + itemText)   
         :
@@ -104,9 +93,6 @@ function updateFilterCount() {
         else{
             itemText = iso.filteredItems.length + "门课程";
         }
-        if(currentNumberPages>1){
-            itemText = (currentTotalItems+"门课程"+ "中的") + itemText;
-        }
         if(iso.filteredItems.length > 1){
             $containerLength.text( itemText )   
         }
@@ -117,84 +103,6 @@ function updateFilterCount() {
 
   }
 
-function setPagination() {
-
-    var SettingsPagesOnItems = function(){
-        var itemsLength = $container.children(itemSelector).length;
-        var pages = Math.ceil(itemsLength / itemsPerPage);
-        var item = 1;
-        var page = 1;
-        var inclusives = [];
-            // for each box checked, add its value and push to array
-            $checkboxes.each(function (i, elem) {
-                if (elem.checked) {
-                    inclusives.push('.'+elem.value);
-                }
-            });
-            // smash all values back together for 'and' filtering
-            filterValue = inclusives.length ? inclusives.join(',') : '*';
-            // find each child element with current filter values
-
-            currentTotalItems = $container.children(filterValue).length;
-            $container.children(filterValue).each(function(){
-                // increment page if a new one is needed
-                if( item > itemsPerPage ) {
-                    page++;
-                    item = 1;
-                }
-                // add page number to element as a class
-                wordPage = page.toString();
-                
-                var classes = $(this).attr('class').split(' ');
-                var lastClass = classes[classes.length-1];
-
-                // last class shorter than 4 will be a page number, if so, grab and replace
-                if(lastClass.length < 4){
-                    $(this).removeClass();
-                    classes.pop();
-                    classes.push(wordPage);
-                    classes = classes.join(' ');
-                    $(this).addClass(classes);
-                } else {
-                    // if there was no page number, add it
-                    $(this).addClass(wordPage); 
-                }
-                item++;
-            });
-        currentNumberPages = page;
-    }();
-
-    // create page number navigation
-    var CreatePagers = function() {
-
-        var $isotopePager = ( $('.'+pagerClass).length == 0 ) ? $('<div class="'+pagerClass+'"></div>') : $('.'+pagerClass);
-
-        $isotopePager.html('');
-        if(currentNumberPages > 1){
-            $('#pagination-demo').twbsPagination('destroy');
-            $('#pagination-demo').twbsPagination({
-            totalPages: currentNumberPages,
-            visiblePages: 5,
-            first: "",
-            last: "",
-            prev: '<span aria-hidden="true"><i class="uil uil-arrow-left"></i></span>',
-            next: '<span aria-hidden="true"><i class="uil uil-arrow-right"></i></span>',
-            onPageClick: function (event, page) {
-            //fetch content and render here
-            goToPage(page);
-            updateFilterCount();
-        }
-    });
-
-        }
-        else{
-            $('#pagination-demo').twbsPagination('destroy');
-
-        }
-    }();
-}
-
-    
 // remove checks from all boxes and refilter
 function clearAll(){
     $checkboxes.each(function (i, elem) {
@@ -203,20 +111,17 @@ function clearAll(){
         }
     });
     currentFilter = '*';
-    setPagination();
-    goToPage(1);
+    loadItems();
 }
 
-setPagination();
-goToPage(1);
+loadItems()
 updateFilterCount();
 
 //event handlers
 $checkboxes.change(function(){
     var filter = $(this).attr(filterAttribute);
     currentFilter = filter;
-    setPagination();
-    goToPage(1);
+    loadItems()
     updateFilterCount();
 });
 
