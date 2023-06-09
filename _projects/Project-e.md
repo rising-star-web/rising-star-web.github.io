@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/33dd555748c1dffd65152834527c04c7.JPG"
+coverImage: "/img/updated/projects/截屏2023-06-09 下午2.09.19.png"
 pagePostDate: "15 Feb 2023"
 studentName: "Shania"
 projectName: "USC And Music Management "
