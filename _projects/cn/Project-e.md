@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/IMG_2617.JPG"
+coverImage: "/img/updated/projects/截屏2023-06-09 下午2.09.19.png"
 pagePostDate: "2023年2月15日"
 studentName: "Shania"
 projectName: "钢琴乐谱管理系统发布"
