@@ -29,7 +29,7 @@ promotions:
   text: "为之后更深入地学习Java的进阶和面向对象编程打下扎实的基础。"
   imageURL: "img/my/coding-workspace.jpg"
 - title: "为高中AP CS课程打好基础"
-  text: ""Java的学习是学习高中AP CS A课程的很好的入门基础，可以帮助学生轻易的过度到AP CS A要求的Java编程语言。"
+  text: "Java的学习是学习高中AP CS A课程的很好的入门基础，可以帮助学生轻易的过度到AP CS A要求的Java编程语言。"
   imageURL: "img/my/data-science.jpg"
 - title: "做下一个成功的小创业者"
   text: "实际动手能力远远重要过理论知识。每一个课程的设计都是为了让学生学习到如何把自己对于项目的一个想法通过努力变为现实。年轻的小小创业家就是在这样的挑战中产生的。"
