@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/IMG_0663 3.JPG"
+coverImage: "/img/updated/projects/截屏2023-06-12 上午11.54.00.png"
 pagePostDate: "2023年3月18日"
 studentName: "Richard"
 projectName: "语言文字与阅读AI结合"
