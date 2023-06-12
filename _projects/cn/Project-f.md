@@ -5,9 +5,9 @@ layout: student_project_detail
 coverImage: "/img/updated/projects/IMG_2621.JPG"
 pagePostDate: "2023年2月17日"
 studentName: "Rose"
-projectName: "佐治亚理工录取案例"
+projectName: "Ai聊天程序帮助情绪"
 projectCategory: "App Development"
-projectDesc: "背景提升项目"
+projectDesc: "Rose获得专业排名第六的佐治亚理工Offer"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "MoodLink"
