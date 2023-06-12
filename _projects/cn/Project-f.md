@@ -7,7 +7,7 @@ pagePostDate: "2023年2月17日"
 studentName: "Rose"
 projectName: "Ai聊天程序帮助情绪"
 projectCategory: "App Development"
-projectDesc: "Rose获得专业排名第六的佐治亚理工Offer"
+projectDesc: "获得专业排名第六的佐治亚理工Offer"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "MoodLink"
