@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/IMG_1338 2.JPG"
+coverImage: "/img/updated/projects/截屏2023-06-12 下午12.15.51.png"
 pagePostDate: "2023年1月18日"
 studentName: "IVY"
 projectName: "手机强制管理时间工具"
