@@ -29,7 +29,7 @@ promotions:
   text: "为USACO以及相关信息学竞赛做初步的准备，打好基础。"
   imageURL: "img/my/ioi/bg.jpeg"
 - title: "从编程到算法思维上的转换"
-  text: "掌握主要的8个基础的算法知识点，同时完成USACO 1的50题题库。"
+  text: "完成USACO Bronze过去5年的真题题库。"
   imageURL: "img/my/cewcr/bg-big.jpg"
 - title: "在竞赛中锻炼和提高"
   text: "组织学生参加USACO信息学竞赛，在一次次的竞争中学习、总结和提高自我。"
