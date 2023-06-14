@@ -6,9 +6,9 @@ price: "TBD - not used yet"
 extra: "TBD - a backup field not used yet"
 name: "计算机信息与网络安全"
 coverImageURL: "img/my/security/bg-sm.jpeg"
-gradeLevel: ""L4 应用主题编程
+gradeLevel: "L4 应用主题编程"
 pathway: "网络安全"
-skillLevel: ""中级
+skillLevel: "中级"
 shortDescription : "学习信息安全与网络攻防，做黑客的终结者"
 description: "信息与数据安全至关重要，了解黑客的常见入侵原理，实验各种网络攻防技术，才能做一个合格的网络安全守护者。"
 videoIntro : ""
