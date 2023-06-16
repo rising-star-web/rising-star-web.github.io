@@ -3,11 +3,11 @@ layout: student_project_detail
 
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/截屏2023-06-16 下午3.04.21.png"
-pagePostDate: "2023年2月15日"
-studentName: "EVA"
-projectName: "计算机和生物环境完美结合"
+pagePostDate: "2022年3月3日"
+studentName: "Jason"
+projectName: "体育和数据分析结合"
 projectCategory: "App Development"
-projectDesc: "获得Johns Hopkins大学的录取"
+projectDesc: "获得UIUC的录取"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "计算机和生物环境完美结合"
