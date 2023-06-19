@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/IMG_2424.jpg"
+coverImage: "/img/updated/projects/截屏2023-06-19 上午2.25.44.png"
 pagePostDate: "2022年12月15日"
 studentName: "Andy Ma"
 projectName: "商业教育平台创业项目"
