@@ -18,7 +18,6 @@ Contains markdown files that affect the content of the website, similar to JSON
 | _courses | https://codingmind.com/courses |
 | _projects | https://codingmind.com/projects |
 | _reviews | Reviews throughout the website|
-|_showcases | HomePage: "The Pursuit of Excellence" |
 
 #### Includes: 
 _includes contains reusable components reused throughout the website
