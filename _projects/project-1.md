@@ -5,7 +5,7 @@ layout: student_project_detail
 coverImage: "/img/updated/projects/截屏2023-06-12 下午12.15.51.png"
 pagePostDate: "17 Feb 2023"
 studentName: "Rose"
-projectName: "GEOGIA Admitted Project "
+projectName: "Time Management "
 projectCategory: "App Development"
 projectDesc: "Development of cosmetics APP"
 
