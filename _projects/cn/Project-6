@@ -4,10 +4,10 @@ layout: student_project_detail
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/截屏2023-06-16 下午3.04.21.png"
 pagePostDate: "2022年3月3日"
-studentName: "Jason"
-projectName: "体育和数据分析结合"
+studentName: "Stier"
+projectName: "音乐和算法结合"
 projectCategory: "App Development"
-projectDesc: "获得UIUC的录取"
+projectDesc: "获得哥大的录取"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "体育和数据分析结合"
