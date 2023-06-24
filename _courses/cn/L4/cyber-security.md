@@ -11,7 +11,7 @@ pathway: "网络安全"
 skillLevel: "中级"
 shortDescription : "学习信息安全与网络攻防，做黑客的终结者"
 description: "信息与数据安全至关重要，了解黑客的常见入侵原理，实验各种网络攻防技术，才能做一个合格的网络安全守护者。"
-videoIntro : ""
+videoIntro : "https://www.youtube.com/embed/ZFVvjgJX1wk"
 learningGoals:
 - "掌握计算机安全基础和理论"
 - "使用编程进行网络安全技术的实现"
