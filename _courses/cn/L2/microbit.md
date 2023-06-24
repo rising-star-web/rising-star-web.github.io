@@ -31,8 +31,8 @@ promotions:
   imageURL: "img/my/microbit/microbit3.jpg"
 - title: "发布和分享你自己的世界作品"
   text: "把自己的世界发布在互联网上，和来自世界各地的小程序员交流你的作品，让大家为你的创意点赞！说不定你就是下一个“网路红人”。"
-  imageURL: "img/my/microbit/bg-4.jpg"
+  imageURL: "img/my/microbit/bg-3.jpg"
 - title: "学习的不仅仅是编程"
   text: "计算器编程能力是现今社会文化的组成要素，因为学习编程的同时培养的是逻辑思维、计算能力、创新和想象力。孩子们在编程解决问题的同时，同时得到的是信心！"
-  imageURL: "img/my/microbit/bg-3.jpg"
+  imageURL: "img/my/microbit/bg-4.jpg"
 ---
