@@ -28,7 +28,7 @@ promotions:
   imageURL: "img/my/ceml/ai.jpg"
 - title: "做人工智能的高级应用"
   text: "图像识别、语音输入、自然语言处理，日常见到的AI的前沿应用你也可以动手自己制作和尝试。"
-  imageURL: "img/my/python-learn-5.jpg"
+  imageURL: "img/updated/L5/ai2.jpg"
 - title: "Python服务器程序开发"
   text: "把自己的程序连接到互联网，可以让它发挥更大的作用。"
   imageURL: "img/my/python-learn-2.jpg"
