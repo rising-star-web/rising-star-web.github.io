@@ -18,10 +18,11 @@ learningGoals:
 - "制作属于自己的APP，做一个真正的小创业者"
 - "培养学生的科学创新能力和创业思想"
 - "为之后的高级编程学习打下坚实的基础"
+- "在Google和Apple商店发布自己的项目"
 promotions:
 - title: "有趣并且功能强大的编程平台"
   text: "MIT手机App发明家程序是由MIT开发的一款面向中学生学习计算机编程的教育平台。它把手机APP编程所需的复杂代码转换成为图形化的编程单元，使学生可以很快的开发出功能强大的自己的APP。"
-  imageURL: "img/my/mobile-learn-1.jpg"
+  imageURL: "img/my/mobile-learn-0.png"
 - title: "学习编写多种多样的APP"
   text: "学生会学习和开发APP不同题目和内容: 手机用户界面，APP交互与动画，手机互联网的编程，手机服务器通讯，微信聊天程序，手机传感器的应用，手机游戏的开发。"
   imageURL: "img/my/mobile-learn-5.jpg"
