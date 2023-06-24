@@ -30,7 +30,7 @@ promotions:
   imageURL: "img/my/unity3d/unity5.jpg"
 - title: "参加编程项目竞赛"
   text: "Unity3D做出的项目可以成为很好的编程项目竞赛的作品。充分发挥自己的创造力，动手解决生活中的问题，做实验，发布结果，为大学申请打下基础。"
-  imageURL: "img/my/unity3d/unity3.jpg"
+  imageURL: "img/my/unity3d/unity3d-3.jpg"
 - title: "做一名年轻的游戏创业者"
   text: "你可能听说过游戏行业的暴利，但是这恰恰反应了游戏行业的活力和魅力。游戏的开发永远属于年轻一代，早动手，说不定下一个游戏创业着就是你。"
   imageURL: "img/my/unity3d/unity3d-5.jpg"
