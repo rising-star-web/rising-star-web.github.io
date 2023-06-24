@@ -11,7 +11,7 @@ pathway: "动画编程"
 skillLevel: "中级"
 shortDescription : "学习专业的3D建模与动画场景制作，艺术与编程的完美结合。"
 description: "随着科技的不断进步，3D动画行业也越发火爆。Maya 3D动画设计与编程课程将系统的讲授3D动画设计知识和编程技巧，带你走近科技与艺术的殿堂"
-videoIntro : "TBD - not used yet"
+videoIntro : "https://www.youtube.com/embed/TCkOS4F51MI"
 learningGoals:
 - "掌握Maya 3D动画制作基础"
 - "独立制作动画模型的基本功"
