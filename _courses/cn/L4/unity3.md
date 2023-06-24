@@ -20,10 +20,10 @@ learningGoals:
 - "参加科技与计算机相关项目竞赛"
 promotions:
 - title: "打造更具吸引力的智能游戏体验"
-  text: "通过深度强化学习和模仿学习的结合来教导智能代理“学习” ，Unity和ML Agent可以让学生创造出更具吸引力的游戏玩法和增强的游戏体验。"
+  text: "通过深度强化学习和模仿学习的结合来教导智能代理学习，Unity和ML Agent可以让学生创造出更具吸引力的游戏玩法和增强的游戏体验。"
   imageURL: "img/my/unity3d/unity1.jpg"
 - title: "创建真实且复杂的AI环境来训练模型"
-  text: "使用Unity和ML Agent，可以创建物理、视觉和认知丰富的AI环境,学生可以使用它们进行基准测试以及研究新的算法和方法。"
+  text: "使用Unity和ML Agent，可以创建物理、视觉和认知丰富的AI环境，学生可以使用它们进行基准测试以及研究新的算法和方法。"
   imageURL: "img/my/unity3d/unity2.jpg"
 - title: "机器学习训练"
   text: "利用最先进的深度学习技术来训练和嵌入ML Agent智能代理到自己设计的创意项目中。"
