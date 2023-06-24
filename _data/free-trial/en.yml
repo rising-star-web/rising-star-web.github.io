@@ -1,0 +1,25 @@
+name: EN
+
+freetrial:
+  header: Sign Up for a Trial Class
+  lead: Schedule for a free trial by filling out this form and we will get back to you shortly. Try out a class to see if it's right for you. 
+  successIndicator: Looks good!
+  nameTag: Student's Name *
+  errorName: Please enter your name.
+  gradeTag: Student's Grade Level *
+  errorGrade: Please provide a valid grade level.
+  parentEmailTag: Parent's Email Address *
+  errorEmail: Please provide a valid email address.
+  phoneNumberTag: "Parent's Phone Number: <i>Ex. 123-456-7890 </i> *"
+  errorPhone: Please provide a valid phone number.
+  codingExperienceTag: Describe the student's coding experience *
+  experience1: Never Learned Before
+  experience2: Very Basic Exposure
+  experience3: Know's at Least One Programming Language Very Well
+  experience4: Hacker!
+  trialAvailability: "Trial Availability Ex: Mon-Thu after 3pm, Sat before 11am"
+  submit: Submit
+
+
+
+
