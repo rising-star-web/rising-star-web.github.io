@@ -10,7 +10,7 @@ gradeLevel: "L5 竞技编程"
 pathway: "编程与算法"
 skillLevel: "高级"
 shortDescription : "本课程的目的是帮助学生建立学习AP Computer Science Principles (CSP)基本的知识和编程能力，通过AP CS P考试"
-description: "AP CSP的一个主要特点是不要求具体的编程语言，并且鼓励使用图形化语言（比如Scratch, MIT App Inventor, Snap等等）。该课程和原有的AP CS A相比，更强调对实际知识的了解"
+description: "AP CSP备考课程的一个主要特点是不要求具体的编程语言，而是鼓励学生使用图形化语言（如Scratch、MIT App Inventor、Snap等）进行编程。相比于原有的AP CSA，AP CSP更加强调学生对实际知识的理解和应用。通过学习AP CSP，学生将掌握计算机科学的基本概念和原理，同时培养解决问题的能力和创造力。这门课程将为学生打开计算机科学的大门，让他们在未来的技术领域中具备更广阔的发展空间。"
 videoIntro : ""
 learningGoals:
 - "学习并掌握掌握AP CSP大纲要求的内容"
