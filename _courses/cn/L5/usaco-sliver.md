@@ -11,7 +11,7 @@ pathway: "编程与算法"
 skillLevel: "高级"
 shortDescription : "计算机编程算法训练，备战计算机信息学奥赛"
 description: "USACO Silver是为了备考USACO Silver银级而进行的课程，主要的目标是完成USACO Silver过去5年的所有真题，让同学在题目中找到自己的确实知识点，进行复习，并且熟悉USACO Silver的考试难度和形式，争取在年底一次通过。"
-videoIntro : "TBD - not used yet"
+videoIntro : "https://www.youtube.com/embed/apN_UAdcDcI"
 learningGoals:
 - "掌握主要的算法知识点"
 - "掌握信息学竞赛的基本思路与方法"
