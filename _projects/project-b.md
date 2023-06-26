@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/IMG_2423.jpg"
+coverImage: "/img/updated/projects/截屏2023-06-19 上午2.25.44.png"
 pagePostDate: "12 Dec 2022"
 studentName: "Andy MA"
 projectName: "Food Truck"
