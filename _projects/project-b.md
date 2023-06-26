@@ -7,7 +7,7 @@ pagePostDate: "12 Dec 2022"
 studentName: "Andy MA"
 projectName: "Food Truck"
 projectCategory: "App Development"
-projectDesc: "Andy independently develops entrepreneurial projects"
+projectDesc: "Admitted by NYU Stern"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "Food Truck Simulator"
