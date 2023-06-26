@@ -2,10 +2,10 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/IMG_2621.JPG"
+coverImage: "/img/updated/projects/截屏2023-06-19 上午2.22.09.png"
 pagePostDate: "17 Feb 2023"
 studentName: "Rose"
-projectName: "GEOGIA Admitted Project "
+projectName: "Ai Chat Helps Emotions "
 projectCategory: "App Development"
 projectDesc: "Development of cosmetics APP"
 
