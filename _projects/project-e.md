@@ -7,7 +7,7 @@ pagePostDate: "15 Feb 2023"
 studentName: "Shania"
 projectName: "Music Management "
 projectCategory: "App Development"
-projectDesc: "Development of cosmetics APP"
+projectDesc: "Admitted By USC"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "Music Management"
