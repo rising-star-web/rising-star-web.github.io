@@ -7,7 +7,7 @@ pagePostDate: "18 May 2023"
 studentName: "Jenny"
 projectName: "Cosmetics APP"
 projectCategory: "App Development"
-projectDesc: "Development of cosmetics APP"
+projectDesc: "Admitted By UCB"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "UC Berkeley Rising Star"
