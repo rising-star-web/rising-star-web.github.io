@@ -7,7 +7,7 @@ pagePostDate: "18 March 2023"
 studentName: "Richard"
 projectName: "Language and Text With AI"
 projectCategory: "App Development"
-projectDesc: "Development of cosmetics APP"
+projectDesc: "Admitted By UCLA"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "Catus Reading"
