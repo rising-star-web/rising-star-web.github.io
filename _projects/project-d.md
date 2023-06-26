@@ -2,10 +2,10 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/IMG_0663 3.JPG"
+coverImage: "/img/updated/projects/截屏2023-06-12 上午11.54.00.png"
 pagePostDate: "18 March 2023"
 studentName: "Richard"
-projectName: "UCLA Admitted Project "
+projectName: "Language and Text With AI"
 projectCategory: "App Development"
 projectDesc: "Development of cosmetics APP"
 
