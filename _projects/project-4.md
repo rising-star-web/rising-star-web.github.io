@@ -3,18 +3,18 @@ layout: student_project_detail
 
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/截屏2023-06-16 下午3.04.21.png"
-pagePostDate: "17 Feb 2023"
-studentName: "Rose"
-projectName: "GEOGIA Admitted Project "
+pagePostDate: "3 Mar 2022"
+studentName: "Jason"
+projectName: "Sports and Statistics "
 projectCategory: "App Development"
-projectDesc: "Development of cosmetics APP"
+projectDesc: "Admission to UIUC"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "MoodLink"
-bodyText1: " In addition to excelling academically, Rose has demonstrated her innovative spirit and sense of responsibility. MoodLink, an AI chat program she developed, is a notable project. This program uses artificial intelligence technology to help people relieve depression and promote the development of positive psychology. Today, as society pays more and more attention to mental health, Rose's use of technology to contribute to this field is enough to show that she has a broad vision, compassion, and is committed to using her technological talents to improve people's lives."
-bodyText2: "I can't speak highly enough of Rose. She is not only an excellent student, but also a young scientist with a high sense of responsibility and social awareness. Her talent and tenacity give her endless possibilities for the future. I look forward to seeing her achieve more at Georgia Tech and in her future career, and make greater contributions to technology and society."
+headerTitle: "Sports and Statistics"
+bodyText1: " Jason demonstrated excellent skills and talents by using big data analysis to predict the tactical use of NFL football teams, and was successfully admitted to the University of Illinois at Urbana-Champaign as a computer science major. UIUC's computer science major ranks fifth in the United States, and is well-known and highly competitive."
+bodyText2: "Jason's success demonstrates what can be achieved through focus and hard preparation. His case inspired other students to understand that while applying to top computer science programs is difficult, it is still possible to earn your chance through hard work and the demonstration of unique skills. His story is a tribute to perseverance and innovation."
 projectURL: "https://www.google.com/"
-awardsDesc: "The project helped Rose get admitted to GEORGIA TECH "
-contentImage: "/img/updated/projects/IMG_1340 2.JPG"
-contentImage2: "/img/updated/projects/IMG_1342 2.JPG"
+awardsDesc: "The project helped Jason get admitted to UIUC "
+contentImage: "/img/updated/projects/IMG_3155.JPG"
+contentImage2: "/img/updated/projects/IMG_3156.JPG"
 ---
