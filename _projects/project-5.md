@@ -2,19 +2,19 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-06-12 下午12.15.51.png"
-pagePostDate: "17 Feb 2023"
-studentName: "Rose"
-projectName: "GEOGIA Admitted Project "
+coverImage: "/img/updated/projects/截屏2023-06-23 下午1.04.22.png"
+pagePostDate: "15 Feb 2022"
+studentName: "Maggie"
+projectName: "Nutrition and Technology "
 projectCategory: "App Development"
 projectDesc: "Development of cosmetics APP"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "MoodLink"
-bodyText1: " In addition to excelling academically, Rose has demonstrated her innovative spirit and sense of responsibility. MoodLink, an AI chat program she developed, is a notable project. This program uses artificial intelligence technology to help people relieve depression and promote the development of positive psychology. Today, as society pays more and more attention to mental health, Rose's use of technology to contribute to this field is enough to show that she has a broad vision, compassion, and is committed to using her technological talents to improve people's lives."
-bodyText2: "I can't speak highly enough of Rose. She is not only an excellent student, but also a young scientist with a high sense of responsibility and social awareness. Her talent and tenacity give her endless possibilities for the future. I look forward to seeing her achieve more at Georgia Tech and in her future career, and make greater contributions to technology and society."
+bodyText1: " Maggie gained early admission to Berkeley with her app helping children improve nutrition and mobility in remote areas. She improves people's lives through technology."
+bodyText2: "With over a thousand downloads from the Apple store, Maggie's app provides invaluable nutrition and activity recommendations for our remote children. She is a role model who actively uses technology to improve lives."
 projectURL: "https://www.google.com/"
-awardsDesc: "The project helped Rose get admitted to GEORGIA TECH "
-contentImage: "/img/updated/projects/IMG_1340 2.JPG"
-contentImage2: "/img/updated/projects/IMG_1342 2.JPG"
+awardsDesc: "Admission to UC Berkeley "
+contentImage: "/img/updated/projects/IMG_2027 2.JPG"
+contentImage2: "/img/updated/projects/IMG_2026 2.JPG"
 ---
