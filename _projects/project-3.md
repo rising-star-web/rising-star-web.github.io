@@ -4,17 +4,17 @@ layout: student_project_detail
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/截屏2023-06-16 下午1.57.35.png"
 pagePostDate: "17 Feb 2023"
-studentName: "Rose"
-projectName: "GEOGIA Admitted Project "
+studentName: "Max"
+projectName: "Architecture and AI"
 projectCategory: "App Development"
-projectDesc: "Development of cosmetics APP"
+projectDesc: "Admitted to MIT"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "MoodLink"
-bodyText1: " In addition to excelling academically, Rose has demonstrated her innovative spirit and sense of responsibility. MoodLink, an AI chat program she developed, is a notable project. This program uses artificial intelligence technology to help people relieve depression and promote the development of positive psychology. Today, as society pays more and more attention to mental health, Rose's use of technology to contribute to this field is enough to show that she has a broad vision, compassion, and is committed to using her technological talents to improve people's lives."
-bodyText2: "I can't speak highly enough of Rose. She is not only an excellent student, but also a young scientist with a high sense of responsibility and social awareness. Her talent and tenacity give her endless possibilities for the future. I look forward to seeing her achieve more at Georgia Tech and in her future career, and make greater contributions to technology and society."
+headerTitle: "Architecture and AI"
+bodyText1: " Max was successfully admitted to MIT for his outstanding architectural design automatic generation project. His projects involve the application of AI in architectural design. This is after his brother entered MIT last year, and Max also successfully joined the school and became a member of this famous college."
+bodyText2: "Max has demonstrated an excellent ability to innovate and a deep understanding of architectural design. Through the application of AI, he opened up new possibilities in the field of architectural design. His diligence and intelligence not only won him admission to MIT, but also created a rare opportunity for him and his brother to study in the same top institute."
 projectURL: "https://www.google.com/"
-awardsDesc: "The project helped Rose get admitted to GEORGIA TECH "
-contentImage: "/img/updated/projects/IMG_1340 2.JPG"
-contentImage2: "/img/updated/projects/IMG_1342 2.JPG"
+awardsDesc: "The project helped Max get admitted to MIT "
+contentImage: "/img/updated/projects/IMG_3153.JPG"
+contentImage2: "/img/updated/projects/IMG_3154.JPG"
 ---
