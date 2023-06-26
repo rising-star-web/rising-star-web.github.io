@@ -7,7 +7,7 @@ pagePostDate: "17 Feb 2023"
 studentName: "Rose"
 projectName: "Ai Chat Helps Emotions "
 projectCategory: "App Development"
-projectDesc: "Development of cosmetics APP"
+projectDesc: "Admitted By GEORGIA TECH"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "MoodLink"
