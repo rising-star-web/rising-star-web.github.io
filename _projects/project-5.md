@@ -7,7 +7,7 @@ pagePostDate: "15 Feb 2022"
 studentName: "Maggie"
 projectName: "Nutrition and Technology "
 projectCategory: "App Development"
-projectDesc: "Development of cosmetics APP"
+projectDesc: "Admission to UC Berkeley"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "MoodLink"
