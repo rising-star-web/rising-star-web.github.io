@@ -7,7 +7,7 @@ pagePostDate: "17 Feb 2023"
 studentName: "Rose"
 projectName: "Time Management "
 projectCategory: "App Development"
-projectDesc: "Development of cosmetics APP"
+projectDesc: "Admitted to GEORGIA TECH"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "MoodLink"
