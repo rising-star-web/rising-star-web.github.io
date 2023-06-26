@@ -7,7 +7,7 @@ pagePostDate: "17 Feb 2023"
 studentName: "Rose"
 projectName: "Computing And Biological Environment "
 projectCategory: "App Development"
-projectDesc: "Biological Environment"
+projectDesc: "Admitted to Johns Hopkins University"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "MoodLink"
