@@ -5,7 +5,7 @@ layout: student_project_detail
 coverImage: "/img/updated/projects/截屏2023-06-06 上午1.08.30.png"
 pagePostDate: "18 May 2023"
 studentName: "Jenny"
-projectName: "UC Berkeley Rising Star"
+projectName: "Cosmetics APP"
 projectCategory: "App Development"
 projectDesc: "Development of cosmetics APP"
 
