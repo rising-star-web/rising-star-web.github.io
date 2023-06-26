@@ -7,7 +7,7 @@ pagePostDate: "23 Feb 2023"
 studentName: "Ryder Wei"
 projectName: "Chess Pro 3D"
 projectCategory: "App Development"
-projectDesc: "Ryder developed a mobile game"
+projectDesc: "Admission to Cate and Sage Hill"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "Ryder developed a mobile game, Chess Pro 3D"
