@@ -20,18 +20,18 @@ learningGoals:
 - "为编程项目竞赛提早做准备"
 promotions:
 - title: "现在就开始学习制作专业的web网页"
-  text: "网页开发一直是计算机编程中技术难度最高的领域之一，即使没有任何编程基础，也可以迅速学习制作专业的web网页。"
+  text: "即使没有任何编程基础，也可以迅速学习制作专业的web网页。"
   imageURL: "img/updated/web3.jpg"
 - title: "掌握Web开发基础，学习多种开发语言"
   text: "掌握Web开发的基础技能，包括HTML、CSS和JavaScript，以创造精美、交互式的网页体验。"
   imageURL: "img/updated/web4.jpg"
 - title: "构建响应式网页"
-  text: "学习构建响应式网页，确保您的网站在各种设备上都能完美展示，并提供流畅的用户体验"
+  text: "学习构建响应式网页，确保您的网站在各种设备上都能完美展示，并提供流畅的用户体验。"
   imageURL: "img/updated/web7.jpg"
 - title: "独立开发个人网站并发布"
   text: "能够独立开发充满创意的Web个人网站，并将其部署到云端，以便全球范围的用户访问。"
   imageURL: "img/updated/web8.jpg"
 - title: "参加编程项目竞赛"
   text: "网页开发课程做出的项目可以成为很好的编程项目竞赛的作品。充分发挥自己的创造力，动手解决生活中的问题，做实验，发布结果，为大学申请打下基础。"
-  imageURL: ""img/updated/web2.jpg
+  imageURL: "img/updated/web2.jpg"
 ---
