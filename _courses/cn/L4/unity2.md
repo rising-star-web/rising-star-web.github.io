@@ -11,7 +11,7 @@ pathway: "游戏开发"
 skillLevel: "中级"
 shortDescription : "学习游戏开发引擎的高级技巧和知识，创作专业游戏作品。"
 description: "Unity 2是L4级别游戏开发主题的进阶课程，在同学掌握Unity 1的基础上，课程开始更加着重C#编码在游戏开发中的比重，进一步让同学掌握游戏算法的设计与实现，锻炼同学独立开发游戏动画的能力，以及准备更具深度的游戏项目作品，为专业游戏发布做好准备。"
-videoIntro : "https://www.youtube.com/embed/f9ucoZB4a2g"
+videoIntro : "https://www.youtube.com/embed/L3Se6MWGi-4"
 learningGoals:
 - "掌握Unity3D游戏制作进阶"
 - "学习C#编程在游戏中的高级应用技巧"
