@@ -11,7 +11,7 @@ pathway: "人工智能应用"
 skillLevel: "中级到高级"
 shortDescription : "学习当今最流行的计算机应用，AI学习与股票算法交易"
 description: "本课程利用 Python 中学到的概念，结合 Alpaca Stock-Trading API 帮助学生开发自己的股票交易算法。本课程将介绍在股市买卖股票的基本原理，以及算法交易。在课程结束时，我们将学习和构建一些在现实世界中使用的高级交易算法模型。"
-videoIntro : "https://youtu.be/embed/i8N4oFUXe24"
+videoIntro : "https://www.youtube.com/embed/i8N4oFUXe24"
 learningGoals:
 - "学习并了解股票交易原理"
 - "了解AI人工智能在股市的应用"
