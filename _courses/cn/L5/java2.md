@@ -11,7 +11,7 @@ pathway: "编程与算法"
 skillLevel: "中级到高级"
 shortDescription : "帮助零编程基础的高中同学准备AP CS课程和考试所需要的扎实的编程基本功"
 description: "Java 2是AP CS Java课程的第二级别，主要的目标是学习Java的面向对象的核心知识点，包括类、对象、继承、接口、多态等考试要点。完成Java 2可以完成AP CS Java考试要求的所有知识点，为下面的AP CS Java备考做题打下基础。"
-videoIntro : "https://www.youtube.com/embed/L45idkDAY5w"
+videoIntro : "https://www.youtube.com/embed/zFz9bTgJXYM"
 learningGoals:
 - "熟悉Java编程和培养计算思维"
 - "能够独立设计和实现简单的程序算法"
