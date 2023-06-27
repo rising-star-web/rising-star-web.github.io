@@ -27,7 +27,7 @@ promotions:
   text: "Students will learn and develop APP with different topics and contents: mobile user interface, APP interaction and animation, mobile internet programming, mobile server communication, WeChat program, mobile sensor application, mobile game development, etc."
   imageURL: "img/my/mobile-learn-5.jpg"
 - title: "Learning programming principles from mobile app development"
-text: "By learning the popular youth programming platform developed by MIT, students' studying becomes more fun. At the same time, students get very direct exposure and understanding of the core concepts used in computer programming, providing a solid foundation for the next step of learning real programming."
+  text: "By learning the popular youth programming platform developed by MIT, students' studying becomes more fun. At the same time, students get very direct exposure and understanding of the core concepts used in computer programming, providing a solid foundation for the next step of learning real programming."
   imageURL: "img/my/app-dev-1.png"
 - title: "Publish and share your own app"
   text: "Throughout the course, each student can develop and publish 6 to 8 different apps. Just like a professional APP programmer and entrepreneur, you will publish your APP to Google's APP store and let people around the world download your APP through the internet."
