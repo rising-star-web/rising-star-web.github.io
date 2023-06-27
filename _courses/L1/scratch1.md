@@ -32,7 +32,7 @@ promotions:
 - title: "Publish and share your own projects"
   text: "Post your own projects on the MIT Scratch sharing platform, share your work with small programmers all over the world, and let everyone give you credit for your creativity!"
   imageURL: "img/updated/L1/scratch2-3.png"
-- title: "学习的不仅仅是编程"
-  text: "计算器编程能力是现今社会文化的组成要素，因为学习编程的同时培养的是逻辑思维、计算能力、创新和想象力。孩子们在编程解决问题的同时，同时得到的是信心！"
+- title: "Learn more than just programming"
+text: "Computer programming skills are a component of today's social culture. When you learn to program, you develop logical thinking, computational skills, innovation skills, and imagination at the same time!"
   imageURL: "img/updated/L1/scratch2-2.png"
 ---
