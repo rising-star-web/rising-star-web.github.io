@@ -11,7 +11,7 @@ pathway: "编程与算法"
 skillLevel: "中级到高级"
 shortDescription : "帮助零编程基础的高中同学准备AP CS课程和考试所需要的扎实的编程基本功"
 description: "Java 1是AP CS Java课程的系列课程的初级课程，主要教授Java语言的核心编程概念，以及基本语法与控制流程。适合高年级，尤其是打算备考AP CS Java考试的同学学习。课程完成要求同学能够独立编写基础的Java程序，为Java的进阶和面向对象编程打下基础。"
-videoIntro : "https://www.youtube.com/embed/L45idkDAY5w"
+videoIntro : "https://www.youtube.com/embed/zFz9bTgJXYM"
 learningGoals:
 - "训练Java编程基础和培养计算思维"
 - "能够独立设计和实现简单的程序算法"
