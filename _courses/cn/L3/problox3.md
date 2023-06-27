@@ -11,7 +11,7 @@ pathway: "游戏开发"
 skillLevel: "中级"
 shortDescription : "在Roblox平台开发AI智能游戏，开启AI编程学习的第一步"
 description: "从Roblox 3开始，同学已经计入到L3级别的代码编程课程，该级别要求同学完全专注于代码的编程和算法设计与实现。通过本节课的完成，同学学习了Lua代码实现初步的AI功能与逻辑，并且完成了一个AI游戏算法并植入到了自己的游戏项目项目中去，对AI世界有了初步的体验。"
-videoIntro : "https://www.youtube.com/embed/u51PcAGQBM4"
+videoIntro : "https://www.youtube.com/embed/kXO8henMoDs"
 learningGoals:
 - "理解游戏开发的流程和原理"
 - "掌握基本的Lua编程语言和概念"
