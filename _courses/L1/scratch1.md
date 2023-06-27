@@ -33,6 +33,6 @@ promotions:
   text: "Post your own projects on the MIT Scratch sharing platform, share your work with small programmers all over the world, and let everyone give you credit for your creativity!"
   imageURL: "img/updated/L1/scratch2-3.png"
 - title: "Learn more than just programming"
-text: "Computer programming skills are a component of today's social culture. When you learn to program, you develop logical thinking, computational skills, innovation skills, and imagination at the same time!"
+  text: "Computer programming skills are a component of today's social culture. When you learn to program, you develop logical thinking, computational skills, innovation skills, and imagination at the same time!"
   imageURL: "img/updated/L1/scratch2-2.png"
 ---
