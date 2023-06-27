@@ -11,7 +11,7 @@ pathway: "游戏开发"
 skillLevel: "中级到高级"
 shortDescription : "在制作游戏中学习AI算法将是你从未尝试过的学习体验"
 description: "Unity3人工智能与游戏AI设计课程属于游戏编程和人工智能应用的高阶课程，主要是将AI算法应用在游戏开发当中，在完善自己游戏的同时学习并应用人工智能知识"
-videoIntro : "https://www.youtube.com/embed/f9ucoZB4a2g"
+videoIntro : "https://www.youtube.com/embed/L3Se6MWGi-4"
 learningGoals:
 - "掌握Unity3D游戏制作高级知识"
 - "学习C#编程在游戏中的AI人工智能应用技巧"
