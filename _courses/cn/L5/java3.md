@@ -11,7 +11,7 @@ pathway: "编程与算法"
 skillLevel: "高级"
 shortDescription : "为即将参加AP考试的同学复习课程重点，训练考试习题，强化考试所需要的编程基本功"
 description: "Java 3级别主要对AP CS A考试进行最后的冲刺准备。同学应该在学完Java核心内容的前提下开始集中做题，巩固知识点。课程以AP CS A考试大概为目标，为即将参加AP考试的同学强化考试所需要的编程基本功。"
-videoIntro : "https://www.youtube.com/embed/L45idkDAY5w"
+videoIntro : "https://www.youtube.com/embed/zFz9bTgJXYM"
 learningGoals:
 - "熟悉Java编程和培养计算思维"
 - "能够独立设计和实现简单的程序算法"
