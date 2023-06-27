@@ -11,7 +11,7 @@ pathway: "编程与算法"
 skillLevel: "高级"
 shortDescription : "计算机编程算法训练，备战计算机信息学奥赛"
 description: "USACO 2作为L5级别核心课程，主要开始为USACO以及相关信息学竞赛发力。课程主要包含竞赛常考的10个算法知识点，把题目按照知识点分类，让同学进行锻炼。完成该课程后，同学基本上开始进行USACO Bronze级别的专项锻炼。"
-videoIntro : "https://www.youtube.com/embed/apN_UAdcDcI"
+videoIntro : "https://www.youtube.com/embed/BUQHX6RoI5A"
 learningGoals:
 - "掌握主要的算法知识点"
 - "掌握信息学竞赛的基本思路与方法"
