@@ -11,7 +11,7 @@ pathway: "编程与算法"
 skillLevel: "中级到高级"
 shortDescription : "学习爬虫算法，获取前沿数据"
 description: "该课程作为L4的应用主题课程，为学生介绍网络爬虫与数据分析应用程序开发。课程学习Python数据爬虫核心，掌握各种爬虫应用场景，学习数据驱动的Web应用开发原理，并且独立设计并完成一个自己的数据监控与分析Web应用。课程结束每个学生会完成，并发布自己的数据监控网站，为高中科学竞赛、课外项目和创业充实内容和经历。"
-videoIntro : "https://youtu.be/embed/Yw1B6nj8JN0"
+videoIntro : ""https://www.youtube.com/embed/rQxr1XRZ2FY"
 learningGoals:
 - "掌握爬虫技术"
 - "对数据结构更熟悉"
