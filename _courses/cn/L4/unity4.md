@@ -11,7 +11,7 @@ pathway: "游戏开发"
 skillLevel: "中级到高级"
 shortDescription : "在制作游戏中学习AI算法将是你从未尝试过的学习体验"
 description: "Unity4:高阶算法与C#核心课程属于Unity专题的高级课程，通过课程的学习，同学在掌握专业Unity项目经验的基础上，深入学习了C#语言的核心内容，并且掌握了算法与数据结构，从而进一步的开始能够独立的开发复杂游戏作品。"
-videoIntro : "https://www.youtube.com/embed/f9ucoZB4a2g"
+videoIntro : "https://www.youtube.com/embed/L3Se6MWGi-4"
 learningGoals:
 - "掌握独立制作游戏算法和数据结构知识"
 - "深入学习C#编程语言的核心内容"
