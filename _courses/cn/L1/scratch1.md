@@ -11,7 +11,7 @@ pathway: "游戏开发"
 skillLevel: "初学者"
 shortDescription : "学Scratch基础编程，发挥你的创造力，和来自世界各地的小程序员分享你的作品"
 description: "Scratch是L1图形化编程的核心课程，通过学习MIT研发的少儿编程平台，能够让同学们很快的理解编程的概念与基本语法，并且能够过从第一节课就开始制作趣味的编程应用。使用 Scratch，你可以编写属于你自己的互动媒体，比如故事、游戏、动画，然后你可以将你的创意分享给全世界。 "
-videoIntro : "https://www.youtube.com/embed/QV5pglqKDGQ"
+videoIntro : "https://www.youtube.com/embed/0aIAE9yASxc"
 learningGoals:
 - "掌握基本的图形编程语言和算法"
 - "动手制作多媒体、动画、电影和游戏"
