@@ -11,7 +11,7 @@ pathway: "游戏编程"
 skillLevel: "中级"
 shortDescription : "Python编程高阶，动手编写真正的计算机应用程序"
 description: "Python 3的Python编程的高阶应用课程，通过该课程，同学学习并掌握了高级算法，以及一系列第三方功能库，在项目中真正发挥并应用了Python的强大功能。"
-videoIntro : "https://www.youtube.com/embed/Yw1B6nj8JN0"
+videoIntro : "https://www.youtube.com/embed/rQxr1XRZ2FY"
 learningGoals:
 - "理解Python编程语言基础和计算机科学的概念"
 - "熟悉计算机算法以及调用常用库"
