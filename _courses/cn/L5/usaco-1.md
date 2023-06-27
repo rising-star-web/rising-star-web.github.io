@@ -11,7 +11,7 @@ pathway: "编程与算法"
 skillLevel: "高级"
 shortDescription : "计算机编程算法训练，备战计算机信息学奥赛"
 description: "USACO 1作为L5级别核心课程，主要开始为USACO以及相关信息学竞赛做初步的准备。课程的核心目标是让同学们从编程到算法思维上的转换。课程主要包含8个基础的算法知识点，同时课程伴随完成USACO 1的50题题库，让同学进行锻炼，为更加深入的信息学竞赛打下坚实基础。"
-videoIntro : "https://www.youtube.com/embed/apN_UAdcDcI"
+videoIntro : "https://www.youtube.com/embed/BUQHX6RoI5A"
 learningGoals:
 - "掌握主要的算法知识点"
 - "掌握信息学竞赛的基本思路与方法"
