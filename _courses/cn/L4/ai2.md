@@ -11,7 +11,7 @@ pathway: "编程与算法"
 skillLevel: "中级到高级"
 shortDescription : "学习人工智能的高级知识与应用并了解最前沿的技术革新"
 description: "AI 2是AI人工智能课程的进阶课程，主要目标是让同学从普通机器学习，过度到深度学习与神经网络的高级题目与应用中，并且掌握如何使用深度学习的功能库来进行图像识别，语音识别，自然语言处理的应用开发。课程要求同学完成一个深度学习的AI应用，为未来要参加的项目竞赛竞赛以及科研生涯做好准备。"
-videoIntro : "https://www.youtube.com/embed/zcK7mpDwhiY"
+videoIntro : "https://www.youtube.com/embed/5E5FLhgEn6g"
 learningGoals:
 - "学习Python编程语言的高级知识"
 - "掌握机器学习和人工智能的初步"
