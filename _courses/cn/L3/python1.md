@@ -11,7 +11,7 @@ pathway: "编程与算法"
 skillLevel: "中级"
 shortDescription : "学习当今最流行的编程语言，开发任何你想制作的应用程序"
 description: "Python 1作为L3级别的第一个核心课程，主要的目标是教授同学使用Python的基本语法与指令，并且能够完成基础的应用程序的开发。通过课程的完成，同学可以掌握Python的基础知识，并且完成一个基础的Python项目，为下一阶段的Python进阶编程打下良好的基础。"
-videoIntro : "https://www.youtube.com/embed/Yw1B6nj8JN0"
+videoIntro : "https://www.youtube.com/embed/rQxr1XRZ2FY"
 learningGoals:
 - "掌握Python编程语言的基本语法"
 - "熟悉Python开发环境"
