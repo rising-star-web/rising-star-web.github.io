@@ -11,7 +11,7 @@ pathway: "应用开发"
 skillLevel: "初学者到中级"
 shortDescription : "学习手机APP编程，开发APP，做小创业者"
 description: "App手机编程开发课程使用流行的跨平台Thunkable开发工具，可以迅速的完成App的设计与实现，在完成编程学习的同时，把自己的创业想法变成现实。"
-videoIntro : "https://www.youtube.com/embed/N1n7abK5Nd0"
+videoIntro : "https://www.youtube.com/embed/KedditSZEy0"
 learningGoals:
 - "手机APP的编程基础与计算机科学的实践"
 - "熟练掌握MIT手机APP发明家程序"
