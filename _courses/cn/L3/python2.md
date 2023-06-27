@@ -11,7 +11,7 @@ pathway: "编程与算法"
 skillLevel: "中级"
 shortDescription : "学习当今最流行的编程语言，开发任何你想制作的应用程序"
 description: "Python 2作为L3级别的高级核心课程，主要的目标是带领同学使用Python进行程序算法的设计与实现，并且学习高级数据结构的知识。通过课程的完成，同学可以掌握Python的数据结构与算法，并且完成一个综合的Python项目，之后的Python应用编程打下良好的基础。"
-videoIntro : "https://www.youtube.com/embed/Yw1B6nj8JN0"
+videoIntro : "https://www.youtube.com/embed/rQxr1XRZ2FY"
 learningGoals:
 - "掌握Python编程语言的进阶知识"
 - "熟悉计算机算法的初步"
