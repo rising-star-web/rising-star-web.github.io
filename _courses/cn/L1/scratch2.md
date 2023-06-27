@@ -11,7 +11,7 @@ pathway: "游戏开发"
 skillLevel: "中级"
 shortDescription : "学进阶Scratch编程，发挥你的创造力，和来自世界各地的小程序员分享你的作品"
 description: "Scratch的进阶编程属于L1图形化编程的后一阶段，是往L2简洁代码编程过度的最后一个课程。该课程强调学生的综合应用能力培养，不但要求同学完成Scratch高级知识点，更重要的目标是培养同学设计编程算法和系统应用的能力背景，能够完全把自己的idea独立动手实现。 "
-videoIntro : "https://www.youtube.com/embed/QV5pglqKDGQ"
+videoIntro : "https://www.youtube.com/embed/0aIAE9yASxc"
 learningGoals:
 - "掌握基本的图形编程语言和算法"
 - "动手制作多媒体、动画、电影和游戏"
