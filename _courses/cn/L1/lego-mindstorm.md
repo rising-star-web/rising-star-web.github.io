@@ -11,7 +11,7 @@ pathway: "机器人编程"
 skillLevel: "初学者"
 shortDescription : "编程控制机器人，在挑战中学习编程的大道理，让编程变得更加有趣。"
 description: "乐高机器人风靡全球。通过一系列的搭建活动，学生将学习使用杠杆、齿轮、电机和红外线等多种传感器，学习编程中的各种模块和编程逻辑。通过学习，能充分激发学生的想象力，提升创新天赋，全面提升孩子的逻辑思维、沟通合作、解决问题等能力。"
-videoIntro : "https://www.youtube.com/embed/DGfYDQTCdAQ"
+videoIntro : "https://www.youtube.com/embed/ZwDJ_C9WzTE"
 learningGoals:
 - "学习和初探机器人的原理和技术"
 - "掌握机器人编程控制算法"
