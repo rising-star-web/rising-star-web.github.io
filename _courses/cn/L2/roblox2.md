@@ -11,7 +11,7 @@ pathway: "游戏开发"
 skillLevel: "中级"
 shortDescription : "学习开发风靡全球的Roblox，发布你自己的游戏，创业编程两不误"
 description: "Roblox 2是L2级别的核心课程，主要的目标是让同学使用Lua更多的编写简洁的代码程序，尝试设计程序算法，并且可以独立的构思功能并融入到项目中去。本节课同学需要完成所有常用的Lua编程语言的功能特点，并且完成一个可以参赛的综合的Roblox的游戏项目，为下一阶段L3的编程学习做好准备。"
-videoIntro : "https://www.youtube.com/embed/u51PcAGQBM4"
+videoIntro : "https://www.youtube.com/embed/kXO8henMoDs"
 learningGoals:
 - "理解游戏开发的流程和原理"
 - "掌握基本的Lua编程语言和概念"
