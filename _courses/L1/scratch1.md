@@ -20,8 +20,8 @@ learningGoals:
 - "Develop scientific innovation and teamwork skills"
 - "Publish your own projects on the MIT platform"
 promotions:
-- title: "风靡全球的编程学习平台"
-  text: "Scratch是由鼎鼎有名的MIT Media Lab开发的一款专门面向中小学生学习计算机编程的教育平台。通过使用更加友好的图形化的编程语言，使学生可以迅速学习和制作丰富有趣的动画和游戏程序。"
+- title: "The world's most popular programming learning platform"
+  text: "Scratch is an educational platform developed by the famous MIT Media Lab for elementary and middle school students to learn computer programming. By using a more graphical and friendly programming language, students can quickly learn and create fun animations and game projects."
   imageURL: "img/updated/L1/scratch-1.png"
 - title: "挑战自己的创造力"
   text: "全世界不同地方超过上百万人都在制作自己的Scratch项目，已经有超过2千5百万个程序发布在Scratch的分享平台中。还不快来加入这个社区展示一下你的创意是什么？"
