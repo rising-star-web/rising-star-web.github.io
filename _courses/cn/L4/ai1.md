@@ -11,7 +11,7 @@ pathway: "编程与算法"
 skillLevel: "中级到高级"
 shortDescription : "学习人工智能的初步并且动手编写实用的真正的AI应用程序"
 description: "AI人工智能初步是L4级别的核心课程，主要的目标是让同学开始进行编程的主题应用开发，解决实际的问题，并且可以独立的实际AI算法并融入到项目中去。本节课同学需要完成所有常用的机器学习算法与功能库，并且完成一个可以参赛的综合的AI与数据分析的项目，为下一阶段的AI 2编程做好准备。"
-videoIntro : "https://www.youtube.com/embed/zcK7mpDwhiY"
+videoIntro : "https://www.youtube.com/embed/5E5FLhgEn6g"
 learningGoals:
 - "学习Python编程语言的高级知识"
 - "掌握机器学习和人工智能的初步"
