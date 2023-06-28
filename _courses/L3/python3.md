@@ -30,7 +30,7 @@ promotions:
   text: "The object of programming is data. Understanding data, and understanding how to store it and manipulate it, are essential programming skills."
   imageURL: "img/my/pythonmine/pymine3.jpg"
 - title: "Python game development experience"
-text: "Playing games is fun, but making your own games is even more fun. Python's game engine, PyGame, will enable you to write your own computer games in Python and make your game design dreams come true!"
+  text: "Playing games is fun, but making your own games is even more fun. Python's game engine, PyGame, will enable you to write your own computer games in Python and make your game design dreams come true!"
   imageURL: "img/my/pythonmine/pymine4.png"
 - title: "Be the next successful young entrepreneur"
   text: "Practical hands-on skills are far more important than theoretical knowledge. Every course is designed for students to learn how to turn an idea for a game into a practical reality through hard work. Young little entrepreneurs are developed during these challenges."
