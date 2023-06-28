@@ -24,7 +24,7 @@ promotions:
   text: "Artificial intelligence is popular all over the world, mastering the concept of AI from a young age is the important first step"
   imageURL: "img/updated/L2/roblox-ai-1.png"
 - title: "Learning programming algorithms in game engines"
-text: "Understand the principles and fundamentals of computer algorithms, by designing and implementing game logic and ideas, to build a foundation for advanced programming learning."
+  text: "Understand the principles and fundamentals of computer algorithms, by designing and implementing game logic and ideas, to build a foundation for advanced programming learning."
   imageURL: "img/updated/L2/roblox-ai-bg.png"
 - title: "Programming in Game Making"
   text: "Roblox uses the innovative programming language Lua. As you complete your own game, you will have mastered the basic concepts of programming such as variables, loops, and functions without realizing it, building a solid foundation for the next step of learning real programming."
