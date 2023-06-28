@@ -27,7 +27,7 @@ promotions:
   text: "From traditional machine learning to the latest deep learning, understand deep learning techniques and tools, experiment with your own data and models."
   imageURL: "img/my/ceml/ai.jpg"
 - title: "Advanced applications for artificial intelligence"
-  text: "Image recognition, voice input, natural language processing, the frontier applications of AI that you see every day you can also design and test on your own."
+  text: "Image recognition, speech recognition, natural language processing, the frontier applications of AI that you see every day you can also design and test on your own."
   imageURL: "img/updated/L5/ai2.jpg"
 - title: "Python server program development"
   text: "Connecting your own program to the internet to make it more useful."
