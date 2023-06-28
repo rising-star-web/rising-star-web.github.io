@@ -32,7 +32,7 @@ promotions:
 - title: "Python server program development"
   text: "Connecting your own program to the internet to make it more useful."
   imageURL: "img/my/python-learn-2.jpg"
-- title: "Python人工智能项目开发体验"
-  text: "Python编程语言可以让你调用各种库，编程各种人工智能项目，实现自己的编程梦想！"
+- title: "Python Artificial Intelligence Project Development Experience"
+  text: "Python programming language allows you to call various libraries, program various artificial intelligence projects, and achieve your programming dreams!"
   imageURL: "img/my/ceml/ai1.jpg"
 ---
