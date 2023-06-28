@@ -33,6 +33,6 @@ promotions:
   text: " Learning Python is a great introductory foundation for taking the two existing high school AP CS courses. Not only does it satisfy the requirements of AP CS Principle, but it also helps students easily transition to the Java programming language which is required by AP CS A."
   imageURL: "img/my/pythonmine/pymine4.png"
 - title: "Be the next successful young entrepreneur"
-  text: "Practical hands-on skills are far more important than theoretical knowledge. Every course is designed for students to learn how to turn an idea for a game into a practical reality through hard work. Young little entrepreneurs are created during these challenges."
+  text: "Practical hands-on skills are far more important than theoretical knowledge. Every course is designed for students to learn how to turn an idea for a game into a practical reality through hard work. Young little entrepreneurs are developed during these challenges."
   imageURL: "img/updated/L3/python-adv-bg-v2.png"
 ---
