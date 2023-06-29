@@ -16,5 +16,5 @@ bodyText2: "With over a thousand downloads from the Apple store, Maggie's app pr
 projectURL: "https://www.google.com/"
 awardsDesc: "Admission to UC Berkeley "
 contentImage: "/img/updated/projects/IMG_3663.JPG"
-contentImage2: "/img/updated/projects/IMG_2026 2.JPG"
+contentImage2: "/img/updated/projects/IMG_3662.JPG"
 ---
