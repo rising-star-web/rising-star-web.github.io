@@ -11,7 +11,7 @@ projectDesc: "Admission to UC Berkeley"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "MoodLink"
-bodyText1: " Maggie gained early admission to Berkeley with her app helping children improve nutrition and mobility in remote areas. She improves people's lives through technology."
+bodyText1: " William, a 7th grade student, won the first place in the new energy group in the final of the California science competition with his AI intelligent air conditioning control and energy saving system. The achievement underscores the growing competitive advantage of computing programs in traditional scientific fields. The close combination of science and technology and environmental protection has intensified the competition in the field of new energy, and also highlighted the great potential of science and technology to solve modern problems."
 bodyText2: "With over a thousand downloads from the Apple store, Maggie's app provides invaluable nutrition and activity recommendations for our remote children. She is a role model who actively uses technology to improve lives."
 projectURL: "https://www.google.com/"
 awardsDesc: "Admission to UC Berkeley "
