@@ -25,7 +25,7 @@ promotions:
 - title: "Small programs can do big things"
   text: "Master the basic syntax and control flow of Java, and be able to program basic Java applications independently as required."
   imageURL: "img/my/codegeneric.png"
-- title: " Be familiar with object-oriented programming"
+- title: "Be familiar with object-oriented programming"
   text: "Master the core object-oriented knowledge points of Java, including classes, objects, inheritance, interfaces, polymorphism, and other exam topics."
   imageURL: "img/my/coding-workspace.jpg"
 - title: "Build a strong foundation for high school AP CS courses"
