@@ -13,7 +13,7 @@ shortDescription : "Explore the unlimited possibilities of web development, lear
 description: "Web Development Experience: HTML/CSS is one of the L4 Applied Programming series courses. The main purpose of this course is to help students learn the fundamentals of web application development, including web HTML and CSS language, and fundamental JavaScript language. The ultimate goal is for students to be able to independently make their own personal websites, as well as their own preliminary web applications, and publish them in the cloud."
 videoIntro : "https://www.youtube.com/embed/ANqusovRyC0"
 learningGoals:
-- "Master the basic skills of web development"
+- "Master the fundamental skills of web development"
 - "Learn HTML and CSS language and fundamental JavaScript language"
 - "Create sophisticated, interactive web pages"
 - "Finish your personal website project and publish it to the cloud"
@@ -23,7 +23,7 @@ promotions:
   text: "You can learn to create professional web pages instantly even without any programming foundation."
   imageURL: "img/updated/web3.jpg"
 - title: "Master the fundamentals of web development and learn a variety of development languages"
-  text: "Master the foundational skills of web development, including HTML, CSS, and JavaScript, in order to create sophisticated, interactive web experiences."
+  text: "Master the fundamental skills of web development, including HTML, CSS, and JavaScript, in order to create sophisticated, interactive web experiences."
   imageURL: "img/updated/web4.jpg"
 - title: "Building a responsive web page"
   text: "Learn to build a responsive web page, make sure your website displays perfectly on different devices and provides a smooth user experience."
