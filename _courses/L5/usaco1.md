@@ -32,6 +32,6 @@ promotions:
   text: "Master the main 8 basic algorithmic knowledge topics while completing USACO 1's 50-question list."
   imageURL: "img/my/cewcr/bg-big.jpg"
 - title: " Train and improve during the competition"
-text: "Organize students to participate in USACO competitions to learn, summarize and improve themselves through each competition."
+  text: "Organize students to participate in USACO competitions to learn, summarize and improve themselves through each competition."
   imageURL: "img/my/ioi/ioi3.jpg"
 ---
