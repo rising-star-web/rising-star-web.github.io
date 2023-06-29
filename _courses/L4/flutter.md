@@ -9,7 +9,7 @@ coverImageURL: "img/my/flutter/flutter.png"
 gradeLevel: "L4 Applied Programming"
 pathway: "Mobile Development"
 skillLevel: "Intermediate-Advanced"
-shortDescription : "Flutter mobile app development, be a developer of the new era"
+shortDescription : "Flutter mobile app development, be a developer of the new era!"
 description: "Mobile applications (APP) play an extremely important role in people's lives nowadays. FLutter, as the APP development project of Google, has many advantages and will definitely occupy the mainstream position in the future application market. Learning APP development is not only learning Flutter application development technology, but also learning to think about the demand and the process of realizing the demand."
 videoIntro : "https://www.youtube.com/embed/fq4N0hgOWzU"
 learningGoals:
