@@ -15,6 +15,6 @@ bodyText1: " Maggie gained early admission to Berkeley with her app helping chil
 bodyText2: "With over a thousand downloads from the Apple store, Maggie's app provides invaluable nutrition and activity recommendations for our remote children. She is a role model who actively uses technology to improve lives."
 projectURL: "https://www.google.com/"
 awardsDesc: "Admission to UC Berkeley "
-contentImage: "/img/updated/projects/IMG_2027 2.JPG"
+contentImage: "/img/updated/projects/IMG_3663.JPG"
 contentImage2: "/img/updated/projects/IMG_2026 2.JPG"
 ---
