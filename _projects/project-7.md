@@ -4,7 +4,7 @@ layout: student_project_detail
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/截屏2023-06-23 下午1.04.22.png"
 pagePostDate: "15 Feb 2022"
-studentName: "Maggie"
+studentName: "William"
 projectName: "Nutrition and Technology "
 projectCategory: "App Development"
 projectDesc: "Admission to UC Berkeley"
