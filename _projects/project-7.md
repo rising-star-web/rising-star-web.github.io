@@ -4,10 +4,10 @@ layout: student_project_detail
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/截屏2023-06-23 下午1.35.20.png"
 pagePostDate: "2022年3月3日"
-studentName: "Stier"
-projectName: "音乐和算法结合"
+studentName: "William"
+projectName: "Ai与智能空调配合"
 projectCategory: "App Development"
-projectDesc: "获得哥大的录取"
+projectDesc: "加州科学竞赛新能源组第一名"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "体育和数据分析结合"
