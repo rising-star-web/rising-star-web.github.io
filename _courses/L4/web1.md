@@ -10,7 +10,7 @@ gradeLevel: "L4 Applied Programming"
 pathway: "Web Development"
 skillLevel: "Intermediate"
 shortDescription : "Explore the unlimited possibilities of web development, learn to create personal websites and web applications, and publish your ideas on the cloud!"
-description: "Web Development is one of the L4 Applied Programming series courses. The main purpose of this course is to help students learn the fundamentals of web application development, including web HTML and CSS language, and fundamental JavaScript language. The ultimate goal is for students to be able to independently make their own personal websites, as well as their own preliminary web applications, and publish them in the cloud."
+description: "Web Development Experience: HTML/CSS is one of the L4 Applied Programming series courses. The main purpose of this course is to help students learn the fundamentals of web application development, including web HTML and CSS language, and fundamental JavaScript language. The ultimate goal is for students to be able to independently make their own personal websites, as well as their own preliminary web applications, and publish them in the cloud."
 videoIntro : "https://www.youtube.com/embed/ANqusovRyC0"
 learningGoals:
 - "Master the basic skills of web development "
