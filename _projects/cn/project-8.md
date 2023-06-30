@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-06-29 下午6.14.03.png"
+coverImage: "/img/updated/projects/截屏2023-06-30 上午11.13.00.png"
 pagePostDate: "2022年3月3日"
 studentName: "Serena"
 projectName: "Ai与社交技术结合"
