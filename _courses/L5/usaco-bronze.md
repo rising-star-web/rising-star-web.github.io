@@ -29,7 +29,7 @@ promotions:
   text: "Preparation for USACO Bronze and related informatics competitions, develop programming skills and improve problem-solving abilities to build a solid foundation."
   imageURL: "img/my/ioi/bg.jpeg"
 - title: "Transition from programming to algorithmic thinking"
-  text: "Complete USACO Bronze's question list of the past 5 years."
+  text: "Complete USACO Bronze question list of the past 5 years."
   imageURL: "img/my/cewcr/bg-big.jpg"
 - title: " Train and improve during the competition"
   text: "Organize students to participate in USACO competitions to learn, summarize and improve themselves through each competition."
