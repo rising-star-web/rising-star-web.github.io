@@ -29,7 +29,7 @@ promotions:
   text: "Preliminary preparation for USACO and related informatics competitions, build a solid foundation."
   imageURL: "img/my/ioi/bg.jpeg"
 - title: "Transition from programming to algorithmic thinking"
-  text: "Master the 10 commonly tested algorithm knowledge topics  while completing USACO's 50-question list."
+  text: "Master the 10 commonly tested algorithm knowledge topics while completing USACO's 50-question list."
   imageURL: "img/my/cewcr/bg-big.jpg"
 - title: " Train and improve during the competition"
   text: "Organize students to participate in USACO competitions to learn, summarize and improve themselves through each competition."
