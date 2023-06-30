@@ -10,7 +10,7 @@ gradeLevel: "L5 Competitive Programming"
 pathway: "USACO"
 skillLevel: "Advanced"
 shortDescription : "Computer programming algorithm training to prepare for the USA Computing Olympiad"
-description: "USACO Bronze is a course designed to prepare for the USACO Bronze Bronze exam. The main goal is to complete all the questions of the USACO Bronze exam list in the past 5 years. The course requires students to identify their missing knowledge points, review them, and prepare for the difficulty and format of the USACO Bronze exam in order to pass it in one attempt at the end of the year."
+description: "USACO Bronze is a course designed to prepare for the USACO Bronze level exam. The main goal is to complete all the questions of the USACO Bronze exam list in the past 5 years. The course requires students to identify their missing knowledge points, review them, and prepare for the difficulty and format of the USACO Bronze exam in order to pass it in one attempt at the end of the year."
 videoIntro : "https://www.youtube.com/embed/apN_UAdcDcI"
 learningGoals:
 - "Master the major algorithmic knowledge points"
