@@ -10,7 +10,7 @@ gradeLevel: "L5 竞技编程"
 pathway: "编程与算法"
 skillLevel: "高级"
 shortDescription : "计算机编程算法训练，备战计算机信息学奥赛"
-description: "USACO Silver是为了备考USACO Silver银级而进行的课程，主要的目标是完成USACO Silver过去5年的所有真题，让同学在题目中找到自己的确实知识点，进行复习，并且熟悉USACO Silver的考试难度和形式，争取在年底一次通过。"
+description: "USACO Silver是为了备考USACO Silver银级而进行的课程，主要的目标是完成USACO Silver过去5年的所有真题，让同学在题目中找到自己缺失的知识点，进行复习，并且熟悉USACO Silver的考试难度和形式，争取一次通过。"
 videoIntro : "https://www.youtube.com/embed/BUQHX6RoI5A"
 learningGoals:
 - "掌握主要的算法知识点"
