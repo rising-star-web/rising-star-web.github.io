@@ -16,7 +16,7 @@ bodyText2: "Serena的技术才能和创新思维令人印象深刻。她成功�
 URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
 awardsDesc: "学员获佐治亚理工录取"
-contentImage: "/img/updated/projects/IMG_3663.JPG"
+contentImage: "/img/updated/projects/IMG_3675.JPG"
 contentImage2: "/img/updated/projects/IMG_3662.JPG"
 
 ---
