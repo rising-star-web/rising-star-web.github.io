@@ -831,7 +831,7 @@ var theme = {
                   console.log('start login');
                   let studentId = response.data.id;
                   
-                  fetch(baseUrl+ `TrialClasses/trial`, {
+                  fetch(baseUrl+ `TrialClasses`, {
                     mode: "no-cors",
                     method: "post",
                     data: {
