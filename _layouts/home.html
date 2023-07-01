@@ -173,7 +173,7 @@ layout: default
           <li class="nav-item"> <a class="nav-link d-flex flex-row active" data-bs-toggle="tab" href="#tab2-2" data-cue="fadeIn" >
               <div><img src="/assets/img/icons/lineal/startup.svg" class="svg-inject icon-svg icon-svg-md text-red me-4" alt="" /></div>
               <div>
-                <h4>Enrichment Project Programs</h4>
+                <h4>Enrichment Passion Project</h4>
                 <p> Sign up to learn the skills to complete an enrichment project to gain practical experience.</p>
               </div>
             </a> </li>
@@ -240,7 +240,7 @@ layout: default
               </div>
               <!--/column -->
               <div class="col-lg-6">
-                <h2 class="mb-3">Enrichment Project Programs</h2>
+                <h2 class="mb-3">Enrichment Passion Project</h2>
                 <p> Students will take on an enrichment project in a field of their choice: Software, game development, robotics, etc. They will be mentored by a Coding Mind instructor teaching them the skills to successfully complete an impressive project. Gain lifelong skills and aspire for success with our enrichment programs!</p>
                 <ul class="icon-list bullet-bg bullet-soft-red">
                   <li><i class="uil uil-check"></i>Reach Your Full Potential</li>
@@ -328,17 +328,30 @@ layout: default
                     <div class="swiper-wrapper pb-10">
                       {% assign courses = site.courses %}
                       {% for course in courses %}
-                      {% if 
-                        course.title == 'Innovative Programming with MIT Scratch' 
-                        or course.title == 'Javascript Programming with Minecraft MakeCode' 
-                        or course.title == 'Advanced Python Programming: Introduction to Algorithms' 
-                        or course.title == 'Mobile App Programming with MIT App Inventor' 
-                        or course.title == 'AP CS Boot Camp: Intro to Java Programming' 
+
+                      {% if page.locale == 'en' and
+                        course.name == 'MIT Scratch 1 - Programming and Practice' 
+                        or course.name == 'Roblox 1 Game Development - Basic Lua Programming' 
+                        or course.name == 'Python 1 - Introductory Programming' 
+                        or course.name == 'Flutter App Development' 
+                        or course.name == 'AP CSP Tutoring' 
                       %}
                       <div class="swiper-slide" data-cue="slideInUp">
                         {% include course.html %}
                       </div>
                       {% endif %}
+
+                      {% if page.locale == 'cn' and
+                      course.name == 'MIT Scratch创新编程与实践' 
+                      or course.name == 'Roblox 1游戏开发与Lua编程初步' 
+                      or course.name == 'Python编程初步' 
+                      or course.name == 'Flutter跨平台手机App开发' 
+                      or course.name == 'AP CSP专项辅导'  %}
+                      <div class="swiper-slide" data-cue="slideInUp">
+                        {% include course.html %}
+                      </div>
+                      {% endif %}
+
                       {% endfor %}
                     </div>
                   </div>
