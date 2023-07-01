@@ -822,7 +822,7 @@ var theme = {
                 fetch(baseUrl+ `Account`, {
                   mode: "no-cors",
                   method: "post",
-                  body: JSON.stringify(accountData),
+                  data: accountData,
                   headers: {
                     'Content-Type': 'application/json'
                   }
