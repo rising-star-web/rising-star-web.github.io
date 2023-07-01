@@ -10,7 +10,7 @@ gradeLevel: "L2 Script Programming"
 pathway: "Electrical Engineering"
 skillLevel: "Beginner - Intermediate"
 shortDescription : "Learn Microsoft's latest MicroBit programming, control electronic gadgets, use your creativity and experience the magic of programming!"
-description: "With the MicroSoft platform, JavaScript command line instruction control, and MakeCode block programming platform, we'll gradually bring students step by step into the world of electronic programming."
+description: "With the Microsoft platform, JavaScript command line instruction control, and MakeCode block programming platform, we'll gradually bring students step by step into the world of electronic programming."
 videoIntro : "https://www.youtube.com/embed/GEpZrvbsO7o"
 learningGoals:
 - "Create personalized world modeling"

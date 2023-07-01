@@ -13,8 +13,8 @@ shortDescription : "Programming controls Lego Mindstorms robots, learning the pr
 description: "Lego robots are popular all over the world. Through various building activities, students will learn to use a variety of sensors such as levers, gears, motors, and infrared light, and learn various modules and programming logic. With hands-on learning, students can fully stimulate their imagination, enhance their creative talents, and improve their logical thinking, communication, and problem-solving skills."
 videoIntro : "https://www.youtube.com/embed/DGfYDQTCdAQ"
 learningGoals:
-- "Learning and exploring the principles and technology of robotics"
-- "Mastering robot programming control algorithms"
+- "Learn and explore the principles and technology of robotics"
+- "Master robot programming control algorithms"
 - "Stimulate students' enthusiasm for computer programming"
 - "Learn hands-on problem-solving skills by building"
 - "Develop scientific innovation and teamwork skills"

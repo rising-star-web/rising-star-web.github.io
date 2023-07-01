@@ -13,7 +13,7 @@ shortDescription : "Learn the basics of Python in Microsoft's MakeCode platform 
 description: "Minecraft MakeCode programming is the most popular topic at the L2 level, and the course will be focused on learning how to design and develop Minecraft projects through script programming. Students will be able to program their own features and ideas that are not available in Minecraft games, creating unlimited possibilities for developing and releasing their own games."
 videoIntro : "https://www.youtube.com/embed/Yw1B6nj8JN0"
 learningGoals:
-- "Master the fundamentals and concepts of the Python programming language "
+- "Master the fundamentals and concepts of the Python programming language"
 - "Learn to program for real-world problems"
 - "Understand the basics of computer programming algorithms"
 - "Master the basics of game programming and development"

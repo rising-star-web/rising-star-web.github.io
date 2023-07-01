@@ -13,11 +13,11 @@ shortDescription : "Learn Python web scraping algorithms and learn data science.
 description: "This course introduces students to web scraping and data analysis application development as an L4 Applied Programming course. The course involves mastery of web crawling techniques as well as the principles of data-driven web application development. Create a data monitoring/analysis web application of your own. At the end of the course, each student will complete and publish their own data monitoring website."
 videoIntro : "https://www.youtube.com/embed/Yw1B6nj8JN0"
 learningGoals:
-- "Mastering web scraping technology"
+- "Master web scraping technology"
 - "Be more familiar with data structures"
-- "Mastering advanced knowledge of Python programming language"
+- "Master advanced knowledge of Python programming language"
 - "Independently design web scraping programs to get more data"
-- "Develop students' scientific skills, innovative skills and entrepreneurial mindset"
+- "Develop scientific skills, innovative skills and entrepreneurial mindset"
 - "Participate in technology and computer science-related project competitions"
 promotions:
 - title: "Crawling the Web with Python"
