@@ -266,3 +266,81 @@ height: 25vh;
 .collegeBanner {
     object-fit: contain;
 }
+
+
+.timeline {
+    display: table;
+}
+.timeline .timeline-item {
+    display: table-row;
+    padding: 0;
+}
+.timeline .timeline-item {
+    padding-right: 1.5rem;
+}
+.timeline-item .timeline-info, .timeline .timeline-item .timeline-marker {
+display: table-cell;
+vertical-align: top;
+}
+.timeline .timeline-item .timeline-marker {
+position: relative;
+}
+.timeline .timeline-item .timeline-content, .timeline .timeline-item .timeline-info, .timeline .timeline-item .timeline-marker {
+display: table-cell;
+vertical-align: top;
+}
+.timeline .timeline-item .timeline-content {
+padding-left: 1.5rem;
+}
+.timeline .timeline-item .timeline-content, .timeline .timeline-item .timeline-info, .timeline .timeline-item .timeline-marker {
+display: table-cell;
+vertical-align: top;
+}
+.timeline .timeline-item .timeline-content .timeline-title {
+margin-top: -.25rem;
+}
+
+.timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+.timeline .timeline-item {
+    position: relative;
+    padding-left: 2rem;
+}
+.timeline .timeline-item .timeline-info {
+    white-space: nowrap;
+    margin-bottom: .5rem;
+  }
+.timeline .timeline-item .timeline-marker {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: .6rem;
+    color: #3f78e0;
+}
+  .timeline .timeline-item .timeline-marker::after {
+    width: 1px;
+    background: rgba(164,174,198,.2);
+    top: 1rem;
+    left: 1.1rem;
+    bottom: 0;
+  }
+  .timeline .timeline-item:last-child .timeline-marker::after { display: none; }
+  .timeline .timeline-item .timeline-marker::after {
+    content: "";
+    display: block;
+    position: absolute;
+  }
+.timeline .timeline-item .timeline-content {
+    padding-bottom: 2rem;
+  }
+
+  @media (min-width: 992px) {
+    .position-lg-sticky {
+      position: sticky;
+    }
+  }
+  
