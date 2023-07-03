@@ -1,0 +1,96 @@
+name: EN
+
+whyenrichment:
+  header: Enrichment Passion Project
+  lead: Reasons To Improve Your Background When Applying To Top Schools!
+  reason1: There is a trend of weakening standardized test scores for admission to U.S. universities.
+  reason2: In addition to scores, students might lack competitive and valuable background experiences.
+  reason3: Popular majors such as computer science, finance, and business continue to become more difficult to apply.
+  reason4: The increasingly difficult application policies and situation for Asian applicants.
+
+accomplishment:
+  header: Your Benefits
+  lead: What Our Enrichment Program Can Do For You
+  description: Enrolling in our enrichment passion project is your key to unlocking unparalleled success.
+  benefitTitle1: College Research Internship
+  benefit1: Open doors to future internships and unleash your coding potential with our immersive coding project program. Elevate your skills, seize exciting opportunities, and embark on a transformative journey toward a successful career in the dynamic world of technology.
+  benefitTitle2: Publish Research Papers
+  benefit2: Through this immersive experience, you'll harness the power of coding to conduct groundbreaking research, analyze complex data, and publish impactful research papers that contribute to the advancement of knowledge in your field of expertise.
+  benefitTitle3: Publish Official Apps And Projects
+  benefit3: Through this transformative experience, you'll gain the skills and knowledge necessary to develop innovative and captivating apps, ultimately paving the way for you to publish your creations on the App Store and share them with the world. Get ready to leave your mark in the digital landscape and embark on an exciting journey towards becoming a successful app developer.
+  benefitTitle4: Join and Win Competitions
+  benefit4: Through our intensive coding project program, you'll gain the expertise and confidence needed to excel in hackathons, joining a community of talented individuals and positioning yourself for success as you compete, collaborate, and emerge victorious in these thrilling coding challenges.
+  benefitTitle5: File U.S. Patents
+  benefit5: Through this immersive program, you'll acquire the skills and knowledge necessary to develop groundbreaking solutions, paving the way for you to file U.S. patents and protect your revolutionary inventions, ensuring long-term recognition and potential commercial success.
+  benefitTitle6: Lanch Your Startup
+  benefit6: Through this immersive program, you'll acquire the technical expertise and entrepreneurial mindset needed to bring your innovative ideas to life, laying the foundation for you to create and launch your own successful startup, revolutionizing industries and making a lasting impact on the world.
+  benefitTitle7: Get Recommendation Letters
+  benefit7: Through this immersive program, you'll have the chance to showcase your skills, impress mentors, and build strong relationships, ultimately paving the way to secure glowing recommendation letters that will propel you towards your future academic and professional endeavors.
+
+projects:
+  header: Universities
+  lead: Coding Mind Students Got Accepted To
+  header2: Meet our Alumni
+  lead2: Coding Mind Students & Accomplishments
+  description: Check out what our previous Coding Mind Students have achieved!
+  button: See All Projects
+  student1: Leo Lee
+  university1: University of Pennsylvania
+  project1: Developed a University Application Prediction App using AI and Big Data.
+  student2: Felliane Teng
+  university2: California Institute of Technology
+  project2: Developed a mobile app that locks users from accessing other applications until the alloted time is over.
+  student3: Kelvin Lee
+  university3: UC Berkeley
+  project3: Created a Time Management App using AI Chatbots to help students plan their activities automatically.
+  student4: Andrew Tang
+  university4: Columbia University
+  project4: Built a French Dictation App to help improve users' knowledge and practice of the language.
+  student5: Charlie
+  university5: Cornell University
+  project5: Created a social media app that can let friends enjoy their favorite songs synchronously together.
+  student6: Jerry Hu
+  university6: UC Berkeley
+  project6: Developed a Diet App to help users' with dietary needs that automatically scans food through pictures and gives reasonable diet advice.
+
+process:
+  header: How it works?
+  lead: Our Service Process
+  description: Here are the enrichment project steps and why our valued customers choose us.
+  title1: Ideation
+  step1: Communicate with research advisors to help inspire research topics
+  title2: Personal Project Plan
+  step2: Make a customized project plan based on your experiences and desired major
+  title3: Development
+  step3: Learn and build a project prototype
+  title4: Research
+  step4: Conduct an experiment, research, and publish a professional paper
+  title5: Launch
+  step5: Publish a project officially and launch your very own startup
+  title6: Competitions
+  step6: Participate in various competitions and achieve accomplishments
+  title7: Make An Impact
+  step7: Promote your project and use your projects in real-life communities
+  title8: Project Summary
+  step8: We will help assist you into putting your accomplishments toward your college application
+
+strength:
+  header: Our Strengths
+  lead: This program is specifically designed to meet your needs.
+  title1: Customizable Plan
+  strength1: A fully customized passion project plan.
+  title2: Personal Development
+  strength2: Based on YOUR real experiences and interests.
+  title3: Goal-Based
+  strength3: Efficient and multi-goal-driven plan.
+  title4: Mentorship
+  strength4: Professional mentors from industry and academia.
+
+contact:
+  header: Let's Get Started
+  lead: Contact Us
+  description: Boost your college applications with our enrichment passion project program. Scan this QR Code to message us on WeChat.
+  button: Sign Up
+
+trial: Request a Free Trial
+  

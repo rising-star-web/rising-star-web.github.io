@@ -1,0 +1,95 @@
+name: 中文
+
+whyenrichment:
+  header: 背景提升的理由
+  lead: 申请名校为什么要提升背景?
+  reason1: 美国大学本科录取有逐渐弱化标化考试分数的趋势。
+  reason2: 除标化分数外，学生缺少具有竞争力的背景经历。
+  reason3: 计算机等热门专业申请难度持续增加。
+  reason4: 针对亚裔 愈发艰难的申请形势。
+
+accomplishment:
+  header: 您的收益
+  lead: 我们的丰富项目为您带来的好处
+  description: 加入我们的丰富激情项目，是您开启无与伦比成功之门的关键。
+  benefitTitle1: 大学研究实习
+  benefit1: 通过我们的沉浸式编程项目计划，打开未来实习的大门，释放您的编程潜力。提升您的技能，抓住令人兴奋的机会，并踏上通往科技世界成功职业的变革之旅。
+  benefitTitle2: 发表研究论文
+  benefit2: 通过这种沉浸式体验，您将利用编程的力量进行开创性的研究，分析复杂的数据，并发表对您专业领域知识进展有影响的研究论文。
+  benefitTitle3: 发布官方应用和项目
+  benefit3: 通过这种变革性的体验，您将获得开发创新和引人入胜的应用所需的技能和知识，最终为您在应用商店上发布自己的创作铺平道路，与世界分享。准备好在数字领域留下您的印记，踏上成为成功应用开发者的激动人心之旅。
+  benefitTitle4: 参加并赢得竞赛
+  benefit4: 通过我们的密集编程项目计划，您将获得在编程比赛中脱颖而出所需的专业知识和信心，加入才华横溢的个体社区，并在这些激动人心的编程挑战中竞争、合作、取得胜利。
+  benefitTitle5: 申请美国专利
+  benefit5: 通过这个沉浸式项目，您将获得开发突破性解决方案所需的技能和知识，为您申请美国专利，保护您的革命性发明，确保长期的认可和潜在的商业成功。
+  benefitTitle6: 创办初创企业
+  benefit6: 通过这个沉浸式项目，您将获得实现创新想法所需的技术专长和创业思维，为您创建和推出自己的成功初创企业奠定基础，革新行业，对世界产生持久影响。
+  benefitTitle7: 获得推荐信
+  benefit7: 通过这个沉浸式项目，您将有机会展示您的技能，给导师留下深刻印象，建立良好的关系，最终获得推荐信，助您在未来的学术和职业事业中取得成功。
+
+projects:
+  header: 大学
+  lead: Coding Mind 学生获得录取的大学
+  header2: 我们的校友
+  lead2: Coding Mind 学生和成就
+  description: 查看我们之前的 Coding Mind 学生取得的成就！
+  button: 查看所有项目
+  student1: Leo Lee
+  university1: University of Pennsylvania
+  project1: 使用人工智能和大数据开发了一款大学申请预测应用。
+  student2: Felliane Teng
+  university2: California Institute of Technology
+  project2: 开发了一款能够在规定时间内锁定用户不让其访问其他应用的移动应用。
+  student3: Kelvin Lee
+  university3: UC Berkeley
+  project3: 利用 AI 聊天机器人创建了一款时间管理应用，帮助学生自动规划活动。
+  student4: Andrew Tang
+  university4: Columbia University
+  project4: 构建了一款法语听写应用，帮助提升用户对该语言的了解和练习。
+  student5: Charlie
+  university5: Cornell University
+  project5: 创建了一款社交媒体应用，可以让朋友们同步欣赏他们喜爱的歌曲。
+  student6: Jerry Hu
+  university6: UC Berkeley
+  project6: 开发了一款饮食应用，通过图片自动识别食物并给出合理的饮食建议，帮助用户满足饮食需求。
+
+process:
+  header: 工作原理
+  lead: 背景提升项目流程
+  description: 这是丰富项目的步骤，以及为什么我们的尊贵客户选择我们。
+  title1: 启发题目
+  step1: 高校导师沟通，启发科研题目
+  title2: 项目调研
+  step2:  调查研究，确保课题方向 
+  title3: 学习技术
+  step3:  理清所需知识 学习必要技术 
+  title4: 项目开发
+  step4:  完成项目版本 确保稳定运行 
+  title5: 发布
+  step5:  开始科研试验 进行学术研究 
+  title6: 参加竞赛
+  step6:  发布作品 参加竞赛 
+  title7: 发表论文
+  step7:  发表论文 参加学术会议 
+  title8: 成立公司
+  step8:  申请专利 成立创业公司 
+
+strength:
+  header: 我们的优势
+  lead: 该项目专为满足您的需求而设计。
+  title1: 可定制的计划
+  strength1: 全面定制的激情项目计划。
+  title2: 个人发展
+  strength2: 基于您真实的经历和兴趣。
+  title3: 目标导向
+  strength3: 高效且多目标驱动的计划。
+  title4: 导师指导
+  strength4: 来自行业和学术界的专业导师。
+
+contact:
+  header: 让我们开始吧
+  lead: 联系我们
+  description: 通过扫描此二维码，在微信上与我们取得联系，提升您的大学申请。
+  button: 立即注册
+
+trial: 免费试用申请

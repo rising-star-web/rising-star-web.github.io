@@ -343,4 +343,8 @@ margin-top: -.25rem;
       position: sticky;
     }
   }
+
+.object-fit-cover{
+    object-fit: cover;
+}
   
