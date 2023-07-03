@@ -817,32 +817,56 @@ var theme = {
                   preferedLanguage: 'English'
                 };
 
-                console.log(accountData);
+                //console.log(accountData);
+                var formBody = [];
+                for (var property in accountData) {
+                  var encodedKey = encodeURIComponent(property);
+                  var encodedValue = encodeURIComponent(accountData[property]);
+                  formBody.push(encodedKey + "=" + encodedValue);
+                }
+                formBody = formBody.join("&");
 
                 fetch(baseUrl+ `Account`, {
-                  mode: "no-cors",
+                  mode: "cors",
                   method: "post",
-                  body: JSON.stringify(accountData),
                   headers: {
-                    'Content-Type': 'application/json'
-                  }
-                }).then(function successCallback(response) {
-                  console.log('user created', response);
+                    'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+                  },
+                  body: formBody
+                }).then(async function (response) {
+                  let resp = await response.json();
+                  //console.log('created', resp);
+                  console.log('user created');
                   console.log('start login');
-                  let studentId = response.data.id;
+                  let studentId = resp.id;
+
+                  let trialData= {
+                    codingExperience: experience,
+                    availability: availability,
+                    comment: "",
+                    signupTime: new Date(),
+                    accountId: studentId,
+                  }
+
+                  var formBody2 = [];
+                  for (var property in trialData) {
+                    var encodedKey = encodeURIComponent(property);
+                    var encodedValue = encodeURIComponent(trialData[property]);
+                    formBody2.push(encodedKey + "=" + encodedValue);
+                  }
+                  formBody2 = formBody2.join("&");
                   
                   fetch(baseUrl+ `TrialClasses`, {
-                    mode: "no-cors",
+                    mode: "cors",
                     method: "post",
-                    data: {
-                      codingExperience: experience,
-                      availability: availability,
-                      comment: "",
-                      signupTime: new Date(),
-                      accountId: studentId,
-                    }
-                  }).then(function successCallback(response) {
-                    console.log(response);
+                    headers: {
+                      'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+                    },
+                    body: formBody2
+                  }).then(async function (response) {
+                    let resp2 = await response.json();
+                    //console.log('trial created', resp2);
+                    console.log('trial created');
                     $('#formSpinner').css("display", "none");
                     $('#form').prepend(
                       'Your free trial request has been processed. We will contact you shortly. Meanwhile, feel free to reach out us by +1 (949) 236-7896 if you have any questions.'
