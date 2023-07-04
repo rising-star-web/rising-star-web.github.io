@@ -43,7 +43,7 @@ layout: default
 
             <div class="d-flex flex-row">
                 <div>
-                <img src="/assets/img/icons/lineal/analytics.svg" class="svg-inject icon-svg icon-svg-sm text-red me-5 mt-1" alt="" />
+                <img src="/assets/img/icons/lineal/analytics.svg" class="svg-inject icon-svg icon-svg-md text-red me-5 mt-1" alt="" />
                 </div>
                 <div>
                     <p class="mb-0">{{ site.data.enrichment[page.locale].whyenrichment.reason4 }}</p>
@@ -179,7 +179,43 @@ layout: default
         </div>
             <!--/column -->
         <div class="col-lg-6 order-1">
+            <figure class="rounded mb-0"><img src="/img/updated/enrichment/brand.jpg"  alt=""></figure>
+        </div>
+        <!--/column -->
+        </div>
+    </div>
+
+    <div class="col-xl-15">
+        <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 align-items-center">
+        <div class="col-lg-6 position-relative">
             <figure class="rounded mb-0"><img src="/img/updated/enrichment/startup.jpg"  alt=""></figure>
+        </div>
+        <!--/column -->
+        <div class="col-lg-6" data-cue="fadeIn">
+            <div class="card bg-soft-primary">
+            <div class="card-body">    
+                <h3 class="display-4 mb-4">{{ site.data.enrichment[page.locale].accomplishment.benefitTitle7 }}</h3>
+                <p class="mb-5"> {{ site.data.enrichment[page.locale].accomplishment.benefit7 }}</p>
+            </div>
+            </div>
+        </div>
+        <!--/column -->
+        </div>
+    </div>
+
+    <div class="col-xl-15">
+        <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 align-items-center ">
+        <div class="col-lg-6 order-2 order-lg-1" data-cue="fadeIn">
+        <div class="card bg-soft-primary">
+            <div class="card-body">    
+                <h3 class="display-4 mb-4">{{ site.data.enrichment[page.locale].accomplishment.benefitTitle8 }}</h3>
+                <p class="mb-5"> {{ site.data.enrichment[page.locale].accomplishment.benefit8 }}</p>
+            </div>
+            </div>
+        </div>
+            <!--/column -->
+        <div class="col-lg-6 order-1">
+            <figure class="rounded mb-0"><img src="/img/updated/enrichment/presidentialaward.png"  alt=""></figure>
         </div>
         <!--/column -->
         </div>
@@ -194,8 +230,8 @@ layout: default
         <div class="col-lg-6" data-cue="fadeIn">
             <div class="card bg-soft-primary">
             <div class="card-body">    
-                <h3 class="display-4 mb-4">{{ site.data.enrichment[page.locale].accomplishment.benefitTitle7 }}</h3>
-                <p class="mb-5"> {{ site.data.enrichment[page.locale].accomplishment.benefit7 }}</p>
+                <h3 class="display-4 mb-4">{{ site.data.enrichment[page.locale].accomplishment.benefitTitle9 }}</h3>
+                <p class="mb-5"> {{ site.data.enrichment[page.locale].accomplishment.benefit9 }}</p>
             </div>
             </div>
         </div>
@@ -246,7 +282,7 @@ layout: default
             <h2 class="fs-18 text-uppercase text-primary mb-3">{{ site.data.enrichment[page.locale].projects.header2 }}</h2>
             <h3 class="display-4 mb-3">{{ site.data.enrichment[page.locale].projects.lead2 }}</h3>
             <p>{{ site.data.enrichment[page.locale].projects.description }}</p>
-            <a href="/projects" class="btn btn-primary rounded-pill mt-3">{{ site.data.enrichment[page.locale].projects.button }}</a>
+            <a href="{{ site.data.nav[page.locale].nav.URL }}projects" class="btn btn-primary rounded-pill mt-3">{{ site.data.enrichment[page.locale].projects.button }}</a>
         </div>
         <!--/column -->
         <div class="col-lg-8 pt-7 pt-md-0">
@@ -511,7 +547,7 @@ layout: default
             <h2 class="fs-15 text-uppercase text-muted mb-3">{{ site.data.enrichment[page.locale].contact.header }}</h2>
             <h3 class="display-4 mb-3">{{ site.data.enrichment[page.locale].contact.lead }}</h3>
             <p class="lead fs-lg"> {{ site.data.enrichment[page.locale].contact.description }}</p>
-            <a href="#" class="btn btn-primary rounded-pill mt-2">{{ site.data.enrichment[page.locale].contact.button }}</a>
+            <a href="{{ site.data.nav[page.locale].nav.URL }}contact-us" class="btn btn-primary rounded-pill mt-2">{{ site.data.enrichment[page.locale].contact.button }}</a>
         </div>
         <!--/column -->
         </div>
@@ -528,8 +564,8 @@ layout: default
 
 
 <!-- Request Free Trial Bottom Button -->
-<div class="free-trial-wrap">
-    <a href="/free-trial" class="btn btn-primary rounded-pill">
+<div class="{{ site.data.enrichment[page.locale].trialStyle }}">
+    <a href="{{ site.data.nav[page.locale].nav.URL }}free-trial" class="btn btn-primary rounded-pill">
         {{ site.data.enrichment[page.locale].trial }}
     <img src="/assets/img/icons/solid/touchscreen.svg" class="svg-inject icon-svg icon-svg-xs solid-mono w-4 ms-2 text-white h-4" alt="" />
     </a>

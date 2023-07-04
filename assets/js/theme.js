@@ -598,6 +598,8 @@ var theme = {
   pageProgress: () => {
     var progressWrap = document.querySelector('.progress-wrap');
     var freeTrial = document.querySelector('.free-trial-wrap');
+    var freeTrialCN = document.querySelector('.free-trial-wrap-cn');
+
     if(freeTrial !=null){
       var offset = 50;
       window.addEventListener("scroll", function(event) {
@@ -608,8 +610,20 @@ var theme = {
           freeTrial.classList.remove("show-trial")
         }
       });
-
     }
+
+    if(freeTrialCN !=null){
+      var offset = 50;
+      window.addEventListener("scroll", function(event) {
+        var scrollElementPos = document.body.scrollTop || document.documentElement.scrollTop;
+        if(scrollElementPos >= offset) {
+          freeTrialCN.classList.add("show-trial")
+        } else {
+          freeTrialCN.classList.remove("show-trial")
+        }
+      });
+    }
+
     if(progressWrap != null) {
       var progressPath = document.querySelector('.progress-wrap path');
       var pathLength = progressPath.getTotalLength();

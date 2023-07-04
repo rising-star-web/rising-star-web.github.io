@@ -15,17 +15,21 @@ accomplishment:
   benefitTitle1: College Research Internship
   benefit1: Open doors to future internships and unleash your coding potential with our immersive coding project program. Elevate your skills, seize exciting opportunities, and embark on a transformative journey toward a successful career in the dynamic world of technology.
   benefitTitle2: Publish Research Papers
-  benefit2: Through this immersive experience, you'll harness the power of coding to conduct groundbreaking research, analyze complex data, and publish impactful research papers that contribute to the advancement of knowledge in your field of expertise.
+  benefit2: Harness the power of coding to conduct groundbreaking research, analyze complex data, and publish impactful research papers that contribute to the advancement of knowledge in your field of expertise.
   benefitTitle3: Publish Official Apps And Projects
-  benefit3: Through this transformative experience, you'll gain the skills and knowledge necessary to develop innovative and captivating apps, ultimately paving the way for you to publish your creations on the App Store and share them with the world. Get ready to leave your mark in the digital landscape and embark on an exciting journey towards becoming a successful app developer.
+  benefit3: You'll gain the skills and knowledge necessary to develop innovative and captivating apps, ultimately paving the way for you to publish your creations on the App Store and share them with the world. Get ready to leave your mark in the digital landscape and embark on an exciting journey towards becoming a successful app developer.
   benefitTitle4: Join and Win Competitions
   benefit4: Through our intensive coding project program, you'll gain the expertise and confidence needed to excel in hackathons, joining a community of talented individuals and positioning yourself for success as you compete, collaborate, and emerge victorious in these thrilling coding challenges.
   benefitTitle5: File U.S. Patents
-  benefit5: Through this immersive program, you'll acquire the skills and knowledge necessary to develop groundbreaking solutions, paving the way for you to file U.S. patents and protect your revolutionary inventions, ensuring long-term recognition and potential commercial success.
-  benefitTitle6: Lanch Your Startup
-  benefit6: Through this immersive program, you'll acquire the technical expertise and entrepreneurial mindset needed to bring your innovative ideas to life, laying the foundation for you to create and launch your own successful startup, revolutionizing industries and making a lasting impact on the world.
-  benefitTitle7: Get Recommendation Letters
-  benefit7: Through this immersive program, you'll have the chance to showcase your skills, impress mentors, and build strong relationships, ultimately paving the way to secure glowing recommendation letters that will propel you towards your future academic and professional endeavors.
+  benefit5: Acquire the skills and knowledge necessary to develop groundbreaking solutions, paving the way for you to file U.S. patents and protect your revolutionary inventions, ensuring long-term recognition and potential commercial success.
+  benefitTitle6: Make a Brand and Website
+  benefit6: Craft a captivating brand identity and build a stunning website, empowering you to leave a lasting impression, attract audiences, and unlock endless possibilities for success in the digital realm..
+  benefitTitle7: Lanch Your Startup
+  benefit7: Acquire the technical expertise and entrepreneurial mindset needed to bring your innovative ideas to life, laying the foundation for you to create and launch your own successful startup, revolutionizing industries and making a lasting impact on the world.
+  benefitTitle8: Presidential Volunteer Service Award
+  benefit8: Create meaningful projects that address pressing societal challenges, positioning you for recognition and eligibility for the prestigious Presidential Volunteer Service Award, a testament to your dedication and service to others.
+  benefitTitle9: Get Recommendation Letters
+  benefit9: Through this immersive program, you'll have the chance to showcase your skills, impress mentors, and build strong relationships, ultimately paving the way to secure glowing recommendation letters that will propel you towards your future academic and professional endeavors.
 
 projects:
   header: Universities
@@ -93,4 +97,4 @@ contact:
   button: Sign Up
 
 trial: Request a Free Trial
-  
+trialStyle: free-trial-wrap
