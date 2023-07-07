@@ -4,14 +4,14 @@ layout: student_project_detail
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/截屏2023-07-06 下午7.38.50.png"
 pagePostDate: "15 Feb 2022"
-studentName: "William"
+studentName: "Angel"
 projectName: "AI and Machine Learning Methods "
 projectCategory: "App Development"
 projectDesc: "Admission to UC Berkeley"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "MoodLink"
-bodyText1: " William, a 7th grade student, won the first place in the new energy group in the final of the California science competition with his AI intelligent air conditioning control and energy saving system. The achievement underscores the growing competitive advantage of computing programs in traditional scientific fields. The close combination of science and technology and environmental protection has intensified the competition in the field of new energy, and also highlighted the great potential of science and technology to solve modern problems."
+bodyText1: " Angel from the Princeton School of Data Science used AI and machine learning methods to innovatively improve the way of training big data models, and thus won the gold medal in the Kaggle algorithm competition."
 bodyText2: "William's innovative ability and practical skills are outstanding, and his achievements are rare among his peers. His projects shed light on the importance of computer science to the modern world, especially in addressing environmental and energy issues. His success provided a role model for his fellow students to use technology to solve problems. His potential for the future is limitless, and we expect him to continue to achieve greater achievements in the fields of science and technology."
 projectURL: "https://www.google.com/"
 awardsDesc: "Admission to UC Berkeley "
