@@ -381,3 +381,4 @@ margin-top: -.25rem;
     object-fit: cover;
 }
   
+.btn.btn-expand:hover i {color:white !important}

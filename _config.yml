@@ -80,10 +80,6 @@ collections:
     output: true
   careers:
     output: true
-  reviews:
-    output: true
-  showcases:
-    output: true
 
 defaults:
   - values: 

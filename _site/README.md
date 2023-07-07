@@ -17,7 +17,6 @@ Contains markdown files that affect the content of the website, similar to JSON
 |  _careers |  https://codingmind.com/careers | 
 | _courses | https://codingmind.com/courses |
 | _projects | https://codingmind.com/projects |
-| _reviews | Reviews throughout the website|
 
 #### Includes: 
 _includes contains reusable components reused throughout the website
@@ -43,8 +42,6 @@ _includes contains reusable components reused throughout the website
 |privacypolicy.html | used for privacy policy content found in the footer |
 |project.html | used for project card layout |
 |projectslide.html | used for recommended projects layout in project details page |
-|review.html | used for reviews in homepage |
-|showcase.html | used for showcases in homepage |
 |termsandconditions.html | used for terms and conditions content found in the footer |
 
 #### Layouts: 
