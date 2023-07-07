@@ -4,17 +4,17 @@ layout: student_project_detail
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/截屏2023-07-06 下午7.25.53.png"
 pagePostDate: "15 Feb 2022"
-studentName: "William"
+studentName: "Matthew"
 projectName: "Nutrition and Technology "
 projectCategory: "App Development"
-projectDesc: "Admission to UC Berkeley"
+projectDesc: "Admission to Stanford University"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "MoodLink"
 bodyText1: " Matthew, from the Department of Computer Science at Stanford University, successfully used artificial intelligence algorithms to protect against cyber attacks on autonomous driving computer systems. His breakthrough work has been published as papers and patents."
 bodyText2: "Matthew's brilliance and forward-looking perspective are evident in each of his studies. His achievements in the field of AI and network security have established him as a future leader in the field of computer science."
 projectURL: "https://www.google.com/"
-awardsDesc: "Admission to UC Berkeley "
+awardsDesc: "Admission to Stanford University "
 contentImage: "/img/updated/projects/IMG_3663.JPG"
 contentImage2: "/img/updated/projects/IMG_3662.JPG"
 ---
