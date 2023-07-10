@@ -4,17 +4,17 @@ layout: student_project_detail
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/截屏2023-06-29 下午6.14.03.png"
 pagePostDate: "15 Feb 2022"
-studentName: "William"
-projectName: "Nutrition and Technology "
+studentName: "Stier"
+projectName: "Music And Algorithms "
 projectCategory: "App Development"
-projectDesc: "Admission to UC Berkeley"
+projectDesc: "Columbia University, Georgia Institute of Technology"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "MoodLink"
-bodyText1: " William, a 7th grade student, won the first place in the new energy group in the final of the California science competition with his AI intelligent air conditioning control and energy saving system. The achievement underscores the growing competitive advantage of computing programs in traditional scientific fields. The close combination of science and technology and environmental protection has intensified the competition in the field of new energy, and also highlighted the great potential of science and technology to solve modern problems."
-bodyText2: "William's innovative ability and practical skills are outstanding, and his achievements are rare among his peers. His projects shed light on the importance of computer science to the modern world, especially in addressing environmental and energy issues. His success provided a role model for his fellow students to use technology to solve problems. His potential for the future is limitless, and we expect him to continue to achieve greater achievements in the fields of science and technology."
+bodyText1: " Stier developed an optimized algorithm for searching movie titles through video clips, and was admitted to 4 top CS graduate students. His research, inspired by music recognition technology, has revolutionized movie search."
+bodyText2: "Stier's optimization algorithm has achieved great success in video clip search, and his research results are impressive. Congratulations to him for his admission, as his work demonstrates the great potential of technology for the film industry."
 projectURL: "https://www.google.com/"
-awardsDesc: "Admission to UC Berkeley "
+awardsDesc: "Admission of CS from Columbia University, Georgia Institute of Technology and other four prestigious schools "
 contentImage: "/img/updated/projects/IMG_3663.JPG"
 contentImage2: "/img/updated/projects/IMG_3662.JPG"
 ---
