@@ -382,3 +382,6 @@ margin-top: -.25rem;
 }
   
 .btn.btn-expand:hover i {color:white !important}
+
+.solid-duo.text-navy-primary .fill-primary {fill: #414b64;}.solid-duo.text-navy-primary .fill-secondary {fill: #4494f5;}
+.icon-svg.icon-svg-xxs {width: 1.2rem ;height: 1.2rem;}
