@@ -2,65 +2,65 @@ name: 中文
 
 whyenrichment:
   header: 背景提升的理由
-  lead: 申请名校为什么要提升背景?
-  reason1: 美国大学本科录取有逐渐弱化标化考试分数的趋势。
-  reason2: 除标化分数外，学生缺少具有竞争力的背景经历。
+  lead: 名校申请为什么需要背景提升助力?
+  reason1: 美国大学录取新趋势：逐渐弱化标化考试分数。
+  reason2: 申请背景单一，学生缺少具有竞争力的经历。
   reason3: 计算机等热门专业申请难度持续增加。
-  reason4: 针对亚裔 愈发艰难的申请形势。
+  reason4: 面对亚裔，申请形势愈发艰难。
 
 accomplishment:
   header: 您的收益
-  lead: 我们的丰富项目为您带来的好处
-  description: 加入我们的丰富激情项目，是您开启无与伦比成功之门的关键。
+  lead: 背景提升项目能给同学带来什么
+  description: 背景提升项目，帮助同学走向名校的阶梯
   benefitTitle1: 大学研究实习
-  benefit1: 通过我们的沉浸式编程项目计划，打开未来实习的大门，释放您的编程潜力。提升您的技能，抓住令人兴奋的机会，并踏上通往科技世界成功职业的变革之旅。
-  benefitTitle2: 发表研究论文
-  benefit2: 通过这种沉浸式体验，您将利用编程的力量进行开创性的研究，分析复杂的数据，并发表对您专业领域知识进展有影响的研究论文。
-  benefitTitle3: 发布官方应用和项目
-  benefit3: 通过这种变革性的体验，您将获得开发创新和引人入胜的应用所需的技能和知识，最终为您在应用商店上发布自己的创作铺平道路，与世界分享。准备好在数字领域留下您的印记，踏上成为成功应用开发者的激动人心之旅。
+  benefit1: 美国大学科研与实习经历，提前适应科研环境。
+  benefitTitle2: 发表学术论文
+  benefit2: 鼓励学生把技术问题转化为科研问题，做实验，发表国际会议论文。
+  benefitTitle3: 发布官方应用
+  benefit3: 保存所有编程相关的程序文档，官方发布自己的应用。
   benefitTitle4: 参加并赢得竞赛
-  benefit4: 通过我们的密集编程项目计划，您将获得在编程比赛中脱颖而出所需的专业知识和信心，加入才华横溢的个体社区，并在这些激动人心的编程挑战中竞争、合作、取得胜利。
+  benefit4: 以竞赛为阶段性目标，在竞赛中锻炼成长，为名校申请积累独特的经历和信心。
   benefitTitle5: 申请美国专利
-  benefit5: 通过这个沉浸式项目，您将获得开发突破性解决方案所需的技能和知识，为您申请美国专利，保护您的革命性发明，确保长期的认可和潜在的商业成功。
+  benefit5: 申请美国专利，保护创新内容，为申请名校背书。
   benefitTitle6: 建立品牌和网站
-  benefit6: 打造引人注目的品牌形象和令人惊叹的网站，让您留下深刻印象，吸引受众，在数字领域开启无限的成功可能性。
+  benefit6: 打造商业品牌，构建网站，吸引受众，从而更成功的推广项目。
   benefitTitle7: 创办初创企业
-  benefit7: 通过这个沉浸式项目，您将获得实现创新想法所需的技术专长和创业思维，为您创建和推出自己的成功初创企业奠定基础，革新行业，对世界产生持久影响。
+  benefit7: 从零开始创立一个初创企业，体会创业者的乐趣与挑战。
   benefitTitle8: 总统义工服务奖 PVSA
-  benefit8: 创建解决紧迫社会问题的有意义项目，使您获得认可，并有资格获得备受推崇的总统义工服务奖，这是对您奉献和服务他人的明证。
+  benefit8: 利用创新项目回馈社会，并有资格获得总统义工奖，助力名校申请。
   benefitTitle9: 获得推荐信
-  benefit9: 通过这个沉浸式项目，您将有机会展示您的技能，给导师留下深刻印象，建立良好的关系，最终获得推荐信，助您在未来的学术和职业事业中取得成功。
+  benefit9: 通过这个沉浸式项目，同学将有机会与导师近距离接触，给导师留下深刻的印象，并获得教授的亲笔推荐信。
 
 projects:
   header: 大学
-  lead: Coding Mind 学生获得录取的大学
+  lead: 往届成绩
   header2: 我们的校友
-  lead2: Coding Mind 学生和成就
-  description: 查看我们之前的 Coding Mind 学生取得的成就！
+  lead2: 过往录取摘录
+  description: 辉煌历史，面向未来！
   button: 查看所有项目
   student1: Leo Lee
-  university1: University of Pennsylvania
-  project1: 使用人工智能和大数据开发了一款大学申请预测应用。
+  university1: University of Pennsylvania（Finance）
+  project1: Leo通过跟踪虚拟电子货币的走势来进行货币风险评估，发布App与科研论文，被UPenn经济系录取
   student2: Felliane Teng
-  university2: California Institute of Technology
-  project2: 开发了一款能够在规定时间内锁定用户不让其访问其他应用的移动应用。
+  university2: California Institute of Technology（Physics)
+  project2: Felinna利用3D建模模拟物理学实验并预测结果，从而被CalTech物理学专业录取
   student3: Kelvin Lee
   university3: UC Berkeley
-  project3: 利用 AI 聊天机器人创建了一款时间管理应用，帮助学生自动规划活动。
+  project3: Kelvin利用AI聊天机器人创建了一款时间管理应用，帮助学生自动规划活动，发表了科研论文，被UC Berkeley录取
   student4: Andrew Tang
-  university4: Columbia University
-  project4: 构建了一款法语听写应用，帮助提升用户对该语言的了解和练习。
-  student5: Charlie
-  university5: Cornell University
-  project5: 创建了一款社交媒体应用，可以让朋友们同步欣赏他们喜爱的歌曲。
-  student6: Jerry Hu
-  university6: UC Berkeley
-  project6: 开发了一款饮食应用，通过图片自动识别食物并给出合理的饮食建议，帮助用户满足饮食需求。
+  university4: Carnegie Mellon University（Information Science）
+  project4: Thomas同学通过物联网与计算机视觉算法开发出了一款安全驾驶软件，可以通过面部识别探测驾驶员精神注意程度，被CMU Information Science专业录取
+  student5: Andy
+  university5: NYU Stern（Business）
+  project5: Andy同学利用大数据分析中小企业的创业增长趋势，发表论文与专利，被NYU Stern商学院录取
+  student6: Max
+  university6: MIT（Engineering）
+  project6: Max利用人工智能将建筑的外观图片成功还原成设计图纸，发表论文与专利，被MIT工学院录取
 
 process:
   header: 工作原理
   lead: 背景提升项目流程
-  description: 这是丰富项目的步骤，以及为什么我们的尊贵客户选择我们。
+  description: 高校名师指导完成，祝你走上名校的阶梯
   title1: 启发题目
   step1: 高校导师沟通，启发科研题目
   title2: 项目调研
@@ -80,20 +80,20 @@ process:
 
 strength:
   header: 我们的优势
-  lead: 该项目专为满足您的需求而设计。
-  title1: 可定制的计划
-  strength1: 全面定制的激情项目计划。
-  title2: 个人发展
-  strength2: 基于您真实的经历和兴趣。
-  title3: 目标导向
-  strength3: 高效且多目标驱动的计划。
-  title4: 导师指导
-  strength4: 来自行业和学术界的导师。
+  lead: Coding Minds编程思维名校背景提升项目是针对志在申请名校，需要提升申请背景的同学开发的项目导向课程。通过发布，科研，创业，竞赛帮助同学们打好走向名校的基石。
+  title1: 全方位定制的科研项目
+  strength1: 根据同学的需求一对一定制科研项目
+  title2: 和背景相结合的科研目标
+  strength2: 结合同学个人相关背景，真实合理
+  title3: 以目标为导向开展项目
+  strength3: 以目标为导向，简洁高效
+  title4: 名校名师亲身指导
+  strength4: 来自工业界和学术界的大牛导师一对一辅导
 
 contact:
   header: 让我们开始吧
   lead: 联系我们
-  description: 通过扫描此二维码，在微信上与我们取得联系，提升您的大学申请。
+  description: 通过扫描此二维码联系我们，申请试课
   button: 立即注册
 
 trial: 免费试用申请
