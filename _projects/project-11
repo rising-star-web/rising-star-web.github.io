@@ -4,10 +4,10 @@ layout: student_project_detail
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/截屏2023-07-06 下午7.27.30.png"
 pagePostDate: "15 Feb 2022"
-studentName: "Angel"
-projectName: "AI and Machine Learning Methods "
+studentName: "Leo"
+projectName: "Finance App "
 projectCategory: "App Development"
-projectDesc: "Admission to Princeton"
+projectDesc: "Admission to UPenn"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "AI and Machine Learning Methods"
