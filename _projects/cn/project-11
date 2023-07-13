@@ -4,10 +4,10 @@ layout: student_project_detail
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/截屏2023-07-06 下午7.27.30.png"
 pagePostDate: "2022年3月3日"
-studentName: "Angel"
-projectName: "AI和机器学习方法"
+studentName: "Lea"
+projectName: "金融App发布"
 projectCategory: "App Development"
-projectDesc: "Princeton录取"
+projectDesc: "UPenn录取"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "AI和机器学习方法"
