@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-07-06 下午7.44.07.png"
+coverImage: "/img/updated/projects/截屏2023-07-06 下午7.19.28.png"
 pagePostDate: "2022年3月3日"
 studentName: "Jacky"
 projectName: "篮球姿势分析"
