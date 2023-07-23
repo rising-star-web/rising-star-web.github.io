@@ -4,7 +4,7 @@ jobSite: On-Site or Remote
 shiftLength: ""
 jobTitle: Unity Game Developer/Instructor
 layout: career_detail
-jobLocation: Irvine, CA
+jobLocation: Irvine, CA or Remote
 jobDescription: We are looking for passionate Unity game development instructors
   to teach project-based K-12 students in after-school programs, weekend
   workshops, and camps. You don't have to be professional on Unity, but you need
