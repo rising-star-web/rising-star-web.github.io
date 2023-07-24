@@ -4,15 +4,15 @@ layout: student_project_detail
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/截屏2023-07-06 下午7.19.28.png"
 pagePostDate: "15 Feb 2022"
-studentName: "Jacky"
-projectName: "Basketball and Coding "
+studentName: "Jenna"
+projectName: "Email and Coding "
 projectCategory: "App Development"
-projectDesc: "Admission to Webb"
+projectDesc: "Admission to Cornell"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "AI and Machine Learning Methods"
-bodyText1: " Jacky has successfully developed a basketball posture tracking APP, which is based on a unique posture analysis algorithm. His innovation was patented and earned him admission to Webb College."
-bodyText2: "Jacky's innovative ability is amazing, and he has successfully applied technical theory to practice. He not only possesses a deep knowledge of computer science, but also exhibits excellent problem-solving skills and independent thinking. His success proves that he will achieve brilliant achievements in his future academic and professional career"
+bodyText1: " Jenna successfully designed an email plugin designed to improve user productivity from a psychological point of view. She not only published a paper on this innovation, but also applied for a patent, thus gaining admission to Cornell's psychology major."
+bodyText2: "Jenna combines psychological principles with practical problems, and the email plug-ins she designs reflect her innovative thinking and practical ability. Her talent and unique insights have significant effects in solving practical problems, and she has won high recognition from Cornell's psychology major."
 projectURL: "https://www.google.com/"
 awardsDesc: "Admission to Webb "
 contentImage: "/img/updated/projects/IMG_3663.JPG"
