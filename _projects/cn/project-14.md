@@ -4,18 +4,18 @@ layout: student_project_detail
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/截屏2023-07-06 下午7.35.56.png"
 pagePostDate: "2022年3月3日"
-studentName: "Jacky"
-projectName: "篮球姿势分析"
+studentName: "Andy"
+projectName: "数据和创业结合"
 projectCategory: "App Development"
-projectDesc: "Webb录取"
+projectDesc: "NYU Stern录取"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "AI和机器学习方法"
-bodyText1: "Jacky成功地开发出一款篮球姿势追踪APP，该APP基于独特的姿势分析算法。他的这项创新成果获得专利，并使他得到了Webb学院的录取"
-bodyText2: "Jacky的创新能力令人赞叹，他成功的将技术理论应用到实践中。他不仅具有深厚的计算机科学知识，也表现出出色的解决问题的能力和独立思考的精神。他的成功证明了他在未来学术和职业生涯中将取得辉煌的成就"
+headerTitle: "创业和数据相结合"
+bodyText1: "Andy, 一个才华横溢的研究者，成功地使用大数据分析中小企业的创业增长趋势。他的研究成果不仅发表了论文，还申请了专利。由于这些重大贡献，他已被NYU Stern商学院录取。"
+bodyText2: "Andy是一个富有创新和实践精神的人，他的学术成果证明了他在商业领域的深度理解和实际应用能力。他将大数据与商业策略相结合，解决了中小企业面临的独特挑战。这些能力使他在NYU Stern商学院中得到了高度认可"
 URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
-awardsDesc: "学员获Webb录取"
+awardsDesc: "学员获NYU Stern录取"
 contentImage: "/img/updated/projects/IMG_3675.JPG"
 contentImage2: "/img/updated/projects/IMG_3676.JPG"
 
