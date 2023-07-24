@@ -5,7 +5,7 @@ layout: student_project_detail
 coverImage: "/img/updated/projects/截屏2023-07-06 下午7.35.56.png"
 pagePostDate: "15 Feb 2022"
 studentName: "Andy"
-projectName: "Basketball and Coding "
+projectName: "Business and Coding "
 projectCategory: "App Development"
 projectDesc: "Admission to NYU Stern"
 
