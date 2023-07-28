@@ -4,17 +4,17 @@ layout: student_project_detail
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/截屏2023-07-06 下午7.40.12.png"
 pagePostDate: "15 Feb 2022"
-studentName: "Andy"
-projectName: "Business and Coding "
+studentName: "Eva"
+projectName: "3D cell models "
 projectCategory: "App Development"
-projectDesc: "Admission to NYU Stern"
+projectDesc: "Admission to John Hopkins"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "AI and Machine Learning Methods"
-bodyText1: " Andy, a talented researcher, has successfully used big data to analyze the entrepreneurial growth trends of SMEs. His research results not only published papers, but also applied for patents. Because of these significant contributions, he has been admitted to the NYU Stern School of Business."
-bodyText2: "Andy is an innovative and practical person, his academic achievements prove his deep understanding and practical application ability in the business field. He combines big data with business strategy to address the unique challenges faced by SMEs. These abilities have made him highly recognized in the NYU Stern School of Business."
+bodyText1: " Leveraging 3D cell models to simulate cellular activity and predict outputs, Eva successfully published papers and patents, securing her admission into John Hopkins' Biology program."
+bodyText2: "Eva demonstrates exceptional technical prowess and innovative thinking in her biological research. Her work not only embodies scientific rigor but also reflects a deep understanding of complex biological processes, which is truly commendable.."
 projectURL: "https://www.google.com/"
-awardsDesc: "Admission to NYU Stern "
+awardsDesc: "Admission to John Hopkins' Biology program "
 contentImage: "/img/updated/projects/IMG_3663.JPG"
 contentImage2: "/img/updated/projects/IMG_3662.JPG"
 ---
