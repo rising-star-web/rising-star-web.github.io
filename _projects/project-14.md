@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-07-06 下午7.35.56.png"
+coverImage: "/img/updated/projects/截屏2023-07-06 下午7.40.12.png"
 pagePostDate: "15 Feb 2022"
 studentName: "Andy"
 projectName: "Business and Coding "
