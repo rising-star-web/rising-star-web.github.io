@@ -17,6 +17,6 @@ URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
 awardsDesc: "学员获John Hopkins录取"
 contentImage: "/img/updated/projects/截屏2023-07-31 上午10.44.23.png"
-contentImage2: "/img/updated/projects/IMG_3676.JPG"
+contentImage2: "/img/updated/projects/截屏2023-07-31 上午10.44.40.png"
 
 ---
