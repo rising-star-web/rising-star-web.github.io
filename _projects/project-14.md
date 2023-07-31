@@ -16,5 +16,5 @@ bodyText2: "Eva demonstrates exceptional technical prowess and innovative thinki
 projectURL: "https://www.google.com/"
 awardsDesc: "Admission to John Hopkins' Biology program "
 contentImage: "/img/updated/projects/截屏2023-07-31 上午10.44.40.png"
-contentImage2: "/img/updated/projects/IMG_3662.JPG"
+contentImage2: "/img/updated/projects/截屏2023-07-31 上午10.44.23.png"
 ---
