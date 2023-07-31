@@ -16,7 +16,7 @@ bodyText2: "Eva在生物学研究方面展现出卓越的技术能力和创新�
 URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
 awardsDesc: "学员获John Hopkins录取"
-contentImage: "/img/updated/projects/IMG_3675.JPG"
+contentImage: "/img/updated/projects/截屏2023-07-31 上午10.44.23.png"
 contentImage2: "/img/updated/projects/IMG_3676.JPG"
 
 ---
