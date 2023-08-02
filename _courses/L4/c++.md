@@ -22,7 +22,7 @@ learningGoals:
 promotions:
 - title: "A Historical Language"
   text: "C++ is an old but a class programming language. It is still highly used to this day. Learning C++ will give you a boost in understanding needed to learn other languages."
-  imageURL: "img/my/c++/c++.jpg"
+  imageURL: "img/my/c++/c++.png"
 - title: "Experience Low Level Abstraction Programming"
   text: "Mastering low level abstraction programming will make you a great programmer who understands the ins and outs of computer science. With the knowledge you learn from C++, you can apply it to higher level abstraction languages such as Python and Java."
   imageURL: "img/my/c++/c++1.png"

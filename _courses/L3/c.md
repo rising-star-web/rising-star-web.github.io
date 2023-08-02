@@ -22,7 +22,7 @@ learningGoals:
 promotions:
 - title: "A Historical Language"
   text: "C is widely considered to be one of the first programming languages. It is still highly used to this day. Learning C will give you a boost in understanding needed to learn other languages."
-  imageURL: "img/my/c/code.jpg"
+  imageURL: "img/my/c/code.png"
 - title: "Experience Low Level Abstraction Programming"
   text: "Mastering low level abstraction programming will make you a great programmer who understands the ins and outs of computer science. With the knowledge you learn from C, you can apply it to higher level abstraction languages such as Python and Java."
   imageURL: "img/my/c/code3.png"
