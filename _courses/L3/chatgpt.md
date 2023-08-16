@@ -18,7 +18,7 @@ learningGoals:
 - "Understand why prompt engineering is important"
 - "Learn many different prompt patterns for different situations"
 - "Learn how to use the ChatGPT Python library"
-- "Create your own simple website using ChatGPT"
+- "Create student's own simple website using ChatGPT"
 promotions:
 - title: "The Power of AI at Fingertips"
   text: "It's no secret that ChatGPT is transforming the way that we solve everyday problems. Go beyond that by learning how to make ChatGPT do nearly anything students need it to."
