@@ -32,7 +32,7 @@ promotions:
 - title: "掌握数据结构"
   text: "编程的对象是数据，了解数据以及如何存储和处理数据是编程的基本技能。"
   imageURL: "img/my/c_plus_plus/c++3.png"
-- title: "做一名年轻的游戏创业者"
+- title: "做一名年轻的编程创业者"
   text: "实践动手能力远比理论知识重要。每一门课程都旨在让学生学会如何通过努力将项目创意变为现实。在这些挑战中，年轻的小企业家们得到了锻炼。"
   imageURL: "img/my/c_plus_plus/c++4.png"
 ---
