@@ -21,10 +21,10 @@ learningGoals:
 - "Participate in technology and computer science-related project competitions"
 promotions:
 - title: "A Historical Language"
-  text: "C++ is an old but a classic programming language. It is still highly used to this day. Learning C++ will give students a boost in understanding needed to learn other languages."
+  text: "C++ is an old but classic programming language. It is still highly used to this day. Learning C++ will give students a boost in understanding needed to learn other languages."
   imageURL: "img/my/c_plus_plus/c++.png"
 - title: "Experience Low Level Abstraction Programming"
-  text: "Mastering low level abstraction programming will make students a great programmer who understands the ins and outs of computer science. With the knowledge you learn from C++, students can apply it to higher level abstraction languages such as Python and Java."
+  text: "Mastering low level abstraction programming will make students great programmers who understand the ins and outs of computer science. With the knowledge you learn from C++, students can apply it to higher level abstraction languages such as Python and Java."
   imageURL: "img/my/c_plus_plus/c++1.png"
 - title: "Learn Computer Algorithms"
   text: "The core of learning computational thinking is computer algorithms, With a fundamental knowledge of C++, students can start learning algorithms from college courses."
