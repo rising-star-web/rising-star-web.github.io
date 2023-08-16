@@ -20,7 +20,7 @@ learningGoals:
 - "Learn how to use ChatGPT to make AI Art better"
 - "Create  student's own portfolio using Midjourney"
 promotions:
-- title: "The Power of AI at Your Fingertips"
+- title: "The Power of AI at Fingertips"
   text: "Midjourney can make stunning images for students, and all students need to do is to feed it a couple of words. With specialized prompts, students can make it do even more."
   imageURL: "img/my/aiart/midjourney.png"
 - title: "Get Ahead of the Curve"
