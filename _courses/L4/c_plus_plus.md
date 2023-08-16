@@ -33,6 +33,6 @@ promotions:
   text: "The object of programming is data. Understanding data, and understanding how to store it and manipulate it, are essential programming skills."
   imageURL: "img/my/c_plus_plus/c++3.png"
 - title: "Be the Next Successful Young Entrepreneur"
-  text: "Practical hands-on skills are far more important than theoretical knowledge. Every course is designed for students to learn how to turn an idea for a game into a practical reality through hard work. Young little entrepreneurs are developed during these challenges."
+  text: "Practical hands-on skills are far more important than theoretical knowledge. Every course is designed for students to learn how to turn an idea for a project into a practical reality through hard work. Young little entrepreneurs are developed during these challenges."
   imageURL: "img/my/c_plus_plus/c++4.png"
 ---
