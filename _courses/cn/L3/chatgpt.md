@@ -26,7 +26,7 @@ promotions:
 - title: "抢占先机"
   text: "现在每个人都在使用ChatGPT来处理事务。但是，学生可以抢占先机，学习ChatGPT的高级技巧和窍门，以更快地完成任务。"
   imageURL: "img/my/chatgpt/chatgpt1.jpg"
-- title: "在学生自己的项目中使用它"
+- title: "在学生自己的项目中使用ChatGPT"
   text: "这门课程包含了如何在Python中使用ChatGPT能够调用的部分Python库。在学生自己的Python项目中使用这些库，学生甚至可以将这些项目提交到编程项目竞赛中。"
   imageURL: "img/my/chatgpt/chatgpt2.jpg"
 - title: "创建属于学生自己的网站"
