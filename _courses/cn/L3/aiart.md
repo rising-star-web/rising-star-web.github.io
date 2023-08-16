@@ -27,7 +27,7 @@ promotions:
   text: "人工智能艺术工具将成为未来最广泛使用的创意工具之一。因此，抢在其他人之前掌握它，才能抢占先机！"
   imageURL: "img/my/aiart/midjourney1.png"
 - title: "在学生自己的项目中使用它"
-  text: "学生将利用在本课程中学到的有关Midjourney的知识创建一个作品集，其中包含学生所有令人惊叹的人工智能艺术作品""
+  text: "学生将利用在本课程中学到的有关Midjourney的知识创建一个作品集，其中包含学生所有令人惊叹的人工智能艺术作品"
   imageURL: "img/my/aiart/midjourney2.png"
 - title: "同时开始ChatGPT的使用学习吧"
   text: "在本课程中，学生不仅可以学习 Midjourney。还包括如何使用 ChatGPT 的小指南，这是一个同样庞大而强大的人工智能工具，学生应该知道如何使用。"
