@@ -70,9 +70,6 @@ _layouts folder contains the _default page which wraps every web page, and all t
 
 #### Scripts:
 - Located in assets/js/:
-- theme.js line 758: All free trial submissions will be submitted to this google form: https://docs.google.com/forms/d/e/1FAIpQLSccHA0yK51cQHtkRXvtua-tpDDagTTs5YsxZ7Za6l5ZpHlhDw/viewform?usp=sharing
-  - These submissions are populated in this google sheets link: https://docs.google.com/spreadsheets/d/10jVKS_PnPKhzd12aEs3gwfXUnjyqStZ7tL6tsqeSL2E/edit?resourcekey#gid=473915124
-- Contact Form in contact-us currently uses: https://www.staticforms.xyz/. Request an access key to the designated contact email and replace the access key to make the contact form use another email.
 
 #### Updating Content:
 - Run command: bundle exec jekyll serve
