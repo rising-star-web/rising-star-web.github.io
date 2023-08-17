@@ -4,7 +4,7 @@
         <div class="col-lg-4">
           <div class="widget">
             <img class="mb-4 h-10" src="/assets/img/codingmindlogo-white.svg" alt="" />
-            <p class="mb-2">© 2023 Coding Mind. All rights reserved.</p>
+            <p class="mb-2">{{ site.data.footer[page.locale].footer.copyright }}</p>
             <nav class="nav social social-white">
               <a href="https://twitter.com/coding_minds?lang=en" target="_blank" rel="noopener noreferrer"><i class="uil uil-twitter"></i></a>
               <a href="https://www.facebook.com/CodingMindsAcademy/" target="_blank" rel="noopener noreferrer"><i class="uil uil-facebook-f"></i></a>
@@ -21,27 +21,27 @@
 
         <div class="col-md-4 col-lg-2 offset-lg-2">
           <div class="widget">
-            <h4 class="widget-title mb-3 text-white">About Us</h4>
+            <h4 class="widget-title mb-3 text-white">{{ site.data.footer[page.locale].footer.aboutHeader }}</h4>
             <ul class="list-unstyled mb-0">
-              <li><a href="/about-us">Our Story</a></li>
-              <li><a href="/contact-us">Contact Us</a></li>
-              <li><a href="/careers">Jobs & Careers</a></li>
+              <li><a href="{{ site.data.nav[page.locale].nav.URL }}about-us">{{ site.data.footer[page.locale].footer.ourStory }}</a></li>
+              <li><a href="{{ site.data.nav[page.locale].nav.URL }}contact-us">{{ site.data.footer[page.locale].footer.contact }}</a></li>
+              <li><a href="{{ site.data.nav[page.locale].nav.URL }}careers">{{ site.data.footer[page.locale].footer.careers }}</a></li>
 
               <!-- Terms and Conditions -->
-              <li> <a href="#" class="" data-bs-toggle="modal" data-bs-target="#modal-01">Terms and Conditions</a>  <li></li>
+              <li> <a href="#" class="" data-bs-toggle="modal" data-bs-target="#modal-01">{{ site.data.footer[page.locale].footer.terms }}</a>  <li></li>
     
               <div class="modal fade" id="modal-01" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered modal-xl">
                   <div class="modal-content">
                     <div class="modal-body p-6">
                       <div class="row">
-                        <h1>Terms and Conditions</h1>
+                        <h1>{{ site.data.footer[page.locale].footer.terms }}</h1>
                         <div class="col-md-12 col-lg-8 mb-4 mb-lg-0 my-auto align-items-center vh-50 overflow-auto w-100">
                             <div class="text-dark">{% include termsandconditions.html %}</div>
                         </div>
                         <!--/column -->
                         <div class="">
-                          <a href="#" class="btn btn-primary rounded-pill mt-4 " data-bs-dismiss="modal" aria-label="Close">I Understand</a>
+                          <a href="#" class="btn btn-primary rounded-pill mt-4 " data-bs-dismiss="modal" aria-label="Close">{{ site.data.footer[page.locale].footer.understand }}</a>
                         </div>
                         <!--/column -->
                       </div>
@@ -57,20 +57,20 @@
               <!-- Terms and Conditions -->
 
               <!-- Privacy Policy -->
-              <li> <a href="#" class="" data-bs-toggle="modal" data-bs-target="#modal-02">Privacy Policy</a>  <li></li>
+              <li> <a href="#" class="" data-bs-toggle="modal" data-bs-target="#modal-02">{{ site.data.footer[page.locale].footer.privacy }}</a>  <li></li>
     
               <div class="modal fade" id="modal-02" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered modal-xl">
                   <div class="modal-content">
                     <div class="modal-body p-6">
                       <div class="row">
-                        <h1>Privacy Policy</h1>
+                        <h1>{{ site.data.footer[page.locale].footer.privacy }}</h1>
                         <div class="col-md-12 col-lg-8 mb-4 mb-lg-0 my-auto align-items-center vh-50 overflow-auto w-100">
                             <div class="text-dark">{% include privacypolicy.html %}</div>
                         </div>
                         <!--/column -->
                         <div class="">
-                          <a href="#" class="btn btn-primary rounded-pill mt-4 " data-bs-dismiss="modal" aria-label="Close">I Understand</a>
+                          <a href="#" class="btn btn-primary rounded-pill mt-4 " data-bs-dismiss="modal" aria-label="Close">{{ site.data.footer[page.locale].footer.understand }}</a>
                         </div>
                         <!--/column -->
                       </div>
@@ -93,13 +93,12 @@
 
         <div class="col-md-4 col-lg-2">
           <div class="widget">
-            <h4 class="widget-title mb-3 text-white">Programs</h4>
+            <h4 class="widget-title mb-3 text-white">{{ site.data.footer[page.locale].footer.programsHeader }}</h4>
             <ul class="list-unstyled mb-0">
-              <li><a href="/courses">Courses</a></li>
-              <li><a href="/projects">Projects</a></li>
-              <li><a href="/group-lessons">Group Lessons</a></li>
-              <li><a href="/private-lessons">Private Lessons</a></li>
-              <li><a href="/enrichment-passion-project">Enrichment Passion Project</a></li>
+              <li><a href="{{ site.data.nav[page.locale].nav.URL }}courses">{{ site.data.footer[page.locale].footer.courses }}</a></li>
+              <li><a href="{{ site.data.nav[page.locale].nav.URL }}projects">{{ site.data.footer[page.locale].footer.projects }}</a></li>
+              <li><a href="{{ site.data.nav[page.locale].nav.URL }}competitive-courses">{{ site.data.footer[page.locale].footer.competitiveCourses }}</a></li>
+              <li><a href="{{ site.data.nav[page.locale].nav.URL }}enrichment-passion-project">{{ site.data.footer[page.locale].footer.enrichment }}</a></li>
             </ul>
           </div>
           <!-- /.widget -->
@@ -108,7 +107,7 @@
 
         <div class="col-md-4 col-lg-2">
           <div class="widget">
-            <h4 class="widget-title mb-3 text-white">Get in Touch</h4>
+            <h4 class="widget-title mb-3 text-white">{{ site.data.footer[page.locale].footer.getinTouch }}</h4>
             <address>920 Roosevelt, Ste 200, Irvine, CA 92620 </address>
             <a class="text-break" href="mailto:hello@codingmind.com">hello@codingmind.com</a><br /> (949) 236-7896 
           </div>
