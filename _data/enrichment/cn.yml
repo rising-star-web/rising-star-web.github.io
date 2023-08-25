@@ -47,15 +47,27 @@ projects:
   student3: Kelvin Lee
   university3: UC Berkeley（计算机）
   project3: Kelvin利用AI聊天机器人创建了一款时间管理应用，帮助学生自动规划活动，发表了科研论文，被UC Berkeley录取
-  student4: Andrew Tang
+  student4: Thomas Xiao
   university4: Carnegie Mellon University（计算机）
   project4: Thomas同学通过物联网与计算机视觉算法开发出了一款安全驾驶软件，可以通过面部识别探测驾驶员精神注意程度，被CMU Computer Science专业录取
   student5: Andy Ma
   university5: NYU Stern（商科）
   project5: Andy同学利用大数据分析中小企业的创业增长趋势，发表论文与专利，被NYU Stern商学院录取
-  student6: Matthew Zhang
+  student6: Mark Zhang
   university6: MIT（工程）
-  project6: Max利用人工智能将建筑的外观图片成功还原成设计图纸，发表论文与专利，被MIT工学院录取
+  project6: Mark利用人工智能将建筑的外观图片成功还原成设计图纸，发表论文与专利，被MIT工学院录取
+  student7: Jenna Li
+  university7: Cornell（心理学）
+  project7: Jenna设计了一款邮件效率提升插件，从心理学角度提高用户的工作动力，发表论文与专利，申请到了Cornell心理学专业
+  student8: Matthew Wang
+  university8: Stanford（计算机）
+  project8: Matthew利用AI算法防护针对自动驾驶的网络攻击，发表论文与专利，被Stanford计算机系录取
+  student9: Arnold Gao
+  university9: USC（电影动画）
+  project9: Arnold通过计算机视觉开发出另一款智能电影剪辑软件，发布App与专利，被USC电影动画系录取
+  student10: Angel Ge
+  university10: Princeton（数据科学）
+  project10: Angel利用人工智能与机器学习开发革新了训练大数据模型的方式方法，获得Kaggle算法竞赛金奖，被Princeton录取
 
 process:
   header: 项目步骤
