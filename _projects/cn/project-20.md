@@ -4,18 +4,18 @@ layout: student_project_detail
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/截屏2023-07-06 下午8.17.40.png"
 pagePostDate: "2022年3月3日"
-studentName: "Angel"
-projectName: "AI和机器学习方法"
+studentName: "Stier"
+projectName: "计算机安全的最新算法研究"
 projectCategory: "App Development"
-projectDesc: "Princeton录取"
+projectDesc: "Berkeley录取"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "AI和机器学习方法"
-bodyText1: "Princeton数据科学院的Angel，利用AI和机器学习方法，创新地改进了训练大数据模型的方式，并因此在Kaggle算法竞赛中获得金奖。"
-bodyText2: "Angel以其敏锐的洞察力和创新思维，在数据科学领域展现出惊人的能力。他的实践成果和竞赛成就，标志着他将在未来的数据科学领域中发光发热。"
+headerTitle: "计算机安全的最新算法研究"
+bodyText1: "Stier专注于密码学与计算机安全的最新算法研究，成功发表了多篇学术论文。其在这一领域的杰出贡献使他获得了Berkeley研究生的入学资格。"
+bodyText2: "Stier展现出了卓越的研究能力和对计算机安全的深入理解。他为密码学领域带来的新思维和贡献让Berkeley更为骄傲。我们期待他在未来能继续带来更多的创新成果。"
 URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
-awardsDesc: "学员获Princeton录取"
+awardsDesc: "学员获Berkeley录取"
 contentImage: "/img/updated/projects/IMG_3675.JPG"
 contentImage2: "/img/updated/projects/IMG_3676.JPG"
 
