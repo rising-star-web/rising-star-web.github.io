@@ -11,7 +11,7 @@ pathway: "Artificial Intelligence"
 skillLevel: "Intermediate"
 shortDescription : "Explore ChatGPT Prompt Engineering and master the skills and techniques for customizing conversation generation models!"
 description: "ChatGPT Prompt Engineering is a course designed to help students get the most out of ChatGPT. Get ahead of the curve by training ChatGPT to do as students command using simple but effective prompt engineering techniques."
-videoIntro : ""
+videoIntro : "https://www.youtube.com/watch?v=OGmDr8TLtTo"
 learningGoals:
 - "Understand what ChatGPT is"
 - "Understand why ChatGPT is so important"

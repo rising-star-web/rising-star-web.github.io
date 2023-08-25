@@ -11,7 +11,7 @@ pathway: "编程与算法"
 skillLevel: "中级"
 shortDescription : "深入探索C++编程语言的面向对象特性！"
 description: "在C++高级编程课程中，学生将首先复习在C++编程基础课程中学习的 C++ 基本概念，然后深入学习面向对象编程，使用结构体、向量和类。无论同学是编程初学者还是已有一定编程经验，本课程都将为学生提供深入学习C++面向对象编程的机会，让学生能够在软件开发领域更加自信地前行。"
-videoIntro : ""
+videoIntro : "https://www.youtube.com/watch?v=fUYmBaRtHWU"
 learningGoals:
 - "回顾C++的基础知识，运用强大的面向对象原理"
 - "掌握低层抽象编程语言的工作原理"

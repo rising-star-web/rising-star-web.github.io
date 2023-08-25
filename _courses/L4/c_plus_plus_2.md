@@ -11,7 +11,7 @@ pathway: "C++"
 skillLevel: "Intermediate"
 shortDescription : "Learn the object-oriented side of the C++ programming language!"
 description: "In the C++ Programming Advanced course, students will first review basic concepts of C++ that they learned in the C++ course, and afterward will dive deep into object-oriented programming, using structs, vectors, and classes."
-videoIntro : ""
+videoIntro : "https://www.youtube.com/watch?v=fUYmBaRtHWU"
 learningGoals:
 - "Review the basics of C++ and utilize powerful object-oriented principles"
 - "Understand how low level abstraction programming languages work"

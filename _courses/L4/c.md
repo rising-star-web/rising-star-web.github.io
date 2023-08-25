@@ -11,7 +11,7 @@ pathway: "C"
 skillLevel: "Intermediate"
 shortDescription : "Learn how to program in the classic programming language C!"
 description: "In the C Programming course, students will learn how to program using the legacy programming language C. C is an old language whose simplicity compared to modern languages makes it easy to learn and accessible for newer programmers who want to understand Computer Science more."
-videoIntro : ""
+videoIntro : "https://www.youtube.com/watch?v=U3aXWizDbQ4"
 learningGoals:
 - "Understand the basics of C"
 - "Understand how lower level abstraction programming languages work"

@@ -11,7 +11,7 @@ pathway: "C++"
 skillLevel: "Intermediate"
 shortDescription : "Learn how to program in the classic programming language C++!"
 description: "In the C++ Programming course, students will learn how to program using the legacy programming language C++, which is a variant of the C language. C++ is a common programming language and is regularly used in business applications."
-videoIntro : ""
+videoIntro : "https://www.youtube.com/watch?v=fUYmBaRtHWU"
 learningGoals:
 - "Understand the basics of C++"
 - "Understand how lower level abstraction programming languages work"

@@ -11,7 +11,7 @@ pathway: "Artificial Intelligence"
 skillLevel: "Intermediate"
 shortDescription : "Explore the art of creative AI with Midjourney and ChatGPT for creative inspiration!"
 description: "In our AI Art class, students will learn how to utilize two powerful AI models to make stunning art with a few words. Midjourney will serve as the painter, and ChatGPT will be trained on how to properly make art prompts."
-videoIntro : ""
+videoIntro : "https://www.youtube.com/watch?v=PbsJiaiR580"
 learningGoals:
 - "Understand what Midjourney and ChatGPT is"
 - "Understand why Midjourney and ChatGPT are so important"

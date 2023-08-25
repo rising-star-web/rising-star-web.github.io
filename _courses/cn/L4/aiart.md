@@ -11,7 +11,7 @@ pathway: "人工智能"
 skillLevel: "中级"
 shortDescription : "探索创意无限的AI艺术，与Midjourney和ChatGPT共同探讨创作灵感！"
 description: "在我们的人工智能艺术课程上，学生们将学习如何利用两个强大的人工智能模型，用仅仅几个关键词就能创作出令人惊叹的艺术作品。Midjourney将担任人工智能画家，而ChatGPT将培训学生如何正确制作艺术提示关键词。"
-videoIntro : ""
+videoIntro : "https://www.youtube.com/watch?v=PbsJiaiR580"
 learningGoals:
 - "了解什么是Midjourney和ChatGPT"
 - "了解Midjourney和ChatGPT如此重要的原因"

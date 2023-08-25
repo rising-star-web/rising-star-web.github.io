@@ -11,7 +11,7 @@ pathway: "人工智能"
 skillLevel: "中级"
 shortDescription : "探索ChatGPT提示工程设计，掌握定制化对话生成模型的技能与方法。"
 description: "ChatGPT 提示工程是一门旨在帮助学生充分利用 ChatGPT 的课程。通过使用简单而有效的提示工程技术，训练ChatGPT按学生的指令行事，从而在编程学习上抢占先机。"
-videoIntro : ""
+videoIntro : "https://www.youtube.com/watch?v=OGmDr8TLtTo"
 learningGoals:
 - "了解什么是ChatGPT"
 - "了解ChatGPT如此重要的原因"

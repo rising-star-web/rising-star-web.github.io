@@ -11,7 +11,7 @@ pathway: "编程与算法"
 skillLevel: "中级"
 shortDescription : "学习如何使用经典编程语言C语言进行编程！"
 description: "C语言是一门古老的语言，与现代语言相比，C语言简单易学，对于想进一步了解计算机科学的新手程序员来说，C语言也很容易掌握。"
-videoIntro : ""
+videoIntro : "https://www.youtube.com/watch?v=U3aXWizDbQ4"
 learningGoals:
 - "掌握C语言的基础知识"
 - "掌握低层抽象编程语言的工作原理"

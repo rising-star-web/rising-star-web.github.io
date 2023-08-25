@@ -11,7 +11,7 @@ pathway: "编程与算法"
 skillLevel: "中级"
 shortDescription : "学习如何使用经典编程语言C++编程！"
 description: "在这门C++编程课程中，学生将学习如何使用C++这种C语言的变体进行编程。C++是一种常用的编程语言，在商业应用中经常被使用。通过本课程，学生将掌握C++的基础知识和编程技能，为将来在科技领域发展打下坚实基础！"
-videoIntro : ""
+videoIntro : "https://www.youtube.com/watch?v=fUYmBaRtHWU"
 learningGoals:
 - "掌握C++的基础知识"
 - "掌握低层抽象编程语言的工作原理"
