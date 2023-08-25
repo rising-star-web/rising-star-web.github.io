@@ -3,98 +3,108 @@ name: 中文
 whyenrichment:
   header: 背景提升的理由
   lead: 名校申请为什么需要背景提升助力?
-  reason1: 美国大学录取新趋势：逐渐弱化标化考试分数。
-  reason2: 申请背景单一，学生缺少具有竞争力的经历。
-  reason3: 计算机等热门专业申请难度持续增加。
-  reason4: 面对亚裔，申请形势愈发艰难。
+  reason1: 美国大学录取新趋势：逐渐弱化标化考试分数
+  reason2: 课外活动没有突出成绩：缺少高含金量的活动经历
+  reason3: 计算机、金融商科等热门专业申请难度持续增加
+  reason4: 政策层面对亚裔学生申请形势愈发艰难
 
 accomplishment:
-  header: 您的收益
+  header: 目标与收获
   lead: 背景提升项目能给同学带来什么
-  description: 背景提升项目，帮助同学走向名校的阶梯
-  benefitTitle1: 大学研究实习
-  benefit1: 美国大学科研与实习经历，提前适应科研环境。
+  description: 一个项目产出多个硬核结果，助力名校申请
+  benefitTitle1: 大学科研实习
+  benefit1: 美国大学实验室科研实习经历，和教授博士研究生一起工作
   benefitTitle2: 发表学术论文
-  benefit2: 鼓励学生把技术问题转化为科研问题，做实验，发表国际会议论文。
+  benefit2: 引导学生把技术问题转化为科研问题，做实验，在期刊与国际会议发表论文
   benefitTitle3: 发布官方应用
-  benefit3: 保存所有编程相关的程序文档，官方发布自己的应用。
+  benefit3: 把科研项目产品化，在官方发布自己的应用项目
   benefitTitle4: 参加并赢得竞赛
-  benefit4: 以竞赛为阶段性目标，在竞赛中锻炼成长，为名校申请积累独特的经历和信心。
+  benefit4: 以竞赛为阶段性目标，在竞赛中锻炼成长，为名校申请积累最硬核的经历和信心
   benefitTitle5: 申请美国专利
-  benefit5: 申请美国专利，保护创新内容，为申请名校背书。
+  benefit5: 申请美国专利，保护创新内容，为申请名校背书
   benefitTitle6: 建立品牌和网站
-  benefit6: 打造商业品牌，构建网站，吸引受众，从而更成功的推广项目。
+  benefit6: 打造商业品牌，构建网站，吸引受众，从而更成功的推广项目
   benefitTitle7: 创办初创企业
-  benefit7: 从零开始创立一个初创企业，体会创业者的乐趣与挑战。
+  benefit7: 从零开始创立一个初创企业，体会创业者的乐趣与挑战
   benefitTitle8: 总统义工服务奖 PVSA
-  benefit8: 利用创新项目回馈社会，并有资格获得总统义工奖，助力名校申请。
+  benefit8: 利用创新项目回馈社会，争取总统义工奖，助力名校申请
   benefitTitle9: 获得推荐信
-  benefit9: 通过这个沉浸式项目，同学将有机会与导师近距离接触，给导师留下深刻的印象，并获得教授的亲笔推荐信。
+  benefit9: 通过这个沉浸式项目，同学将有机会与导师近距离接触，给导师留下深刻的印象，并获得教授的亲笔推荐信
 
 projects:
-  header: 大学
-  lead: 往届成绩
+  header: 名校录取
+  lead: 优秀毕业生
   header2: 我们的校友
   lead2: 过往录取摘录
   description: 辉煌历史，面向未来！
-  button: 查看所有项目
+  button: 更多优秀项目
   student1: Leo Lee
-  university1: University of Pennsylvania（Finance）
+  university1: University of Pennsylvania（金融）
   project1: Leo通过跟踪虚拟电子货币的走势来进行货币风险评估，发布App与科研论文，被UPenn经济系录取
   student2: Felliane Teng
-  university2: California Institute of Technology（Physics)
+  university2: California Institute of Technology（物理)
   project2: Felinna利用3D建模模拟物理学实验并预测结果，从而被CalTech物理学专业录取
   student3: Kelvin Lee
-  university3: UC Berkeley
+  university3: UC Berkeley（计算机）
   project3: Kelvin利用AI聊天机器人创建了一款时间管理应用，帮助学生自动规划活动，发表了科研论文，被UC Berkeley录取
   student4: Andrew Tang
-  university4: Carnegie Mellon University（Information Science）
-  project4: Thomas同学通过物联网与计算机视觉算法开发出了一款安全驾驶软件，可以通过面部识别探测驾驶员精神注意程度，被CMU Information Science专业录取
-  student5: Andy
-  university5: NYU Stern（Business）
+  university4: Carnegie Mellon University（计算机）
+  project4: Thomas同学通过物联网与计算机视觉算法开发出了一款安全驾驶软件，可以通过面部识别探测驾驶员精神注意程度，被CMU Computer Science专业录取
+  student5: Andy Ma
+  university5: NYU Stern（商科）
   project5: Andy同学利用大数据分析中小企业的创业增长趋势，发表论文与专利，被NYU Stern商学院录取
-  student6: Max
-  university6: MIT（Engineering）
+  student6: Matthew Zhang
+  university6: MIT（工程）
   project6: Max利用人工智能将建筑的外观图片成功还原成设计图纸，发表论文与专利，被MIT工学院录取
 
 process:
-  header: 工作原理
+  header: 项目步骤
   lead: 背景提升项目流程
-  description: 高校名师指导完成，祝你走上名校的阶梯
+  description: 高校名师指导完成，逐个落实硬核结果
   title1: 启发题目
   step1: 高校导师沟通，启发科研题目
   title2: 项目调研
   step2:  调查研究，确保课题方向 
   title3: 学习技术
-  step3:  理清所需知识 学习必要技术 
+  step3:  理清所需知识，学习必要技术 
   title4: 项目开发
-  step4:  完成项目版本 确保稳定运行 
-  title5: 发布
-  step5:  开始科研试验 进行学术研究 
+  step4:  完成项目版本，确保稳定运行 
+  title5: 项目发布
+  step5:  选择发布平台，官方发布应用  
   title6: 参加竞赛
-  step6:  发布作品 参加竞赛 
+  step6:  针对高含金量竞赛逐个准备夺魁
   title7: 发表论文
-  step7:  发表论文 参加学术会议 
-  title8: 成立公司
-  step8:  申请专利 成立创业公司 
+  step7:  发表高级别论文，参加学术会议 
+  title8: 申请专利
+  step8:  申请美国技术专利，科研转化产品
+  title9: 成立公司
+  step9:  成立创业公司，建立网站与品牌
+  title10: 项目推广
+  step10:  市场宣传与推广，产生商业与社会影响
+  title11: 义工社会
+  step11:  利用项目帮助社区与社会，获取总统义工奖
+  title12: 导师推荐
+  step12:  做项目答辩，争取导师推荐信
+  title13: 项目总结
+  step13:  总结项目各项成绩，辅助申请材料准备
 
 strength:
   header: 我们的优势
-  lead: Coding Minds编程思维名校背景提升项目是针对志在申请名校，需要提升申请背景的同学开发的项目导向课程。通过发布，科研，创业，竞赛帮助同学们打好走向名校的基石。
+  lead: 专业 硬核 高效 真实 
   title1: 全方位定制的科研项目
   strength1: 根据同学的需求一对一定制科研项目
-  title2: 和背景相结合的科研目标
+  title2: 和背景专业紧密结合
   strength2: 结合同学个人相关背景，真实合理
-  title3: 以目标为导向开展项目
-  strength3: 以目标为导向，简洁高效
+  title3: 以硬核目标为导向
+  strength3: 以目标为导向制定计划，高效保障成绩
   title4: 名校名师亲身指导
   strength4: 来自工业界和学术界的大牛导师一对一辅导
 
 contact:
-  header: 让我们开始吧
+  header: 更多了解
   lead: 联系我们
-  description: 通过扫描此二维码联系我们，申请试课
-  button: 立即注册
+  description: 扫描二维码联系我们，进行项目咨询与评估
+  button: 预约咨询
 
 trial: 免费试用申请
 trialStyle: free-trial-wrap-cn
