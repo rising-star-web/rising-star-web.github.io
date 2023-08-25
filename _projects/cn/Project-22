@@ -2,20 +2,20 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-07-06 下午7.50.57.png"
+coverImage: "/img/updated/projects/截屏2023-07-06 下午8.07.24.png"
 pagePostDate: "2022年3月3日"
-studentName: "Angel"
-projectName: "AI和机器学习方法"
+studentName: "Justin"
+projectName: "电脑组件的云计算平台"
 projectCategory: "App Development"
-projectDesc: "Princeton录取"
+projectDesc: "推荐电脑组件的云计算平台"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "AI和机器学习方法"
-bodyText1: "Princeton数据科学院的Angel，利用AI和机器学习方法，创新地改进了训练大数据模型的方式，并因此在Kaggle算法竞赛中获得金奖。"
-bodyText2: "Angel以其敏锐的洞察力和创新思维，在数据科学领域展现出惊人的能力。他的实践成果和竞赛成就，标志着他将在未来的数据科学领域中发光发热。"
+bodyText1: "Justin对电脑组装充满热情。他独立开发了一款推荐电脑组件的云计算平台，并因此荣获多个竞赛奖项。其卓越表现使他成功获得Flintridge学校的入学机会。"
+bodyText2: "Justin展现出前沿的创新和技术实力。他对电脑组装的专注和为电脑爱好者创造的解决方案使他在众人中脱颖而出。Flintridge很幸运能有这样一位开创性的思考者。"
 URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
-awardsDesc: "学员获Princeton录取"
+awardsDesc: "学员获Flintridge录取"
 contentImage: "/img/updated/projects/IMG_3675.JPG"
 contentImage2: "/img/updated/projects/IMG_3676.JPG"
 
