@@ -1,6 +1,6 @@
 ---
 layout: course_detail
-courseId: "CS594"
+courseId: "CS431"
 courseIconURL: "TBD - not used yet"
 price: "TBD - not used yet"
 extra: "TBD - a backup field not used yet"
