@@ -1,0 +1,55 @@
+name: 中文
+
+home:
+  header1: 学以致用
+  header2: "{ 编程助力名校申请 }"
+  bullet1: 项目,
+  bullet2: 竞赛,
+  bullet3: 等等
+  bullet4: 名校
+  trial: 请求免费试听
+
+breakdown:
+  header: 我们的课程
+  lead: Coding Mind 提供的多种选择
+  competitive: 竞技编程课程
+  coursebullet1: 完整的 K-12 课程路径
+  coursebullet2: 热门及应用领域
+  coursebullet3: 灵活的时间表和上课模式选择
+  coursebullet4: 基于项目的学习
+  coursebullet5: 为竞赛做准备
+  enrichment: 丰富课程项目
+  enrichmentbullet1: 为大学申请的丰富课程而设计
+  enrichmentbullet2: 目标驱动的项目计划，以取得成就
+  enrichmentbullet3: 针对不同专业的定制项目主题
+  enrichmentbullet4: 在大学实验室中进行研究
+  enrichmentbullet5: 启动您自己的创业公司
+  learnMore: 了解更多
+
+pursuit: 
+  header: 我们的学生成功
+  lead: 追求卓越之路
+  winner: 成为赢家！
+  wheader: 赢得竞赛
+  wdesc: 在 Coding Mind，将创意变成胜利，我们的学生的项目为他们赢得了各种著名竞赛的荣誉之路！
+  developer: 成为开发者！
+  dheader: 制作产品
+  ddesc: 学生不仅仅是学习 - 他们创造，将他们的创新项目发布到像 Apple、Google、Microsoft 和 Steam 等官方平台上，供全世界体验！
+  scientist: 成为科学家！
+  sheader: 发表研究论文
+  sdesc: 在 Coding Mind，学生有机会在大学实验室中进行科学研究，并在顶级会议和期刊上发表学术论文。
+  entrepreneur: 成为企业家！
+  eheader: 启动创业公司
+  edesc: 在 Coding Mind，释放您的潜力 - 您的项目可以变成蓬勃发展的创业公司，产生现实世界的收入。
+  influencer: 成为影响者！
+  iheader: 改变世界
+  idesc: 在 Coding Mind，激励社区，启发变革，我们的学生的项目不仅仅局限于教室，还可以在现实世界中产生影响。
+
+trial:
+  header: 开启卓越之路
+  lead: 安排试听课程
+  header2: 从 Coding Mind 开始
+  lead2: 解锁您孩子的编码潜力，参加我们的免费试听课程。
+  btn: 预订您的第一堂免费课程
+  floatBtn: 免费试用申请
+  trialStyle: free-trial-wrap-cn

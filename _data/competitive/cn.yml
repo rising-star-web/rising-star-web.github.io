@@ -1,0 +1,76 @@
+name: 中文
+
+pathway:
+  header: 竞技编程路径
+  lead: 用代码走向卓越
+  # 该路径内容位于 /courses
+
+topics:
+  header: 热门话题
+  lead: "掌握顶级趋势：人工智能及更多"
+  ai: 人工智能 (AI)
+  data: 数据科学 (Data Science)
+  cyber: 网络安全 (Cyber Security)
+  web3: Web3
+  gamedev: 游戏开发 (Game Dev)
+  arvr: 增强现实/虚拟现实 (AR/VR)
+  mobilewebdev: 移动/网络开发 (Mobile/Web Dev)
+  iot: 物联网 (IOT)
+  viewcourses: 查看所有课程
+
+instructors: 
+  header: 经验丰富的教师
+  lead: 编程专家与教学大师
+  header2: 我们的招聘流程
+  description: 我们遵循严格的选拔和培训流程来选择我们的教师。
+  step1: 筛选
+  stepdesc1: 教师招聘战略中的初始流程，确保只有最合格的个体能够进入下一阶段的选拔。
+  step2: 技术评估
+  stepdesc2: 我们仔细评估申请成为教师的候选人，以确保他们具备必要的技术技能和专业知识，以便进行有效的教学。
+  step3: 教学试验
+  stepdesc3: 候选人通过领导样本编码课程来展示他们的教学能力，使我们能够评估他们的教学效果和与学生的互动。
+  step4: 全面培训
+  stepdesc4: 选定的候选人将获得我们课程和教学方法的深入理解，确保他们充分准备好向我们的学生提供出色的编程教育。
+  step5: 教学认证
+  stepdesc5: 我们验证候选人已成功完成培训和评估，并现在准备好为我们的学生提供高质量的编程教育。
+  step6: 定期评估
+  stepdesc6: 我们通过定期评估和反馈来确保我们的教师的教学质量和效果得到持续保持。
+  step7: 持续发展
+  stepdesc7: 我们通过定期的研讨会、更新和资源来不断改进和提升我们的教师的技能，确保他们始终处于编程教育的前沿。
+
+schedule:
+  header: 灵活的学习体验
+  lead: 选择您的课程模式
+  online: 实时在线课程
+  onlinebullet1: 实时讲座
+  onlinebullet2: 实时互动
+  onlinebullet3: 随时随地学习
+  inperson: 面对面课程
+  inpersonbullet1: 专注的学习环境
+  inpersonbullet2: 动手学习
+  inpersonbullet3: 社交互动
+  lead2: 选择您的课程规模
+  smallgroup: 小组课程
+  smallgroupbullet1: 小组 2-4 名学生
+  smallgroupbullet2: 团体互动
+  smallgroupbullet3: 同龄人合作
+  oneonone: 1对1课程
+  oneononebullet1: 个性化学习进度
+  oneononebullet2: 灵活的安排
+  oneononebullet3: 加速学习
+
+impact:
+  header: 为影响而设计的课程
+  lead: 项目与竞赛等待着
+  create: 创建项目！
+  projectHeader: 项目
+  projectLead: 基于项目的学习
+  projectDescription: 在Coding Mind，学习的最终目标是创作 - 每个学生在每门课程结束时都会自豪地完成个人项目，展示他们的新技能和创新思维！
+  competitionsHeader: 竞赛
+  competitionsLead: 为竞赛做好准备
+  competitionsDescription: 在Coding Mind，每个学生都是竞争者 - 我们的课程保证每学期至少参加一次竞赛，培养技能、勇气和竞争优势！
+
+trial:
+  header: 从Coding Mind开始学习
+  lead: 将您孩子的兴趣变成职业技能
+  btn: 预订您的第一堂免费课程

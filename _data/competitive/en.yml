@@ -1,0 +1,76 @@
+name: EN
+
+pathway:
+  header: Competitive Coding Pathway
+  lead: Code Your Way to Excellence
+  # The pathway content is located in /courses
+
+topics:
+  header: Trending Topics
+  lead: "Mastering the Top Trends: AI & Beyond"
+  ai: AI
+  data: Data Science
+  cyber: Cyber Security
+  web3: Web3
+  gamedev: Game Dev
+  arvr: AR/VR
+  mobilewebdev: Mobile/Web Dev
+  iot: Internet-Of-Things
+  viewcourses: View All Courses
+
+instructors: 
+  header: Experienced Instructors
+  lead: Coding Experts & Teaching Masters
+  header2: Our Recruitment Process
+  description: We follow a rigorous selection and training process in choosing our instructors.
+  step1: Screening
+  stepdesc1: The initial process within our recruitment strategy for instructors, ensuring that only the most qualified individuals proceed to the next stages of selection.
+  step2: Technical Assessment
+  stepdesc2: We carefully evaluate candidates applying to become instructors to ensure they have the necessary technical skills and expertise for effective teaching.
+  step3: Teaching Trials
+  stepdesc3: Candidates showcase their teaching abilities by leading sample coding sessions, allowing us to assess their instructional effectiveness and engagement with students.
+  step4: Comprehensive Training
+  stepdesc4: Selected candidates are equipped with a thorough understanding of our curriculum and teaching methodologies, ensuring they are fully prepared to deliver exceptional coding education to our students.
+  step5: Teaching Certification
+  stepdesc5: We validate that candidates have successfully completed training and assessments, and are now ready to provide high-quality coding education to our students.
+  step6: Periodic Assessment
+  stepdesc6: We ensure our instructors' teaching quality and effectiveness are consistently maintained through regular evaluations and feedback.
+  step7: Continuous Development
+  stepdesc7: We continue to refine and enhance the skills of our instructors through regular workshops, updates, and resources, ensuring they stay at the forefront of coding education excellence.
+
+schedule:
+  header: Flexible Learning Experience
+  lead: Choose Your Class Mode
+  online: Live Online Class
+  onlinebullet1: Live lectures
+  onlinebullet2: Real-time interaction
+  onlinebullet3: Learn anywhere
+  inperson: In-person Class
+  inpersonbullet1: Focused learning environment
+  inpersonbullet2: Hands-on learning
+  inpersonbullet3: Social interaction
+  lead2: Choose Your Class Size
+  smallgroup: Small Group
+  smallgroupbullet1: Small group 2-4 students
+  smallgroupbullet2: Group interaction
+  smallgroupbullet3: Peer collaboration
+  oneonone: 1-on-1 Class
+  oneononebullet1: Personalized pace
+  oneononebullet2: Flexible scheduling
+  oneononebullet3: Accelerated learning
+
+impact:
+  header: Courses Designed for Impact
+  lead: Projects & Competitions Await
+  create: Create Projects!
+  projectHeader: Projects
+  projectLead: Project-Based Learning
+  projectDescription: With Coding Mind, learning culminates in creation - every student proudly completes a personal project by the end of each course, showcasing their new skills and innovative thinking!
+  competitionsHeader: Competitions
+  competitionsLead: Prepared for Competitions
+  competitionsDescription: At Coding Mind, every student is a contender - our curriculum guarantees participation in at least one competition each semester, fostering skills, courage, and a competitive edge!
+
+trial:
+  header: Start Learning with Coding Mind
+  lead: Turn your child’s passion into a professional skill
+  btn: Book Your First Free Class

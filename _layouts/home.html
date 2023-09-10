@@ -29,21 +29,21 @@ layout: default
                   
 
 
-                <div class="post-category mb-3 text-primary" data-cue="slideInDown">Learn By Doing</div>
+                <div class="post-category mb-3 text-primary" data-cue="slideInDown">{{ site.data.home[page.locale].home.header1 }}</div>
                 <h1 class="display-2 ls-sm mb-4 px-md-8 px-lg-0" data-cue="slideInDown" data-delay="350"> 
                   <span class="typer text-navy" 
                         data-loop="false" 
                         data-delay="100" 
-                        data-words="{ Your Way to Excellence }">
+                        data-words="{{ site.data.home[page.locale].home.header2 }}">
                   </span>
                   </h1>
 
                 <p class="lead lh-sm mb-4" data-cues="slideInDown" data-group="span">
-                  <span>Projects, </span>
-                  <span>Competitions,</span>
-                  <span>More</span>
+                  <span>{{ site.data.home[page.locale].home.bullet1 }} </span>
+                  <span>{{ site.data.home[page.locale].home.bullet2 }}</span>
+                  <span>{{ site.data.home[page.locale].home.bullet3 }}</span>
                   <span><i class="uil uil-arrow-right"></i></span>
-                  <span>Premier Institutions</span>
+                  <span>{{ site.data.home[page.locale].home.bullet4 }}</span>
                 </p>
 
                 <div class="row g-0 gy-2 justify-content-md-center justify-content-start align-items-center d-none d-md-flex row-cols-md-auto" data-cues="fadeIn" data-group="columns">    
@@ -106,7 +106,7 @@ layout: default
               </div>
 
                 <div class="animate__animated animate__slideInDown animate__delay-3s d-flex flex-column flex-md-row align-items-center justify-content-center mt-4" data-cue="slideInDown" data-delay="1050">
-                  <a href="./free-trial" class="btn btn-md btn-navy rounded-pill me-0 me-md-4 mb-4 mb-md-0">Request a Free Trial</a>
+                  <a href="./free-trial" class="btn btn-md btn-navy rounded-pill me-0 me-md-4 mb-4 mb-md-0">{{ site.data.home[page.locale].home.trial }}</a>
                 </div>
               </div>
               <!-- /column -->
@@ -125,11 +125,11 @@ layout: default
 
     <!-- Program Breakdown -->
     <section class="wrapper bg-light">
-      <div class="container pt-14 pt-lg-20">
+      <div class="container pt-14 pt-lg-18">
         <div class="row">
           <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mx-auto text-center">
-            <div class="post-category mb-3 text-primary">Our Programs</div>
-            <h3 class="display-4 mb-10 px-xl-10 px-xxl-15 text-navy">Your Options at Coding Mind</h3>
+            <div class="post-category mb-3 text-primary">{{ site.data.home[page.locale].breakdown.header }}</div>
+            <h3 class="display-4 mb-10 px-xl-10 px-xxl-15 text-navy">{{ site.data.home[page.locale].breakdown.lead }}</h3>
           </div>
           <!-- /column -->
         </div>
@@ -141,23 +141,23 @@ layout: default
               <div class="card-body">
                 <div class="d-flex flex-row">
                   <div><img src="/assets/img/icons/lineal/certificate.svg" class="svg-inject icon-svg icon-svg-md text-violet me-4" alt="" /></div>
-                  <h2 class="card-title">Competitive Coding Courses</h2>
+                  <h2 class="card-title">{{ site.data.home[page.locale].breakdown.competitive }}</h2>
                 </div>
                 <figure><img class="w-100" src="/assets/img/custom_photos/competitive.png" alt="" /></figure>
 
                 <ul class="icon-list bullet-bg bullet-soft-violet mt-7 mb-8 text-start">
-                  <li><i class="uil uil-check"></i><span> Complete K-12 course pathway 
+                  <li><i class="uil uil-check"></i><span> {{ site.data.home[page.locale].breakdown.coursebullet1 }} 
                     </span></li>
-                  <li><i class="uil uil-check"></i><span> Trending and applied topics 
+                  <li><i class="uil uil-check"></i><span> {{ site.data.home[page.locale].breakdown.coursebullet2 }} 
                     </span></li>
-                  <li><i class="uil uil-check"></i><span> Flexible schedule and class mode choices
+                  <li><i class="uil uil-check"></i><span> {{ site.data.home[page.locale].breakdown.coursebullet3 }}
                     </span></li>
-                  <li><i class="uil uil-check"></i><span> Project-based Learning
+                  <li><i class="uil uil-check"></i><span> {{ site.data.home[page.locale].breakdown.coursebullet4 }}
                     </span></li>
-                  <li><i class="uil uil-check"></i><span> Prepare for Competitions
+                  <li><i class="uil uil-check"></i><span> {{ site.data.home[page.locale].breakdown.coursebullet5 }}
                     </span></li>
                 </ul>
-                <a href="./competitive-courses" class="btn btn-violet rounded-pill">Learn More</a>
+                <a href="./competitive-courses" class="btn btn-violet rounded-pill">{{ site.data.home[page.locale].breakdown.learnMore }}</a>
               </div>
               <!--/.card-body -->
             </div>
@@ -169,23 +169,23 @@ layout: default
               <div class="card-body">
                 <div class="d-flex flex-row">
                   <div><img src="/assets/img/icons/lineal/startup.svg" class="svg-inject icon-svg icon-svg-md text-sky me-4" alt="" /></div>
-                  <h2 class="card-title">Enrichment Passion Project</h2>
+                  <h2 class="card-title">{{ site.data.home[page.locale].breakdown.enrichment }}</h2>
                 </div>
                 <figure><img class="w-100" src="/assets/img/custom_photos/enrichment.png" alt="" /></figure>
 
                 <ul class="icon-list bullet-bg bullet-soft-sky mt-7 mb-8 text-start">
-                  <li><i class="uil uil-check"></i><span> Designed for college application enrichment
+                  <li><i class="uil uil-check"></i><span> {{ site.data.home[page.locale].breakdown.enrichmentbullet1 }}
                     </span></li>
-                  <li><i class="uil uil-check"></i><span> Goal-driven project plan to gain accomplishments
+                  <li><i class="uil uil-check"></i><span> {{ site.data.home[page.locale].breakdown.enrichmentbullet2 }}
                     </span></li>
-                  <li><i class="uil uil-check"></i><span> Customized project topics for different majors
+                  <li><i class="uil uil-check"></i><span> {{ site.data.home[page.locale].breakdown.enrichmentbullet3 }}
                     </span></li>
-                  <li><i class="uil uil-check"></i><span> Conduct research in college labs
+                  <li><i class="uil uil-check"></i><span> {{ site.data.home[page.locale].breakdown.enrichmentbullet4 }}
                     </span></li>
-                  <li><i class="uil uil-check"></i><span> Launch your very own startup
+                  <li><i class="uil uil-check"></i><span> {{ site.data.home[page.locale].breakdown.enrichmentbullet5 }}
                     </span></li>
                 </ul>
-                <a href="./enrichment-passion-project" class="btn btn-sky rounded-pill">Learn More</a>
+                <a href="./enrichment-passion-project" class="btn btn-sky rounded-pill">{{ site.data.home[page.locale].breakdown.learnMore }}</a>
               </div>
               <!--/.card-body -->
             </div>
@@ -207,8 +207,8 @@ layout: default
           <!--/column -->
           <div class="row">
             <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mx-auto text-center">
-              <div class="post-category mb-3 text-primary">OUR STUDENTS SUCCEED</div>
-              <h3 class="display-4 mb-10 px-xl-10 px-xxl-15">The Pursuit of Excellence</h3>
+              <div class="post-category mb-3 text-primary">{{ site.data.home[page.locale].pursuit.header }}</div>
+              <h3 class="display-4 mb-10 px-xl-10 px-xxl-15">{{ site.data.home[page.locale].pursuit.lead }}</h3>
             </div>
             <!-- /column -->
           </div>
@@ -218,10 +218,10 @@ layout: default
           <div class="card-body pb-12 pt-6 pt-md-12 px-6 px-md-12">
             <div class="row">
               <div class="col-lg-4 pb-12 align-self-center" data-cues="fadeIn">
-                <div class="post-category mb-3 text-primary"> Be a winner!</div>
-                <h3 class="h1 post-title mb-3">Win Competitions</h3>
-                <p>Turn ideas into victories with Coding Mind, where our students' projects pave the way to triumph in various prestigious competitions!</p>
-                <a href="./projects" class="more hover link-primary">Learn More</a>
+                <div class="post-category mb-3 text-primary"> {{ site.data.home[page.locale].pursuit.winner }}</div>
+                <h3 class="h1 post-title mb-3">{{ site.data.home[page.locale].pursuit.wheader }}</h3>
+                <p>{{ site.data.home[page.locale].pursuit.wdesc }}</p>
+                <a href="./projects" class="more hover link-primary">{{ site.data.home[page.locale].breakdown.learnMore }}</a>
               </div>
               <!-- /column -->
               <div class="col-lg-7 offset-lg-1 align-self-end" data-cue="fadeIn">
@@ -238,9 +238,9 @@ layout: default
           <div class="card-body pb-12 pt-6 pt-md-12 px-6 px-md-12">
             <div class="row gy-10 align-items-center">
               <div class="col-lg-4 order-lg-2 offset-lg-1" data-cues="fadeIn">
-                <div class="post-category mb-3 text-navy">Be a developer!</div>
-                <h3 class="h1 post-title mb-3">Make Products</h3>
-                <p>Students don't just learn - they create, launching their innovative projects on official platforms like Apple, Google, Microsoft, and Steam for the world to experience!</p>
+                <div class="post-category mb-3 text-navy">{{ site.data.home[page.locale].pursuit.developer }}</div>
+                <h3 class="h1 post-title mb-3">{{ site.data.home[page.locale].pursuit.dheader }}</h3>
+                <p>{{ site.data.home[page.locale].pursuit.ddesc }}</p>
               </div>
               <!-- /column -->
               <div class="col-lg-7" data-cue="fadeIn">
@@ -257,9 +257,9 @@ layout: default
           <div class="card-body pb-6 pt-6 px-6 px-md-12">
             <div class="row">
               <div class="col-lg-4 pb-12 align-self-center" data-cues="fadeIn">
-                <div class="post-category mb-3 text-primary"> Be a scientist!</div>
-                <h3 class="h1 post-title mb-3">Publish Research Papers</h3>
-                <p>Students at Coding Mind gain opportunities to conduct scientific research in university labs and publish academic papers in top-tier conferences and journals.</p>
+                <div class="post-category mb-3 text-primary"> {{ site.data.home[page.locale].pursuit.scientist }}</div>
+                <h3 class="h1 post-title mb-3">{{ site.data.home[page.locale].pursuit.sheader }}</h3>
+                <p>{{ site.data.home[page.locale].pursuit.sdesc }}</p>
               </div>
               <!-- /column -->
               <div class="col-lg-7 offset-lg-1 align-self-end d-flex justify-content-center" data-cue="fadeIn">
@@ -276,9 +276,9 @@ layout: default
           <div class="card-body pb-12 pt-6 pt-md-12 px-6 px-md-12">
             <div class="row gy-10 align-items-center">
               <div class="col-lg-4 order-lg-2 offset-lg-1" data-cues="fadeIn">
-                <div class="post-category mb-3 text-navy">Be an entrepreneur!</div>
-                <h3 class="h1 post-title mb-3">Launch Startups</h3>
-                <p>Unlock your potential with Coding Mind - where your projects can transform into thriving startups, generating real-world revenue.</p>
+                <div class="post-category mb-3 text-navy">{{ site.data.home[page.locale].pursuit.entrepreneur }}</div>
+                <h3 class="h1 post-title mb-3">{{ site.data.home[page.locale].pursuit.eheader }}</h3>
+                <p>{{ site.data.home[page.locale].pursuit.edesc }}</p>
               </div>
               <!-- /column -->
               <div class="col-lg-7" data-cue="fadeIn">
@@ -295,9 +295,9 @@ layout: default
           <div class="card-body pb-12 pt-6 pt-md-12 px-6 px-md-12">
             <div class="row">
               <div class="col-lg-4 pb-12 align-self-center" data-cues="fadeIn">
-                <div class="post-category mb-3 text-primary"> Be a influencer!</div>
-                <h3 class="h1 post-title mb-3">Change The World</h3>
-                <p>Empower your community and inspire change with Coding Mind, where our students' projects go beyond the classroom to create real-world impact. </p>
+                <div class="post-category mb-3 text-primary"> {{ site.data.home[page.locale].pursuit.influencer }}</div>
+                <h3 class="h1 post-title mb-3">{{ site.data.home[page.locale].pursuit.iheader }}</h3>
+                <p>{{ site.data.home[page.locale].pursuit.idesc }} </p>
               </div>
               <!-- /column -->
               <div class="col-lg-7 offset-lg-1 align-self-end d-flex justify-content-center" data-cue="fadeIn">
@@ -321,8 +321,8 @@ layout: default
         <!--/column -->
         <div class="row">
           <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mx-auto text-center">
-            <div class="post-category mb-3 text-primary">Start your way to excellence</div>
-            <h3 class="display-4 mb-10 px-xl-10 px-xxl-15">Schedule a Trial Class</h3>
+            <div class="post-category mb-3 text-primary">{{ site.data.home[page.locale].trial.header }} </div>
+            <h3 class="display-4 mb-10 px-xl-10 px-xxl-15">{{ site.data.home[page.locale].trial.lead }} </h3>
           </div>
           <!-- /column -->
         </div>
@@ -334,9 +334,9 @@ layout: default
 
           <div class="col d-flex justify-content-center">
             <div class="d-flex flex-column align-items-center align-items-lg-start text-center" data-cue="fadeIn">
-              <h2 class="mb-3">Get Started With Coding Mind</h2>
-              <p> Unleash your child's coding potential with our free trial class.</p>
-              <a href="./free-trial" class="btn btn-md btn-green rounded-pill mb-0 text-nowrap mt-4">Book Your First Free Class</a>
+              <h2 class="mb-3">{{ site.data.home[page.locale].trial.header2 }}</h2>
+              <p> {{ site.data.home[page.locale].trial.lead2 }}</p>
+              <a href="./free-trial" class="btn btn-md btn-green rounded-pill mb-0 text-nowrap mt-4">{{ site.data.home[page.locale].trial.btn }}</a>
             </div>
           </div>
         </div>
@@ -346,9 +346,9 @@ layout: default
     <!-- /section -->
 
     <!-- Trial Bottom-Side Button -->
-    <div class="free-trial-wrap">
+    <div class="{{ site.data.home[page.locale].trial.trialStyle }}">
       <a href="./free-trial" class="btn btn-primary rounded-pill">
-        Request a Free Trial
+        {{ site.data.home[page.locale].trial.floatBtn }}
         <img src="/assets/img/icons/solid/touchscreen.svg" class="svg-inject icon-svg icon-svg-xxs solid-mono w-4 ms-2 text-white h-4" alt="" />
       </a>
     </div>

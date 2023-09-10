@@ -47,15 +47,27 @@ projects:
   student3: Kelvin Lee
   university3: UC Berkeley
   project3: Created a Time Management App using AI Chatbots to help students plan their activities automatically.
-  student4: Andrew Tang
-  university4: Columbia University
-  project4: Built a French Dictation App to help improve users' knowledge and practice of the language.
-  student5: Charlie
-  university5: Cornell University
-  project5: Created a social media app that can let friends enjoy their favorite songs synchronously together.
-  student6: Jerry Hu
-  university6: UC Berkeley
-  project6: Developed a Diet App to help users' with dietary needs that automatically scans food through pictures and gives reasonable diet advice.
+  student4: Thomas Xiao
+  university4: Carnegie Mellon University (Computer Science)
+  project4: Thomas developed a safety driving software using IoT and computer vision algorithms that detects driver's level of alertness through facial recognition. He was admitted to the CMU Computer Science program.
+  student5: Andy Ma
+  university5: NYU Stern (Business)
+  project5: Andy analyzed entrepreneurial growth trends of small and medium-sized enterprises using big data analysis, published papers, and patents. He was admitted to NYU Stern Business School.
+  student6: Mark Zhang
+  university6: MIT (Engineering)
+  project6: Mark successfully reconstructed architectural facade images into design blueprints using artificial intelligence. He published papers and patents and was admitted to MIT's School of Engineering.
+  student7: Jenna Li
+  university7: Cornell (Psychology)
+  project7: Jenna designed an email efficiency enhancement plugin to boost user productivity from a psychological perspective. She published papers and patents and applied to Cornell's Psychology program.
+  student8: Matthew Wang
+  university8: Stanford (Computer Science)
+  project8: Matthew used AI algorithms to protect against network attacks targeting autonomous driving. He published papers and patents and was admitted to Stanford's Computer Science department.
+  student9: Arnold Gao
+  university9: USC (Film Animation)
+  project9: Arnold developed another intelligent movie editing software using computer vision. He released an app and obtained patents, leading to admission to USC's Film Animation program.
+  student10: Angel Ge
+  university10: Princeton (Data Science)
+  project10: Angel innovatively improved the method of training large data models using artificial intelligence and machine learning. He won the Kaggle algorithm competition gold medal and was admitted to Princeton.
 
 process:
   header: How it works?
@@ -77,6 +89,16 @@ process:
   step7: Promote your project and use your projects in real-life communities
   title8: Project Summary
   step8: We will help assist you into putting your accomplishments toward your college application
+  title9: Establishing a Company
+  step9: Establishing a startup company, creating a website and a brand
+  title10: Project Promotion
+  step10: Marketing and promotion, creating business and social impact
+  title11: Volunteer in Your Community
+  step11: Using projects to help your community, earning the Presidential Volunteer Service Award
+  title12: Mentor Recommendations
+  step12: Presenting project findings and seeking mentor recommendation letters
+  title13: Project Summary
+  step13: Summarizing project achievements, assisting with application materials preparation
 
 strength:
   header: Our Strengths

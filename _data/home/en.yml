@@ -1,0 +1,55 @@
+name: EN
+
+home:
+  header1: Learn By Doing
+  header2: "{ Your Way to Excellence }"
+  bullet1: Projects,
+  bullet2: Competitions,
+  bullet3: More
+  bullet4: Premier Institutions
+  trial: Request a Free Trial
+
+breakdown:
+  header: Our Programs
+  lead: Your Options at Coding Mind
+  competitive: Competitive Coding Courses
+  coursebullet1: Complete K-12 course pathway
+  coursebullet2: Trending and applied topics
+  coursebullet3: Flexible schedule and class mode choices
+  coursebullet4: Project-based Learning
+  coursebullet5: Prepare for Competitions
+  enrichment: Enrichment Passion Project
+  enrichmentbullet1: Designed for college application enrichment
+  enrichmentbullet2: Goal-driven project plan to gain accomplishments
+  enrichmentbullet3: Customized project topics for different majors
+  enrichmentbullet4: Conduct research in college labs
+  enrichmentbullet5: Launch your very own startup
+  learnMore: Learn More
+
+pursuit: 
+  header: OUR STUDENTS SUCCEED
+  lead: The Pursuit of Excellence
+  winner: Be a winner!
+  wheader: Win Competitions
+  wdesc: Turn ideas into victories with Coding Mind, where our students' projects pave the way to triumph in various prestigious competitions!
+  developer: Be a developer!
+  dheader: Make Products
+  ddesc: Students don't just learn - they create, launching their innovative projects on official platforms like Apple, Google, Microsoft, and Steam for the world to experience!
+  scientist: Be a scientist!
+  sheader: Publish Research Papers
+  sdesc: Students at Coding Mind gain opportunities to conduct scientific research in university labs and publish academic papers in top-tier conferences and journals.
+  entrepreneur: Be an entrepreneur!
+  eheader: Launch Startups
+  edesc: Unlock your potential with Coding Mind - where your projects can transform into thriving startups, generating real-world revenue.
+  influencer: Be a influencer!
+  iheader: Change The World
+  idesc: Empower your community and inspire change with Coding Mind, where our students' projects go beyond the classroom to create real-world impact. 
+
+trial:
+  header: Start your way to excellence
+  lead: Schedule a Trial Class
+  header2: Get Started With Coding Mind
+  lead2: Unleash your child's coding potential with our free trial class.
+  btn: Book Your First Free Class
+  floatBtn: Request a Free Trial
+  trialStyle: free-trial-wrap
