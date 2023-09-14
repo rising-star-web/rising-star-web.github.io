@@ -670,6 +670,28 @@ You agree that the original English text shall prevail in the case of a dispute.
     </svg>
   </div>
 
+  <script>
+    var usrlang = navigator.language || navigator.userLanguage;                                     // Detect browser language
+
+		var lang = usrlang.toString().split('-')[0];                                                    // Check if browser language starts with "zh"
+    console.log("User's preferred language is: " + lang );
+
+    if (window.location.href.indexOf("cn") == -1 && lang == "zh" && !sessionStorage.alreadyClicked) // Check if url is already cn, language is zh, and first time opened tab
+    {
+      sessionStorage.alreadyClicked = 1;                                                            // User can freely change back to EN without redirecting unless a new tab is opened
+      window.location.replace("/cn" + window.location.pathname)                                     // http redirect to /cn site
+    }
+    
+    // Go to EN if in CN url on first tab load if browser language is EN
+    // else if (window.location.href.indexOf("cn") != -1 && lang == "en" && !sessionStorage.alreadyClicked) {  
+    //   var URL = window.location.pathname;
+    //   var redirectURL = URL.replace('cn/', '');
+
+    //   window.location.replace(redirectURL)                                     
+    //   sessionStorage.alreadyClicked = 1;                                                            
+    // }
+  </script>
+
   <script src="/assets/js/plugins.js"></script>
   <script src="/assets/js/theme.js"></script>
 </body>

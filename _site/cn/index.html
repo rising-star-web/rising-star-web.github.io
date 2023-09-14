@@ -200,10 +200,10 @@
 
                 <p class="lead lh-sm mb-4" data-cues="slideInDown" data-group="span">
                   <span>项目, </span>
-                  <span>论文, </span>
                   <span>竞赛,</span>
-                  <span>创业</span>
+                  <span>科研</span>
                   <span><i class="uil uil-arrow-right"></i></span>
+                  <span>名校</span>
                 </p>
 
                 <div class="row g-0 gy-2 justify-content-md-center justify-content-start align-items-center d-none d-md-flex row-cols-md-auto" data-cues="fadeIn" data-group="columns">    
@@ -266,7 +266,7 @@
               </div>
 
                 <div class="animate__animated animate__slideInDown animate__delay-3s d-flex flex-column flex-md-row align-items-center justify-content-center mt-4" data-cue="slideInDown" data-delay="1050">
-                  <a href="./free-trial" class="btn btn-md btn-navy rounded-pill me-0 me-md-4 mb-4 mb-md-0">免费试课</a>
+                  <a href="./free-trial" class="btn btn-md btn-navy rounded-pill me-0 me-md-4 mb-4 mb-md-0">免费试听</a>
                 </div>
               </div>
               <!-- /column -->
@@ -289,7 +289,7 @@
         <div class="row">
           <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mx-auto text-center">
             <div class="post-category mb-3 text-primary">我们的课程</div>
-            <h3 class="display-4 mb-10 px-xl-10 px-xxl-15 text-navy">Coding Mind 提供的多种选择</h3>
+            <h3 class="display-4 mb-10 px-xl-10 px-xxl-15 text-navy">Coding Mind 提供多种课程路线</h3>
           </div>
           <!-- /column -->
         </div>
@@ -310,7 +310,7 @@
                     </span></li>
                   <li><i class="uil uil-check"></i><span> 热门及应用领域 
                     </span></li>
-                  <li><i class="uil uil-check"></i><span> 灵活的时间表和上课模式选择
+                  <li><i class="uil uil-check"></i><span> 灵活的时间和模式选择
                     </span></li>
                   <li><i class="uil uil-check"></i><span> 基于项目的学习
                     </span></li>
@@ -329,12 +329,12 @@
               <div class="card-body">
                 <div class="d-flex flex-row">
                   <div><img src="/assets/img/icons/lineal/startup.svg" class="svg-inject icon-svg icon-svg-md text-sky me-4" alt="" /></div>
-                  <h2 class="card-title">丰富课程项目</h2>
+                  <h2 class="card-title">背景提升项目</h2>
                 </div>
                 <figure><img class="w-100" src="/assets/img/custom_photos/enrichment.png" alt="" /></figure>
 
                 <ul class="icon-list bullet-bg bullet-soft-sky mt-7 mb-8 text-start">
-                  <li><i class="uil uil-check"></i><span> 为大学申请的丰富课程而设计
+                  <li><i class="uil uil-check"></i><span> 为大学申请提升竞争力而设计
                     </span></li>
                   <li><i class="uil uil-check"></i><span> 目标驱动的项目计划，以取得成就
                     </span></li>
@@ -543,7 +543,7 @@
           <div class="widget">
             <h4 class="widget-title mb-3 text-white">关于我们</h4>
             <ul class="list-unstyled mb-0">
-              <li><a href="/cn/about-us">机构文化</a></li>
+              <li><a href="/cn/about-us">我们的故事</a></li>
               <li><a href="/cn/contact-us">联系我们</a></li>
               <li><a href="/cn/careers">工作机会</a></li>
 
@@ -914,6 +914,28 @@ You agree that the original English text shall prevail in the case of a dispute.
       <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
     </svg>
   </div>
+
+  <script>
+    var usrlang = navigator.language || navigator.userLanguage;                                     // Detect browser language
+
+		var lang = usrlang.toString().split('-')[0];                                                    // Check if browser language starts with "zh"
+    console.log("User's preferred language is: " + lang );
+
+    if (window.location.href.indexOf("cn") == -1 && lang == "zh" && !sessionStorage.alreadyClicked) // Check if url is already cn, language is zh, and first time opened tab
+    {
+      sessionStorage.alreadyClicked = 1;                                                            // User can freely change back to EN without redirecting unless a new tab is opened
+      window.location.replace("/cn" + window.location.pathname)                                     // http redirect to /cn site
+    }
+    
+    // Go to EN if in CN url on first tab load if browser language is EN
+    // else if (window.location.href.indexOf("cn") != -1 && lang == "en" && !sessionStorage.alreadyClicked) {  
+    //   var URL = window.location.pathname;
+    //   var redirectURL = URL.replace('cn/', '');
+
+    //   window.location.replace(redirectURL)                                     
+    //   sessionStorage.alreadyClicked = 1;                                                            
+    // }
+  </script>
 
   <script src="/assets/js/plugins.js"></script>
   <script src="/assets/js/theme.js"></script>
