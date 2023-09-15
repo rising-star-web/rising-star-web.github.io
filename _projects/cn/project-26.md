@@ -2,20 +2,20 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-06-12 下午12.10.50.png"
+coverImage: "/img/updated/projects/IMG_5785.jpg"
 pagePostDate: "2022年3月3日"
-studentName: "Andy"
-projectName: "数据和创业结合"
+studentName: "Bruce"
+projectName: "自主研发防溺水检测系统"
 projectCategory: "App Development"
-projectDesc: "NYU Stern录取"
+projectDesc: "学员创新产品"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "创业和数据相结合"
-bodyText1: "Andy, 一个才华横溢的研究者，成功地使用大数据分析中小企业的创业增长趋势。他的研究成果不仅发表了论文，还申请了专利。由于这些重大贡献，他已被NYU Stern商学院录取。"
-bodyText2: "Andy是一个富有创新和实践精神的人，他的学术成果证明了他在商业领域的深度理解和实际应用能力。他将大数据与商业策略相结合，解决了中小企业面临的独特挑战。这些能力使他在NYU Stern商学院中得到了高度认可"
+headerTitle: "研发防溺水检测系统"
+bodyText1: "这款系统运用先进的人工智能技术，结合Raspberry Pi和摄像头，实时捕捉和处理游泳池的视频和照片。其主要功能是检测并标注出接近游泳池的儿童，当儿童与游泳池的界限重叠时，系统将警告家长或监护人，提醒他们注意孩子的安全。"
+bodyText2: "布鲁斯的这一独特方案不仅对照片进行分析，而且可以处理实时视频，确保家庭游泳池的安全。快来了解这款可以为孩子们带来额外安全保障的产品吧"
 URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
-awardsDesc: "学员获NYU Stern录取"
+awardsDesc: "研发防溺水检测系统"
 contentImage: "/img/updated/projects/IMG_3675.JPG"
 contentImage2: "/img/updated/projects/IMG_3676.JPG"
 
