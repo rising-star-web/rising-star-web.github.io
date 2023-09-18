@@ -1,0 +1,9 @@
+name: 中文
+
+instructors:
+  header: 教育
+  lead: Coding Mind 教育师
+  paragraph: 我们的使命是释放每个学习者的潜力，从他们准备好的那一刻开始，就在现在。我们认识到生命的任何阶段都有可能取得伟大的成就，我们相信每个人都有能力在某个领域表现出色。
+  book: 预订您的第一堂免费课
+
+# Other content is located in /_data/instructors

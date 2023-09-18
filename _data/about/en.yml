@@ -1,0 +1,25 @@
+name: EN
+
+about:
+  title: About Coding Mind
+  header: The Pursuit of Excellence
+  paragraph: Founded in 2016, Coding Mind is a coding and AI educational institution co-founded by professors of Computer Science from the US. The core value of Coding Mind is learn-by-doing, using a project-based learning approach to guide students in undertaking practical projects. While mastering computer and AI knowledge, students continually achieve outstanding results in competitions, publications, scientific research, and entrepreneurship, which serve as a strong foundation for applications to prestigious schools. So far, Coding Mind has successfully helped thousands of students gain admission into top universities.
+  whyCM: Why Coding Mind Works
+  point1: Project-Based Learning
+  point1Desc: At Coding Mind, we believe that the best way to learn is by doing. Every course culminates in a personal project, allowing students to apply their knowledge in a practical way.
+  point2: Learn from the Best
+  point2Desc: Our school is co-founded by American Computer Science professors. You can trust your child is learning from experts in the field, getting the most accurate and updated information.
+  point3: Beyond Basics
+  point3Desc: We don't just teach coding. We inspire and guide students to transform their ideas into real-world applications, whether it's launching a startup, winning a competition, or publishing a research paper.
+  point4: Competitive Advantage
+  point4Desc: Each semester, our students are guaranteed to participate in at least one competition, instilling a competitive spirit and the skills to succeed in any challenge.
+  point5: Pathway to Success
+  point5Desc: Coding Mind not only equips students with technical skills but also empowers them to achieve their dreams. We have a proven track record of helping students gain admission into prestigious universities and stand out in today's digital world.
+  quote: Experience the Coding Mind difference
+  quote2: where we
+  quotewords: code, create, conquer
+
+trial:
+  header: Try the Full Coding Mind Experience
+  lead: Take a free class to see if Coding Mind is right for you.
+  button: Book Your First Free Class

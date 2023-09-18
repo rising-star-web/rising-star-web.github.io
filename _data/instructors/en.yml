@@ -1,0 +1,9 @@
+name: EN
+
+instructors:
+  header: Education
+  lead: Coding Mind Instructors
+  paragraph: Our mission is to unleash the potential of each and every learner, starting as soon as they are prepared, in the present moment. We recognize the possibility for greatness at any stage of life, and we are convinced that everyone possesses the ability to excel in a particular field.
+  book: Book Your First Free Class 
+
+# Other content is located in /_data/instructors
