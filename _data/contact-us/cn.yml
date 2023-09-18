@@ -17,6 +17,7 @@ contact:
   emailError: 请提供有效的邮箱地址。
   messageTag: 留言内容 *
   messageError: 请输入您的消息。
+  sendMessageBtn: 发送消息
   required: 为必填项
   weChat: 通过微信联系我们
   weChatDesc: 扫描二维码添加学习顾问。

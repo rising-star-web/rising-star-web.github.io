@@ -17,6 +17,7 @@ contact:
   emailError: Please provide a valid email address.
   messageTag: Message *
   messageError: Please enter your messsage.
+  sendMessageBtn: Send message
   required: These fields are required
   weChat: Message Us On WeChat
   weChatDesc: Scan the QR Code to message us.
