@@ -5,11 +5,11 @@ layout: default
 	<div class="container pt-8 pt-md-12 pb-20 pb-md-20">
 		<div class="row text-center">
 			<div class="col-lg-8 mx-auto">
-				<h1 class="display-2 mb-3">Contact Us</h1>
+				<h1 class="display-2 mb-3">{{ site.data.contact-us[page.locale].contact.header }}</h1>
 				<nav class="d-inline-block" aria-label="breadcrumb">
 					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="/">Home</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Contact</li>
+						<li class="breadcrumb-item"><a href="/">{{ site.data.contact-us[page.locale].contact.home }}</a></li>
+						<li class="breadcrumb-item active" aria-current="page">{{ site.data.contact-us[page.locale].contact.contact }}</li>
 					</ol>
 				</nav>
 				<!-- /nav -->
@@ -41,7 +41,7 @@ layout: default
 										<div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-location-pin-alt"></i> </div>
 									</div>
 									<div class="align-self-start justify-content-start">
-										<h5 class="mb-1">Locations</h5>
+										<h5 class="mb-1">{{ site.data.contact-us[page.locale].contact.locations }}</h5>
 										<div class="meta mb-2">Irvine Campus</div>
 										<address>920 Roosevelt, Ste 200 <br class="d-none d-md-block" />Irvine, CA 92620</address>
 										<div class="meta mb-2">Arcadia Campus</div>
@@ -55,7 +55,7 @@ layout: default
 										<div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-phone-volume"></i> </div>
 									</div>
 									<div>
-										<h5 class="mb-1">Phone</h5>
+										<h5 class="mb-1">{{ site.data.contact-us[page.locale].contact.Phone }}</h5>
 										<p>(949) 236-7896</p>
 									</div>
 								</div>
@@ -65,7 +65,7 @@ layout: default
 										<div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-envelope"></i> </div>
 									</div>
 									<div">
-										<h5 class="mb-1">E-mail</h5>
+										<h5 class="mb-1">{{ site.data.contact-us[page.locale].contact.Email }}</h5>
 										<p class="mb-0 text-break"><a href="mailto:hello@codingmind.com" class="link-body">hello@codingmind.com</a></p>
 									</div>
 								</div>
@@ -92,20 +92,20 @@ layout: default
 		<div class="row">
 			<div class="col-xl-6 mb-6">
 				<div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
-					<h2 class="display-4 mb-3 text-center">Send Us a Message</h2>
-					<p class="lead text-center mb-10">Reach out to us from our contact form and we will get back to you shortly.</p>
+					<h2 class="display-4 mb-3 text-center">{{ site.data.contact-us[page.locale].contact.sendMessage }}</h2>
+					<p class="lead text-center mb-10">{{ site.data.contact-us[page.locale].contact.sendDesc }}</p>
 					<form action="https://formspree.io/f/myyaolgn" method="POST">
 
 						<div class="row gx-4">
 							<div class="col-md-6">
 								<div class="form-floating mb-4">
 									<input id="form_name" type="text" name="name" class="form-control" placeholder="Jane" required>
-									<label for="form_name">Name *</label>
+									<label for="form_name">	{{ site.data.contact-us[page.locale].contact.nameTag }}</label>
 									<div class="valid-feedback">
-										Looks good!
+										{{ site.data.contact-us[page.locale].contact.successIndicator }}
 									</div>
 									<div class="invalid-feedback">
-										Please enter your name.
+										{{ site.data.contact-us[page.locale].contact.nameError }}
 									</div>
 								</div>
 							</div>
@@ -113,12 +113,12 @@ layout: default
 							<div class="col-md-6">
 								<div class="form-floating mb-4">
 									<input id="form_email" type="email" name="email" class="form-control" placeholder="jane.doe@example.com" required>
-									<label for="form_email">Email *</label>
+									<label for="form_email">{{ site.data.contact-us[page.locale].contact.emailTag }}</label>
 									<div class="valid-feedback">
-										Looks good!
+										{{ site.data.contact-us[page.locale].contact.successIndicator }}
 									</div>
 									<div class="invalid-feedback">
-										Please provide a valid email address.
+										{{ site.data.contact-us[page.locale].contact.emailError }}
 									</div>
 								</div>
 							</div>
@@ -126,19 +126,19 @@ layout: default
 							<div class="col-12">
 								<div class="form-floating mb-4">
 									<textarea id="form_message" name="description" class="form-control" placeholder="Your message" style="height: 150px" required></textarea>
-									<label for="form_message">Message *</label>
+									<label for="form_message">{{ site.data.contact-us[page.locale].contact.messageTag }}</label>
 									<div class="valid-feedback">
-										Looks good!
+										{{ site.data.contact-us[page.locale].contact.successIndicator }}
 									</div>
 									<div class="invalid-feedback">
-										Please enter your messsage.
+										{{ site.data.contact-us[page.locale].contact.messageError }}
 									</div>
 								</div>
 							</div>
 							<!-- /column -->
 							<div class="col-12 text-center">
 								<input type="submit" class="btn btn-primary rounded-pill btn-send mb-3" value="Send message">
-								<p class="text-muted"><strong>*</strong> These fields are required.</p>
+								<p class="text-muted"><strong>*</strong> {{ site.data.contact-us[page.locale].contact.required }}</p>
 							</div>
 							<!-- /column -->
 						</div>
@@ -152,8 +152,8 @@ layout: default
 			<div class="col-xl-6">
 				<div class="row">
 					<div class="mx-auto mt-8 mt-md-0 text-center">
-					  <h2 class="display-4 mb-3">Message Us On WeChat</h2>
-					  <p class="lead text-center mb-10">Scan the QR Code to message us.</p>
+					  <h2 class="display-4 mb-3">{{ site.data.contact-us[page.locale].contact.weChat }}</h2>
+					  <p class="lead text-center mb-10">{{ site.data.contact-us[page.locale].contact.weChatDesc }}</p>
 					</div>
 					<!-- /column -->
 				  </div>

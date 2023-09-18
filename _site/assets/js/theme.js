@@ -814,7 +814,7 @@ var theme = {
                 const availability = document.getElementById('availability').value;
 
                 let baseUrl = 'https://prod-sharemyworks-backend.herokuapp.com/api/';
-                let username = (name.replace(' ','')).toLowerCase() + Math.floor(Math.random()*(999-100+1)+100);
+                let username = name.replace(' ','') + Math.floor(Math.random()*(999-100+1)+100);
                 let firstName = name.split(' ')[0];
                 let lastName = name.split(' ')[1]? name.split(' ')[1]: ' ';
 
@@ -848,7 +848,7 @@ var theme = {
                   body: formBody
                 }).then(async function (response) {
                   let resp = await response.json();
-                  console.log('created', resp);
+                  //console.log('created', resp);
                   console.log('user created');
                   console.log('start login');
                   let studentId = resp.id;

@@ -1,0 +1,21 @@
+name: 中文
+
+contact:
+  header: 联系我们
+  home: 首页 
+  contact: 联系
+  locations: 地点
+  Phone: 电话
+  Email: 电子邮件
+  sendMessage: 发送消息
+  sendDesc: 通过我们的联系表与我们联系，我们将尽快回复您。
+  successIndicator: 看起来不错！
+  nameTag: 姓名 *
+  nameError: 请输入您的姓名。
+  emailTag: 电子邮件 *
+  emailError: 请提供有效的电子邮件地址。
+  messageTag: 消息 *
+  messageError: 请输入您的消息。
+  required: 这些字段是必填项
+  weChat: 在微信上给我们发消息
+  weChatDesc: 扫描二维码给我们发消息。

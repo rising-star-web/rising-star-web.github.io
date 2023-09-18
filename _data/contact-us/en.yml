@@ -1,0 +1,22 @@
+name: EN
+
+contact:
+  header: Contact Us
+  home: Home
+  contact: Contact
+  locations: Locations
+  Phone: Phone
+  Email: E-mail
+  sendMessage: Send Us A Message
+  sendDesc: Reach out to us from our contact form and we will get back to you shortly.
+  successIndicator: Looks Good!
+  nameTag: Name *
+  nameError: Please enter your name.
+  emailTag: Email *
+  emailError: Please provide a valid email address.
+  messageTag: Message *
+  messageError: Please enter your messsage.
+  required: These fields are required
+  weChat: Message Us On WeChat
+  weChatDesc: Scan the QR Code to message us.
+
