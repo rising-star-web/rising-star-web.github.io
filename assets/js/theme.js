@@ -820,7 +820,6 @@ var theme = {
 
                 let accountData = {
                   email2: email,
-                  email: email,
                   phone2: phone,
                   username: username,
                   firstName: firstName,
