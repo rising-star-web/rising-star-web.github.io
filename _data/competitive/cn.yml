@@ -40,7 +40,7 @@ instructors:
 
 schedule:
   header: 灵活的学习体验
-  lead: 选择您的课程模式
+  lead: 选择适合的课程模式
   online: 实时在线课程
   onlinebullet1: 实时讲座
   onlinebullet2: 实时互动
@@ -49,7 +49,7 @@ schedule:
   inpersonbullet1: 专注的学习环境
   inpersonbullet2: 动手学习
   inpersonbullet3: 社交互动
-  lead2: 选择您的课程规模
+  lead2: 选择适合的课程规模
   smallgroup: 小组课程
   smallgroupbullet1: 小组 2-4 名学生
   smallgroupbullet2: 团体互动
@@ -60,17 +60,17 @@ schedule:
   oneononebullet3: 加速学习
 
 impact:
-  header: 为影响而设计的课程
-  lead: 项目与竞赛等待着
+  header: 为升学而设计的课程
+  lead: 为项目与竞赛做准备
   create: 创建项目！
   projectHeader: 项目
   projectLead: 基于项目的学习
-  projectDescription: 在Coding Mind，学习的最终目标是创作 - 每个学生在每门课程结束时都会自豪地完成个人项目，展示他们的新技能和创新思维！
+  projectDescription: 在Coding Mind，学习的最终目标是项目开发 - 每个学生在每门课程结束时都会自豪地完成个人项目，展示他们的新技能和创新思维！
   competitionsHeader: 竞赛
   competitionsLead: 为竞赛做好准备
-  competitionsDescription: 在Coding Mind，每个学生都是竞争者 - 我们的课程保证每学期至少参加一次竞赛，培养技能、勇气和竞争优势！
+  competitionsDescription: 在Coding Mind，每个学生都是竞赛参与者 - 我们的课程保证每学期至少参加一次竞赛，培养技能、勇气和竞争优势！
 
 trial:
   header: 从Coding Mind开始学习
   lead: 将您孩子的兴趣变成职业技能
-  btn: 预订您的第一堂免费课程
+  btn: 预订您的第一堂免费试课
