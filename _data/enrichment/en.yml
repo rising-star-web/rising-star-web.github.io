@@ -2,34 +2,34 @@ name: EN
 
 whyenrichment:
   header: Enrichment Passion Project
-  lead: Reasons To Improve Your Background When Applying To Top Schools!
-  reason1: There is a trend of weakening standardized test scores for admission to U.S. universities.
-  reason2: In addition to scores, students might lack competitive and valuable background experiences.
-  reason3: Popular majors such as computer science, finance, and business continue to become more difficult to apply.
-  reason4: The increasingly difficult application policies and situation for Asian applicants.
+  lead: Why a Strong Background Is Key for Top School Admissions!
+  reason1: Less focus on test scores in U.S. admissions ups the ante on your background.
+  reason2: Extracurriculars and relevant experiences make you stand out.
+  reason3: High-demand majors like CS and finance are getting more selective.
+  reason4: Evolving policies heighten challenges for Asian applicants.
 
 accomplishment:
-  header: Your Benefits
-  lead: What Our Enrichment Program Can Do For You
-  description: Enrolling in our enrichment passion project is your key to unlocking unparalleled success.
-  benefitTitle1: College Research Internship
-  benefit1: Open doors to future internships and unleash your coding potential with our immersive coding project program. Elevate your skills, seize exciting opportunities, and embark on a transformative journey toward a successful career in the dynamic world of technology.
+  header: The Outcomes
+  lead: Unlock Success with Our Enrichment Program
+  description: Join our program to fast-track your journey to unparalleled achievement.
+  benefitTitle1: College Research Internships
+  benefit1: Unlock future internships and code like a pro with our immersive program. Boost skills and seize tech adn research opportunities.
   benefitTitle2: Publish Research Papers
-  benefit2: Harness the power of coding to conduct groundbreaking research, analyze complex data, and publish impactful research papers that contribute to the advancement of knowledge in your field of expertise.
-  benefitTitle3: Publish Official Apps And Projects
-  benefit3: You'll gain the skills and knowledge necessary to develop innovative and captivating apps, ultimately paving the way for you to publish your creations on the App Store and share them with the world. Get ready to leave your mark in the digital landscape and embark on an exciting journey towards becoming a successful app developer.
-  benefitTitle4: Join and Win Competitions
-  benefit4: Through our intensive coding project program, you'll gain the expertise and confidence needed to excel in hackathons, joining a community of talented individuals and positioning yourself for success as you compete, collaborate, and emerge victorious in these thrilling coding challenges.
+  benefit2: Use coding for impactful research. Analyze data and publish papers in top-tier journals and magnizes to advance your field.
+  benefitTitle3: Launch Apps Officially
+  benefit3: Gain the skills to create and publish apps in official app stores. Make your mark in the digital world.
+  benefitTitle4: Win Competitions
+  benefit4: Excel in science fairs, hackathons, join a community of innovators, and win big challenges.
   benefitTitle5: File U.S. Patents
-  benefit5: Acquire the skills and knowledge necessary to develop groundbreaking solutions, paving the way for you to file U.S. patents and protect your revolutionary inventions, ensuring long-term recognition and potential commercial success.
-  benefitTitle6: Make a Brand and Website
-  benefit6: Craft a captivating brand identity and build a stunning website, empowering you to leave a lasting impression, attract audiences, and unlock endless possibilities for success in the digital realm..
-  benefitTitle7: Lanch Your Startup
-  benefit7: Acquire the technical expertise and entrepreneurial mindset needed to bring your innovative ideas to life, laying the foundation for you to create and launch your own successful startup, revolutionizing industries and making a lasting impact on the world.
-  benefitTitle8: Presidential Volunteer Service Award
-  benefit8: Create meaningful projects that address pressing societal challenges, positioning you for recognition and eligibility for the prestigious Presidential Volunteer Service Award, a testament to your dedication and service to others.
-  benefitTitle9: Get Recommendation Letters
-  benefit9: Through this immersive program, you'll have the chance to showcase your skills, impress mentors, and build strong relationships, ultimately paving the way to secure glowing recommendation letters that will propel you towards your future academic and professional endeavors.
+  benefit5: Develop innovative solutions and file U.S. patents to protect your inventions.
+  benefitTitle6: Brand & Website
+  benefit6: Build a memorable brand and website to attract audiences and unlock digital success.
+  benefitTitle7: Start Your Venture
+  benefit7: Gain tech and entrepreneurial skills to launch your startup and make a global impact.
+  benefitTitle8: Volunteer Award
+  benefit8: Address societal issues and become eligible for the Presidential Volunteer Service Award.
+  benefitTitle9: Recommendation Letters
+  benefit9: Impress mentors and secure strong recommendations to propel your future endeavors.
 
 projects:
   header: Universities
@@ -70,53 +70,53 @@ projects:
   project10: Angel innovatively improved the method of training large data models using artificial intelligence and machine learning. He won the Kaggle algorithm competition gold medal and was admitted to Princeton.
 
 process:
-  header: How it works?
-  lead: Our Service Process
-  description: Here are the enrichment project steps and why our valued customers choose us.
-  title1: Ideation
-  step1: Communicate with research advisors to help inspire research topics
-  title2: Personal Project Plan
-  step2: Make a customized project plan based on your experiences and desired major
-  title3: Development
-  step3: Learn and build a project prototype
-  title4: Research
-  step4: Conduct an experiment, research, and publish a professional paper
-  title5: Launch
-  step5: Publish a project officially and launch your very own startup
-  title6: Competitions
-  step6: Participate in various competitions and achieve accomplishments
-  title7: Make An Impact
-  step7: Promote your project and use your projects in real-life communities
-  title8: Project Summary
-  step8: We will help assist you into putting your accomplishments toward your college application
-  title9: Establishing a Company
-  step9: Establishing a startup company, creating a website and a brand
-  title10: Project Promotion
-  step10: Marketing and promotion, creating business and social impact
-  title11: Volunteer in Your Community
-  step11: Using projects to help your community, earning the Presidential Volunteer Service Award
-  title12: Mentor Recommendations
-  step12: Presenting project findings and seeking mentor recommendation letters
-  title13: Project Summary
-  step13: Summarizing project achievements, assisting with application materials preparation
+  header: How Does It Work?
+  lead: Our Program Workflow
+  description: Explore the steps involved in our enrichment project and discover why we are the preferred choice for our esteemed clients.
+  title1: Ideation Phase
+  step1: Collaborate with research advisors to identify compelling research topics that resonate with you.
+  title2: Tailored Project Plan
+  step2: Create a personalized project plan, aligned with your past experiences and future academic aspirations.
+  title3: Project Development
+  step3: Acquire the skills to construct a functional project prototype.
+  title4: Academic Research
+  step4: Perform experiments, conduct scholarly research, and author impactful papers.
+  title5: Product Launch
+  step5: Officially publish your project and initiate your own startup venture.
+  title6: Competitive Showcase
+  step6: Engage in various competitions to garner accolades and recognition.
+  title7: Social Impact
+  step7: Amplify your project's reach and implement it in real-world communities.
+  title8: College Applications
+  step8: We assist in integrating your project achievements into your college application materials.
+  title9: Startup Establishment
+  step9: Lay the groundwork for your startup, including website and brand creation.
+  title10: Strategic Promotion
+  step10: Execute marketing strategies for both business growth and societal impact.
+  title11: Community Volunteering
+  step11: Utilize your project to benefit your community and earn the Presidential Volunteer Service Award.
+  title12: Mentor Endorsements
+  step12: Showcase your project outcomes to mentors for strong recommendation letters.
+  title13: Application Assistance
+  step13: Summarize your project milestones and receive help in preparing application materials.
 
 strength:
   header: Our Strengths
-  lead: This program is specifically designed to meet your needs.
-  title1: Customizable Plan
-  strength1: A fully customized passion project plan.
-  title2: Personal Development
-  strength2: Based on YOUR real experiences and interests.
-  title3: Goal-Based
-  strength3: Efficient and multi-goal-driven plan.
-  title4: Mentorship
-  strength4: Professional mentors from industry and academia.
+  lead: A Program Tailored to Fulfill Your Aspirations
+  title1: Personalized Planning
+  strength1: An individually crafted project plan aligned with your passion.
+  title2: Authentic Development
+  strength2: Rooted in your genuine experiences and areas of interest.
+  title3: Goal-Driven Approach
+  strength3: A streamlined plan designed to achieve multiple objectives efficiently.
+  title4: Expert Mentorship
+  strength4: Guidance from seasoned professionals in both industry and academia.
 
 contact:
   header: Let's Get Started
   lead: Contact Us
-  description: Boost your college applications with our enrichment passion project program. Scan this QR Code to message us on WeChat.
-  button: Sign Up
+  description: Boost your college applications with our enrichment passion project program. Scan this QR Code to message us on WeChat or sign up for a free consultation below.
+  button: Signup for a Consultation
 
 trial: Request a Free Trial
 trialStyle: free-trial-wrap
