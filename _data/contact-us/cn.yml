@@ -8,14 +8,14 @@ contact:
   Phone: 电话
   Email: 电子邮件
   sendMessage: 发送消息
-  sendDesc: 通过我们的联系表与我们联系，我们将尽快回复您。
-  successIndicator: 看起来不错！
-  nameTag: 姓名 *
+  sendDesc: 请通过联系表与我们联系，我们将尽快回复您。
+  successIndicator: 收到您的信息，我们会尽快与您联络！
+  nameTag: 您的名字 *
   nameError: 请输入您的姓名。
   emailTag: 电子邮件 *
-  emailError: 请提供有效的电子邮件地址。
-  messageTag: 消息 *
+  emailError: 请提供有效的邮箱地址。
+  messageTag: 留言内容 *
   messageError: 请输入您的消息。
-  required: 这些字段是必填项
-  weChat: 在微信上给我们发消息
-  weChatDesc: 扫描二维码给我们发消息。
+  required: 为必填项
+  weChat: 通过微信联系我们
+  weChatDesc: 扫描二维码添加学习顾问。
