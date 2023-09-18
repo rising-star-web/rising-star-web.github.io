@@ -2,12 +2,12 @@ name: 中文
 
 pathway:
   header: 竞技编程课程
-  lead: 用代码走向成功
+  lead: 用编程走向名校
   # 该路径内容位于 /courses
 
 topics:
   header: 热门课程
-  lead: "掌握顶级趋势：人工智能等热门课程"
+  lead: "掌握科技趋势：人工智能等应用课程"
   ai: 人工智能 (AI)
   data: 数据科学 (Data Science)
   cyber: 网络安全 (Cyber Security)
@@ -21,22 +21,22 @@ topics:
 instructors: 
   header: 经验丰富的教师团队
   lead: 编程与教学专家
-  header2: 我们的招聘流程
-  description: 我们遵循严格的选拔和培训流程来选择我们的教师。
+  header2: 师资选拔与培养
+  description: 我们遵循严格的选拔和培训流程来确保老师团队质量
   step1: 严格筛选
-  stepdesc1: 教师招聘步骤中的初始流程，确保只有最合格的候选人能够进入下一阶段的选拔。
+  stepdesc1: 教师招聘步骤中的初始流程，确保只有最合格的候选人能够进入下一阶段的选拔
   step2: 技术评估
-  stepdesc2: 教研团队针对候选人的技术能力进行评估，以确保他们具备必要的技术技能和专业知识，以便进行有效的教学。
+  stepdesc2: 教研团队针对候选人的技术能力进行评估，以确保他们具备必要的技术技能和专业知识，以便进行有效的教学
   step3: 模拟教学
-  stepdesc3: 候选人通过模拟课程来展示他们的教学能力，使教研团队能够评估候选人的教学效果以及与学生互动的能力。
+  stepdesc3: 候选人通过模拟课程来展示他们的教学能力，使教研团队能够评估候选人的教学效果以及与学生互动的能力
   step4: 入职培训
-  stepdesc4: 入选者将获得我们课程和教学方法的全面培训，确保他们做好充分的准备，向我们的学员提供最出色的编程课程。
+  stepdesc4: 入选者将获得我们课程和教学方法的全面培训，确保他们做好充分的准备，向我们的学员提供最出色的编程课程
   step5: 教学认证
-  stepdesc5: 教研团队向已成功完成培训和评估的入选者发送认证，正式成为教师团队中的一员，确认其准备好为我们的学员提供高质量的编程课程。
+  stepdesc5: 教研团队向已成功完成培训和评估的入选者发送认证，正式成为教师团队中的一员，确认其准备好为我们的学员提供高质量的编程课程
   step6: 定期评估
-  stepdesc6: 教研团队通过定期评估和反馈来确保教师们的教学质量和效果得到持续保持。
+  stepdesc6: 教研团队通过定期评估和反馈来确保教师们的教学质量和效果得到持续保持
   step7: 继续教育
-  stepdesc7: 我们通过定期的研讨会、技术和资源更新来不断改进和提升我们教师团队的技能，确保他们始终处于编程教育的前沿。
+  stepdesc7: 我们通过定期的研讨会、技术和资源更新来不断改进和提升我们教师团队的技能，确保他们始终处于编程教育的前沿
 
 schedule:
   header: 灵活的学习体验
@@ -47,7 +47,7 @@ schedule:
   onlinebullet3: 随时随地学习
   inperson: 面对面课程
   inpersonbullet1: 专注的学习环境
-  inpersonbullet2: 动手学习
+  inpersonbullet2: 现场练习与答疑
   inpersonbullet3: 社交互动
   lead2: 选择适合的课程规模
   smallgroup: 小组课程
@@ -60,17 +60,17 @@ schedule:
   oneononebullet3: 加速学习
 
 impact:
-  header: 为升学而设计的课程
+  header: 为名校申请而设计的课程
   lead: 为项目与竞赛做准备
   create: 创建项目！
-  projectHeader: 项目
+  projectHeader: 发布项目
   projectLead: 基于项目的学习
   projectDescription: 在Coding Mind，学习的最终目标是项目开发 - 每个学生在每门课程结束时都会自豪地完成个人项目，展示他们的新技能和创新思维！
-  competitionsHeader: 竞赛
+  competitionsHeader: 硬核竞赛
   competitionsLead: 为竞赛做好准备
   competitionsDescription: 在Coding Mind，每个学生都是竞赛参与者 - 我们的课程保证每学期至少参加一次竞赛，培养技能、勇气和竞争优势！
 
 trial:
   header: 从Coding Mind开始学习
-  lead: 将您孩子的兴趣变成职业技能
+  lead: 将您孩子的兴趣变成名校申请的核心竞争力
   btn: 预订您的免费试课
