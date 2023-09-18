@@ -5,13 +5,13 @@ home:
   header2: "{ 编程助力名校申请 }"
   bullet1: 项目,
   bullet2: 竞赛,
-  bullet3: 科研
+  bullet3: 创业
   bullet4: 名校
   trial: 免费试听
 
 breakdown:
   header: 我们的课程
-  lead: Coding Mind 提供多种课程选择
+  lead: 目标硬核成绩的课程选择
   competitive: 竞技编程课程
   coursebullet1: K-12 全课程体系
   coursebullet2: 热门及应用主题
@@ -34,22 +34,22 @@ pursuit:
   wdesc: 在 Coding Mind，用创意取得胜利，学员们的项目为他们赢得了各种著名竞赛的荣誉！
   developer: 成为开发者！
   dheader: 开发产品
-  ddesc: 学员不仅仅是学习 - 他们还会将开发他们的创新项目发布到Apple、Google、Microsoft 和 Steam 等官方平台上，供全世界体验！
+  ddesc: 学员不仅仅是学习 - 他们还会将开发他们的创新项目发布到Apple、Google、Microsoft 和 Steam 等官方平台上，供全球用户下载！
   scientist: 成为科学家！
   sheader: 发表研究论文
   sdesc: 在 Coding Mind，学生有机会在大学实验室中进行科学研究，并在顶级会议和期刊上发表学术论文。
   entrepreneur: 成为企业家！
   eheader: 启动创业公司
-  edesc: 在 Coding Mind，释放您的潜力 - 学员的项目可以变成蓬勃发展的创业公司，产生现实世界的收入。
+  edesc: 在 Coding Mind，释放您的潜力 - 在青少年阶段开始把自己的项目变成创业公司，进行市场推广，产生收入。
   influencer: 成为影响者！
   iheader: 改变世界
-  idesc: 在 Coding Mind，激励社区，启发变革，我们学员的项目不仅仅局限于教室，还可以在现实世界中产生影响。
+  idesc: 在 Coding Mind，激励社区，启发变革，我们学员的项目不仅仅局限于教室，还不断的通过科技在社区和社会中产生影响。
 
 trial:
   header: 开启卓越之路
   lead: 安排试听课程
   header2: 从 Coding Mind 开始
-  lead2: 解锁您孩子的编码潜力，参加我们的免费试听课程。
+  lead2: 解锁您孩子的编码潜力，参加我们的免费试听与评估
   btn: 预约您的免费试课
   floatBtn: 免费试课
   trialStyle: free-trial-wrap-cn
