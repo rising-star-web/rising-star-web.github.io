@@ -820,7 +820,6 @@ var theme = {
 
                 let accountData = {
                   email2: email,
-                  email: email,
                   phone2: phone,
                   username: username,
                   firstName: firstName,
@@ -849,7 +848,7 @@ var theme = {
                   body: formBody
                 }).then(async function (response) {
                   let resp = await response.json();
-                  //console.log('created', resp);
+                  console.log('created', resp);
                   console.log('user created');
                   console.log('start login');
                   let studentId = resp.id;
