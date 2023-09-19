@@ -881,9 +881,13 @@ var theme = {
                     //console.log('trial created', resp2);
                     console.log('trial created');
                     $('#formSpinner').css("display", "none");
+                    $('#formDescription').css("display", "none");
                     $('#form').prepend(
+                      window.location.href.indexOf("cn") != -1 ? 
+                      '感谢您提交试课评估申请，我们的助理会尽快在第一时间联系您，确认试课细节。同时如果您有任何问题，请随时通过电话或者微信联系我们 +1 (949) 236-7896':
                       'Your free trial request has been processed. We will contact you shortly. Meanwhile, feel free to reach out us by +1 (949) 236-7896 if you have any questions.'
                     );
+                    $('#QRCode').css("display", "flex");
                   }).catch(function err(err) {
                     $('#formSpinner').css("display", "none");
                     $('#form').prepend('An error has occurred. Please contact us at +1 (949) 236-7896 for help.');  
