@@ -89,31 +89,19 @@
         <!-- /.navbar-collapse -->
         <div class="navbar-other w-100 d-flex ms-auto">
           <ul class="navbar-nav flex-row align-items-center ms-auto">
-            <li class="nav-item dropdown language-select text-uppercase">
-              <a class="nav-link dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                {{ site.data.nav[page.locale].name }}
+            <li class="nav-item language-select text-uppercase">
+              <a class="nav-link" role="button"  
+              href="
+              {% if page.name == "index.html" %}
+                {{ site.data.nav[page.locale].nav.switchLangURL }}{{page.name | replace:'index.html','' }}
+              {% elsif page.collection.size %}
+                {{ site.data.nav[page.locale].nav.switchLangURL }}{{page.collection}}/{{page.slug}}
+              {% else %}
+                {{ site.data.nav[page.locale].nav.switchLangURL }}{{page.name | replace:'.html','' }}
+              {% endif %}
+              ">  
+              {{ site.data.nav[page.locale].nav.switchLang }}
               </a>
-              <ul class="dropdown-menu">
-                <li class="nav-item"><a class="dropdown-item" href="#">
-                  {{ site.data.nav[page.locale].name }}
-                </a></li>
-                
-                <!-- Language Change Liquid Code 1.Index 2.Collection Items 3.General Pages -->
-                <li class="nav-item"><a class="dropdown-item" 
-                  href=
-                  "
-                  {% if page.name == "index.html" %}
-                    {{ site.data.nav[page.locale].nav.switchLangURL }}{{page.name | replace:'index.html','' }}
-                  {% elsif page.collection.size %}
-                    {{ site.data.nav[page.locale].nav.switchLangURL }}{{page.collection}}/{{page.slug}}
-                  {% else %}
-                    {{ site.data.nav[page.locale].nav.switchLangURL }}{{page.name | replace:'.html','' }}
-                  {% endif %}
-                  ">      
-                  {{ site.data.nav[page.locale].nav.switchLang }}
-                </a></li>
-              </ul>
-
             </li>
 
             <li class="nav-item d-none d-md-block">
