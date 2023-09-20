@@ -16,7 +16,7 @@ bodyText2: "布鲁斯的这一独特方案不仅对照片进行分析，而且�
 URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
 awardsDesc: "研发防溺水检测系统"
-contentImage: "/img/updated/projects/IMG_3675.JPG"
+contentImage: "/img/updated/projects/IMG_6237.jpg"
 contentImage2: "/img/updated/projects/IMG_3676.JPG"
 
 ---
