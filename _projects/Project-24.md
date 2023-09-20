@@ -4,17 +4,17 @@ layout: student_project_detail
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/截屏2023-09-20 下午1.53.44.png"
 pagePostDate: "15 Feb 2022"
-studentName: "Angel"
-projectName: "AI and Machine Learning Methods "
+studentName: "Student"
+projectName: "Raspberry Pi-based smart helmet "
 projectCategory: "App Development"
-projectDesc: "Admission to Princeton"
+projectDesc: "Creativity"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "AI and Machine Learning Methods"
-bodyText1: " Angel from the Princeton School of Data Science used AI and machine learning methods to innovatively improve the way of training big data models, and thus won the gold medal in the Kaggle algorithm competition."
-bodyText2: "With his keen insight and innovative thinking, Angel has shown amazing ability in the field of data science. His practical results and competition achievements indicate that he will shine in the field of data science in the future."
+headerTitle: "Raspberry Pi-based smart helmet "
+bodyText1: "The Raspberry Pi-based smart helmet device is astonishing. It not only elevates riders' safety but also manifests a clever integration of technology and safety."
+bodyText2: "This smart helmet device combines machine learning with physical measurements to ensure riders wear helmets correctly while monitoring potential impacts, leveraging technology for life safety."
 projectURL: "https://www.google.com/"
-awardsDesc: "Admission to Princeton "
+awardsDesc: "Creativity "
 contentImage: "/img/updated/projects/IMG_6251.jpg"
 contentImage2: "/img/updated/projects/IMG_6251.jpg"
 ---
