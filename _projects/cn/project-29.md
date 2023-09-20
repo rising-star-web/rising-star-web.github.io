@@ -2,21 +2,21 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-06-12 下午12.10.50.png"
+coverImage: "/img/updated/projects/截屏2023-09-20 下午1.25.16.png"
 pagePostDate: "2022年3月3日"
-studentName: "Andy"
-projectName: "数据和创业结合"
+studentName: "Tim"
+projectName: "婴儿安全监控系统"
 projectCategory: "App Development"
-projectDesc: "NYU Stern录取"
+projectDesc: "学员创新作品"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "创业和数据相结合"
-bodyText1: "Andy, 一个才华横溢的研究者，成功地使用大数据分析中小企业的创业增长趋势。他的研究成果不仅发表了论文，还申请了专利。由于这些重大贡献，他已被NYU Stern商学院录取。"
-bodyText2: "Andy是一个富有创新和实践精神的人，他的学术成果证明了他在商业领域的深度理解和实际应用能力。他将大数据与商业策略相结合，解决了中小企业面临的独特挑战。这些能力使他在NYU Stern商学院中得到了高度认可"
+bodyText1: "为了实现数据的实时传输与存储，Tim采用了Firebase在线数据库，将拍摄的照片和处理结果储存在云端。家长只需通过手机应用，即可随时查看婴儿的状态，并获取相关提示"
+bodyText2: "Tim是一个富有创新和实践精神的人，他的成果通过此应用，家长可以实时了解婴儿的状态，为婴儿提供更安全、更贴心的护理"
 URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
-awardsDesc: "学员获NYU Stern录取"
-contentImage: "/img/updated/projects/IMG_3675.JPG"
-contentImage2: "/img/updated/projects/IMG_3676.JPG"
+awardsDesc: "学员创新作品"
+contentImage: "/img/updated/projects/IMG_6246.jpg"
+contentImage2: "/img/updated/projects/IMG_6247.jpg"
 
 ---
