@@ -2,19 +2,19 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-06-12 下午12.10.50.png"
+coverImage: "/img/updated/projects/截屏2023-09-20 下午1.25.16.png"
 pagePostDate: "15 Feb 2022"
-studentName: "Andy"
-projectName: "Business and Coding "
+studentName: "Tim"
+projectName: "Baby safety monitoring"
 projectCategory: "App Development"
-projectDesc: "Admission to NYU Stern"
+projectDesc: "Students’ innovative works"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "AI and Machine Learning Methods"
-bodyText1: " Andy, a talented researcher, has successfully used big data to analyze the entrepreneurial growth trends of SMEs. His research results not only published papers, but also applied for patents. Because of these significant contributions, he has been admitted to the NYU Stern School of Business."
-bodyText2: "Andy is an innovative and practical person, his academic achievements prove his deep understanding and practical application ability in the business field. He combines big data with business strategy to address the unique challenges faced by SMEs. These abilities have made him highly recognized in the NYU Stern School of Business."
+headerTitle: "Baby safety monitoring"
+bodyText1: " In order to achieve real-time transmission and storage of data, Tim used the Firebase online database to store the photos and processing results in the cloud. Parents can check the baby's status at any time and get relevant tips simply through the mobile app"
+bodyText2: "Tim is an innovative and practical person. Through this application, parents can understand the status of their babies in real time and provide safer and more considerate care for their babies."
 projectURL: "https://www.google.com/"
-awardsDesc: "Admission to NYU Stern "
+awardsDesc: "Students’ innovative works "
 contentImage: "/img/updated/projects/IMG_6246.jpg"
 contentImage2: "/img/updated/projects/IMG_6247.jpg"
 ---
