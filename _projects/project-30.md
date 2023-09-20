@@ -5,16 +5,16 @@ layout: student_project_detail
 coverImage: "/img/updated/projects/截屏2023-09-20 下午2.08.45.png"
 pagePostDate: "15 Feb 2022"
 studentName: "Group work"
-projectName: "Business and Coding "
+projectName: " Plant irrigation monitoring "
 projectCategory: "App Development"
 projectDesc: "Teamwork improve"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "AI and Machine Learning Methods"
-bodyText1: " Andy, a talented researcher, has successfully used big data to analyze the entrepreneurial growth trends of SMEs. His research results not only published papers, but also applied for patents. Because of these significant contributions, he has been admitted to the NYU Stern School of Business."
-bodyText2: "Andy is an innovative and practical person, his academic achievements prove his deep understanding and practical application ability in the business field. He combines big data with business strategy to address the unique challenges faced by SMEs. These abilities have made him highly recognized in the NYU Stern School of Business."
+headerTitle: "Plant irrigation monitoring"
+bodyText1: " This plant moisture level detection system brilliantly showcases the merger of technology with daily practicality. Its precise watering advice not only conserves resources but ensures optimal growth conditions for plants."
+bodyText2: "The system integrates machine learning and image analysis to offer apt watering guidance for plants, addressing the prevalent issue of over-watering, thereby safeguarding green life.."
 projectURL: "https://www.google.com/"
-awardsDesc: "Admission to NYU Stern "
+awardsDesc: "Teamwork improve "
 contentImage: "/img/updated/projects/IMG_6253.jpg"
 contentImage2: "/img/updated/projects/IMG_6254.jpg"
 ---
