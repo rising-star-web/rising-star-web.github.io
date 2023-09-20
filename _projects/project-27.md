@@ -2,19 +2,19 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-06-12 下午12.10.50.png"
+coverImage: "/img/updated/projects/截屏2023-09-20 下午12.07.43.png"
 pagePostDate: "15 Feb 2022"
-studentName: "Andy"
-projectName: "Business and Coding "
+studentName: "Jerry"
+projectName: "Cycling and Coding "
 projectCategory: "App Development"
-projectDesc: "Admission to NYU Stern"
+projectDesc: "Cractive product"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "AI and Machine Learning Methods"
-bodyText1: " Andy, a talented researcher, has successfully used big data to analyze the entrepreneurial growth trends of SMEs. His research results not only published papers, but also applied for patents. Because of these significant contributions, he has been admitted to the NYU Stern School of Business."
-bodyText2: "Andy is an innovative and practical person, his academic achievements prove his deep understanding and practical application ability in the business field. He combines big data with business strategy to address the unique challenges faced by SMEs. These abilities have made him highly recognized in the NYU Stern School of Business."
+headerTitle: "Bicycle Energy Drive Conversion"
+bodyText1: " Student Jerry recently completed his project Computing Cycle, a completely bicycle-powered energy conversion system that converts mechanical energy into electrical energy and is used to run computing tasks and even aid in the search for life in outer space"
+bodyText2: "Students not only learn programming knowledge, but more importantly, they gain profound learning experiences through practice, from which they gain important skills in problem solving, innovative thinking, and teamwork."
 projectURL: "https://www.google.com/"
-awardsDesc: "Admission to NYU Stern "
-contentImage: "/img/updated/projects/IMG_3663.JPG"
-contentImage2: "/img/updated/projects/IMG_3662.JPG"
+awardsDesc: "Student have independent project "
+contentImage: "/img/updated/projects/IMG_6239.jpg"
+contentImage2: "/img/updated/projects/IMG_6241.jpg"
 ---
