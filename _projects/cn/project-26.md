@@ -17,6 +17,6 @@ URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
 awardsDesc: "研发防溺水检测系统"
 contentImage: "/img/updated/projects/IMG_6237.jpg"
-contentImage2: "/img/updated/projects/IMG_3676.JPG"
+contentImage2: "/img/updated/projects/IMG_6238.jpg"
 
 ---
