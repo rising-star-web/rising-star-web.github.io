@@ -16,7 +16,7 @@ bodyText2: "学生不仅学习到编程知识，而且更重要的是，他们�
 URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
 awardsDesc: "学员拥有独立项目"
-contentImage: "/img/updated/projects/IMG_3675.JPG"
-contentImage2: "/img/updated/projects/IMG_3676.JPG"
+contentImage: "/img/updated/projects/IMG_6239.jpg"
+contentImage2: "/img/updated/projects/IMG_6241.jpg"
 
 ---
