@@ -2,12 +2,12 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-06-12 下午12.10.50.png"
+coverImage: "/img/updated/projects/截屏2023-09-20 下午2.08.45.png"
 pagePostDate: "15 Feb 2022"
-studentName: "Andy"
+studentName: "Group work"
 projectName: "Business and Coding "
 projectCategory: "App Development"
-projectDesc: "Admission to NYU Stern"
+projectDesc: "Teamwork improve"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "AI and Machine Learning Methods"
@@ -15,6 +15,6 @@ bodyText1: " Andy, a talented researcher, has successfully used big data to anal
 bodyText2: "Andy is an innovative and practical person, his academic achievements prove his deep understanding and practical application ability in the business field. He combines big data with business strategy to address the unique challenges faced by SMEs. These abilities have made him highly recognized in the NYU Stern School of Business."
 projectURL: "https://www.google.com/"
 awardsDesc: "Admission to NYU Stern "
-contentImage: "/img/updated/projects/IMG_3663.JPG"
-contentImage2: "/img/updated/projects/IMG_3662.JPG"
+contentImage: "/img/updated/projects/IMG_6253.jpg"
+contentImage2: "/img/updated/projects/IMG_6254.jpg"
 ---
