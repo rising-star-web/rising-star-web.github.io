@@ -2,19 +2,19 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-06-12 下午12.10.50.png"
+coverImage: "/img/updated/projects/IMG_5785.jpg"
 pagePostDate: "15 Feb 2022"
-studentName: "Andy"
-projectName: "Business and Coding "
+studentName: "Bruce"
+projectName: "Drowning detection system "
 projectCategory: "App Development"
-projectDesc: "Admission to NYU Stern"
+projectDesc: "Students’ innovative products"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "AI and Machine Learning Methods"
-bodyText1: " Andy, a talented researcher, has successfully used big data to analyze the entrepreneurial growth trends of SMEs. His research results not only published papers, but also applied for patents. Because of these significant contributions, he has been admitted to the NYU Stern School of Business."
-bodyText2: "Andy is an innovative and practical person, his academic achievements prove his deep understanding and practical application ability in the business field. He combines big data with business strategy to address the unique challenges faced by SMEs. These abilities have made him highly recognized in the NYU Stern School of Business."
+headerTitle: "Drowning detection system"
+bodyText1: " This system uses advanced artificial intelligence technology, combined with Raspberry Pi and cameras, to capture and process swimming pool videos and photos in real time. Its main function is to detect and mark children approaching the swimming pool. When children overlap with the boundaries of the swimming pool, the system will alert parents or guardians to remind them to pay attention to the safety of their children."
+bodyText2: "This unique solution from Bruce not only analyzes photos, but also processes live video to ensure the safety of your home swimming pool. Come and find out about this product that can bring extra safety to your children"
 projectURL: "https://www.google.com/"
-awardsDesc: "Admission to NYU Stern "
-contentImage: "/img/updated/projects/IMG_3663.JPG"
-contentImage2: "/img/updated/projects/IMG_3662.JPG"
+awardsDesc: "Students’ innovative products"
+contentImage: "/img/updated/projects/IMG_6237.jpg"
+contentImage2: "/img/updated/projects/IMG_6238.jpg"
 ---
