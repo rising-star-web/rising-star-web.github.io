@@ -2,21 +2,21 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-07-06 下午7.50.57.png"
+coverImage: "/img/updated/projects/截屏2023-09-20 下午1.53.44.png"
 pagePostDate: "2022年3月3日"
-studentName: "Angel"
-projectName: "AI和机器学习方法"
+studentName: "学员"
+projectName: "头盔速度检测保护"
 projectCategory: "App Development"
-projectDesc: "Princeton录取"
+projectDesc: "学员创新作品"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "AI和机器学习方法"
-bodyText1: "Princeton数据科学院的Angel，利用AI和机器学习方法，创新地改进了训练大数据模型的方式，并因此在Kaggle算法竞赛中获得金奖。"
-bodyText2: "Angel以其敏锐的洞察力和创新思维，在数据科学领域展现出惊人的能力。他的实践成果和竞赛成就，标志着他将在未来的数据科学领域中发光发热。"
+bodyText1: "基于树莓派的智能头盔装置令人惊叹。这不仅提升了骑行者的安全性，更体现出结合科技与安全的巧妙设计思路。"
+bodyText2: "此智能头盔装置结合了机器学习和物理测量技术，确保骑行者正确佩戴头盔，同时监测潜在撞击，科技助力生命安全。"
 URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
-awardsDesc: "学员获Princeton录取"
-contentImage: "/img/updated/projects/IMG_3675.JPG"
-contentImage2: "/img/updated/projects/IMG_3676.JPG"
+awardsDesc: "学员创新作品"
+contentImage: "/img/updated/projects/IMG_6251.jpg"
+contentImage2: "/img/updated/projects/IMG_6251.jpg"
 
 ---
