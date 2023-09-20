@@ -2,19 +2,19 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-07-06 下午7.50.57.png"
+coverImage: "/img/updated/projects/截屏2023-09-20 下午1.44.58.png"
 pagePostDate: "15 Feb 2022"
-studentName: "Angel"
-projectName: "AI and Machine Learning Methods "
+studentName: "Devin"
+projectName: "Game and history"
 projectCategory: "App Development"
-projectDesc: "Admission to Princeton"
+projectDesc: "Creativity "
 
 [//]: # (Project Page/Showcase)
 headerTitle: "AI and Machine Learning Methods"
-bodyText1: " Angel from the Princeton School of Data Science used AI and machine learning methods to innovatively improve the way of training big data models, and thus won the gold medal in the Kaggle algorithm competition."
-bodyText2: "With his keen insight and innovative thinking, Angel has shown amazing ability in the field of data science. His practical results and competition achievements indicate that he will shine in the field of data science in the future."
+bodyText1: " Devin,a student from Coding Minds, has delivered a stunning piece. This multiplayer game on American history showcases his prowess, rivaling professional game developers."
+bodyText2: "Devin's game perfectly blends learning with entertainment. He once again demonstrates the creativity and potential of the youth, making Coding Minds proud."
 projectURL: "https://www.google.com/"
-awardsDesc: "Admission to Princeton "
+awardsDesc: "Creativity "
 contentImage: "/img/updated/projects/IMG_6249.jpg"
 contentImage2: "/img/updated/projects/IMG_6248.jpg"
 ---
