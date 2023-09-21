@@ -1,8 +1,30 @@
 name: EN
 
 careers:
-  header: Career Opportunities
+  header: Careers
   paragraph: We are always looking for passionate coding instructors to teach K-12 students in our summer camps, after-school programs, and weekend workshops! Take a look at our current openings.
+  
+  aboutUsHeader: Who Are We?
+  aboutUsPoint1: Coding Minds offers quality class environments to our students who are looking to learn programming and exploring their creativity and curiosity.
+  aboutUsPoint2: We have assisted students and instructors to sharpen their programming skills to receive unique opportunities and positions like Instagram, Facebook, Ivy league schools, and even code competitively onto national level.
+  aboutUsPoint3: Within our classes, Coding Mind generates encouragement, confidence and of course success for our students to empower the future with their innovative minds and technology.
+  aboutUsBtn: More About Us
+  
+  companiesHeader: "Our Instructors Have Gone On To Join:"
+
+  inPersonHeader: Teach in-person Classes!
+  inPersonLead: Work with Coding Mind to teach in-person classes in  in Southern California.
+  inPersonParagraph: Learn and refine your social and coding skills by teaching our in-person courses. We are looking for passionate coding instructors to teach K-12 students in after-school programs, weekend workshops, and camps.
+
+  remoteHeader: Not located in Southern California?
+  remoteLead: Worry not! We offer various remote instructor opportunities.
+  remoteParagraph: As long as you have an internet connection and a working computer with a webcam, Coding Mind offers remote opportunities with flexible schedule to accommodate timezone differences and your own schedule.
+
+  header2: Career Opportunities
+  paragraph2: Coding Mind is always looking for individuals who has honed their programming craft and are curious into expanding their technological repertoire. The opportunities are always given to our instructors to further advance their software and hardware skills. 
+          With engaging content, students eager to learn, and an adaptable learning environment, Coding Mind encourages both current and prospective instructors to make computer science and engineering meaningful, fun and innovative for our next generation of programmers and engineers.
+
   help: Can't find the right position?
   contact: Feel free to contact us for more information.
   contactBtn: Get in Touch
+   

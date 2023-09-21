@@ -1,8 +1,29 @@
 name: 中文
 
 careers:
-  header: 工作机会
+  header: 职业
   paragraph: 我们一直在寻找充满激情的编程教师，以教授我们夏令营、课后项目和周末研讨会中的K-12学生！以下是我们目前的职位空缺。
+
+  aboutUsHeader: 我们是谁？
+  aboutUsPoint1: Coding Mind为寻求学习编程和探索创造力和好奇心的学生提供高质量的课堂环境。
+  aboutUsPoint2: 我们帮助学生和教师磨练他们的编程技能，获得像Instagram、Facebook、常春藤联盟学校甚至国家级编程竞赛等独特的机会和职位。
+  aboutUsPoint3: 在我们的课堂上，Coding Mind鼓励学生产生信心、自信，当然还有成功，为他们未来的创新思维和技术赋予力量。
+  aboutUsBtn: 了解更多
+
+  companiesHeader: "我们的教师已经加入了："
+
+  inPersonHeader: 教授面授课程！
+  inPersonLead: 与Coding Mind一起在南加利福尼亚州教授面授课程。
+  inPersonParagraph: 通过教授我们的面授课程，您可以学习和提炼社交和编码技能。我们正在寻找充满激情的编码教师，以教授K-12学生的课程，包括课后项目、周末研讨会和夏令营。
+
+  remoteHeader: 不在南加利福尼亚州吗？
+  remoteLead: 不用担心！我们提供各种远程教师机会。
+  remoteParagraph: 只要您有互联网连接和配备摄像头的工作电脑，Coding Mind提供具有灵活时间安排的远程机会，以适应时区差异和您的时间安排。
+
+  paragraph2: Coding Mind一直在寻找那些磨练过编程技能并渴望扩展技术知识的个人。我们的教师一直有机会进一步提高他们的软件和硬件技能。
+        在引人入胜的课程内容、渴望学习的学生和适应性强的学习环境的支持下，Coding Mind鼓励现有和潜在的教师，使计算机科学和工程对我们下一代程序员和工程师具有意义、有趣和创新。
+
   help: 找不到合适的职位？
   contact: 联系我们获取更多信息。
   contactBtn: 联系我们
+  header2: 工作机会
