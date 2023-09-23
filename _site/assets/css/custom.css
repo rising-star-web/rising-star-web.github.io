@@ -296,7 +296,7 @@ height: 75vh;
 height: 25vh;
 }
 
-.collegeBanner {
+.object-fit-contain {
     object-fit: contain;
 }
 
