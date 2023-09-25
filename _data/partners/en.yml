@@ -2,16 +2,14 @@ name: EN
 
 partners:
   header: Our Partners
-  lead: Coding Mind was created by university professors in response to the demands of the academic community.
-  paragraph: Many of our instructors come from universities and leading industrial enterprises, and we continue to maintain strong relationships and collaborations with both academia and industry. 
-            Coding Mind regularly invites academic and industry partners to share the latest research projects and achievements in the field of computer science, ensuring that our instructors' knowledge remains up-to-date. 
-            At the same time, we frequently provide feedback to the academic community and engage in discussions about challenges encountered in K-12 computer education, ensuring that we supply the talent needed by both academia and industry.
+  lead: Grow with the Academia and Industry
+  paragraph: Our instructors are sourced from esteemed universities and top-tier industrial firms. We pride ourselves on fostering robust ties with both the academic and corporate sectors. Coding Mind consistently hosts sessions with these partners to discuss cutting-edge research and advancements in computer science. This keeps our teaching methods current. Additionally, we actively converse with the educational community about challenges in K-12 computer education, ensuring we nurture talent that meets the requirements of both the academic and industrial worlds.
 
   uniHeader: University Partners
-  uniLead: We partner with academia.
-  uniParagraph: We bring solutions to challenges encountered in K-12 computer education.
+  uniLead: Collaborating with the Academic Community
+  uniParagraph: The universities, with its advanced labs and distinguished professors, have been pivotal for Coding Mind. They've aided in instructor training, curriculum refinement, and offered strategic advice.
 
-  industry: "We also collaborate with these industry leaders:"
+  industry: "We also forge partnerships with these industry leaders"
 
   orgHeader: Partner Organizations
   orgLead: We cooperate with these cities and organizations.
