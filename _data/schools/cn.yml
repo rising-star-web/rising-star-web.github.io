@@ -1,0 +1,24 @@
+name: CN
+
+schools:
+  header: 针对学校的编程思维计划
+  lead: 编程思维独特的“学校编程计划”为学校提供课堂内学术增强项目，引入全面的编程和STEM模块。
+
+  pointHeader1: 当前热门话题
+  pointHeader2: 边学边做
+  pointHeader3: 成就感
+  pointDesc1: 我们的课程强调了像人工智能、网络安全、数据科学等当前和热门学科，确保学生始终走在科技前沿。
+  pointDesc2: 我们的理念优先考虑通过项目进行实践性学习。
+  pointDesc3: 我们的计划为学校及其学生提供了一条明确的发展路线图，旨在在STEM竞赛中取得优异成绩。
+
+  serviceHeader: 我们的服务
+  serviceLead: 有经验的教育家园校园教育
+  serviceDesc: 我们经验丰富的一组教育家将访问您的学校，与您的学生直接合作，提供与您现有课程或课外活动相符的深入编程和STEM课程。 每个课程都是根据您学生的年龄和熟练程度精心制作的！
+
+  trustedHeader: 受以下杰出学校和城市信任
+
+  trendingDesc: 学校可以根据年级水平和课堂模式从我们的热门课程列表中选择。
+  
+  freeTrialHeader: 将我们的课程引入您的学校和城市
+  freeTrialLead: 为您的学生提供编程、人工智能和自信心的丰富体验
+  freeTrialBtn: 安排会议

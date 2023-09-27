@@ -1,0 +1,28 @@
+name: EN
+
+schools:
+  header: Coding Mind For Schools
+  lead: Coding Mind's unique CODING4SCHOOLS initiative offers in-class Academic Enhancement Programs, introducing comprehensive Coding and STEM modules to your school.
+  
+  pointHeader1: Trending Topics
+  pointHeader2: Learn-by-Doing
+  pointHeader3: Achievement
+  pointDesc1: Our curriculum emphasizes current and in-demand subjects like AI, cyber security, data science, ensuring students stay ahead in the tech world.
+  pointDesc2: Our philosophy prioritizes experiential learning through projects.
+  pointDesc3: Our program equips institutions and their learners with a clear roadmap, aiming to excel in STEM contests.
+
+  serviceHeader: Our Service
+  serviceLead: Immersive On-Campus Education with Experienced Instructors 
+  serviceDesc:  Our seasoned group of instructors will visit your school, collaborating directly with your students to deliver in-depth Coding and STEM sessions that align with your existing lessons or after-school activities.Every session is specially crafted considering the age and proficiency of your students! 
+  trustedHeader: Trusted by These Amazing Schools and Cities 
+  # Join Us located in partners
+
+  # Trending and Courses Designed for Impact located located in competitive/
+  trendingDesc: Schools can tailor their choice of courses from our trending topics list, based on grade level and class mode. 
+
+  freeTrialHeader: Bring Our Classes to Your School and City
+  freeTrialLead: Enrich your students with coding, AI, and confidence
+  freeTrialBtn: Schedule a Meeting
+
+
+
