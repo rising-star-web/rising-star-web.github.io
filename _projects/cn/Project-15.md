@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-06-12 下午12.10.50.png"
+coverImage: "/img/updated/projects/IMG_6585.JPG"
 pagePostDate: "2022年3月3日"
 studentName: "Andy"
 projectName: "编程开发游戏"
@@ -16,7 +16,7 @@ bodyText2: "Andy展现了难得的创造力和执行力。他的游戏发布仅�
 URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
 awardsDesc: "学员获NYU Stern录取"
-contentImage: "/img/updated/projects/IMG_3675.JPG"
-contentImage2: "/img/updated/projects/IMG_3676.JPG"
+contentImage: "/img/updated/projects/IMG_6587.JPG"
+contentImage2: "/img/updated/projects/IMG_6588.JPG"
 
 ---
