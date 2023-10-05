@@ -16,7 +16,7 @@ bodyText2: "Daniel的App让学魔方变得有趣且易学，他的创新才能�
 URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
 awardsDesc: "Phillips Exeter Academy录取。"
-contentImage: "/img/updated/projects/IMG_3675.JPG"
-contentImage2: "/img/updated/projects/IMG_3676.JPG"
+contentImage: "/img/updated/projects/IMG_6592.jpg"
+contentImage2: "/img/updated/projects/IMG_6593.jpg"
 
 ---
