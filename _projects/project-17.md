@@ -15,6 +15,6 @@ bodyText1: " Daniel developed a fun Rubik's Cube teaching App, winning several c
 bodyText2: "Daniel's app makes learning the Rubik's Cube engaging and easy. His innovative ability is truly impressive."
 projectURL: "https://www.google.com/"
 awardsDesc: "Admission to Phillips Exeter Academy "
-contentImage: "/img/updated/projects/IMG_3663.JPG"
-contentImage2: "/img/updated/projects/IMG_3662.JPG"
+contentImage: "/img/updated/projects/IMG_6592.jpg"
+contentImage2: "/img/updated/projects/IMG_6593.jpg"
 ---
