@@ -16,7 +16,7 @@ bodyText2: "Zach展现出卓越的技术才华和深刻的社会洞察力。他�
 URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
 awardsDesc: "学员获Harvard-Westlake学校录取"
-contentImage: "/img/updated/projects/IMG_3675.JPG"
-contentImage2: "/img/updated/projects/IMG_3676.JPG"
+contentImage: "/img/updated/projects/截屏2023-10-06 下午2.22.27.png"
+contentImage2: "/img/updated/projects/截屏2023-10-06 下午2.22.38.png"
 
 ---
