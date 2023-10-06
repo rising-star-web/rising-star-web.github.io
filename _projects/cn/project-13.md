@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-07-06 下午7.19.28.png"
+coverImage: "/img/updated/projects/IMG_6627.JPG"
 pagePostDate: "2022年3月3日"
 studentName: "Jenna"
 projectName: "邮件插件和编程"
@@ -16,7 +16,7 @@ bodyText2: "Jenna将心理学原理与实际问题相结合，设计出的邮件
 URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
 awardsDesc: "学员获Cornell录取"
-contentImage: "/img/updated/projects/IMG_3675.JPG"
-contentImage2: "/img/updated/projects/IMG_3676.JPG"
+contentImage: "/img/updated/projects/IMG_6626.JPG"
+contentImage2: "/img/updated/projects/IMG_6625.JPG"
 
 ---
