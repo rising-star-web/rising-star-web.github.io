@@ -2,21 +2,21 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-07-06 下午8.13.50.png"
+coverImage: "/img/updated/projects/IMG_6619.JPG"
 pagePostDate: "2022年3月3日"
-studentName: "Howard"
-projectName: "研究自然语言算法的特征值构建与排除系统"
+studentName: "Jacky"
+projectName: "学员的IT创业"
 projectCategory: "App Development"
-projectDesc: "CMU录取"
+projectDesc: "初中生创业"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "研究自然语言算法的特征值构建与排除系统"
-bodyText1: "Howard深入研究自然语言算法的特征值构建与排除系统，取得了创新的实验成果。基于这些研究成果，他成功被CMU录取为研究生。"
-bodyText2: "Howard的研究才华和敬业精神令人敬佩。他在自然语言处理领域的创新贡献使我们对此技术有了新的认识。CMU因有他而更加荣幸，期待他未来的更多突破。"
+headerTitle: "Jacky的IT创业"
+bodyText1: "Jacky在8年级便通过云平台为企业提供IT服务，每月营业额已超过$350。他的成功表明，具备创意和执行力的孩子能够通过技术赚钱，值得我们赞扬和学习。"
+bodyText2: "8年级学生Jacky通过云平台提供IT服务，月营业额超$350。越来越多的孩子凭技能赚钱，展现出惊人的想法和执行力。"
 URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
-awardsDesc: "学员获CMU录取"
-contentImage: "/img/updated/projects/IMG_3675.JPG"
-contentImage2: "/img/updated/projects/IMG_3676.JPG"
+awardsDesc: "产品上线"
+contentImage: "/img/updated/projects/IMG_6620.JPG"
+contentImage2: "/img/updated/projects/IMG_6621.JPG"
 
 ---
