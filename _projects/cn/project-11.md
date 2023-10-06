@@ -16,7 +16,7 @@ bodyText2: "Leo的贡献展示了他深厚的金融知识和优秀的技术能�
 URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
 awardsDesc: "学员获UPenn录取"
-contentImage: "/img/updated/projects/IMG_3675.JPG"
-contentImage2: "/img/updated/projects/IMG_3676.JPG"
+contentImage: "/img/updated/projects/截屏2023-10-06 下午2.49.46.png"
+contentImage2: "/img/updated/projects/截屏2023-10-06 下午2.49.56.png"
 
 ---
