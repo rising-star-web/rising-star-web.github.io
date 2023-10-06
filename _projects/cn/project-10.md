@@ -2,21 +2,21 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-07-06 下午7.38.50.png"
+coverImage: "/img/updated/projects/IMG_6622.JPG"
 pagePostDate: "2022年3月3日"
-studentName: "Angel"
-projectName: "AI和机器学习方法"
+studentName: "John"
+projectName: "开发游戏素材和算法"
 projectCategory: "App Development"
-projectDesc: "Princeton录取"
+projectDesc: "帮助硕士答辩"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "AI和机器学习方法"
-bodyText1: "Princeton数据科学院的Angel，利用AI和机器学习方法，创新地改进了训练大数据模型的方式，并因此在Kaggle算法竞赛中获得金奖。"
-bodyText2: "Angel以其敏锐的洞察力和创新思维，在数据科学领域展现出惊人的能力。他的实践成果和竞赛成就，标志着他将在未来的数据科学领域中发光发热。"
+headerTitle: "开发游戏素材和算法"
+bodyText1: "8年级学生John开发的游戏素材和算法被纳入老师的硕士论文，且在答辩开场被特别感谢。John的贡献展示了其出色的技术才华和实践能力。。"
+bodyText2: "John同学不仅在学业上表现出色，其开发的游戏素材和算法还被老师用于硕士论文中。他的突出贡献得到了老师的高度认可和赞扬，我们为有这样的同学而感到骄傲和自豪。"
 URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
-awardsDesc: "学员获Princeton录取"
-contentImage: "/img/updated/projects/IMG_3675.JPG"
-contentImage2: "/img/updated/projects/IMG_3676.JPG"
+awardsDesc: "帮助硕士答辩"
+contentImage: "/img/updated/projects/IMG_6623.JPG"
+contentImage2: "/img/updated/projects/IMG_6624.JPG"
 
 ---
