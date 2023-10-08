@@ -16,7 +16,7 @@ bodyText2: "Jacky的创新能力令人赞叹，他成功的将技术理论应用
 URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
 awardsDesc: "学员获Webb录取"
-contentImage: "/img/updated/projects/IMG_3675.JPG"
-contentImage2: "/img/updated/projects/IMG_3676.JPG"
+contentImage: "/img/updated/projects/截屏2023-10-08 下午2.09.07.png"
+contentImage2: "/img/updated/projects/截屏2023-10-08 下午2.09.20.png"
 
 ---
