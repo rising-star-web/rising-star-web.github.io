@@ -16,7 +16,7 @@ bodyText2: "Angel以其敏锐的洞察力和创新思维，在数据科学领域
 URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
 awardsDesc: "学员获Princeton录取"
-contentImage: "/img/updated/projects/IMG_3675.JPG"
-contentImage2: "/img/updated/projects/IMG_3676.JPG"
+contentImage: "/img/updated/projects/截屏2023-10-08 下午2.25.11.png"
+contentImage2: "/img/updated/projects/截屏2023-10-08 下午2.25.32.png"
 
 ---
