@@ -16,7 +16,7 @@ bodyText2: "Allen不仅具备深厚的技术背景，还有对复杂问题的深
 URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
 awardsDesc: "学员获Stanford录取"
-contentImage: "/img/updated/projects/IMG_3675.JPG"
-contentImage2: "/img/updated/projects/IMG_3676.JPG"
+contentImage: "/img/updated/projects/截屏2023-10-08 下午11.29.10.png"
+contentImage2: "/img/updated/projects/截屏2023-10-08 下午11.29.18.png"
 
 ---
