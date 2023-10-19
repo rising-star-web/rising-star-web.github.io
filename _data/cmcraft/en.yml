@@ -1,0 +1,39 @@
+name: EN
+
+intro:
+  header: Introducing CM Craft
+  lead: Dear Parents and Students,
+  p1: Coding Minds Craft, or CM Craft, is a new system that we developed to assist students in their programming journey. CM Craft is a great tool that your child can use to practice their programming skills at their own pace and get a boost on their computer science journey. We encourage your child to use this system as much as they would like in their own time to hone their programming skills.
+  p2: "Many students who are completely new to programming can struggle when it comes to understanding the bigger picture, which can lead to them failing to complete their homework and understand material in advanced courses. You can access Coding Minds Craft here:"
+
+whycmcraft:
+  header: Why use CM Craft?
+  p:  Programming classes at Coding Minds are often taught once a week. Students with a clear passion in programming are able to understand the material and can do assignments in between classes. However, we also understand that for many other students this is not the case. Some students have difficulty retaining information and recalling it again after a week of exposure to it. Many students who are completely new to programming can struggle when it comes to understanding the bigger picture, which can lead to them failing to complete their homework and understand material in advanced courses. In such cases, the best way for your child to stay on track is to practice programming in between classes. CM Craft exists for that purpose. 
+
+features:
+  header: Features
+  lead: "CM Craft is designed to be as simple as possible for your child to use so that they can get to programming as soon as possible. Here are a list of features: "
+  p1: A dashboard which shows performance over the last 2 weeks, and a leaderboard against all other Coding Minds students.
+  p2: A full suite of 22 Python assessments of various topics, each with at least 50 questions each.
+  p3: A set of video lectures for Python topics. 
+  p4: A growing suite of 11 Java assessments of various topics, with at least 30 questions each.
+  p5: An intuitive user interface that allows for clear and focused practice sessions.
+  p6: Varying question types to test conceptual understanding and problem solving skills.
+  p7: A way for your child to ask questions to their instructor remotely.
+
+progress:
+  header: How to Check Your Child’s Progress 
+  lead: "There are two ways you can gauge your child’s progress: "
+  p1: When your child logs into their account, they are sent to the dashboard and can view their progress over the last 2 weeks. The height of bars on the graph represent how many questions they did that day.
+  p2: If you would like to view how your child is doing in particular topics, visit the selection page (press “Take Tests” from the dashboard) and select a course at the top. Each topic has a progress bar that displays how many questions your student has gotten right, wrong, or didn’t do yet.
+
+practice:
+  header: Practice Frequency 
+  p1:  CM Craft is able to be used completely without the assistance of an instructor. In addition to regular assignments from instructors, your child is also highly encouraged to practice as much as possible using CM Craft. We recommend completing at least 10 or so questions a day, for about 15 to 30 minutes. Consistency is key. 
+  p2:  Also note that your child can do topics in any order. If your child would like to move onto something more challenging, they can do so. CM Craft encourages your child to practice the way they want to. 
+  p3:   Should your child get stuck on a question in CM Craft or they have a problem with a question, they can report a problem to their instructor using the orange “Report Problem” button on the testing page. Their instructor will be able to later on log into our system and reply to the student’s report with follow up advice and feedback. Our instructors can also notify us if they find that a question has a formatting error. 
+
+tutoring:
+  header: Join Our Tutor Sessions 
+  lead:  We hold weekly tutor sessions at our Irvine office for CM Craft. Here, your child can join and practice at their own pace, and at any time they can ask an in-person tutor for assistance or clarification. Please contact us to schedule a session. 
+  btn: Contact Us
