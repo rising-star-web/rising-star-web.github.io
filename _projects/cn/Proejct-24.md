@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-09-20 下午1.53.44.png"
+coverImage: "/img/updated/projects/截屏2023-10-24 下午11.14.26.png"
 pagePostDate: "2022年3月3日"
 studentName: "学员"
 projectName: "头盔速度检测保护"
