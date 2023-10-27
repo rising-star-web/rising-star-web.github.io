@@ -76,6 +76,32 @@ layout: default
             </div>
 
             <div class="form-select-wrapper mb-4">
+              <select class="form-select" aria-label="Default select example" required="required" id="experience" name="experience">
+                <option value="" >{{ site.data.free-trial[page.locale].freetrial.campusTag }}</option>
+                <option id="1" value="Irvine">{{ site.data.free-trial[page.locale].freetrial.campus1 }}</option>
+                <option id="2" value="Diamond Bar">{{ site.data.free-trial[page.locale].freetrial.campus2 }}</option>
+                <option id="3" value="Arcadia">{{ site.data.free-trial[page.locale].freetrial.campus3 }}</option>
+                <option id="4" value="West Lafayette ">{{ site.data.free-trial[page.locale].freetrial.campus4 }}</option>
+                <option id="5" value="Online">{{ site.data.free-trial[page.locale].freetrial.campus5 }}</option>
+              </select>
+            </div>
+
+            <div class="form-select-wrapper mb-4">
+              <select class="form-select" aria-label="Default select example" required="required" id="experience" name="experience">
+                <option value="" >{{ site.data.free-trial[page.locale].freetrial.sourceTag }}</option>
+                <option id="1" value="xiaohongshu">{{ site.data.free-trial[page.locale].freetrial.source1 }}</option>
+                <option id="2" value="Instagram">{{ site.data.free-trial[page.locale].freetrial.source2 }}</option>
+                <option id="3" value="Facebook">{{ site.data.free-trial[page.locale].freetrial.source3 }}</option>
+                <option id="4" value="WeChat">{{ site.data.free-trial[page.locale].freetrial.source4 }}</option>
+                <option id="5" value="Official Website">{{ site.data.free-trial[page.locale].freetrial.source5 }}</option>
+                <option id="6" value="Friend">{{ site.data.free-trial[page.locale].freetrial.source6 }}</option>
+                <option id="7" value="Google">{{ site.data.free-trial[page.locale].freetrial.source7 }}</option>
+                <option id="8" value="TikTok">{{ site.data.free-trial[page.locale].freetrial.source8 }}</option>
+                <option id="9" value="Others">{{ site.data.free-trial[page.locale].freetrial.source9 }}</option>
+              </select>
+            </div>
+
+            <div class="form-select-wrapper mb-4">
             <textarea id="availability" name="availability" class="form-control" placeholder="{{ site.data.free-trial[page.locale].freetrial.trialAvailability }}" style="height: 150px" required></textarea>
             </div>
 

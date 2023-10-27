@@ -17,5 +17,21 @@ freetrial:
   experience2: 基础知识了解
   experience3: 掌握至少一种编程语言
   experience4: 黑客！
+  campusTag: 校区 *
+  campus1: 尔湾
+  campus2: 钻石吧
+  campus3: 阿卡迪亚
+  campus4: 西拉法叶 
+  campus5: 线上   
+  sourceTag: 您从哪里了解到我们？ 
+  source1: 小红书
+  source2: Instagram
+  source3: 脸书
+  source4: 微信公众号
+  source5: 官网
+  source6: 朋友推荐
+  source7: 谷歌搜索
+  source8: TikTok
+  source9: 其他 
   trialAvailability: "试听可用时间：例如周一至周四下午3点后，周六上午11点前"
   submit: 提交

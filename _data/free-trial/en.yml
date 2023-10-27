@@ -17,6 +17,22 @@ freetrial:
   experience2: Very Basic Exposure
   experience3: Know's at Least One Programming Language Very Well
   experience4: Hacker!
+  campusTag: Campus *
+  campus1: Irvine
+  campus2: Diamond Bar
+  campus3: Arcadia
+  campus4: West Lafayette 
+  campus5: Online  
+  sourceTag: How did you hear about us ？ 
+  source1: xiaohongshu
+  source2: Instagram
+  source3: Facebook
+  source4: WeChat
+  source5: Official Website
+  source6: Friend
+  source7: Google
+  source8: TikTok
+  source9: Other
   trialAvailability: "Trial Availability Ex: Mon-Thu after 3pm, Sat before 11am"
   submit: Submit
 
