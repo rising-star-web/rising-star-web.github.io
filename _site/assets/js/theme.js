@@ -862,8 +862,8 @@ var theme = {
                     codingExperience: experience,
                     availability: availability,
                     comment: "",
-                    signupTime: new Date(),
                     location: campusLocation,
+                    signupTime: new Date(),
                     accountId: studentId,
                   }
 
