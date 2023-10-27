@@ -811,6 +811,10 @@ var theme = {
                 const grade = document.getElementById('studentGrade').value;
                 const experienceField = document.getElementById('experience');
                 const experience = experienceField.options[experienceField.selectedIndex].id;
+                const campusField = document.getElementById('campus');
+                const campusLocation = campusField.options[campusField.selectedIndex].id;
+                const referralField = document.getElementById('referral');
+                const referral = referralField.options[referralField.selectedIndex].id;
                 const availability = document.getElementById('availability').value;
 
                 let baseUrl = 'https://prod-sharemyworks-backend.herokuapp.com/api/';
@@ -827,6 +831,7 @@ var theme = {
                   password: '123',
                   dateOfBirth: new Date(),
                   grade: grade,
+                  referralName: referral,
                   preferedLanguage: 'English'
                 };
 
@@ -857,6 +862,7 @@ var theme = {
                     codingExperience: experience,
                     availability: availability,
                     comment: "",
+                    location: campusLocation,
                     signupTime: new Date(),
                     accountId: studentId,
                   }
