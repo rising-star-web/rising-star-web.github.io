@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-09-20 下午1.44.58.png"
+coverImage: "/img/updated/projects/截屏2023-11-02 上午10.27.34.png"
 pagePostDate: "15 Feb 2022"
 studentName: "Devin"
 projectName: "Game and history"
