@@ -4,18 +4,18 @@ layout: student_project_detail
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/62c5d93301a3d6310ec7c2ebcda14e.jpg"
 pagePostDate: "2022年3月3日"
-studentName: "Demi"
-projectName: "击剑和编程结合"
+studentName: "Christine"
+projectName: "编程制作3D打印机"
 projectCategory: "App Development"
-projectDesc: "学员被USC录取"
+projectDesc: "防止了材料浪费"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "AI和机器学习方法"
+headerTitle: "编程制作3D打印机"
 bodyText1: "Christine展现了出色的创新能力和编程技巧，其开发的应用程序不仅提高了3D打印的效率，还有效防止了材料浪费。"
 bodyText2: "Christine的项目使用了树莓派和机器学习，为3D打印提供实时监控和错误检测。"
 URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
-awardsDesc: "成功获得USC和GeorgeTech的CS专业录取"
+awardsDesc: "不仅提高了3D打印的效率，还有效防止了材料浪费。"
 contentImage: "/img/updated/projects/a7b533090c9723b312e0172c53ca41.jpg"
 contentImage2: "/img/updated/projects/b516c93ff239c0f55ed889cadf9bb6.jpg"
 
