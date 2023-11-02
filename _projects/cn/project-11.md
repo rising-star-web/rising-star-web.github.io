@@ -4,7 +4,7 @@ layout: student_project_detail
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/截屏2023-07-06 下午7.27.30.png"
 pagePostDate: "2022年3月3日"
-studentName: "Lea"
+studentName: "Leo"
 projectName: "金融App发布"
 projectCategory: "App Development"
 projectDesc: "UPenn录取"
