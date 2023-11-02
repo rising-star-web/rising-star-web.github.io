@@ -15,6 +15,6 @@ bodyText1: " Jacky has successfully developed a basketball posture tracking APP,
 bodyText2: "Jacky's innovative ability is amazing, and he has successfully applied technical theory to practice. He not only possesses a deep knowledge of computer science, but also exhibits excellent problem-solving skills and independent thinking. His success proves that he will achieve brilliant achievements in his future academic and professional career"
 projectURL: "https://www.google.com/"
 awardsDesc: "Admission to Webb "
-contentImage: "/img/updated/projects/IMG_3663.JPG"
-contentImage2: "/img/updated/projects/IMG_3662.JPG"
+contentImage: "/img/updated/projects/截屏2023-10-08 下午2.09.07.png"
+contentImage2: "/img/updated/projects/截屏2023-10-08 下午2.09.20.png"
 ---
