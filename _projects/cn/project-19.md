@@ -2,9 +2,9 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-09-20 下午1.44.58.png"
+coverImage: "/img/updated/projects/截屏2023-11-02 上午10.27.34.png"
 pagePostDate: "2022年3月3日"
-studentName: "Divid"
+studentName: "Devin"
 projectName: "游戏帮助学习历史"
 projectCategory: "App Development"
 projectDesc: "学员创新作品"
