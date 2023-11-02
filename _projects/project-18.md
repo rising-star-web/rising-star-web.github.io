@@ -15,6 +15,6 @@ bodyText1: " Angel from the Princeton School of Data Science used AI and machine
 bodyText2: "With his keen insight and innovative thinking, Angel has shown amazing ability in the field of data science. His practical results and competition achievements indicate that he will shine in the field of data science in the future."
 projectURL: "https://www.google.com/"
 awardsDesc: "Admission to Princeton "
-contentImage: "/img/updated/projects/IMG_3663.JPG"
-contentImage2: "/img/updated/projects/IMG_3662.JPG"
+contentImage: "/img/updated/projects/截屏2023-10-08 下午2.25.11.png"
+contentImage2: "/img/updated/projects/截屏2023-10-08 下午2.25.32.png"
 ---
