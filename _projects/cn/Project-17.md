@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-07-06 下午7.48.23.png"
+coverImage: "/img/updated/projects/IMG_6592.jpg"
 pagePostDate: "2022年3月3日"
 studentName: "Daniel"
 projectName: "魔方教学趣味App"
