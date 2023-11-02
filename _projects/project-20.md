@@ -15,6 +15,6 @@ bodyText1: " Stier has delved into the latest algorithms in cryptography and com
 bodyText2: "Stier showcases exceptional research prowess and deep understanding of computer security. His innovative insights and contributions to cryptography enrich Berkeley's academic landscape. We look forward to his continued breakthroughs in the future."
 projectURL: "https://www.google.com/"
 awardsDesc: "Admission to Berkeley "
-contentImage: "/img/updated/projects/IMG_3663.JPG"
-contentImage2: "/img/updated/projects/IMG_3662.JPG"
+contentImage: "/img/updated/projects/截屏2023-10-06 下午3.09.19.png"
+contentImage2: "/img/updated/projects/截屏2023-10-06 下午3.09.27.png"
 ---
