@@ -4,7 +4,7 @@ layout: student_project_detail
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/IMG_2995.JPG"
 pagePostDate: "17 Feb 2023"
-studentName: "Rose"
+studentName: "EVA"
 projectName: "Computing And Biological Environment "
 projectCategory: "App Development"
 projectDesc: "Admitted to Johns Hopkins University"
