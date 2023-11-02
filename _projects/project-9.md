@@ -15,6 +15,6 @@ bodyText1: " Matthew, from the Department of Computer Science at Stanford Univer
 bodyText2: "Matthew's brilliance and forward-looking perspective are evident in each of his studies. His achievements in the field of AI and network security have established him as a future leader in the field of computer science."
 projectURL: "https://www.google.com/"
 awardsDesc: "Admission to Stanford University "
-contentImage: "/img/updated/projects/IMG_3663.JPG"
-contentImage2: "/img/updated/projects/IMG_3662.JPG"
+contentImage: "/img/updated/projects/截屏2023-10-08 下午11.39.37.png"
+contentImage2: "/img/updated/projects/截屏2023-10-08 下午11.39.52.png"
 ---
