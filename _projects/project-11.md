@@ -15,6 +15,6 @@ bodyText1: " Leo successfully developed an App that can track the trend of virtu
 bodyText2: "Leo's contributions demonstrate his deep financial knowledge and excellent technical skills. He applies theoretical knowledge to practice, reflecting his innovative spirit and independent problem-solving ability. His achievements bode well for his future academic and professional career."
 projectURL: "https://www.google.com/"
 awardsDesc: "Admission to UPenn "
-contentImage: "/img/updated/projects/IMG_3663.JPG"
-contentImage2: "/img/updated/projects/IMG_3662.JPG"
+contentImage: "/img/updated/projects/截屏2023-10-06 下午2.49.46.png"
+contentImage2: "/img/updated/projects/截屏2023-10-06 下午2.49.56.png"
 ---
