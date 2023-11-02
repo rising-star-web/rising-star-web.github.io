@@ -2,19 +2,19 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-07-06 下午7.38.50.png"
+coverImage: "/img/updated/projects/IMG_6622.JPG"
 pagePostDate: "15 Feb 2022"
-studentName: "Angel"
+studentName: "John"
 projectName: "AI and Machine Learning Methods "
 projectCategory: "App Development"
-projectDesc: "Admission to Princeton"
+projectDesc: "Help with the postgraduate defense"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "AI and Machine Learning Methods"
-bodyText1: " Angel from the Princeton School of Data Science used AI and machine learning methods to innovatively improve the way of training big data models, and thus won the gold medal in the Kaggle algorithm competition."
-bodyText2: "With his keen insight and innovative thinking, Angel has shown amazing ability in the field of data science. His practical results and competition achievements indicate that he will shine in the field of data science in the future."
+bodyText1: " The game materials and algorithms developed by John, a Grade 8 student, were included in the teacher's master's thesis and were especially thanked at the beginning of the defense. John's contribution demonstrates his outstanding technical talent and practical ability."
+bodyText2: "John not only performed well academically, but the game materials and algorithms he developed were also used by his teacher in his master's thesis. His outstanding contribution has been highly recognized and praised by the teachers, and we are proud to have such a classmate."
 projectURL: "https://www.google.com/"
-awardsDesc: "Admission to Princeton "
-contentImage: "/img/updated/projects/IMG_3663.JPG"
-contentImage2: "/img/updated/projects/IMG_3662.JPG"
+awardsDesc: "Help with the postgraduate defense "
+contentImage: "/img/updated/projects/IMG_6623.JPG"
+contentImage2: "/img/updated/projects/IMG_6624.JPG"
 ---
