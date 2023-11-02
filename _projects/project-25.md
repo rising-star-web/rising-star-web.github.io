@@ -5,7 +5,7 @@ layout: student_project_detail
 coverImage: "/img/updated/projects/截屏2023-07-06 下午8.16.21.png"
 pagePostDate: "15 Feb 2022"
 studentName: "Allen"
-projectName: "Business and Coding "
+projectName: "Optimize CPU computing efficiency"
 projectCategory: "App Development"
 projectDesc: "Admission to Stanford"
 
@@ -15,6 +15,6 @@ bodyText1: " Allen has demonstrated excellence in architecting large-scale paral
 bodyText2: "Allen not only possesses a strong technical foundation but also profound insights into intricate challenges. His contribution in the team is significant, and he exudes passion for research. We are honored to have him as our peer."
 projectURL: "https://www.google.com/"
 awardsDesc: "Admission to Stanford "
-contentImage: "/img/updated/projects/IMG_3663.JPG"
-contentImage2: "/img/updated/projects/IMG_3662.JPG"
+contentImage: "/img/updated/projects/截屏2023-10-08 下午11.29.10.png"
+contentImage2: "/img/updated/projects/截屏2023-10-08 下午11.29.18.png"
 ---
