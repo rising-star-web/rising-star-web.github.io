@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-07-06 下午7.27.30.png"
+coverImage: "/img/updated/projects/leo-upen.png"
 pagePostDate: "2022年3月3日"
 studentName: "Leo"
 projectName: "金融App发布"
