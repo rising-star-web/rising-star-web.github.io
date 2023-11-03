@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/IMG_6585.JPG"
+coverImage: "/img/updated/projects/andy-nyu.png"
 pagePostDate: "2022年3月3日"
 studentName: "Andy"
 projectName: "编程开发游戏"
