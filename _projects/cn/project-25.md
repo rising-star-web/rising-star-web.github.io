@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-07-06 下午8.16.21.png"
+coverImage: "/img/updated/projects/allen.png"
 pagePostDate: "2022年3月3日"
 studentName: "Allen"
 projectName: "优化CPU计算效率"
