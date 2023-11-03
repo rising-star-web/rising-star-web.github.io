@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/IMG_6622.JPG"
+coverImage: "/img/updated/projects/john.png"
 pagePostDate: "2022年3月3日"
 studentName: "John"
 projectName: "开发游戏素材和算法"
