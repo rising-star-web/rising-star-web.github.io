@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-07-06 下午8.17.40.png"
+coverImage: "/img/updated/projects/stier.png"
 pagePostDate: "2022年3月3日"
 studentName: "Stier"
 projectName: "计算机安全的最新算法研究"
