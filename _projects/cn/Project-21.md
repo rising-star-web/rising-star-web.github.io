@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2023-07-06 下午8.01.53.png"
+coverImage: "/img/updated/projects/zach.png"
 pagePostDate: "2022年3月3日"
 studentName: "Zach"
 projectName: "语言算法和心理咨询"
