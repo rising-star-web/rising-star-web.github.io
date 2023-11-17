@@ -4,7 +4,7 @@ layout: student_project_detail
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/IMG_6585.JPG"
 pagePostDate: "15 Feb 2022"
-studentName: "Andy"
+studentName: "Test"
 projectName: "Andy’s Gaming Success"
 projectCategory: "App Development"
 projectDesc: "Admission to NYU Stern"
