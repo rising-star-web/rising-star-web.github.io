@@ -80,6 +80,8 @@ collections:
     output: true
   careers:
     output: true
+  competitions:
+    output: true
 
 defaults:
   - values: 
@@ -103,6 +105,12 @@ defaults:
       locale: en
       permalink: /careers/:name
   - scope:
+      path: ""
+      type: careers
+    values:
+      locale: en
+      permalink: /competitions/:name
+  - scope:
       path: "_courses/cn/**"
       type: courses
     values:
@@ -120,4 +128,10 @@ defaults:
     values:
       locale: cn
       permalink: /cn/careers/:name
+  - scope:
+      path: ""
+      type: careers
+    values:
+      locale: cn
+      permalink: /cn/competitions/:name
 
