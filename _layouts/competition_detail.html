@@ -32,7 +32,7 @@ layout: default
                 </figure>
               <div class="card-body">
 
-                <h2 class="h1 mb-3">Competition Description</h2>
+                <h2 class="h1 mb-3">{{ site.data.competitions[page.locale].competitionDetails.header }}</h2>
 
                 <p>{{page.bodyText1}}</p>
                 
@@ -52,3 +52,23 @@ layout: default
     <!-- /.container -->
   </section>
   <!-- /section -->
+
+    <!-- Try Coding Mind -->
+    <section class="wrapper bg-soft-primary wrapper-border">
+      <div class="container py-12 py-md-12">
+        <div class="row text-center">
+          <div class="col-md-10 mx-auto">
+            <h3 class="display-4 text-navy">{{ site.data.competitions[page.locale].competitionDetails.header }}</h3>
+            <p class="lead mb-7 mb-md-7">{{ site.data.competitions[page.locale].competitionDetails.header }}</p>
+            <a href="{{ site.data.nav[page.locale].nav.URL }}contact-us" class="btn btn-primary rounded-pill me-2 me-md-2 mb-4 mb-md-0">
+              {{ site.data.competitions[page.locale].competitionDetails.header }}
+            </a>
+          </div>
+        </div>
+        <!--/div -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+  
+  

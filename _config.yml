@@ -106,7 +106,7 @@ defaults:
       permalink: /careers/:name
   - scope:
       path: ""
-      type: careers
+      type: competitions
     values:
       locale: en
       permalink: /competitions/:name
@@ -129,8 +129,8 @@ defaults:
       locale: cn
       permalink: /cn/careers/:name
   - scope:
-      path: ""
-      type: careers
+      path: "_competitions/cn/**"
+      type: competitions
     values:
       locale: cn
       permalink: /cn/competitions/:name

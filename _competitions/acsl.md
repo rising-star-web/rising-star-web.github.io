@@ -4,7 +4,7 @@ layout: competition_detail
 [//]: # (Competition Card)
 competitionLogo: "/img/updated/competitions/acslLogo.png"
 competitionName: "American Computer Science League"
-competitionDates: Nov. 1, 2023 - January 14, 2024 
+competitionDates: March 2024 
 competitionDesc: "ACSL organizes computer programming and computer science contests for K-12 schools, organizations and local groups."
 
 [//]: # (Competition Page/Showcase)
