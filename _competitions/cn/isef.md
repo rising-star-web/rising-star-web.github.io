@@ -4,7 +4,7 @@ layout: competition_detail
 [//]: # (Competition Card)
 competitionLogo: "/img/updated/competitions/isefLogo.png"
 competitionName: "ISEF国际科学与工程博览会"
-competitionDates: "2024年5月"
+competitionDates: "每年5月"
 competitionDesc: "ISEF是由美国科学协会拥有和管理的年度科学博览会。"
 
 [//]: # (Competition Page/Showcase)
