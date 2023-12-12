@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "img/updated/1.png"
+coverImage: "/img/updated/1.png"
 pagePostDate: "2023年12月3日"
 studentName: "Andy"
 projectName: "野外生存技能App"
@@ -16,7 +16,7 @@ bodyText2: "此app得到了童子军领导的认可，他们不仅对Andy在技�
 URLDescription: "链接到项目"
 projectURL: "https://apps.apple.com/us/app/trail-to-first-class/id6449322817"
 awardsDesc: "学员创新作品"
-contentImage: "img/updated/projects/IMG_1473.jpg"
-contentImage2: "img/updated/IMG_1474.PNG"
+contentImage: "/img/updated/projects/IMG_1473.jpg"
+contentImage2: "/img/updated/IMG_1474.PNG"
 
 ---
