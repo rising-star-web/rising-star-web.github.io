@@ -4,7 +4,7 @@ layout: competition_detail
 [//]: # (Competition Card)
 competitionLogo: "/img/updated/competitions/congressionalLogo.png"
 competitionName: "Congressional App Challenge"
-competitionDates: "Every year in November"  
+competitionDates: "Every November"  
 competitionDesc: "Members of the U.S. House of Representatives host district-wide Congressional App Challenges for middle school and high school students."
 
 [//]: # (Competition Page/Showcase)
