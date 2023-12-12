@@ -4,7 +4,7 @@ layout: competition_detail
 [//]: # (Competition Card)
 competitionLogo: "/img/updated/competitions/isefLogo.png"
 competitionName: "International Science and Engineering Fair"
-competitionDates: "May 2024"  
+competitionDates: "Every year in May"  
 competitionDesc: "ISEF is an annual science fair in the United States owned and administered by the Society for Science."
 
 [//]: # (Competition Page/Showcase)
