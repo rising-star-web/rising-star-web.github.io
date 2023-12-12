@@ -4,7 +4,7 @@ layout: competition_detail
 [//]:  # (Competition Card)
 competitionLogo: "/img/updated/competitions/congressionalLogo.png"
 competitionName: "国会APP挑战赛"
-competitionDates: "2024年11月"
+competitionDates: "每年11月"
 competitionDesc: "美国众议院议员为中学和高中学生主持全区性的国会应用挑战赛。"
 
 [//]: # (Competition Page/Showcase)
