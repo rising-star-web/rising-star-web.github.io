@@ -4,7 +4,7 @@ layout: competition_detail
 [//]: # (Competition Card)
 competitionLogo: "/img/updated/competitions/acslLogo.png"
 competitionName: "American Computer Science League"
-competitionDates: March 2024 
+competitionDates: Every year in March 
 competitionDesc: "ACSL organizes computer programming and computer science contests for K-12 schools, organizations and local groups."
 
 [//]: # (Competition Page/Showcase)
