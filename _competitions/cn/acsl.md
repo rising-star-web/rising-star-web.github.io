@@ -4,7 +4,7 @@ layout: competition_detail
 [//]: # (Competition Card)
 competitionLogo: "/img/updated/competitions/acslLogo.png"
 competitionName: "美国计算机科学联赛ACSL"
-competitionDates: 2024年3月
+competitionDates: 每年3月
 competitionDesc: "ACSL为K-12学校、组织和当地团体组织计算机编程和计算机科学竞赛。"
 
 [//]: # (Competition Page/Showcase)
