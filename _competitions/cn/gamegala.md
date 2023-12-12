@@ -4,7 +4,7 @@ layout: competition_detail
 [//]:  # (Competition Card)
 competitionLogo: "/img/updated/competitions/gamegalaLogo.png"
 competitionName: "游戏盛典"
-competitionDates: "2024年1月"
+competitionDates: "每年1月"
 competitionDesc: "GameGala邀请K-12学生展示他们自己开发的数字游戏项目。"
 
 [//]: # (Competition Page/Showcase)
