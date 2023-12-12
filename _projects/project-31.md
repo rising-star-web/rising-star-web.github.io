@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "img/updated/1.png"
+coverImage: "/img/updated/1.png"
 pagePostDate: "11 Dec 2023"
 studentName: "Andy"
 projectName: "Trail To First Class"
@@ -15,6 +15,6 @@ bodyText1: " Andy designed the app with the idea of combining modern technology 
 bodyText2: "Andy’s program has even been recognized by the Boy Scouts leader, which we are so honoured to see. Not only did he appreciate Andyt's efforts in technology and innovation, but he also agreed to let Andy introduce and promote the APP at the Scout jamboree."
 projectURL: "https://apps.apple.com/us/app/trail-to-first-class/id6449322817/"
 awardsDesc: "Excellent project display"
-contentImage: "img/updated/projects/IMG_1474.PNG"
-contentImage2: "img/updated/projects/IMG_1473.jpg"
+contentImage: "/img/updated/projects/IMG_1474.PNG"
+contentImage2: "/img/updated/projects/IMG_1473.jpg"
 ---
