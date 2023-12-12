@@ -4,7 +4,7 @@ layout: competition_detail
 [//]: # (Competition Card)
 competitionLogo: "/img/updated/competitions/gamegalaLogo.png"
 competitionName: "Game Gala"
-competitionDates: "January 2024"  
+competitionDates: "Every year in January"  
 competitionDesc: "GameGala invites K-12 students to showcase their digital game projects developed by themselves."
 
 [//]: # (Competition Page/Showcase)
