@@ -2,7 +2,7 @@
 layout: competition_detail
 
 [//]: # (Competition Card)
-competitionLogo: "/img/updated/competitions/acslLogo.png"
+competitionLogo: "/img/updated/competitions/DF-Logo-Black.png"
 competitionName: "Dragon Kim Fellowship"
 competitionDates: 每年1月
 competitionDesc: "由 Dragon Kim Foundation赞助，面向9到12年级学生开展社会创新项目的培育计划。"
