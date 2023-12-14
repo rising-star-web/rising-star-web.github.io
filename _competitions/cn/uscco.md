@@ -5,7 +5,7 @@ layout: competition_detail
 competitionLogo: "/img/updated/competitions/useco.jpeg"
 competitionName: "美国计算机奥林匹克"
 competitionDates: 每年1月和2月
-competitionDesc: "USACO，即美国计算机奥林匹克，是由一个独立的非营利组织运营的。这个组织专注于提供计算机科学教育和竞赛机会给美国以及全球的中学生。"
+competitionDesc: "USACO是由一个独立的非营利组织运营的。这个组织专注于提供计算机科学教育和竞赛机会给美国以及全球的中学生。"
 
 [//]: # (Competition Page/Showcase)
 contentImage: "/img/updated/competitions/usaco.png"
