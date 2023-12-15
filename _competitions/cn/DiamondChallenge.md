@@ -5,7 +5,7 @@ layout: competition_detail
 competitionLogo: "/img/updated/competitions/Diamond Challenge.png"
 competitionName: "钻石挑战赛"
 competitionDates: 每年1月
-competitionDesc: "钻石挑战赛是由美国特拉华大学创立的一个专为高中生设计的国际性创业竞赛."
+competitionDesc: "钻石挑战赛是由美国特拉华大学创立的一个专为高中生设计的国际性创业竞赛。"
 
 [//]: # (Competition Page/Showcase)
 contentImage: "/img/updated/competitions/DC 2.jpg"
