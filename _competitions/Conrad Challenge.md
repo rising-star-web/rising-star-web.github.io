@@ -5,7 +5,7 @@ layout: competition_detail
 competitionLogo: "/img/updated/competitions/Conrad Challenge.jpeg"
 competitionName: "Conrad Challenge"
 competitionDates: "Every September"
-competitionDesc: "Conrad Challenge is an international innovation and entrepreneurship competition for secondary school students. The competition encourages students to use STEM (science, technology, engineering, and mathematics) principles to solve real-world challenges."
+competitionDesc: "Conrad Challenge is an international innovation and entrepreneurship competition for secondary school students. The competition encourages students to use STEM principles to solve real-world challenges."
 
 [//]: # (Competition Page/Showcase)
 contentImage: "/img/updated/competitions/Conrad Challenge2.jpeg"
