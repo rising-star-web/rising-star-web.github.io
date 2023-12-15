@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/IMG_6585.JPG"
+coverImage: "/img/updated/projects/WeChat04ed0f1e205eb2ccd60200cf8e81e149.png"
 pagePostDate: "15 Dec 2023"
 studentName: "Anya"
 projectName: "Green Habitub"
