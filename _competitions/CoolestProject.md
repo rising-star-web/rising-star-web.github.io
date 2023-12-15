@@ -5,7 +5,7 @@ layout: competition_detail
 competitionLogo: "/img/updated/competitions/coolest_project.png"
 competitionName: "Coolest Project"
 competitionDates: Every July
-competitionDesc: "Coolest Projects is supported by organizations like the Raspberry Pi Foundation and CoderDojo Foundation, it aims to encourage and inspire youths aged 8 to 18 to showcase their technology-based projects."
+competitionDesc: "Coolest Projects, backed by the Raspberry Pi and CoderDojo Foundations, motivates 8 to 18-year-olds to showcase their tech projects."
 
 [//]: # (Competition Page/Showcase)
 contentImage: "/img/updated/competitions/WeChat5aaa1a2aa06c6daa6a9a073fbc2b36c9.png"
