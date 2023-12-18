@@ -5,7 +5,7 @@ layout: student_project_detail
 coverImage: "/img/updated/projects/read.png"
 pagePostDate: "18 Dec 2023"
 studentName: "Winstone"
-projectName: "Read4Kids"
+projectName: "4年级女学员结合Ai提升英语阅读巧办法"
 projectCategory: "App Development"
 projectDesc: "赢得了WAICY编程竞赛"
 
