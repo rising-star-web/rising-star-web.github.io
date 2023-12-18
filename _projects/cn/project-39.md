@@ -5,7 +5,7 @@ layout: student_project_detail
 coverImage: "/img/updated/1.png"
 pagePostDate: "2023年12月3日"
 studentName: "Andy"
-projectName: "野外生存技能App"
+projectName: "Andy童子军巧妙编程幻想获领导高赞"
 projectCategory: "App Development"
 projectDesc: "学员创新作品"
 
