@@ -3,7 +3,7 @@ layout: competition_detail
 
 [//]: # (Competition Card)
 competitionLogo: "/img/updated/competitions/OCSEF1.png"
-competitionName: "The Orange County Science and Engineering Fair "
+competitionName: "The Orange County Science and Engineering Fair"
 competitionDates: "Every May"
 competitionDesc: "OCSEF, the acronym for "Orange County Science and Engineering Fair," is an annual science and engineering competition for students in the Orange County area of California."
 
