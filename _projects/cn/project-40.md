@@ -5,7 +5,7 @@ layout: student_project_detail
 coverImage: "/img/updated/projects/WeChat04ed0f1e205eb2ccd60200cf8e81e149.png"
 pagePostDate: "2023年12月15日"
 studentName: "Anya"
-projectName: "环保与编程结合的创新作品，受议员赞赏"
+projectName: "环保编程结合受议员赞赏"
 projectCategory: "App Development"
 projectDesc: "加州第19区国会APP挑战赛亚军"
 
