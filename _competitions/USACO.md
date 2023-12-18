@@ -5,7 +5,7 @@ layout: competition_detail
 competitionLogo: "/img/updated/competitions/useco.jpeg"
 competitionName: "USA Computing Olympiad"
 competitionDates: every January and February 
-competitionDesc: "USACO is operated by an independent non-profit organization. This organization focuses on providing computer science education and competition opportunities to middle school students in the United States and around the world."
+competitionDesc: "USACO, run by an independent non-profit, offers computer science education and competitions for middle school students globally."
 
 [//]: # (Competition Page/Showcase)
 contentImage: "/img/updated/competitions/usaco.png"
