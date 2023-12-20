@@ -10,7 +10,7 @@ gradeLevel: "L5 竞技编程"
 pathway: "冬令营"
 skillLevel: "高级"
 shortDescription : "Startup 创业冬令营"
-description: "Startup创业冬令营旨在引导学生从识别问题痛点开始，经过技术开发的全过程，最终完成一个创业原型，并为参加竞赛做好充分准备！"
+description: "科技创新与创业冬令营旨在引导学生从识别问题痛点开始，经过技术开发的全过程，最终完成一个创业原型，并为参加竞赛做好充分准备！"
 videoIntro : ""
 learningGoals:
 - "阶段1.开营与问题识别
