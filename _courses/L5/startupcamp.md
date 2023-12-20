@@ -13,53 +13,15 @@ shortDescription : "Startup Winter Camp"
 description: "Our Science, Technology, Innovation, and Entrepreneurship Winter Camp aims to guide students from start to finish. Students will learn the process by which many startup companies get their ideas, from identifying the problem's points, to the whole process of technology development, and lastly finalizing an entrepreneurial prototype. This camp course will allow students to create their projects and be fully prepared to participate in the competition!"
 videoIntro : ""
 learningGoals:
-- "Stage 1. Problem Identification \n
-  - Morning: \n
-    - Opening Ceremony \n
-    - Mentor Introduction and Team Division \n
-  - Afternoon: \n
-    - Identify and discuss current trending issues in the social and technological fields \n
-    - Guide students to think about potential entrepreneurial opportunities"
-- "Stage 2. Topic Ideation and Market Research \n
-  - All Day: \n
-    - Team discussion to determine the project topic \n
-    - Conduct market research and analyze requirements \n
-    - Initial solution development"
-- "Stage 3. Fundamentals of Technology Development \n
-  - Morning: \n
-    - Specialized training: basic programming, product design, etc. \n
-  - Afternoon: \n
-    - Training and hands-on practice \n
-  - Evening:  \n
-    - Project plan discussion"
-- "Stage 4. Solution Design \n
-  - All Day: \n
-    - Design, discussion and finalization \n
-    - Initial design of product/service prototype \n
-    - Discussion and revision of solution with a mentor"
-- "Stage 5. Technology Development 1 \n
-  - All Day: \n
-    - Technology development \n
-    - Intemediate stage checking \n
-    - Mentor feedback"
-- "Stage 6. Technology Development 2 \n
-  - All Day: \n
-    - Continue technology development \n
-    - Solve problems and challenges in development"
-- "Stage 7. Programming Prototype \n
-  - All Day: \n
-    - Develop and complete the prototype \n
-    - Test and optimize the prototype"
-- "Stage 8. Project Preparation \n
-  - All Day: \n
-    - Preparation of project presentation and competition materials \n
-    - Rehearse presentation"
-- "Stage 9. Showcase and Competition \n
-  - Morning: \n
-    - Final project presentation preparation \n
-  - Afternoon: \n
-    - Project presentation and competition \n
-    - Award Ceremony"
+- "Stage 1. Problem Identification - In the morning: an opening ceremony, mentor introduction, team formation. In the afternoon, students will identify and discuss current trending issues in the social and technological fields and consider entrepreneurial opportunities."
+- "Stage 2. Topic Ideation and Market Research - All day, students will perform project ideation with their team, conduct market research and analyze requirements, and then begin initial solution development"
+- "Stage 3. Fundamentals of Technology Development - In the morning, students will begin basic programming and product design. In the afternoon, students will begin training and practicing the skills required for their project. In the evening, students will discuss their project plan."
+- "Stage 4. Solution Design - All day, students will perform discussion, design, and finalization of their project plans, begin designing their prototype, and discuss their plans with a mentor."
+- "Stage 5. Technology Development - All day, students will develop their project with the skills they learned and get feedback from their mentors as they go along."
+- "Stage 6. Technology Development Continued - All day, students will develop their project with the skills they learned and get feedback from their mentors as they go along."
+- "Stage 7. Programming Prototype - All day, students will work to finish their prototype and perform testing and optimization to deliver their product."
+- "Stage 8. Presentation Preparation - All day, students will prepare their project presentation and competition materials, as well as rehearse their presentation."
+- "Stage 9. Showcase and Competition - In the morning, students will rehearse and finalize their presentation. In the afternoon, students will present their projects and we will conduct an awards ceremony for outstanding projects."
 promotions:
 - title: "Innovate on Your Ideas, From Start to Finish"
   text: "Reach deep into the realm of technological innovation and entrepreneurship! From identifying social problems that you could solve using technology, to building prototypes, your entrepreneurial journey is about to begin!"
