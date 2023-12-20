@@ -61,10 +61,10 @@ learningGoals:
 项目展示和竞赛
 颁奖仪式和闭营"
 promotions:
-- title: "创新激发梦想，从点子到原型"
-  text: "深入技术创新和创业的领域，从识别社会问题痛点到打造原型，你的创业之旅即将开始！"
+- title: "Innovation inspires dreams, from Idea to Prototype"
+  text: "Reach deep into the realm of technological innovation and entrepreneurship, from identifying social problem pinch points to building prototypes, your entrepreneurial journey is about to begin!"
   imageURL: "img/updated/enrichment/project.jpg"
-- title: "编码、创造、竞逐：加入创业挑战"
-  text: "点燃你对技术开发和创业的激情，学习编程基础，设计产品，并在短时间内展示你的创业原型。"
+- title: "Code, create, compete: join the Startup Challenge"
+  text: "Ignite your passion for technology development and entrepreneurship by learning the fundamentals of programming, designing a product, and presenting your startup prototype in a short time."
   imageURL: "img/updated/enrichment/research.jpg"
 ---
