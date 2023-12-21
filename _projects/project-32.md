@@ -5,7 +5,7 @@ layout: student_project_detail
 coverImage: "/img/updated/projects/WeChat04ed0f1e205eb2ccd60200cf8e81e149.png"
 pagePostDate: "15 Dec 2023"
 studentName: "Anya"
-projectName: "Green Habitub"
+projectName: "Eco-friendly programming praised by legislators"
 projectCategory: "App Development"
 projectDesc: "Runner-up in the Congressional App Challenge for California's 19th District"
 
