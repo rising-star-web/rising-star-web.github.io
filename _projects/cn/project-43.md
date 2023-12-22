@@ -5,9 +5,9 @@ layout: student_project_detail
 coverImage: "/img/updated/projects/Danial.png"
 pagePostDate: "2023年12月21日"
 studentName: "Daniel"
-projectName: "抢申太阳能手机充电专利"
+projectName: "太阳能手机充电专利"
 projectCategory: "App Development"
-projectDesc: "学生创意"
+projectDesc: "学员已为这套充电系统申请专利！"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "太阳能手机充电专利系统"
