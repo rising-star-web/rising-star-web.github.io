@@ -894,6 +894,7 @@ var theme = {
                       'Your free trial request has been processed. We will contact you shortly. Meanwhile, feel free to reach out us by +1 (949) 236-7896 if you have any questions.'
                     );
                     $('#QRCode').css("display", "flex");
+                    $('#QRCodeCN').css("display", "none");
                   }).catch(function err(err) {
                     $('#formSpinner').css("display", "none");
                     $('#form').prepend('An error has occurred. Please contact us at +1 (949) 236-7896 for help.');  
