@@ -5,8 +5,8 @@ layout: student_project_detail
 coverImage: "/img/updated/1.png"
 pagePostDate: "11 Dec 2023"
 studentName: "Andy"
-projectName: "Trail To First Class"
-projectCategory: "App Development"
+projectName: "Boy Scout's Project Earns Leader's Praise"
+projectCategory: "APP Downloaded Over 10,000 Times, This APP Receives Strong Endorsement and Promotional Support from Leaders"
 projectDesc: "Creativity"
 
 [//]: # (Project Page/Showcase)
