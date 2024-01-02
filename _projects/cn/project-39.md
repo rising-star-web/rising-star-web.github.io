@@ -7,7 +7,7 @@ pagePostDate: "2023年12月3日"
 studentName: "Andy"
 projectName: "童子军巧作获领导高赞"
 projectCategory: "App Development"
-projectDesc: "学员创新作品"
+projectDesc: "APP下载过万，受到童子军项目领导的大力赞扬以及帮助推广"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "野外生存技能App"
