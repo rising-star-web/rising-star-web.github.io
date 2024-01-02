@@ -7,7 +7,7 @@ pagePostDate: "2022年3月3日"
 studentName: "Andy"
 projectName: "Andy独立开发游戏在Stream平台发布万点击量"
 projectCategory: "App Development"
-projectDesc: "独立开发的游戏"
+projectDesc: "APP下载过万，收到童子军项目领导的大力赞扬以及推广"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "Andy独立开发游戏在Stream平台发布万点击量"
