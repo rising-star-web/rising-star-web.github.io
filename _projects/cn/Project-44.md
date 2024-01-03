@@ -15,7 +15,7 @@ bodyText1: "Recheal希望通过这款APP，帮助更多需要血液透析的病�
 bodyText2: "通过这个APP，患者能够方便地追踪他们的透析进度，为健康恢复添砖加瓦。它不仅简化了数据记录流程，而且能够通过上传的数据，进行分析，使患者和家属能够更好地理解和参与治疗过程。"
 URLDescription: "链接到项目"
 projectURL: "https://apps.apple.com/us/app/renal-dialysis/id6450286540/"
-awardsDesc: "Recheal将医疗透析与科技创业结合，在国会应用挑战大赛获奖！"
+awardsDesc: "Rechel将医疗透析与科技创业结合，在国会应用挑战大赛获奖！"
 contentImage: "/img/updated/projects/截屏2024-01-03 10.44.45.png"
 contentImage2: "/img/updated/projects/WechatIMG936.jpeg"
 ---
