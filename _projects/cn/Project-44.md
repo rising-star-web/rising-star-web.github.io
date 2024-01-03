@@ -5,7 +5,7 @@ layout: student_project_detail
 coverImage: "/img/updated/projects/透析.png"
 pagePostDate: "2024年1月3日"
 studentName: "Rachel"
-projectName: "透析APP创业获国会荣誉"
+projectName: "透析应用创业获国会荣誉"
 projectCategory: "App Development"
 projectDesc: "国会应用挑战大赛获奖"
 
