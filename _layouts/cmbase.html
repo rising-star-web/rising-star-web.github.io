@@ -1,0 +1,125 @@
+---
+layout: default
+---
+
+<section class="wrapper bg-custom">
+    <div class="container pt-10 pb-19 pt-md-10 pb-md-20 text-center">
+        <div class="row">
+            <div class="col-md-10 col-xl-8 mx-auto">
+                <h1 class="display-2 mb-5"> {{ site.data.cmbase[page.locale].intro.header }}</h1>
+            </div>
+            <!-- /column -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+<!-- /section -->
+
+<section class="wrapper bg-light">
+    <div class="container pb-12">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="blog single mt-n18">
+                    <div class="card shadow-lg">
+                        <div class="card-body">
+                            <p>
+                                {{ site.data.cmcraft[page.locale].intro.p1 }} 
+                            </p>
+
+                            <div class="my-10">
+                                <h2 class="h1 my-3">{{ site.data.cmbase[page.locale].whatcmbase.header }}</h2>
+
+                                <p> {{ site.data.cmbase[page.locale].whatcmbase.p }}
+                                </p>
+
+                                <img style="width: 100%;" src="/assets/img/cmbase/image1.png"/>
+                            </div>
+
+                            <div class="my-10">
+                                <h2 class="h1 my-3">{{ site.data.cmbase[page.locale].whycmbase.header }}</h2>
+
+                                <p> {{ site.data.cmbase[page.locale].whycmbase.p1 }}
+                                </p>
+
+                                <p> {{ site.data.cmbase[page.locale].whycmbase.p2 }}
+                                </p>
+                            </div>
+
+                            <div class="my-10">
+                                <h2 class="h1 my-3">{{ site.data.cmbase[page.locale].accessing.header }}</h2>
+
+                                <p> {{ site.data.cmbase[page.locale].accessing.p1 }}
+                                </p>
+
+                                <img style="width: 100%;" src="/assets/img/cmbase/image4.png"/>
+
+                                <p> {{ site.data.cmbase[page.locale].accessing.p2 }}
+                                </p>
+
+                                <img style="width: 100%;" src="/assets/img/cmbase/image6.png"/>
+                            </div>
+
+                            <div class="my-10">
+                                <h2 class="h1 my-3">{{ site.data.cmbase[page.locale].structure.header }}</h2>
+
+                                <p> {{ site.data.cmbase[page.locale].whycmbase.p }}
+                                </p>
+
+                                <!-- carousel -->
+                                <div class="swiper-container" data-margin="30" data-nav="true" data-dots="true" data-items-xl="3" data-items-md="3" data-items-xs="1">
+                                    <div class="swiper">
+                                        <div class="swiper-wrapper pb-10">
+                                            <div class="swiper-slide" data-cue="slideInUp">
+                                                <img style="width: 100%;" src="/assets/img/cmbase/image2.png"/>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-wrapper pb-10">
+                                            <div class="swiper-slide" data-cue="slideInUp">
+                                                <img style="width: 100%;" src="/assets/img/cmbase/image3.png"/>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-wrapper pb-10">
+                                            <div class="swiper-slide" data-cue="slideInUp">
+                                                <img style="width: 100%;" src="/assets/img/cmbase/image5.png"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.blog -->
+            </div>
+            <!-- /column -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+<!-- /section -->
+
+<!-- Try Coding Mind -->
+<section class="wrapper bg-soft-primary">
+    <div class="container py-12 py-md-12">
+        <div class="row text-center">
+            <div class="col-md-10 mx-auto">
+                <h3 class="display-4 text-navy">{{ site.data.cmcraft[page.locale].tutoring.header }}
+                </h3>
+                <p class="lead mb-7 mb-md-7">
+                    {{ site.data.cmcraft[page.locale].tutoring.lead }}
+                </p>
+                <a href="./free-trial" class="btn btn-primary rounded-pill me-0 me-md-4 mb-4 mb-md-0">
+                    {{ site.data.cmcraft[page.locale].tutoring.btn }}
+                </a>
+            </div>
+        </div>
+        <!--/div -->
+    </div>
+    <!-- /.container -->
+</section>
+<!-- /section -->

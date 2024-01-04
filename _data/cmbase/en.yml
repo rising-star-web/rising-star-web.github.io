@@ -1,0 +1,27 @@
+name: EN
+
+intro:
+  header: CM Base
+  p1: At Coding Mind, we have our own textbooks for our courses designed specifically for a thorough, engaging, and succinct learning experience. We store all of our curriculums on a website called CM Base.
+
+whatcmbase:
+  header: What is CM Base?
+  p: CM Base is our one stop place used by our instructors and students alike. Here, students can access their online curriculums that they use in our classes. Your child will be using CM Base during class to read lessons alongside their teacher, and can use CM Base even outside of class to do exercises and to do various programming projects. Most courses that we offer at Coding Mind have a corresponding CM Base curriculum.
+
+whycmbase:
+  header: Why Use CM Base?
+  p1: CM Base is the primary textbook repository that students need to use for their classes here, whether it is for an in-person or an online class. We believe that the exercises and projects in our curriculums bring the best out of students while also letting them enjoy programming rather than treating it as something menial. When used in conjunction with other systems like CM Craft, CM Base ensures that your child learns and has fun at the same time. 
+  p2: CM Base is also a great way for your child to do self-learning. While instructors are trained to go through the textbooks thoroughly with students at their optimal pace, students who wish to go above and beyond are more than able to use CM Base in their own time and complete most if not all of the material themselves.
+
+accessing:
+  header: Accessing 
+  p1: Your child will log into ShareMyWorks using their ShareMyWorks username and password. They should already have one, but if not, their instructor can provide a set of credentials for them. If your child has any active classes, then they can access the curriculum for that class.
+  p2: Looking through the online curriculums is as simple as selecting the lesson from the left-hand sidebar. Here, your child can view lessons, do exercises, and read project instructions when they have to do homework or when they need to follow their instructor during a class.
+
+structure:
+  header: Curriculum Structure
+  p: Our curriculums on CM Base typically follow a lesson-exercise-project structure. This is a type of learning that gradually ramps up in difficulty for a student to make sure that by the end they will have mastered the material. We begin with a few primers on specific concepts, give them conceptual, technical, and practical exercises for them to test their knowledge, and then we provide them with a free-form project that asks them to apply what they learned to finish an incomplete program. Projects often include “next step” instructions at the end. These are challenging add-ons that a student can try out that will make their projects even better while also testing your student’s programming skills.
+
+finalnotes:
+  header: Final Notes
+  p: We encourage your child to always refer to CM Base even outside of class so they can get a head start on the reading for their next class, or to finish homework from a previous class. Our mission here is to foster your child’s interest in programming, and CM Base is just one of the systems that we use to achieve this. We are always actively improving our curriculums and performing maintenance on them to ensure that they are as accessible and fun for students as possible.
