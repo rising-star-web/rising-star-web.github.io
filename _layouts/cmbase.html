@@ -63,31 +63,38 @@ layout: default
                             <div class="my-10">
                                 <h2 class="h1 my-3">{{ site.data.cmbase[page.locale].structure.header }}</h2>
 
-                                <p> {{ site.data.cmbase[page.locale].whycmbase.p }}
+                                <p> {{ site.data.cmbase[page.locale].structure.p }}
                                 </p>
 
-                                <!-- carousel -->
-                                <div class="swiper-container" data-margin="30" data-nav="true" data-dots="true" data-items-xl="3" data-items-md="3" data-items-xs="1">
+                                <div class="swiper-container mb-10" data-margin="30" data-nav="true" data-dots="true" data-items-xl="3" data-items-md="2" data-items-xs="1">
                                     <div class="swiper">
-                                        <div class="swiper-wrapper pb-10">
-                                            <div class="swiper-slide" data-cue="slideInUp">
-                                                <img style="width: 100%;" src="/assets/img/cmbase/image2.png"/>
-                                            </div>
+                                      <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img style="width: 100%;" src="/assets/img/cmbase/image2.png"/>
                                         </div>
-                                        <div class="swiper-wrapper pb-10">
-                                            <div class="swiper-slide" data-cue="slideInUp">
-                                                <img style="width: 100%;" src="/assets/img/cmbase/image3.png"/>
-                                            </div>
+                                        <!--/.swiper-slide -->
+                                        <div class="swiper-slide">
+                                            <img style="width: 100%;" src="/assets/img/cmbase/image3.png"/>
                                         </div>
-                                        <div class="swiper-wrapper pb-10">
-                                            <div class="swiper-slide" data-cue="slideInUp">
-                                                <img style="width: 100%;" src="/assets/img/cmbase/image5.png"/>
-                                            </div>
+                                        <!--/.swiper-slide -->
+                                        <div class="swiper-slide">
+                                            <img style="width: 100%;" src="/assets/img/cmbase/image5.png"/>
                                         </div>
+                                        <!--/.swiper-slide -->
+                                      </div>
+                                      <!--/.swiper-wrapper -->
                                     </div>
-                                </div>
+                                    <!-- /.swiper -->
+                                  </div>
+                                  <!-- /.swiper-container -->
                             </div>
 
+                            <div class="my-10">
+                                <h2 class="h1 my-3">{{ site.data.cmbase[page.locale].finalnotes.header }}</h2>
+
+                                <p> {{ site.data.cmbase[page.locale].finalnotes.p }}
+                                </p>
+                            </div>
                         </div>
                         <!-- /.card-body -->
                     </div>
