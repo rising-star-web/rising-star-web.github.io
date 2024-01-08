@@ -6,8 +6,8 @@ coverImage: "/img/updated/1.png"
 pagePostDate: "11 Dec 2023"
 studentName: "Andy"
 projectName: "Boy Scout's Project Earns Leader's Praise"
-projectCategory: "APP Downloaded Over 10,000 Times, This APP Receives Strong Endorsement and Promotional Support from Leaders"
-projectDesc: "Creativity"
+projectCategory: "APP DEVELOPMENT"
+projectDesc: "APP Downloaded Over 10,000 Times, This APP Receives Strong Endorsement and Promotional Support from Leaders"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "Andy's thinking and innovation on Boy Scouts "
