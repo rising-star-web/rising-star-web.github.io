@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/annie.png"
+coverImage: "/img/updated/projects/Jasmine.png"
 pagePostDate: "11 Jan 2024"
 studentName: "Jasmine"
 projectName: "Trial Recruitment Project Impresses MIT"
