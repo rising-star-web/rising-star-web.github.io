@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/justin.png"
+coverImage: "/img/updated/projects/WeChat09f14e9a3b52661e824ce0021fa47dbf.png"
 pagePostDate: "2022年3月3日"
 studentName: "Justin"
 projectName: "电脑组件的云计算平台"
