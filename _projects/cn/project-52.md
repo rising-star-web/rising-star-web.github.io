@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/Brown and Beige Illustrated Sugar Kitchen Label.jpg"
+coverImage: "/img/updated/projects/WeChata7c1e3fc1923e92ece120d0d907ae1ff.jpg"
 pagePostDate: "2024年1月23日"
 studentName: "在职研究生"
 projectName: "饮酒爱好者的宝藏APP"
