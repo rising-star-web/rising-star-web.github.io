@@ -5,14 +5,14 @@ layout: student_project_detail
 coverImage: "/img/updated/3UOusrB0yU.jpg"
 pagePostDate: "24 Jan 2024"
 studentName: "Zech"
-projectName: "Zero-code AI medical tool got NYU admire"
+projectName: "Zero-code AI medical tool got NYU to admire"
 projectCategory: "App Development"
 projectDesc: "Admission to New York University"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "Zero-code AI medical tool got NYU admire"
+headerTitle: "Zero-code AI medical tool got NYU to admire"
 bodyText1: "By applying advanced machine learning algorithms and image analysis techniques, Zach has created an intuitive, easy-to-use platform for doctors to efficiently process medical data, allowing doctors to easily analyze medical records, images, and lab results."
-bodyText2: "Zach's fearless, careful research ability and his unique AI medical project venture have not only gained recognition in the medical field, but also won the admission qualification of New York University!"
+bodyText2: "Zach's fearless, careful research ability and his unique AI medical project venture have not only gained recognition in the medical field but also won the admission qualification of New York University!"
 projectURL: "https://www.google.com/"
 awardsDesc: "Zero-code AI medical tool helps doctors lack programming"
 contentImage: "/img/updated/WeChat1b85ef7c0a4f52088d94ca85570e49c7.jpg
