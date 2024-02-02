@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/Game Play Instagram Post .png"
+coverImage: "/img/updated/projects/Evan.jpg"
 pagePostDate: "2024年2月2日"
 studentName: "Evan"
 projectName: "Evan植物识别项目斩获NYU"
