@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/1.png"
+coverImage: "/img/updated/projects/Golf - Instagram Post.png"
 pagePostDate: "2024年2月5日"
 studentName: "Winstone"
 projectName: "创业大师解决攻破高尔夫难题"
@@ -18,3 +18,5 @@ projectURL: "https://www.google.com/"
 awardsDesc: "学员创新作品"
 contentImage: "/img/updated/projects/WeChat26034ad80a20c82c448d31f28d7f0877.jpg"
 contentImage2: "/img/updated/projects/WeChatc520fdf431ede7683ede4cd44112bf9b.jpg"
+
+---
