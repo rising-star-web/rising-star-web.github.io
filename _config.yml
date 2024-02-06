@@ -82,6 +82,8 @@ collections:
     output: true
   competitions:
     output: true
+  locations:
+    output: true
 
 defaults:
   - values: 
@@ -111,6 +113,12 @@ defaults:
       locale: en
       permalink: /competitions/:name
   - scope:
+      path: ""
+      type: locations
+    values:
+      locale: en
+      permalink: /:path/
+  - scope:
       path: "_courses/cn/**"
       type: courses
     values:
@@ -134,4 +142,11 @@ defaults:
     values:
       locale: cn
       permalink: /cn/competitions/:name
+  - scope:
+      path: "locations/cn/**"
+      type: locations
+    values:
+      locale: cn
+      permalink: /cn/:path/
+
 
