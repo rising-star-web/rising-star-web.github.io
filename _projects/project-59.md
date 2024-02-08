@@ -7,7 +7,7 @@ pagePostDate: "7 Feb 2024"
 studentName: "Darren"
 projectName: "Immigrant Game Wins Congressional Competition"
 projectCategory: "App Development"
-projectDesc: "Won the California district championship in the Congressional Challenge"
+projectDesc: "Won The California District Championship In The Congressional Challenge"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "Won the California district championship in the Congressional Challenge"
