@@ -16,5 +16,5 @@ bodyText2: "The Newcomer is not just a game; it's a valuable tool for new immigr
 projectURL: "https://www.google.com/"
 awardsDesc: "Won the California district championship in the Congressional Challenge"
 contentImage: "/img/updated/projects/截屏2024-02-07 18.16.47.png"
-contentImage2: "/img/updated/projects/截屏2024-02-07 18.17.00.png"
+contentImage2: "/img/updated/projects/截屏2024-02-07 18.16.47.png"
 ---
