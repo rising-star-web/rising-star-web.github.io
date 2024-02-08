@@ -2,19 +2,19 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/3UOusrB0yU.jpg"
-pagePostDate: "24 Jan 2024"
-studentName: "Zech"
-projectName: "No-Code AI Medical Platform Impresses NYU"
+coverImage: "/img/updated/projects/截屏2024-02-07 18.15.59.png"
+pagePostDate: "7 Feb 2024"
+studentName: "Darren"
+projectName: "Immigrant Game Wins congressional Competition"
 projectCategory: "App Development"
-projectDesc: "Admission to New York University"
+projectDesc: "Won the California district championship in the Congressional Challenge"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "No-Code AI Medical Platform Impresses NYU"
-bodyText1: "By applying advanced machine learning algorithms and image analysis techniques, Zach has created an intuitive, easy-to-use platform for doctors to efficiently process medical data, allowing doctors to easily analyze medical records, images, and lab results."
-bodyText2: "Zach's fearless, careful research ability and his unique AI medical project venture have not only gained recognition in the medical field but also won the admission qualification of New York University!"
+headerTitle: "Immigrant Game Wins Congressional Competition"
+bodyText1: "Darren, with his unique entrepreneurial vision and advanced programming skills, created "The Newcomer" game to assist immigrants in better adapting to new societies. His creation won the crown in the 2023 Congressional App Challenge for California's 23rd district."
+bodyText2: "The Newcomer is not just a game; it's a valuable tool for new immigrants. Players simulate entering American society, experiencing its culture and daily life, while improving their English skills through engaging interactions. It's a journey that allows every "newcomer" to find their place through exploration and learning."
 projectURL: "https://www.google.com/"
-awardsDesc: "Admission to New York University"
-contentImage: "/img/updated/WeChat1b85ef7c0a4f52088d94ca85570e49c7.jpg"
-contentImage2: "/img/updated/WeChatbc4b02a8fdebfe63a614b28c9c878125.png"
+awardsDesc: "Won the California district championship in the Congressional Challenge"
+contentImage: "/img/updated/projects/截屏2024-02-07 18.16.47.png"
+contentImage2: "/img/updated/projects/截屏2024-02-07 18.17.00.png"
 ---
