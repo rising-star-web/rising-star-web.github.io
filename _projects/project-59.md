@@ -5,8 +5,8 @@ layout: student_project_detail
 coverImage: "/img/updated/projects/截屏2024-02-07 18.15.59.png"
 pagePostDate: "7 Feb 2024"
 studentName: "Darren"
-projectName: "immigrant Game Wins Congressional Competition"
-projectCategory: "APP DEVELOPMENT"
+projectName: "Immigrant Game Wins Congressional Competition"
+projectCategory: "App Development"
 projectDesc: "Won the California district championship in the Congressional Challenge"
 
 [//]: # (Project Page/Showcase)
