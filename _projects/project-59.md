@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/截屏2024-02-07 18.15.59.png"
+coverImage: "/img/updated/projects/截屏2024-02-05 19.05.03.png"
 pagePostDate: "7 Feb 2024"
 studentName: "Darren"
 projectName: "Immigrant Game Wins Congressional Competition"
