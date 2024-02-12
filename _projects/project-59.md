@@ -10,8 +10,8 @@ projectCategory: "APP DEVELOPMENT"
 projectDesc: "Won The California District Championship In The Congressional Challenge"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "Smart Reading Startup Founder Admitted to CMU CS"
-bodyText1: "Richard successfully developed a smart reading time manager aimed at optimizing people's time management and enhancing their reading depth. This accomplishment led to his admission into Carnegie Mellon University's Computer Science program, which is ranked as the top computer science program in the United States."
+headerTitle: "Immigrant Game Wins Congressional Competition"
+bodyText1: "Darren, with his unique entrepreneurial vision and advanced programming skills, created The Newcomer game to assist immigrants in better adapting to new societies. His creation won the crown in the 2023 Congressional App Challenge for California's 23rd district"
 bodyText2: "During the development of this project, Richard utilized Python and Beautiful Soup for web scraping, leveraged Scikit-learn to construct machine learning models, and provided backend services using the Flask framework."
 projectURL: "https://chromewebstore.google.com/detail/website-smart-timer/phjpeiklpoblhkjcdmdppoigngnnlmno?hl=en&authuser=0"
 awardsDesc: "Admitted to Carnegie Mellon University's Computer Science program"
