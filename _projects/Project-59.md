@@ -7,7 +7,7 @@ pagePostDate: “12 Feb 2024"
 studentName: "Darren"
 projectName: "Immigrant Game Wins Congressional Competition"
 projectCategory: "APP DEVELOPMENT"
-projectDesc: "Admitted to Carnegie Mellon University's Computer Science program"
+projectDesc: "Won The California District Championship In The Congressional Challenge"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "Smart Reading Startup Founder Admitted to CMU CS"
