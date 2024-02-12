@@ -12,7 +12,7 @@ projectDesc: "Won The California District Championship In The Congressional Chal
 [//]: # (Project Page/Showcase)
 headerTitle: "Immigrant Game Wins Congressional Competition"
 bodyText1: "Darren, with his unique entrepreneurial vision and advanced programming skills, created The Newcomer game to assist immigrants in better adapting to new societies. His creation won the crown in the 2023 Congressional App Challenge for California's 23rd district"
-bodyText2: "xxxx"
+bodyText2: ""The Newcomer" is a game that doubles as a learning tool for immigrants, simulating life in America to enhance English skills and cultural understanding."
 projectURL: "https://www.google.com/"
 awardsDesc: "Admitted to Carnegie Mellon University's Computer Science program"
 contentImage: "/img/updated/projects/richard.jpg"
