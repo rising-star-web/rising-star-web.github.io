@@ -3,18 +3,18 @@ layout: student_project_detail
 
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/截屏2024-02-05 19.05.03.png"
-pagePostDate: "7 Feb 2024"
-studentName: "Darren"
-projectName: "Immigrant Game Wins Congressional Competition"
-projectCategory: "App Development"
-projectDesc: "Won The California District Championship In The Congressional Challenge"
+pagePostDate: “12 Feb 2024"
+studentName: "Richard"
+projectName: "Smart Reading Startup Founder Admitted to CMU CS "
+projectCategory: "APP DEVELOPMENT"
+projectDesc: "Admitted to Carnegie Mellon University's Computer Science program"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "Won the California district championship in the Congressional Challenge"
-bodyText1: "Darren, with his unique entrepreneurial vision and advanced programming skills, created The Newcomer game to assist immigrants in better adapting to new societies. His creation won the crown in the 2023 Congressional App Challenge for California's 23rd district"
-bodyText2: "The Newcomer is not just a game; it's a valuable tool for new immigrants. Players simulate entering American society, experiencing its culture and daily life, while improving their English skills through engaging interactions. It's a journey that allows every "newcomer" to find their place through exploration and learning."
-projectURL: "https://www.google.com/"
-awardsDesc: "Won the California district championship in the Congressional Challenge"
-contentImage: "/img/updated/projects/截屏2024-02-07 18.16.47.png"
-contentImage2: "/img/updated/projects/截屏2024-02-07 18.17.00.png"
+headerTitle: "Smart Reading Startup Founder Admitted to CMU CS"
+bodyText1: "Richard successfully developed a smart reading time manager aimed at optimizing people's time management and enhancing their reading depth. This accomplishment led to his admission into Carnegie Mellon University's Computer Science program, which is ranked as the top computer science program in the United States."
+bodyText2: "During the development of this project, Richard utilized Python and Beautiful Soup for web scraping, leveraged Scikit-learn to construct machine learning models, and provided backend services using the Flask framework."
+projectURL: "https://chromewebstore.google.com/detail/website-smart-timer/phjpeiklpoblhkjcdmdppoigngnnlmno?hl=en&authuser=0"
+awardsDesc: "Admitted to Carnegie Mellon University's Computer Science program"
+contentImage: "/img/updated/projects/richard.jpg"
+contentImage2: "/img/updated/projects/截屏2024-02-05 17.08.27.png"
 ---
