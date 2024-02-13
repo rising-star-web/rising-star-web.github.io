@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/john jerry.png"
+coverImage: "/img/updated/projects/WeChat61792e314cadbdc0b1250d67023aaa12.jpg"
 pagePostDate: "2024年2月13日"
 studentName: "John & Jerry"
 projectName: "国会冠军，John和Jerry点亮视障人士!"
