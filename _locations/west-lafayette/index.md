@@ -5,8 +5,8 @@ permalink: /west-lafayette/
 locale: en
 order: 1
 contact:
-  email: contact@location1.com
-  phone: +123456789
+  email: west.lafayette@codingmind.come
+  phone: (765)688-0005
   address: |
     500 Sagamore Pkwy, Ste 6W<br/>  
     West Lafayette, IN, 47906
