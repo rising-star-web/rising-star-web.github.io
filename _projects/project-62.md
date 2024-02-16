@@ -1,4 +1,3 @@
-
 ---
 layout: student_project_detail
 
