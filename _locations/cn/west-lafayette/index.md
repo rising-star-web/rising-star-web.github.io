@@ -6,7 +6,7 @@ locale: cn
 order: 1
 contact:
   email: west.lafayette@codingmind.com
-  phone: (765)688-0005
+  phone: (765) 688-0005
   address: |
     500 Sagamore Pkwy, Ste 6W<br/>  
     West Lafayette, IN, 47906
@@ -31,7 +31,7 @@ hours:
 
 **Your child/children will complete a trial class that will:**
 
-- Valuable insights into where they stand in their coding journey
+- Give valuable insights into where they stand in their coding journey
 - Unleash your child's coding potential with various topics that show what they can achieve
 
 The instructor will prepare an individualized trial class for your kids and support them as they begin their Coding Mind journey.

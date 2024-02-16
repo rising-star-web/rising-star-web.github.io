@@ -14,7 +14,7 @@ layout: locationdefault
           <div class="card-body">
             <h1 class="display-1 mb-5 mx-md-n5 mx-lg-0">{{ site.data.competitive[page.locale].trial.header }}</h1>
             <p class="lead fs-lg mb-7">{{ site.data.competitive[page.locale].trial.lead }}</p>
-            <span><a class="btn btn-primary rounded-pill me-2">{{ site.data.competitive[page.locale].trial.btn }}</a></span>
+            <span><a href="/free-trial" class="btn btn-primary rounded-pill me-2">{{ site.data.competitive[page.locale].trial.btn }}</a></span>
             <hr class="my-5">
             <div class="d-flex flex-column">
               <div class="d-flex flex-row">
@@ -22,6 +22,9 @@ layout: locationdefault
               </div>
               <div class="d-flex flex-row">
                 <i class="uil uil-envelope me-4 "></i><span>{{page.contact.email}}</span>
+              </div>
+              <div class="d-flex flex-row">
+                <i class="uil uil-phone me-4 "></i><span>{{page.contact.phone}}</span>
               </div>
             </div>
           </div>
@@ -41,64 +44,47 @@ layout: locationdefault
   <div class="container pb-12">
     <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-start">
       <div class="col-lg-4">
-        <div class="card shadow-lg">
-          <div class="card-body">
+        <div class="card shadow-lg h-100">
+          <div class="card-body p-5">
             <div class="d-flex flex-column">
-              <div class="accordion accordion-wrapper" id="accordionSimpleExample">
-                <div class="card plain accordion-item">
-                  <div class="card-header" id="headingSimpleOne">
-                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseSimpleOne" aria-expanded="false" aria-controls="collapseSimpleOne"> {{page.businessHours}} </button>
-                  </div>
-                  <!--/.card-header -->
-                  <div id="collapseSimpleOne" class="accordion-collapse collapse" aria-labelledby="headingSimpleOne" data-bs-parent="#accordionSimpleExample">
-                    <div class="card-body">
-                      <table class="table table-striped">
-                        <thead>
-                          <tr>
-                            <th scope="col">Day</th>
-                            <th scope="col">{{page.businessHours}}</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">Mon</th>
-                            <td>{{page.hours.Mon}}</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Tue</th>
-                            <td>{{page.hours.Tue}}</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Wed</th>
-                            <td>{{page.hours.Wed}}</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Thu</th>
-                            <td>{{page.hours.Thu}}</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Fri</th>
-                            <td>{{page.hours.Fri}}</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Sat</th>
-                            <td>{{page.hours.Sat}}</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Sun</th>
-                            <td>{{page.hours.Sun}}</td>
-                          </tr>
-                        </tbody>
-                      </table>                    
-                    </div>
-                    <!--/.card-body -->
-                  </div>
-                  <!--/.accordion-collapse -->
-                </div>
-              </div>
-              <!--/.accordion -->
-              
-            
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Day</th>
+                    <th scope="col">{{page.businessHours}}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Mon</th>
+                    <td>{{page.hours.Mon}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Tue</th>
+                    <td>{{page.hours.Tue}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Wed</th>
+                    <td>{{page.hours.Wed}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Thu</th>
+                    <td>{{page.hours.Thu}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Fri</th>
+                    <td>{{page.hours.Fri}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Sat</th>
+                    <td>{{page.hours.Sat}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Sun</th>
+                    <td>{{page.hours.Sun}}</td>
+                  </tr>
+                </tbody>
+              </table>                    
             </div>
           </div>
           <!-- /.card-body -->
@@ -109,7 +95,7 @@ layout: locationdefault
 
       <div class="col-md-8 mx-auto">
         <div class="blog single">
-          <div class="card shadow-lg">
+          <div class="card shadow-lg h-100">
             <div class="card-body">
               <div class="d-flex flex-column">
                 {{ content }}
