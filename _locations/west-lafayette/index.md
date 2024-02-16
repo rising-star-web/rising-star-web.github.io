@@ -5,7 +5,7 @@ permalink: /west-lafayette/
 locale: en
 order: 1
 contact:
-  email: west.lafayette@codingmind.come
+  email: west.lafayette@codingmind.com
   phone: (765)688-0005
   address: |
     500 Sagamore Pkwy, Ste 6W<br/>  
