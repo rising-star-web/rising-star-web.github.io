@@ -15,6 +15,6 @@ bodyText1: "Louis, attentive to the cumbersome nature of document editing, espec
 bodyText2: "QuickQuill Editor excelled in the Congressional App Challenge in California, winning first place and congressional praise, and will be showcased at the White House, recognizing Louis's innovation and problem-solving skills."
 projectURL: "https://www.google.com/"
 awardsDesc: "Won the California district championship in the Congressional Challenge"
-contentImage: "/img/updated/WeChatc02dfe467eef9319fd3fce4ec57f2338.jpg"
-contentImage2: "/img/updated/WeChat9aca5fc829e094d37816f4fe95c2073a.jpg"
+contentImage: "/img/updated/projects/截屏2024-02-15 18.59.19.png"
+contentImage2: "/img/updated/projects/截屏2024-02-15 18.59.32.png"
 ---
