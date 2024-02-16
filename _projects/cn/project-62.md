@@ -16,6 +16,6 @@ bodyText2: "Jevon开发枪击检测系统使用树莓派和机器学习算法，
 URLDescription: "链接到项目"
 projectURL: "https://www.google.com/"
 awardsDesc: "Jevon枪击警报系统获斯坦福录取"
-contentImage: "/img/updated/🎉 庆祝学员Jevon斩获斯坦福大学录取！_3_Coding Minds Academy_来自小红书网页版.jpg
+contentImage: "/img/updated/🎉 庆祝学员Jevon斩获斯坦福大学录取！_3_Coding Minds Academy_来自小红书网页版.jpg"
 contentImage2: "/img/updated/🎉 庆祝学员Jevon斩获斯坦福大学录取！_4_Coding Minds Academy_来自小红书网页版.jpg"
 ---
