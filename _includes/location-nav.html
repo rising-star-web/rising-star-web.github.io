@@ -7,6 +7,8 @@
     {% assign location_name = parts[1] %}
 {% endif %}
 
+{%- assign location_data = site.data.locations[location_name] -%}
+
 <header class="wrapper bg-gray">
     <nav class="navbar navbar-expand-lg extended extended-alt navbar-light bg-white">
       <div class="container flex-lg-column">
@@ -61,6 +63,9 @@
                 <li class="nav-item">
                     <a class="nav-link dropdown-item"href="https://www.sharemyworks.com" target="_blank">{{ site.data.nav[page.locale].nav.learningCenter }}</a>
                   </li>
+                <li class="nav-item d-block d-md-none">
+                  <a href="{{ location_data.paymenturl }}" target="_blank" class="nav-link nav-text-solid">Payment Portal</a>
+                </li>
               </ul>
               <!-- /.navbar-nav -->
               <div class="offcanvas-footer d-lg-none">
@@ -89,7 +94,7 @@
                     </a>
                   </li>
                 <li class="nav-item d-none d-md-block">
-                    <a href="https://billing.stripe.com/p/login/eVa01A0XvdnJfLybII" target="_blank" class="btn btn-sm btn-navy rounded-pill">Payment Portal</a>
+                    <a href="{{ location_data.paymenturl }}" target="_blank" class="btn btn-sm btn-navy rounded-pill">Payment Portal</a>
                 </li>
             </ul>
             <!-- /.navbar-nav -->
@@ -102,7 +107,3 @@
     </nav>
     <!-- /.navbar -->
   </header>
-
-  <script>
-    console.log("Parent Folder: {{ location_name }}");
-  </script>

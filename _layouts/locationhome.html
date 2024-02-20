@@ -1,6 +1,16 @@
 ---
-layout: locationdefault
+layout: locationdefaultwestlafayette
 ---
+
+{% if page.url contains '/cn/' %}
+    {% assign parts  = page.url | split: '/' %}
+    {% assign location_name = parts[2] %}
+{% else %}
+    {% assign parts  = page.url | split: '/' %}
+    {% assign location_name = parts[1] %}
+{% endif %}
+
+{%- assign location_data = site.data.locations[location_name] -%}
 
 <section class="wrapper">
   <div class="container pt-10 pt-md-14 pb-8 text-center">
@@ -14,17 +24,17 @@ layout: locationdefault
           <div class="card-body">
             <h1 class="display-1 mb-5 mx-md-n5 mx-lg-0">{{ site.data.competitive[page.locale].trial.header }}</h1>
             <p class="lead fs-lg mb-7">{{ site.data.competitive[page.locale].trial.lead }}</p>
-            <span><a href="/free-trial" class="btn btn-primary rounded-pill me-2">{{ site.data.competitive[page.locale].trial.btn }}</a></span>
+            <span><a href="/free-trial" class="btn btn-primary rounded-pill me-2">{{ site.data.home[page.locale].trial.btn2 }}</a></span>
             <hr class="my-5">
             <div class="d-flex flex-column">
               <div class="d-flex flex-row">
-                <i class="uil uil-location-point me-4 "></i><span>{{page.contact.address}}</span>
+                <i class="uil uil-location-point me-4 "></i><span>{{ location_data.contact.address}}</span>
               </div>
               <div class="d-flex flex-row">
-                <i class="uil uil-envelope me-4 "></i><span>{{page.contact.email}}</span>
+                <i class="uil uil-envelope me-4 "></i><span>{{ location_data.contact.email}}</span>
               </div>
               <div class="d-flex flex-row">
-                <i class="uil uil-phone me-4 "></i><span>{{page.contact.phone}}</span>
+                <i class="uil uil-phone me-4 "></i><span>{{ location_data.contact.phone}}</span>
               </div>
             </div>
           </div>
@@ -136,7 +146,7 @@ layout: locationdefault
         <div class="d-flex flex-column align-items-center align-items-lg-start text-center" data-cue="fadeIn">
           <h2 class="mb-3">{{ site.data.home[page.locale].trial.header2 }}</h2>
           <p> {{ site.data.home[page.locale].trial.lead2 }}</p>
-          <a href="/free-trial" class="btn btn-md btn-green rounded-pill mb-0 text-nowrap mt-4">{{ site.data.home[page.locale].trial.btn }}</a>
+          <a href="/free-trial" class="btn btn-md btn-green rounded-pill mb-0 text-nowrap mt-4">{{ site.data.home[page.locale].trial.btn2 }}</a>
         </div>
       </div>
     </div>
