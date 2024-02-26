@@ -2,20 +2,20 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/WeChat8bfddf946f1f3122f7877ff0c4e13107.jpg"
-pagePostDate: "2024年2月19日"
-studentName: "Jenny"
-projectName: "Jenny模特APP创业助力模特梦！"
+coverImage: "/img/updated/projects/WeChatc8bfd2200f09bc8b5d5caba147dcd16d.jpg"
+pagePostDate: "2024年2月26日"
+studentName: "Tony"
+projectName: "Tony游泳训练和竞赛辅助利器"
 projectCategory: "App Development"
-projectDesc: "开展项目发布会"
+projectDesc: "优秀项目展示"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "Jenny模特APP创业助力模特梦！"
-bodyText1: "Jenny的创作灵感来自于她对模特行业的热爱和自己在学习过程中遇到的挑战。她希望通过这个APP，让每个人都能轻松学习到模特的基本技能，提升自信，同时也能方便地了解和参与到行业内的各种活动。"
-bodyText2: "在开发过程中，Jenny面临了页面滚动和登录系统的技术难题。通过不懈的努力和学习，她成功解决了这些问题。如果有更多时间，她希望能添加更多的Pose和小贴士，以及实时更新的活动信息。"
+headerTitle: "Tony游泳训练和竞赛辅助利器"
+bodyText1: "Tony 凭借对竞技游泳的热爱与深刻理解，创造了一款名为"Swim Wizard"的应用，旨在通过机器学习和大数据分析优化游泳训练和竞赛表现。将自己的爱好变成创业，让所有游泳爱好者变得专业！"
+bodyText2: "在实验中，"Swim Wizard"的预测准确率高达95%，这一成就不仅展现了Tony对技术的精通，更为运动数据分析领域注入了新的活力。"
 URLDescription: "链接到项目"
-projectURL: "https://www.google.com/"
-awardsDesc: "Jenny模特APP创业助力模特梦！"
-contentImage: "/img/updated/projects/image.jpg"
-contentImage2: "/img/updated/projects/截屏2024-02-19 13.07.36.png"
+projectURL: "https://www.google.com/](https://play.google.com/store/apps/details?id=com.codingminds.swimwizard"
+awardsDesc: "Tony游泳训练和竞赛辅助利器"
+contentImage: "/img/updated/projects/截屏2024-02-24 11.09.56.png"
+contentImage2: "/img/updated/projects/截屏2024-02-24 11.10.13.png"
 ---
