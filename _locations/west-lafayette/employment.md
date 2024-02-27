@@ -27,7 +27,7 @@ Basic Qualifications:
 - Exercise patience and humility.
 - A passion for learning and education.
 
-**Apply Now! Send your resume to jobs@codingmindsacademy.com** with the subject line Resume and your contact details.
+**Apply Now! Send your resume to hr@codingmindsacademy.com** with the subject line Resume and your contact details.
 
 *No inquiries from staffing agencies; individual applicants only.
 
