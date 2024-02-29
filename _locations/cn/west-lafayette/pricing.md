@@ -1,5 +1,5 @@
 ---
-layout: locationpage
+layout: locationpage2
 title: 价钱
 locale: cn
 order: 4

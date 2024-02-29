@@ -1,5 +1,5 @@
 ---
-layout: locationpage
+layout: locationpage2
 title: Pricing
 locale: en
 order: 4

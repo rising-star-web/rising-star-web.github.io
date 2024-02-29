@@ -63,7 +63,7 @@
                 <li class="nav-item">
                     <a class="nav-link dropdown-item"href="https://www.sharemyworks.com" target="_blank">{{ site.data.nav[page.locale].nav.learningCenter }}</a>
                   </li>
-                <li class="nav-item d-block d-md-none">
+                <li class="nav-item d-block d-lg-none">
                   <a href="{{ location_data.paymenturl }}" target="_blank" class="nav-link nav-text-solid">Payment Portal</a>
                 </li>
               </ul>
@@ -81,7 +81,7 @@
           <!-- /.navbar-collapse -->
           <div class="navbar-other w-100 d-flex">
             <ul class="navbar-nav flex-row align-items-center ms-auto">
-                <li class="nav-item language-select text-uppercase d-none d-md-block">
+                <li class="nav-item language-select text-uppercase d-none d-lg-block">
                     <a class="nav-link" role="button"  
                     href="
                     {% if page.url contains '/cn/' %}
@@ -93,7 +93,7 @@
                     {{ site.data.nav[page.locale].nav.switchLang }}
                     </a>
                   </li>
-                <li class="nav-item d-none d-md-block">
+                <li class="nav-item d-none d-lg-block">
                     <a href="{{ location_data.paymenturl }}" target="_blank" class="btn btn-sm btn-navy rounded-pill">Payment Portal</a>
                 </li>
             </ul>
