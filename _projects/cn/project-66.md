@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/WeChatc8bfd2200f09bc8b5d5caba147dcd16d.jpg"
+coverImage: "/img/updated/projects/驾车.png"
 pagePostDate: "2024年3月1日"
 studentName: "Charles"
 projectName: "Charles创业：模拟游戏教安全驾驶"
