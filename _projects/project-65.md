@@ -5,7 +5,7 @@ layout: student_project_detail
 coverImage: "/img/updated/Justin零代码神经网络生成系统获国会大奖_2_Coding_Minds_Academy_来自小红书网页版.jpg"
 pagePostDate: “26 Feb 2024"
 studentName: "Justin"
-projectName: "Justin's Zero-code AI System wins CAC"
+projectName: "Justin's Zero-Code AI System Wins CAC"
 projectCategory: "APP DEVELOPMENT"
 projectDesc: "Won The California District Championship In The Congressional Challenge"
 
