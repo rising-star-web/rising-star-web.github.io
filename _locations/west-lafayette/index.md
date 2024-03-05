@@ -6,13 +6,13 @@ locale: en
 order: 1
 businessHours: Business Hours
 hours: 
-  Mon: 2:30–6:30 PM
-  Tue: 2:30–6:30 PM
-  Wed: 2:30–6:30 PM
-  Thu: 2:30–6:30 PM
-  Fri: 2:30–6:30 PM
-  Sat: 10:00 AM-7:00 PM
-  Sun: 1:00-7:00 PM
+  Mon: 2:30 PM – 6:30 PM
+  Tue: 2:30 PM – 6:30 PM
+  Wed: 2:30 PM – 6:30 PM
+  Thu: 2:30 PM – 6:30 PM
+  Fri: 2:30 PM – 6:30 PM
+  Sat: 10:00 AM - 7:00 PM
+  Sun: 1:00 PM - 7:00 PM
 ---
 
 # Come see how Coding Mind can benefit your kids
