@@ -1,11 +1,6 @@
 
-{% if page.url contains '/cn/' %}
-    {% assign parts  = page.url | split: '/' %}
-    {% assign location_name = parts[2] %}
-{% else %}
-    {% assign parts  = page.url | split: '/' %}
-    {% assign location_name = parts[1] %}
-{% endif %}
+{% assign parts  = page.url | split: '/' %}
+{% assign location_name = parts[1] %}
 
 {%- assign location_data = site.data.locations[location_name] -%}
 
@@ -26,18 +21,6 @@
               </div>
             <div class="navbar-other ms-auto">
                 <ul class="navbar-nav flex-row align-items-center">
-                    <li class="nav-item language-select text-uppercase d-lg-none">
-                        <a class="nav-link" role="button"  
-                        href="
-                        {% if page.url contains '/cn/' %}
-                            {{ page.url | replace: '/cn/', '/' }}
-                        {% else %}
-                            {{ site.data.nav.en.nav.switchLangURL }}{{ page.url | remove_first: '/' }}
-                        {% endif %}
-                        ">  
-                        {{ site.data.nav[page.locale].nav.switchLang }}
-                        </a>
-                      </li>
                     <li class="nav-item d-lg-none">
                       <button class="hamburger offcanvas-nav-btn"><span></span></button>
                     </li>
@@ -55,10 +38,12 @@
             </div>
             <div class="offcanvas-body d-flex flex-column h-100">
               <ul class="navbar-nav">
-                {% assign pages = site.locations | where_exp: "item", "item.path contains location_name" | where: "locale", page.locale | sort: "order" %}
+                {% assign pages = site.locations | where_exp: "item", "item.path contains location_name" | sort: "order" %}
 
                 {% for page in pages %}
+                    {% unless page.exclude == true %}
                     <li class="nav-item"><a class="nav-link nav-text-solid" href="{{ page.url }}"> {{ page.title }}</a></li>
+                    {% endunless %}
                 {% endfor %}
                 <li class="nav-item">
                     <a class="nav-link dropdown-item"href="https://www.sharemyworks.com" target="_blank">{{ site.data.nav[page.locale].nav.learningCenter }}</a>
@@ -81,18 +66,6 @@
           <!-- /.navbar-collapse -->
           <div class="navbar-other w-100 d-flex">
             <ul class="navbar-nav flex-row align-items-center ms-auto">
-                <li class="nav-item language-select text-uppercase d-none d-lg-block">
-                    <a class="nav-link" role="button"  
-                    href="
-                    {% if page.url contains '/cn/' %}
-                        {{ page.url | replace: '/cn/', '/' }}
-                    {% else %}
-                        {{ site.data.nav.en.nav.switchLangURL }}{{ page.url | remove_first: '/' }}
-                    {% endif %}
-                    ">  
-                    {{ site.data.nav[page.locale].nav.switchLang }}
-                    </a>
-                  </li>
                 <li class="nav-item d-none d-lg-block">
                     <a href="{{ location_data.paymenturl }}" target="_blank" class="btn btn-sm btn-navy rounded-pill">Payment Portal</a>
                 </li>

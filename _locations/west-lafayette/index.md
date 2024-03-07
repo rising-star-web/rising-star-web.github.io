@@ -6,13 +6,13 @@ locale: en
 order: 1
 businessHours: Business Hours
 hours: 
-  Mon: 2:30–6:30 PM
-  Tue: 2:30–6:30 PM
-  Wed: 2:30–6:30 PM
-  Thu: 2:30–6:30 PM
-  Fri: 2:30–6:30 PM
-  Sat: 10:00 AM-7:00 PM
-  Sun: 1:00-7:00 PM
+  Mon: 2:30 PM – 6:30 PM
+  Tue: 2:30 PM – 6:30 PM
+  Wed: 2:30 PM – 6:30 PM
+  Thu: 2:30 PM – 6:30 PM
+  Fri: 2:30 PM – 6:30 PM
+  Sat: 10:00 AM - 7:00 PM
+  Sun: 1:00 PM - 7:00 PM
 ---
 
 # Come see how Coding Mind can benefit your kids
@@ -29,3 +29,14 @@ hours:
 - Unleash your child's coding potential with various topics that show what they can achieve
 
 The instructor will prepare an individualized trial class for your kids and support them as they begin their Coding Mind journey.
+
+
+<section class="wrapper">
+  <div class="container pt-12">
+  <div  id="mni-membership-638439490030333334"></div>
+  <script src="https://lafayettecommercein.chambermaster.com/Content/Script/Member.js" type="text/javascript"></script>
+  <script type="text/javascript">
+  new MNI.Widgets.Member("mni-membership-638439490030333334",{member:19098,styleTemplate:"#@id{text-align:center;position:relative}#@id .mn-widget-member-name{font-weight:700}#@id .mn-widget-member-logo{max-width:100%}"}).create();
+  </script>
+  </div>
+</section>
