@@ -4,7 +4,7 @@ layout: competition_detail
 [//]: # (Competition Card)
 competitionLogo: "/img/updated/competitions/useco.jpeg"
 competitionName: "USA Computing Olympiad"
-competitionDates: every January and February 
+competitionDates: starts in December every year 
 competitionDesc: "USACO, run by an independent non-profit, offers computer science education and competitions for middle school students globally."
 
 [//]: # (Competition Page/Showcase)
