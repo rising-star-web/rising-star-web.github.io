@@ -11,7 +11,7 @@ projectDesc: "Student excellent project presentation"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "Innovative Philanthropy: Stories Illuminate ASD and ADHD Kids"
-bodyText1: "Laura developed "Story to Animation," an app that converts storybooks into interactive videos to aid children with autism or motor disorders, merging technology with philanthropy."
+bodyText1: "Laura developed Story to Animation, an app that converts storybooks into interactive videos to aid children with autism or motor disorders, merging technology with philanthropy."
 bodyText2: "The app uses advanced technology for quick text-to-animation conversion and personalizes story recommendations, enhancing learning and communication skills through interactive features."
 projectURL: "https://apps.apple.com/us/app/sparkinteractives-story-book/id1615127097"
 awardsDesc: "Laura created an app blending charity and innovation to engage autistic and ADHD kids with stories."
