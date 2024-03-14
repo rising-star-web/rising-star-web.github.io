@@ -5,12 +5,12 @@ layout: student_project_detail
 coverImage: "/img/updated/projects/足球.png"
 pagePostDate: “12 March 2024"
 studentName: "Jason"
-projectName: "Jason independently develops a football data tactics app"
+projectName: "Jason Independently Develops A Football Data Tactics App"
 projectCategory: "APP DEVELOPMENT"
 projectDesc: "Student excellent project presentation"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "Jason independently develops a football data tactics app"
+headerTitle: "Jason Independently Develops A Football Data Tactics App"
 bodyText1: "Jason identified limitations in existing American football defensive strategies and decided to leverage big data technology to provide a scientific basis for every in-game decision, ensuring accuracy."
 bodyText2: "PlayGuessr stands out for including often-overlooked special offensive tactics like fake plays, field goal attempts, and quarterback kneels, which are rare but highly informative. Integrating these tactics into game strategies could significantly increase the chances of winning."
 projectURL: "https://apps.apple.com/us/app/sparkinteractives-story-book/id1615127097](https://play.google.com/store/apps/details?id=com.wujason.playguessr"
