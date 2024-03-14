@@ -1,0 +1,213 @@
+---
+layout: default
+---
+
+<section class="wrapper bg-soft-primary">
+    <div class="container pt-10  pt-md-14  text-center">
+      <div class="row">
+        <div class="col-md-10 col-lg-8 col-xl-8 col-xxl-6 mx-auto mb-13" data-cues="slideInDown"
+          data-group="page-title">
+          <h1 class="display-1 mb-4">{{ site.data.summercamp[page.locale].summer.header }}</h1>
+          <p class="lead fs-lg px-xl-12 px-xxl-6 mb-7">{{ site.data.summercamp[page.locale].summer.lead }}</p>
+        </div>
+        <!-- /column -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /section -->
+
+  <section class="wrapper bg-light">
+    <div class="container pt-10 pb-19 pt-md-14 pb-md-20 text-center">
+      <div class="row card p-4 overflow-auto" id="camp-registration-grid">
+        <div class="d-flex justify-content-center">
+          <div id="formSpinner" class="spinner-border text-navy align-self-center" role="status"
+            style="width: 3rem; height: 3rem; display: none;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /section -->
+
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content p-0">
+        <div class="modal-header d-flex justify-content-center p-4">
+          <h5 class="modal-title text-center fs-28" id="myModalLabel">{{ site.data.summercamp[page.locale].summer.modal }}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <iframe id="modalIframe" src="" frameborder="0" width="100%" height="500"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      // Function to handle modal show event
+      $('#myModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget); // Button that triggered the modal
+        var url = button.attr('href'); // Get the URL from the href attribute
+        var iframe = $(this).find('#modalIframe');
+        iframe.attr('src', url); // Set the src attribute of the iframe
+      });
+
+      $('#formSpinner').css("display", "block");
+      // Function to fetch JSON data and populate grid
+      fetchJSONData()
+        .then(function (datesData, coursesData) {
+          $('#formSpinner').css("display", "none");
+          populateGrid(datesData[0], coursesData[0]);
+        })
+        .catch(function (error) {
+          $('#formSpinner').css("display", "none");
+          alert('Error:', error);
+          console.error('Error fetching JSON data:', error);
+        });
+    });
+
+    // Function to fetch JSON data
+    function fetchJSONData() {
+      return $.when(
+        $.getJSON('/assets/dates.json'),
+        $.getJSON('/assets/courses.json')
+      );
+    }
+
+    // Function to populate the grid
+    function populateGrid(datesData, coursesData) {
+      var $grid = $('#camp-registration-grid');
+
+      // Sort the date ranges in chronological order
+      var dateRanges = Object.keys(datesData).sort(function (a, b) {
+        return new Date(datesData[a]) - new Date(datesData[b]);
+      });
+
+      // Create the header row with Courses and the actual dates (desktop only)
+      var $headerRow = $('<div class="row mb-4 d-none d-md-flex flex-nowrap">');
+      $headerRow.append('<div class="col-4"><h3>Courses</h3></div>'); // Add Courses column header
+      dateRanges.forEach(function (week) {
+        $headerRow.append('<div class="col-3"><h3 class="fs-16">' + datesData[week] + '</h3></div>'); // Add date column headers
+      });
+      $grid.append($headerRow);
+
+      // Get all the unique courses
+      var uniqueCourses = new Set();
+      var courseInfoMap = new Map();
+
+      Object.values(coursesData).forEach(function (locationCourses) {
+        locationCourses.forEach(function (course) {
+          uniqueCourses.add(course.Name);
+          courseInfoMap.set(course.Name, course.CourseInfo);
+
+          console.log(courseInfoMap)
+        });
+      });
+
+      // Loop through each unique course
+      uniqueCourses.forEach(function (courseName) {
+        var $courseRow = $('<div class="row d-none d-md-flex flex-md-row mb-5 flex-nowrap">');
+        var $courseCol = $('<div class="col-md-4 d-none d-md-block card p-0">');
+        var $courseTitleDesktop = $('<div class="">').append('<h4>' + courseName + '</h4>');
+        var $learnMoreBtnDesktop = $('<div class="d-flex justify-content-center">').append('<a href="' + courseInfoMap.get(courseName) + '" class="btn btn-primary course-info mb-3" data-bs-toggle="modal" data-bs-target="#myModal">Learn More</a>');
+
+        // Image element for courseCol
+        createImageElement(courseInfoMap.get(courseName), $courseCol);
+
+        $courseCol.append($courseTitleDesktop, $learnMoreBtnDesktop);
+        $courseRow.append($courseCol);
+
+        var $courseCard = $('<div class="card mb-3 d-md-none p-0">');
+        var $courseHeader = $('<div class="">').append('<h4>' + courseName + '</h4>');
+        var $courseBody = $('<div class="card-body">');
+        var $learnMoreBtn = $('<a href="' + courseInfoMap.get(courseName) + '" class="btn btn-primary course-info mb-3" data-bs-toggle="modal" data-bs-target="#myModal">Learn More</a>');
+        var $viewDatesBtn = $('<button class="btn btn-secondary view-dates mb-3">View Dates</button>');
+        var $datesList = $('<ul class="list-group d-none">');
+
+        // Image element for courseCard
+        createImageElement(courseInfoMap.get(courseName), $courseHeader);
+
+        // Loop through each week
+        dateRanges.forEach(function (week) {
+          var $weekCol = $('<div class="col-3 d-none d-md-block"></div>');
+          var courseTimes = new Set();
+          var courseLocations = new Set();
+          let weekIndex;
+          let registrationLink;
+
+          // Check if the course is scheduled for the current week
+          Object.entries(coursesData).forEach(function ([location, locationCourses]) {
+            var matchingCourse = locationCourses.find(function (course) {
+              return course.Name === courseName && course.Dates.includes(week);
+            });
+            if (matchingCourse) {
+              weekIndex = matchingCourse.Dates.indexOf(week);
+
+              // Get the registration link for the current course and week
+              registrationLink = matchingCourse["Registration Links"][weekIndex];
+              courseTimes.add(matchingCourse.Time);
+              courseLocations.add(location);
+            }
+          });
+
+          if (courseTimes.size > 0) {
+
+            var $courseInfo = $('<div class="card h-100">' +
+              '<div class="card-body d-flex flex-column justify-content-center">' +
+              '<p class="card-text course-location mb-0 fs-16">' + Array.from(courseLocations).join(', ') + '</p>' +
+              '<a href="' + registrationLink + '" class="btn btn-success w-100 mt-4" target="_blank" >Register</a>' +
+              '</div>' +
+              '</div>');
+            $weekCol.append($courseInfo);
+
+            var $dateItem = $('<li class="list-group-item">').append(
+              '<strong>' + datesData[week] + '</strong><br>' +
+              'Location: ' + Array.from(courseLocations).join(', ') + '<br>' +
+              '<a href="' + registrationLink + '" class="btn btn-success mt-2" target="_blank" >Register</a>'
+            );
+            $datesList.append($dateItem);
+          } else {
+            $weekCol.append('<div class="card bg-gray h-100">' +
+              '<div class="card-body">' +
+              '</div>' +
+              '</div>');
+          }
+
+          $courseRow.append($weekCol);
+        });
+
+        $courseBody.append($learnMoreBtn, $viewDatesBtn, $datesList);
+        $courseCard.append($courseHeader, $courseBody);
+        $grid.append($courseRow, $courseCard);
+
+        // Toggle dates list on View Dates button click in mobile view
+        $viewDatesBtn.on('click', function () {
+          $datesList.toggleClass('d-none');
+        });
+      });
+    }
+
+    function createImageElement(url, $container) {
+      // Send a GET request to the URL to get the HTML content
+      $.get(url, function (data) {
+        // Parse the HTML string into a jQuery object
+        var $html = $($.parseHTML(data));
+
+        // Find the first non-SVG image element directly in the parsed HTML
+        var $image = $html.find('img:not([src$=".svg"])').first();
+
+        // If a non-SVG image is found, create the image element
+        if ($image.length) {
+          var imageUrl = new URL($image.attr('src'), url).href;
+          var $imageElement = $('<img class="card-img-top">').attr('src', imageUrl);
+          $container.prepend($imageElement);
+        }
+      });
+    }
+  </script>
