@@ -20,7 +20,7 @@ layout: default
 
   <section class="wrapper bg-light">
     <div class="container pt-10 pb-19 pt-md-14 pb-md-20 text-center">
-      <div class="row card p-4 overflow-auto" id="camp-registration-grid">
+      <div class="row card p-2 overflow-auto flex-row justify-content-center" id="camp-registration-grid">
         <div class="d-flex justify-content-center">
           <div id="formSpinner" class="spinner-border text-navy align-self-center" role="status"
             style="width: 3rem; height: 3rem; display: none;">
@@ -90,10 +90,10 @@ layout: default
       });
 
       // Create the header row with Courses and the actual dates (desktop only)
-      var $headerRow = $('<div class="row mb-4 d-none d-md-flex flex-nowrap">');
-      $headerRow.append('<div class="col-4"><h3>Courses</h3></div>'); // Add Courses column header
+      var $headerRow = $('<div class="row mb-2 d-none d-md-flex flex-nowrap flex-row align-items-center">');
+      $headerRow.append('<div class="col-1"><h5>Courses</h5></div>'); // Add Courses column header
       dateRanges.forEach(function (week) {
-        $headerRow.append('<div class="col-3"><h3 class="fs-16">' + datesData[week] + '</h3></div>'); // Add date column headers
+        $headerRow.append('<div class="col"><h3 class="fs-12">' + datesData[week] + '</h3></div>'); // Add date column headers
       });
       $grid.append($headerRow);
 
@@ -112,10 +112,10 @@ layout: default
 
       // Loop through each unique course
       uniqueCourses.forEach(function (courseName) {
-        var $courseRow = $('<div class="row d-none d-md-flex flex-md-row mb-5 flex-nowrap">');
-        var $courseCol = $('<div class="col-md-4 d-none d-md-block card p-0">');
-        var $courseTitleDesktop = $('<div class="">').append('<h4>' + courseName + '</h4>');
-        var $learnMoreBtnDesktop = $('<div class="d-flex justify-content-center">').append('<a href="' + courseInfoMap.get(courseName) + '" class="btn btn-primary course-info mb-3" data-bs-toggle="modal" data-bs-target="#myModal">Learn More</a>');
+        var $courseRow = $('<div class="row d-none bg-soft-navy p-2 d-md-flex flex-md-row mb-5 flex-nowrap rounded">');
+        var $courseCol = $('<div class="col-1 d-none d-md-block card p-0">');
+        var $courseTitleDesktop = $('<div class="">').append('<h4 class="fs-16 my-2">' + courseName + '</h4>');
+        var $learnMoreBtnDesktop = $('<div class="d-flex justify-content-center">').append('<a href="' + courseInfoMap.get(courseName) + '" class="btn btn-navy course-info mb-3 p-1 fs-12" data-bs-toggle="modal" data-bs-target="#myModal">Learn More</a>');
 
         // Image element for courseCol
         createImageElement(courseInfoMap.get(courseName), $courseCol);
@@ -124,9 +124,9 @@ layout: default
         $courseRow.append($courseCol);
 
         var $courseCard = $('<div class="card mb-3 d-md-none p-0">');
-        var $courseHeader = $('<div class="">').append('<h4>' + courseName + '</h4>');
-        var $courseBody = $('<div class="card-body">');
-        var $learnMoreBtn = $('<a href="' + courseInfoMap.get(courseName) + '" class="btn btn-primary course-info mb-3" data-bs-toggle="modal" data-bs-target="#myModal">Learn More</a>');
+        var $courseHeader = $('<div class="">').append('<h4 class="mt-2">' + courseName + '</h4>');
+        var $courseBody = $('<div class="card-body p-2">');
+        var $learnMoreBtn = $('<a href="' + courseInfoMap.get(courseName) + '" class="btn btn-navy course-info mb-3 me-3" data-bs-toggle="modal" data-bs-target="#myModal">Learn More</a>');
         var $viewDatesBtn = $('<button class="btn btn-secondary view-dates mb-3">View Dates</button>');
         var $datesList = $('<ul class="list-group d-none">');
 
@@ -135,7 +135,7 @@ layout: default
 
         // Loop through each week
         dateRanges.forEach(function (week) {
-          var $weekCol = $('<div class="col-3 d-none d-md-block"></div>');
+          var $weekCol = $('<div class="col d-none d-md-flex flex-column justify-content-center"></div>');
           var courseTimes = new Set();
           var courseLocations = new Set();
           let weekIndex;
@@ -158,10 +158,10 @@ layout: default
 
           if (courseTimes.size > 0) {
 
-            var $courseInfo = $('<div class="card h-100">' +
-              '<div class="card-body d-flex flex-column justify-content-center">' +
-              '<p class="card-text course-location mb-0 fs-16">' + Array.from(courseLocations).join(', ') + '</p>' +
-              '<a href="' + registrationLink + '" class="btn btn-success w-100 mt-4" target="_blank" >Register</a>' +
+            var $courseInfo = $('<div class="card" style="min-height:4rem">' +
+              '<div class="card-body d-flex flex-column justify-content-center p-1">' +
+              '<p class="card-text course-location mb-0 fs-10">' + Array.from(courseLocations).join(', ') + '</p>' +
+              '<a href="' + registrationLink + '" class="btn btn-primary w-100 mt-2 p-1 fs-10" target="_blank" >Register</a>' +
               '</div>' +
               '</div>');
             $weekCol.append($courseInfo);
@@ -169,11 +169,11 @@ layout: default
             var $dateItem = $('<li class="list-group-item">').append(
               '<strong>' + datesData[week] + '</strong><br>' +
               'Location: ' + Array.from(courseLocations).join(', ') + '<br>' +
-              '<a href="' + registrationLink + '" class="btn btn-success mt-2" target="_blank" >Register</a>'
+              '<a href="' + registrationLink + '" class="btn btn-primary mt-2" target="_blank" >Register</a>'
             );
             $datesList.append($dateItem);
           } else {
-            $weekCol.append('<div class="card bg-gray h-100">' +
+            $weekCol.append('<div class="card bg-pale-navy">' +
               '<div class="card-body">' +
               '</div>' +
               '</div>');
@@ -205,9 +205,10 @@ layout: default
         // If a non-SVG image is found, create the image element
         if ($image.length) {
           var imageUrl = new URL($image.attr('src'), url).href;
-          var $imageElement = $('<img class="card-img-top">').attr('src', imageUrl);
+          var $imageElement = $('<img class="card-img-top rounded-top rounded-0">').attr('src', imageUrl);
           $container.prepend($imageElement);
         }
       });
     }
+
   </script>
