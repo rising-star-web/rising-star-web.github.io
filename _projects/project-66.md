@@ -3,7 +3,7 @@ layout: student_project_detail
 
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/驾车.png"
-pagePostDate: “1st March 2024"
+pagePostDate: 1st March 2024
 studentName: "Charles"
 projectName: "Charles' Startup: Safe Driving Games"
 projectCategory: "APP DEVELOPMENT"
