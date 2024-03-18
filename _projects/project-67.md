@@ -3,7 +3,7 @@ layout: student_project_detail
 
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/WeChatce614f5fde2e6e4397eac023d7f6778f.jpg"
-pagePostDate: “4nd March 2024"
+pagePostDate: 4nd March 2024
 studentName: "Yanbo"
 projectName: "Coding for Passion: A Smart Fishing App"
 projectCategory: "APP DEVELOPMENT"
