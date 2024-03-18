@@ -3,7 +3,7 @@ layout: student_project_detail
 
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/足球.png"
-pagePostDate: “12 March 2024"
+pagePostDate: 12 March 2024
 studentName: "Jason"
 projectName: "Jason Independently Develops A Football Data Tactics App"
 projectCategory: "APP DEVELOPMENT"
