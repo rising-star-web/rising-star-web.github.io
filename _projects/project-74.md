@@ -16,5 +16,5 @@ bodyText2: "Nicky's work extends far beyond constructing a prototype. His projec
 projectURL: "https://www.google.com/"
 awardsDesc: "Nicky Robotic Arm, life Convenience"
 contentImage: "/img/updated/projects/WeChatfc0afa569ca274e292c374206387d1d6.jpg"
-contentImage2: "/img/updated/projects/截屏2024-03-18 16.12.09.png
+contentImage2: "/img/updated/projects/截屏2024-03-18 16.12.09.png"
 ---
