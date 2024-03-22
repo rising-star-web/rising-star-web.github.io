@@ -3,7 +3,7 @@ layout: student_project_detail
 
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/WeChata7680271206d01d168cff345b65355b7.jpg"
-pagePostDate: “13 March 2024"
+pagePostDate: 13 March 2024
 studentName: "Aaron"
 projectName: "Aaron Boosts Family Business Profits With AI Data"
 projectCategory: "APP DEVELOPMENT"

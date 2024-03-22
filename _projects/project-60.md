@@ -3,7 +3,7 @@ layout: student_project_detail
 
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/WeChat61792e314cadbdc0b1250d67023aaa12.jpg"
-pagePostDate: “13 Feb 2024"
+pagePostDate: 13 Feb 2024
 studentName: "John & Jerry"
 projectName: "John and Jerry's Win Brightens Paths For The Visually Impaired"
 projectCategory: "APP DEVELOPMENT"

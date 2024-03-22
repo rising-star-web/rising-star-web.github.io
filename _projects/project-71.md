@@ -3,7 +3,7 @@ layout: student_project_detail
 
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/截屏2024-03-13 09.58.45.png"
-pagePostDate: “14 March 2024"
+pagePostDate: 14 March 2024
 studentName: "Kaitlyn"
 projectName: "Kaitlyn Creates A Custom Makeup Suggestion App"
 projectCategory: "APP DEVELOPMENT"

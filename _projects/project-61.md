@@ -3,7 +3,7 @@ layout: student_project_detail
 
 [//]: # (Project Card)
 coverImage: "/img/updated/WeChat34b3165a66c211a851b108ae59057e2d.jpg"
-pagePostDate: “13 Feb 2024"
+pagePostDate: 13 Feb 2024
 studentName: "Louis"
 projectName: "CAC Champion, Louis Document Editor"
 projectCategory: "APP DEVELOPMENT"
