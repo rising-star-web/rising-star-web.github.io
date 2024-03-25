@@ -10,11 +10,11 @@ projectCategory: "APP DEVELOPMENT"
 projectDesc: "Admitted to Carnegie Mellon University Tepper School"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "Nicky Robotic Arm, life Convenience"
-bodyText1: "Nicky selected a six-axis servo robotic arm prototype and, under the guidance of Coding Mind, brought it to life by controlling it with Python code through Jupyter Notebook. This created a robotic arm that helps people more easily reach and grab items in their homes."
-bodyText2: "Nicky's work extends far beyond constructing a prototype. His project serves as a bridge to freedom and independent living, providing those with mobility issues with a more convenient home environment. This technology could transform the way they interact with the world."
-projectURL: "https://www.google.com/"
-awardsDesc: "Nicky Robotic Arm, life Convenience"
-contentImage: "/img/updated/projects/WeChatfc0afa569ca274e292c374206387d1d6.jpg"
-contentImage2: "/img/updated/projects/截屏2024-03-18 16.12.09.png"
+headerTitle: "Alex Finance App Wins at CMU Tepper College"
+bodyText1: "Alex created an app leveraging big data and machine learning to forecast stock market movements, helping ordinary investors understand the impact of various factors such as economy, politics, and regulation."
+bodyText2: "The app combines technologies like Android Studio, Python, Google Firebase, and AWS cloud computing for precision and ease of use. By processing extensive social media data with advanced algorithms, Alex's team has surpassed traditional trading approaches."
+projectURL: "https://apps.apple.com/us/app/stock-forecaster/id1621803400"
+awardsDesc: "Admitted to Carnegie Mellon University's Tepper School of Business"
+contentImage: "/img/updated/projects/54e8d368e50c1b105870bf2cd5d704.jpg"
+contentImage2: "/img/updated/projects/7250af6c48546209277ffb9863422b.jpg"
 ---
