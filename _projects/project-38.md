@@ -7,7 +7,7 @@ pagePostDate: "9 Jan 2024"
 studentName: "Annie"
 projectName: "Developed 'HealthYou', Admitted to JHU"
 projectCategory: "App Development"
-projectDesc: "admitted to Johns Hopkins."
+projectDesc: "Admitted to Johns Hopkins."
 
 [//]: # (Project Page/Showcase)
 headerTitle: "Developed 'HealthYou', Admitted to JHU"
