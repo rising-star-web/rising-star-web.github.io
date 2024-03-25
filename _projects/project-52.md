@@ -7,7 +7,7 @@ pagePostDate: "23 Jan 2024"
 studentName: "Graduate Student"
 projectName: "Treasure APP for Alcohol Lovers"
 projectCategory: "App Development"
-projectDesc: "help people identify the type of alcohol"
+projectDesc: "Help people identify the type of alcohol"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "Treasure APP for Alcohol lovers"
