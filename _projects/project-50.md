@@ -7,7 +7,7 @@ pagePostDate: "19 Jan 2024"
 studentName: "Justin"
 projectName: "Justin Card Game Startup accepted by NYU"
 projectCategory: "App Development"
-projectDesc: "admitted to New York University."
+projectDesc: "Admitted to New York University."
 
 [//]: # (Project Page/Showcase)
 headerTitle: "Justin Card Game Startup accepted by NYU"
