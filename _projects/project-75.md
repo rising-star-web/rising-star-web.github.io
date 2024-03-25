@@ -7,7 +7,7 @@ pagePostDate: "25 Mar 2024"
 studentName: "Alex
 projectName: "Alex's Finance App Wins at CMU Tepper School"
 projectCategory: "APP DEVELOPMENT"
-projectDesc: "Admitted to Carnegie Mellon University's Tepper School"
+projectDesc: "Admitted to Carnegie Mellon University Tepper School"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "Alex's Finance App Wins at CMU Tepper College"
