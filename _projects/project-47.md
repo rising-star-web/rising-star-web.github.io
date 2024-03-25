@@ -7,7 +7,7 @@ pagePostDate: "11 Jan 2024"
 studentName: "Jasmine"
 projectName: "Trial Recruitment Project Impresses MIT"
 projectCategory: "App Development"
-projectDesc: "admitted to Massachusetts Institute of Technology."
+projectDesc: "Admitted to Massachusetts Institute of Technology."
 
 [//]: # (Project Page/Showcase)
 headerTitle: "Trial Recruitment Project Impresses MIT"
