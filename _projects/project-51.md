@@ -5,7 +5,7 @@ layout: student_project_detail
 coverImage: "/img/updated/Brown and Beige Illustrated Sugar Kitchen Label.jpg"
 pagePostDate: "22 Jan 2024"
 studentName: "Julia"
-projectName: "Julia's sugar control got Cornell appreciation"
+projectName: "Julia's Sugar Control Got Cornell Appreciation"
 projectCategory: "App Development"
 projectDesc: "admitted to Cornell University."
 
