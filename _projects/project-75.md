@@ -10,7 +10,7 @@ projectCategory: "APP DEVELOPMENT"
 projectDesc: "Admitted to Carnegie Mellon University Tepper School"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "Alex's Finance App Wins at CMU Tepper College"
+headerTitle: "Alex Finance App Wins at CMU Tepper College"
 bodyText1: "Alex created an app leveraging big data and machine learning to forecast stock market movements, helping ordinary investors understand the impact of various factors such as economy, politics, and regulation."
 bodyText2: "The app combines technologies like Android Studio, Python, Google Firebase, and AWS cloud computing for precision and ease of use. By processing extensive social media data with advanced algorithms, Alex's team has surpassed traditional trading approaches."
 projectURL: "https://apps.apple.com/us/app/stock-forecaster/id1621803400"
