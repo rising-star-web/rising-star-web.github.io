@@ -3,7 +3,7 @@ layout: student_project_detail
 
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/WeChata2118ed7fc514c5bbf925b83558c14ba.jpg"
-pagePostDate: "25 Mar 2024"
+pagePostDate: "25 March 2024"
 studentName: "Alex
 projectName: "Alex Finance App Wins at CMU Tepper School"
 projectCategory: "APP DEVELOPMENT"
