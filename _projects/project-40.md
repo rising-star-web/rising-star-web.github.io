@@ -7,7 +7,7 @@ pagePostDate: "15 Jan 2024"
 studentName: "Eiffel"
 projectName: "Ivy League Favors: Eiffel's Coupon APP"
 projectCategory: "App Development"
-projectDesc: "admitted to Cornell University."
+projectDesc: "Admitted to Cornell University."
 
 [//]: # (Project Page/Showcase)
 headerTitle: "Ivy League Favors: Eiffel's Coupon APP"
