@@ -7,7 +7,7 @@ pagePostDate: "22 Jan 2024"
 studentName: "Joshua"
 projectName: "Joshua's smart control system amazed Duke"
 projectCategory: "App Development"
-projectDesc: "admitted to Duck University."
+projectDesc: "Admitted to Duck University."
 
 [//]: # (Project Page/Showcase)
 headerTitle: "Joshua's smart control system amazed Duke"
