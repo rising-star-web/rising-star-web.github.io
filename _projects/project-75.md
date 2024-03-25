@@ -5,7 +5,7 @@ layout: student_project_detail
 coverImage: "/img/updated/projects/WeChata2118ed7fc514c5bbf925b83558c14ba.jpg"
 pagePostDate: "25 Mar 2024"
 studentName: "Alex
-projectName: "Alex's Finance App Wins at CMU Tepper School"
+projectName: "Alex Finance App Wins at CMU Tepper School"
 projectCategory: "APP DEVELOPMENT"
 projectDesc: "Admitted to Carnegie Mellon University Tepper School"
 
