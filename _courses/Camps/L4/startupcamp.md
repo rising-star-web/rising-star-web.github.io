@@ -1,13 +1,13 @@
 ---
 layout: course_detail
-courseId: "cs607"
+courseId: "SC13"
 courseIconURL: "TBD - not used yet"
 price: "TBD - not used yet"
 extra: "TBD - not used yet"
-name: "Technology Innovation and Entrepreneurship: From Idea to Prototype"
+name: "Tech Startups 101: Young Entrepreneurs' Journey"
 coverImageURL: "img/updated/enrichment/startup.jpg"
-gradeLevel: "L5 Competitive Programming"
-pathway: "Summer Camp"
+gradeLevel: "L4 Tech Startups"
+pathway: "Winter Camp"
 skillLevel: "Advanced"
 shortDescription : "Startup Summer Camp"
 description: "Our Science, Technology, Innovation, and Entrepreneurship Summer Camp aims to guide students from start to finish. Students will learn the process by which many startup companies get their ideas, from identifying the problem's points, to the whole process of technology development, and lastly finalizing an entrepreneurial prototype. This camp course will allow students to create their projects and be fully prepared to participate in the competition!"
