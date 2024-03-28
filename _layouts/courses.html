@@ -113,6 +113,12 @@ layout: default
                   </div>
                 </li>
                 <li class="dropdown-item">
+                  <div class="form-check">
+                    <input class="form-check-input filter-item" type="checkbox" value="Summer" id="flexCheckDefault">
+                    <label class="form-check-label"  for="flexCheckDefault"> {{ site.data.courses[page.locale].courses.SummerFilter }} </label>
+                  </div>
+                </li>
+                <li class="dropdown-item">
                   <span id="clear-filters" role="button"><span class="fas fa-times-circle"></span>{{ site.data.courses[page.locale].filter.clearFilters }}</span>
                 </li>
               </ul>
@@ -146,6 +152,8 @@ layout: default
                   {%- assign levelFilter = 'Level4' %}
               {%- when site.data.courses[page.locale].courses.L5Filter -%}
                   {%- assign levelFilter = 'Level5' %}
+              {%- when site.data.courses[page.locale].courses.SummerFilter -%}
+                  {%- assign levelFilter = 'Summer' %}
               {%- else -%}
                   {%- assign levelFilter = course.gradeLevel -%}
           {%- endcase -%}

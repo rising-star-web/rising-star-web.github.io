@@ -19,6 +19,7 @@ courses:
   L3Filter: "L3 Intermediate Programming"
   L4Filter: "L4 Applied Programming"
   L5Filter: "L5 Competitive Programming"
+  SummerFilter: "Summer Camps"
   learnMore: "Learn More"
 
 filter:
