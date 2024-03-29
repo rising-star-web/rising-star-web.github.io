@@ -66,4 +66,3 @@ order: 5
         </div>
     </div>
     </div>
-<script type="text/javascript" src="https://form.jotform.com/jsform/240815804732152"></script>
