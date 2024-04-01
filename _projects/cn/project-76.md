@@ -5,7 +5,7 @@ layout: student_project_detail
 coverImage: "/img/updated/projects/WeChat9b80fa6fa79b21454308bc717c2b4fda.jpg"
 pagePostDate: "2024年3月25日"
 studentName: "Kerry"
-projectName: "KerryAPP下载破千斩获西点军校"
+projectName: "Kerry气候保护项目斩获西点军校"
 projectCategory: "App Development"
 projectDesc: "斩获西点军校录取"
 
