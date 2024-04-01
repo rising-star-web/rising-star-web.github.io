@@ -11,7 +11,7 @@ projectDesc: "Admitted to Carnegie Mellon University"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "Carina Pro Bono Story project Won CMU"
-bodyText1: "Carina, with her public welfare project "The Drawing Plan," an application centered on art therapy aimed at assisting children's mental health, successfully garnered the attention of Carnegie Mellon University."
+bodyText1: "Carina, with her public welfare project The Drawing Plan, an application centered on art therapy aimed at assisting children's mental health, successfully garnered the attention of Carnegie Mellon University."
 bodyText2: "Utilizing Unity and 3D modeling as her canvas and brush, Carina faced challenges from the outset: How to design an application that is both therapeutically effective and easy to use for children with special needs? From concept to reality, she gradually transformed The Drawing Plan into existence."
 projectURL: "https://cacca-z.itch.io/thedrawingplan"
 awardsDesc: "Admitted to Carnegie Mellon University"
