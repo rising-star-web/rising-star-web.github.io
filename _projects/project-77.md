@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/_projects/WeChat78d2b66e4946e357dbfa691f04f51eae.jpg"
+coverImage: "/img/updated/projects/WeChat78d2b66e4946e357dbfa691f04f51eae.jpg"
 pagePostDate: 1 April 2024
 studentName: "Carina"
 projectName: "Carina Pro Bono Story project Won CMU"
