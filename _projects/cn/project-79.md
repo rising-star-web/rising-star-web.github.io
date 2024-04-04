@@ -11,7 +11,7 @@ projectDesc: "斩获约翰霍普金斯大学录取"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "Serene演奏志愿APP斩获JHU"
-bodyText1: "Serene因开发助力音乐家志愿服务的app "Vusic"，成功跻身约翰霍普金斯大学！"
+bodyText1: "Serene因开发助力音乐家志愿服务的app Vusic，成功跻身约翰霍普金斯大学！"
 bodyText2: "Serene意识到音乐家找寻志愿演出机会的挑战，并以此启发创作了 "Vusic" - 一个集结所有志愿活动信息的移动应用，让音乐家们轻松找到和参与演出，并关注老年人的娱乐生活。"
 URLDescription: "链接到项目"
 projectURL: "https://play.google.com/store/apps/details?id=serene.com.volunteer_app&pli=1"
