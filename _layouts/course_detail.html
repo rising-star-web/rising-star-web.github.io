@@ -59,7 +59,7 @@ layout: default
         <div class="container py-8 py-md-8 mt-12">
           <div class="row">
             <div class="col-xl-10 mx-auto">
-              <div class="row align-items-center counter-wrapper gy-6 text-center">
+              <div class="row align-items-center justify-content-center counter-wrapper gy-6 text-center">
                 <div class="col-md-3">
                   <i class="uil uil-lightbulb fs-25 text-primary"></i>
                   <h4 class="fs-md">{{ site.data.courses[page.locale].coursedetail.levelTag }}</h4>
@@ -77,6 +77,7 @@ layout: default
                   <h4 class="fs-md">{{ site.data.courses[page.locale].coursedetail.skillTag }}</h4>
                   <p>{{page.skillLevel}}</p>
                 </div>
+                {% unless page.gradeLevel == "Summer Camp" %}
                 <!--/column -->
                 <div class="col-md-3">
                   <i class="uil uil-users-alt fs-25 text-primary"></i>
@@ -84,6 +85,7 @@ layout: default
                   <p>{{ site.data.courses[page.locale].coursedetail.classSize}}</p>
                 </div>
                 <!--/column -->
+                {% endunless %}
               </div>
               <!--/.row -->
             </div>
@@ -95,7 +97,7 @@ layout: default
 
       <!-- Breakdown/Pricing -->
       <div class="mt-12">
-        <div class="row d-flex gx-12 justify-content-between"> 
+        <div class="row d-flex gx-md-12 justify-content-between"> 
 
           {% for promotion in page.promotions %}
           {% assign value = forloop.index | modulo:2 %}
@@ -106,7 +108,7 @@ layout: default
             {% endif %}
           {% endfor %}
 
-          <div class="col-xl-6 mb-14">
+          <div class="col mb-14">
             <div class="card shadow-lg">
               <div class="card-body">
                 <h3 class="display-4 mb-4">{{ site.data.courses[page.locale].coursedetail.learningObjectives}}</h3>
@@ -123,8 +125,9 @@ layout: default
             </div>
           </div>
 
+          {% unless page.gradeLevel == "Summer Camp" %}
             <!-- Pricing / Schedule -->
-            <div class="col-xl-6 mb-14">
+            <div class="col mb-14">
               <div class="card bg-soft-primary">
                 <div class="card-body">
                   <h3>{{ site.data.courses[page.locale].coursedetail.startingAt}}</h3>
@@ -156,6 +159,7 @@ layout: default
 
             </div>
             <!-- Pricing / Schedule -->
+            {% endunless %}
 
         </div>
       </div>
