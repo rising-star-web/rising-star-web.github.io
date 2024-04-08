@@ -17,3 +17,4 @@ projectURL: "https://imnotnate.itch.io/memexperiment"
 awardsDesc: "Admitted to University of Southern California"
 contentImage: "/img/updated/projects/图片1.png"
 contentImage2: "/img/updated/projects/图片2.png"
+---
