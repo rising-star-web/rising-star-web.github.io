@@ -10,7 +10,7 @@ projectCategory: "APP DEVELOPMENT"
 projectDesc: "Admitted to Johns Hopkins University"
 
 [//]: # (Project Page/Showcase)
-headerTitle: “Music Volunteer Performance App won JHU"
+headerTitle: Music Volunteer Performance App won JHU
 bodyText1: "Serene earned a spot at Johns Hopkins University with her app Vusic, designed to support musicians in finding volunteer performance opportunities!"
 bodyText2: "Recognizing the challenges musicians face in finding volunteer gigs, Serene was inspired to create Vusic - a mobile app that aggregates all-volunteer event information, making it easy for musicians to find and participate in performances, with a focus on entertaining the elderly."
 projectURL: "https://play.google.com/store/apps/details?id=serene.com.volunteer_app&pli=1"
