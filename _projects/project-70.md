@@ -10,7 +10,7 @@ projectCategory: "APP DEVELOPMENT"
 projectDesc: "Student excellent project presentation"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "Aaron Boosts Family Business Profits With AI Data"
+headerTitle: Aaron Boosts Family Business Profits With AI Data
 bodyText1: "Aaron designed a smart data analysis app using the R programming language and R Shiny web app, predicting the maintenance frequency for each product and calculating reasonable warranty service prices."
 bodyText2: "PlayGuessr stands out for including often-overlooked special offensive tactics like fake plays, field goal attempts, and quarterback kneels, which are rare but highly informative. Integrating these tactics into game strategies could significantly increase the chances of winning."
 projectURL: "https://www.google.com/"
