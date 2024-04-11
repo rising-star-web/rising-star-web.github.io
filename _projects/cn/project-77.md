@@ -16,6 +16,6 @@ bodyText2: "Carina利用Unity和3D建模作为她的画布和笔，开发之初C
 URLDescription: "链接到项目"
 projectURL: "https://cacca-z.itch.io/thedrawingplan"
 awardsDesc: "Carina儿童故事会项目斩获CMU！"
-contentImage: "/_projects/图片 1.png"
-contentImage2: "/_projects/截屏2024-03-28 17.16.25.png"
+contentImage: "/img/updated/projects/Carina现身解答公益项目如何跻身卡耐基梅隆_4_Coding_Minds_Academy_来自小红书网页版.jpg"
+contentImage2: "/img/updated/projects/Carina现身解答公益项目如何跻身卡耐基梅隆_3_Coding_Minds_Academy_来自小红书网页版.jpg"
 ---
