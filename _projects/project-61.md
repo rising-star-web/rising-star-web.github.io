@@ -10,7 +10,7 @@ projectCategory: "APP DEVELOPMENT"
 projectDesc: "Won The California District Championship In The Congressional Challenge"
 
 [//]: # (Project Page/Showcase)
-headerTitle:CAC Champion, Louis Document Editor
+headerTitle: CAC Champion, Louis Document Editor
 bodyText1: "Louis, attentive to the cumbersome nature of document editing, especially the inefficiency encountered with math and science documents, developed an editor named QuickQuill Editor. This tool embraces minimalism to master complexity."
 bodyText2: "QuickQuill Editor excelled in the Congressional App Challenge in California, winning first place and congressional praise, and will be showcased at the White House, recognizing Louis's innovation and problem-solving skills."
 projectURL: "https://www.google.com/"
