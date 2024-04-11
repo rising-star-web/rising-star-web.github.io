@@ -10,7 +10,7 @@ projectCategory: "APP DEVELOPMENT"
 projectDesc: "Student excellent project presentation"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "Kaitlyn Creates A Custom Makeup Suggestion App"
+headerTitle: Kaitlyn Creates A Custom Makeup Suggestion App
 bodyText1: "Kaitlyn was inspired by the undervalued power of color selection to enhance personal appeal. She crafted a user-friendly interface with Flutter, engineered the backend with Python, and integrated machine learning algorithms for precise analysis of skin tones and color undertones."
 bodyText2: "Her app is more than just a tool for boosting self-appreciation and confidence; it offers a personalized approach to style, encouraging self-expression and acceptance. It's an invaluable addition for anyone looking to elevate their self-esteem through informed color choices."
 projectURL: "https://play.google.com/store/apps/details?id=com.kaitlyn.tone_analyzer"
