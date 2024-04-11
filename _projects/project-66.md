@@ -10,7 +10,7 @@ projectCategory: "APP DEVELOPMENT"
 projectDesc: "Student excellent project presentation"
 
 [//]: # (Project Page/Showcase)
-headerTitle: Charles' Startup: Safe Driving Games
+headerTitle:Charles' Startup: Safe Driving Games
 bodyText1: "Charles used Unity's 3D modeling and C# programming tools to develop a simulation driving game called Safe Drive Test. The purpose of this game is to educate young people on safe driving to reduce traffic accidents."
 bodyText2: "Through innovation and perseverance, Charles has not only created an engaging game but also provided a risk-free learning environment, allowing young drivers to learn and practice in a virtual world."
 projectURL: "https://apps.apple.com/us/app/safe-drive-test/id1547907856"
