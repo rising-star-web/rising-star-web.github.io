@@ -15,6 +15,6 @@ bodyText1: "Carina, with her public welfare project The Drawing Plan, an applica
 bodyText2: "Utilizing Unity and 3D modeling as her canvas and brush, Carina faced challenges from the outset: How to design an application that is both therapeutically effective and easy to use for children with special needs? From concept to reality, she gradually transformed The Drawing Plan into existence."
 projectURL: "https://cacca-z.itch.io/thedrawingplan"
 awardsDesc: "Admitted to Carnegie Mellon University"
-contentImage: "/_projects/图片 1.png"
-contentImage2: "/_projects/截屏2024-03-28 17.16.25.png"
+contentImage: "/img/updated/projects/Carina现身解答公益项目如何跻身卡耐基梅隆_3_Coding_Minds_Academy_来自小红书网页版.jpg"
+contentImage2: "/img/updated/projects/Carina现身解答公益项目如何跻身卡耐基梅隆_3_Coding_Minds_Academy_来自小红书网页版.jpg"
 ---
