@@ -10,7 +10,7 @@ projectCategory: "App Development"
 projectDesc: "Won Congressional App Challenge"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "Blood Dialysis App Innovation Awarded CAC"
+headerTitle: Blood Dialysis App Innovation Awarded CAC
 bodyText1: "Recheal's app aims to assist blood dialysis patients in tracking their treatment. It's a blend of tech innovation and care, enhancing lives and advancing medical technology."
 bodyText2: "The app simplifies data tracking for patients, aiding in health recovery. It not only streamlines data logging but also analyzes it, helping patients and families better understand and engage in treatment."
 projectURL: "https://apps.apple.com/us/app/renal-dialysis/id6450286540/"
