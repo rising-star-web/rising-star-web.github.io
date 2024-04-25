@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "img/updated/projects/截屏2024-04-24 18.21.15.png"
+coverImage: "/img/updated/projects/截屏2024-04-24 18.21.15.png"
 pagePostDate: 26 April 2024
 studentName: "Yirina"
 projectName: "Yirina's Ice Skating Technique Analyzer Earns Dual Admission to UCB and CMU"
