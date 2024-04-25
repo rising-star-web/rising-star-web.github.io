@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "img/updated/projects/WeChat08ea8ea2920c4df4292bc4eab7421088.jpg"
+coverImage: "/img/updated/projects/WeChat08ea8ea2920c4df4292bc4eab7421088.jpg"
 pagePostDate: 25 April 2024
 studentName: "Alice"
 projectName: "Allergy Detection App Earns Admission to UCSD"
