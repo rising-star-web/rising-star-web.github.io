@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/updated/projects/WeChata8db866d30785a72632852532c868d94.jpg"
+coverImage: "/img/updated/projects/截屏2024-04-15 14.43.03.png"
 pagePostDate: "2024年4月19日"
 studentName: "Kevin"
 projectName: "网球技能提升APP斩获USC"
