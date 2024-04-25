@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/WeChat08ea8ea2920c4df4292bc4eab7421088.jpg"
+coverImage: "img/updated/projects/WeChat08ea8ea2920c4df4292bc4eab7421088.jpg"
 pagePostDate: "2024年4月25日"
 studentName: "Alice"
 projectName: "Alice开发过敏检测APP获UCSD录取"
