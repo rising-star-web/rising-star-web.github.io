@@ -7,7 +7,7 @@ pagePostDate: 26 April 2024
 studentName: "Yirina"
 projectName: "Yirina's Ice Skating Technique Analyzer Earns Dual Admission to UCB and CMU"
 projectCategory: "APP DEVELOPMENT"
-projectDesc: "Admitted to University of California at Berkeley and Carnegie Mellon University"
+projectDesc: "Admitted to the University of California at Berkeley and Carnegie Mellon University"
 
 [//]: # (Project Page/Showcase)
 headerTitle: Yirina's Ice Skating Technique Analyzer Earns Dual Admission to UCB and CMU
