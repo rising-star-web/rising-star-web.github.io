@@ -15,6 +15,6 @@ bodyText1: "The inspiration for Alice's app came from a personal family need! Li
 bodyText2: "The Allergy App aims to provide personalized allergy risk assessments. It uses environmental data, such as pollen counts, and personal factors like location, age, and health history, to inform users of their level of allergy risk, helping them understand potential allergic reactions before going outdoors."
 projectURL: "https://apps.apple.com/us/app/allergy-alert-app/id6462055726?platform=iphone"
 awardsDesc: "Admitted to University of California at San Diego"
-contentImage: "/img/updated/图片 2.jpg"
-contentImage2: "/img/updated/图片 1.png"
+contentImage: "/img/updated/projects/截屏2024-04-22 14.23.15.png"
+contentImage2: "/img/updated/projects/截屏2024-04-22 14.23.02.png"
 ---
