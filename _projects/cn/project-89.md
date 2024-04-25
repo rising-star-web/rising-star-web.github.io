@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "_projects/截屏2024-04-24 18.21.15.png"
+coverImage: "img/updated/projects/截屏2024-04-24 18.21.15.png"
 pagePostDate: "2024年4月26日"
 studentName: "Yirina"
 projectName: "Yirina冰上舞技分析获得UCB+CMU双录取！"
@@ -16,6 +16,6 @@ bodyText2: "她的项目运用了QTPY-ESP32微控制器、传感器板和SD卡�
 URLDescription: "链接到项目"
 projectURL: "https://yirinaw.itch.io/yirinas-skate-analyzer"
 awardsDesc: "Yirina冰上舞技分析获得UCB+CMU双录取！"
-contentImage: "/_projects/截屏2024-04-24 18.22.43.png"
-contentImage2: "/_projects/截屏2024-04-24 18.24.47.png"
+contentImage: "/img/updated/projects/截屏2024-04-24 18.22.43.png"
+contentImage2: "/img/updated/projects/截屏2024-04-24 18.24.47.png"
 ---
