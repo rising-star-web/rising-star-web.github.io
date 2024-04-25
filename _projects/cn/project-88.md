@@ -16,6 +16,6 @@ bodyText2: "Allergy App旨在提供个性化的过敏风险评估。它使用环
 URLDescription: "链接到项目"
 projectURL: "https://apps.apple.com/us/app/allergy-alert-app/id6462055726?platform=iphone"
 awardsDesc: "Alice开发过敏检测APP获UCSD录取"
-contentImage: "/img/updated/图片 2.jpg"
-contentImage2: "/img/updated/图片 1.png"
+contentImage: "/img/updated/projects/截屏2024-04-22 14.23.15.png"
+contentImage2: "/img/updated/projects/截屏2024-04-22 14.23.02.png"
 ---
