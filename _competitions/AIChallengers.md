@@ -9,7 +9,12 @@ competitionDesc: "AI Challengers is a global project-based competition that aims
 
 [//]: # (Competition Page/Showcase)
 contentImage: "/img/updated/projects/WeChatc808c0534b1d947adc94e2e00ceda08c.png"
-bodyText1: "
-The AI Challengers competition focuses on solving diverse challenges with cutting-edge AI technologies, attracting global participants from various backgrounds and cultures."
-bodyText2: "AI Challengers is a global competition leveraging advanced AI for data analysis, pattern recognition, and more, drawing diverse participants and featuring expert judges.This can improve students' skills and background, and help them apply to elite schools."
 ---
+
+## About AI Challengers
+
+The AI Challengers competition focuses on solving diverse challenges with cutting-edge AI technologies, attracting global participants from various backgrounds and cultures.
+
+### Competition Overview
+
+AI Challengers is a global competition leveraging advanced AI for data analysis, pattern recognition, and more, drawing diverse participants and featuring expert judges. This can improve students' skills and background, and help them apply to elite schools.

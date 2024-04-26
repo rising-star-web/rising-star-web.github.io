@@ -1,82 +1,93 @@
-
-{% assign parts  = page.url | split: '/' %}
+{% assign parts = page.url | split: '/' %}
 {% assign location_name = parts[1] %}
 
 {%- assign location_data = site.data.locations[location_name] -%}
 
 <header class="wrapper bg-gray">
-    <nav class="navbar navbar-expand-lg extended extended-alt navbar-light bg-white">
-      <div class="container flex-lg-column">
-        <div class="topbar d-flex flex-row w-100 justify-content-between align-items-center">
-            <div class="navbar-brand">
-                <a href="{{ site.data.nav[page.locale].nav.URL }}">
-                  <img  class="h-9" src="/assets/img/codingmindlogo.svg" alt="" />
-                </a>
-                <div class="hidden-xs col-sm-6 center-title">
-                    <div class="post-category mt-3 text-primary"><i class="uil uil-location-point me-1"></i> 
-                        {% assign locationText = location_name | replace: "-", " " | upcase %}
-                        {{ locationText }}
-                    </div>
-                </div>
-              </div>
-            <div class="navbar-other ms-auto">
-                <ul class="navbar-nav flex-row align-items-center">
-                    <li class="nav-item d-lg-none">
-                      <button class="hamburger offcanvas-nav-btn"><span></span></button>
-                    </li>
-                  </ul>
-                  <!-- /.navbar-nav -->
+  <nav class="navbar navbar-expand-lg extended extended-alt navbar-light bg-white">
+    <div class="container flex-lg-column">
+      <div class="topbar d-flex flex-row w-100 justify-content-between align-items-center">
+        <div class="navbar-brand">
+          <a href="{{ site.data.nav[page.locale].nav.URL }}">
+            <img class="h-9" src="/assets/img/codingmindlogo.svg" alt="" />
+          </a>
+          <div class="hidden-xs col-sm-6 center-title">
+            <div class="post-category mt-3 text-primary"><i class="uil uil-location-point me-1"></i>
+              {% assign locationText = location_name | replace: "-", " " | upcase %}
+              {{ locationText }}
             </div>
-            <!-- /.navbar-other -->
           </div>
-        <!-- /.d-flex -->
-        <div class="navbar-collapse-wrapper bg-custom4 d-flex flex-row align-items-center justify-content-between">
-          <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
-            <div class="offcanvas-header d-lg-none">
-              <h3 class="text-white fs-30 mb-0">Coding Mind</h3>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body d-flex flex-column h-100">
-              <ul class="navbar-nav">
-                {% assign pages = site.locations | where_exp: "item", "item.path contains location_name" | sort: "order" %}
+        </div>
+        <div class="navbar-other ms-auto">
+          <ul class="navbar-nav flex-row align-items-center">
+            <li class="nav-item d-lg-none">
+              <button class="hamburger offcanvas-nav-btn"><span></span></button>
+            </li>
+          </ul>
+          <!-- /.navbar-nav -->
+        </div>
+        <!-- /.navbar-other -->
+      </div>
+      <!-- /.d-flex -->
+      <div class="navbar-collapse-wrapper bg-custom4 d-flex flex-row align-items-center justify-content-between">
+        <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+          <div class="offcanvas-header d-lg-none">
+            <h3 class="text-white fs-30 mb-0">Coding Mind</h3>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body d-flex flex-column h-100">
+            <ul class="navbar-nav">
+              {% assign pages = site.locations | where_exp: "item", "item.path contains location_name" | sort: "order"
+              %}
 
-                {% for page in pages %}
-                    {% unless page.exclude == true %}
-                    <li class="nav-item"><a class="nav-link nav-text-solid" href="{{ page.url }}"> {{ page.title }}</a></li>
-                    {% endunless %}
-                {% endfor %}
-                <li class="nav-item">
-                    <a class="nav-link dropdown-item"href="https://www.sharemyworks.com" target="_blank">{{ site.data.nav[page.locale].nav.learningCenter }}</a>
-                  </li>
-                <li class="nav-item d-block d-lg-none">
-                  <a href="{{ location_data.paymenturl }}" target="_blank" class="nav-link nav-text-solid">Payment Portal</a>
-                </li>
-              </ul>
-              <!-- /.navbar-nav -->
-              <div class="offcanvas-footer d-lg-none">
-                <div>
-                  <a href="mailto:first.last@email.com" class="link-inverse">hello@codingmind.com</a>
-                  <br> (949) 236-7896 <br>
-                  <!-- /.social -->
-                </div>
-              </div>
-              <!-- /.offcanvas-footer -->
-            </div>
-          </div>
-          <!-- /.navbar-collapse -->
-          <div class="navbar-other w-100 d-flex">
-            <ul class="navbar-nav flex-row align-items-center ms-auto">
-                <li class="nav-item d-none d-lg-block">
-                    <a href="{{ location_data.paymenturl }}" target="_blank" class="btn btn-sm btn-navy rounded-pill">Payment Portal</a>
-                </li>
+              {% for page in pages %}
+              {% unless page.exclude == true %}
+              <li class="nav-item"><a class="nav-link nav-text-solid" href="{{ page.url }}">
+                  {% if page.title == "Summer Camp" %}
+                  <span class="underline-3 style-3 primary">{{ page.title }}</span>
+                  {% else %}
+                  {{ page.title }}
+                  {% endif %}
+                </a></li>
+              {% endunless %}
+              {% endfor %}
+              <li class="nav-item">
+                <a class="nav-link dropdown-item" href="https://www.sharemyworks.com" target="_blank">{{
+                  site.data.nav[page.locale].nav.learningCenter }}</a>
+              </li>
+              <li class="nav-item d-block d-lg-none">
+                <a href="{{ location_data.paymenturl }}" target="_blank" class="nav-link nav-text-solid">Payment
+                  Portal</a>
+              </li>
             </ul>
             <!-- /.navbar-nav -->
+            <div class="offcanvas-footer d-lg-none">
+              <div>
+                <a href="mailto:{{ location_data.contact.email}}" class="link-inverse">{{
+                  location_data.contact.email}}</a>
+                <br>{{ location_data.contact.phone}} <br>
+                <!-- /.social -->
+              </div>
+            </div>
+            <!-- /.offcanvas-footer -->
           </div>
-          <!-- /.navbar-other -->
         </div>
-        <!-- /.navbar-collapse-wrapper -->
+        <!-- /.navbar-collapse -->
+        <div class="navbar-other w-100 d-flex">
+          <ul class="navbar-nav flex-row align-items-center ms-auto">
+            <li class="nav-item d-none d-lg-block">
+              <a href="{{ location_data.paymenturl }}" target="_blank" class="btn btn-sm btn-navy rounded-pill">Payment
+                Portal</a>
+            </li>
+          </ul>
+          <!-- /.navbar-nav -->
+        </div>
+        <!-- /.navbar-other -->
       </div>
-      <!-- /.container -->
-    </nav>
-    <!-- /.navbar -->
-  </header>
+      <!-- /.navbar-collapse-wrapper -->
+    </div>
+    <!-- /.container -->
+  </nav>
+  <!-- /.navbar -->
+</header>

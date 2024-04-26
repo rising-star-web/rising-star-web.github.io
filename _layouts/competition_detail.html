@@ -2,73 +2,68 @@
 layout: default
 ---
 <section class="wrapper bg-soft-primary">
-    <div class="container pt-10 pb-19 pt-md-14 pb-md-20 text-center">
-      <div class="row">
-        <div class="col-md-10 col-xl-8 mx-auto">
-          <div class="post-header">
-            <h1 class="display-1 mb-5">{{page.competitionName}}</h1>
-            <ul class="post-meta fs-17 mb-5">
-              <li><i class="uil uil-clock"></i> {{page.competitionDates}}</li>
-            </ul>
-            <!-- /.post-meta -->
-          </div>
-          <!-- /.post-header -->
+  <div class="container pt-10 pb-19 pt-md-14 pb-md-20 text-center">
+    <div class="row">
+      <div class="col-md-10 col-xl-8 mx-auto">
+        <div class="post-header">
+          <h1 class="display-1 mb-5">{{page.competitionName}}</h1>
+          <ul class="post-meta fs-17 mb-5">
+            <li><i class="uil uil-clock"></i> {{page.competitionDates}}</li>
+          </ul>
+          <!-- /.post-meta -->
         </div>
-        <!-- /column -->
+        <!-- /.post-header -->
       </div>
-      <!-- /.row -->
+      <!-- /column -->
     </div>
-    <!-- /.container -->
-  </section>
-  <!-- /section -->
-  <section class="wrapper bg-light">
-    <div class="container pb-14 pb-md-16">
-      <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <div class="blog single mt-n17">
-            <div class="card shadow-lg">
-                <figure class="card-img-top">
-                    <img src="{{page.contentImage}}"/>
-                </figure>
-              <div class="card-body">
-
-                <h2 class="h1 mb-3">{{ site.data.competitions[page.locale].competitionDetails.header }}</h2>
-
-                <p>{{page.bodyText1}}</p>
-                
-                <p>{{page.bodyText2}}</p>
-                
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->
+<section class="wrapper bg-light">
+  <div class="container pb-14 pb-md-16">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="blog single mt-n17">
+          <div class="card shadow-lg">
+            <figure class="card-img-top">
+              <img src="{{page.contentImage}}" />
+            </figure>
+            <div class="card-body">
+              <div class="d-flex flex-column">
+                {{ content }}
               </div>
-              <!-- /.card-body -->
             </div>
-            <!-- /.card -->
+            <!-- /.card-body -->
           </div>
-          <!-- /.blog -->
+          <!-- /.card -->
         </div>
-        <!-- /column -->
+        <!-- /.blog -->
       </div>
-      <!-- /.row -->
+      <!-- /column -->
     </div>
-    <!-- /.container -->
-  </section>
-  <!-- /section -->
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->
 
-    <!-- Try Coding Mind -->
-    <section class="wrapper bg-soft-primary wrapper-border">
-      <div class="container py-12 py-md-12">
-        <div class="row text-center">
-          <div class="col-md-10 mx-auto">
-            <h3 class="display-4 text-navy">{{ site.data.competitions[page.locale].competitionDetails.contact }}</h3>
-            <p class="lead mb-7 mb-md-7">{{ site.data.competitions[page.locale].competitionDetails.contactDesc }}</p>
-            <a href="{{ site.data.nav[page.locale].nav.URL }}contact-us" class="btn btn-primary rounded-pill me-2 me-md-2 mb-4 mb-md-0">
-              {{ site.data.competitions[page.locale].competitionDetails.contactBtn }}
-            </a>
-          </div>
-        </div>
-        <!--/div -->
+<!-- Try Coding Mind -->
+<section class="wrapper bg-soft-primary wrapper-border">
+  <div class="container py-12 py-md-12">
+    <div class="row text-center">
+      <div class="col-md-10 mx-auto">
+        <h3 class="display-4 text-navy">{{ site.data.competitions[page.locale].competitionDetails.contact }}</h3>
+        <p class="lead mb-7 mb-md-7">{{ site.data.competitions[page.locale].competitionDetails.contactDesc }}</p>
+        <a href="{{ site.data.nav[page.locale].nav.URL }}contact-us"
+          class="btn btn-primary rounded-pill me-2 me-md-2 mb-4 mb-md-0">
+          {{ site.data.competitions[page.locale].competitionDetails.contactBtn }}
+        </a>
       </div>
-      <!-- /.container -->
-    </section>
-    <!-- /section -->
-  
-  
+    </div>
+    <!--/div -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->

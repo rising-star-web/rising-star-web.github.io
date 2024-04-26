@@ -9,6 +9,12 @@ competitionDesc: "GameGala invites K-12 students to showcase their digital game 
 
 [//]: # (Competition Page/Showcase)
 contentImage: "/img/updated/competitions/gamegala.png"
-bodyText1: " GameGala invites K-12 students to showcase their digital game projects developed by themselves. Students may enter the competition individually or with a team."
-bodyText2: "Instead of just playing games, be a game creator and developer!"
 ---
+
+## About Game Gala
+
+Game Gala invites K-12 students to showcase their digital game projects developed by themselves. Students may enter the competition individually or with a team.
+
+### Be a Game Creator and Developer
+
+Instead of just playing games, be a game creator and developer!
