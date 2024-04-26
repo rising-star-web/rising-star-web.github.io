@@ -102,7 +102,7 @@
               {% if page.name == "index.html" %}
                 {{ site.data.nav[page.locale].nav.switchLangURL }}{{page.name | replace:'index.html','' }}
               {% elsif page.collection.size %}
-                {{ site.data.nav[page.locale].nav.switchLangURL }}{{page.collection}}/{{page.slug}}
+                {{ site.data.nav[page.locale].nav.switchLangURL }}{{page.collection}}/{{page.slug | downcase }}
               {% else %}
                 {{ site.data.nav[page.locale].nav.switchLangURL }}{{page.name | replace:'.html','' }}
               {% endif %}
