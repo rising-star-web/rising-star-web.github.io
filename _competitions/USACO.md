@@ -15,7 +15,7 @@ contentImage: "/img/updated/competitions/usaco.png"
 
 USACO, the United States of America Computing Olympiad, is a prestigious academic competition designed to assess students' skills in algorithms and applications, focusing on enhancing their ability to solve problems through computer programming. Many elite universities value the results of USACO, recognizing its importance in the admissions process. The competition's coding problems are akin to interview questions used by major tech companies like Google and Facebook. Thus, outstanding performance in USACO not only boosts students' prospects for admission into top universities but also enhances their opportunities for internships and employment in the tech industry.
 
-### Value of USACO
+## Value of USACO
 
 1. Enhancing Computer Programming Literacy  -  Participating in USACO significantly enhances competitors' computer programming skills and algorithmic analysis capabilities. Moreover, this competition helps participants broaden their horizons, deepen their understanding of the field of computer science and its latest information, and meet friends who share a passion for computer programming, laying a solid foundation for their academic and career paths.
 
@@ -23,7 +23,7 @@ USACO, the United States of America Computing Olympiad, is a prestigious academi
 
 3. Aiding Elite College Applications and Career Development  -   Securing gold or platinum awards in the USACO competition greatly enhances one's college application prospects. Top-tier U.S. universities, such as MIT, Harvard, and Carnegie Mellon, highly favor students who excel and win awards in USACO competitions. Additionally, many of the practice problems in USACO are similar to interview questions used by major tech companies like Amazon and Google, which can be beneficial for students' future internships and job applications.
 
-### USACO Competition Schedule
+## USACO Competition Schedule
 
 | USACO Competition Schedule              |      Detail                    |
 | ------------------------------------    | ------------------------------ |
