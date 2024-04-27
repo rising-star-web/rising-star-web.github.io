@@ -31,7 +31,7 @@ Securing gold or platinum awards in the USACO competition greatly enhances one's
 ## USACO Competition Schedule
 
 
-|              |      **USACO Competition Schedule**                     |
+|              |                 |
 | ------------------------------------    | ------------------------------ |
 |                Monthly Contests         | USACO holds monthly contests from December to February each year. Competitors can start the contest at any time during the designated period from Friday to Monday (4 days), with each contest lasting between 3 to 5 hours. Participants are required to complete 3 to 4 problems within the allotted time. |
 | |
