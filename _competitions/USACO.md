@@ -25,14 +25,8 @@ USACO, the United States of America Computing Olympiad, is a prestigious academi
 
 ### USACO Competition Schedule
 
-Monthly Contests  -  USACO holds monthly contests from December to February each year. Competitors can start the contest at any time during the designated period from Friday to Monday (4 days), with each contest lasting between 3 to 5 hours. Participants are required to complete 3 to 4 problems within the allotted time.
-
-Open Contests  -  Known as the “US Open,” these contests are held annually in March or April and are more challenging than the monthly contests. Outstanding performers may earn an opportunity to attend the USACO training camp.
-
-Competition Details  -  Each contest typically lasts between 3 to 4 hours. Competitors may open the problems at any time during the specified 4-day period and must complete and submit 3 to 4 programming problems within the scheduled contest time.
-
-| USACO Competition Schedule      |      Detail                    |
-| -------------------------       | ------------------------------ |
-|   Monthly Contests              | SACO holds monthly contests from December to February each year. Competitors can start the contest at any time during the designated period from Friday to Monday (4 days), with each contest lasting between 3 to 5 hours. Participants are required to complete 3 to 4 problems within the allotted time.      |
-|  Open Contests                  | Known as the “US Open,” these contests are held annually in March or April and are more challenging than the monthly contests. Outstanding performers may earn an opportunity to attend the USACO training camp.    |
-|  Competition Details            | Each contest typically lasts between 3 to 4 hours. Competitors may open the problems at any time during the specified 4-day period and must complete and submit 3 to 4 programming problems within the scheduled contest time.   |
+| USACO Competition Schedule              |      Detail                    |
+| ------------------------------------    | ------------------------------ |
+|                Monthly Contests         | SACO holds monthly contests from December to February each year. Competitors can start the contest at any time during the designated period from Friday to Monday (4 days), with each contest lasting between 3 to 5 hours. Participants are required to complete 3 to 4 problems within the allotted time.      |
+|                  Open Contests          | Known as the “US Open,” these contests are held annually in March or April and are more challenging than the monthly contests. Outstanding performers may earn an opportunity to attend the USACO training camp.    |
+|               Competition Details       | Each contest typically lasts between 3 to 4 hours. Competitors may open the problems at any time during the specified 4-day period and must complete and submit 3 to 4 programming problems within the scheduled contest time.   |
