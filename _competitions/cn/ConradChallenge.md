@@ -3,9 +3,9 @@ layout: competition_detail
 
 [//]: # (Competition Card)
 competitionLogo: "/img/updated/competitions/Conrad Challenge.jpeg"
-competitionName: "Conrad Challenge"
+competitionName: "康莱德创新挑战赛"
 competitionDates: "每年9月"
-competitionDesc: "Conrad Challenge 是一项面向中学生的国际性创新和创业比赛。这个比赛鼓励学生们利用STEM（科学、技术、工程和数学）原理，解决现实世界的挑战。"
+competitionDesc: "康莱德创新挑战赛是一项面向中学生的国际性创新和创业比赛。这个比赛鼓励学生们利用STEM（科学、技术、工程和数学）原理，解决现实世界的挑战。"
 
 [//]: # (Competition Page/Showcase)
 contentImage: "/img/updated/competitions/Conrad Challenge2.jpeg"
