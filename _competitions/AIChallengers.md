@@ -22,7 +22,9 @@ The competition features a judging panel of experts from top universities such a
 
 ## Rules and References
 
-### AI project competition is open only to students. To qualify for participation, students must meet the following criteria:
+AI project competition is open only to students. 
+
+### To qualify for participation, students must meet the following criteria:
 
 + Age requirement: Open to students aged 8 to 22.
 + Enrollment status: Students must be enrolled in an accredited elementary, middle, or high school, or university.
