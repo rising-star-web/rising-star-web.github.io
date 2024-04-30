@@ -11,6 +11,10 @@ competitionDesc: "Conrad Challenge 是一项面向中学生的国际性创新和
 contentImage: "/img/updated/competitions/Conrad Challenge2.jpeg"
 ---
 
+## 康莱德创新挑战赛概况
+
+康莱德创新挑战赛成立于2005年，是以第三位登月宇航员Charles “Pete” Conrad命名的竞赛。该竞赛面向中学生的国际性，将STEM（科学、技术、工程和数学）和商业学科相结合，参赛者需要完成包含商业计划和STEM创新产品或服务的创意商业项目，旨在解决复杂的社会问题。
+
 ## 参赛对象
 
 针对13-18岁对STEM、商科、社科感兴趣的中学生，建议2-5人组成一队，同时，可跨校、跨区组队。
