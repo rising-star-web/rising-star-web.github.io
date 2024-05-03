@@ -51,4 +51,15 @@ Coolest Projects is a global celebration dedicated to showcasing the exceptional
 
 ### Can non-native English speakers participate in Coolest Projects?
 
-Projects should be presented in English. Scratch projects should use written English, and video submissions should be in spoken English or accompanied by English subtitles. If you need language assistance, you can contact the organizers at hello@coolestprojects.org to see if translation support is available.
+Projects should be presented in English. Scratch projects should use written English, and video submissions should be in spoken English or accompanied by English subtitles. If you need language assistance, you can contact the organizers at hello@coolestprojects.org to see if 
+
+### What happens after students submit a project?
+
+After you submit your project, if it is selected for the online showcase, it will be displayed in an online gallery visible to a global audience. The Coolest Projects team will then review each project and provide personalized feedback. If your project is shortlisted, Coolest Projects will invite special VIP judges to select and highlight their favorite projects. Judges will evaluate projects based on creativity, complexity, presentation and communication skills, design, and usability. For Scratch projects, judges will specifically consider how they are presented differently from other types of projects. During live events, judges will interact directly with participants, discuss their projects, provide feedback, and select standout projects for special display on the day of the event. Each participant will receive a personalized certificate, detailed project feedback, and exciting digital gifts to honor their outstanding creativity and participation spirit!
+
+
+
+
+
+
+translation support is available.
