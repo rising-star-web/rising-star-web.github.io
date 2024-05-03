@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
 <section class="wrapper bg-soft-primary">
     <div class="container pt-10  pt-md-14  text-center">
@@ -79,136 +80,103 @@ layout: default
         $.getJSON('/assets/courses.json')
       );
     }
+function populateGrid(datesData, coursesData) {
+    var $grid = $('#camp-registration-grid');
 
-    // Function to populate the grid
-    function populateGrid(datesData, coursesData) {
-      var $grid = $('#camp-registration-grid');
+    // Create the header row with Courses (desktop only)
+    var $headerRow = $('<div class="row mb-2 d-none d-md-flex flex-nowrap flex-row align-items-center">');
+    //$headerRow.append('<div class="col-1"><h5>Courses</h5></div>');
+    $grid.append($headerRow);
 
-      // Sort the date ranges in chronological order
-      var dateRanges = Object.keys(datesData).sort(function (a, b) {
-        return new Date(datesData[a]) - new Date(datesData[b]);
-      });
-
-      // Create the header row with Courses and the actual dates (desktop only)
-      var $headerRow = $('<div class="row mb-2 d-none d-md-flex flex-nowrap flex-row align-items-center">');
-      $headerRow.append('<div class="col-1"><h5>Courses</h5></div>'); // Add Courses column header
-      dateRanges.forEach(function (week) {
-        $headerRow.append('<div class="col"><h3 class="fs-12">' + datesData[week] + '</h3></div>'); // Add date column headers
-      });
-      $grid.append($headerRow);
-
-      // Get all the unique courses
-      var uniqueCourses = new Set();
-      var courseInfoMap = new Map();
-
-      Object.values(coursesData).forEach(function (locationCourses) {
-        locationCourses.forEach(function (course) {
-          uniqueCourses.add(course.Name);
-          courseInfoMap.set(course.Name, course.CourseInfo);
-
-          console.log(courseInfoMap)
-        });
-      });
-
-      // Loop through each unique course
-      uniqueCourses.forEach(function (courseName) {
-        var $courseRow = $('<div class="row d-none bg-soft-navy p-2 d-md-flex flex-md-row mb-5 flex-nowrap rounded">');
-        var $courseCol = $('<div class="col-1 d-none d-md-block card p-0">');
-        var $courseTitleDesktop = $('<div class="">').append('<h4 class="fs-16 my-2">' + courseName + '</h4>');
-        var $learnMoreBtnDesktop = $('<div class="d-flex justify-content-center">').append('<a href="' + courseInfoMap.get(courseName) + '" class="btn btn-navy course-info mb-3 p-1 fs-12" data-bs-toggle="modal" data-bs-target="#myModal">Learn More</a>');
-
-        // Image element for courseCol
-        createImageElement(courseInfoMap.get(courseName), $courseCol);
-
-        $courseCol.append($courseTitleDesktop, $learnMoreBtnDesktop);
-        $courseRow.append($courseCol);
-
-        var $courseCard = $('<div class="card mb-3 d-md-none p-0">');
-        var $courseHeader = $('<div class="">').append('<h4 class="mt-2">' + courseName + '</h4>');
-        var $courseBody = $('<div class="card-body p-2">');
-        var $learnMoreBtn = $('<a href="' + courseInfoMap.get(courseName) + '" class="btn btn-navy course-info mb-3 me-3" data-bs-toggle="modal" data-bs-target="#myModal">Learn More</a>');
-        var $viewDatesBtn = $('<button class="btn btn-secondary view-dates mb-3">View Dates</button>');
-        var $datesList = $('<ul class="list-group d-none">');
-
-        // Image element for courseCard
-        createImageElement(courseInfoMap.get(courseName), $courseHeader);
-
-        // Loop through each week
-        dateRanges.forEach(function (week) {
-          var $weekCol = $('<div class="col d-none d-md-flex flex-column justify-content-center"></div>');
-          var courseTimes = new Set();
-          var courseLocations = new Set();
-          let weekIndex;
-          let registrationLink;
-
-          // Check if the course is scheduled for the current week
-          Object.entries(coursesData).forEach(function ([location, locationCourses]) {
-            var matchingCourse = locationCourses.find(function (course) {
-              return course.Name === courseName && course.Dates.includes(week);
-            });
-            if (matchingCourse) {
-              weekIndex = matchingCourse.Dates.indexOf(week);
-
-              // Get the registration link for the current course and week
-              registrationLink = matchingCourse["Registration Links"][weekIndex];
-              courseTimes.add(matchingCourse.Time);
-              courseLocations.add(location);
+    var courseInfoMap = new Map();
+    Object.entries(coursesData).forEach(([location, courses]) => {
+        courses.forEach(course => {
+            if (!courseInfoMap.has(course.Name)) {
+                courseInfoMap.set(course.Name, []);
             }
-          });
+            courseInfoMap.get(course.Name).push({...course, location: location});
+        });
+    });
 
-          if (courseTimes.size > 0) {
+    courseInfoMap.forEach((courses, courseName) => {
+        var collapseId = 'collapse' + courseName.replace(/\s+/g, '');
+        var $courseRow = $('<div class="card mb-3">');
+        var $courseHeader = $('<div class="card-header d-flex justify-content-between align-items-center" id="heading' + collapseId + '">');
 
-            var $courseInfo = $('<div class="card" style="min-height:4rem">' +
-              '<div class="card-body d-flex flex-column justify-content-center p-1">' +
-              '<p class="card-text course-location mb-0 fs-10">' + Array.from(courseLocations).join(', ') + '</p>' +
-              '<a href="' + registrationLink + '" class="btn btn-primary w-100 mt-2 p-1 fs-10" target="_blank" >Register</a>' +
-              '</div>' +
-              '</div>');
-            $weekCol.append($courseInfo);
+        var $imageContainer = $('<img class="mr-2" style="width: 50px; height: 50px;">');
+        setImageBasedOnCourseName(courseName, $imageContainer);
 
-            var $dateItem = $('<li class="list-group-item">').append(
-              '<strong>' + datesData[week] + '</strong><br>' +
-              'Location: ' + Array.from(courseLocations).join(', ') + '<br>' +
-              '<a href="' + registrationLink + '" class="btn btn-primary mt-2" target="_blank" >Register</a>'
-            );
-            $datesList.append($dateItem);
-          } else {
-            $weekCol.append('<div class="card bg-pale-navy">' +
-              '<div class="card-body">' +
-              '</div>' +
-              '</div>');
-          }
+        var $titleButton = $('<button class="btn btn-link text-left" data-bs-toggle="collapse" data-bs-target="#' + collapseId + '" aria-expanded="false" aria-controls="' + collapseId + '">')
+            .html('<h4 class="mb-0">' + courseName + '</h4>');
 
-          $courseRow.append($weekCol);
+        var learnMoreUrl = courses[0].CourseInfo;
+        var $learnMoreButton = $('<a href="' + learnMoreUrl + '" class="btn btn-navy course-info" data-bs-toggle="modal" data-bs-target="#myModal">Learn More</a>');
+
+        $courseHeader.append($imageContainer, $titleButton, $learnMoreButton);
+        var $courseDetails = $('<div id="' + collapseId + '" class="collapse" aria-labelledby="heading' + collapseId + '" data-parent="#accordionExample">')
+            .append('<div class="card-body">');
+
+        courses.forEach(course => {
+            var dateRanges = course.Dates.map(dateCode => datesData[dateCode]).join(", "); // Map each week code to its date range and join with commas
+            var datesText = 'Dates: ' + dateRanges;
+            var $locationLine = $('<div class="d-flex justify-content-between align-items-center mb-3" style="margin-bottom: 10px;">') // Add margin-bottom directly for spacing
+                .append($('<div class="d-flex align-items-center">')
+                    .append($('<i class="fas fa-map-marker-alt mr-2">  </i>'))
+                    .append($('<span>').text(course.location))
+                    .append($('<i class="fas fa-user mx-2"></i>'))
+                    .append($('<span>').text('In-person')))
+                .append($('<div class="text-center">')
+                    .append($('<span>').text('Price: $' + course.Price + ', ' + datesText)))
+                .append($('<div class="ml-auto">')
+                    .append($('<a href="' + course['Registration Links'][0] + '" class="btn btn-primary btn-sm" target="_blank">Register</a>')));
+
+            $courseDetails.find('.card-body').append($locationLine);
         });
 
-        $courseBody.append($learnMoreBtn, $viewDatesBtn, $datesList);
-        $courseCard.append($courseHeader, $courseBody);
-        $grid.append($courseRow, $courseCard);
+        $courseRow.append($courseHeader, $courseDetails);
+        $grid.append($courseRow);
+    });
+}
 
-        // Toggle dates list on View Dates button click in mobile view
-        $viewDatesBtn.on('click', function () {
-          $datesList.toggleClass('d-none');
-        });
-      });
-    }
 
-    function createImageElement(url, $container) {
-      // Send a GET request to the URL to get the HTML content
-      $.get(url, function (data) {
-        // Parse the HTML string into a jQuery object
-        var $html = $($.parseHTML(data));
+    // function createImageElement(url, $container) {
+    //   // Send a GET request to the URL to get the HTML content
+    //   $.get(url, function (data) {
+    //     // Parse the HTML string into a jQuery object
+    //     var $html = $($.parseHTML(data));
 
-        // Find the first non-SVG image element directly in the parsed HTML
-        var $image = $html.find('img:not([src$=".svg"])').first();
+    //     // Find the first non-SVG image element directly in the parsed HTML
+    //     var $image = $html.find('img:not([src$=".svg"])').first();
 
-        // If a non-SVG image is found, create the image element
-        if ($image.length) {
-          var imageUrl = new URL($image.attr('src'), url).href;
-          var $imageElement = $('<img class="card-img-top rounded-top rounded-0">').attr('src', imageUrl);
-          $container.prepend($imageElement);
-        }
-      });
-    }
+    //     // If a non-SVG image is found, create the image element
+    //     if ($image.length) {
+    //       var imageUrl = new URL($image.attr('src'), url).href;
+    //       var $imageElement = $('<img class="card-img-top rounded-top rounded-0">').attr('src', imageUrl);
+    //       $container.prepend($imageElement);
+    //     }
+    //   });
+    // }
 
-  </script>
+    function setImageBasedOnCourseName(courseName, $container) {
+    // Map each course name to its specific image path
+    var imagePathMap = {
+        "Minecraft MakeCode": "/img/my/minecode/minecode2.jpg",
+        "Roblox Metaverse": "/img/my/roblox1/r1.jpg",
+        "Python Programming": "/img/updated/L3/python-adv-4.png",
+        "Flutter Dev": "/img/my/flutter/flutter2.png",
+        // Add more courses and their image paths as needed
+    };
+
+    // Default image if course not found or no image is specified
+    var defaultImagePath = "/images/default.jpg";
+
+    // Retrieve the image path from the map or use the default
+    var imagePath = imagePathMap[courseName] || defaultImagePath;
+
+    // Set the image source for the container
+    $container.attr('src', imagePath);
+}
+
+
+
+</script>
