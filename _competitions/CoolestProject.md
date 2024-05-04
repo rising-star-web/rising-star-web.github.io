@@ -29,7 +29,7 @@ Coolest Projects is a global celebration dedicated to showcasing the exceptional
 
 ## Coolest Project Competition Rules and Conditions
 
-## Coolest Projects does not accept the following types of projects:
+### Coolest Projects does not accept the following types of projects:
 
 + Projects containing swear words or obscene language.
  
