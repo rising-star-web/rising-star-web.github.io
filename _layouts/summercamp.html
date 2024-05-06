@@ -1,182 +1,499 @@
 ---
 layout: default
 ---
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  rel="stylesheet"
+/>
 
 <section class="wrapper bg-soft-primary">
-    <div class="container pt-10  pt-md-14  text-center">
-      <div class="row">
-        <div class="col-md-10 col-lg-8 col-xl-8 col-xxl-6 mx-auto mb-13" data-cues="slideInDown"
-          data-group="page-title">
-          <h1 class="display-1 mb-4">{{ site.data.summercamp[page.locale].summer.header }}</h1>
-          <p class="lead fs-lg px-xl-12 px-xxl-6 mb-7">{{ site.data.summercamp[page.locale].summer.lead }}</p>
-        </div>
-        <!-- /column -->
+  <div class="container pt-10 pt-md-14 text-center">
+    <div class="row">
+      <div
+        class="col-md-10 col-lg-8 col-xl-8 col-xxl-6 mx-auto mb-13"
+        data-cues="slideInDown"
+        data-group="page-title"
+      >
+        <h1 class="display-1 mb-4">
+          {{ site.data.summercamp[page.locale].summer.header }}
+        </h1>
+        <p class="lead fs-lg px-xl-12 px-xxl-6 mb-7">
+          {{ site.data.summercamp[page.locale].summer.lead }}
+        </p>
       </div>
-      <!-- /.row -->
-    </div>
-    <!-- /.container -->
-  </section>
-  <!-- /section -->
 
-  <section class="wrapper bg-light">
-    <div class="container pt-10 pb-19 pt-md-14 pb-md-20 text-center">
-      <div class="row card p-2 overflow-auto flex-row justify-content-center" id="camp-registration-grid">
-        <div class="d-flex justify-content-center">
-          <div id="formSpinner" class="spinner-border text-navy align-self-center" role="status"
-            style="width: 3rem; height: 3rem; display: none;">
-          </div>
+      <!-- Filters Section -->
+      <div class="d-flex justify-content-center mb-4 w-100">
+        <div class="mx-2">
+          <label for="locationFilter"></label>
+          <select id="locationFilter" class="form-select">
+            <option value="all">All Locations</option>
+            <!-- Options will be added dynamically -->
+          </select>
+        </div>
+        <div class="mx-2">
+          <label for="gradeFilter"></label>
+          <select id="gradeFilter" class="form-select">
+            <option value="all">Select Grade</option>
+            <!-- Options will be added dynamically -->
+          </select>
         </div>
       </div>
+      <!-- /column -->
     </div>
-  </section>
-  <!-- /section -->
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->
 
-  <!-- The Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-      <div class="modal-content p-0">
-        <div class="modal-header d-flex justify-content-center p-4">
-          <h5 class="modal-title text-center fs-28" id="myModalLabel">{{ site.data.summercamp[page.locale].summer.modal }}</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-0">
-          <iframe id="modalIframe" src="" frameborder="0" width="100%" height="500"></iframe>
-        </div>
+<section class="wrapper bg-light">
+  <div class="container pt-10 pb-19 pt-md-14 pb-md-20 text-center">
+    <div
+      class="row card p-2 overflow-auto flex-row justify-content-center"
+      id="camp-registration-grid"
+    >
+      <!-- Spinner and Content -->
+      <div class="d-flex justify-content-center">
+        <div
+          id="formSpinner"
+          class="spinner-border text-navy align-self-center"
+          role="status"
+          style="width: 3rem; height: 3rem; display: none"
+        ></div>
       </div>
     </div>
   </div>
+</section>
 
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
-  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-  <script>
-    $(document).ready(function () {
-      // Function to handle modal show event
-      $('#myModal').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget); // Button that triggered the modal
-        var url = button.attr('href'); // Get the URL from the href attribute
-        var iframe = $(this).find('#modalIframe');
-        iframe.attr('src', url); // Set the src attribute of the iframe
-      });
+<!-- /section -->
 
-      $('#formSpinner').css("display", "block");
-      // Function to fetch JSON data and populate grid
+<!-- The Modal -->
+<div
+  class="modal fade"
+  id="myModal"
+  tabindex="-1"
+  aria-labelledby="myModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content p-0">
+      <div class="modal-header d-flex justify-content-center p-4">
+        <h5 class="modal-title text-center fs-28" id="myModalLabel">
+          {{ site.data.summercamp[page.locale].summer.modal }}
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body p-0">
+        <iframe
+          id="modalIframe"
+          src=""
+          frameborder="0"
+          width="100%"
+          height="500"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.4.min.js"
+  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.4.min.js"
+  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+  crossorigin="anonymous"
+></script>
+<script>
+  $(document).ready(function () {
+    // Function to handle modal show event
+    $("#myModal").on("show.bs.modal", function (event) {
+      var button = $(event.relatedTarget); // Button that triggered the modal
+      var url = button.attr("href"); // Get the URL from the href attribute
+      var iframe = $(this).find("#modalIframe");
+      iframe.attr("src", url); // Set the src attribute of the iframe
+    });
+
+    // Fetch and apply filters initially and on filter change
+    function fetchAndApplyFilters() {
+      $("#formSpinner").css("display", "block");
       fetchJSONData()
         .then(function (datesData, coursesData) {
-          $('#formSpinner').css("display", "none");
-          populateGrid(datesData[0], coursesData[0]);
+          $("#formSpinner").css("display", "none");
+          var selectedLocation = $("#locationFilter").val();
+          var selectedGrade = $("#gradeFilter").val();
+          console.log("coursedata:", coursesData[0]);
+          console.log("datesdate:", datesData[0]);
+          populateFilteredGrid(
+            datesData[0],
+            coursesData[0],
+            selectedLocation,
+            selectedGrade
+          );
         })
         .catch(function (error) {
-          $('#formSpinner').css("display", "none");
-          alert('Error:', error);
-          console.error('Error fetching JSON data:', error);
+          $("#formSpinner").css("display", "none");
+          alert("Error: " + error);
+          console.error("Error fetching JSON data:", error);
         });
+    }
+
+    // Set up change event listeners for filters
+    $("#locationFilter, #gradeFilter").change(fetchAndApplyFilters);
+
+    // Initial data fetch and setup
+    fetchAndApplyFilters(); // This replaces the initial call to populateGrid
+  });
+
+  // Fetch the courses data
+  $.getJSON("/assets/courses.json", function (data) {
+    var coursesData = Object.values(data).flat();
+    // Get all unique grades
+    var grades = new Set();
+    coursesData.forEach(function (course) {
+      grades.add(course.Grade);
+    });
+    // Get the location select element
+    var locationSelect = document.getElementById("locationFilter");
+    var gradeSelect = document.getElementById("gradeFilter");
+    // Populate the location select element
+    Object.keys(data).forEach(function (location) {
+      var option = document.createElement("option");
+      option.value = location;
+      option.text = location;
+      locationSelect.appendChild(option);
+    });
+    // Populate the grade select element
+    grades.forEach(function (grade) {
+      var option = document.createElement("option");
+      option.value = grade;
+      option.text = grade;
+      gradeSelect.appendChild(option);
+    });
+  });
+
+  // Function to fetch JSON data
+  function fetchJSONData() {
+    return $.when(
+      $.getJSON("/assets/dates.json"),
+      $.getJSON("/assets/courses.json")
+    );
+  }
+
+  
+  function populateFilteredGrid(
+    datesData,
+    coursesData,
+    selectedLocation,
+    selectedGrade
+  ) {
+    var $grid = $("#camp-registration-grid");
+    $grid.empty(); // Clear the existing grid content
+
+    // Prepare the header for the table with dates
+    var $table = $(
+      '<table class="table table-striped" style="width: 100%; table-layout: fixed;">'
+    );
+    $table.css({
+      width: "100%", // Ensuring the table spans the full container width
+      tableLayout: "fixed", // Helps with managing consistent column widths
+    });
+    var $thead = $("<thead th>");
+    var $headerRow = $(
+      '<tr style="position: sticky; top: 0; background-color: white;">'
+    );
+    $headerRow.css({
+      position: "sticky",
+
+      top: "0px", // Fixed header position
+      backgroundColor: "#fff", // Ensuring background isn't transparent
+      zIndex: "1020", // Above the body content but below modals/dialogs
     });
 
-    // Function to fetch JSON data
-    function fetchJSONData() {
-      return $.when(
-        $.getJSON('/assets/dates.json'),
-        $.getJSON('/assets/courses.json')
+    $headerRow.append(
+      '<th style="vertical-align: middle; width: 30%;">Course Name</th>'
+    );
+
+    var dateHeaders = Object.values(datesData)
+      .reduce((acc, date) => {
+        if (!acc.includes(date)) {
+          acc.push(date);
+        }
+        return acc;
+      }, [])
+      .sort();
+
+    dateHeaders.forEach((date) => {
+      $headerRow.append(
+        $('<th style="vertical-align: middle; width: 15%;">').text(date)
       );
-    }
-function populateGrid(datesData, coursesData) {
-    var $grid = $('#camp-registration-grid');
+    });
 
-    // Create the header row with Courses (desktop only)
-    var $headerRow = $('<div class="row mb-2 d-none d-md-flex flex-nowrap flex-row align-items-center">');
-    //$headerRow.append('<div class="col-1"><h5>Courses</h5></div>');
-    $grid.append($headerRow);
+    $thead.append($headerRow);
+    $table.append($thead);
 
+    var $tbody = $("<tbody>");
+    var courseInfoMap = new Map();
+
+    Object.entries(coursesData).forEach(([location, courses]) => {
+      courses.forEach((course) => {
+        // Filter condition here
+        if (
+          (selectedLocation === "all" || location === selectedLocation) &&
+          (selectedGrade === "all" || course.Grade === selectedGrade)
+        ) {
+          var entry = courseInfoMap.get(course.Name) || {
+            Name: course.Name,
+            Grade: course.Grade,
+            Price: course.Price,
+            Dates: {},
+            RegistrationLinks: course["Registration Links"],
+            CourseInfo: course["CourseInfo"],
+          };
+
+          // Populate dates where course is available
+          course.Dates.forEach((dateCode) => {
+            entry.Dates[datesData[dateCode]] = course["Registration Links"][0];
+          });
+
+          courseInfoMap.set(course.Name, entry);
+        }
+      });
+    });
+
+    // Populate the body of the table
+    courseInfoMap.forEach((course) => {
+      var $row = $('<tr style="height: 50px; vertical-align: middle;">');
+      var $courseCell = $('<td style="width: 30%;">');
+      var $imageContainer = $('<div style="text-align: center;">');
+      createImageElement(course.CourseInfo, $imageContainer);
+      $courseCell.append($imageContainer);
+
+      var $detailsContainer = $('<div style="text-align: center;">').append(
+        $("<strong>").text(course.Name),
+        $("<div>", { style: "font-size: 0.8em;" }).html(
+          "Grade: " + course.Grade + "<br>Price: $" + course.Price
+        ),
+        $("<a>", {
+          href: "#",
+          class: "text-primary",
+          text: "Learn More",
+          click: function (e) {
+            e.preventDefault();
+            $("#myModal").find("#modalIframe").attr("src", course.CourseInfo);
+            $("#myModal").modal("show");
+          },
+        }).css("font-size", "0.8em")
+      );
+      $courseCell.append($detailsContainer);
+      $row.append($courseCell);
+
+      dateHeaders.forEach((date) => {
+        var registerLink = course.Dates[date];
+        if (registerLink) {
+          var $registerText = $("<a>", {
+            href: registerLink,
+            class: "text-primary",
+            html: '✓<br><span style="font-size: 0.75em; color: #007bff;">Join Today</span>',
+            target: "_blank",
+          });
+          $row.append($('<td style="width: 5%;">').append($registerText));
+        } else {
+          $row.append($('<td style="width: 5%;">').text(""));
+        }
+      });
+
+      $tbody.append($row);
+    });
+
+    $table.append($tbody);
+    $grid.append($table);
+
+    
+  }
+
+  function populateGrid(datesData, coursesData) {
+    var $grid = $("#camp-registration-grid");
+    $grid.empty(); // Clear the existing grid content
+
+    // Prepare the header for the table with dates
+    var $table = $(
+      '<table class="table table-striped" style="width: 100%; table-layout: fixed;">'
+    );
+    $table.css({
+      width: "100%", // Ensuring the table spans the full container width
+      tableLayout: "fixed", // Helps with managing consistent column widths
+    });
+    var $thead = $("<thead th>");
+    var $headerRow = $(
+      '<tr style="position: sticky; top: 0; background-color: white;">'
+    );
+    $headerRow.css({
+      position: "sticky",
+
+      top: "50px", // Fixed header position
+      backgroundColor: "#fff", // Ensuring background isn't transparent
+      zIndex: "1020", // Above the body content but below modals/dialogs
+    });
+
+    $headerRow.append(
+      '<th style="vertical-align: middle; width: 30%;">Course Name</th>'
+    );
+
+    // Collect all unique dates from datesData for headers
+    var dateHeaders = Object.values(datesData)
+      .reduce((acc, date) => {
+        if (!acc.includes(date)) {
+          acc.push(date);
+        }
+        return acc;
+      }, [])
+      .sort(); // Optional sort, if dates are not in order
+
+    dateHeaders.forEach((date) => {
+      $headerRow.append(
+        $('<th style="vertical-align: middle; width: 15%;">').text(date)
+      );
+    });
+    $thead.append($headerRow);
+    $table.append($thead);
+
+    var $tbody = $("<tbody>");
+
+    // Map to hold courses by name to populate rows easily
     var courseInfoMap = new Map();
     Object.entries(coursesData).forEach(([location, courses]) => {
-        courses.forEach(course => {
-            if (!courseInfoMap.has(course.Name)) {
-                courseInfoMap.set(course.Name, []);
-            }
-            courseInfoMap.get(course.Name).push({...course, location: location});
+      courses.forEach((course) => {
+        var entry = courseInfoMap.get(course.Name) || {
+          Name: course.Name,
+          //Location: course.Location,
+          Grade: course.Grade,
+          Price: course.Price,
+          Dates: {},
+          RegistrationLinks: course["Registration Links"],
+          CourseInfo: course["CourseInfo"],
+        };
+        // Populate dates where course is available
+        course.Dates.forEach((dateCode) => {
+          entry.Dates[datesData[dateCode]] = course["Registration Links"][0]; // Store link with date;
         });
+        courseInfoMap.set(course.Name, entry);
+      });
     });
 
-    courseInfoMap.forEach((courses, courseName) => {
-        var collapseId = 'collapse' + courseName.replace(/\s+/g, '');
-        var $courseRow = $('<div class="card mb-3">');
-        var $courseHeader = $('<div class="card-header d-flex justify-content-between align-items-center" id="heading' + collapseId + '">');
+    // Populate the body of the table
+    courseInfoMap.forEach((course) => {
+      var $row = $('<tr style="height: 50px; vertical-align: middle;">');
+      var $courseCell = $('<td style="width: 30%;">');
+      var $imageContainer = $('<div style="text-align: center;">');
+      createImageElement(course.CourseInfo, $imageContainer);
+      $courseCell.append($imageContainer);
 
-        var $imageContainer = $('<img class="mr-2" style="width: 50px; height: 50px;">');
-        setImageBasedOnCourseName(courseName, $imageContainer);
+      var $detailsContainer = $('<div style="text-align: center;">').append(
+        $("<strong>").text(course.Name),
+        $("<div>", {
+          style: "font-size: 0.8em;",
+        }).html("Grade: " + course.Grade + "<br>Price: $" + course.Price),
+        $("<a>", {
+          href: "#",
+          class: "text-primary",
+          text: "Learn More",
+          click: function (e) {
+            e.preventDefault();
+            $("#myModal").find("#modalIframe").attr("src", course.CourseInfo);
+            $("#myModal").modal("show");
+          },
+        }).css("font-size", "0.8em") // Making Learn More text smaller
+      );
+      $courseCell.append($detailsContainer);
 
-        var $titleButton = $('<button class="btn btn-link text-left" data-bs-toggle="collapse" data-bs-target="#' + collapseId + '" aria-expanded="false" aria-controls="' + collapseId + '">')
-            .html('<h4 class="mb-0">' + courseName + '</h4>');
+      $row.append($courseCell);
 
-        var learnMoreUrl = courses[0].CourseInfo;
-        var $learnMoreButton = $('<a href="' + learnMoreUrl + '" class="btn btn-navy course-info" data-bs-toggle="modal" data-bs-target="#myModal">Learn More</a>');
+      // Add cells for each date
+      dateHeaders.forEach((date) => {
+        var registerLink = course.Dates[date];
+        if (registerLink) {
+          var $registerText = $("<a>", {
+            href: registerLink,
+            class: "text-primary",
+            html: '✓<br><span style="font-size: 0.75em; color: #007bff;">Join Today</span>',
+            target: "_blank",
+          });
+          $row.append($('<td style="width: 5%;">').append($registerText));
+        } else {
+          $row.append($('<td style="width: 5%;">').text("")); // Empty cell if no link
+        }
+      });
+  
 
-        $courseHeader.append($imageContainer, $titleButton, $learnMoreButton);
-        var $courseDetails = $('<div id="' + collapseId + '" class="collapse" aria-labelledby="heading' + collapseId + '" data-parent="#accordionExample">')
-            .append('<div class="card-body">');
+      $tbody.append($row);
+    });
 
-        courses.forEach(course => {
-            var dateRanges = course.Dates.map(dateCode => datesData[dateCode]).join(", "); // Map each week code to its date range and join with commas
-            var datesText = 'Dates: ' + dateRanges;
-            var $locationLine = $('<div class="d-flex justify-content-between align-items-center mb-3" style="margin-bottom: 10px;">') // Add margin-bottom directly for spacing
-                .append($('<div class="d-flex align-items-center">')
-                    .append($('<i class="fas fa-map-marker-alt mr-2">  </i>'))
-                    .append($('<span>').text(course.location))
-                    .append($('<i class="fas fa-user mx-2"></i>'))
-                    .append($('<span>').text('In-person')))
-                .append($('<div class="text-center">')
-                    .append($('<span>').text('Price: $' + course.Price + ', ' + datesText)))
-                .append($('<div class="ml-auto">')
-                    .append($('<a href="' + course['Registration Links'][0] + '" class="btn btn-primary btn-sm" target="_blank">Register</a>')));
+    $table.append($tbody);
+    $grid.append($table);
+  }
 
-            $courseDetails.find('.card-body').append($locationLine);
+function createImageElement(url, $container) {
+    // Define the default image URL inside the function
+    var defaultImageUrl = "/img/my/app-dev-1.png";// Update this URL to your preferred default image
+
+    $.get(url, function (data) {
+        var $html = $($.parseHTML(data));
+        var $image = $html.find('img:not([src$=".svg"])').first(); // Looking for the first non-SVG image
+
+        var imageUrl;
+        if ($image.length) {
+            imageUrl = new URL($image.attr("src"), url).href;
+        } else {
+            imageUrl = defaultImageUrl; // Use default image if no valid image found
+        }
+
+        var $imageElement = $("<img>", {
+            class: "card-img-top rounded-top rounded-0",
+            src: imageUrl,
+            style: 'width: 100%; max-width: 100px; height: auto; display: block; margin-bottom: 5px; text-align: center;'
         });
-
-        $courseRow.append($courseHeader, $courseDetails);
-        $grid.append($courseRow);
+        $container.prepend($imageElement);
+    }).fail(function() {
+        // Handle the case where the GET request itself fails
+        var $imageElement = $("<img>", {
+            class: "card-img-top rounded-top rounded-0",
+            src: defaultImageUrl, // Use default image on network or other failures
+            style: 'width: 100%; max-width: 100px; height: auto; display: block; margin-bottom: 5px; text-align: center;'
+        });
+        $container.prepend($imageElement);
     });
 }
 
 
-    // function createImageElement(url, $container) {
-    //   // Send a GET request to the URL to get the HTML content
-    //   $.get(url, function (data) {
-    //     // Parse the HTML string into a jQuery object
-    //     var $html = $($.parseHTML(data));
-
-    //     // Find the first non-SVG image element directly in the parsed HTML
-    //     var $image = $html.find('img:not([src$=".svg"])').first();
-
-    //     // If a non-SVG image is found, create the image element
-    //     if ($image.length) {
-    //       var imageUrl = new URL($image.attr('src'), url).href;
-    //       var $imageElement = $('<img class="card-img-top rounded-top rounded-0">').attr('src', imageUrl);
-    //       $container.prepend($imageElement);
-    //     }
-    //   });
-    // }
-
-    function setImageBasedOnCourseName(courseName, $container) {
-    // Map each course name to its specific image path
-    var imagePathMap = {
-        "Minecraft MakeCode": "/img/my/minecode/minecode2.jpg",
-        "Roblox Metaverse": "/img/my/roblox1/r1.jpg",
-        "Python Programming": "/img/updated/L3/python-adv-4.png",
-        "Flutter Dev": "/img/my/flutter/flutter2.png",
-        // Add more courses and their image paths as needed
-    };
-
-    // Default image if course not found or no image is specified
-    var defaultImagePath = "/images/default.jpg";
-
-    // Retrieve the image path from the map or use the default
-    var imagePath = imagePathMap[courseName] || defaultImagePath;
-
-    // Set the image source for the container
-    $container.attr('src', imagePath);
-}
 
 
+  // function setImageBasedOnCourseName(courseName, $container) {
+  //   // Map each course name to its specific image path
+  //   var imagePathMap = {
+  //     "Minecraft MakeCode": "/img/my/minecode/minecode2.jpg",
+  //     "Roblox Metaverse": "/img/my/roblox1/r1.jpg",
+  //     "Python Programming": "/img/updated/L3/python-adv-4.png",
+  //     "Flutter Dev": "/img/my/flutter/flutter2.png",
+  //     // Add more courses and their image paths as needed
+  //   };
 
+  //   // Default image if course not found or no image is specified
+  //   var defaultImagePath = "/img/my/app-dev-1.png";
+
+  //   // Retrieve the image path from the map or use the default
+  //   var imagePath = imagePathMap[courseName] || defaultImagePath;
+
+  //   // Set the image source for the container
+  //   $container.attr("src", imagePath);
+  // }
 </script>
