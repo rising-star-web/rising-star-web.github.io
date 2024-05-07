@@ -119,8 +119,8 @@ layout: default
 <script>
   $(document).ready(function () {
     // Adjust table on window resize
-    //adjustTableForMobile();
-    //$(window).resize(adjustTableForMobile);
+    adjustTableForMobile();
+    $(window).resize(adjustTableForMobile);
 
     // Function to handle modal show event
     $("#myModal").on("show.bs.modal", function (event) {
@@ -138,8 +138,8 @@ layout: default
           $("#formSpinner").css("display", "none");
           var selectedLocation = $("#locationFilter").val();
           var selectedGrade = $("#gradeFilter").val();
-          console.log("coursedata:", coursesData[0]);
-          console.log("datesdate:", datesData[0]);
+          //console.log("coursedata:", coursesData[0]);
+          //console.log("datesdate:", datesData[0]);
           populateFilteredGrid(
             datesData[0],
             coursesData[0],
@@ -289,7 +289,7 @@ layout: default
           $tbody.append($detailsRow);
 
           $courseNameCell.on("click", function () {
-            console.log("clicked");
+            //console.log("clicked");
             $(this)
               .closest(".header-row")
               .next(".details-row")
@@ -297,22 +297,6 @@ layout: default
           });
         }
       });
-
-      function adjustTableForMobile() {
-        if ($(window).width() < 768) {
-          //updateContentForScreenSize(); // Call the function immediately
-          $("th:not(:first-child)").hide(); // Hide all but the first header column
-          $("td:not(:first-child)").hide(); // Hide all but the first column in data rows
-        } else {
-          $("th, td").show(); // Show all table cells
-          //$(".details-row").hide(); // Hide all collapsible rows
-          //$(".header-row").hide(); // Hide all header rows
-
-          $(".header-row").off("click"); // Remove click events for desktop
-        }
-      }
-
-      $(window).resize(adjustTableForMobile); // Attach and call immediately
 
       // handle mobile size end
 
@@ -366,10 +350,11 @@ layout: default
         }).css("font-size", "0.8em")
       );
 
-      
+      // 768px is a common breakpoint for mobile devices
+      // Additional information for mobile devices
+      var updateContentForScreenSize = function () {
         if ($(window).width() < 768) {
-          // 768px is a common breakpoint for mobile devices
-          // Additional information for mobile devices
+          adjustTableForMobile(); // Call the function immediately
 
           // Function to gather all date ranges
           function getAllDateRanges(dates) {
@@ -392,12 +377,11 @@ layout: default
             .css("font-size", "0.8em");
           $("th:not(:first-child)").hide(); // Hide all but the first header column
           $("td:not(:first-child)").hide(); // Hide all but the first column in data rows
-
-          // Append mobile-specific info to the details container
-          $detailsContainer.append($mobileInfo);
         }
-      
-      
+
+        // Append mobile-specific info to the details container
+        $detailsContainer.append($mobileInfo);
+      };
 
       $courseCell.append($detailsContainer);
       $row.append($courseCell);
@@ -418,10 +402,38 @@ layout: default
       });
 
       $tbody.append($row);
+      updateContentForScreenSize();
+      
     });
 
     $table.append($tbody);
+    if ($(window).width() < 768) {
+      //updateContentForScreenSize(); // Call the function immediately
+      $("th:not(:first-child)").hide(); // Hide all but the first header column
+      $("td:not(:first-child)").hide(); // Hide all but the first column in data rows
+    } else {
+      $("th, td").show(); // Show all table cells
+      
+
+      $(".header-row").off("click"); // Remove click events for desktop
+    }
+     
   }
+
+  function adjustTableForMobile() {
+    if ($(window).width() < 768) {
+      //updateContentForScreenSize(); // Call the function immediately
+      $("th:not(:first-child)").hide(); // Hide all but the first header column
+      $("td:not(:first-child)").hide(); // Hide all but the first column in data rows
+    } else {
+      $("th, td").show(); // Show all table cells
+
+
+      $(".header-row").off("click"); // Remove click events for desktop
+    }
+  }
+
+  $(window).resize(adjustTableForMobile); // Attach and call immediately
 
   function createImageElement(url, $container) {
     // Define the default image URL inside the function
@@ -456,5 +468,4 @@ layout: default
       $container.prepend($imageElement);
     });
   }
-
 </script>
