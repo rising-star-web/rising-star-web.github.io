@@ -1,23 +1,10 @@
 ---
 layout: default
 ---
-
-<link
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-  rel="stylesheet"
-/>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-</head>
-
 <section class="wrapper bg-soft-primary">
   <div class="container pt-10 pt-md-14 text-center">
     <div class="row">
-      <div
-        class="col-md-10 col-lg-8 col-xl-8 col-xxl-6 mx-auto mb-13"
-        data-cues="slideInDown"
-        data-group="page-title"
-      >
+      <div class="col-md-10 col-lg-8 col-xl-8 col-xxl-6 mx-auto" data-cues="slideInDown" data-group="page-title">
         <h1 class="display-1 mb-4">
           {{ site.data.summercamp[page.locale].summer.header }}
         </h1>
@@ -53,18 +40,11 @@ layout: default
 
 <section class="wrapper bg-light">
   <div class="container pt-10 pb-19 pt-md-14 pb-md-20 text-center">
-    <div
-      class="row card p-2 overflow-auto flex-row justify-content-center"
-      id="camp-registration-grid"
-    >
+    <div class="row card p-2 overflow-auto flex-row justify-content-center" id="camp-registration-grid">
       <!-- Spinner and Content -->
       <div class="d-flex justify-content-center">
-        <div
-          id="formSpinner"
-          class="spinner-border text-navy align-self-center"
-          role="status"
-          style="width: 3rem; height: 3rem; display: none"
-        ></div>
+        <div id="formSpinner" class="spinner-border text-navy align-self-center" role="status"
+          style="width: 3rem; height: 3rem; display: none"></div>
       </div>
     </div>
   </div>
@@ -73,54 +53,31 @@ layout: default
 <!-- /section -->
 
 <!-- The Modal -->
-<div
-  class="modal fade"
-  id="myModal"
-  tabindex="-1"
-  aria-labelledby="myModalLabel"
-  aria-hidden="true"
->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-xl">
     <div class="modal-content p-0">
       <div class="modal-header d-flex justify-content-center p-4">
         <h5 class="modal-title text-center fs-28" id="myModalLabel">
           {{ site.data.summercamp[page.locale].summer.modal }}
         </h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body p-0">
-        <iframe
-          id="modalIframe"
-          src=""
-          frameborder="0"
-          width="100%"
-          height="500"
-        ></iframe>
+        <iframe id="modalIframe" src="" frameborder="0" width="100%" height="500"></iframe>
       </div>
     </div>
   </div>
 </div>
 
-<script
-  src="https://code.jquery.com/jquery-3.6.4.min.js"
-  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
-  crossorigin="anonymous"
-></script>
-<script
-  src="https://code.jquery.com/jquery-3.6.4.min.js"
-  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
-  crossorigin="anonymous"
-></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"
+  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"
+  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 <script>
   $(document).ready(function () {
     // Adjust table on window resize
-    adjustTableForMobile();
-    $(window).resize(adjustTableForMobile);
+    // adjustTableForMobile();
+    // $(window).resize(adjustTableForMobile);
 
     // Function to handle modal show event
     $("#myModal").on("show.bs.modal", function (event) {
@@ -329,15 +286,36 @@ layout: default
     courseInfoMap.forEach((course) => {
       var $row = $('<tr style="height: 50px; vertical-align: middle;">');
       var $courseCell = $('<td style="width: 30%;">');
+      var $cardWrapper = $('<div class="card">');
       var $imageContainer = $('<div style="text-align: center;">');
       createImageElement(course.CourseInfo, $imageContainer);
-      $courseCell.append($imageContainer);
+      $cardWrapper.append($imageContainer);
 
-      var $detailsContainer = $('<div style="text-align: center;">').append(
+
+      // Function to gather all date ranges
+      function getAllDateRanges(dates) {
+        var allDates = [];
+        for (var dateRange in dates) {
+          if (dates.hasOwnProperty(dateRange)) {
+            allDates.push(dateRange);
+          }
+        }
+        return allDates.join(", "); // Combines all date ranges into a single string separated by commas
+      }
+      // Get all date ranges as a string
+      var allDateRanges = getAllDateRanges(course.Dates);
+
+      var $detailsContainer = $('<div class="card-body p-4 p-md-2" style="text-align: center;">').append(
         $("<strong>").text(course.Name),
         $("<div>", { style: "font-size: 0.8em;" }).html(
           "Grade: " + course.Grade + "<br>Price: $" + course.Price
         ),
+        $("<div>", { class: "d-block d-md-none" })
+          .html(
+            "Available Dates: " +
+            allDateRanges
+          )
+          .css("font-size", "0.8em"),
         $("<a>", {
           href: "#",
           class: "text-primary",
@@ -347,81 +325,46 @@ layout: default
             $("#myModal").find("#modalIframe").attr("src", course.CourseInfo);
             $("#myModal").modal("show");
           },
-        }).css("font-size", "0.8em")
+        }).css("font-size", "0.8em"),
+        $('<br/><a class="d-block d-md-none" href="https://jinshuju.net/f/EhrT96">Join Today</a>').css("font-size", "0.8em"),
+
       );
 
       // 768px is a common breakpoint for mobile devices
       // Additional information for mobile devices
-      var updateContentForScreenSize = function () {
-        if ($(window).width() < 768) {
-          adjustTableForMobile(); // Call the function immediately
+      // var updateContentForScreenSize = function () {
+      //   if ($(window).width() < 1200) {
+      //     adjustTableForMobile(); // Call the function immediately
+      //   }
+      // };
 
-          // Function to gather all date ranges
-          function getAllDateRanges(dates) {
-            var allDates = [];
-            for (var dateRange in dates) {
-              if (dates.hasOwnProperty(dateRange)) {
-                allDates.push(dateRange);
-              }
-            }
-            return allDates.join(", "); // Combines all date ranges into a single string separated by commas
-          }
-          // Get all date ranges as a string
-          var allDateRanges = getAllDateRanges(course.Dates);
-          var $mobileInfo = $("<div>", { class: "mobile-info" })
-            .html(
-              "<a href='https://jinshuju.net/f/EhrT96'>Join Today</a>" +
-                "<br>Available Date: " +
-                allDateRanges
-            )
-            .css("font-size", "0.8em");
-          $("th:not(:first-child)").hide(); // Hide all but the first header column
-          $("td:not(:first-child)").hide(); // Hide all but the first column in data rows
-        }
-
-        // Append mobile-specific info to the details container
-        $detailsContainer.append($mobileInfo);
-      };
-
-      $courseCell.append($detailsContainer);
+      $cardWrapper.append($detailsContainer);
+      $courseCell.append($cardWrapper);
       $row.append($courseCell);
 
       dateHeaders.forEach((date) => {
         var registerLink = course.Dates[date];
         if (registerLink) {
-          var $registerText = $("<a>", {
+          var $registerText = $('<a>', {
             href: registerLink,
-            class: "text-primary",
+            class: "text-primary card py-2",
             html: '✓<br><span style="font-size: 0.75em; color: #007bff;">Join Today</span>',
             target: "_blank",
           });
           $row.append($('<td style="width: 5%;">').append($registerText));
         } else {
-          $row.append($('<td style="width: 5%;">').text(""));
+          $row.append($('<td style="width: 5%;">').append($("<div class='d-flex justify-content-center'><div class='bg-soft-navy card py-3 w-50 '></div></div>")));
         }
       });
 
       $tbody.append($row);
-      updateContentForScreenSize();
-      
     });
-
     $table.append($tbody);
-    if ($(window).width() < 768) {
-      //updateContentForScreenSize(); // Call the function immediately
-      $("th:not(:first-child)").hide(); // Hide all but the first header column
-      $("td:not(:first-child)").hide(); // Hide all but the first column in data rows
-    } else {
-      $("th, td").show(); // Show all table cells
-      
-
-      $(".header-row").off("click"); // Remove click events for desktop
-    }
-     
+    adjustTableForMobile();
   }
 
   function adjustTableForMobile() {
-    if ($(window).width() < 768) {
+    if ($(window).width() < 1200) { // Modified to be 1200px as table headers become unintelligible @ < 1200px
       //updateContentForScreenSize(); // Call the function immediately
       $("th:not(:first-child)").hide(); // Hide all but the first header column
       $("td:not(:first-child)").hide(); // Hide all but the first column in data rows
@@ -454,7 +397,7 @@ layout: default
         class: "card-img-top rounded-top rounded-0",
         src: imageUrl,
         style:
-          "width: 100%; max-width: 100px; height: auto; display: block; margin-bottom: 5px; text-align: center;",
+          "width: 100%; height: auto; display: block; margin-bottom: 5px; text-align: center;",
       });
       $container.prepend($imageElement);
     }).fail(function () {
