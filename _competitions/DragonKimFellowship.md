@@ -13,8 +13,36 @@ contentImage: "/img/updated/competitions/MENTOR A FELLOWSHIP PROJECT.jpg"
 
 ## About the Dragon Kim Fellowship
 
-Sponsored by the Dragon Kim Foundation, the Dragon Kim Fellowship is a nurturing program for social innovation projects aimed at students in grades 9 to 12. The scholarship program is not limited to programming or technology fields but encourages various types of social innovation and entrepreneurial projects. Moreover, the Dragon Kim Fellowship is a valuable experience for young people, significantly enhancing their background for applications to prestigious universities.
 
-### Scholarship Program Details
+The Dragon Kim Fellowship is a program provided by the Dragon Kim Foundation, which operates as a social entrepreneurship incubator. This leadership training program is tailored for high school students from grades 9-12. It offers a seven-month experience where participants can develop service projects that impact their communities. Students involved in the fellowship receive training, mentorship, and financial support, with grants up to $5,000 to help launch their initiatives. The fellowship aims to inspire youth to impact their communities while discovering and pursuing their passions .
 
-Student teams need to apply in the fall with an idea for a service project. Selected projects will be invited to join the scholarship program group from March to August. During the leadership training program, each student team will receive up to $5,000 in start-up funds and training provided by the project foundation team to launch their projects.
+
+## Who can apply
+
++ Are currently enrolled as a high school student in California, Nevada, or Arizona
+
++ Have an idea for addressing a need or problem in your community
+
++ Have a passion or talent you want to use to empower others
+
++ Are willing to step out of your comfort zone to grow
+
++ Want to learn and implement the ins and outs of running a business
+
++ Collaborate well with others
+
++ Are available to launch your service project in the summer (March-August)
+
++ Can attend all of our program dates
+
+## Application Process
+
+st=>start: Ensure Eligibility
+op=>operation: Attend An Inspiration Session (optional)
+op=>operation: Complete Online Application
+op=>operation: Dragon Finalists Interview
+e=>end: Accept Invitation to be a Dragon Fellow
+
+
+ 
+
