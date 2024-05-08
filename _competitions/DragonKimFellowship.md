@@ -41,7 +41,7 @@ The Dragon Kim Fellowship is a program provided by the Dragon Kim Foundation, wh
 st=>start: Ensure Eligibility
 op=>operation: Attend An Inspiration Session (optional)
 op=>operation: Complete Online Application
-op=>operation: Dragon Finalists Interview
+cond=>condition:  Dragon Finalists Interview
 e=>end: Accept Invitation to be a Dragon Fellow
 
 
