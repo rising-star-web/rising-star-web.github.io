@@ -18,14 +18,14 @@ layout: default
         <div class="mx-2">
           <label for="locationFilter"></label>
           <select id="locationFilter" class="form-select">
-            <option value="all">All Locations</option>
+            <option value="all">{{ site.data.summercamp[page.locale].summer.locationFilter }}</option>
             <!-- Options will be added dynamically -->
           </select>
         </div>
         <div class="mx-2">
           <label for="gradeFilter"></label>
           <select id="gradeFilter" class="form-select">
-            <option value="all">Select Grade</option>
+            <option value="all">{{ site.data.summercamp[page.locale].summer.gradeFilter }}</option>
             <!-- Options will be added dynamically -->
           </select>
         </div>
@@ -74,6 +74,10 @@ layout: default
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"
   integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 <script>
+  var preference = window.location.href.indexOf("cn") == -1 ? "en" : "cn";
+  var fileToFetch = preference === "cn" ? "/assets/courses_cn.json" : "/assets/courses.json";
+
+
   $(document).ready(function () {
     // Adjust table on window resize
     // adjustTableForMobile();
@@ -118,8 +122,10 @@ layout: default
     fetchAndApplyFilters(); // This replaces the initial call to populateGrid
   });
 
+
+
   // Fetch the courses data
-  $.getJSON("/assets/courses.json", function (data) {
+  $.getJSON(fileToFetch, function (data) {
     var coursesData = Object.values(data).flat();
     // Get all unique grades
     var grades = new Set();
@@ -149,7 +155,7 @@ layout: default
   function fetchJSONData() {
     return $.when(
       $.getJSON("/assets/dates.json"),
-      $.getJSON("/assets/courses.json")
+      $.getJSON(fileToFetch)
     );
   }
 
@@ -181,7 +187,7 @@ layout: default
     });
 
     $headerRow.append(
-      '<th class="d-none d-xl-table-cell" style="vertical-align: middle; width: 30%;">Course Name</th>'
+      '<th class="d-none d-xl-table-cell" style="vertical-align: middle; width: 30%;">{{ site.data.summercamp[page.locale].summer.courseName }}</th>'
     );
 
     var dateHeaders = Object.values(datesData)
@@ -227,7 +233,7 @@ layout: default
           //var $detailsCell = $('<td colspan="100%">');
           //var $dateCell = $("<td>");
           Object.entries(course.Dates).forEach(([date, link]) => {
-            var $dateInfo = $("<p>").text(date + " - Join Today");
+            var $dateInfo = $("<p>").text(date + " -  {{ site.data.summercamp[page.locale].summer.joinToday }}");
             var $registerLink = $("<a>", {
               href: link,
               text: "Register",
@@ -305,25 +311,25 @@ layout: default
       var $detailsContainer = $('<div class="card-body p-4 p-md-2" style="text-align: center;">').append(
         $("<strong>").text(course.Name),
         $("<div>", { style: "font-size: 0.8em;" }).html(
-          "Grade: " + course.Grade + "<br>Price: $" + course.Price
+          "{{ site.data.summercamp[page.locale].summer.grade }}: " + course.Grade + "<br>{{ site.data.summercamp[page.locale].summer.price }}: $" + course.Price
         ),
         $("<div>", { class: "d-block d-xl-none" })
           .html(
-            "Available Dates: " +
+            "{{ site.data.summercamp[page.locale].summer.availableDate }}: " +
             allDateRanges
           )
           .css("font-size", "0.8em"),
         $("<a>", {
           href: "#",
           class: "text-primary",
-          text: "Learn More",
+          text: " {{ site.data.summercamp[page.locale].summer.learnMore }}",
           click: function (e) {
             e.preventDefault();
             $("#myModal").find("#modalIframe").attr("src", course.CourseInfo);
             $("#myModal").modal("show");
           },
         }).css("font-size", "0.8em"),
-        $('<br/><a class="d-block d-xl-none" href="https://jinshuju.net/f/EhrT96">Join Today</a>').css("font-size", "0.8em"),
+        $('<br/><a class="d-block d-xl-none" href="https://jinshuju.net/f/EhrT96"> {{ site.data.summercamp[page.locale].summer.joinToday }}</a>').css("font-size", "0.8em"),
 
       );
 
@@ -345,7 +351,7 @@ layout: default
           var $registerText = $('<a>', {
             href: registerLink,
             class: "text-primary card py-2",
-            html: '✓<br><span style="font-size: 0.75em; color: #007bff;">Join Today</span>',
+            html: '✓<br><span style="font-size: 0.75em; color: #007bff;"> {{ site.data.summercamp[page.locale].summer.joinToday }}</span>',
             target: "_blank",
           });
           $row.append($('<td style="width: 5%;">').append($registerText));

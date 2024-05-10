@@ -4,3 +4,11 @@ summer:
   header: 2024年夏令营注册
   lead: 我们的夏令营体验在一个有趣的学习环境中提供了各种兴趣课程。
   modal: 课程信息
+  gradeFilter: 年级
+  locationFilter: 地点
+  courseName: 课程名称
+  joinToday: 立即加入
+  learnMore: 了解更多
+  grade: 年级
+  price: 价格
+  availableDate: 开课日期
