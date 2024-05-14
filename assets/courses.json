@@ -439,5 +439,188 @@
         "https://jinshuju.net/f/EhrT96"
       ]
     }
+  ],
+  "Online - EST": [
+    {
+      "Name": "Minecraft Programming and Project Publishing",
+      "Time": ["9am - 12pm", "9am - 12pm", "9am - 12pm", "9am - 12pm", "9am - 12pm"],
+      "CourseInfo": "https://codingmind.com/courses/minecraft-programming-camp",
+      "Price": 500,
+      "Grade": "1-4",
+      "Dates": ["W1", "W3", "W5", "W7", "W9"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },
+    {
+      "Name": "Python Fundamentals and Application Development",
+      "Time": ["9am - 12pm", "9am - 12pm", "9am - 12pm", "9am - 12pm", "9am - 12pm"],
+      "CourseInfo": "https://codingmind.com/courses/python-camp",
+      "Price": 500,
+      "Grade": "5-8",
+      "Dates": ["W1", "W3", "W5", "W7", "W9"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },
+    {
+      "Name": "USACO Algorithm In-Depth Explanation",
+      "Time": ["9am - 12pm", "9am - 12pm", "9am - 12pm", "9am - 12pm", "9am - 12pm"],
+      "CourseInfo": "https://codingmind.com/courses/usaco-1-camp",
+      "Price": 500,
+      "Grade": "9-11",
+      "Dates": ["W1", "W3", "W5", "W7", "W9"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },
+    {
+      "Name": "Exploring the Metaverse - Roblox Programming and Development",
+      "Time": ["9am - 12pm", "9am - 12pm", "9am - 12pm", "9am - 12pm", "9am - 12pm"],
+      "CourseInfo": "https://codingmind.com/courses/roblox-camp",
+      "Price": 500,
+      "Grade": "1-4",
+      "Dates": ["W2", "W4", "W6", "W8", "W10"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },
+    {
+      "Name": "Java Fundamentals and Application Development",
+      "Time": ["9am - 12pm", "9am - 12pm", "9am - 12pm", "9am - 12pm", "9am - 12pm"],
+      "CourseInfo": "https://codingmind.com/courses/java1-camp",
+      "Price": 500,
+      "Grade": "5-8",
+      "Dates": ["W2", "W4", "W6", "W8", "W10"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },
+    {
+      "Name": "AP CSP Sprint Camp",
+      "Time": ["9am - 12pm", "9am - 12pm", "9am - 12pm", "9am - 12pm", "9am - 12pm"],
+      "CourseInfo": "https://codingmind.com/courses/apcsp-camp",
+      "Price": 500,
+      "Grade": "9-11",
+      "Dates": ["W2", "W4", "W6", "W8", "W10"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    }
+  ], "Online - Beijing Time": [
+    {
+      "Name": "Minecraft Programming and Project Publishing",
+      "Time": ["9am - 12pm", "9am - 12pm", "9am - 12pm", "9am - 12pm", "9am - 12pm"],
+      "CourseInfo": "https://codingmind.com/courses/minecraft-programming-camp",
+      "Price": 500,
+      "Grade": "1-4",
+      "Dates": ["W1", "W3", "W5", "W7", "W9"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },
+    {
+      "Name": "Python Fundamentals and Application Development",
+      "Time": ["9am - 12pm", "9am - 12pm", "9am - 12pm", "9am - 12pm", "9am - 12pm"],
+      "CourseInfo": "https://codingmind.com/courses/python-camp",
+      "Price": 500,
+      "Grade": "5-8",
+      "Dates": ["W1", "W3", "W5", "W7", "W9"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },
+    {
+      "Name": "USACO Algorithm In-Depth Explanation",
+      "Time": ["9am - 12pm", "9am - 12pm", "9am - 12pm", "9am - 12pm", "9am - 12pm"],
+      "CourseInfo": "https://codingmind.com/courses/usaco-1-camp",
+      "Price": 500,
+      "Grade": "9-11",
+      "Dates": ["W1", "W3", "W5", "W7", "W9"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },
+    {
+      "Name": "Exploring the Metaverse - Roblox Programming and Development",
+      "Time": ["9am - 12pm", "9am - 12pm", "9am - 12pm", "9am - 12pm", "9am - 12pm"],
+      "CourseInfo": "https://codingmind.com/courses/roblox-camp",
+      "Price": 500,
+      "Grade": "1-4",
+      "Dates": ["W2", "W4", "W6", "W8", "W10"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },
+    {
+      "Name": "Java Fundamentals and Application Development",
+      "Time": ["9am - 12pm", "9am - 12pm", "9am - 12pm", "9am - 12pm", "9am - 12pm"],
+      "CourseInfo": "https://codingmind.com/courses/java1-camp",
+      "Price": 500,
+      "Grade": "5-8",
+      "Dates": ["W2", "W4", "W6", "W8", "W10"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },
+    {
+      "Name": "AP CSP Sprint Camp",
+      "Time": ["9am - 12pm", "9am - 12pm", "9am - 12pm", "9am - 12pm", "9am - 12pm"],
+      "CourseInfo": "https://codingmind.com/courses/apcsp-camp",
+      "Price": 500,
+      "Grade": "9-11",
+      "Dates": ["W2", "W4", "W6", "W8", "W10"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    }
   ]
 }
