@@ -158,21 +158,22 @@ layout: default
                   {%- assign levelFilter = course.gradeLevel -%}
           {%- endcase -%}
 
-          {% if levelFilter == 'Summer Camp' or levelFilter == '夏令营' %}
-          {% if page.locale == 'en' or page.locale == 'cn' %}
+          {% if levelFilter == 'Summer Camp' or levelFilter == 'Summer'%}
+
+            {% if page.locale == 'en' or page.locale == 'cn' %}
             <!-- This skips rendering for Summer Camp courses in 'en' or 'cn' locales -->
-          {% else %}
+            {% else %}
             <!-- This block will not execute since there are no other locales, but it's here for structure -->
             <div class="isotopeItem {{levelFilter}}">
               {% include course.html %}
             </div>
-          {% endif %}
-        {% else %}
+              {% endif %}
+          {% else %}
           <!-- Render non-Summer Camp courses normally -->
           <div class="isotopeItem {{levelFilter}}">
             {% include course.html %}
           </div>
-        {% endif %}
+          {% endif %}
         {% endfor %}
       </div>
       <!-- /.row -->
