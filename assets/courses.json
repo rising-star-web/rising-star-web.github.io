@@ -130,7 +130,7 @@
       ]
     },
     {
-      "Name": "Introduction to AI (Artificial Intelligence) and Practical Big Data Processing",
+      "Name": "Generative AI and Large Language Models",
       "Time": [
         "9am - 12pm",
         "1pm - 4pm",
@@ -249,7 +249,7 @@
       "Time": ["9am - 4pm", "9am - 4pm", "9am - 4pm", "9am - 4pm", "9am - 4pm"],
       "CourseInfo": "https://codingmind.com/courses/science-fair-camp",
       "Price": 1000,
-      "Grade": "6-9",
+      "Grade": "1-11",
       "Dates": ["W1", "W3", "W5", "W7", "W9"],
       "Registration Links": [
         "https://jinshuju.net/f/EhrT96",
@@ -264,7 +264,7 @@
       "Time": ["9am - 4pm", "9am - 4pm", "9am - 4pm", "9am - 4pm", "9am - 4pm"],
       "CourseInfo": "https://codingmind.com/courses/startup-camp",
       "Price": 1000,
-      "Grade": "6-9",
+      "Grade": "1-11",
       "Dates": ["W1", "W3", "W5", "W7", "W9"],
       "Registration Links": [
         "https://jinshuju.net/f/EhrT96",
@@ -279,7 +279,7 @@
       "Time": ["9am - 4pm", "9am - 4pm", "9am - 4pm", "9am - 4pm", "9am - 4pm"],
       "CourseInfo": "https://codingmind.com/courses/3d-printing-camp",
       "Price": 1000,
-      "Grade": "2-5",
+      "Grade": "1-11",
       "Dates": ["W2", "W4", "W6", "W8", "W10"],
       "Registration Links": [
         "https://jinshuju.net/f/EhrT96",
@@ -294,7 +294,7 @@
       "Time": ["9am - 4pm", "9am - 4pm", "9am - 4pm", "9am - 4pm", "9am - 4pm"],
       "CourseInfo": "https://codingmind.com/courses/raspberry-pi-camp",
       "Price": 1000,
-      "Grade": "2-5",
+      "Grade": "1-11",
       "Dates": ["W2", "W4", "W6", "W8", "W10"],
       "Registration Links": [
         "https://jinshuju.net/f/EhrT96",
@@ -320,11 +320,13 @@
       "Grade": "1-4",
       "Dates": ["W1", "W3", "W6", "W8", "W9"],
       "Registration Links": [
+
         "https://jinshuju.net/f/EhrT96",
         "https://jinshuju.net/f/EhrT96",
         "https://jinshuju.net/f/EhrT96",
         "https://jinshuju.net/f/EhrT96",
         "https://jinshuju.net/f/EhrT96"
+
       ]
     },
     {
@@ -348,7 +350,152 @@
         "https://jinshuju.net/f/EhrT96",
         "https://jinshuju.net/f/EhrT96"
       ]
+    },
+    {
+      "Name":"Lego Robotics Programming Challenge",
+      "Time": [
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/courses/lego-mindstorm-camp",
+      "Price": 500,
+      "Grade": "1-4",
+      "Dates": ["W2", "W4", "W6", "W8", "W10"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },
+    {
+      "Name":"Mobile Internet Applications - Mobile App Development",
+      "Time": [
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/courses/app-thunkable-camp",
+      "Price": 500,
+      "Grade": "1-4",
+      "Dates": ["W1", "W3", "W5", "W7", "W9"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },
+    {
+      "Name": "Tech Startups 101: Young Entrepreneurs' Journey",
+      "Time": ["9am - 4pm", "9am - 4pm", "9am - 4pm", "9am - 4pm", "9am - 4pm"],
+      "CourseInfo": "https://codingmind.com/courses/startup-camp",
+      "Price": 1000,
+      "Grade": "1-8",
+      "Dates": ["W2", "W4", "W6", "W8", "W10"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },
+    {
+      "Name": "Python Fundamentals and Application Development",
+      "Time": [
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm"
+      ],
+      "CourseInfo": "https://codingmind.com/courses/python-camp",
+      "Price": 500,
+      "Grade": "5-8",
+
+      "Dates": ["W1", "W3", "W6", "W8", "W9"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },
+    {
+      "Name": "Web Development and Website Construction",
+      "Time": [
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/courses/web-camp",
+      "Price": 500,
+      "Grade": "5-8",
+
+      "Dates": ["W1", "W3", "W5", "W7", "W9"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },
+    {
+      "Name": "Introduction to AI (Artificial Intelligence) and Practical Big Data Processing",
+      "Time": [
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm"
+      ],
+      "CourseInfo": "https://codingmind.com/courses/ai-camp",
+      "Price": 500,
+      "Grade": "5-8",
+
+      "Dates": ["W2", "W4", "W5", "W7", "W10"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },
+    {
+      "Name": "Advanced Practice in Metaverse Unity Development",
+      "Time": [
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/courses/unity-camp",
+      "Price": 500,
+      "Grade": "5-8",
+      "Dates": ["W2", "W4", "W6", "W8", "W10"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
     }
+
   ],
   "Diamond Bar": [
     {
@@ -363,7 +510,7 @@
       "CourseInfo": "https://codingmind.com/courses/minecraft-programming-camp",
       "Price": 500,
       "Grade": "1-4",
-      "Dates": ["W1", "W3", "W6", "W8", "W9"],
+      "Dates": ["W0", "W2", "W5", "W7", "W8"],
       "Registration Links": [
         "https://jinshuju.net/f/EhrT96",
         "https://jinshuju.net/f/EhrT96",
@@ -385,7 +532,216 @@
       "Price": 500,
       "Grade": "1-4",
 
-      "Dates": ["W2", "W4", "W5", "W7", "W10"],
+      "Dates": ["W1", "W3", "W4", "W6", "W9"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },    
+    {
+      "Name":"Mobile Internet Applications - Mobile App Development",
+      "Time": [
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/courses/app-thunkable-camp",
+      "Price": 500,
+      "Grade": "1-4",
+      "Dates": ["W0", "W2", "W4", "W6", "W8"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },
+    {
+      "Name": "VEX IQ Robotics Programming Challenge",
+      "Time": [
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/courses/vex-iq-camp",
+      "Price": 500,
+      "Grade": "1-4",
+      "Dates": ["W1", "W3", "W5", "W7", "W9"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },
+    {
+      "Name": "Tech Startups 101: Young Entrepreneurs' Journey",
+      "Time": ["9am - 4pm", "9am - 4pm", "9am - 4pm", "9am - 4pm", "9am - 4pm"],
+      "CourseInfo": "https://codingmind.com/courses/startup-camp",
+      "Price": 1000,
+      "Grade": "1-8",
+      "Dates": ["W1", "W3", "W5", "W7", "W9"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },
+    {
+      "Name": "Python Fundamentals and Application Development",
+      "Time": [
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm"
+      ],
+      "CourseInfo": "https://codingmind.com/courses/python-camp",
+      "Price": 500,
+      "Grade": "5-8",
+
+      "Dates": ["W0", "W2", "W5", "W7", "W8"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },
+    {
+      "Name": "Web Development and Website Construction",
+      "Time": [
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/courses/web-camp",
+      "Price": 500,
+      "Grade": "5-8",
+
+      "Dates": ["W0", "W2", "W4", "W6", "W8"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },
+    {
+      "Name": "Introduction to AI (Artificial Intelligence) and Practical Big Data Processing",
+      "Time": [
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm"
+      ],
+      "CourseInfo": "https://codingmind.com/courses/ai-camp",
+      "Price": 500,
+      "Grade": "5-8",
+
+      "Dates": ["W1", "W3", "W4", "W6", "W9"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },
+    {
+      "Name": "Advanced Practice in Metaverse Unity Development",
+      "Time": [
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/courses/unity-camp",
+      "Price": 500,
+      "Grade": "5-8",
+      "Dates": ["W1", "W3", "W5", "W7", "W9"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },
+    {
+      "Name": "USACO Algorithm In-Depth Explanation",
+      "Time": ["9am - 12pm", "9am - 12pm", "9am - 12pm", "9am - 12pm", "9am - 12pm"],
+      "CourseInfo": "https://codingmind.com/courses/usaco-1-camp",
+      "Price": 500,
+      "Grade": "9-11",
+      "Dates": ["W0", "W2", "W4", "W6", "W8"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },{
+      "Name": "USACO Practical Training",
+      "Time": [
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm"
+      ],
+      "CourseInfo": "https://codingmind.com/courses/usaco-2-camp",
+      "Price": 500,
+      "Grade": "9-11",
+      "Dates": ["W1", "W3", "W5", "W7", "W9"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },
+    {
+      "Name": "AP CSP Sprint Camp",
+      "Time": ["1pm - 4pm", "1pm - 4pm", "1pm - 4pm", "1pm - 4pm", "1pm - 4pm"],
+      "CourseInfo": "https://codingmind.com/courses/apcsp-camp",
+      "Price": 500,
+      "Grade": "9-11",
+      "Dates": ["W0", "W2", "W4", "W6", "W8"],
+      "Registration Links": [
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96",
+        "https://jinshuju.net/f/EhrT96"
+      ]
+    },
+    {
+      "Name": "AP CSA Sprint Camp",
+      "Time": ["1pm - 4pm", "1pm - 4pm", "1pm - 4pm", "1pm - 4pm", "1pm - 4pm"],
+      "CourseInfo": "https://codingmind.com/courses/apcsa-camp",
+      "Price": 500,
+      "Grade": "9-11",
+      "Dates": ["W1", "W3", "W5", "W7", "W9"],
       "Registration Links": [
         "https://jinshuju.net/f/EhrT96",
         "https://jinshuju.net/f/EhrT96",
@@ -394,6 +750,9 @@
         "https://jinshuju.net/f/EhrT96"
       ]
     }
+
+
+
   ],
   "West Lafayette": [
     {

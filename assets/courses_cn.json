@@ -130,7 +130,7 @@
       ]
     },
     {
-      "Name": "AI人工智能初步与大数据处理实战",
+      "Name": "生成式AI与大语言模型",
       "Time": [
         "9am - 12pm",
         "1pm - 4pm",
@@ -249,7 +249,7 @@
       "Time": ["9am - 4pm", "9am - 4pm", "9am - 4pm", "9am - 4pm", "9am - 4pm"],
       "CourseInfo": "https://codingmind.com/cn/courses/science-fair-camp",
       "Price": 1000,
-      "Grade": "6-9",
+      "Grade": "1-11",
       "Dates": ["W1", "W3", "W5", "W7", "W9"],
       "Registration Links": [
         "https://jinshuju.net/f/TT0aAN",
@@ -264,7 +264,7 @@
       "Time": ["9am - 4pm", "9am - 4pm", "9am - 4pm", "9am - 4pm", "9am - 4pm"],
       "CourseInfo": "https://codingmind.com/cn/courses/startup-camp",
       "Price": 1000,
-      "Grade": "6-9",
+      "Grade": "1-11",
       "Dates": ["W1", "W3", "W5", "W7", "W9"],
       "Registration Links": [
         "https://jinshuju.net/f/TT0aAN",
@@ -279,7 +279,7 @@
       "Time": ["9am - 4pm", "9am - 4pm", "9am - 4pm", "9am - 4pm", "9am - 4pm"],
       "CourseInfo": "https://codingmind.com/cn/courses/3d-printing-camp",
       "Price": 1000,
-      "Grade": "2-5",
+      "Grade": "1-11",
       "Dates": ["W2", "W4", "W6", "W8", "W10"],
       "Registration Links": [
         "https://jinshuju.net/f/TT0aAN",
@@ -294,7 +294,7 @@
       "Time": ["9am - 4pm", "9am - 4pm", "9am - 4pm", "9am - 4pm", "9am - 4pm"],
       "CourseInfo": "https://codingmind.com/cn/courses/raspberry-pi-camp",
       "Price": 1000,
-      "Grade": "2-5",
+      "Grade": "1-11",
       "Dates": ["W2", "W4", "W6", "W8", "W10"],
       "Registration Links": [
         "https://jinshuju.net/f/TT0aAN",
@@ -348,7 +348,152 @@
         "https://jinshuju.net/f/TT0aAN",
         "https://jinshuju.net/f/TT0aAN"
       ]
+    },
+    {
+      "Name": "Lego机器人编程挑战",
+      "Time": [
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/cn/courses/lego-mindstorm-camp",
+      "Price": 500,
+      "Grade": "1-4",
+      "Dates": ["W2", "W4", "W6", "W8", "W10"],
+      "Registration Links": [
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN"
+      ]
+    },
+    {
+      "Name": "移动互联网应用-手机App开发",
+      "Time": [
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/cn/courses/app-thunkable-camp",
+      "Price": 500,
+      "Grade": "1-4",
+      "Dates": ["W1", "W3", "W5", "W7", "W9"],
+      "Registration Links": [
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN"
+      ]
+    },
+    {
+      "Name": "科技初创公司101-青年软件创业者",
+      "Time": ["9am - 4pm", "9am - 4pm", "9am - 4pm", "9am - 4pm", "9am - 4pm"],
+      "CourseInfo": "https://codingmind.com/cn/courses/startup-camp",
+      "Price": 1000,
+      "Grade": "1-8",
+      "Dates": ["W2", "W4", "W6", "W8", "W10"],
+      "Registration Links": [
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN"
+      ]
+    },
+    {
+      "Name": "Python基础与应用程序开发",
+      "Time": [
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm"
+      ],
+      "CourseInfo": "https://codingmind.com/cn/courses/python-camp",
+      "Price": 500,
+      "Grade": "5-8",
+
+      "Dates": ["W1", "W3", "W6", "W8", "W9"],
+      "Registration Links": [
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN"
+      ]
+    },
+    {
+      "Name": "Web开发与网站建设",
+      "Time": [
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/cn/courses/web-camp",
+      "Price": 500,
+      "Grade": "5-8",
+
+      "Dates": ["W1", "W3", "W5", "W7", "W9"],
+      "Registration Links": [
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN"
+      ]
+    },
+    {
+      "Name": "AI人工智能初步与大数据处理实战",
+      "Time": [
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm"
+      ],
+      "CourseInfo": "https://codingmind.com/cn/courses/ai-camp",
+      "Price": 500,
+      "Grade": "5-8",
+
+      "Dates": ["W2", "W4", "W5", "W7", "W10"],
+      "Registration Links": [
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN"
+      ]
+    },
+    {
+      "Name": "元宇宙高阶实践Unity开发",
+      "Time": [
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/cn/courses/unity-camp",
+      "Price": 500,
+      "Grade": "5-8",
+      "Dates": ["W2", "W4", "W6", "W8", "W10"],
+      "Registration Links": [
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN"
+      ]
     }
+
   ],
   "钻石吧校区": [
     {
@@ -363,7 +508,7 @@
       "CourseInfo": "https://codingmind.com/cn/courses/minecraft-programming-camp",
       "Price": 500,
       "Grade": "1-4",
-      "Dates": ["W1", "W3", "W6", "W8", "W9"],
+      "Dates": ["W0", "W2", "W5", "W7", "W8"],
       "Registration Links": [
         "https://jinshuju.net/f/TT0aAN",
         "https://jinshuju.net/f/TT0aAN",
@@ -385,7 +530,223 @@
       "Price": 500,
       "Grade": "1-4",
 
-      "Dates": ["W2", "W4", "W5", "W7", "W10"],
+      "Dates": ["W1", "W3", "W4", "W6", "W9"],
+      "Registration Links": [
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN"
+      ]
+    },
+    {
+      "Name": "移动互联网应用-手机App开发",
+      "Time": [
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/cn/courses/app-thunkable-camp",
+      "Price": 500,
+      "Grade": "1-4",
+      "Dates": ["W0", "W2", "W4", "W6", "W8"],
+      "Registration Links": [
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN"
+      ]
+    },
+    {
+      "Name": "VEX IQ 机器人编程挑战",
+      "Time": [
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/cn/courses/vex-iq-camp",
+      "Price": 500,
+      "Grade": "1-4",
+      "Dates": ["W1", "W3", "W5", "W7", "W9"],
+      "Registration Links": [
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN"
+      ]
+    },
+    {
+      "Name": "科技初创公司101-青年软件创业者",
+      "Time": ["9am - 4pm", "9am - 4pm", "9am - 4pm", "9am - 4pm", "9am - 4pm"],
+      "CourseInfo": "https://codingmind.com/cn/courses/startup-camp",
+      "Price": 1000,
+      "Grade": "1-8",
+      "Dates": ["W1", "W3", "W5", "W7", "W9"],
+      "Registration Links": [
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN"
+      ]
+    },
+    {
+      "Name": "Python基础与应用程序开发",
+      "Time": [
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm"
+      ],
+      "CourseInfo": "https://codingmind.com/cn/courses/python-camp",
+      "Price": 500,
+      "Grade": "5-8",
+
+      "Dates": ["W0", "W2", "W5", "W7", "W8"],
+      "Registration Links": [
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN"
+      ]
+    },
+    {
+      "Name": "Web开发与网站建设",
+      "Time": [
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/cn/courses/web-camp",
+      "Price": 500,
+      "Grade": "5-8",
+
+      "Dates": ["W0", "W2", "W4", "W6", "W8"],
+      "Registration Links": [
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN"
+      ]
+    },
+    {
+      "Name": "AI人工智能初步与大数据处理实战",
+      "Time": [
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm"
+      ],
+      "CourseInfo": "https://codingmind.com/cn/courses/ai-camp",
+      "Price": 500,
+      "Grade": "5-8",
+
+      "Dates": ["W1", "W3", "W4", "W6", "W9"],
+      "Registration Links": [
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN"
+      ]
+    },
+    {
+      "Name": "元宇宙高阶实践Unity开发",
+      "Time": [
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/cn/courses/unity-camp",
+      "Price": 500,
+      "Grade": "5-8",
+      "Dates": ["W1", "W3", "W5", "W7", "W9"],
+      "Registration Links": [
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN"
+      ]
+    },
+    {
+      "Name": "USACO 算法精讲",
+      "Time": [
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm"
+      ],
+      "CourseInfo": "https://codingmind.com/cn/courses/usaco-1-camp",
+      "Price": 500,
+      "Grade": "9-11",
+      "Dates": ["W0", "W2", "W4", "W6", "W8"],
+      "Registration Links": [
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN"
+      ]
+    },
+    {
+      "Name": "USACO 实战特训",
+      "Time": [
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm"
+      ],
+      "CourseInfo": "https://codingmind.com/cn/courses/usaco-2-camp",
+      "Price": 500,
+      "Grade": "9-11",
+      "Dates": ["W1", "W3", "W5", "W7", "W9"],
+      "Registration Links": [
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN"
+      ]
+    },
+    {
+      "Name": "AP CSP 冲刺营",
+      "Time": ["1pm - 4pm", "1pm - 4pm", "1pm - 4pm", "1pm - 4pm", "1pm - 4pm"],
+      "CourseInfo": "https://codingmind.com/cn/courses/apcsp-camp",
+      "Price": 500,
+      "Grade": "9-11",
+      "Dates": ["W0", "W2", "W4", "W6", "W8"],
+      "Registration Links": [
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN",
+        "https://jinshuju.net/f/TT0aAN"
+      ]
+    },
+    {
+      "Name": "AP CSA 冲刺营",
+      "Time": ["1pm - 4pm", "1pm - 4pm", "1pm - 4pm", "1pm - 4pm", "1pm - 4pm"],
+      "CourseInfo": "https://codingmind.com/cn/courses/apcsa-camp",
+      "Price": 500,
+      "Grade": "9-11",
+      "Dates": ["W1", "W3", "W5", "W7", "W9"],
       "Registration Links": [
         "https://jinshuju.net/f/TT0aAN",
         "https://jinshuju.net/f/TT0aAN",
@@ -394,6 +755,7 @@
         "https://jinshuju.net/f/TT0aAN"
       ]
     }
+
   ],
   "西拉法叶校区": [
     {
