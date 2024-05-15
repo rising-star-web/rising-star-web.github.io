@@ -158,7 +158,7 @@ layout: default
                   {%- assign levelFilter = course.gradeLevel -%}
           {%- endcase -%}
 
-          {% if levelFilter == 'Summer Camp' %}
+          {% if levelFilter == 'Summer Camp' or levelFilter == '夏令营' %}
           {% if page.locale == 'en' or page.locale == 'cn' %}
             <!-- This skips rendering for Summer Camp courses in 'en' or 'cn' locales -->
           {% else %}

@@ -70,6 +70,7 @@ layout: default
                         </div>
     
                         <!-- Preferred Experience -->
+                        {% if page.experiences %}
                         <div class="col-xl-6">
                             <h3 class="h2 mb-3 mt-md-3 mt-6">Preferred Experience</h3>
                             <div class="row gy-3 gx-xl-8">
@@ -84,8 +85,10 @@ layout: default
                             </div>
                             <!--/.row -->
                         </div>
+                        {% endif %}
 
                         <!-- Benefits -->
+                        {% if page.benefits %}
                         <div class="col-xl-6">
                             <h3 class="h2 mb-3 mt-md-3 mt-6">Benefits</h3>
                             <div class="row gy-3 gx-xl-8">
@@ -100,6 +103,27 @@ layout: default
                             </div>
                             <!--/.row -->
                         </div>
+                        {% endif %}
+
+                        <!-- Apply now -->
+                        {% if page.applynow %}
+                        <div class="col-xl-6">
+                            <h3 class="h2 mb-3 mt-md-3 mt-6">To Apply</h3>
+                            <div class="row gy-3 gx-xl-8">
+                                <div class="col">
+                                    <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
+                                        {% for apply in page.applynow %}
+                                            <li><span><i class="uil uil-clock"></i></span><span>{{apply.text}}</span></li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                <!--/column -->
+                            </div>
+                            <!--/.row -->
+                        </div>
+                        {% endif %}
+
+                        
 
                     </div>
                     
