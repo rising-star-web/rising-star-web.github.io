@@ -4,8 +4,8 @@ summer:
   header: 2024 Summer Camp Registration
   lead: Our summer camp experience offers courses for every interest in a fun, learning environment.
   modal: Course Info
-  gradeFilter: Grade
-  locationFilter: Location
+  gradeFilter: All Grade
+  locationFilter: All Location
   coursenName: Course Name
   joinToday: Join Today
   learnMore: Learn More
