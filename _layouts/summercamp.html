@@ -18,7 +18,7 @@ layout: default
         <div class="mx-2">
           <label for="locationFilter"></label>
           <select id="locationFilter" class="form-select">
-            <option value="all">{{ site.data.summercamp[page.locale].summer.locationFilter }}</option>
+            <!-- <option value="all">{{ site.data.summercamp[page.locale].summer.locationFilter }}</option> -->
             <!-- Options will be added dynamically -->
           </select>
         </div>
@@ -198,6 +198,15 @@ layout: default
         return acc;
       }, [])
       .sort();
+    
+      var dateHeaders2 = Object.values(datesData)
+      .reduce((acc, date) => {
+        if (!acc.includes(date)) {
+          acc.push(date);
+        }
+        return acc;
+      }, [])
+      .sort();
 
     dateHeaders.forEach((date) => {
       $headerRow.append(
@@ -329,7 +338,7 @@ layout: default
             $("#myModal").modal("show");
           },
         }).css("font-size", "0.8em"),
-        $('<br/><a class="d-block d-xl-none" href="https://jinshuju.net/f/EhrT96"> {{ site.data.summercamp[page.locale].summer.joinToday }}</a>').css("font-size", "0.8em"),
+        $('<br/><a class="d-block d-xl-none" href="' + course.RegistrationLinks[0] + '"> {{ site.data.summercamp[page.locale].summer.joinToday }}</a>').css("font-size", "0.8em"),
 
       );
 
