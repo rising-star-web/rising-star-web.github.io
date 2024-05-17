@@ -51,5 +51,3 @@ The Congressional App Challenge (CAC) is orchestrated by the U.S. Congress' Inte
 + All submitted materials must be in English.
 + An individual may only participate in one entry, whether alone or as part of a team.
 + Entries must not contain obscene, defamatory, or overtly tasteless content, or disrespect public morals or conduct, or negatively impact the reputation of the congressional district.
-
-This streamlined approach ensures clarity and reduces redundancy, aligning with the formal guidelines of the Congressional App Challenge.
