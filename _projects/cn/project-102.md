@@ -17,4 +17,5 @@ projectURL: "https://apps.apple.com/us/app/artwise-draft/id6464454241"
 awardsDesc: "该学员凭借优异的项目获得卡耐基梅隆大学录取"
 contentImage: "/img/updated/projects/截屏2024-05-20 22.25.37.png"
 contentImage2: "/img/updated/projects/截屏2024-05-20 22.25.29.png"
+
 ---
