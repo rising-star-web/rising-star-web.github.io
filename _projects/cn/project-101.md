@@ -1,8 +1,9 @@
+---
 layout: student_project_detail
 
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/截屏2024-05-21 19.19.01.png"
-pagePostDate: "2024年5月22日"
+pagePostDate: "2024年5月23日"
 studentName: "Helen"
 projectName: "智能植物湿度检测应用斩获CMU"
 projectCategory: "App Development"
