@@ -19,3 +19,4 @@ awardsDesc: "学员创新作品"
 contentImage: "/img/updated/projects/richard.jpg"
 contentImage2: "/img/updated/projects/截屏2024-02-05 17.08.27.png"
 
+---
