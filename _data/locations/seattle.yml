@@ -1,0 +1,7 @@
+contact:
+  email: seattle@codingmind.com
+  phone: (123) 456-7890
+  address: |
+    123 Address, St<br/>  
+    Seattle, WA, 12345
+paymenturl: https://billing.stripe.com/p/login/eVa01A0XvdnJfLybII

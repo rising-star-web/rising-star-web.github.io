@@ -84,13 +84,12 @@ layout: default
                 <div class="swiper-container blog grid-view" data-margin="30" data-dots="true" data-items-md="2" data-items-xs="1">
                   <div class="swiper">
                     <div class="swiper-wrapper mb-12">
-                      {%- assign projects = site.projects | where:'projectCategory', page.projectCategory | where: "locale", page.locale %}
-                      {% for project in projects %}
-                      {% unless project.projectName == page.projectName %}
+                      {%- assign filtered_projects = site.projects | where:'projectCategory', page.projectCategory | where: "locale", page.locale -%}
+                      {%- assign random_projects = filtered_projects | where_exp: "project", "project.projectName != page.projectName" | sample: 10 -%}
+                      {% for project in random_projects %}
                       <div class="swiper-slide">
                         {% include projectslide.html %}
                       </div>
-                      {% endunless %}
                       {% endfor %}
                     </div>
                     <!--/.swiper-wrapper -->

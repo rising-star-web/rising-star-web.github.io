@@ -1,5 +1,14 @@
-{% assign parts = page.url | split: '/' %}
-{% assign location_name = parts[1] %}
+{% if page.url contains '/cn/' %}
+    {% assign parts  = page.url | split: '/' %}
+    {% assign location_name = parts[2] %}
+    {% assign translated_url = page.url | replace: '/cn/', '/' %}
+{% else %}
+    {% assign parts  = page.url | split: '/' %}
+    {% assign location_name = parts[1] %}
+    {% assign translated_url = '/cn' | append: page.url %}
+{% endif %}
+
+{% assign has_translation = site.locations | where_exp: "item", "item.url == translated_url" | first %}
 
 {%- assign location_data = site.data.locations[location_name] -%}
 
@@ -20,6 +29,20 @@
         </div>
         <div class="navbar-other ms-auto">
           <ul class="navbar-nav flex-row align-items-center">
+            {% if has_translation %}
+            <li class="nav-item language-select text-uppercase d-lg-none">
+              <a class="nav-link" role="button"  
+              href="
+              {% if page.url contains '/cn/' %}
+                  {{ page.url | replace: '/cn/', '/' }}
+              {% else %}
+                  {{ site.data.nav.en.nav.switchLangURL }}{{ page.url | remove_first: '/' }}
+              {% endif %}
+              ">  
+              {{ site.data.nav[page.locale].nav.switchLang }}
+              </a>
+            </li>
+            {% endif %}
             <li class="nav-item d-lg-none">
               <button class="hamburger offcanvas-nav-btn"><span></span></button>
             </li>
@@ -38,7 +61,7 @@
           </div>
           <div class="offcanvas-body d-flex flex-column h-100">
             <ul class="navbar-nav">
-              {% assign pages = site.locations | where_exp: "item", "item.path contains location_name" | sort: "order"
+              {% assign pages = site.locations | where_exp: "item", "item.path contains location_name"| where: "locale", page.locale | sort: "order"
               %}
 
               {% for page in pages %}
@@ -76,6 +99,20 @@
         <!-- /.navbar-collapse -->
         <div class="navbar-other w-100 d-flex">
           <ul class="navbar-nav flex-row align-items-center ms-auto">
+            {% if has_translation %}
+            <li class="nav-item language-select text-uppercase d-none d-md-block">
+              <a class="nav-link" role="button"  
+              href="
+              {% if page.url contains '/cn/' %}
+                  {{ page.url | replace: '/cn/', '/' }}
+              {% else %}
+                  {{ site.data.nav.en.nav.switchLangURL }}{{ page.url | remove_first: '/' }}
+              {% endif %}
+              ">  
+              {{ site.data.nav[page.locale].nav.switchLang }}
+              </a>
+            </li>
+            {% endif %}
             <li class="nav-item d-none d-lg-block">
               <a href="{{ location_data.paymenturl }}" target="_blank" class="btn btn-sm btn-navy rounded-pill">Payment
                 Portal</a>
