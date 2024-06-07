@@ -285,8 +285,9 @@ layout: default
           };
 
           // Populate dates where course is available
-          course.Dates.forEach((dateCode) => {
-            entry.Dates[datesData[dateCode]] = course["Registration Links"][0];
+          course.Dates.forEach((dateCode, index) => {
+            entry.Dates[datesData[dateCode]] = course["Registration Links"][index];
+            console.log('links: ', course["Registration Links"][index])
           });
 
           courseInfoMap.set(course.Name, entry);
