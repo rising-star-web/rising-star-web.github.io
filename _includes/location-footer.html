@@ -1,6 +1,10 @@
-
-{% assign parts  = page.url | split: '/' %}
-{% assign location_name = parts[1] %}
+{% if page.url contains '/cn/' %}
+    {% assign parts  = page.url | split: '/' %}
+    {% assign location_name = parts[2] %}
+{% else %}
+    {% assign parts  = page.url | split: '/' %}
+    {% assign location_name = parts[1] %}
+{% endif %}
 
 {%- assign location_data = site.data.locations[location_name] -%}
  
