@@ -1,0 +1,10 @@
+name: CN
+
+course-info-register:
+  courseName: 课程名称
+  instructor: 授课老师
+  courseTime: 上课时间
+  courseDate: 课程日期
+  totalClasses: 课程共计课时
+  price: 价格
+  register: 报名

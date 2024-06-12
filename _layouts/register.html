@@ -1,0 +1,108 @@
+---
+layout: default
+---
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link href="./img/favicon.png" rel="icon">
+    <title>注册 | Coding Minds Academy</title>
+    <meta name="keywords" content="青少年编程, 课后编程辅导, 编程思维, 编程竞赛">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="编程助力名校申请。在Coding Minds Academy, 我们以亲身实践的方式教授编程和计算思维。 学生将可以玩得开心，建立自己的应用程序，并与其他学生分享他们对编码的热情和兴趣。">
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/css/socicon.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/css/flickity.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/css/theme.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/css/custom.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i%7CMaterial+Icons" rel="stylesheet"> -->
+</head>
+<body>
+    <a id="start"></a>
+    <div class="nav-container ">
+        <!-- Navigation Code Here -->
+    </div>
+
+    <div class="main-container">
+        <section class="text-center height-50">
+            <div class="container pos-vertical-center">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <h1>{{ site.data.register[page.locale].register.header }}</h1>
+                    </div>
+                </div>
+            </div>
+        </section>            
+
+        <section class="text-center height-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="feature__body">
+                            <form id="registerForm">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <input type="email" name="email" placeholder="{{ site.data.register[page.locale].register.email }}" required>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <input type="password" name="password" placeholder="{{ site.data.register[page.locale].register.password }}" required/>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <input type="password" name="confirm_password" placeholder="{{ site.data.register[page.locale].register.confirm_password }}" required/>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <input type='tel' name="phone" placeholder="{{ site.data.register[page.locale].register.phone }}" required/>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" name="firstName" placeholder="{{ site.data.register[page.locale].register.firstname }}" required/>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" name="lastName" placeholder="{{ site.data.register[page.locale].register.lastname }}" required/>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <input type="text" name="grade" placeholder="{{ site.data.register[page.locale].register.grade }}" required/>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <button class="btn btn--primary type--uppercase" type="submit">{{ site.data.register[page.locale].register.register }}</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="loading-indicator" style="display: none;">{{ site.data.register[page.locale].register.loading }}</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>                        
+    </div>
+
+    <footer class="footer-3 text-center-xs space--xs ">
+        <!-- Footer Content Here -->
+    </footer>
+
+    <a class="back-to-top inner-link" href="#start" data-scroll-class="100vh:active">
+        <i class="stack-interface stack-up-open-big"></i>
+    </a>
+
+    <script src="/js/jquery-3.1.1.min.js"></script>
+    <script src="/js/flickity.min.js"></script>
+    <script src="/js/easypiechart.min.js"></script>
+    <script src="/js/parallax.js"></script>
+    <script src="/js/typed.min.js"></script>
+    <script src="/js/datepicker.js"></script>
+    <script src="/js/isotope.min.js"></script>
+    <script src="/js/ytplayer.min.js"></script>
+    <script src="/js/lightbox.min.js"></script>
+    <script src="/js/granim.min.js"></script>
+    <script src="/js/countdown.min.js"></script>
+    <script src="/js/twitterfetcher.min.js"></script>
+    <script src="/js/spectragram.min.js"></script>
+    <script src="/js/smooth-scroll.min.js"></script>
+    <script src="/js/scripts.js"></script>
+    <script src = "/js/register.js"></script>
+</body>
+</html>
+

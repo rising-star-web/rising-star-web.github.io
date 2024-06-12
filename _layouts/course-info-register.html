@@ -1,0 +1,73 @@
+---
+layout: default
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="./img/favicon.png" rel="icon">
+    <title>Coding Minds Students Study Plan</title>
+    <meta name="keywords" content="青少年编程, 课后编程辅导, 编程思维, 编程竞赛, 背景提升">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="编程助力名校申请。在Coding Minds Academy, 我们以亲身实践的方式教授编程和计算思维。 学生将可以玩得开心，建立自己的应用程序，并与其他学生分享他们对编码的热情和兴趣。">
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/css/socicon.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/css/flickity.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/css/theme.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/css/custom.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="icon" href="https://codingmindsacademy.com/img/my/logofav.png" type="image/x-icon">
+</head>
+<body>
+    <section class="space--sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="text-center">
+                        <i class="icon icon-Book color--primary"></i>
+                        <h2 id="courseNameHeader"></h2>
+
+                        <table class="border--round table--alternate-row">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 50%">{{ site.data.course-info-register[page.locale].course-info-register.courseName }}</td>
+                                    <td id="courseName"></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 50%">{{ site.data.course-info-register[page.locale].course-info-register.instructor }}</td>
+                                    <td id="instructorName"></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 50%">{{ site.data.course-info-register[page.locale].course-info-register.courseDate }}</td>
+                                    <td id="courseDates"></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 50%">{{ site.data.course-info-register[page.locale].course-info-register.courseTime }}</td>
+                                    <td id="courseTime"></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 50%">{{ site.data.course-info-register[page.locale].course-info-register.totalClasses }}</td>
+                                    <td id="totalClasses"></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 50%">{{ site.data.course-info-register[page.locale].course-info-register.price }}</td>
+                                    <td id="coursePrice"></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="text-center container">
+                        <a class="btn btn--primary type--uppercase" id="registerLink"><span class="btn__text">{{ site.data.course-info-register[page.locale].course-info-register.register }}</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/js/courseInfo.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,11 @@
+name: EN
+
+course-info-register:
+  courseName: Course Name
+  instructor: Instructor
+  courseTime: Course Time
+  courseDate: Course Date
+  totalClasses: Total Classes
+  price: Price
+  register: Register
+  

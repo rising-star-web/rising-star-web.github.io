@@ -1,5 +1,6 @@
 ---
 layout: student_project_detail
+---
 
 [//]: # (Project Card)
 coverImage: "/img/updated/projects/截屏2024-05-27 19.28.14.png"

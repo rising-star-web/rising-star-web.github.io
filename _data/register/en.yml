@@ -1,0 +1,14 @@
+name: EN
+
+register:
+  header: Sign up a Coding Mind account
+  email: Email
+  password: Password
+  confirm_password: Confirm Password
+  firstname: First Name
+  lastname: Last Name
+  phone: Parent's Phone
+  grade: Grade
+  register: Register
+  loading: Loading...
+

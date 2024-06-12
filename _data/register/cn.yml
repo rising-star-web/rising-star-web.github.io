@@ -1,0 +1,13 @@
+name: CN
+
+register:
+  header: 注册 Coding Mind 账号
+  email: 电子邮箱
+  password: 密码
+  confirm_password: 确认密码
+  firstname: 学生 First Name
+  lastname: 学生 Last Name
+  phone: 家长联系电话
+  grade: 年级
+  register: 注册
+  loading: 加载中...
