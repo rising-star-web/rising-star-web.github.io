@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //console.log("Post data:", postData);
 
     if (accountId) {
+        
       updateAccount(postData, accountId, token);
     } else {
       createAccount(postData);

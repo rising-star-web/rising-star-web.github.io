@@ -102,7 +102,7 @@
         <div class="navbar-other w-100 d-flex ms-auto">
           <ul class="navbar-nav flex-row align-items-center ms-auto">
             <li class="nav-item language-select text-uppercase">
-              <a class="nav-link" role="button"  
+              <!-- <a class="nav-link" role="button"  
               href="
               {% if page.name == "index.html" %}
                 {{ site.data.nav[page.locale].nav.switchLangURL }}{{page.name | replace:'index.html','' }}
@@ -113,7 +113,11 @@
               {% endif %}
               ">  
               {{ site.data.nav[page.locale].nav.switchLang }}
-              </a>
+              </a> -->
+              <a class="nav-link" role="button" href="javascript:void(0);" onclick="switchLanguageWithParams('{{ site.data.nav[page.locale].nav.switchLangURL }}', '{{ page.name }}', '{{ page.collection }}', '{{ page.slug | downcase }}')">
+  {{ site.data.nav[page.locale].nav.switchLang }}
+</a>
+
             </li>
 
             <li class="nav-item d-none d-md-block">
@@ -133,3 +137,23 @@
   </nav>
   <!-- /.navbar -->
 </header>
+<script>
+function switchLanguageWithParams(baseLangURL, pageName, pageCollection, pageSlug) {
+    var currentUrl = new URL(window.location.href);
+    var searchParams = currentUrl.search; // This keeps the query parameters intact.
+    var newPath;
+
+    // Determine the correct path based on page properties
+    if (pageName === "index.html") {
+        newPath = baseLangURL; // Typically points to the root of the language directory
+    } else if (pageCollection.size > 0) {
+        newPath = baseLangURL + pageCollection + '/' + pageSlug;
+    } else {
+        newPath = baseLangURL + pageName.replace('.html', '');
+    }
+
+    // Redirect to the new URL, preserving query parameters
+    window.location.href = newPath + searchParams;
+}
+</script>
+

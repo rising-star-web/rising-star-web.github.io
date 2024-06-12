@@ -69,7 +69,7 @@ function updatePageContent(course, courseId, accountId, token) {
   //document.getElementById("courseTime").innerText = getCourseTime(course);
   document.getElementById("courseDates").innerText =
     course.dateStart.split("T")[0] + " - " + course.dateEnd.split("T")[0];
-  document.getElementById("coursePrice").innerText = course.price;
+  document.getElementById("coursePrice").innerText = "$ "+course.price;
   document.getElementById("totalClasses").innerText = course.totalClasses;
   const link = "/register.html?courseId="+ courseId + "&price=" +course.price + "&accountId=" + accountId + "&token=" + token + "&organizationId=" + organizationId;
   document.getElementById("registerLink").href = link;
