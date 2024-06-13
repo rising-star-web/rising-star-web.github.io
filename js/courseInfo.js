@@ -4,8 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const params = new URLSearchParams(window.location.search);
   const courseId = params.get("course_id");
   const token =
-    "k6s6WghHbQ0sFQMw9YTO5MWDCunX3SNAJu8kksejwO0cP1tEh73glea29CGWExEi"; // Secure this properly in production environments
-
+    "k6s6WghHbQ0sFQMw9YTO5MWDCunX3SNAJu8kksejwO0cP1tEh73glea29CGWExEi"; 
   if (!courseId) {
     console.error("Course ID is missing");
     return;
@@ -71,7 +70,8 @@ function updatePageContent(course, courseId, accountId, token) {
     course.dateStart.split("T")[0] + " - " + course.dateEnd.split("T")[0];
   document.getElementById("coursePrice").innerText = "$ "+course.price;
   document.getElementById("totalClasses").innerText = course.totalClasses;
-  const link = "/register.html?courseId="+ courseId + "&price=" +course.price + "&accountId=" + accountId + "&token=" + token + "&organizationId=" + organizationId;
+  var chinese = window.location.href.includes("cn");
+  const link = (chinese ? "/cn" : "") + "/register.html?courseId="+ courseId + "&price=" +course.price + "&accountId=" + accountId + "&token=" + token + "&organizationId=" + organizationId;
   document.getElementById("registerLink").href = link;
 
 }
