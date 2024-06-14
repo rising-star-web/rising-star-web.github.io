@@ -20,8 +20,6 @@ requirements:
 - text: "Plus 6 months experience in the execution of marketing strategies and social media programs; the design of advertisement for digital and print distribution; responding respond to feedback and comments on social media; and coordinating with news agency and media platforms. "
 - text: "Knowledge of media production, communication, and dissemination techniques and methods."
 - text: "Skills in using Adobe Systems, PowerPoint, and Excel."
-- text: "Enjoy working with kids of all ages."
-- text: "Exercise patience and humility."
 # experiences:
 # - text: "Have experience with Tensorflow and Keras."
 # - text: "Have experience with Cloud-based AI services using Google Cloud or AWS."
