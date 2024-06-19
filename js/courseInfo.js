@@ -72,7 +72,11 @@ function updatePageContent(course, courseId, accountId, token) {
   document.getElementById("totalClasses").innerText = course.totalClasses;
   var chinese = window.location.href.includes("cn");
   const link = (chinese ? "/cn" : "") + "/register.html?courseId="+ courseId + "&price=" +course.price + "&accountId=" + accountId + "&token=" + token + "&organizationId=" + organizationId;
+  const loginLink = (chinese ? "/cn" : "") + "/login.html?courseId="+ courseId + "&price=" +course.price + "&accountId=" + accountId + "&token=" + token + "&organizationId=" + organizationId;
+
   document.getElementById("registerLink").href = link;
+  document.getElementById("loginLink").href = loginLink;
+
 
 }
 

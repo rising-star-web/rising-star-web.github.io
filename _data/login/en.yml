@@ -1,0 +1,18 @@
+name: EN
+
+login:
+  header: Login Your Share My Work Account
+  email: Email
+  emailorphone: Email or Phone
+  password: Password
+  firstname: First Name
+  lastname: Last Name
+  phone: Parent's Phone
+  grade: Grade
+  login: Login
+  loading: Loading...
+  errorEmail: Please provide a valid email address
+  errorPassword: Please provide a valid password
+  loading: Loading...
+  username: Username
+

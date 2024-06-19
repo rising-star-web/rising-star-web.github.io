@@ -7,4 +7,5 @@ course-info-register:
   courseDate: 课程日期
   totalClasses: 课程共计课时
   price: 价格
-  register: 报名
+  register: 注册账户
+  login: 登录

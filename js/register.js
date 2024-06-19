@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var loadingIndicator = document.querySelector(".loading-indicator");
 
   registerForm.addEventListener("submit", function (event) {
+    console.log("Form submitted");
     event.preventDefault();
     loadingIndicator.style.display = "block";
 
@@ -33,6 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
       dateOfBirth: new Date(),
     };
 
+    console.log("Post data:", postData);
+
     if (postData.password !== postData.confirmPassword) {
       alert("Passwords do not match.");
       loadingIndicator.style.display = "none";
@@ -50,9 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function updateAccount(data, accountId, token) {
-    //console.log("Updating account:", data);
-    //console.log("OrganzationId: ", data.organizationId);
-
     fetch(`${baseUrl}Account/${accountId}`, {
       method: "PATCH",
       headers: {
@@ -71,7 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function createAccount(data) {
-    //console.log("Creating account:", data);
     data.username = `${data.username}${Math.floor(Math.random() * 900 + 100)}`; // Generates a random number from 100 to 999
     fetch(`${baseUrl}Account`, {
       method: "POST",
@@ -82,7 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
     })
       .then((response) => response.json())
       .then((data) => {
-        //console.log("Account created:", data);
         attachStudentToCourse(
           data.id,
           courseId,
@@ -94,7 +92,17 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .catch((error) => {
         console.error("Registration failed", error);
-        alert("Registration failed. Please try again.");
+        Toastify({
+                text: "Register failed. Please check your information and try again. Or contact management for help.",
+                duration: 5000,
+                close: true,
+                gravity: "top", 
+                position: 'right',
+                style: {
+                    background: "red",
+                },
+                className: "info",
+            }).showToast();
         loadingIndicator.style.display = "none";
       });
   }
@@ -106,9 +114,6 @@ document.addEventListener("DOMContentLoaded", function () {
     token,
     isNewAccount = false
   ) {
-    // console.log("Fetching invoices for account: ");
-    // console.log("token:", token);
-
     // Determine the filter based on whether the account is new or existing
 
     let filter = isNewAccount
@@ -136,12 +141,33 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((invoices) => {
         if (invoices.length > 0) {
           const invoice = invoices[0];
-          //console.log("Invoice found:", invoice);
-          //console.log("redirecting to checkout page");
+          Toastify({
+                    text: "Registration Success! Redirecting to checkout page.",
+                    duration: 5000,
+                    close: true,
+                    gravity: "top",
+                    position: 'right', 
+                    style: {
+                        background: "green",
+                    },
+                    className: "info",
+                }).showToast();
           setTimeout(() => {
             window.location.href = `https://www.sharemyworks.com/checkout?invoiceId=${invoice.id}&courseId=${courseId}&studentId=${accountId}&comment=&amount=${invoice.amount}&token=${token}`;
           }, 0);
+
         } else {
+          Toastify({
+                    text: "Registration Success ! Redirecting to checkout page failed. Please contact management for help",
+                    duration: 5000,
+                    close: true,
+                    gravity: "top",
+                    position: 'right', 
+                    style: {
+                        background: "red",
+                    },
+                    className: "info",
+            }).showToast();
           console.log("No invoices found.");
         }
         loadingIndicator.style.display = "none";
@@ -179,12 +205,13 @@ function attachStudentToCourse(
 
   function simulateLogin(username, password, studentId, courseId, price) {
     //console.log("Simulating login", username, password);
+    password = password; // Password is not needed for this request
     fetch(`${baseUrl}Account/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify({ username,  password }),
     })
       .then((response) => response.json())
       .then((data) => {

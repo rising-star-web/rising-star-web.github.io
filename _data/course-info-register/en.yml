@@ -8,4 +8,5 @@ course-info-register:
   totalClasses: Total Classes
   price: Price
   register: Register
+  login: Login
   
