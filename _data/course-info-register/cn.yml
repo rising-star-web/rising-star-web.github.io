@@ -1,6 +1,7 @@
 name: CN
 
 course-info-register:
+  header: 课程信息
   courseName: 课程名称
   instructor: 授课老师
   courseTime: 上课时间

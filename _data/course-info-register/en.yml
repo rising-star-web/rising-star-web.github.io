@@ -1,6 +1,7 @@
 name: EN
 
 course-info-register:
+  header: Course Information
   courseName: Course Name
   instructor: Instructor
   courseTime: Course Time

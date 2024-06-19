@@ -57,7 +57,7 @@ function updatePageContent(course, courseId, accountId, token) {
   }
   organizationId = course.organizationId;
   document.getElementById("courseName").innerText = course.name;
-  document.getElementById("courseNameHeader").innerText = course.name;
+  //document.getElementById("courseNameHeader").innerText = course.name;
 
   document.getElementById("instructorName").innerText = course.instructor
     ? `${course.instructor.firstName} ${course.instructor.lastName}`
