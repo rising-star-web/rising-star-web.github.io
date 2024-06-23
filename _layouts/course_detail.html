@@ -130,13 +130,24 @@ layout: default
             <div class="col mb-14">
               <div class="card bg-soft-primary">
                 <div class="card-body">
-                  <h3>{{ site.data.courses[page.locale].coursedetail.startingAt}}</h3>
-                  <div class="price price-show my-n2">
-                    <span class="fs-40 text-primary">$240</span>
-                    <span class="fs-20"> {{ site.data.courses[page.locale].coursedetail.perMonth}}</span>
-                  </div>
-                  <div class="fs-14 mt-2 mb-n2">{{ site.data.courses[page.locale].coursedetail.classes}}</div>
+                  <h3 class="display-4 mb-4">{{ site.data.courses[page.locale].coursedetail.courseFeatures}}</h3>
 
+                  <ul class="icon-list bullet-bg bullet-soft-primary">
+                    <li>
+                      <span><i class="uil uil-check"></i></span>
+                      <span>{{ site.data.courses[page.locale].coursedetail.inpersonOnline }}</span>
+                    </li>
+                    
+                    <li>
+                      <span><i class="uil uil-check"></i></span>
+                      <span>{{ site.data.courses[page.locale].coursedetail.projectLearning }}</span>
+                    </li>
+                    
+                    <li>
+                      <span><i class="uil uil-check"></i></span>
+                      <span>{{ site.data.courses[page.locale].coursedetail.exerciseSupport }}</span>
+                    </li>
+                  </ul>
                 </div>
 
                 <div class="card-footer">

@@ -146,6 +146,7 @@
 </header>
 <script>
 function switchLanguageWithParams(baseLangURL, pageName, pageCollection, pageSlug) {
+    console.log(baseLangURL, pageName, pageCollection, pageSlug);
     var currentUrl = new URL(window.location.href);
     var searchParams = currentUrl.search; // This keeps the query parameters intact.
     var newPath;
@@ -153,7 +154,7 @@ function switchLanguageWithParams(baseLangURL, pageName, pageCollection, pageSlu
     // Determine the correct path based on page properties
     if (pageName === "index.html") {
         newPath = baseLangURL; // Typically points to the root of the language directory
-    } else if (pageCollection.size > 0) {
+    } else if (pageCollection) { // If the page is part of a collection
         newPath = baseLangURL + pageCollection + '/' + pageSlug;
     } else {
         newPath = baseLangURL + pageName.replace('.html', '');
