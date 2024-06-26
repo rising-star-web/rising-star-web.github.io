@@ -1,0 +1,29 @@
+name: EN
+
+collect-student-info:
+  header: Student Information Update
+  description: The timely update of information helps us to speed up the scheduling process and improve communication between home and school. It also enables us to promptly provide feedback on your child's learning and homework situation.
+  firstName: First Name (Please keep it the same as the name used in class)
+  lastName: Last Name (Please keep it the same as the name used in class)
+  nameDescription: Please keep it the same as the name used in class
+  gender: Gender
+  birthday: Student's Birthday
+  parentEmail: Parent's Email (Used to confirm courses and provide feedback reports)
+  parentPhone: Parent's Phone (Used for SMS reminders and emergency notifications, not for telemarketing)
+  grade: Grade
+  timezone: Please Select Your Timezone
+  availableTime: Please Select Your Available Time (Monday to Sunday)
+  availableTimeDescription: Please select as many as possible to help us improve the scheduling speed
+  submit: Submit
+  utcn7: UTC-7 US West (Los Angeles, Vancouver etc.)
+  utcn6: UTC-6 US Mountain (Salt Lake City, Denver etc.)
+  utcn5: UTC-5 US Central (Chicago etc.)
+  utcn4: UTC-4 US East (New York, Toronto etc.)
+  utc8: UTC+8 China (Beijing, Hong Kong etc.)
+  utc7: UTC+7 Southeast Asia (Bangkok, Vietnam etc.)
+  utc11: UTC+11 Oceania (Sydney, Auckland etc.)
+  utc1: UTC+1 Western Europe (London etc.)
+  utc2: UTC+2 Central Europe (Paris, Berlin, Rome etc.)
+  utc3: UTC+3 Eastern Europe (Moscow, Istanbul etc.)
+  female: Female
+  male: Male
