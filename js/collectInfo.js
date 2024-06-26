@@ -147,8 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 "Content-Type": "application/json",
                             },
                             body: JSON.stringify({
-                                //email: "contact@codingmindsacademy.com",
-                                email: "paulgxqin@gmail.com",
+                                email: "contact@codingmindsacademy.com",
                                 content:
                                     `Student ${formData.firstName} ${formData.lastName} has updated his/her information:\n` +
                                     `First Name: ${formData.firstName}\n` +
