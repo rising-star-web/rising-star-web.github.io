@@ -1,0 +1,34 @@
+name: EN
+
+feedback:
+  feedback: Feedback
+  header: Learning Summary and Student Plan
+  description: You have completed the course study for this semester. The specific learning situation and learning goals for the next stage are summarized as follows
+  studentName: Student Name
+  courseTitle: Course Title
+  courseLevel: Course Level
+  classTime: Class Time
+  courseSummary: Course Summary
+  instructorComments: Instructor Comments
+  suggestions: Suggestions for Course Advancement
+  suggestionsDescription: According to our curriculum system and your learning situation, we recommend studying the next stage of the course
+  courseObjective: Course Objectives
+  yourInstructor: Your Instructor
+  progress: Progress
+
+  L1title: "L1: Block Based Programming"
+  L1description: "Block Based Programming was developed by MIT's Media Lab to be suitable for beginners. Students can quickly learn programming concepts!"
+  L2title: "L2: Script Based Programming"
+  L2description: "Learn basic programming using scripting languages such as Javascript or Lua. Students practice practical coding gaining a good foundation."
+  L3title: "L3: Intermediate Programming"
+  L3description: "Learn in-depth languages such as Python. Practice writing programs that solve complex problems, and get an introduction to algorithms."
+  L4title: "L4: Applied Programming"
+  L4description: "Having a foundation with code already, students can learn programming in applied topics developing projects in their preferred direction."
+  L5title: "L5: Competitive Programming"
+  L5description: "Advanced students prepare for algorithm competitions, science fairs, AP CS exams, and partake in enrichment projects."
+  computerCompetitionGoal: Computer Competition Goal
+  competitionName: Competition Name
+  competitionDate: Competition Date
+  leaveComments: If you have any questions or feedback, please leave a message.
+  message: Message
+  submit: Submit
