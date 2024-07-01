@@ -1,0 +1,29 @@
+name: CN
+
+collect-student-info:
+  header: 信息更新
+  description: 及时更新信息有助于我们加快排课流程，提高家校沟通效率。也能让我们及时提供反馈，了解您孩子的学习和作业情况。
+  firstName: 名(first name) (请与上课时姓名保持相同)
+  lastName: 姓 (last name) (请与上课时姓名保持相同)
+  nameDescription: 请与上课时姓名保持相同
+  gender: 性别
+  birthday: 学生生日
+  parentEmail: 家长邮箱 (用于确认课程以及提供反馈报告)
+  parentPhone: 家长电话 (用于短信提醒和紧急情况通知 而非电话营销)
+  grade: 年级
+  timezone: 请选择你所在的时区
+  availableTime: 请选择可用时间 (星期一到星期日)
+  availableTimeDescription: 请尽可能多选, 方便我们提高排课速率
+  submit: 提交
+  utcn7: UTC-7 美西 (洛杉矶 温哥华等)
+  utcn6: UTC-6 美山（盐湖城 丹佛等)
+  utcn5: UTC-5 美中（芝加哥等)
+  utcn4: UTC-4 美东（纽约 多伦多等)
+  utc8: UTC+8 中国（北京 香港等)
+  utc7: UTC+7 东南亚（曼谷 越南等)
+  utc11: UTC+11 大洋洲（悉尼 奥克兰等)
+  utc1: UTC+1 西欧（伦敦等)
+  utc2: UTC+2 中欧（巴黎 柏林 罗马等)
+  utc3: UTC+3 东欧（莫斯科 伊斯坦布尔等)
+  female: 女
+  male: 男

@@ -1,0 +1,288 @@
+---
+layout: default
+---
+<html>
+<body>
+    <style>
+        .grayed-out .timeline-marker span {
+            background-color: gray !important;
+        }
+
+        .grayed-out .timeline-marker span i {
+            color: white;
+        }
+
+        .grayed-out .timeline-content,
+        .grayed-out .timeline-title {
+            color: #888;
+        }
+        .gray-icon {
+            background: gray; 
+        }
+    </style>
+    <section class="wrapper bg-custom">
+        <div class="container pt-10 pb-19 pt-md-14 text-center">
+            <div class="row">
+                <div class="col-md-10 col-xl-8 mx-auto">
+                    <div class="post-header">
+                        <div class="post-category text-line">
+                            <a href="#" class="hover" rel="category">{{
+                                site.data.feedback[page.locale].feedback.feedback }}</a>
+                        </div>
+                        <!-- /.post-category -->
+                        <h1 class="display-1 mb-4">{{ site.data.feedback[page.locale].feedback.header }}</h1>
+                        <p>{{ site.data.feedback[page.locale].feedback.description }}: </p>
+                        <!-- /.post-meta -->
+                    </div>
+                    <!-- /.post-header -->
+                </div>
+                <!-- /column -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /section -->
+    <section class="wrapper bg-light">
+        <div class="container pb-14 pb-md-16">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="blog single mt-n17">
+                        <div class="card">
+                            <div class="card-body p-6 p-lg-8">
+
+
+                                <div class="classic-view">
+                                    <article class="post">
+                                        <div class="post-content mb-5">
+
+                                            <table class="table table-bordered fs-12">
+                                                <tbody id="studentInfoTable">
+                                                    <tr>
+                                                        <th scope="row">{{
+                                                            site.data.feedback[page.locale].feedback.studentName }}</th>
+                                                        <td id="studentName"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">{{
+                                                            site.data.feedback[page.locale].feedback.courseTitle }}
+                                                        </th>
+                                                        <td id="courseTitle"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">{{
+                                                            site.data.feedback[page.locale].feedback.courseLevel }}</th>
+                                                        <td id="courseLevel"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">{{
+                                                            site.data.feedback[page.locale].feedback.classTime }}</th>
+                                                        <td id="classTime"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <h3 class="h2 mb-4 text-center">{{
+                                                site.data.feedback[page.locale].feedback.courseSummary }}</h3>
+                                            <p id="courseSummary">
+                                            </p>
+
+                                            <h3 class="h2 mb-4 text-center">{{
+                                                site.data.feedback[page.locale].feedback.instructorComments }}</h3>
+                                            <blockquote class="my-8">
+                                                <p id="instructorComments">
+                                                </p>
+                                                <footer class="blockquote-footer">{{
+                                                    site.data.feedback[page.locale].feedback.yourInstructor }}</footer>
+                                            </blockquote>
+
+                                            <hr />
+
+
+                                            <h3 class="h2 mb-4 text-center">{{
+                                                site.data.feedback[page.locale].feedback.suggestions }}</h3>
+                                            <p class="text-center">{{
+                                                site.data.feedback[page.locale].feedback.suggestionsDescription }}
+                                            </p>
+
+                                            <table class="table table-bordered fs-12">
+                                                <tbody id="courseSuggestionsTable">
+                                                    <tr>
+                                                        <th scope="row">{{
+                                                            site.data.feedback[page.locale].feedback.courseTitle }}
+                                                        </th>
+                                                        <td id="courseTitle2"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">{{
+                                                            site.data.feedback[page.locale].feedback.courseLevel }}
+                                                        </th>
+                                                        <td id="courseLevel2"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">{{
+                                                            site.data.feedback[page.locale].feedback.courseObjective }}
+                                                        </th>
+                                                        <td id="courseObjective"> </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">{{
+                                                            site.data.feedback[page.locale].feedback.classTime }}</th>
+                                                        <td id="classTime2"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <p class="text-center py-6" id="progress">
+                                            </p>
+
+                                            <!--/column -->
+                                            <div class="col">
+                                                <ul class="timeline" data-cues="slideInUp">
+                                                    <li class="timeline-item" id="l1">
+                                                        <div class="timeline-info meta fs-14"></div>
+                                                        <div class="timeline-marker">
+                                                            <span
+                                                                class="icon btn btn-circle btn-lg rosered-gradient text-white p-6 mb-4">
+                                                                <i class="uil uil-puzzle-piece"></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="timeline-content">
+                                                            <h3 class="timeline-title  "> {{
+                                                                site.data.courses[page.locale].courses.L1title }} </h3>
+                                                            <p>{{ site.data.courses[page.locale].courses.L1description
+                                                                }}
+                                                            </p>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="timeline-item" id="l2">
+                                                        <div class="timeline-info meta fs-14"></div>
+                                                        <div class="timeline-marker">
+                                                            <span
+                                                                class="icon btn btn-circle btn-lg orange-gradient text-white p-6 mb-4 mt-4 mt-lg-0">
+                                                                <i class="uil uil-window"></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="timeline-content">
+                                                            <h3 class="timeline-title  "> {{
+                                                                site.data.courses[page.locale].courses.L2title }} </h3>
+                                                            <p>{{ site.data.courses[page.locale].courses.L2description
+                                                                }}
+                                                            </p>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="timeline-item" id="l3">
+                                                        <div class="timeline-info meta fs-14"></div>
+                                                        <div class="timeline-marker">
+                                                            <span
+                                                                class="icon btn btn-circle btn-lg forestgreen-gradient text-white p-6 mb-4 mt-4 mt-lg-0">
+                                                                <i class="uil uil-brackets-curly"></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="timeline-content">
+                                                            <h3 class="timeline-title  "> {{
+                                                                site.data.courses[page.locale].courses.L3title }} </h3>
+                                                            <p>{{ site.data.courses[page.locale].courses.L3description
+                                                                }}
+                                                            </p>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="timeline-item" id="l4">
+                                                        <div class="timeline-info meta fs-14"></div>
+                                                        <div class="timeline-marker">
+                                                            <span
+                                                                class="icon btn btn-circle btn-lg navyblue-gradient text-white p-6 mb-4 mt-4 mt-lg-0">
+                                                                <i class="uil uil-cloud-check"></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="timeline-content">
+                                                            <h3 class="timeline-title  "> {{
+                                                                site.data.courses[page.locale].courses.L4title }} </h3>
+                                                            <p> {{ site.data.courses[page.locale].courses.L4description
+                                                                }}
+                                                            </p>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="timeline-item" id="l5">
+                                                        <div class="timeline-info meta fs-14"></div>
+                                                        <div class="timeline-marker">
+                                                            <span
+                                                                class="icon btn btn-circle btn-lg amethyst-gradient text-white p-6 mb-4 mt-4 mt-lg-0">
+                                                                <i class="uil uil-rocket"></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="timeline-content">
+                                                            <h3 class="timeline-title  "> {{
+                                                                site.data.courses[page.locale].courses.L5title }} </h3>
+                                                            <p>{{ site.data.courses[page.locale].courses.L5description
+                                                                }}
+                                                            </p>
+                                                        </div>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                            <!--/column -->
+
+                                            <h3 class="h2 text-center">2023-2024</h3>
+                                            <h3 class="h2 mb-4 text-center">{{
+                                                site.data.feedback[page.locale].feedback.computerCompetitionGoal }}
+                                            </h3>
+
+                                            <table class="table table-bordered fs-12" id="competitionTable">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">{{
+                                                            site.data.feedback[page.locale].feedback.competitionName }}
+                                                        </th>
+                                                        <th scope="col">{{
+                                                            site.data.feedback[page.locale].feedback.competitionDate }}
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="comTableBody">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </article>
+                                    <!-- /.post -->
+                                </div>
+                                <!-- /.classic-view -->
+                                <hr />
+                                <h3 class="mb-3">{{ site.data.feedback[page.locale].feedback.leaveComments }}</h3>
+                                <form class="comment-form" id="feedbackForm">
+                                    <div class="form-floating mb-4">
+                                        <textarea name="textarea" class="form-control" placeholder="Comment"
+                                            id="comment" style="height: 150px"></textarea>
+                                        <label>{{ site.data.feedback[page.locale].feedback.message }}</label>
+                                    </div>
+                                    <button type="submit" id="submit" class="btn btn-primary rounded-pill mb-0">{{
+                                        site.data.feedback[page.locale].feedback.submit }}</button>
+                                </form>
+                                <!-- /.comment-form -->
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                    <!-- /.blog -->
+                </div>
+                <!-- /column -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /section -->
+    </div>
+    <!-- /.content-wrapper -->
+    <script src="/js/feedback.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
+</html>
