@@ -2,6 +2,49 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
+    // Function to preserve query parameters during redirection
+    function preserveQueryParameters() {
+        const params = new URLSearchParams(window.location.search);
+        console.log('params', params)
+        const accountId = params.get("accountId");
+        const token = params.get("token");
+        const lang = params.get("lang");
+
+        console.log('accountId', accountId)
+        console.log('token', token)
+        console.log('lang', lang)
+
+        if (!accountId || !token) {
+            Toastify({
+                text: "No AccountID or Token found. Please check your link and try again. Or contact management for help.",
+                duration: 5000,
+                close: true,
+                gravity: "top",
+                position: 'right',
+                style: {
+                    background: "red",
+                },
+                className: "info",
+            }).showToast();
+            return;
+        }
+
+        const currentUrl = window.location.href;
+        console.log('currentUrl', currentUrl)
+        const [baseUrl, queryString] = currentUrl.split('?');
+        const localizedUrl = `${baseUrl.includes('/cn/') ? baseUrl : baseUrl.replace('/collect-student-info', '/cn/collect-student-info')}?${queryString}`;
+        console.log('localizedUrl', localizedUrl)
+
+        // if (!baseUrl.includes('/cn/')) {
+        //     window.location.href = localizedUrl;
+        // }
+        if (!baseUrl.includes('/cn/') && lang === 'cn') {
+            window.location.href = localizedUrl;
+        }
+    }
+
+    preserveQueryParameters();
+
     var chinese = window.location.href.includes("cn");
     const daysEnglish = ['Every Monday', 'Every Tuesday', 'Every Wednesday', 'Every Thursday', 'Every Friday', 'Every Saturday', 'Every Sunday'];
     const daysChinese = ['每周一', '每周二', '每周三', '每周四', '每周五', '每周六', '每周日'];
