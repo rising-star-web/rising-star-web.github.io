@@ -45,9 +45,24 @@ layout: navbar
 
     if (window.location.href.indexOf("cn") == -1 && lang == "zh" && !sessionStorage.alreadyClicked) // Check if url is already cn, language is zh, and first time opened tab
     {
-      sessionStorage.alreadyClicked = 1;                                                            // User can freely change back to EN without redirecting unless a new tab is opened
-      window.location.replace("/cn" + window.location.pathname)                                     // http redirect to /cn site
-    }
+      // User can freely change back to EN without redirecting unless a new tab is opened
+      //window.location.replace("/cn" + window.location.pathname) var currentUrl = window.location.href;
+      var currentUrl = window.location.href;
+      var queryString = window.location.search;
+
+      // Redirect to /cn path with preserved query parameters
+      var newUrl = "/cn" + window.location.pathname + queryString;
+      window.location.replace(newUrl);  
+      // Delay redirection to see console.log messages
+      // setTimeout(function() {
+      //   window.location.replace(newUrl);
+      //   console.log("Redirecting to /cn site...");
+      // }, 5000); //delay
+      sessionStorage.alreadyClicked = 1;                                 
+
+      }
+        // http redirect to /cn site
+    
     
     // Go to EN if in CN url on first tab load if browser language is EN
     // else if (window.location.href.indexOf("cn") != -1 && lang == "en" && !sessionStorage.alreadyClicked) {  
