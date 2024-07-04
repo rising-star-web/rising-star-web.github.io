@@ -4,67 +4,29 @@ courseId: "cs607"
 courseIconURL: "TBD - not used yet"
 price: "TBD - not used yet"
 extra: "TBD - not used yet"
-name: "科技创新与创业：从想法到原型"
+name: "Tech Startups 101: Young Entrepreneurs' Journey"
 coverImageURL: "img/updated/enrichment/startup.jpg"
-gradeLevel: "L5 竞技编程"
-pathway: "冬令营"
-skillLevel: "高级"
-shortDescription : "Startup 创业冬令营"
-description: "科技创新与创业冬令营旨在引导学生从识别问题痛点开始，经过技术开发的全过程，最终完成一个创业原型，并为参加竞赛做好充分准备！"
+gradeLevel: "L5 Competitive Programming"
+pathway: "Camp"
+skillLevel: "Advanced"
+shortDescription : "Startup Camp"
+description: "Our Science, Technology, Innovation, and Entrepreneurship Summer Camp aims to guide students from start to finish. Students will learn the process by which many startup companies get their ideas, from identifying the problem's points, to the whole process of technology development, and lastly finalizing an entrepreneurial prototype. This camp course will allow students to create their projects and be fully prepared to participate in the competition！"
 videoIntro : ""
 learningGoals:
-- "阶段1.开营与问题识别
-上午
-开营仪式
-导师介绍与团队分组
-下午
-识别和讨论当前社会、技术领域的热点问题
-引导学生思考潜在的创业机会"
-- "阶段2.问题痛点选择与市场调研
-全天
-团队讨论确定项目主题
-进行市场调研和需求分析
-初步制定解决方案"
-- "阶段3.技术开发基础
-上午
-专业培训：基础编程、产品设计等
-下午
-继续培训与实践操作
-晚上：项目计划讨论"
-- "阶段4.解决方案设计
-全天
-设计思路讨论和确定
-初步设计产品/服务原型
-与导师讨论和修改方案
-"
-- "阶段5.技术开发（一）
-全天
-开始技术开发工作
-中间阶段检查与导师反馈"
-- "阶段6.技术开发（二）
-全天
-继续技术开发
-解决开发中的问题和挑战"
-- "阶段7.原型制作
-全天
-完成原型开发
-测试和优化原型
-"
-- "阶段8.项目准备与演练
-全天
-准备项目展示和竞赛材料
-演练演示和答辩"
-- "阶段9.展示与竞赛
-上午
-最终项目展示准备
-下午
-项目展示和竞赛
-颁奖仪式和闭营"
+- "Stage 1. Problem Identification - In the morning: an opening ceremony, mentor introduction, team formation. In the afternoon, students will identify and discuss current trending issues in the social and technological fields and consider entrepreneurial opportunities."
+- "Stage 2. Topic Ideation and Market Research - All day, students will perform project ideation with their team, conduct market research and analyze requirements, and then begin initial solution development"
+- "Stage 3. Fundamentals of Technology Development - In the morning, students will begin basic programming and product design. In the afternoon, students will begin training and practicing the skills required for their project. In the evening, students will discuss their project plan."
+- "Stage 4. Solution Design - All day, students will perform discussion, design, and finalization of their project plans, begin designing their prototype, and discuss their plans with a mentor."
+- "Stage 5. Technology Development - All day, students will develop their project with the skills they learned and get feedback from their mentors as they go along."
+- "Stage 6. Technology Development Continued - All day, students will develop their project with the skills they learned and get feedback from their mentors as they go along."
+- "Stage 7. Programming Prototype - All day, students will work to finish their prototype and perform testing and optimization to deliver their product."
+- "Stage 8. Presentation Preparation - All day, students will prepare their project presentation and competition materials, as well as rehearse their presentation."
+- "Stage 9. Showcase and Competition - In the morning, students will rehearse and finalize their presentation. In the afternoon, students will present their projects and we will conduct an awards ceremony for outstanding projects."
 promotions:
-- title: "创新激发梦想，从点子到原型"
-  text: "深入技术创新和创业的领域，从识别社会问题痛点到打造原型，你的创业之旅即将开始！"
+- title: "Innovate on Your Ideas, From Start to Finish"
+  text: "Reach deep into the realm of technological innovation and entrepreneurship! From identifying social problems that you could solve using technology, to building prototypes, your entrepreneurial journey is about to begin!"
   imageURL: "img/updated/enrichment/project.jpg"
-- title: "编码、创造、竞逐：加入创业挑战"
-  text: "点燃你对技术开发和创业的激情，学习编程基础，设计产品，并在短时间内展示你的创业原型。"
+- title: "Code, Create, and Compete: Join the Startup Challenge!"
+  text: "Ignite your passion for technology development and entrepreneurship by learning the fundamentals of programming, designing a product, and presenting your startup prototype in a short time frame."
   imageURL: "img/updated/enrichment/research.jpg"
 ---
