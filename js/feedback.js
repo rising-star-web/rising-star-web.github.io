@@ -2,96 +2,96 @@ var competitionMap = {
     'cp520': {
         'id': 'cp520',
         'name': 'Congressional App编程项目竞赛',
-        'date': '2023年6月',
+        'date': '2024年6月',
     },
     'cp510': {
         'id': 'cp510',
         'name': 'IgniteCS Expo编程项目展',
-        'date': '2023年9月',
+        'date': '2024年9月',
     },
     'cp350': {
         'id': 'cp350',
         'name': 'USACO信息学竞赛',
-        'date': '2023年12月和2024年1月、2月、3月',
+        'date': '2024年12月和2025年1月、2月、3月',
     },
     'cp600': {
         'id': 'cp600',
         'name': 'Diamond Challenge项目竞赛',
-        'date': '2024年1月',
+        'date': '2025年1月',
     },
     'cp500': {
         'id': 'cp500',
         'name': 'Conrad Challenge项目竞赛',
-        'date': '2024年1月',
+        'date': '2025年1月',
     },
     'cp610': {
         'id': 'cp610',
         'name': 'Ignite Fellowship奖学金项目',
-        'date': '2024年1月',
+        'date': '2025年1月',
     },
 
     'cp300': {
         'id': 'cp300',
         'name': 'Microsoft ImagineCup竞赛',
-        'date': '2024年5月',
+        'date': '2025年5月',
     },
     'cp200': {
         'id': 'cp200',
         'name': 'Apple Challenge项目竞赛',
-        'date': '2024年4月',
+        'date': '2025年4月',
     },
     'cp400': {
         'id': 'cp400',
         'name': 'Coolest Projects项目竞赛',
-        'date': '2024年4月',
+        'date': '2025年4月',
     },
 };
 var competitionMapEng = {
     'cp520': {
         'id': 'cp520',
         'name': 'Congressional App Challenge',
-        'date': 'June 2023',
+        'date': 'June 2024',
     },
     'cp510': {
         'id': 'cp510',
         'name': 'IgniteCS Expo',
-        'date': 'September 2023',
+        'date': 'September 2024',
     },
     'cp350': {
         'id': 'cp350',
         'name': 'USACO',
-        'date': 'December 2023 and January, February, March 2024',
+        'date': 'December 2024 and January, February, March 2025',
     },
     'cp600': {
         'id': 'cp600',
         'name': 'Diamond Challenge',
-        'date': 'January 2024',
+        'date': 'January 2025',
     },
     'cp500': {
         'id': 'cp500',
         'name': 'Conrad Challenge',
-        'date': 'January 2024',
+        'date': 'January 2025',
     },
     'cp610': {
         'id': 'cp610',
         'name': 'Ignite Fellowship',
-        'date': 'January 2024',
+        'date': 'January 2025',
     },
 
     'cp300': {
         'id': 'cp300',
         'name': 'Microsoft ImagineCup',
-        'date': 'May 2024',
+        'date': 'May 2025',
     },
     'cp200': {
         'id': 'cp200',
         'name': 'Apple Challenge',
-        'date': 'April 2024',
+        'date': 'April 2025',
     },
     'cp400': {
         'id': 'cp400',
         'name': 'Coolest Projects',
-        'date': 'April 2024',
+        'date': 'April 2025',
     },
 };
 const link = new URL(window.location.href);

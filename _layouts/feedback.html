@@ -2,6 +2,7 @@
 layout: default
 ---
 <html>
+
 <body>
     <style>
         .grayed-out .timeline-marker span {
@@ -16,8 +17,22 @@ layout: default
         .grayed-out .timeline-title {
             color: #888;
         }
+
         .gray-icon {
-            background: gray; 
+            background: gray;
+        }
+
+
+        #studentInfoTable,
+        #courseSuggestionsTable,
+        #competitionTable,
+        #comTableBody {
+            font-size: 0.8rem;
+        }
+
+        #instructorComments,
+        #courseSummary {
+            font-size: 0.8rem;
         }
     </style>
     <section class="wrapper bg-custom">
@@ -50,12 +65,9 @@ layout: default
                     <div class="blog single mt-n17">
                         <div class="card">
                             <div class="card-body p-6 p-lg-8">
-
-
                                 <div class="classic-view">
                                     <article class="post">
                                         <div class="post-content mb-5">
-
                                             <table class="table table-bordered fs-12">
                                                 <tbody id="studentInfoTable">
                                                     <tr>
@@ -228,13 +240,15 @@ layout: default
                                             </div>
                                             <!--/column -->
 
-                                            <h3 class="h2 text-center">2023-2024</h3>
+                                            <h3 class="h2 text-center">2024-2025</h3>
                                             <h3 class="h2 mb-4 text-center">{{
                                                 site.data.feedback[page.locale].feedback.computerCompetitionGoal }}
                                             </h3>
 
                                             <table class="table table-bordered fs-12" id="competitionTable">
                                                 <thead>
+                                                </thead>
+                                                <tbody id="comTableBody">
                                                     <tr>
                                                         <th scope="col">{{
                                                             site.data.feedback[page.locale].feedback.competitionName }}
@@ -243,8 +257,6 @@ layout: default
                                                             site.data.feedback[page.locale].feedback.competitionDate }}
                                                         </th>
                                                     </tr>
-                                                </thead>
-                                                <tbody id="comTableBody">
                                                 </tbody>
                                             </table>
                                         </div>
