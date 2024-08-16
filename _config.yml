@@ -59,7 +59,7 @@ sass:
 
 exclude:
   # other stuff you're excluding
-  # - assets/css/main.scss
+  - assets/css/main.scss
   - .sass-cache/
   - .jekyll-cache/
   - gemfiles/
