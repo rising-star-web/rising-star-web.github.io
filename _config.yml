@@ -25,6 +25,8 @@ url: "https://codingmind.com/" # the base hostname & protocol for your site, e.g
 baseurl: ""
 twitter_username: jekyllrb
 github_username:  jekyll
+logo: /assets/img/CMLogo2024.png
+logo_white: /assets/img/CMLogo2024-white.png
 
 # Build settings
 theme: minima
@@ -57,7 +59,7 @@ sass:
 
 exclude:
   # other stuff you're excluding
-  - assets/css/main.scss
+  # - assets/css/main.scss
   - .sass-cache/
   - .jekyll-cache/
   - gemfiles/
@@ -69,9 +71,9 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   
-keep_files:
+# keep_files:
   # other stuff you're keeping
-  - assets/css/main.css
+  # - assets/css/main.css
 
 collections:
   courses:

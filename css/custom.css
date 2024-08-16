@@ -1,6 +1,6 @@
 /*! Place your custom styles here */
 #cmbg{
-	background: #4a90e2
+	background: var(--primary)
 }
 .lds-ring {
   display: inline-block;

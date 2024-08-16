@@ -1,115 +1,132 @@
 <header class="wrapper">
-<style>
-  .nav-text-solid {
-    font-weight: bold !important;
-    color: #333 !important; 
-  }
-</style>
-
   <nav id="navbar" class="navbar navbar-expand-lg center-nav transparent !important; navbar-light pb-1">
-      <div class="container flex-lg-row flex-nowrap align-items-center">
-        <div class="navbar-brand w-100">
-          <a href="{{ site.data.nav[page.locale].nav.URL }}">
-            <img  class="h-9" src="/assets/img/codingmindlogo.svg" alt="" />
-          </a>
+    <div class="container flex-lg-row flex-nowrap align-items-center">
+      <div class="navbar-brand w-100">
+        <a href="{{ site.data.nav[page.locale].nav.URL }}">
+          <img class="h-9" src="{{ site.logo }}" alt="" />
+        </a>
+      </div>
+      <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+        <div class="offcanvas-header d-lg-none">
+          <img class="h-9" src="{{ site.logo_white }}" alt="" />
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
         </div>
-        <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
-          <div class="offcanvas-header d-lg-none">
-            <img class="h-9" src="/assets/img/codingmindlogo-white.svg" alt="" />
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
-            <ul class="navbar-nav">
+        <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
+          <ul class="navbar-nav">
 
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle nav-text-solid  " data-bs-toggle="dropdown">{{ site.data.nav[page.locale].nav.programs }}</a>
-                <div class="dropdown-menu">
-                  <div class="dropdown-content">
-                    <div>
-<!--                       <h6 class="dropdown-header">{{ site.data.nav[page.locale].nav.ourPrograms }}</h6> -->
-                      <ul class="list-unstyled">
-                        <li><a class="dropdown-item nav-text-solid" href="{{ site.data.nav[page.locale].nav.URL }}competitive-courses">{{ site.data.nav[page.locale].nav.competitivecourses }}</a></li>
-                        <li><a class="dropdown-item nav-text-solid" href="{{ site.data.nav[page.locale].nav.URL }}enrichment-passion-project">{{ site.data.nav[page.locale].nav.enrichment }}</a></li>
-                        <li><a class="dropdown-item nav-text-solid" href="{{ site.data.nav[page.locale].nav.URL }}summer-camps">{{ site.data.nav[page.locale].nav.summercamp }}</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle  " data-bs-toggle="dropdown">{{ site.data.nav[page.locale].nav.programs
+                }}</a>
+              <div class="dropdown-menu">
+                <div class="dropdown-content">
+                  <div>
+                    <!--                       <h6 class="dropdown-header">{{ site.data.nav[page.locale].nav.ourPrograms }}</h6> -->
+                    <ul class="list-unstyled">
+                      <li><a class="dropdown-item" href="{{ site.data.nav[page.locale].nav.URL }}competitive-courses">{{
+                          site.data.nav[page.locale].nav.competitivecourses }}</a></li>
+                      <li><a class="dropdown-item"
+                          href="{{ site.data.nav[page.locale].nav.URL }}enrichment-passion-project">{{
+                          site.data.nav[page.locale].nav.enrichment }}</a></li>
+                      <li><a class="dropdown-item" href="{{ site.data.nav[page.locale].nav.URL }}summer-camps">{{
+                          site.data.nav[page.locale].nav.summercamp }}</a></li>
 
-                      </ul>
-                    </div>
-                    <!-- /.column -->
+                    </ul>
                   </div>
-                  <!-- /auto-column -->
+                  <!-- /.column -->
                 </div>
+                <!-- /auto-column -->
+              </div>
 
-              </li>
+            </li>
 
-              <li class="nav-item">
-                <a class="nav-link nav-text-solid " href="{{ site.data.nav[page.locale].nav.URL }}courses">{{ site.data.nav[page.locale].nav.courses }}</a>
-              </li>
+            <li class="nav-item">
+              <a class="nav-link " href="{{ site.data.nav[page.locale].nav.URL }}courses">{{
+                site.data.nav[page.locale].nav.courses }}</a>
+            </li>
 
-              <li class="nav-item ">
-                <a class="nav-link nav-text-solid " href="{{ site.data.nav[page.locale].nav.URL }}projects">{{ site.data.nav[page.locale].nav.studentProjects }}</a>
-              </li>
+            <li class="nav-item ">
+              <a class="nav-link " href="{{ site.data.nav[page.locale].nav.URL }}projects">{{
+                site.data.nav[page.locale].nav.studentProjects }}</a>
+            </li>
 
-              <li class="nav-item ">
-                <a class="nav-link nav-text-solid " href="{{ site.data.nav[page.locale].nav.URL }}schools">{{ site.data.nav[page.locale].nav.schools }}</a>
-              </li>
+            <li class="nav-item ">
+              <a class="nav-link " href="{{ site.data.nav[page.locale].nav.URL }}schools">{{
+                site.data.nav[page.locale].nav.schools }}</a>
+            </li>
 
-              <li class="nav-item">
-                <a class="nav-link nav-text-solid " href="{{ site.data.nav[page.locale].nav.URL }}free-trial" id="nav-text-solid">{{ site.data.nav[page.locale].nav.freeTrial }}</a>
-              </li>
+            <li class="nav-item">
+              <a class="nav-link " href="{{ site.data.nav[page.locale].nav.URL }}free-trial" id="nav-text-solid">{{
+                site.data.nav[page.locale].nav.freeTrial }}</a>
+            </li>
 
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle nav-text-solid " data-bs-toggle="dropdown">{{ site.data.nav[page.locale].nav.more }}</a>
-                <div class="dropdown-menu">
-                  <div class="dropdown-content">
-                    <div>
-                      <ul class="list-unstyled">
-                        <li><a class="dropdown-item nav-text-solid" href="{{ site.data.nav[page.locale].nav.URL }}about-us">{{ site.data.nav[page.locale].nav.aboutUs }}</a></li>
-                        <li><a class="dropdown-item nav-text-solid" href="{{ site.data.nav[page.locale].nav.URL }}instructors">{{ site.data.nav[page.locale].nav.instructors }}</a></li>
-                        <li><a class="dropdown-item nav-text-solid" href="{{ site.data.nav[page.locale].nav.URL }}careers">{{ site.data.nav[page.locale].nav.jobs }}</a></li>
-                        <li><a class="dropdown-item nav-text-solid" href="{{ site.data.nav[page.locale].nav.URL }}our-partners">{{ site.data.nav[page.locale].nav.partners }}</a></li>
-                        <li><a class="dropdown-item nav-text-solid" href="{{ site.data.nav[page.locale].nav.URL }}cmcraft">{{ site.data.nav[page.locale].nav.cmcraft }}</a></li>
-                        <li><a class="dropdown-item nav-text-solid" href="{{ site.data.nav[page.locale].nav.URL }}cmbase">{{ site.data.nav[page.locale].nav.cmbase }}</a></li>
-                        <li><a class="dropdown-item nav-text-solid" href="{{ site.data.nav[page.locale].nav.URL }}competitions">{{ site.data.nav[page.locale].nav.competitions }}</a></li>
-                        <li><a class="dropdown-item nav-text-solid" href=" {{ site.data.nav[page.locale].nav.URL }}contact-us">{{ site.data.nav[page.locale].nav.contactUs }}</a></li>
-                        <!-- <li><a class="dropdown-item" href=" {{ site.data.nav[page.locale].nav.URL }}course-info-register">{{ site.data.nav[page.locale].nav.course-info-register }}</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle " data-bs-toggle="dropdown">{{ site.data.nav[page.locale].nav.more
+                }}</a>
+              <div class="dropdown-menu">
+                <div class="dropdown-content">
+                  <div>
+                    <ul class="list-unstyled">
+                      <li><a class="dropdown-item" href="{{ site.data.nav[page.locale].nav.URL }}about-us">{{
+                          site.data.nav[page.locale].nav.aboutUs }}</a></li>
+                      <li><a class="dropdown-item" href="{{ site.data.nav[page.locale].nav.URL }}instructors">{{
+                          site.data.nav[page.locale].nav.instructors }}</a></li>
+                      <li><a class="dropdown-item" href="{{ site.data.nav[page.locale].nav.URL }}careers">{{
+                          site.data.nav[page.locale].nav.jobs }}</a></li>
+                      <li><a class="dropdown-item" href="{{ site.data.nav[page.locale].nav.URL }}our-partners">{{
+                          site.data.nav[page.locale].nav.partners }}</a></li>
+                      <li><a class="dropdown-item" href="{{ site.data.nav[page.locale].nav.URL }}cmcraft">{{
+                          site.data.nav[page.locale].nav.cmcraft }}</a></li>
+                      <li><a class="dropdown-item" href="{{ site.data.nav[page.locale].nav.URL }}cmbase">{{
+                          site.data.nav[page.locale].nav.cmbase }}</a></li>
+                      <li><a class="dropdown-item" href="{{ site.data.nav[page.locale].nav.URL }}competitions">{{
+                          site.data.nav[page.locale].nav.competitions }}</a></li>
+                      <li><a class="dropdown-item" href=" {{ site.data.nav[page.locale].nav.URL }}contact-us">{{
+                          site.data.nav[page.locale].nav.contactUs }}</a></li>
+                      <!-- <li><a class="dropdown-item" href=" {{ site.data.nav[page.locale].nav.URL }}course-info-register">{{ site.data.nav[page.locale].nav.course-info-register }}</a></li>
                         <li><a class="dropdown-item" href=" {{ site.data.nav[page.locale].nav.URL }}register">{{ site.data.nav[page.locale].nav.register}}</a></li> -->
 
-                      </ul>
-                    </div>  
-                    <!-- /.column -->
+                    </ul>
                   </div>
-                  <!-- /auto-column -->
+                  <!-- /.column -->
                 </div>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link dropdown-item d-block d-lg-none"href="https://www.sharemyworks.com" target="_blank">{{ site.data.nav[page.locale].nav.learningCenter }}</a>
-              </li>
-
-            </ul>
-            <!-- /.navbar-nav -->
-            <div class="offcanvas-footer d-lg-none">
-              <div>
-                <a href="mailto:hello@codingmind.com" class="link-inverse fs-14">hello@codingmind.com</a>
-                <br /> (949) 236-7896  <br />
-                <nav class="nav social social-white mt-4">
-                  <a href="https://twitter.com/coding_minds?lang=en" target="_blank" rel="noopener noreferrer"><i class="uil uil-twitter"></i></a>
-                  <a href="https://www.facebook.com/CodingMindsAcademy/" target="_blank" rel="noopener noreferrer"><i class="uil uil-facebook-f"></i></a>
-                  <a href="https://www.instagram.com/codingmindsacademy/" target="_blank" rel="noopener noreferrer"><i class="uil uil-instagram" ></i></a>
-                  <a href="https://www.youtube.com/@codingminds882" target="_blank" rel="noopener noreferrer"><i class="uil uil-youtube"></i></a>                  
-                </nav>
-                <!-- /.social -->
+                <!-- /auto-column -->
               </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link dropdown-item d-block d-lg-none" href="https://www.sharemyworks.com" target="_blank">{{
+                site.data.nav[page.locale].nav.learningCenter }}</a>
+            </li>
+
+          </ul>
+          <!-- /.navbar-nav -->
+          <div class="offcanvas-footer d-lg-none">
+            <div>
+              <a href="mailto:hello@codingmind.com" class="link-inverse fs-14">hello@codingmind.com</a>
+              <br /> (949) 236-7896 <br />
+              <nav class="nav social social-white mt-4">
+                <a href="https://twitter.com/coding_minds?lang=en" target="_blank" rel="noopener noreferrer"><i
+                    class="uil uil-twitter"></i></a>
+                <a href="https://www.facebook.com/CodingMindsAcademy/" target="_blank" rel="noopener noreferrer"><i
+                    class="uil uil-facebook-f"></i></a>
+                <a href="https://www.instagram.com/codingmindsacademy/" target="_blank" rel="noopener noreferrer"><i
+                    class="uil uil-instagram"></i></a>
+                <a href="https://www.youtube.com/@codingminds882" target="_blank" rel="noopener noreferrer"><i
+                    class="uil uil-youtube"></i></a>
+              </nav>
+              <!-- /.social -->
             </div>
-            <!-- /.offcanvas-footer -->
           </div>
-          <!-- /.offcanvas-body -->
+          <!-- /.offcanvas-footer -->
         </div>
-        <!-- /.navbar-collapse -->
-        <div class="navbar-other w-100 d-flex ms-auto">
-          <ul class="navbar-nav flex-row align-items-center ms-auto">
-            <li class="nav-item language-select text-uppercase">
-              <!-- <a class="nav-link" role="button"  
+        <!-- /.offcanvas-body -->
+      </div>
+      <!-- /.navbar-collapse -->
+      <div class="navbar-other w-100 d-flex ms-auto">
+        <ul class="navbar-nav flex-row align-items-center ms-auto">
+          <li class="nav-item language-select text-uppercase">
+            <!-- <a class="nav-link" role="button"  
               href="
               {% if page.name == "index.html" %}
                 {{ site.data.nav[page.locale].nav.switchLangURL }}{{page.name | replace:'index.html','' }}
@@ -121,31 +138,33 @@
               ">  
               {{ site.data.nav[page.locale].nav.switchLang }}
               </a> -->
-              <a class="nav-link nav-text-solid" role="button" href="javascript:void(0);" onclick="switchLanguageWithParams('{{ site.data.nav[page.locale].nav.switchLangURL }}', '{{ page.name }}', '{{ page.collection }}', '{{ page.slug | downcase }}')">
-  {{ site.data.nav[page.locale].nav.switchLang }}
-</a>
+            <a class="nav-link" role="button" href="javascript:void(0);"
+              onclick="switchLanguageWithParams('{{ site.data.nav[page.locale].nav.switchLangURL }}', '{{ page.name }}', '{{ page.collection }}', '{{ page.slug | downcase }}')">
+              {{ site.data.nav[page.locale].nav.switchLang }}
+            </a>
 
-            </li>
+          </li>
 
-            <li class="nav-item d-none d-md-block">
-              <a href="https://www.sharemyworks.com" target="_blank" class="btn btn-sm btn-primary rounded-pill">{{ site.data.nav[page.locale].nav.learningCenter }}</a>
-              </li>
-              
-            <li class="nav-item d-lg-none">
-              <button class="hamburger offcanvas-nav-btn text-navy"><span></span></button>
-            </li>
-          </ul>
-          <!-- /.navbar-nav -->
-        </div>
-        <!-- /.navbar-other -->
+          <li class="nav-item d-none d-md-block">
+            <a href="https://www.sharemyworks.com" target="_blank" class="btn btn-sm btn-primary rounded-pill">{{
+              site.data.nav[page.locale].nav.learningCenter }}</a>
+          </li>
+
+          <li class="nav-item d-lg-none">
+            <button class="hamburger offcanvas-nav-btn text-navy"><span></span></button>
+          </li>
+        </ul>
+        <!-- /.navbar-nav -->
       </div>
-      <!-- /.navbar-collapse-wrapper -->
+      <!-- /.navbar-other -->
+    </div>
+    <!-- /.navbar-collapse-wrapper -->
     <!-- /.container -->
   </nav>
   <!-- /.navbar -->
 </header>
 <script>
-function switchLanguageWithParams(baseLangURL, pageName, pageCollection, pageSlug) {
+  function switchLanguageWithParams(baseLangURL, pageName, pageCollection, pageSlug) {
     console.log(baseLangURL, pageName, pageCollection, pageSlug);
     var currentUrl = new URL(window.location.href);
     var searchParams = currentUrl.search; // This keeps the query parameters intact.
@@ -153,15 +172,14 @@ function switchLanguageWithParams(baseLangURL, pageName, pageCollection, pageSlu
 
     // Determine the correct path based on page properties
     if (pageName === "index.html") {
-        newPath = baseLangURL; // Typically points to the root of the language directory
+      newPath = baseLangURL; // Typically points to the root of the language directory
     } else if (pageCollection) { // If the page is part of a collection
-        newPath = baseLangURL + pageCollection + '/' + pageSlug;
+      newPath = baseLangURL + pageCollection + '/' + pageSlug;
     } else {
-        newPath = baseLangURL + pageName.replace('.html', '');
+      newPath = baseLangURL + pageName.replace('.html', '');
     }
 
     // Redirect to the new URL, preserving query parameters
     window.location.href = newPath + searchParams;
-}
+  }
 </script>
-

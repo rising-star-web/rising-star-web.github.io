@@ -1,10 +1,32 @@
-@font-face {
-    font-family: Nunito;
-    src: url(../fonts/custom/Nunito-SemiBold.ttf);
-}
+:root {
+    --primary: #03a9f4;
+    --soft-primary: #ecf9fe;
+  }
+
+  @font-face {
+    font-family: THICCCBOI;
+    src: url(../fonts/thicccboi/THICCCBOI-Regular.woff2) format('woff2'), url(../fonts/thicccboi/THICCCBOI-Regular.woff) format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block
+  }
+  @font-face {
+    font-family: THICCCBOI;
+    src: url(../fonts/thicccboi/THICCCBOI-Medium.woff2) format('woff2'), url(../fonts/thicccboi/THICCCBOI-Medium.woff) format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: block
+  }
+  @font-face {
+    font-family: THICCCBOI;
+    src: url(../fonts/thicccboi/THICCCBOI-Bold.woff2) format('woff2'), url(../fonts/thicccboi/THICCCBOI-Bold.woff) format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: block
+  }
 
 h1,h2,h3,h4,h5,.customFont{
-    font-family: 'Nunito', 'Manrope', sans-serif !important;
+    font-family: 'THICCCBOI', 'Manrope', sans-serif !important;
     font-weight: 700 !important;
 }
 
@@ -14,7 +36,7 @@ h1,h2,h3,h4,h5,.customFont{
 
 .bg-custom {
     background: rgba(222,237,255,1);
-    background: linear-gradient(180deg, rgb(255, 255, 255) 18%, rgba(222,237,255,1) 80%);
+    background: linear-gradient(180deg, rgb(255, 255, 255) 18%, var(--soft-primary) 80%);
 }
 
 .bg-grid{
@@ -27,27 +49,12 @@ h1,h2,h3,h4,h5,.customFont{
 
 .bg-custom2{
     background: rgb(222,237,255);
-    background: linear-gradient(180deg, rgba(222,237,255,1) 15%, rgba(246,249,254,1) 50%, rgba(255,255,255,1) 95%);
+    background: linear-gradient(180deg, var(--soft-primary) 18%, rgba(255,255,255,1) 80%);
 }
 
-.bg-custom3{
-    color: rgb(222,237,255);
+.bg-custom4{ 
+    background: #1a8cff; /* Location Pricing Color */
 }
-
-.bg-custom4{
-    background: rgb(222,237,255);
-}
-
-.bg-custom5{
-    background: #1a8cff;
-}
-
-.bg-custom6 {
-    background: rgba(222,237,255,1);
-    background: linear-gradient(0deg, rgb(255, 255, 255) 18%, rgba(222,237,255,1) 80%);
-}
-
-
 
 .shadow-dark{
     box-shadow: rgba(100, 100, 111, 0.12) 0px 7px 29px 0px !important;
