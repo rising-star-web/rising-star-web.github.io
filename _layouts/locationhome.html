@@ -3,28 +3,167 @@ layout: locationdefault
 ---
 
 {% if page.url contains '/cn/' %}
-    {% assign parts  = page.url | split: '/' %}
-    {% assign location_name = parts[2] %}
+{% assign parts = page.url | split: '/' %}
+{% assign location_name = parts[2] %}
 {% else %}
-    {% assign parts  = page.url | split: '/' %}
-    {% assign location_name = parts[1] %}
+{% assign parts = page.url | split: '/' %}
+{% assign location_name = parts[1] %}
 {% endif %}
 
 {%- assign location_data = site.data.locations[location_name] -%}
 
-<section class="wrapper">
-  <div class="container pt-10 pt-md-14 pb-8 text-center">
-    <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
-      <div class="col-lg-6">
-        <figure><img src="/img/updated/competitive-courses/class type.webp" alt=""></figure>
+<style>
+  html {
+    scroll-padding-top: 8.3rem;
+  }
+
+  .navbar-scroll {
+    box-shadow: rgba(30, 34, 40, 0.06) 0rem 1.25rem 1.25rem -1.25rem;
+    position: sticky;
+    top: 93px;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+  }
+
+  @media (min-width: 992px) {
+    html {
+      scroll-padding-top: 7.7rem;
+    }
+
+    .navbar-scroll {
+      top: 4rem;
+    }
+  }
+
+  .image-wrapper.bg-overlay::before {
+    background: rgba(30, 34, 40, 0.6);
+  }
+</style>
+
+<section class="wrapper image-wrapper bg-image bg-full bg-overlay bg-content text-white"
+  data-image-src="{{ page.background }}">
+  <div class="container pt-16 pb-16" style="z-index: 5; position:relative">
+    <div class="row">
+      <div class="col-md-9 col-lg-7 col-xxl-6 mx-auto d-flex flex-column align-items-center" data-cues="slideInDown"
+        data-group="page-title">
+        <img class="img-fluid w-50" src="{{ site.logo_white }}" alt="Site Logo" />
+        <div class="dropcap rounded bg-overlay text-center">
+          <div class="post-category mt-3 text-white fs-20 fw-bold">
+            <i class="uil uil-location-point me-1"></i>
+            {% assign locationText = location_name | replace: "-", " " | upcase %}
+            {{ locationText }}
+          </div>
+        </div>
       </div>
-      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+
+<nav class="navbar navbar-expand-md navbar-scroll center-nav navbar-dark bg-navy">
+  <div class="container-fluid">
+    <a class="navbar-brand d-block d-md-none" href="#">Jump To Section</a>
+    <button class="navbar-toggler d-block d-md-none icon btn btn-block btn-lg shadow-none" type="button"
+      data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <i class="uil uil-arrow-to-bottom"></i>
+    </button>
+    <div class="collapse navbar-collapse d-md-flex justify-content-center" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link nav-text-solid" aria-current="page" href="#free-trial" onclick="navbarCollapse()">Free
+            Trial</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link nav-text-solid" aria-current="page" href="#events" onclick="navbarCollapse()">Events</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link nav-text-solid" aria-current="page" href="#programs"
+            onclick="navbarCollapse()">Programs</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link nav-text-solid" aria-current="page" href="#info" onclick="navbarCollapse()">School Info</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<section class="wrapper" id="free-trial">
+  <div class="container pt-10 pt-md-14 pb-8 text-center position-relative">
+    <div class="position-absolute d-none d-md-block"
+      style="top: -20%; left: -5%; transform: translateX(-50%); opacity:0.75; scale:0.5;">
+      <img src="/assets/img/custom_photos/blurry.webp" data-cue="fadeIn" alt="">
+    </div>
+    <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+      <div class="col-lg-5">
+        <p class="lead fs-20 ls-sm mb-0 px-md-8 px-lg-0" data-cues="slideInDown" data-group="span">
+          <span>{{ site.data.home[page.locale].home.bullet1 }} </span>
+          <span>{{ site.data.home[page.locale].home.bullet2 }}</span>
+          <span>{{ site.data.home[page.locale].home.bullet3 }}</span>
+          <span><i class="uil uil-arrow-right"></i></span>
+          <br />
+          <span>{{ site.data.home[page.locale].home.bullet4 }}</span>
+        </p>
+        <div class="row justify-content-center">
+          <div class="row g-3 d-none d-lg-flex justify-content-center w-75" data-cues="fadeIn" data-group="columns">
+            <div class="col-5">
+              <div class="card h-100">
+                <div class="card-body p-4 d-flex align-items-center justify-content-center">
+                  <div class="ratio ratio-1x1 w-100">
+                    <img src="/assets/img/custom_photos/projects.png" alt="Projects"
+                      class="img-fluid object-fit-contain">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-5">
+              <div class="card h-100">
+                <div class="card-body p-4 d-flex align-items-center justify-content-center">
+                  <div class="ratio ratio-1x1 w-100">
+                    <img src="/assets/img/custom_photos/Competitions.png" alt="Competitions"
+                      class="img-fluid object-fit-contain">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-5">
+              <div class="card h-100">
+                <div class="card-body p-4 d-flex align-items-center justify-content-center">
+                  <div class="ratio ratio-1x1 w-100">
+                    <img src="/assets/img/custom_photos/More.png" alt="More" class="img-fluid object-fit-contain">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-5">
+              <div class="card h-100">
+                <div class="card-body p-4 d-flex align-items-center justify-content-center">
+                  <div class="ratio ratio-1x1 w-100">
+                    <img src="/assets/img/custom_photos/university.png" alt="University"
+                      class="img-fluid object-fit-contain">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="col-md-10 offset-md-1 offset-lg-0 col-lg-6 text-center text-lg-start">
         <div class="card shadow-lg">
           <div class="card-body">
             <h1 class="display-1 mb-5 mx-md-n5 mx-lg-0">{{ site.data.competitive[page.locale].trial.header }}</h1>
             <p class="lead fs-lg mb-7">{{ site.data.competitive[page.locale].trial.lead }}</p>
-            <span><a href="./schedule-trial" class="btn btn-primary rounded-pill me-2">{{ site.data.home[page.locale].trial.btn2 }}</a></span>
+            <span><a href="./schedule-trial" class="btn btn-primary rounded-pill me-2">{{
+                site.data.home[page.locale].trial.btn2 }}</a></span>
             <hr class="my-5">
             <div class="d-flex flex-column">
               <div class="d-flex flex-row">
@@ -50,78 +189,176 @@ layout: locationdefault
 </section>
 <!-- /section -->
 
-<section class="wrapper bg-light">
-  <div class="container pb-12">
-    <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-start">
-      <div class="col-lg-4">
-        <div class="card shadow-lg h-100">
-          <div class="card-body p-5">
-            <div class="d-flex flex-column">
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th scope="col">Day</th>
-                    <th scope="col">{{page.businessHours}}</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">Mon</th>
-                    <td>{{page.hours.Mon}}</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Tue</th>
-                    <td>{{page.hours.Tue}}</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Wed</th>
-                    <td>{{page.hours.Wed}}</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Thu</th>
-                    <td>{{page.hours.Thu}}</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Fri</th>
-                    <td>{{page.hours.Fri}}</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Sat</th>
-                    <td>{{page.hours.Sat}}</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Sun</th>
-                    <td>{{page.hours.Sun}}</td>
-                  </tr>
-                </tbody>
-              </table>                    
-            </div>
-          </div>
-          <!-- /.card-body -->
-        </div>
-        <!-- /.card -->
-      </div>
-      <!-- /column -->
-
-      <div class="col-md-8 mx-auto">
-        <div class="blog single">
-          <div class="card shadow-lg h-100">
-            <div class="card-body">
-              <div class="d-flex flex-column">
-                {{ content }}
-              </div>
-            </div>
-            <!-- /.card-body -->
-          </div>
-          <!-- /.card -->
-        </div>
-        <!-- /.blog -->
+<!-- Program Breakdown -->
+<section id="programs" class="wrapper bg-light">
+  <div class="container pt-14 pt-lg-18">
+    <div class="row">
+      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mx-auto text-center">
+        <div class="post-category mb-3 text-primary">{{ site.data.home[page.locale].breakdown.header }}</div>
+        <h3 class="display-4 mb-10 px-xl-10 px-xxl-15 text-navy">{{ site.data.home[page.locale].breakdown.lead }}</h3>
       </div>
       <!-- /column -->
     </div>
     <!-- /.row -->
+
+    <div class="row gy-3 justify-content-center" data-cues="slideInDown">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex flex-row">
+              <div><img src="/assets/img/icons/lineal/certificate.svg"
+                  class="svg-inject icon-svg icon-svg-md text-violet me-4" alt="" /></div>
+              <h2 class="card-title">{{ site.data.home[page.locale].breakdown.competitive }}</h2>
+            </div>
+            <figure><img class="w-100" src="/assets/img/custom_photos/competitive.png" alt="" /></figure>
+
+            <ul class="icon-list bullet-bg bullet-soft-violet mt-7 mb-8 text-start">
+              <li><i class="uil uil-check"></i><span> {{ site.data.home[page.locale].breakdown.coursebullet1 }}
+                </span></li>
+              <li><i class="uil uil-check"></i><span> {{ site.data.home[page.locale].breakdown.coursebullet2 }}
+                </span></li>
+              <li><i class="uil uil-check"></i><span> {{ site.data.home[page.locale].breakdown.coursebullet3 }}
+                </span></li>
+              <li><i class="uil uil-check"></i><span> {{ site.data.home[page.locale].breakdown.coursebullet4 }}
+                </span></li>
+              <li><i class="uil uil-check"></i><span> {{ site.data.home[page.locale].breakdown.coursebullet5 }}
+                </span></li>
+            </ul>
+            <button class="btn btn-violet rounded-pill" onclick="openModal('/competitive-courses')">
+              {{ site.data.home[page.locale].breakdown.learnMore }}
+            </button>
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.pricing -->
+      </div>
+      <!--/column -->
+      <div class="col ">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex flex-row">
+              <div><img src="/assets/img/icons/lineal/startup.svg" class="svg-inject icon-svg icon-svg-md text-sky me-4"
+                  alt="" /></div>
+              <h2 class="card-title">{{ site.data.home[page.locale].breakdown.enrichment }}</h2>
+            </div>
+            <figure><img class="w-100" src="/assets/img/custom_photos/enrichment.png" alt="" /></figure>
+
+            <ul class="icon-list bullet-bg bullet-soft-sky mt-7 mb-8 text-start">
+              <li><i class="uil uil-check"></i><span> {{ site.data.home[page.locale].breakdown.enrichmentbullet1 }}
+                </span></li>
+              <li><i class="uil uil-check"></i><span> {{ site.data.home[page.locale].breakdown.enrichmentbullet2 }}
+                </span></li>
+              <li><i class="uil uil-check"></i><span> {{ site.data.home[page.locale].breakdown.enrichmentbullet3 }}
+                </span></li>
+              <li><i class="uil uil-check"></i><span> {{ site.data.home[page.locale].breakdown.enrichmentbullet4 }}
+                </span></li>
+              <li><i class="uil uil-check"></i><span> {{ site.data.home[page.locale].breakdown.enrichmentbullet5 }}
+                </span></li>
+            </ul>
+            <button class="btn btn-sky rounded-pill" onclick="openModal('/enrichment-passion-project')">
+              {{ site.data.home[page.locale].breakdown.learnMore }}
+            </button>
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.pricing -->
+      </div>
+      <!--/column -->
+
+      <!--/column -->
+    </div>
+
   </div>
   <!-- /.container -->
+</section>
+<!-- /section -->
+
+<section id="info" class="wrapper bg-light">
+  <div class="container pb-12 pt-14 pt-lg-18">
+    <div class="row">
+      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mx-auto text-center">
+        <div class="post-category mb-3 text-primary">information</div>
+        <h3 class="display-4 mb-10 px-xl-10 px-xxl-15 text-navy">School Info</h3>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="row d-flex align-items-start">
+      <div class="col-lg-4 text-md-end">
+
+        <div class="d-flex justify-content-md-end">
+          <div class="align-self-start justify-content-start">
+            <h5 class="mb-1">Location</h5>
+            <address>{{ location_data.contact.address}}</address>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-md-end">
+          <div>
+            <h5 class="mb-1">{{ site.data.contact-us[page.locale].contact.Phone }}</h5>
+            <p>{{ location_data.contact.phone}}</p>
+          </div>
+        </div>
+        <div class="d-flex justify-content-md-end">
+          <div>
+            <h5 class="mb-1">{{ site.data.contact-us[page.locale].contact.Email }}</h5>
+            <p class="mb-0 text-break">
+              <a href="mailto:hello@codingmind.com" class="link-body">{{ location_data.contact.email}}</a>
+            </p>
+          </div>
+        </div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Day</th>
+              <th scope="col text-navy">{{page.businessHours}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Mon</th>
+              <td>{{page.hours.Mon}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Tue</th>
+              <td>{{page.hours.Tue}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Wed</th>
+              <td>{{page.hours.Wed}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Thu</th>
+              <td>{{page.hours.Thu}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Fri</th>
+              <td>{{page.hours.Fri}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Sat</th>
+              <td>{{page.hours.Sat}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Sun</th>
+              <td>{{page.hours.Sun}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- /col-lg-4 -->
+
+      <div class="col-lg-8 align-self-stretch">
+        <div class="map map-full rounded-top rounded-lg-start h-100 w-100">
+          <iframe src="{{page.embedmapsrc}}" style="width:100%; height: 100%; border:0" allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+      <!-- /col-lg-8 -->
+    </div>
+    <!-- /row -->
+  </div>
+  <!-- /container -->
 </section>
 <!-- /section -->
 
@@ -146,7 +383,8 @@ layout: locationdefault
         <div class="d-flex flex-column align-items-center align-items-lg-start text-center" data-cue="fadeIn">
           <h2 class="mb-3">{{ site.data.home[page.locale].trial.header2 }}</h2>
           <p> {{ site.data.home[page.locale].trial.lead2 }}</p>
-          <a href="./schedule-trial" class="btn btn-md btn-green rounded-pill mb-0 text-nowrap mt-4">{{ site.data.home[page.locale].trial.btn2 }}</a>
+          <a href="./schedule-trial" class="btn btn-md btn-green rounded-pill mb-0 text-nowrap mt-4">{{
+            site.data.home[page.locale].trial.btn2 }}</a>
         </div>
       </div>
     </div>
@@ -154,3 +392,36 @@ layout: locationdefault
   <!-- /.container -->
 </section>
 <!-- /section -->
+
+<!-- The Modal -->
+<div class="modal fade" id="contentModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content p-0">
+      <div class="modal-header d-flex justify-content-center p-6">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0">
+        <iframe id="modalContent" src="" frameborder="0" width="100%" height="500"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function navbarCollapse() {
+    console.log(window.innerWidth);
+    // Check if the screen width is less than 768px (mobile devices)
+    if (window.innerWidth < 768) {
+      var navbarCollapseElement = document.getElementById('navbarSupportedContent');
+      var bsCollapse = new bootstrap.Collapse(navbarCollapseElement);
+      bsCollapse.hide();
+    }
+  }
+
+  function openModal(contentURL) {
+    document.getElementById('modalContent').src = contentURL;
+    var myModal = new bootstrap.Modal(document.getElementById('contentModal'));
+    myModal.show();
+  }
+
+</script>

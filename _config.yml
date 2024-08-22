@@ -21,17 +21,13 @@
 name: ""
 title: null
 domain: codingmind.com 
-url: "https://codingmind.com/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://codingmind.com" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: ""
-twitter_username: jekyllrb
-github_username:  jekyll
 logo: /assets/img/CMLogo2024.png
 logo_white: /assets/img/CMLogo2024-white.png
 
 # Build settings
-theme: minima
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
   
 sass:
@@ -92,7 +88,7 @@ defaults:
       locale: en
   - scope:
       path: ""
-      type: courses
+      type: "courses"
     values:
       locale: en
       permalink: /courses/:name
@@ -120,35 +116,36 @@ defaults:
     values:
       locale: en
       permalink: /:path/
+  # Chinese
   - scope:
-      path: "_courses/cn/**"
+      path: "_courses/cn"
       type: courses
     values:
       locale: cn
       permalink: /cn/courses/:name
   - scope:
-      path: "_projects/cn/**"
+      path: "_projects/cn"
       type: projects
     values:
       locale: cn
       permalink: /cn/projects/:name
   - scope:
-      path: "_careers/cn/**"
+      path: "_careers/cn"
       type: careers
     values:
       locale: cn
       permalink: /cn/careers/:name
   - scope:
-      path: "_competitions/cn/**"
+      path: "_competitions/cn"
       type: competitions
     values:
       locale: cn
       permalink: /cn/competitions/:name
   - scope:
-      path: "locations/cn/**"
+      path: "_locations/cn"
       type: locations
     values:
       locale: cn
-      permalink: /cn/:path/
+      permalink: /:path/
 
 

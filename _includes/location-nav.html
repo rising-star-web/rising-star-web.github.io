@@ -12,20 +12,19 @@
 
 {%- assign location_data = site.data.locations[location_name] -%}
 
-<header class="wrapper bg-gray">
-  <nav class="navbar navbar-expand-lg extended extended-alt navbar-light bg-white">
-    <div class="container flex-lg-column">
-      <div class="topbar d-flex flex-row w-100 justify-content-between align-items-center">
+<header class="wrapper">
+  <nav class="navbar navbar-expand-lg classic transparent !important; navbar-light pb-1">
+    <div class="container flex-lg-row flex-nowrap align-items-center">
         <div class="navbar-brand">
           <a href="{{ site.data.nav[page.locale].nav.URL }}">
             <img class="h-9" src="{{ site.logo }}" alt="" />
           </a>
-          <div class="hidden-xs col-sm-6 center-title">
+          <!-- <div class="hidden-xs col-sm-6 center-title">
             <div class="post-category mt-3 text-primary"><i class="uil uil-location-point me-1"></i>
               {% assign locationText = location_name | replace: "-", " " | upcase %}
               {{ locationText }}
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="navbar-other ms-auto">
           <ul class="navbar-nav flex-row align-items-center">
@@ -50,9 +49,8 @@
           <!-- /.navbar-nav -->
         </div>
         <!-- /.navbar-other -->
-      </div>
       <!-- /.d-flex -->
-      <div class="navbar-collapse-wrapper bg-soft-primary d-flex flex-row align-items-center justify-content-between">
+      <div class="navbar-collapse-wrapper d-flex flex-row align-items-center justify-content-between">
         <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
           <div class="offcanvas-header d-lg-none">
             <h3 class="text-white fs-30 mb-0">Coding Mind</h3>
@@ -100,7 +98,7 @@
         <div class="navbar-other w-100 d-flex">
           <ul class="navbar-nav flex-row align-items-center ms-auto">
             {% if has_translation %}
-            <li class="nav-item language-select text-uppercase d-none d-md-block">
+            <li class="nav-item language-select text-uppercase d-none d-lg-block">
               <a class="nav-link" role="button"  
               href="
               {% if page.url contains '/cn/' %}
