@@ -22,7 +22,7 @@ layout: locationdefault
     position: sticky;
     top: 93px;
     background-color: rgb(255, 255, 255);
-    z-index: 1;
+    z-index: 2;
   }
 
   @media (min-width: 992px) {
@@ -188,6 +188,50 @@ layout: locationdefault
   <!-- /.container -->
 </section>
 <!-- /section -->
+
+<!-- Events -->
+  <section id="events" class="wrapper mt-16 bg-soft-primary">
+    <div class="container pt-10 pb-19 pt-md-14 pb-md-20 text-center">
+      <div class="row">
+        <div class="col-md-7 col-lg-6 col-xl-5 mx-auto">
+          <h1 class="display-1 mb-3">Events</h1>
+          <p class="lead px-lg-5 px-xxl-8">Here you can find the latest upcoming events.</p>
+        </div>
+        <!-- /column -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /section -->
+  <section class="wrapper bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="blog classic-view mt-n17 z-0">
+            {% assign location_events = location_name | append: "/events/" %}
+            {% assign events = site.locations | where_exp: "item", "item.path contains location_events" | where: "locale", page.locale %}
+            {% for event in events %}
+            <article class="post">
+              <div class="card">
+                <div class="card-body">
+                  <div class="post-header">
+                    <h2 class="post-title mt-1 mb-0">
+                    {{ event.title }}
+                    </h2>
+                  </div>
+                  <div class="post-content">
+                    {{ event.content | markdownify  }}
+                  </div>
+                </div>
+              </div>
+            </article>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 <!-- Program Breakdown -->
 <section id="programs" class="wrapper bg-light">

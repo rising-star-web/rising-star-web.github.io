@@ -63,7 +63,7 @@
               %}
 
               {% for page in pages %}
-              {% unless page.exclude == true %}
+              {% unless page.exclude == true or page.path contains  '/events/' %}
               <li class="nav-item"><a class="nav-link nav-text-solid" href="{{ page.url }}">
                   {% if page.title == "Summer Camp" %}
                   <span class="underline-3 style-3 primary">{{ page.title }}</span>
