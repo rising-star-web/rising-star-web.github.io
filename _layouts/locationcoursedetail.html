@@ -1,0 +1,262 @@
+---
+layout: locationdefault
+---
+
+<!-- Course Overview -->
+  <section class="wrapper bg-light wrapper-border">  
+    <div class="container pt-8 pt-md-12 pb-12 pb-md-12">
+      <!-- Course Information -->
+      <div class="row gx-md-8 gx-xl-12 gy-8 d-flex flex-row justify-content-between">
+        <div class="col-lg-6">
+          <div class="post-header mb-5">
+            <h2 class="post-title display-5">{{page.name}}</h2>
+          </div>
+
+          <hr class="my-5" />
+          <!-- /.post-header -->
+
+          <p class="mb-5">{{page.description}}</p>
+            <div class="row">
+              <div class="col-lg-9 d-flex flex-row pt-2">
+                <div class="me-2">
+                  <a href="/west-lafayette/#free-trial" class="btn btn-primary btn-icon btn-icon-start rounded-pill">{{ site.data.courses[page.locale].coursedetail.trialButton }}</a>
+                </div>
+              </div>
+              <!-- /column -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /column -->
+
+        <!-- Carousel -->
+        <div class="col-lg-6">
+          <div class="player" id="player">
+            <iframe
+              src="{{page.videoIntro}}"
+              allowfullscreen
+              allowtransparency
+              allow="autoplay"
+            ></iframe>
+          </div>
+        </div>
+        <!-- /column -->
+        
+      </div>
+      <!-- /.row -->
+
+      <!-- Details Bar -->
+      <section class="wrapper bg-soft-primary rounded">
+        <div class="container py-8 py-md-8 mt-12">
+          <div class="row">
+            <div class="col-xl-10 mx-auto">
+              <div class="row align-items-center justify-content-center counter-wrapper gy-6 text-center">
+                <div class="col-md-3">
+                  <i class="uil uil-lightbulb fs-25 text-primary"></i>
+                  <h4 class="fs-md">{{ site.data.courses[page.locale].coursedetail.levelTag }}</h4>
+                  <p>{{page.gradeLevel}}</p>
+                </div>
+                <!--/column -->
+                <div class="col-md-3">
+                  <i class="uil uil-books fs-25 text-primary"></i>
+                  <h4 class="fs-md">{{ site.data.courses[page.locale].coursedetail.pathwayTag }}</h4>
+                  <p>{{page.pathway}}</p>
+                </div>
+                <!--/column -->
+                <div class="col-md-3">
+                  <i class="uil uil-tachometer-fast-alt fs-25 text-primary"></i>
+                  <h4 class="fs-md">{{ site.data.courses[page.locale].coursedetail.skillTag }}</h4>
+                  <p>{{page.skillLevel}}</p>
+                </div>
+                {% unless page.gradeLevel == "Summer Camp" %}
+                <!--/column -->
+                <div class="col-md-3">
+                  <i class="uil uil-users-alt fs-25 text-primary"></i>
+                  <h4 class="fs-md">{{ site.data.courses[page.locale].coursedetail.classSizeTag }}</h4>
+                  <p>{{ site.data.courses[page.locale].coursedetail.classSize}}</p>
+                </div>
+                <!--/column -->
+                {% endunless %}
+              </div>
+              <!--/.row -->
+            </div>
+            <!-- /column -->
+          </div>
+          <!-- /.row -->
+        </div>
+      </section>
+
+      <!-- Breakdown/Pricing -->
+      <div class="mt-12">
+        <div class="row d-flex gx-md-12 justify-content-between"> 
+
+          {% for promotion in page.promotions %}
+          {% assign value = forloop.index | modulo:2 %}
+            {% if value == 1 %}
+              {% include promotion.html %}
+            {% else %}
+              {% include promotion2.html %}
+            {% endif %}
+          {% endfor %}
+
+          <div class="col mb-14">
+            <div class="card shadow-lg">
+              <div class="card-body">
+                <h3 class="display-4 mb-4">{{ site.data.courses[page.locale].coursedetail.learningObjectives}}</h3>
+                <ul class="icon-list bullet-bg bullet-soft-primary">
+                  <p>{{page.shortDescription}}</p>
+                  {% for objective in page.learningGoals %}
+                  <li>
+                    <span><i class="uil uil-check"></i></span>
+                    <span>{{objective}}</span>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {% unless page.gradeLevel == "Summer Camp" %}
+            <!-- Pricing / Schedule -->
+            <div class="col mb-14">
+              <div class="card bg-soft-primary">
+                <div class="card-body">
+                  <h3 class="display-4 mb-4">{{ site.data.courses[page.locale].coursedetail.courseFeatures}}</h3>
+
+                  <ul class="icon-list bullet-bg bullet-soft-primary">
+                    <li>
+                      <span><i class="uil uil-check"></i></span>
+                      <span>{{ site.data.courses[page.locale].coursedetail.inpersonOnline }}</span>
+                    </li>
+                    
+                    <li>
+                      <span><i class="uil uil-check"></i></span>
+                      <span>{{ site.data.courses[page.locale].coursedetail.projectLearning }}</span>
+                    </li>
+                    
+                    <li>
+                      <span><i class="uil uil-check"></i></span>
+                      <span>{{ site.data.courses[page.locale].coursedetail.exerciseSupport }}</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="card-footer">
+                  <ul class="post-meta text-dark d-flex mb-0">
+                    <li class="post-desc1 fs-16"><i class="uil uil-gift text-primary"></i><span>{{ site.data.courses[page.locale].coursedetail.trial}}</span></li>
+                    <li class="post-desc2 fs-16"><i class="uil uil-calendar-slash text-primary"></i><span>{{ site.data.courses[page.locale].coursedetail.cancel}}</span></li>
+                  </ul>
+                  <!-- /.post-meta -->
+                </div>
+                <!-- /.card-footer -->
+              </div>
+
+              <div class="card bg-soft-primary mt-4">
+                <div class="card-body">
+                  <h3>{{ site.data.courses[page.locale].coursedetail.scheduleTitle}}</h3>
+                  <p>{{ site.data.courses[page.locale].coursedetail.scheduleDescription}} </p>
+                  <a href="/west-lafayette/#free-trial" class="btn btn-primary btn-icon btn-icon-start rounded-pill">{{ site.data.courses[page.locale].coursedetail.trialButton }}</a>
+                </div>
+              </div>
+
+            </div>
+            <!-- Pricing / Schedule -->
+            {% endunless %}
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- /section -->
+  
+  <!-- General Description/Expectation -->
+  <section class="wrapper bg-soft-primary wrapper-border">
+    <div class="container py-12 py-md-12">
+      <div class="row gx-lg-8 gx-xl-12 gy-8">
+        <div class="col-md-6 col-lg-4">
+          <div class="d-flex flex-row">
+            <div>
+              <img src="/assets/img/icons/solid/discussion.svg" class="svg-inject icon-svg icon-svg-sm solid-mono text-primary me-4" alt="" />
+            </div>
+            <div>
+              <h3 class="mb-1">{{ site.data.courses[page.locale].coursedetail.projectTitle}} </h3>
+              <p class="mb-0">{{ site.data.courses[page.locale].coursedetail.projectDescription}} </p>
+            </div>
+          </div>
+        </div>
+        <!--/column -->
+        <div class="col-md-6 col-lg-4">
+          <div class="d-flex flex-row">
+            <div>
+              <img src="/assets/img/icons/solid/employees.svg" class="svg-inject icon-svg icon-svg-sm solid-mono text-primary me-4" alt="" />
+            </div>
+            <div>
+              <h3 class="mb-1">{{ site.data.courses[page.locale].coursedetail.instructorTitle}} </h3>
+              <p class="mb-0">{{ site.data.courses[page.locale].coursedetail.instructorDescription}} </p>
+            </div>
+          </div>
+        </div>
+        <!--/column -->
+        <div class="col-md-6 col-lg-4">
+          <div class="d-flex flex-row">
+            <div>
+              <img src="/assets/img/icons/solid/rocket.svg" class="svg-inject icon-svg icon-svg-sm solid-mono text-primary me-4" alt="" />
+            </div>
+            <div>
+              <h3 class="mb-1">{{ site.data.courses[page.locale].coursedetail.competitionTitle}} </h3>
+              <p class="mb-0">{{ site.data.courses[page.locale].coursedetail.competitionDescription}} </p>
+            </div>
+          </div>
+        </div>
+        <!--/column -->
+      </div>
+      <!--/.row -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /section -->
+
+  <!-- Suggested Courses -->
+  <section class="wrapper bg-light wrapper-border">
+    <div class="container py-12">
+      <h3 class="h1 mb-8 text-center">{{ site.data.courses[page.locale].coursedetail.otherCourses}}</h3>
+
+      <div class="swiper-container" data-margin="30" data-nav="true" data-dots="true" data-items-xl="3" data-items-md="2" data-items-xs="1">
+        <div class="swiper">
+          <div class="swiper-wrapper pb-10">
+            {%- assign courses = site.courseswl | where:'gradeLevel', page.gradeLevel %}
+            {% for course in courses %}
+            {% unless course.name == page.name %}
+            <div class="swiper-slide">
+              {% include course.html %}
+            </div>
+            {% endunless %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <!-- /.container -->
+    </div>
+  </section>
+  <!-- /.section -->
+
+  <!-- Try Coding Mind -->
+  <section class="wrapper bg-soft-primary wrapper-border">
+    <div class="container py-12 py-md-12">
+      <div class="row text-center">
+        <div class="col-md-10 mx-auto">
+          <h3 class="display-4 text-navy">{{ site.data.courses[page.locale].coursedetail.trialTitle}}</h3>
+          <p class="lead mb-7 mb-md-7">{{ site.data.courses[page.locale].coursedetail.trialSubTitle}}</p>
+          <a href="/west-lafayette/#free-trial" class="btn btn-primary rounded-pill me-2 me-md-2 mb-4 mb-md-0">
+            {{ site.data.courses[page.locale].coursedetail.trialButton2}}
+          </a>
+        </div>
+      </div>
+      <!--/div -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /section -->
+
+
+

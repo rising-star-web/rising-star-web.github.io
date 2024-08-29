@@ -82,6 +82,12 @@ collections:
     output: true
   locations:
     output: true
+  courseswl:
+    output: true
+    permalink: /west-lafayette/:name/
+    path: courseswl
+
+    
 
 defaults:
   - values: 
@@ -116,6 +122,12 @@ defaults:
     values:
       locale: en
       permalink: /:path/
+  - scope:
+      path: ""
+      type: courseswl
+    values:
+      location_name: "west-lafayette"
+      permalink: /west-lafayette/:name/
   # Chinese
   - scope:
       path: "_courses/cn"

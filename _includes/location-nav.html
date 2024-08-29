@@ -1,4 +1,4 @@
-{% if page.url contains '/cn/' %}
+<!-- {% if page.url contains '/cn/' %}
     {% assign parts  = page.url | split: '/' %}
     {% assign location_name = parts[2] %}
     {% assign translated_url = page.url | replace: '/cn/', '/' %}
@@ -6,6 +6,19 @@
     {% assign parts  = page.url | split: '/' %}
     {% assign location_name = parts[1] %}
     {% assign translated_url = '/cn' | append: page.url %}
+{% endif %} -->
+{% if page.location_name %}
+    {% assign location_name = page.location_name %}
+{% else %}
+    {% if page.url contains '/cn/' %}
+        {% assign parts  = page.url | split: '/' %}
+        {% assign location_name = parts[2] %}
+        {% assign translated_url = page.url | replace: '/cn/', '/' %}
+    {% else %}
+        {% assign parts  = page.url | split: '/' %}
+        {% assign location_name = parts[1] %}
+        {% assign translated_url = '/cn' | append: page.url %}
+    {% endif %}
 {% endif %}
 
 {% assign has_translation = site.locations | where_exp: "item", "item.url == translated_url" | first %}
@@ -59,11 +72,10 @@
           </div>
           <div class="offcanvas-body d-flex flex-column h-100">
             <ul class="navbar-nav">
-              {% assign pages = site.locations | where_exp: "item", "item.path contains location_name"| where: "locale", page.locale | sort: "order"
-              %}
+              {% assign pages = site.locations | where_exp: "item", "item.path contains location_name" | where: "locale", page.locale | sort: "order" %}
 
               {% for page in pages %}
-              {% unless page.exclude == true or page.path contains  '/events/' %}
+              {% unless page.exclude == true or page.path contains '/events/' or page.path contains '/_courses/' %}
               <li class="nav-item"><a class="nav-link nav-text-solid" href="{{ page.url }}">
                   {% if page.title == "Summer Camp" %}
                   <span class="underline-3 style-3 primary">{{ page.title }}</span>
