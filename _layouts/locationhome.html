@@ -214,6 +214,10 @@ layout: locationdefault
             {% for event in events %}
             <article class="post">
               <div class="card">
+                {% if event.image %}
+                <figure class="card-img-top"><img src="{{event.image}}" alt="" style="width: 100%; max-height:400px; object-fit: cover;">
+                </figure>
+                {% endif %}
                 <div class="card-body">
                   <div class="post-header">
                     <h2 class="post-title mt-1 mb-0">
@@ -223,6 +227,12 @@ layout: locationdefault
                   <div class="post-content">
                     {{ event.content | markdownify  }}
                   </div>
+                </div>
+                <div class="card-footer">
+                  <ul class="post-meta d-flex mb-0">
+                    <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{event.date | date: "%-d %B %Y"}}</span></li>
+                  </ul>
+                  <!-- /.post-meta -->
                 </div>
               </div>
             </article>
