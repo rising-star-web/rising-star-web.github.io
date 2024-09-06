@@ -16,7 +16,7 @@ bodyText2: "TweetWatch”是一个实时检测和分类Twitter仇恨言论的平
 URLDescription: "链接到项目"
 projectURL: "https://sites.google.com/view/ryders-chess-puzzles-pro/home"
 awardsDesc: "学员获Stanford录取"
-contentImage: "/img/updated/projects/图片 1.png"
+contentImage: "/img/updated/projects/图片.png"
 contentImage2: "/img/updated/projects/截屏2024-05-27 19.34.47.png"
 
 ---
