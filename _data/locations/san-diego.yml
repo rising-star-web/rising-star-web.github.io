@@ -1,0 +1,7 @@
+contact:
+  email: san.diego@codingmind.com
+  phone: (123) 456-7890
+  address: |
+    123 Address, St<br/>  
+    San Diego, CA, 12345
+paymenturl: https://billing.stripe.com/p/login/eVa01A0XvdnJfLybII
