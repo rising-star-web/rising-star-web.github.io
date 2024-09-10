@@ -1,7 +1,7 @@
 contact:
-  email: seattle@codingmind.com
-  phone: (123) 456-7890
+  email: wa@codingmind.com
+  phone: (949) 236-7896
   address: |
-    123 Address, St<br/>  
-    Seattle, WA, 12345
+    4006 148th Ave NE<br/>
+    Redmond, WA 98052
 paymenturl: https://billing.stripe.com/p/login/eVa01A0XvdnJfLybII
