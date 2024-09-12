@@ -2,7 +2,7 @@
 layout: locationpage
 title: About
 locale: en
-order: 2
+order: 3
 ---
 
 **The Pursuit of Excellence**
