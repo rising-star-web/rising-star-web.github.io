@@ -397,7 +397,7 @@ layout: default
 
     $.get(url, function (data) {
       var $html = $($.parseHTML(data));
-      var $image = $html.find('img:not([src$=".svg"])').first(); // Looking for the first non-SVG image
+      var $image = $html.find('img:not([src$=".svg"])').eq(2);
 
       var imageUrl;
       if ($image.length) {

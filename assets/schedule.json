@@ -1,0 +1,139 @@
+{
+  "San Diego": [
+
+    {
+      "Name": "L1 - Scratch",
+      "Schedule": [
+        {
+          "Day": "Monday",
+          "Time": "5:10-6:10"
+        },
+        {
+          "Day": "Tuesday",
+          "Time": "5:10-6:10"
+        },
+        {
+          "Day": "Thursday",
+          "Time": "3:40-4:40"
+        },
+        {
+          "Day": "Friday",
+          "Time": "5:10-6:10"
+        },
+        {
+          "Day": "Saturday",
+          "Time": "11:10-12:10"
+        },
+        {
+          "Day": "Sunday",
+          "Time": "11:10-12:10"
+        }
+      ],
+      "Grade": "G1-2+",
+      "CourseInfo": "https://codingmind.com/sandiego/scratch1/"
+    },
+    {
+      "Name": "L2 - Roblox Programming",
+      "Schedule": [
+        {
+          "Day": "Wednesday",
+          "Time": "4:10-5:10"
+        },
+        {
+          "Day": "Thursday",
+          "Time": "3:30-4:30"
+        }
+      ],
+      "Grade": "G2-3+",
+      "CourseInfo": "https://codingmind.com/sandiego/roblox1/"
+
+    },
+    {
+      "Name": "L2 - App Development",
+      "Schedule": [
+        {
+          "Day": "Friday",
+          "Time": "18:15-19:15"
+        },
+        {
+          "Day": "Sunday",
+          "Time": "11:10-12:10"
+        }
+      ],
+      "Grade": "G2-3+",
+      "CourseInfo": "https://codingmind.com/sandiego/app-thunkable/"
+    },
+    {
+      "Name": "L3 - Python 1",
+      "Schedule": [
+        {
+          "Day": "Monday",
+          "Time": "5:40-6:40"
+        },
+        {
+          "Day": "Tuesday",
+          "Time": "5:40-6:40"
+        },
+        {
+          "Day": "Wednesday",
+          "Time": "4:40-5:40"
+        },
+        {
+          "Day": "Thursday",
+          "Time": "4:35-5:35"
+        },
+        {
+          "Day": "Saturday",
+          "Time": "11:10-12:10"
+        },
+        {
+          "Day": "Sunday",
+          "Time": "11:10-12:10"
+        }
+      ],
+      "Grade": "G4+",
+      "CourseInfo": "https://codingmind.com/sandiego/python1/"
+
+    },
+    {
+      "Name": "L4 - APP Development",
+      "Schedule": [
+        {
+          "Day": "Wednesday",
+          "Time": "5:50-6:50"
+        },
+        {
+          "Day": "Saturday",
+          "Time": "4:00-5:00"
+        }
+      ],
+      "Grade": "G6+",
+      "CourseInfo": "https://codingmind.com/sandiego/flutter/"
+
+    },
+    {
+      "Name": "L4 - Web 1-2",
+      "Schedule": [
+        {
+          "Day": "Thursday",
+          "Time": "5:40-6:40"
+        }
+      ],
+      "Grade": "G6+",
+      "CourseInfo": "https://codingmind.com/sandiego/web1/"
+
+    },
+    {
+      "Name": "L4 AI Create/Unity 1-4",
+      "Schedule": [
+        {
+          "Day": "Sunday",
+          "Time": "12:10-13:10"
+        }
+      ],
+      "Grade": "G6+",
+      "CourseInfo": "https://codingmind.com/sandiego/unity1/"
+    }
+
+  ]
+}

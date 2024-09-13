@@ -1,0 +1,261 @@
+---
+layout: locationdefault
+---
+<section class="wrapper bg-soft-primary">
+  <div class="container pt-10 pt-md-14 text-center">
+    <div class="row">
+      <div class="col-md-10 col-lg-8 col-xl-8 col-xxl-6 mx-auto" data-cues="slideInDown" data-group="page-title">
+        <h1 class="display-1 mb-4">
+          2024 Course Schedule
+        </h1>
+        <p class="lead fs-lg px-xl-12 px-xxl-6 mb-7">
+          Our programming course schedule experience offers courses for every interest in a fun, learning environment.        
+        </p>
+      </div>
+
+      <!-- Filters Section -->
+      <div class="d-flex justify-content-center mb-4 w-100">
+        <div class="mx-2">
+          <label for="locationFilter"></label>
+          <select id="locationFilter" class="form-select">
+          </select>
+        </div>
+        <div class="mx-2">
+          <label for="gradeFilter"></label>
+          <select id="gradeFilter" class="form-select">
+            <option value="all">{{ site.data.summercamp[page.locale].summer.gradeFilter }}</option>
+            <!-- Options will be added dynamically -->
+          </select>
+        </div>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->
+
+<section class="wrapper bg-light">
+  <div class="container pt-10 pb-19 pt-md-14 pb-md-20 text-center">
+    <div class="row card p-2 overflow-y-auto flex-row justify-content-center" id="camp-registration-grid">
+      <!-- Spinner and Content -->
+      <div class="d-flex justify-content-center">
+        <div id="formSpinner" class="spinner-border text-navy align-self-center" role="status"
+          style="width: 3rem; height: 3rem; display: none"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- /section -->
+
+<!-- The Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content p-0">
+      <div class="modal-header d-flex justify-content-center p-4">
+        <h5 class="modal-title text-center fs-28" id="myModalLabel">
+          {{ site.data.summercamp[page.locale].summer.modal }}
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0">
+        <iframe id="modalIframe" src="" frameborder="0" width="100%" height="500"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"
+  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"
+  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<script>
+  var preference = window.location.href.indexOf("cn") == -1 ? "en" : "cn";
+  var fileToFetch = "/assets/schedule.json";
+
+  $(document).ready(function () {
+    // Function to handle modal show event
+    $("#myModal").on("show.bs.modal", function (event) {
+      var button = $(event.relatedTarget);
+      var url = button.attr("href");
+      var iframe = $(this).find("#modalIframe");
+      iframe.attr("src", url);
+    });
+
+    function fetchAndApplyFilters() {
+      $("#formSpinner").css("display", "block");
+      $.getJSON(fileToFetch)
+        .then(function (scheduleData) {
+          $("#formSpinner").css("display", "none");
+          var selectedLocation = $("#locationFilter").val();
+          var selectedGrade = $("#gradeFilter").val();
+          populateFilteredGrid(scheduleData, selectedLocation, selectedGrade);
+        })
+        .catch(function (error) {
+          $("#formSpinner").css("display", "none");
+          alert("Error: " + error);
+          console.error("Error fetching JSON data:", error);
+        });
+    }
+
+    $("#locationFilter, #gradeFilter").change(fetchAndApplyFilters);
+
+    fetchAndApplyFilters();
+  });
+
+  $.getJSON(fileToFetch, function (data) {
+    var coursesData = Object.values(data).flat();
+    var grades = new Set();
+    coursesData.forEach(function (course) {
+      grades.add(course.Grade);
+    });
+
+    var locationSelect = document.getElementById("locationFilter");
+    var gradeSelect = document.getElementById("gradeFilter");
+
+    Object.keys(data).forEach(function (location) {
+      var option = document.createElement("option");
+      option.value = location;
+      option.text = location;
+      locationSelect.appendChild(option);
+    });
+
+    grades.forEach(function (grade) {
+      var option = document.createElement("option");
+      option.value = grade;
+      option.text = grade;
+      gradeSelect.appendChild(option);
+    });
+  });
+
+  function populateFilteredGrid(scheduleData, selectedLocation, selectedGrade) {
+    var $grid = $("#camp-registration-grid");
+    $grid.empty();
+
+    var $table = $('<table class="table table-striped" style="width: 100%; table-layout: fixed;">');
+    $grid.append($table);
+
+    var $thead = $("<thead>");
+    var $headerRow = $('<tr style="box-shadow: 0rem 1.25rem 1.25rem -1.25rem rgba(30, 34, 40, 0.06);">');
+    $headerRow.css({
+      position: "sticky",
+      top: "4rem",
+      backgroundColor: "#fff",
+      zIndex: "1020",
+    });
+
+    $headerRow.append('<th class="d-none d-xl-table-cell" style="vertical-align: middle; width: 30%;">{{ site.data.summercamp[page.locale].summer.courseName }}</th>');
+
+    var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+    days.forEach((day) => {
+      $headerRow.append($('<th style="vertical-align: middle; width: 10%;">').text(day));
+    });
+
+    $thead.append($headerRow);
+    $table.append($thead);
+
+    var $tbody = $("<tbody>");
+
+    Object.entries(scheduleData).forEach(([location, courses]) => {
+      courses.forEach((course) => {
+        if (
+          (selectedLocation === "all" || location === selectedLocation) &&
+          (selectedGrade === "all" || course.Grade === selectedGrade)
+        ) {
+          var $row = $('<tr style="height: 50px; vertical-align: middle;">');
+          var $courseCell = $('<td style="width: 10%;">');
+          var $cardWrapper = $('<div class="card" style="max-width: 300px; margin: 0 auto;">');
+          var $imageContainer = $('<div style="text-align: center;">');
+          createImageElement(course.CourseInfo, $imageContainer);
+          $cardWrapper.append($imageContainer);
+
+          var $detailsContainer = $('<div class="card-body p-4 p-md-2" style="text-align: center;">').append(
+            $("<strong>").text(course.Name),
+            $("<div>", { style: "font-size: 0.8em;" }).html(
+              "{{ site.data.summercamp[page.locale].summer.grade }}: " + course.Grade
+            ),
+            $("<a>", {
+              href: "#",
+              class: "text-primary",
+              text: " {{ site.data.summercamp[page.locale].summer.learnMore }}",
+              click: function (e) {
+                e.preventDefault();
+                $("#myModal").find("#modalIframe").attr("src", course.CourseInfo);
+                $("#myModal").modal("show");
+              },
+            }).css("font-size", "0.8em")
+          );
+
+          $cardWrapper.append($detailsContainer);
+          $courseCell.append($cardWrapper);
+          $row.append($courseCell);
+
+          days.forEach((day) => {
+            var scheduleForDay = course.Schedule.find(s => s.Day === day);
+            if (scheduleForDay) {
+              var cellContent = scheduleForDay.Time;
+              if (scheduleForDay.Course) {
+                cellContent += '<br>' + scheduleForDay.Course;
+              }
+              $row.append($('<td style="width: 11.43%;">').html(cellContent));
+            } else {
+              // $row.append($('<td style="width: 11.43%;">').append($("<div class='d-flex justify-content-center'><div class='bg-soft-navy card py-3 w-50 '></div></div>")));
+              $row.append($('<td style="width: 11.43%;">').text(' '));
+
+            }
+          });
+
+          $tbody.append($row);
+        }
+      });
+    });
+
+    $table.append($tbody);
+    adjustTableForMobile();
+  }
+
+  function adjustTableForMobile() {
+    if ($(window).width() < 1200) {
+      $("th:not(:first-child)").hide();
+      $("td:not(:first-child)").hide();
+    } else {
+      $("th, td").show();
+      $(".header-row").off("click");
+    }
+  }
+
+  $(window).resize(adjustTableForMobile);
+
+  function createImageElement(url, $container) {
+    var defaultImageUrl = "/img/my/app-dev-1.png";
+
+    $.get(url, function (data) {
+      var $html = $($.parseHTML(data));
+      var $image = $html.find('img:not([src$=".svg"])').eq(1);
+
+
+      var imageUrl;
+      if ($image.length) {
+        imageUrl = new URL($image.attr("src"), url).href;
+      } else {
+        imageUrl = defaultImageUrl;
+      }
+
+      var $imageElement = $("<img>", {
+        class: "card-img-top rounded-top rounded-0",
+        src: imageUrl,
+        style: "width: 100%; height: auto; display: block; margin-bottom: 5px; text-align: center;",
+      });
+      $container.prepend($imageElement);
+    }).fail(function () {
+      var $imageElement = $("<img>", {
+        class: "card-img-top rounded-top rounded-0",
+        src: defaultImageUrl,
+        style: "width: 100%; height: auto; display: block; margin-bottom: 5px; text-align: center;",
+      });
+      $container.prepend($imageElement);
+    });
+  }
+</script>
