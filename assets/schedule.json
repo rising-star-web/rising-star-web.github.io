@@ -1,24 +1,24 @@
 {
   "San Diego": [
-
     {
       "Name": "L1 - Scratch",
       "Schedule": [
         {
           "Day": "Monday",
-          "Time": "5:10-6:10"
+          "Time": "17:10-18:10"
+          
         },
         {
           "Day": "Tuesday",
-          "Time": "5:10-6:10"
+          "Time": "17:10-18:10"
         },
         {
           "Day": "Thursday",
-          "Time": "3:40-4:40"
+          "Time": "15:40-16:40"
         },
         {
           "Day": "Friday",
-          "Time": "5:10-6:10"
+          "Time": "17:10-18:10"
         },
         {
           "Day": "Saturday",
@@ -37,11 +37,11 @@
       "Schedule": [
         {
           "Day": "Wednesday",
-          "Time": "4:10-5:10"
+          "Time": "16:10-17:10"
         },
         {
           "Day": "Thursday",
-          "Time": "3:30-4:30"
+          "Time": "15:30-16:30"
         }
       ],
       "Grade": "G2-3+",
@@ -68,19 +68,19 @@
       "Schedule": [
         {
           "Day": "Monday",
-          "Time": "5:40-6:40"
+          "Time": "17:40-18:40"
         },
         {
           "Day": "Tuesday",
-          "Time": "5:40-6:40"
+          "Time": "17:40-18:40"
         },
         {
           "Day": "Wednesday",
-          "Time": "4:40-5:40"
+          "Time": "16:40-17:40"
         },
         {
           "Day": "Thursday",
-          "Time": "4:35-5:35"
+          "Time": "16:35-17:35"
         },
         {
           "Day": "Saturday",
@@ -100,11 +100,11 @@
       "Schedule": [
         {
           "Day": "Wednesday",
-          "Time": "5:50-6:50"
+          "Time": "17:50-18:50"
         },
         {
           "Day": "Saturday",
-          "Time": "4:00-5:00"
+          "Time": "16:00-17:00"
         }
       ],
       "Grade": "G6+",
@@ -116,7 +116,7 @@
       "Schedule": [
         {
           "Day": "Thursday",
-          "Time": "5:40-6:40"
+          "Time": "17:40-18:40"
         }
       ],
       "Grade": "G6+",

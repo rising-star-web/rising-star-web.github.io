@@ -1,6 +1,6 @@
 ---
 layout: locationbooking
-title: Book A Free Trial
+title: Book A Trial Class
 locale: en
 order: 4
 exclude: true

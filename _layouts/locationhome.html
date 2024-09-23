@@ -72,8 +72,13 @@ layout: locationdefault
     <div class="collapse navbar-collapse d-md-flex justify-content-center" id="navbarSupportedContent">
       <ul class="navbar-nav mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link nav-text-solid" aria-current="page" href="#free-trial" onclick="navbarCollapse()">Free
-            Trial</a>
+          <a class="nav-link nav-text-solid" aria-current="page" href="#free-trial" onclick="navbarCollapse()">
+            {% if location_name == "sandiego" %}
+              Trial Class
+            {% else %}
+              Free Trial
+            {% endif %}
+          </a>
         </li>
 
         <li class="nav-item">
@@ -162,8 +167,16 @@ layout: locationdefault
           <div class="card-body">
             <h1 class="display-1 mb-5 mx-md-n5 mx-lg-0">{{ site.data.competitive[page.locale].trial.header }}</h1>
             <p class="lead fs-lg mb-7">{{ site.data.competitive[page.locale].trial.lead }}</p>
-            <span><a href="./schedule-trial" class="btn btn-primary rounded-pill me-2">{{
-                site.data.home[page.locale].trial.btn2 }}</a></span>
+              <span>
+                <a href="./schedule-trial" class="btn btn-primary rounded-pill me-2">
+                  {% if location_name == "sandiego" %}
+                    {{ site.data.home[page.locale].trial.btn3 }}
+                  {% else %}
+                    {{ site.data.home[page.locale].trial.btn2 }}
+                  {% endif %}
+                </a>
+              </span>
+
             <hr class="my-5">
             <div class="d-flex flex-column">
               <div class="d-flex flex-row">
