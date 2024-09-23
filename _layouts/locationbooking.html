@@ -28,6 +28,13 @@ layout: locationdefault
       <div class="col-lg-10 mx-auto">
         <div class="blog single mt-n18">
           <div class="card shadow-lg">
+            {% if page.URL == "coding-mind/sandiego" %}
+              <!-- Coming Soon message -->
+              <div id="coming-soon-message" style="text-align:center;padding:20px;">
+                <h2>Coming Soon</h2>
+                <p>Our booking calendar will be available shortly. Please check back later.</p>
+              </div>
+              {% else %}
             <div class="d-flex flex-column pt-0 pt-xxl-3">
               <!-- Cal inline embed code begins -->
               <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline"></div>
@@ -44,6 +51,7 @@ layout: locationdefault
                 Cal("ui", { "styles": { "branding": { "brandColor": "#4494f5" } }, "hideEventTypeDetails": false, "layout": "month_view" });
               </script>
               <!-- Cal inline embed code ends -->
+              {% endif %}
 
             </div>
           </div>
