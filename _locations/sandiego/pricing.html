@@ -1,0 +1,87 @@
+---
+layout: locationpricing
+title: Pricing
+locale: en
+order: 4
+---
+<script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+
+<style>
+    .content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        border-radius: 10px; /* Added rounded corners */
+    }
+    .collapsible {
+        background-color: #ffffff;
+        color: #444;
+        font-weight: bold; /* Made text bold */
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        margin-bottom: 10px;
+        border-radius: 10px; /* Added rounded corners */
+        transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+
+    }
+    .active, .collapsible:hover {
+        background-color: #04aaf4;
+    }
+    .pricing-container {
+        background-color: #ebf9fe;
+        padding: 2rem;
+        border-radius: 0.25rem;
+    }
+</style>
+
+
+<div class="pricing-container">
+    <div class="mb-4">
+        <button class="collapsible">Coding Mind Group Class for All Level</button>
+        <div class="content">
+            <stripe-pricing-table pricing-table-id="prctbl_1Q2ZcCP2pSpFqYXAp9ONoLRx"
+            publishable-key="pk_live_51PykoAP2pSpFqYXAXHJtAjmYzwf3kZt6K877RmO6pYp0DFCdCw08VVdXxkMySVE1HU5CiqxZC8XHjQnTZPxAflND004piDnQ7w">
+            </stripe-pricing-table>
+        </div>
+    </div>
+
+    <div class="mb-4">
+        <button class="collapsible">Coding Mind Private Class for Level Jr to L2</button>
+        <div class="content">
+            <stripe-pricing-table pricing-table-id="prctbl_1Q2ZlUP2pSpFqYXADbrBcByv"
+            publishable-key="pk_live_51PykoAP2pSpFqYXAXHJtAjmYzwf3kZt6K877RmO6pYp0DFCdCw08VVdXxkMySVE1HU5CiqxZC8XHjQnTZPxAflND004piDnQ7w">
+            </stripe-pricing-table>
+        </div>
+    </div>
+
+    <div class="mb-4">
+        <button class="collapsible">Coding Mind Private Class for Level L3+</button>
+        <div class="content">
+            <stripe-pricing-table pricing-table-id="prctbl_1Q2ZoUP2pSpFqYXA8cmVduwF"
+            publishable-key="pk_live_51PykoAP2pSpFqYXAXHJtAjmYzwf3kZt6K877RmO6pYp0DFCdCw08VVdXxkMySVE1HU5CiqxZC8XHjQnTZPxAflND004piDnQ7w">
+            </stripe-pricing-table>
+        </div>
+    </div>
+</div>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+</script>

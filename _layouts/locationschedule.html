@@ -9,25 +9,11 @@ layout: locationdefault
           2024 Course Schedule
         </h1>
         <p class="lead fs-lg px-xl-12 px-xxl-6 mb-7">
-          Our programming course schedule experience offers courses for every interest in a fun, learning environment.        
+          Our programming course schedule experience offers courses for every interest in a fun, learning environment.
         </p>
       </div>
 
-      <!-- Filters Section -->
-      <div class="d-flex justify-content-center mb-4 w-100">
-        <div class="mx-2">
-          <label for="locationFilter"></label>
-          <select id="locationFilter" class="form-select">
-          </select>
-        </div>
-        <div class="mx-2">
-          <label for="gradeFilter"></label>
-          <select id="gradeFilter" class="form-select">
-            <option value="all">{{ site.data.summercamp[page.locale].summer.gradeFilter }}</option>
-            <!-- Options will be added dynamically -->
-          </select>
-        </div>
-      </div>
+
       <!-- /column -->
     </div>
     <!-- /.row -->
@@ -37,15 +23,110 @@ layout: locationdefault
 <!-- /section -->
 
 <section class="wrapper bg-light">
-  <div class="schedule-container pt-10 pb-19 pt-md-14 pb-md-20 text-center">
-    <div id="camp-registration-grid" class="schedule-grid">
-      <!-- Spinner and Content -->
-      <div class="d-flex justify-content-center">
-        <div id="formSpinner" class="spinner-border text-navy align-self-center" role="status"
-          style="width: 3rem; height: 3rem; display: none"></div>
+  <div class="container pt-8 pb-2 text-center">
+    <h2 class="display-4 mb-3">Back to School Promotion!</h2>
+    <p class="lead mb-6">Special offers for our programming courses</p>
+    <div class="row gx-lg-8 gx-xl-12 gy-6 process-wrapper">
+      <div class="col-md-4">
+        <div class="card shadow-lg">
+          <div class="card-body">
+            <h4 class="mb-1">Group Class</h4>
+            <p class="mb-0">All Levels & 1 HR</p>
+            <h3 class="price mt-2 mb-3">$180<span class="fs-18">/month(4)</span></h3>
+            <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
+              <li><span><i class="uil uil-check"></i></span><strong>10 Classes:</strong> <s>$450</s> $425 <span
+                  class="badge bg-pale-primary text-primary rounded">5% OFF</span></li>
+              <li><span><i class="uil uil-check"></i></span><strong>20 Classes:</strong> <s>$900</s> $810 <span
+                  class="badge bg-pale-primary text-primary rounded">10% OFF</span></li>
+              <li><span><i class="uil uil-check"></i></span><strong>30 Classes:</strong> <s>$1350</s> $1150 <span
+                  class="badge bg-pale-primary text-primary rounded">15% OFF</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-lg">
+          <div class="card-body">
+            <h4 class="mb-1">Private Class</h4>
+            <p class="mb-0">JR-L2 & 1 HR</p>
+            <h3 class="price mt-2 mb-3">$300<span class="fs-18">/month(4)</span></h3>
+            <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
+              <li><span><i class="uil uil-check"></i></span><strong>10 Classes:</strong> <s>$750</s> $715 <span
+                  class="badge bg-pale-primary text-primary rounded">5% OFF</span></li>
+              <li><span><i class="uil uil-check"></i></span><strong>20 Classes:</strong> <s>$1500</s> $1350 <span
+                  class="badge bg-pale-primary text-primary rounded">10% OFF</span></li>
+              <li><span><i class="uil uil-check"></i></span><strong>30 Classes:</strong> <s>$2250</s> $1910 <span
+                  class="badge bg-pale-primary text-primary rounded">15% OFF</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-lg">
+          <div class="card-body">
+            <h4 class="mb-1">Private Class</h4>
+            <p class="mb-0">L3+ & 1 HR</p>
+            <h3 class="price mt-2 mb-3">$340<span class="fs-18">/month(4)</span></h3>
+            <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
+              <li><span><i class="uil uil-check"></i></span><strong>10 Classes:</strong> <s>$850</s> $799 <span
+                  class="badge bg-pale-primary text-primary rounded">5% OFF</span></li>
+              <li><span><i class="uil uil-check"></i></span><strong>20 Classes:</strong> <s>$1700</s> $1530 <span
+                  class="badge bg-pale-primary text-primary rounded">10% OFF</span></li>
+              <li><span><i class="uil uil-check"></i></span><strong>30 Classes:</strong> <s>$2550</s> $2150 <span
+                  class="badge bg-pale-primary text-primary rounded">15% OFF</span></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
+    <!-- <div class="row mt-6">
+      <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
+        <div class="row align-items-center counter-wrapper gy-4 gy-md-0">
+          <div class="col-md-4 text-center">
+            <img src="path_to_icon/l1_icon.png" alt="L1 Block Based Programming" class="icon-svg icon-svg-sm text-primary mb-3">
+            <h5>L1 Block Based Programming</h5>
+          </div>
+          <div class="col-md-4 text-center">
+            <img src="path_to_icon/l2_icon.png" alt="L2 Script Based Programming" class="icon-svg icon-svg-sm text-primary mb-3">
+            <h5>L2 Script Based Programming</h5>
+          </div>
+          <div class="col-md-4 text-center">
+            <img src="path_to_icon/l3_icon.png" alt="L3 Intermediate Programming" class="icon-svg icon-svg-sm text-primary mb-3">
+            <h5>L3 Intermediate Programming</h5>
+          </div>
+        </div>
+      </div>
+    </div> -->
   </div>
+</section>
+<section class="wrapper bg-light">
+  <div class="schedule-container pt-2 pb-19 pt-md-14 pb-md-20 text-center">
+    <div class="mb-4">
+      <a href="../pricing" class="btn btn-primary btn-join-us">Join Today</a>
+    </div>
+
+    <div class="mx-2">
+      <label for="locationFilter" class="h3 text-primary mb-2" style="display: none;">Location:</label>
+      <select id="locationFilter" class="form-select" style="display: none;">
+      </select>
+    </div>
+    <div class="mx-2">
+      <label for="gradeFilter" class="h3 text-primary mb-2">Select Grade:</label>
+      <div id="gradeFilter" class="d-flex flex-wrap justify-content-center">
+        <!-- Options will be added dynamically -->
+        </select>
+      </div>
+    </div>
+    <br>
+    <div class="d-flex justify-content-center mb-4 w-100">
+      <div id="camp-registration-grid" class="schedule-grid">
+        <!-- Spinner and Content -->
+        <div class="d-flex justify-content-center">
+          <div id="formSpinner" class="spinner-border text-navy align-self-center" role="status"
+            style="width: 3rem; height: 3rem; display: none"></div>
+        </div>
+      </div>
+    </div>
 </section>
 
 <!-- /section -->
@@ -76,110 +157,133 @@ layout: locationdefault
   var fileToFetch = "/assets/schedule.json";
 
   $(document).ready(function () {
-    // Function to handle modal show event
-    $("#myModal").on("show.bs.modal", function (event) {
-      var button = $(event.relatedTarget);
-      var url = button.attr("href");
-      var iframe = $(this).find("#modalIframe");
-      iframe.attr("src", url);
-    });
 
-      setupModalListeners();
-
-
-    function fetchAndApplyFilters() {
-      $("#formSpinner").css("display", "block");
-      $.getJSON(fileToFetch)
-        .then(function (scheduleData) {
-          $("#formSpinner").css("display", "none");
-          var selectedLocation = $("#locationFilter").val();
-          var selectedGrade = $("#gradeFilter").val();
-          populateFilteredGrid(scheduleData, selectedLocation, selectedGrade);
-        })
-        .catch(function (error) {
-          $("#formSpinner").css("display", "none");
-          alert("Error: " + error);
-          console.error("Error fetching JSON data:", error);
-        });
-    }
-
-    $("#locationFilter, #gradeFilter").change(fetchAndApplyFilters);
-
-    fetchAndApplyFilters();
+    setupModalListeners();
+    fetchAndPopulateFilters();
+    
   });
 
-  $.getJSON(fileToFetch, function (data) {
-    var coursesData = Object.values(data).flat();
-    var grades = new Set();
-    coursesData.forEach(function (course) {
-      grades.add(course.Grade);
-    });
+  function fetchAndPopulateFilters() {
+    $("#formSpinner").css("display", "block");
+    $.getJSON(fileToFetch)
+      .then(function (scheduleData) {
+        $("#formSpinner").css("display", "none");
+        populateLocationFilter(scheduleData);
+        populateGradeFilter(scheduleData);
+        fetchAndApplyFilters();
+      })
+      .catch(function (error) {
+        $("#formSpinner").css("display", "none");
+        alert("Error: " + error);
+        console.error("Error fetching JSON data:", error);
+      });
+  }
 
+  function populateLocationFilter(scheduleData) {
     var locationSelect = document.getElementById("locationFilter");
-    var gradeSelect = document.getElementById("gradeFilter");
-
-    Object.keys(data).forEach(function (location) {
+    Object.keys(scheduleData).forEach(function (location) {
       var option = document.createElement("option");
       option.value = location;
       option.text = location;
       locationSelect.appendChild(option);
     });
+  }
 
-    grades.forEach(function (grade) {
-      var option = document.createElement("option");
-      option.value = grade;
-      option.text = grade;
-      gradeSelect.appendChild(option);
+  function populateGradeFilter(scheduleData) {
+    var grades = new Set();
+    Object.values(scheduleData).flat().forEach(function (course) {
+      grades.add(course.Grade);
     });
-  });
 
-function populateFilteredGrid(scheduleData, selectedLocation, selectedGrade) {
-  var $grid = $("#camp-registration-grid");
-  $grid.empty();
+    var $gradeFilter = $('#gradeFilter');
+    grades.forEach(function(grade) {
+      var $button = $('<button>', {
+        class: 'grade-btn',
+        'data-grade': grade,
+        text: grade
+      });
+      $gradeFilter.append($button);
+    });
 
-  var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-  
-  // Create the grid structure
-  days.forEach(day => {
-    var $dayColumn = $(`
+    // Add click event listener to grade buttons
+    $('.grade-btn').click(function() {
+      $(this).toggleClass('active');
+      fetchAndApplyFilters();
+    });
+  }
+
+  function getSelectedGrades() {
+    return $('.grade-btn.active').map(function() {
+      return $(this).data('grade');
+    }).get();
+  }
+
+  function fetchAndApplyFilters() {
+    $("#formSpinner").css("display", "block");
+    $.getJSON(fileToFetch)
+      .then(function (scheduleData) {
+        $("#formSpinner").css("display", "none");
+        var selectedLocation = $("#locationFilter").val();
+        var selectedGrades = getSelectedGrades();
+        populateFilteredGrid(scheduleData, selectedLocation, selectedGrades);
+      })
+      .catch(function (error) {
+        $("#formSpinner").css("display", "none");
+        alert("Error: " + error);
+        console.error("Error fetching JSON data:", error);
+      });
+  }
+
+  $("#locationFilter").change(fetchAndApplyFilters);
+
+
+  function populateFilteredGrid(scheduleData, selectedLocation, selectedGrades) {
+    var $grid = $("#camp-registration-grid");
+    $grid.empty();
+
+    var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+    // Create the grid structure
+    days.forEach(day => {
+      var $dayColumn = $(`
       <div class="day-column">
         <h3 class="day-title">${day}</h2>
         <div class="course-container"></div>
       </div>
     `);
-    $grid.append($dayColumn);
-  });
-
-  // Populate the grid with courses
-  Object.entries(scheduleData).forEach(([location, courses]) => {
-    courses.forEach((course) => {
-      if (
-        (selectedLocation === "all" || location === selectedLocation) &&
-        (selectedGrade === "all" || course.Grade === selectedGrade)
-      ) {
-        course.Schedule.forEach(schedule => {
-          var dayIndex = days.indexOf(schedule.Day);
-          if (dayIndex !== -1) {
-            var $courseCard = createCourseCard(course, schedule);
-            $grid.find('.day-column').eq(dayIndex).find('.course-container').append($courseCard);
-          }
-        });
-      }
+      $grid.append($dayColumn);
     });
-  });
 
-  // Sort courses within each day column
-  $('.day-column').each(function() {
-    var $column = $(this);
-    var $courses = $column.find('.course-card');
-    $courses.sort(function(a, b) {
-      var timeA = $(a).data('start-time');
-      var timeB = $(b).data('start-time');
-      return timeA.localeCompare(timeB);
+    // Populate the grid with courses
+    Object.entries(scheduleData).forEach(([location, courses]) => {
+      courses.forEach((course) => {
+        if (
+          (selectedLocation === "all" || location === selectedLocation) &&
+          (selectedGrades.length === 0 || selectedGrades.includes(course.Grade) )
+        ) {
+          course.Schedule.forEach(schedule => {
+            var dayIndex = days.indexOf(schedule.Day);
+            if (dayIndex !== -1) {
+              var $courseCard = createCourseCard(course, schedule);
+              $grid.find('.day-column').eq(dayIndex).find('.course-container').append($courseCard);
+            }
+          });
+        }
+      });
     });
-    $column.find('.course-container').empty().append($courses);
-  });
-}
+
+    // Sort courses within each day column
+    $('.day-column').each(function () {
+      var $column = $(this);
+      var $courses = $column.find('.course-card');
+      $courses.sort(function (a, b) {
+        var timeA = $(a).data('start-time');
+        var timeB = $(b).data('start-time');
+        return timeA.localeCompare(timeB);
+      });
+      $column.find('.course-container').empty().append($courses);
+    });
+  }
 
   function createCourseCard(course, schedule) {
     var startTime = schedule.Time.split(' - ')[0];
@@ -188,7 +292,6 @@ function populateFilteredGrid(scheduleData, selectedLocation, selectedGrade) {
         <h4 class="course-title">${course.Name}</h4>
       <p class="course-info">Time: ${schedule.Time}</p>
       <p class="course-info">Grade: ${course.Grade}</p>
-      <p class="course-info">Price: $${course.Price}</p>
         <button class="btn-learn-more" data-bs-toggle="modal" data-bs-target="#myModal" data-course-info="${course.CourseInfo}">Learn More</button>
       </div>
     `);
@@ -207,7 +310,7 @@ function populateFilteredGrid(scheduleData, selectedLocation, selectedGrade) {
     $('#myModal').on('show.bs.modal', function (event) {
       var button = $(event.relatedTarget);
       var courseInfo = button.data('course-info');  // Changed from 'CourseInfo' to 'course-info'
-      console.log('courseInfo: ',courseInfo);
+      console.log('courseInfo: ', courseInfo);
       var modal = $(this);
       modal.find('#modalIframe').attr('src', courseInfo);
     });
@@ -227,47 +330,47 @@ function populateFilteredGrid(scheduleData, selectedLocation, selectedGrade) {
   $(window).resize(adjustTableForMobile);
 
   // Call this function after populating the grid
-function initializeGrid() {
-  adjustGridForMobile();
-}
+  function initializeGrid() {
+    adjustGridForMobile();
+  }
 
-function createImageElement(url, $container) {
-  var defaultImageUrl = "/img/my/app-dev-1.png";
+  function createImageElement(url, $container) {
+    var defaultImageUrl = "/img/my/app-dev-1.png";
 
-  $.get(url, function (data) {
-    var $html = $($.parseHTML(data));
-    var $image = $html.find('img:not([src$=".svg"])').eq(1);
+    $.get(url, function (data) {
+      var $html = $($.parseHTML(data));
+      var $image = $html.find('img:not([src$=".svg"])').eq(1);
 
 
-    var imageUrl;
-    if ($image.length) {
-      imageUrl = new URL($image.attr("src"), url).href;
-    } else {
-      imageUrl = defaultImageUrl;
-    }
+      var imageUrl;
+      if ($image.length) {
+        imageUrl = new URL($image.attr("src"), url).href;
+      } else {
+        imageUrl = defaultImageUrl;
+      }
 
-    var $imageElement = $("<img>", {
-      class: "card-img-top rounded-top rounded-0",
-      src: imageUrl,
-      style: "width: 100%; height: auto; display: block; margin-bottom: 5px; text-align: center;",
+      var $imageElement = $("<img>", {
+        class: "card-img-top rounded-top rounded-0",
+        src: imageUrl,
+        style: "width: 100%; height: auto; display: block; margin-bottom: 5px; text-align: center;",
+      });
+      $container.prepend($imageElement);
+    }).fail(function () {
+      var $imageElement = $("<img>", {
+        class: "card-img-top rounded-top rounded-0",
+        src: defaultImageUrl,
+        style: "width: 100%; height: auto; display: block; margin-bottom: 5px; text-align: center;",
+      });
+      $container.prepend($imageElement);
     });
-    $container.prepend($imageElement);
-  }).fail(function () {
-    var $imageElement = $("<img>", {
-      class: "card-img-top rounded-top rounded-0",
-      src: defaultImageUrl,
-      style: "width: 100%; height: auto; display: block; margin-bottom: 5px; text-align: center;",
-    });
-    $container.prepend($imageElement);
-  });
-}
+  }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <style>
   .schedule-container {
     max-width: 2400px;
-    width: 50%;
+    width: 90%;
     margin: 0 auto;
     padding: 0 15px;
   }
@@ -276,7 +379,8 @@ function createImageElement(url, $container) {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
     /* -webkit-overflow-scrolling: touch;  */
   }
 
@@ -302,15 +406,20 @@ function createImageElement(url, $container) {
 
   .course-card {
     background-color: #ffffff;
-    border: 1px solid #dee2e6;
+    border: 2px solid #ebf9fe;
     border-radius: 4px;
     padding: 8px;
     margin-bottom: 8px;
     transition: all 0.3s ease-in-out;
+    height: 170px;
+    display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   }
 
   .course-card:hover {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
 
   }
@@ -321,7 +430,9 @@ function createImageElement(url, $container) {
     margin-bottom: 5px;
   }
 
-  .course-time, .course-grade, .course-price {
+  .course-time,
+  .course-grade,
+  .course-price {
     font-size: 0.9em;
     color: #6c757d;
     margin-bottom: 3px;
@@ -361,7 +472,8 @@ function createImageElement(url, $container) {
     }
 
     .day-column {
-      min-width: 200px; /* Ensure readability on mobile */
+      min-width: 200px;
+      /* Ensure readability on mobile */
     }
 
     .course-card {
@@ -410,4 +522,75 @@ function createImageElement(url, $container) {
       padding: 3px 6px;
     }
   }
+
+  .price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #04aaf4;
+  }
+
+  .price span {
+    font-size: 1rem;
+    color: #6c757d;
+  }
+
+  .icon-list {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+  }
+
+  .icon-list li {
+    margin-bottom: 0.5rem;
+  }
+
+  .badge {
+    font-size: 0.7rem;
+    padding: 0.2em 0.5em;
+  }
+
+  .icon-svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  .grade-btn {
+    border: 2px solid #04aaf4;
+    background-color: #ffffff;
+    color: #04aaf4;
+    padding: 8px 16px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .grade-btn:hover,
+  .grade-btn.active {
+    background-color: #04aaf4;
+    color: #ffffff;
+  }
+
+  .grade-btn-text {
+    font-size: 0.8em;
+    display: block;
+    margin-top: 4px;
+  }
+
+  .btn-join-us {
+  background-color: #04aaf4;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 140px; 
+  display: inline-block; 
+}
+
+.btn-join-us:hover {
+  background-color: #0388c5;
+  color: white;
+}
 </style>
