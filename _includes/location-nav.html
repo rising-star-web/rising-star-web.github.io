@@ -7,29 +7,26 @@
     {% assign location_name = parts[1] %}
     {% assign translated_url = '/cn' | append: page.url %}
 {% endif %} -->
-{% if page.location_name %}
-    {% assign location_name = page.location_name %}
+
+{% assign parts = page.url | split: '/' %}
+
+{% if page.url contains '/cn/' %}
+    {% assign location_name = parts[2] %}
+    {% assign logo_url = '/cn/' | append: location_name %}
+    {% assign translated_url = page.url | replace: '/cn/', '/' %}
 {% else %}
-    {% if page.url contains '/cn/' %}
-        {% assign parts  = page.url | split: '/' %}
-        {% assign location_name = parts[2] %}
-        {% assign translated_url = page.url | replace: '/cn/', '/' %}
-    {% else %}
-        {% assign parts  = page.url | split: '/' %}
-        {% assign location_name = parts[1] %}
-        {% assign translated_url = '/cn' | append: page.url %}
-    {% endif %}
+    {% assign location_name = parts[1] %}
+    {% assign logo_url = '/' | append: location_name %}
+    {% assign translated_url = '/cn' | append: page.url %}
 {% endif %}
-
 {% assign has_translation = site.locations | where_exp: "item", "item.url == translated_url" | first %}
-
 {%- assign location_data = site.data.locations[location_name] -%}
 
 <header class="wrapper">
   <nav class="navbar navbar-expand-lg classic transparent !important; navbar-light pb-1">
     <div class="container flex-lg-row flex-nowrap align-items-center">
         <div class="navbar-brand">
-          <a href="{{ site.data.nav[page.locale].nav.URL }}">
+            <a href="{{ logo_url }}">
             <img class="h-9" src="{{ site.logo }}" alt="" />
           </a>
           <!-- <div class="hidden-xs col-sm-6 center-title">
