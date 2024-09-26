@@ -129,9 +129,9 @@ layout: locationdefault
           </div> -->
 
         <div id="dateTimeSelections" class="mb-4">
-          <h4>Select up to 3 preferred dates and times for your trial class:</h4>
+          <h4>Select at least 1 preferred dates and times for your trial class:</h4>
           <div class="date-time-selection mb-3">
-            <input type="date" class="form-control mb-2" required>
+            <input type="date" class="form-control mb-2" placeholder="*" required>
             <div class="d-flex">
               <input type="time" class="form-control me-2" required>
               <input type="time" class="form-control" required>
@@ -256,3 +256,14 @@ layout: locationdefault
   inputElement.addEventListener('keydown', enforceFormat);
   inputElement.addEventListener('keyup', formatToPhone);
 </script>
+<style>
+  .required::after {
+    content: " *";
+    color: red;
+    font-weight: bold;
+  }
+  .date-time-selection label {
+    display: block;
+    margin-bottom: 5px;
+  }
+</style>
