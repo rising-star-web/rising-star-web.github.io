@@ -815,8 +815,30 @@ var theme = {
                 const campusLocation = campusField.options[campusField.selectedIndex].id;
                 const referralField = document.getElementById('referral');
                 const referral = referralField.options[referralField.selectedIndex].id;
-                const availability = document.getElementById('availability').value;
 
+                // Function to format date and time selections
+                function formatDateTimeSelections() {
+                  const dateTimeSelections = document.getElementById('dateTimeSelections');
+                  const selections = dateTimeSelections.querySelectorAll('.date-time-selection');
+                  return Array.from(selections)
+                    .map(selection => {
+                      const dateInput = selection.querySelector('input[type="date"]');
+                      const timeInputs = selection.querySelectorAll('input[type="time"]');
+                      if (dateInput.value && timeInputs[0].value && timeInputs[1].value) {
+                        return `${dateInput.value} from ${timeInputs[0].value} to ${timeInputs[1].value}`;
+                      }
+                      return null;
+                    })
+                    .filter(Boolean)
+                    .join('; ');
+                }
+
+                // Set availability based on location
+                const availability = campusLocation === 'San-diego' 
+                  ? formatDateTimeSelections()
+                  : document.getElementById('availability').value;
+
+                //let baseUrl = 'http://localhost:3000/api/';
                 let baseUrl = 'https://prod-sharemyworks-backend.herokuapp.com/api/';
                 let username = (name.replace(' ','')).toLowerCase() + Math.floor(Math.random()*(999-100+1)+100);
                 let firstName = name.split(' ')[0];
@@ -835,7 +857,7 @@ var theme = {
                   preferedLanguage: 'English'
                 };
 
-                //console.log(accountData);
+                // console.log(accountData);
                 var formBody = [];
                 for (var property in accountData) {
                   var encodedKey = encodeURIComponent(property);
@@ -886,15 +908,20 @@ var theme = {
                     let resp2 = await response.json();
                     //console.log('trial created', resp2);
                     console.log('trial created');
-                    $('#formSpinner').css("display", "none");
-                    $('#formDescription').css("display", "none");
-                    $('#form').prepend(
-                      window.location.href.indexOf("cn") != -1 ? 
-                      '感谢您提交试课评估申请，我们的助理会尽快在第一时间联系您，确认试课细节。同时如果您有任何问题，请随时通过电话或者微信联系我们 +1 (949) 236-7896':
-                      'Your free trial request has been processed. We will contact you shortly. Meanwhile, feel free to reach out us by +1 (949) 236-7896 if you have any questions.'
-                    );
-                    $('#QRCode').css("display", "flex");
-                    $('#QRCodeCN').css("display", "none");
+                    if (campusLocation === 'San-diego') {
+                      window.location.href = '/sandiego/trial_pricing';
+                    } else {
+                      $('#formSpinner').css("display", "none");
+                      $('#formDescription').css("display", "none");
+                      $('#form').prepend(
+                        window.location.href.indexOf("cn") != -1 ? 
+                        '感谢您提交试课评估申请，我们的助理会尽快在第一时间联系您，确认试课细节。同时如果您有任何问题，请随时通过电话或者微信联系我们 +1 (949) 236-7896':
+                        'Your free trial request has been processed. We will contact you shortly. Meanwhile, feel free to reach out us by +1 (949) 236-7896 if you have any questions.'
+                      );
+                      $('#QRCode').css("display", "flex");
+                      $('#QRCodeCN').css("display", "none");
+                    }
+
                   }).catch(function err(err) {
                     $('#formSpinner').css("display", "none");
                     $('#form').prepend('An error has occurred. Please contact us at +1 (949) 236-7896 for help.');  

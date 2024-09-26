@@ -90,7 +90,27 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
         .then(() => {
-            fetchInvoices(accountId, courseId, price, token);
+            if (organizationId === "66bf6a0dcdae5300148e3a2c") {
+                // Redirect to San Diego pricing page
+                Toastify({
+                    text: "Login Success! Redirecting to San Diego pricing page.",
+                    duration: 5000,
+                    close: true,
+                    gravity: "top",
+                    position: 'right', 
+                    style: {
+                        background: "green",
+                    },
+                    className: "info",
+                }).showToast();
+                
+                setTimeout(() => {
+                    window.location.href = "/sandiego/pricing";
+                }, 0);
+            } else {
+                // Proceed with the original flow
+                fetchInvoices(accountId, courseId, price, token);
+            }
         })
         .catch(error => {
             console.error("Failed to attach student", error);

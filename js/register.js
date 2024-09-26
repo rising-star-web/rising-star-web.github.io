@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const baseUrl = "https://backend4.sharemyworks.com/api/";
-  //const baseUrl = 'http://localhost:3000/api/'
+  // const baseUrl = 'http://localhost:3000/api/'
   var urlParams = new URLSearchParams(window.location.search);
   var courseId = urlParams.get("courseId");
   var accountId = urlParams.get("accountId");
@@ -45,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
     //console.log("Post data:", postData);
 
     if (accountId) {
-        
       updateAccount(postData, accountId, token);
     } else {
       createAccount(postData);
@@ -193,8 +192,28 @@ function attachStudentToCourse(
       },
     })
       .then(() => {
-        // Suppose to get a new token upon registration, simulate login to get the real token
-        simulateLogin(username, password, studentId, courseId, price);
+        if (organizationId === "66bf6a0dcdae5300148e3a2c") {
+          // Redirect to San Diego pricing page
+        Toastify({
+                    text: "Registration Success! Redirecting to checkout page.",
+                    duration: 5000,
+                    close: true,
+                    gravity: "top",
+                    position: 'right', 
+                    style: {
+                        background: "green",
+                    },
+                    className: "info",
+                }).showToast();
+          setTimeout(() => {
+            window.location.href = "/sandiego/pricing"
+          }, 0);
+        } else {
+          // Proceed with the original flow
+          // Suppose to get a new token upon registration, simulate login to get the real token
+          simulateLogin(username, password, studentId, courseId, price);
+        }
+        // simulateLogin(username, password, studentId, courseId, price);
       })
       .catch((error) => {
         console.error("Failed to attach student", error);

@@ -285,25 +285,52 @@ layout: locationdefault
     });
   }
 
-  function createCourseCard(course, schedule) {
+function createCourseCard(course, schedule) {
     var startTime = schedule.Time.split(' - ')[0];
-    var $card = $(`
-      <div class="course-card" data-start-time="${startTime}">
-        <h4 class="course-title">${course.Name}</h4>
-      <p class="course-info">Time: ${schedule.Time}</p>
-      <p class="course-info">Grade: ${course.Grade}</p>
-        <button class="btn-learn-more" data-bs-toggle="modal" data-bs-target="#myModal" data-course-info="${course.CourseInfo}">Learn More</button>
-      </div>
-    `);
 
-    // $card.find('.btn-learn-more').on('click', function(e) {
-    //   e.preventDefault();
-    //   $("#myModal").find("#modalIframe").attr("src", course.CourseInfo);
-    //   $("#myModal").modal("show");
-    // });
+    // Create the card container
+    var $card = $('<div>', { class: 'course-card', 'data-start-time': startTime });
+
+    // Create the clickable area that links to the registration page
+    var $link = $('<a>', { href: course.Registration, target: '_blank', class: 'course-link' });
+
+    // Build the inner content
+    var $title = $('<h4>', { class: 'course-title', text: course.Name });
+    var $time = $('<p>', { class: 'course-info', text: 'Time: ' + schedule.Time });
+    var $grade = $('<p>', { class: 'course-info', text: 'Grade: ' + course.Grade });
+
+    // Append content to the link
+    $link.append($title, $time, $grade);
+
+    // Create the "Learn More" button
+    var $learnMoreButton = $('<button>', {
+        class: 'btn-learn-more',
+        text: 'Learn More',
+        'data-course-info': course.CourseInfo,
+        'data-bs-toggle': 'modal',
+        'data-bs-target': '#myModal'
+    });
+
+    // Append the link and button to the card
+    $card.append($link, $learnMoreButton);
+
+    // Event listener for the "Learn More" button
+    $learnMoreButton.on('click', function(e) {
+        e.preventDefault(); // Prevent any default action
+        e.stopPropagation(); // Stop the event from bubbling up
+
+        // Open the modal
+        $("#myModal").find("#modalIframe").attr("src", course.CourseInfo);
+        $("#myModal").modal("show");
+    });
 
     return $card;
-  }
+}
+
+
+
+
+
 
   // Add this function to handle the modal content update
   function setupModalListeners() {
@@ -415,6 +442,9 @@ layout: locationdefault
     display: flex;
   flex-direction: column;
   justify-content: space-between;
+      cursor: pointer;
+    text-decoration: none;
+    color: inherit;
 
   }
 

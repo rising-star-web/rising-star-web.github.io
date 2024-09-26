@@ -1,0 +1,31 @@
+---
+layout: locationpricing
+title: Trial Pricing
+locale: en
+order: 4
+exclude: true
+---
+<script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+
+<div>
+<stripe-pricing-table pricing-table-id="prctbl_1Q3MP8P2pSpFqYXAUz8SdPme"
+publishable-key="pk_live_51PykoAP2pSpFqYXAXHJtAjmYzwf3kZt6K877RmO6pYp0DFCdCw08VVdXxkMySVE1HU5CiqxZC8XHjQnTZPxAflND004piDnQ7w">
+</stripe-pricing-table>
+</div>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+</script>

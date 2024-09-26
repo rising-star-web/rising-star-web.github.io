@@ -1,5 +1,5 @@
 ---
-layout: locationbooking
+layout: location-freetrial
 title: Book A Trial Class
 locale: en
 order: 4

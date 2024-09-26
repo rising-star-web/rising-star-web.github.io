@@ -30,7 +30,8 @@
         }
       ],
       "Grade": "G1-2+",
-      "CourseInfo": "https://codingmind.com/sandiego/scratch1/"
+      "CourseInfo": "https://codingmind.com/sandiego/scratch1/",
+      "Registration": "https://codingmind.com/course-info-register?course_id=66f47c146e564d00159872be&organizationId=66bf6a0dcdae5300148e3a2c"
     },
     {
       "Name": "L2 - Roblox Programming",
@@ -45,7 +46,9 @@
         }
       ],
       "Grade": "G2-3+",
-      "CourseInfo": "https://codingmind.com/sandiego/roblox1/"
+      "CourseInfo": "https://codingmind.com/sandiego/roblox1/",
+      "Registration": "https://codingmind.com/course-info-register?course_id=66f47c146e564d00159872be&organizationId=66bf6a0dcdae5300148e3a2c"
+
 
     },
     {
@@ -61,7 +64,8 @@
         }
       ],
       "Grade": "G2-3+",
-      "CourseInfo": "https://codingmind.com/sandiego/app-thunkable/"
+      "CourseInfo": "https://codingmind.com/sandiego/app-thunkable/",
+      "Registration": "https://codingmind.com/course-info-register?course_id=66f47c146e564d00159872be&organizationId=66bf6a0dcdae5300148e3a2c"
     },
     {
       "Name": "L3 - Python 1",
@@ -92,8 +96,8 @@
         }
       ],
       "Grade": "G4+",
-      "CourseInfo": "https://codingmind.com/sandiego/python1/"
-
+      "CourseInfo": "https://codingmind.com/sandiego/python1/",
+      "Registration": "https://codingmind.com/course-info-register?course_id=66f47c146e564d00159872be&organizationId=66bf6a0dcdae5300148e3a2c"
     },
     {
       "Name": "L4 - APP Development",
@@ -108,7 +112,8 @@
         }
       ],
       "Grade": "G6+",
-      "CourseInfo": "https://codingmind.com/sandiego/flutter/"
+      "CourseInfo": "https://codingmind.com/sandiego/flutter/",
+      "Registration": "https://codingmind.com/course-info-register?course_id=66f47c146e564d00159872be&organizationId=66bf6a0dcdae5300148e3a2c"
 
     },
     {
@@ -120,8 +125,8 @@
         }
       ],
       "Grade": "G6+",
-      "CourseInfo": "https://codingmind.com/sandiego/web1/"
-
+      "CourseInfo": "https://codingmind.com/sandiego/web1/",
+      "Registration": "https://codingmind.com/course-info-register?course_id=66f47c146e564d00159872be&organizationId=66bf6a0dcdae5300148e3a2c"
     },
     {
       "Name": "L4 AI Create/Unity 1-4",
@@ -132,7 +137,8 @@
         }
       ],
       "Grade": "G6+",
-      "CourseInfo": "https://codingmind.com/sandiego/unity1/"
+      "CourseInfo": "https://codingmind.com/sandiego/unity1/",
+      "Registration": "https://codingmind.com/course-info-register?course_id=66f47c146e564d00159872be&organizationId=66bf6a0dcdae5300148e3a2c"
     }
 
   ]

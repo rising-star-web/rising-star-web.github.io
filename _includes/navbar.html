@@ -5,6 +5,18 @@
         <a href="{{ site.data.nav[page.locale].nav.URL }}">
           <img class="h-9" src="{{ site.logo }}" alt="" />
         </a>
+        <!-- Branch Selector Dropdown -->
+        <div class="branch-selector dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" id="branchDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            {% if page.branch %}{{ page.branch }}{% else %}Change Location{% endif %}
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="branchDropdown">
+            <li><a class="dropdown-item" href="/">Home</a></li>
+            <li><a class="dropdown-item" href="/seattle">Seattle</a></li>
+            <li><a class="dropdown-item" href="/sandiego">San Diego</a></li>
+            <li><a class="dropdown-item" href="/west-lafayette">West Lafayette</a></li>
+          </ul>
+        </div>
       </div>
       <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
         <div class="offcanvas-header d-lg-none">
@@ -182,4 +194,76 @@
     // Redirect to the new URL, preserving query parameters
     window.location.href = newPath + searchParams;
   }
+
+  //   // Add this script to ensure Bootstrap's JavaScript is initialized
+  // document.addEventListener('DOMContentLoaded', function() {
+  //   var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+  //   var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+  //     return new bootstrap.Dropdown(dropdownToggleEl)
+  //   })
+  // })
+
+  document.addEventListener('DOMContentLoaded', function() {
+  var dropdownToggle = document.querySelector('.branch-selector .dropdown-toggle');
+  var dropdownMenu = document.querySelector('.branch-selector .dropdown-menu');
+  var dropdownContainer = document.querySelector('.branch-selector');
+
+  // Show dropdown on hover for non-touch devices
+  if (!('ontouchstart' in window)) {
+    dropdownContainer.addEventListener('mouseenter', function() {
+      dropdownMenu.style.display = 'block';
+    });
+
+    dropdownContainer.addEventListener('mouseleave', function() {
+      dropdownMenu.style.display = 'none';
+    });
+  }
+
+  // Handle click for touch devices
+  dropdownToggle.addEventListener('click', function(e) {
+    if ('ontouchstart' in window) {
+      e.preventDefault();
+      dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+    }
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!dropdownContainer.contains(e.target)) {
+      dropdownMenu.style.display = 'none';
+    }
+  });
+});
 </script>
+
+<style>
+.navbar-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.branch-selector:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-menu {
+  display: none;
+  margin-top: 0;
+}
+.branch-selector .dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+  @media (max-width: 991px) {
+    .branch-selector {
+      margin-bottom: 10px;
+    }
+  }
+
+</style>
