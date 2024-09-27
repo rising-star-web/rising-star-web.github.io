@@ -101,10 +101,9 @@ layout: locationdefault
 </section>
 <section class="wrapper bg-light">
   <div class="schedule-container pt-2 pb-19 pt-md-14 pb-md-20 text-center">
-    <div class="mb-4">
+    <!-- <div class="mb-4">
       <a href="../pricing" class="btn btn-primary btn-join-us">Join Today</a>
-    </div>
-
+    </div> -->
     <div class="mx-2">
       <label for="locationFilter" class="h3 text-primary mb-2" style="display: none;">Location:</label>
       <select id="locationFilter" class="form-select" style="display: none;">
@@ -160,6 +159,25 @@ layout: locationdefault
 
     setupModalListeners();
     fetchAndPopulateFilters();
+
+    $(document).on('click', '.btn-join-today', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var $button = $(this);
+        var registrationUrl = $button.data('registration');
+        if (registrationUrl) {
+            window.open(registrationUrl, '_blank');
+        } else {
+            console.error('Registration URL not found');
+            // Fallback: try to get the URL from the parent card
+            var cardRegistrationUrl = $button.closest('.course-card').data('registration');
+            console.log('Fallback - Card Registration URL:', cardRegistrationUrl);
+            if (cardRegistrationUrl) {
+                console.log('Opening fallback URL:', cardRegistrationUrl);
+                window.open(cardRegistrationUrl, '_blank');
+            }
+        }
+    });
     
   });
 
@@ -284,23 +302,39 @@ layout: locationdefault
       $column.find('.course-container').empty().append($courses);
     });
   }
-
 function createCourseCard(course, schedule) {
     var startTime = schedule.Time.split(' - ')[0];
 
     // Create the card container
-    var $card = $('<div>', { class: 'course-card', 'data-start-time': startTime });
-
-    // Create the clickable area that links to the registration page
-    var $link = $('<a>', { href: course.Registration, target: '_blank', class: 'course-link' });
+    var $card = $('<div>', { 
+        class: 'course-card', 
+        'data-start-time': startTime,
+        'data-registration': course.Registration
+    });
 
     // Build the inner content
     var $title = $('<h4>', { class: 'course-title', text: course.Name });
     var $time = $('<p>', { class: 'course-info', text: 'Time: ' + schedule.Time });
     var $grade = $('<p>', { class: 'course-info', text: 'Grade: ' + course.Grade });
 
-    // Append content to the link
-    $link.append($title, $time, $grade);
+    // Create the "Join Today" button
+    var $joinTodayButton = $('<button>', {
+        class: 'btn-learn-more btn-join-today',
+        text: 'Join Today',
+        'data-registration': course.Registration
+    });
+
+    // Add click event directly to the "Join Today" button
+    $joinTodayButton.on('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var registrationUrl = $(this).data('registration');
+        if (registrationUrl) {
+            window.open(registrationUrl, '_blank');
+        } else {
+            console.error('Registration URL not found');
+        }
+    });
 
     // Create the "Learn More" button
     var $learnMoreButton = $('<button>', {
@@ -311,24 +345,19 @@ function createCourseCard(course, schedule) {
         'data-bs-target': '#myModal'
     });
 
-    // Append the link and button to the card
-    $card.append($link, $learnMoreButton);
-
     // Event listener for the "Learn More" button
     $learnMoreButton.on('click', function(e) {
-        e.preventDefault(); // Prevent any default action
-        e.stopPropagation(); // Stop the event from bubbling up
-
-        // Open the modal
+        e.preventDefault();
+        e.stopPropagation();
         $("#myModal").find("#modalIframe").attr("src", course.CourseInfo);
         $("#myModal").modal("show");
     });
 
+    // Append all elements to the card
+    $card.append($title, $time, $grade, $joinTodayButton, $learnMoreButton);
+
     return $card;
 }
-
-
-
 
 
 
@@ -337,7 +366,6 @@ function createCourseCard(course, schedule) {
     $('#myModal').on('show.bs.modal', function (event) {
       var button = $(event.relatedTarget);
       var courseInfo = button.data('course-info');  // Changed from 'CourseInfo' to 'course-info'
-      console.log('courseInfo: ', courseInfo);
       var modal = $(this);
       modal.find('#modalIframe').attr('src', courseInfo);
     });
@@ -474,7 +502,7 @@ function createCourseCard(course, schedule) {
     margin-bottom: 2px;
   }
 
-  .btn-learn-more {
+  .btn-learn-more, .btn-join-today {
     background-color: #04aaf4;
     color: white;
     border: none;
@@ -485,9 +513,10 @@ function createCourseCard(course, schedule) {
     transition: background-color 0.3s ease;
   }
 
-  .btn-learn-more:hover {
+  .btn-learn-more:hover, .btn-join-today:hover{
     background-color: #0056b3;
   }
+
 
   @media (max-width: 1023px) {
     .schedule-container {
