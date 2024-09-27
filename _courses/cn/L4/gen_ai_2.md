@@ -27,7 +27,7 @@ promotions:
   text: "现在每个人都在使用人工智能做事情。但是，学生们可以抢占先机，通过学习人工智能的高级技巧和窍门，从而更快地完成任务。"
   imageURL: "img/my/chatgpt/chatgpt1.jpg"
 - title: "在项目中运用"
-    text: "本课程包含如何使用 Python OpenAI库的部分。在学生自己的 Python 项目中使用该库，学生可以将这些项目提交到竞赛中。"
+  text: "本课程包含如何使用 Python OpenAI库的部分。在学生自己的 Python 项目中使用该库，学生可以将这些项目提交到竞赛中。"
   imageURL: "img/my/chatgpt/chatgpt2.jpg"
 - title: "制作自己的网站"
   text: "学生将学习如何从零开始制作学生自己的整个网站，同时利用生成式人工智能的强大功能来帮助访问的用户。"
