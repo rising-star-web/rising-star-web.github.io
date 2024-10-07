@@ -13,8 +13,8 @@ layout: locationdefault
       <!--/column -->
       <div class="col-lg-6 col-xl-5 offset-xl-1 text-center">
         <h2 class="display-2 mb-3">{{ site.data.free-trial[page.locale].freetrial.header }}</h2>
-        <p id="formDescription" class="lead mb-8 pe-xl-10">Schedule for a trial class for $29 by filling out this form and we will get back to you shortly. Try out a class to see if it's right for you. </p>
-
+        <p id="formDescription" class="lead mb-8 pe-xl-10">
+        </p>
         <div class="d-flex justify-content-center">
           <div id="formSpinner" class="spinner-border text-navy align-self-center" role="status"
             style="width: 3rem; height: 3rem; display: none;">
@@ -91,14 +91,14 @@ layout: locationdefault
             <select class="form-select" aria-label="Default select example" required="required" id="campus"
               name="campus">
               <option value="">{{ site.data.free-trial[page.locale].freetrial.campusTag }}</option>
-              <option id="Irvine" value="Irvine">{{ site.data.free-trial[page.locale].freetrial.campus1 }}</option>
+              <!-- <option id="Irvine" value="Irvine">{{ site.data.free-trial[page.locale].freetrial.campus1 }}</option>
               <option id="Diamond Bar" value="Diamond Bar">{{ site.data.free-trial[page.locale].freetrial.campus2 }}
               </option>
               <option id="Arcadia" value="Arcadia">{{ site.data.free-trial[page.locale].freetrial.campus3 }}</option>
               <option id="West Lafayette" value="West Lafayette">{{ site.data.free-trial[page.locale].freetrial.campus4
                 }}</option>
-              <option id="San-diego" value="San-diego">San Diego</option>
-
+              <option id="San-diego" value="San-diego">San Diego</option> -->
+              <option id="Seattle" value="Seattle">Seattle</option>
               <option id="Online" value="Online">{{ site.data.free-trial[page.locale].freetrial.campus5 }}</option>
             </select>
           </div>
@@ -267,3 +267,26 @@ layout: locationdefault
     margin-bottom: 5px;
   }
 </style>
+<script>
+  // Get the current URL path
+  const path = window.location.pathname;
+
+  // Split the path into segments (e.g., ['', 'seattle', 'schedule-trial'])
+  const pathSegments = path.split('/');
+
+  // Extract the campus name (assuming the campus name is the second segment)
+  const campus = pathSegments[1];
+
+  // Object to store descriptions for different campuses
+  const campusDescriptions = {
+    "seattle": "Schedule for a trial class at our Seattle campus by filling out this form, and we will get back to you shortly. Try out a class and see if it's the right fit for you.",
+    "sandiego": "Schedule for a trial class in San Diego for $29 by filling out this form, and we will get back to you shortly. Try out a class to see if it's right for you."
+  };
+
+  // Set the description based on the campus name
+  const description = campusDescriptions[campus] || "Schedule for a trial class for free by filling out this form, and we will get back to you shortly. Try out a class to see if it's right for you.";
+  
+  // Update the form description text
+  document.getElementById('formDescription').innerText = description;
+</script>
+

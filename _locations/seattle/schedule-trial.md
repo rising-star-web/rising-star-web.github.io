@@ -1,5 +1,5 @@
 ---
-layout: locationbooking
+layout: location-freetrial
 title: Book A Free Trial
 locale: en
 order: 4
