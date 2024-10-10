@@ -84,8 +84,12 @@ collections:
     output: true
   courseswl:
     output: true
-    permalink: /west-lafayette/:name/
+    permalink: /west-lafayette/courses/:name/
     path: courseswl
+  coursescn:
+    output: true
+    permalink: /cn/seattle/courses/:name/
+    path: coursescn
 
     
 
@@ -133,7 +137,7 @@ defaults:
       type: courseswl
     values:
       location_name: "sandiego"
-      permalink: /sandiego/:name/
+      permalink: /sandiego/courses/:name/
   # Chinese
   - scope:
       path: "_courses/cn"
@@ -165,5 +169,11 @@ defaults:
     values:
       locale: cn
       permalink: /:path/
+  - scope:
+      path: "_coursescn"
+      type: coursescn
+    values:
+      locale: cn
+      permalink: /cn/seattle/courses/:name
 
 

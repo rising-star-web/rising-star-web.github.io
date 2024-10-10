@@ -2,6 +2,22 @@
 layout: locationdefault
 ---
 
+{% assign parts = page.url | split: '/' %}
+
+{% if page.url contains '/cn/' %}
+    {% assign location_name = parts[2] %}
+    {% assign trial_url = '/cn/' | append: location_name | append: '#free-trial' %}
+    {% assign logo_url = '/cn/' | append: location_name %}
+    {% assign translated_url = page.url | replace: '/cn/', '/' %}
+{% else %}
+    {% assign location_name = parts[1] %}
+    {% assign trial_url = '/' | append: location_name | append: '#free-trial' %}
+    {% assign logo_url = '/' | append: location_name %}
+    {% assign translated_url = '/cn' | append: page.url %}
+{% endif %}
+{% assign has_translation = site.locations | where_exp: "item", "item.url == translated_url" | first %}
+{%- assign location_data = site.data.locations[location_name] -%}
+
 <!-- Course Overview -->
   <section class="wrapper bg-light wrapper-border">  
     <div class="container pt-8 pt-md-12 pb-12 pb-md-12">
@@ -19,7 +35,7 @@ layout: locationdefault
             <div class="row">
               <div class="col-lg-9 d-flex flex-row pt-2">
                 <div class="me-2">
-                  <a href="/west-lafayette/#free-trial" class="btn btn-primary btn-icon btn-icon-start rounded-pill">{{ site.data.courses[page.locale].coursedetail.trialButton }}</a>
+                  <a href="{{ trial_url }}" class="btn btn-primary btn-icon btn-icon-start rounded-pill">{{ site.data.courses[page.locale].coursedetail.trialButton }}</a>
                 </div>
               </div>
               <!-- /column -->
@@ -154,7 +170,7 @@ layout: locationdefault
                 <div class="card-body">
                   <h3>{{ site.data.courses[page.locale].coursedetail.scheduleTitle}}</h3>
                   <p>{{ site.data.courses[page.locale].coursedetail.scheduleDescription}} </p>
-                  <a href="/west-lafayette/#free-trial" class="btn btn-primary btn-icon btn-icon-start rounded-pill">{{ site.data.courses[page.locale].coursedetail.trialButton }}</a>
+                  <a href="{{ trial_url }}" class="btn btn-primary btn-icon btn-icon-start rounded-pill">{{ site.data.courses[page.locale].coursedetail.trialButton }}</a>
                 </div>
               </div>
 
@@ -247,7 +263,7 @@ layout: locationdefault
         <div class="col-md-10 mx-auto">
           <h3 class="display-4 text-navy">{{ site.data.courses[page.locale].coursedetail.trialTitle}}</h3>
           <p class="lead mb-7 mb-md-7">{{ site.data.courses[page.locale].coursedetail.trialSubTitle}}</p>
-          <a href="/west-lafayette/#free-trial" class="btn btn-primary rounded-pill me-2 me-md-2 mb-4 mb-md-0">
+          <a href="{{ trial_url }}" class="btn btn-primary rounded-pill me-2 me-md-2 mb-4 mb-md-0">
             {{ site.data.courses[page.locale].coursedetail.trialButton2}}
           </a>
         </div>

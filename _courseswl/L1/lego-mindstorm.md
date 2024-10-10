@@ -2,7 +2,6 @@
 layout: locationcoursedetail
 courseId: "CS111"
 courseIconURL: "TBD - not used yet"
-location_name: west-lafayette
 price: "TBD - not used yet"
 extra: "TBD - a backup field not used yet"
 name: "Lego MindStorms Robotics"

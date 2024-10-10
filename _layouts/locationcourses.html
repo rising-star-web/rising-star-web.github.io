@@ -9,6 +9,30 @@ layout: locationdefault
 {% endif %}
 
 
+{% assign parts = page.url | split: '/' %}
+
+{% if page.url contains '/cn/' %}
+    {% assign location_name = parts[2] %}
+    {% assign logo_url = '/cn/' | append: location_name %}
+    {% assign translated_url = page.url | replace: '/cn/', '/' %}
+{% else %}
+    {% assign location_name = parts[1] %}
+    {% assign logo_url = '/' | append: location_name %}
+    {% assign translated_url = '/cn' | append: page.url %}
+{% endif %}
+{% assign has_translation = site.locations | where_exp: "item", "item.url == translated_url" | first %}
+{%- assign location_data = site.data.locations[location_name] -%}
+
+
+{% if page.locale == "en" %}
+  {% assign courses = site.courseswl | where: "locale", "en" %}
+  {% assign courses = site.courseswl | where: "locale", "en"  %}
+{% elsif page.locale == "cn" and location_name == "seattle" %}
+  {% assign courses = site.coursescn | where: "locale", "cn" %}
+{% else %}
+  {% assign courses = empty %}
+{% endif %}
+
 
 <!-- section -->
 <section class="wrapper">
@@ -187,7 +211,7 @@ layout: locationdefault
         <div class="col-md-10 mx-auto">
           <h3 class="display-4 text-navy">{{ site.data.courses[page.locale].coursedetail.trialTitle}}</h3>
           <p class="lead mb-7 mb-md-7">{{ site.data.courses[page.locale].coursedetail.trialSubTitle}}</p>
-          <a href="/west-lafayette/#free-trial" class="btn btn-primary rounded-pill me-2 me-md-2 mb-4 mb-md-0">
+          <a href="/{{ location_name }}#free-trial" class="btn btn-primary rounded-pill me-2 me-md-2 mb-4 mb-md-0">
             {{ site.data.courses[page.locale].coursedetail.trialButton2}}
           </a>
         </div>
