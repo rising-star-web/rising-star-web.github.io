@@ -834,7 +834,7 @@ var theme = {
                 }
 
                 // Set availability based on location
-                const availability = campusLocation === 'San-diego' 
+                const availability = (campusLocation === 'San-diego' || campusLocation === 'Seattle') 
                   ? formatDateTimeSelections()
                   : document.getElementById('availability').value;
 
