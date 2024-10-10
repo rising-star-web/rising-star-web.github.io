@@ -24,14 +24,28 @@ layout: locationdefault
 {%- assign location_data = site.data.locations[location_name] -%}
 
 
-{% if page.locale == "en" %}
-  {% assign courses = site.courseswl | where: "locale", "en" %}
-  {% assign courses = site.courseswl | where: "locale", "en"  %}
+<!-- {% if page.locale == "en" %}
+  {% assign courses = site.courseswl  %}
 {% elsif page.locale == "cn" and location_name == "seattle" %}
-  {% assign courses = site.coursescn | where: "locale", "cn" %}
+  {% assign courses = site.coursescn  %}
 {% else %}
   {% assign courses = empty %}
-{% endif %}
+{% endif %} -->
+
+{% case location_name %}
+  {% when "west-lafayette" %}
+    {% assign courses = site.courses_wl %}
+  {% when "sandiego" %}
+    {% assign courses = site.courses_sd %}
+  {% when "seattle" %}
+    {% if page.locale == "cn" %}
+      {% assign courses = site.coursescn %}
+    {% else %}
+      {% assign courses = site.courses_seattle %}
+    {% endif %}
+  {% else %}
+    {% assign courses = empty %}
+{% endcase %}
 
 
 <!-- section -->
@@ -160,7 +174,6 @@ layout: locationdefault
     <!--/.row -->
       <div id="isotopeContainer" data-length="9" class="row g-6 row-cols-1 row-cols-md-2 row-cols-lg-3 isotope">
           {% for course in courses %}
-
           {%- assign level = course.gradeLevel -%}
           {%- case level -%}
               {%- when site.data.courses[page.locale].courses.L1Filter -%}
@@ -192,7 +205,7 @@ layout: locationdefault
           {% else %}
           <!-- Render non-Summer Camp courses normally -->
           <div class="isotopeItem {{levelFilter}}">
-            <a href="/{{ location }}/courses/{{ course.name | slugify }}">
+            <a href="/{{ location_name }}/courses/{{ course.name | slugify }}">
               {% include course.html %}
             </a>
           </div>

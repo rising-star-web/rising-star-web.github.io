@@ -82,10 +82,18 @@ collections:
     output: true
   locations:
     output: true
-  courseswl:
+  courses_wl:
     output: true
     permalink: /west-lafayette/courses/:name/
-    path: courseswl
+    path: courses_wl
+  courses_sd:
+    output: true
+    permalink: /sandiego/courses/:name/
+    path: courses_sd
+  courses_seattle:
+    output: true
+    permalink: /seattle/courses/:name/
+    path: courses_seattle
   coursescn:
     output: true
     permalink: /cn/seattle/courses/:name/
@@ -127,17 +135,20 @@ defaults:
       locale: en
       permalink: /:path/
   - scope:
-      path: ""
-      type: courseswl
+      path: "_courses_wl"
+      type: courses_wl
     values:
-      location_name: "west-lafayette"
-      permalink: /west-lafayette/:name/
+      permalink: /west-lafayette/courses/:name/
   - scope:
-      path: ""
-      type: courseswl
+      path: "_courses_sd"
+      type: courses_sd
     values:
-      location_name: "sandiego"
       permalink: /sandiego/courses/:name/
+  - scope:
+      source: "_courses_seattle"
+      type: courses_seattle
+    values:
+      permalink: /seattle/courses/:name/
   # Chinese
   - scope:
       path: "_courses/cn"
