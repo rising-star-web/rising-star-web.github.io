@@ -35,6 +35,8 @@ freetrial:
   source8: TikTok
   source9: 其他 
   trialAvailability: "试听可用时间：例如周一至周四下午3点后，周六上午11点前"
+  hour: 小时
+  minute: 分钟
   submit: 提交
   # CN ONLY:
   weChat: 通过微信联系我们

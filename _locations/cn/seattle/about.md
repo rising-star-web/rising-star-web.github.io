@@ -2,7 +2,7 @@
 layout: locationpage
 title: 关于我们
 locale: cn
-order: 2
+order: 3
 ---
 
 **追求卓越**

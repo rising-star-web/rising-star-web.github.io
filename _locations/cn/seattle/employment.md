@@ -3,6 +3,7 @@ layout: locationpage
 title: 职业与成长
 locale: cn
 order: 3
+exclude: true
 ---
 
 # We build futures for both students and our employees.

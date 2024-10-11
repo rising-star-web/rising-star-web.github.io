@@ -3,6 +3,7 @@ layout: locationpage
 title: Employment
 locale: en
 order: 3
+exclude: true
 ---
 
 # We build futures for both students and our employees.

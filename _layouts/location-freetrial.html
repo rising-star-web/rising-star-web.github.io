@@ -1,6 +1,18 @@
 ---
 layout: locationdefault
 ---
+{% assign parts = page.url | split: '/' %}
+
+{% if page.url contains '/cn/' %}
+{% assign location_name = parts[2] %}
+{% assign logo_url = '/cn/' | append: location_name %}
+{% assign translated_url = page.url | replace: '/cn/', '/' %}
+{% else %}
+{% assign location_name = parts[1] %}
+{% assign logo_url = '/' | append: location_name %}
+{% assign translated_url = '/cn' | append: page.url %}
+{% endif %}
+
 <section class="wrapper bg-light">
   <div class="container pt-8 pt-md-12 pb-8 pb-md-8">
     <div class="row gx-lg-8 gx-xl-0 gy-10 align-items-center">
@@ -91,15 +103,17 @@ layout: locationdefault
             <select class="form-select" aria-label="Default select example" required="required" id="campus"
               name="campus">
               <option value="">{{ site.data.free-trial[page.locale].freetrial.campusTag }}</option>
-              <!-- <option id="Irvine" value="Irvine">{{ site.data.free-trial[page.locale].freetrial.campus1 }}</option>
-              <option id="Diamond Bar" value="Diamond Bar">{{ site.data.free-trial[page.locale].freetrial.campus2 }}
-              </option>
-              <option id="Arcadia" value="Arcadia">{{ site.data.free-trial[page.locale].freetrial.campus3 }}</option>
-              <option id="West Lafayette" value="West Lafayette">{{ site.data.free-trial[page.locale].freetrial.campus4
-                }}</option> -->
+              {% if location_name == 'seattle' %}
+              <option id="Seattle" value="Seattle" selected>Seattle</option>
+              <option id="Online" value="Online">{{ site.data.free-trial[page.locale].freetrial.campus5 }}</option>
+              {% elsif location_name == 'sandiego' %}
+              <option id="San-diego" value="San-diego" selected>San Diego</option>
+              <option id="Online" value="Online">{{ site.data.free-trial[page.locale].freetrial.campus5 }}</option>
+              {% else %}
               <option id="San-diego" value="San-diego">San Diego</option>
               <option id="Seattle" value="Seattle">Seattle</option>
               <option id="Online" value="Online">{{ site.data.free-trial[page.locale].freetrial.campus5 }}</option>
+              {% endif %}
             </select>
           </div>
 
@@ -128,33 +142,51 @@ layout: locationdefault
               required></textarea>
           </div> -->
 
-        <div id="dateTimeSelections" class="mb-4">
-          <h4>Select at least 1 preferred dates and times for your trial class:</h4>
-          <div class="date-time-selection mb-3">
-            <input type="date" class="form-control mb-2" placeholder="*" required>
-            <div class="d-flex">
-              <input type="time" class="form-control me-2" required>
-              <input type="time" class="form-control" required>
-            </div>
-          </div>
-          <div class="date-time-selection mb-3">
-            <input type="date" class="form-control mb-2">
-            <div class="d-flex">
-              <input type="time" class="form-control me-2">
-              <input type="time" class="form-control">
-            </div>
-          </div>
-          <div class="date-time-selection mb-3">
-            <input type="date" class="form-control mb-2">
-            <div class="d-flex">
-              <input type="time" class="form-control me-2">
-              <input type="time" class="form-control">
-            </div>
-          </div>
-        </div>
-      </div>
+          <div id="dateTimeSelections" class="mb-4">
+            <h4>Select at least 1 preferred dates and times for your trial class:</h4>
 
-      <input type="hidden" id="availability" name="availability">
+            <div class="date-time-selection mb-3">
+              <input type="date" class="form-control mb-2 date-input" placeholder="*" required>
+              <div class="d-flex">
+                <select class="form-control me-2 hour-select" required>
+                  <option value="">{{ site.data.free-trial[page.locale].freetrial.hour }}</option>
+                </select>
+                <select class="form-control minute-select" required>
+                  <option value="">{{ site.data.free-trial[page.locale].freetrial.minute }}</option>
+                  <option value="00">00</option>
+                  <option value="30">30</option>
+                </select>
+              </div>
+            </div>
+            <div class="date-time-selection mb-3">
+              <input type="date" class="form-control mb-2 date-input">
+              <div class="d-flex">
+                <select class="form-control me-2 hour-select" >
+                  <option value="">{{ site.data.free-trial[page.locale].freetrial.hour }}</option>
+                </select>
+                <select class="form-control minute-select" >
+                  <option value="">{{ site.data.free-trial[page.locale].freetrial.minute }}</option>
+                  <option value="00">00</option>
+                  <option value="30">30</option>
+                </select>
+              </div>
+            </div>
+            <div class="date-time-selection mb-3">
+              <input type="date" class="form-control mb-2 date-input">
+              <div class="d-flex">
+                <select class="form-control me-2 hour-select" >
+                  <option value="">{{ site.data.free-trial[page.locale].freetrial.hour }}</option>
+                </select>
+                <select class="form-control minute-select" >
+                  <option value="">{{ site.data.free-trial[page.locale].freetrial.minute }}</option>
+                  <option value="00">00</option>
+                  <option value="30">30</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <input type="hidden" id="availability" name="availability">
 
           <button type="submit" id="trialButton" class="btn btn-primary rounded-pill btn-send mb-3"> {{
             site.data.free-trial[page.locale].freetrial.submit }} </button>
@@ -262,31 +294,54 @@ layout: locationdefault
     color: red;
     font-weight: bold;
   }
+
   .date-time-selection label {
     display: block;
     margin-bottom: 5px;
   }
 </style>
 <script>
-  // Get the current URL path
   const path = window.location.pathname;
-
-  // Split the path into segments (e.g., ['', 'seattle', 'schedule-trial'])
   const pathSegments = path.split('/');
-
-  // Extract the campus name (assuming the campus name is the second segment)
-  const campus = pathSegments[1];
-
-  // Object to store descriptions for different campuses
+  const isChinese = pathSegments.includes('cn');
+  let campus;
+  if(isChinese){
+    campus = pathSegments[2];
+  } else {
+    campus = pathSegments[1];
+  }
+  const dateTimeHeader = document.getElementById('dateTimeSelections').querySelector('h4');
+  if (dateTimeHeader && isChinese) {
+    dateTimeHeader.textContent = "请至少选择1个首选日期和时间进行试听课:";
+  }
   const campusDescriptions = {
-    "seattle": "Schedule for a trial class at our Seattle campus by filling out this form, and we will get back to you shortly. Try out a class and see if it's the right fit for you.",
+    "seattle": isChinese 
+      ? "请填写此表格以预约西雅图校区的试听课，我们会尽快与您联系。欢迎来体验课程，看看是否适合您。"
+      : "Schedule for a trial class at our Seattle campus by filling out this form, and we will get back to you shortly. Try out a class and see if it's the right fit for you.",
     "sandiego": "Schedule for a trial class in San Diego for $29 by filling out this form, and we will get back to you shortly. Try out a class to see if it's right for you."
   };
-
-  // Set the description based on the campus name
   const description = campusDescriptions[campus] || "Schedule for a trial class for free by filling out this form, and we will get back to you shortly. Try out a class to see if it's right for you.";
-  
+
   // Update the form description text
   document.getElementById('formDescription').innerText = description;
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Get today's date in YYYY-MM-DD format
+    const today = new Date().toISOString().split('T')[0];
 
+    // Set min attribute for all date inputs
+    const dateInputs = document.querySelectorAll('.date-input');
+    dateInputs.forEach(input => {
+      input.min = today;
+    });
+  });
+
+  const hourSelects = document.querySelectorAll('.hour-select');
+  hourSelects.forEach(select => {
+    for (let hour = 8; hour < 22; hour++) {
+      const hourString = hour.toString().padStart(2, '0');
+      select.innerHTML += `<option value="${hourString}">${hourString}</option>`;
+    }
+  });
+</script>

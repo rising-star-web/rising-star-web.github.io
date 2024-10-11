@@ -815,17 +815,17 @@ var theme = {
                 const campusLocation = campusField.options[campusField.selectedIndex].id;
                 const referralField = document.getElementById('referral');
                 const referral = referralField.options[referralField.selectedIndex].id;
-
-                // Function to format date and time selections
                 function formatDateTimeSelections() {
                   const dateTimeSelections = document.getElementById('dateTimeSelections');
                   const selections = dateTimeSelections.querySelectorAll('.date-time-selection');
                   return Array.from(selections)
                     .map(selection => {
                       const dateInput = selection.querySelector('input[type="date"]');
-                      const timeInputs = selection.querySelectorAll('input[type="time"]');
-                      if (dateInput.value && timeInputs[0].value && timeInputs[1].value) {
-                        return `${dateInput.value} from ${timeInputs[0].value} to ${timeInputs[1].value}`;
+                      const hourSelect = selection.querySelector('.hour-select');
+                      const minuteSelect = selection.querySelector('.minute-select');
+                      if (dateInput.value && hourSelect.value && minuteSelect.value) {
+                        const time = `${hourSelect.value}:${minuteSelect.value}`;
+                        return `${dateInput.value} at ${time}`;
                       }
                       return null;
                     })
@@ -856,8 +856,7 @@ var theme = {
                   referralName: referral,
                   preferedLanguage: 'English'
                 };
-
-                // console.log(accountData);
+                // console.log('accountData: ', accountData);
                 var formBody = [];
                 for (var property in accountData) {
                   var encodedKey = encodeURIComponent(property);
@@ -865,7 +864,6 @@ var theme = {
                   formBody.push(encodedKey + "=" + encodedValue);
                 }
                 formBody = formBody.join("&");
-
                 fetch(baseUrl+ `Account`, {
                   mode: "cors",
                   method: "post",
@@ -876,8 +874,8 @@ var theme = {
                 }).then(async function (response) {
                   let resp = await response.json();
                   //console.log('created', resp);
-                  console.log('user created');
-                  console.log('start login');
+                  // console.log('user created');
+                  // console.log('start login');
                   let studentId = resp.id;
 
                   let trialData= {
@@ -888,7 +886,12 @@ var theme = {
                     signupTime: new Date(),
                     accountId: studentId,
                   }
-
+                  // Assign organizationId based on campus location, in Prod env
+                  if (campusLocation === 'Seattle') {
+                    trialData.organizationId = '6684406b10707d0014fb7369';
+                  } else if (campusLocation === 'San-diego') {
+                    trialData.organizationId = '66bf6a0dcdae5300148e3a2c';
+                  }
                   var formBody2 = [];
                   for (var property in trialData) {
                     var encodedKey = encodeURIComponent(property);
@@ -906,22 +909,30 @@ var theme = {
                     body: formBody2
                   }).then(async function (response) {
                     let resp2 = await response.json();
-                    //console.log('trial created', resp2);
-                    console.log('trial created');
+                    // console.log('trial created', resp2);
+                    // console.log('trial created');
                     if (campusLocation === 'San-diego') {
                       window.location.href = '/sandiego/trial_pricing';
                     } else {
                       $('#formSpinner').css("display", "none");
                       $('#formDescription').css("display", "none");
-                      $('#form').prepend(
-                        window.location.href.indexOf("cn") != -1 ? 
-                        '感谢您提交试课评估申请，我们的助理会尽快在第一时间联系您，确认试课细节。同时如果您有任何问题，请随时通过电话或者微信联系我们 +1 (949) 236-7896':
-                        'Your free trial request has been processed. We will contact you shortly. Meanwhile, feel free to reach out us by +1 (949) 236-7896 if you have any questions.'
-                      );
-                      $('#QRCode').css("display", "flex");
-                      $('#QRCodeCN').css("display", "none");
+                      if (campusLocation === 'Seattle') {
+                        $('#form').prepend(
+                          window.location.href.indexOf("cn") != -1 ? 
+                          '感谢您提交试课评估申请，我们的助理会尽快在第一时间联系您，确认试课细节。同时如果您有任何问题，请随时通过电话联系我们 (949) 236-7896':
+                          'Your free trial request has been processed. We will contact you shortly. Meanwhile, feel free to reach out to us at (949) 236-7896 if you have any questions.'
+                        );
+                      } else {
+                        $('#form').prepend(
+                          window.location.href.indexOf("cn") != -1 ? 
+                          '感谢您提交试课评估申请，我们的助理会尽快在第一时间联系您，确认试课细节。同时如果您有任何问题，请随时通过电话或者微信联系我们 +1 (949) 236-7896':
+                          'Your free trial request has been processed. We will contact you shortly. Meanwhile, feel free to reach out us by +1 (949) 236-7896 if you have any questions.'
+                        );
+                        $('#QRCode').css("display", "flex");
+                        $('#QRCodeCN').css("display", "none");
+                      }
+ 
                     }
-
                   }).catch(function err(err) {
                     $('#formSpinner').css("display", "none");
                     $('#form').prepend('An error has occurred. Please contact us at +1 (949) 236-7896 for help.');  
