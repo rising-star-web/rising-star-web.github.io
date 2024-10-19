@@ -2,7 +2,9 @@
 
 # Define source and destination directories
 SOURCE_DIR="_courses"
-DEST_DIRS=("_courses_test")
+#DEST_DIRS=("_courses_test")
+DEST_DIRS=("_courses_sd" "_courses_wl" "_courses_seattle" "_coursescn")
+
 
 # Function to update front matter
 update_layout() {

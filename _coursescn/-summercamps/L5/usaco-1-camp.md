@@ -1,5 +1,5 @@
 ---
-layout: course_detail
+layout: locationcoursedetail
 courseId: "SC09"
 courseIconURL: "TBD - not used yet"
 price: "TBD - not used yet"
