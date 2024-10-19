@@ -35,7 +35,13 @@ layout: locationdefault
             <div class="row">
               <div class="col-lg-9 d-flex flex-row pt-2">
                 <div class="me-2">
-                  <a href="{{ trial_url }}" class="btn btn-primary btn-icon btn-icon-start rounded-pill">{{ site.data.courses[page.locale].coursedetail.trialButton }}</a>
+                  <a href="{{ trial_url }}" class="btn btn-primary btn-icon btn-icon-start rounded-pill">
+                    {% if location_name == "sandiego" %}
+                      Book A Trial Class
+                    {% else %}
+                      {{ site.data.courses[page.locale].coursedetail.trialButton }}
+                    {% endif %}
+                  </a>
                 </div>
               </div>
               <!-- /column -->
@@ -170,7 +176,13 @@ layout: locationdefault
                 <div class="card-body">
                   <h3>{{ site.data.courses[page.locale].coursedetail.scheduleTitle}}</h3>
                   <p>{{ site.data.courses[page.locale].coursedetail.scheduleDescription}} </p>
-                  <a href="{{ trial_url }}" class="btn btn-primary btn-icon btn-icon-start rounded-pill">{{ site.data.courses[page.locale].coursedetail.trialButton }}</a>
+                  <a href="{{ trial_url }}" class="btn btn-primary btn-icon btn-icon-start rounded-pill">
+                    {% if location_name == "sandiego" %}
+                      Book A Trial Class
+                    {% else %}
+                      {{ site.data.courses[page.locale].coursedetail.trialButton }}
+                    {% endif %}
+                  </a>
                 </div>
               </div>
 
@@ -264,7 +276,11 @@ layout: locationdefault
           <h3 class="display-4 text-navy">{{ site.data.courses[page.locale].coursedetail.trialTitle}}</h3>
           <p class="lead mb-7 mb-md-7">{{ site.data.courses[page.locale].coursedetail.trialSubTitle}}</p>
           <a href="{{ trial_url }}" class="btn btn-primary rounded-pill me-2 me-md-2 mb-4 mb-md-0">
-            {{ site.data.courses[page.locale].coursedetail.trialButton2}}
+            {% if location_name == "sandiego" %}
+              Book Your First Trial Class
+            {% else %}
+              {{ site.data.courses[page.locale].coursedetail.trialButton2}}
+            {% endif %}
           </a>
         </div>
       </div>

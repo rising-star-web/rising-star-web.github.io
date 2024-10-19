@@ -838,7 +838,7 @@ var theme = {
                   ? formatDateTimeSelections()
                   : document.getElementById('availability').value;
 
-                //let baseUrl = 'http://localhost:3000/api/';
+                // let baseUrl = 'http://localhost:3000/api/';
                 let baseUrl = 'https://prod-sharemyworks-backend.herokuapp.com/api/';
                 let username = (name.replace(' ','')).toLowerCase() + Math.floor(Math.random()*(999-100+1)+100);
                 let firstName = name.split(' ')[0];
@@ -873,7 +873,7 @@ var theme = {
                   body: formBody
                 }).then(async function (response) {
                   let resp = await response.json();
-                  //console.log('created', resp);
+                  // console.log('created', resp);
                   // console.log('user created');
                   // console.log('start login');
                   let studentId = resp.id;
@@ -886,12 +886,21 @@ var theme = {
                     signupTime: new Date(),
                     accountId: studentId,
                   }
+
+                  // console.log('trialData: ', trialData);
                   // Assign organizationId based on campus location, in Prod env
                   if (campusLocation === 'Seattle') {
                     trialData.organizationId = '6684406b10707d0014fb7369';
                   } else if (campusLocation === 'San-diego') {
                     trialData.organizationId = '66bf6a0dcdae5300148e3a2c';
                   }
+                  // DEV env
+                  // if (campusLocation === 'Seattle') {
+                  //   trialData.organizationId = '66e83ed17eeda92766d31241';
+                  // } else if (campusLocation === 'San-diego') {
+                  //   trialData.organizationId = '6713eacd00dcfc85b65c206a';
+                  // }
+
                   var formBody2 = [];
                   for (var property in trialData) {
                     var encodedKey = encodeURIComponent(property);
@@ -912,7 +921,16 @@ var theme = {
                     // console.log('trial created', resp2);
                     // console.log('trial created');
                     if (campusLocation === 'San-diego') {
-                      window.location.href = '/sandiego/trial_pricing';
+                      // window.location.href = '/sandiego/trial_pricing';
+                      $('#form').prepend(
+                        window.location.href.indexOf("cn") != -1 ? 
+                        '感谢您提交试课评估申请，我们的助理会尽快在第一时间联系您，确认试课细节。同时如果您有任何问题，请随时通过电话或者微信联系我们 (858) 588-7897':
+                        'Your trial class request has been processed. We will contact you shortly. Meanwhile, feel free to reach out us by +1 (858) 588-7897 or CodingMindSD@gmail.com if you have any questions.'
+                      );
+                      $('#formSpinner').css("display", "none");
+                      $('#QRCode').css("display", "none");
+                      $('#QRCodeCN').css("display", "none");
+
                     } else {
                       $('#formSpinner').css("display", "none");
                       $('#formDescription').css("display", "none");
@@ -922,15 +940,21 @@ var theme = {
                           '感谢您提交试课评估申请，我们的助理会尽快在第一时间联系您，确认试课细节。同时如果您有任何问题，请随时通过电话联系我们 (949) 236-7896':
                           'Your free trial request has been processed. We will contact you shortly. Meanwhile, feel free to reach out to us at (949) 236-7896 if you have any questions.'
                         );
+                        $('#formSpinner').css("display", "none");
+
                       } else {
                         $('#form').prepend(
                           window.location.href.indexOf("cn") != -1 ? 
                           '感谢您提交试课评估申请，我们的助理会尽快在第一时间联系您，确认试课细节。同时如果您有任何问题，请随时通过电话或者微信联系我们 +1 (949) 236-7896':
                           'Your free trial request has been processed. We will contact you shortly. Meanwhile, feel free to reach out us by +1 (949) 236-7896 if you have any questions.'
                         );
+                        $('#formSpinner').css("display", "none");
                         $('#QRCode').css("display", "flex");
                         $('#QRCodeCN').css("display", "none");
+
                       }
+                      $('#formSpinner').css("display", "none");
+
  
                     }
                   }).catch(function err(err) {

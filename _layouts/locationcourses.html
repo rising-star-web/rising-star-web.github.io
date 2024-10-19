@@ -225,7 +225,11 @@ layout: locationdefault
           <h3 class="display-4 text-navy">{{ site.data.courses[page.locale].coursedetail.trialTitle}}</h3>
           <p class="lead mb-7 mb-md-7">{{ site.data.courses[page.locale].coursedetail.trialSubTitle}}</p>
           <a href="/{{ location_name }}#free-trial" class="btn btn-primary rounded-pill me-2 me-md-2 mb-4 mb-md-0">
-            {{ site.data.courses[page.locale].coursedetail.trialButton2}}
+            {% if location_name == "sandiego" %}
+              Book Your First Trial Class
+            {% else %}
+              {{ site.data.courses[page.locale].coursedetail.trialButton2}}
+            {% endif %}
           </a>
         </div>
       </div>

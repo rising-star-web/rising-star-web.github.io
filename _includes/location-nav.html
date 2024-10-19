@@ -69,16 +69,39 @@
           </div>
           <div class="offcanvas-body d-flex flex-column h-100">
             <ul class="navbar-nav">
+
+              
               {% assign pages = site.locations | where_exp: "item", "item.path contains location_name" | where: "locale", page.locale | sort: "order" %}
               {% for page in pages %}
               {% unless page.exclude == true or page.path contains '/events/' or page.path contains '/_courses/' %}
-              <li class="nav-item"><a class="nav-link nav-text-solid" href="{{ page.url }}">
+              {% if location_name == 'sandiego' and page.title == 'Schedule' %}
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="scheduleDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Schedule
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="scheduleDropdown">
+                    <li><a class="dropdown-item" href="{{ page.url }}">Group Class</a></li>
+                    <li><a class="dropdown-item" href="{% assign trial_page = site.locations | where: "layout", "location-freetrial" | where: "locale", page.locale | first %}{{ trial_page.url }}">Private Class</a></li>
+                  </ul>
+                </li>
+              {% else %}
+                <li class="nav-item">
+                  <a class="nav-link nav-text-solid" href="{{ page.url }}">
+                    {% if page.title == "Summer Camp" %}
+                      <span class="underline-3 style-3 primary">{{ page.title }}</span>
+                    {% else %}
+                      {{ page.title }}
+                    {% endif %}
+                  </a>
+                </li>
+              {% endif %}
+              <!-- <li class="nav-item"><a class="nav-link nav-text-solid" href="{{ page.url }}">
                   {% if page.title == "Summer Camp" %}
                   <span class="underline-3 style-3 primary">{{ page.title }}</span>
                   {% else %}
                   {{ page.title }}
                   {% endif %}
-                </a></li>
+                </a></li> -->
               {% endunless %}
               {% endfor %}
               <li class="nav-item">

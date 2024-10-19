@@ -121,18 +121,24 @@ layout: locationdefault
             <select class="form-select" aria-label="Default select example" required="required" id="referral"
               name="referral">
               <option value="">{{ site.data.free-trial[page.locale].freetrial.sourceTag }}</option>
-              <option id="xiaohongshu" value="xiaohongshu">{{ site.data.free-trial[page.locale].freetrial.source1 }}
-              </option>
-              <option id="Instagram" value="Instagram">{{ site.data.free-trial[page.locale].freetrial.source2 }}
-              </option>
-              <option id="Facebook" value="Facebook">{{ site.data.free-trial[page.locale].freetrial.source3 }}</option>
-              <option id="WeChat" value="WeChat">{{ site.data.free-trial[page.locale].freetrial.source4 }}</option>
-              <option id="Official Website" value="Official Website">{{
-                site.data.free-trial[page.locale].freetrial.source5 }}</option>
-              <option id="Friend" value="Friend">{{ site.data.free-trial[page.locale].freetrial.source6 }}</option>
-              <option id="Google" value="Google">{{ site.data.free-trial[page.locale].freetrial.source7 }}</option>
-              <option id="TikTok" value="TikTok">{{ site.data.free-trial[page.locale].freetrial.source8 }}</option>
-              <option id="Others" value="Others">{{ site.data.free-trial[page.locale].freetrial.source9 }}</option>
+              {% if location_name == 'sandiego' %}
+                <option value="Google Search">Google Search</option>
+                <option value="Friend Referral">Friend Referral</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Flyer">Flyer</option>
+                <option value="Walk-in">Walk-in</option>
+                <option value="Event">Event</option>
+              {% else %}
+                <option id="xiaohongshu" value="xiaohongshu">{{ site.data.free-trial[page.locale].freetrial.source1 }}</option>
+                <option id="Instagram" value="Instagram">{{ site.data.free-trial[page.locale].freetrial.source2 }}</option>
+                <option id="Facebook" value="Facebook">{{ site.data.free-trial[page.locale].freetrial.source3 }}</option>
+                <option id="WeChat" value="WeChat">{{ site.data.free-trial[page.locale].freetrial.source4 }}</option>
+                <option id="Official Website" value="Official Website">{{ site.data.free-trial[page.locale].freetrial.source5 }}</option>
+                <option id="Friend" value="Friend">{{ site.data.free-trial[page.locale].freetrial.source6 }}</option>
+                <option id="Google" value="Google">{{ site.data.free-trial[page.locale].freetrial.source7 }}</option>
+                <option id="TikTok" value="TikTok">{{ site.data.free-trial[page.locale].freetrial.source8 }}</option>
+                <option id="Others" value="Others">{{ site.data.free-trial[page.locale].freetrial.source9 }}</option>
+              {% endif %}
             </select>
           </div>
 
@@ -300,6 +306,13 @@ layout: locationdefault
     margin-bottom: 5px;
   }
 </style>
+{% if location_name == 'sandiego' %}
+<style>
+  #dateTimeSelections {
+    display: none;
+  }
+</style>
+{% endif %}
 <script>
   const path = window.location.pathname;
   const pathSegments = path.split('/');
@@ -326,6 +339,16 @@ layout: locationdefault
   document.getElementById('formDescription').innerText = description;
 </script>
 <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const locationName = '{{ location_name }}';
+    if (locationName === 'sandiego') {
+      const dateTimeSelections = document.getElementById('dateTimeSelections');
+      const requiredInputs = dateTimeSelections.querySelectorAll('[required]');
+      requiredInputs.forEach(input => {
+        input.removeAttribute('required');
+      });
+    }
+  });
   document.addEventListener('DOMContentLoaded', function () {
     // Get today's date in YYYY-MM-DD format
     const today = new Date().toISOString().split('T')[0];

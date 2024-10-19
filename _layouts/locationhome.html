@@ -449,9 +449,13 @@ layout: locationdefault
       <div class="col d-flex justify-content-center">
         <div class="d-flex flex-column align-items-center align-items-lg-start text-center" data-cue="fadeIn">
           <h2 class="mb-3">{{ site.data.home[page.locale].trial.header2 }}</h2>
-          <p> {{ site.data.home[page.locale].trial.lead2 }}</p>
-          <a href="./schedule-trial" class="btn btn-md btn-green rounded-pill mb-0 text-nowrap mt-4">{{
-            site.data.home[page.locale].trial.btn2 }}</a>
+          {% if location_name == "sandiego" %}
+            <p>Unleash your child's coding potential with our trial class.</p>
+            <a href="./schedule-trial" class="btn btn-md btn-green rounded-pill mb-0 text-nowrap mt-4">Book Your Trial Class</a>
+          {% else %}
+            <p>{{ site.data.home[page.locale].trial.lead2 }}</p>
+            <a href="./schedule-trial" class="btn btn-md btn-green rounded-pill mb-0 text-nowrap mt-4">{{ site.data.home[page.locale].trial.btn2 }}</a>
+          {% endif %}
         </div>
       </div>
     </div>
