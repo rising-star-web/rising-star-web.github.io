@@ -97,6 +97,8 @@ var competitionMapEng = {
 const link = new URL(window.location.href);
 const chinese = window.location.href.includes("cn");
 var studentName = '';
+const BASE_URL = 'https://backend4.sharemyworks.com/api/';
+// const BASE_URL = 'http://localhost:3000/api/';
 
 document.addEventListener("DOMContentLoaded", function () {
     // Parse URL parameters
@@ -114,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 async function fetchCourseDetails(studentId, courseId) {
     try {
-        const response = await fetch(`https://backend4.sharemyworks.com/api/Account/getSemesterFeedback?accountId=${studentId}&courseId=${courseId}`);
+        const response = await fetch(`${BASE_URL}Account/getSemesterFeedback?accountId=${studentId}&courseId=${courseId}`);
         if (!response.ok) throw new Error("Failed to fetch data");
         const data = await response.json();
         //displayCourseDetails(data);
@@ -247,7 +249,6 @@ function setupFormListener(feedbackId) {
 }
 function showLevel(level) {
     const colorClasses = ['rosered-gradient', 'orange-gradient', 'forestgreen-gradient', 'navyblue-gradient', 'amethyst-gradient']; // List all possible classes
-
     const maxLevel = 5;
     const currentLevel = level;
     for (let level = 1; level <= maxLevel; level++) {
@@ -262,8 +263,7 @@ function showLevel(level) {
 }
 
 async function getLogId(feedbackId) {
-    //console.log('feedbackId inside getLogId: ', feedbackId);
-    const response = await fetch(`https://backend4.sharemyworks.com/api/Feedback/${feedbackId}/logs`, {
+    const response = await fetch(`${BASE_URL}Feedback/${feedbackId}/logs`, {
         method: 'GET',
         headers: {
             'Authorization': '7e07BdkkBdGroThWLTF0PrdJhqYVjT3DB7SGkgP5z3eVIloodHjpJDxFP6VAlFZB',
@@ -278,7 +278,7 @@ async function getLogId(feedbackId) {
     }
 }
 function submitFeedback(logId, feedbackId, feedbackText) {
-    fetch('https://backend4.sharemyworks.com/api/NotificationLog/reply', {
+    fetch(`${BASE_URL}NotificationLog/reply`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -327,7 +327,7 @@ function submitFeedback(logId, feedbackId, feedbackText) {
     });
 }
 function notifyManager(feedbackId, feedbackText) {
-    const notifyUrl = `https://backend4.sharemyworks.com/api/Feedback/${feedbackId}/notifyReply`;
+    const notifyUrl = `${BASE_URL}Feedback/${feedbackId}/notifyReply`;
     return fetch(notifyUrl, {
         method: 'POST',
         headers: {
