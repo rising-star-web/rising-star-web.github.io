@@ -7,7 +7,10 @@ register:
   confirm_password: 确认密码
   firstname: 学生 First Name
   lastname: 学生 Last Name
+  parent_first_name: 家长 First Name
+  parent_last_name: 家长 Last Name
   phone: 家长联系电话
   grade: 年级
   register: 注册
   loading: 加载中...
+  dateOfBirth: 出生日期

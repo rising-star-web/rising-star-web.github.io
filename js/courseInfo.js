@@ -1,3 +1,5 @@
+let isSandiego = false; 
+
 document.addEventListener("DOMContentLoaded", function () {
   const apiUrl = "https://backend4.sharemyworks.com/api/Course/";
   //  const apiUrl = "http://localhost:3000/api/Course/";
@@ -11,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   const accountId = params.get("accountId") || "";
 
-  var organizationId = "";
-
+  const organizationId = params.get("organizationId");
+  isSandiego = organizationId == "66bf6a0dcdae5300148e3a2c" || organizationId == "6713eacd00dcfc85b65c206a";
 
   // Call fetchCourseDetails with all necessary parameters
   fetchCourseDetails(apiUrl, courseId, accountId, token);
@@ -71,12 +73,15 @@ function updatePageContent(course, courseId, accountId, token) {
   document.getElementById("coursePrice").innerText = "$ "+course.price;
   document.getElementById("totalClasses").innerText = course.totalClasses;
   var chinese = window.location.href.includes("cn");
-  const link = (chinese ? "/cn" : "") + "/register.html?courseId="+ courseId + "&price=" +course.price + "&accountId=" + accountId + "&token=" + token + "&organizationId=" + organizationId;
-  const loginLink = (chinese ? "/cn" : "") + "/login.html?courseId="+ courseId + "&price=" +course.price + "&accountId=" + accountId + "&token=" + token + "&organizationId=" + organizationId;
-
+  const queryParams = "courseId=" + courseId + 
+  "&price=" + course.price + 
+  "&accountId=" + accountId + 
+  "&token=" + token + 
+  "&organizationId=" + organizationId;
+  const link = (chinese ? "/cn" : "") + (isSandiego ? "/sandiego/register/?" : "/register.html?") + queryParams;
+  const loginLink = (chinese ? "/cn" : "") + (isSandiego ? "/sandiego/login/?" : "/login.html?") + queryParams;
   document.getElementById("registerLink").href = link;
   document.getElementById("loginLink").href = loginLink;
-
 
 }
 

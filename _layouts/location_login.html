@@ -1,0 +1,65 @@
+---
+layout: locationdefault
+---
+{% assign parts = page.url | split: '/' %}
+
+{% if page.url contains '/cn/' %}
+{% assign location_name = parts[2] %}
+{% assign logo_url = '/cn/' | append: location_name %}
+{% assign translated_url = page.url | replace: '/cn/', '/' %}
+{% else %}
+{% assign location_name = parts[1] %}
+{% assign logo_url = '/' | append: location_name %}
+{% assign translated_url = '/cn' | append: page.url %}
+{% endif %}
+<section class="wrapper bg-light">
+  <div class="container pt-8 pt-md-12 pb-8 pb-md-8">
+    <div class="row gx-lg-8 gx-xl-0 gy-10 align-items-center">
+      <div class="col-lg-6 col-xl-5 position-relative d-none d-lg-block">
+        <figure class="ps-xxl-10"><img class="img-fluid" src="/assets/img/illustrations/3d5.png"
+            srcset="/assets/img/illustrations/3d5@2x.png 2x" alt="" /></figure>
+      </div>
+      <!--/column -->
+      <div class="col-lg-6 col-xl-5 offset-xl-1 text-center">
+        <h2 class="display-2 mb-3">{{ site.data.login[page.locale].login.header }}</h2>
+        <!-- <p class="lead mb-8">{{ site.data.free-trial[page.locale].login.lead }}</p> -->
+        <form id="loginForm" class="contact-form needs-validation" novalidate>
+          <div class="messages"></div>
+          <div class="form-floating mb-4">
+            <input id="username" type="text" name="username" class="form-control"
+              placeholder="Username" required="required" data-error="Valid username is required.">
+            <label for="loginEmailPhone">{{ site.data.login[page.locale].login.username }}</label>
+            <div class="invalid-feedback">
+              {{ site.data.login[page.locale].login.errorEmail }}
+            </div>
+          </div>
+          <div class="form-floating mb-4">
+            <input id="loginPassword" type="password" name="loginPassword" class="form-control"
+              placeholder="Password" required="required" data-error="Password is required.">
+            <label for="loginPassword">{{ site.data.login[page.locale].login.password }}</label>
+            <div class="invalid-feedback">
+              {{ site.data.login[page.locale].login.errorPassword }}
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary rounded-pill btn-send mb-3">
+            {{ site.data.login[page.locale].login.login }}
+          </button>
+            <!-- Loading indicator -->
+          <div class="loading-indicator" style="display: none;">
+            {{ site.data.login[page.locale].login.loading }}
+          </div>
+        </form>
+        <!-- /form -->
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->
+<script src="/js/login.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+

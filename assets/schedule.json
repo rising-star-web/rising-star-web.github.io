@@ -6,7 +6,6 @@
         {
           "Day": "Monday",
           "Time": "17:10-18:10"
-          
         },
         {
           "Day": "Tuesday",
@@ -31,7 +30,7 @@
       ],
       "Grade": "G1-2+",
       "CourseInfo": "https://codingmind.com/sandiego/scratch1/",
-      "Registration": "https://codingmind.com/course-info-register?course_id=66f47c146e564d00159872be&organizationId=66bf6a0dcdae5300148e3a2c"
+      "Registration": "https://codingmind.com/sandiego/course-info-register/?course_id=66f47c146e564d00159872be&organizationId=66bf6a0dcdae5300148e3a2c"
     },
     {
       "Name": "L2 - Roblox Programming",

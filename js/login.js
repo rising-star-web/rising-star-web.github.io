@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const baseUrl = "https://backend4.sharemyworks.com/api/";
+    // const baseUrl = 'http://localhost:3000/api/'
     var loginForm = document.getElementById("loginForm");
     var loadingIndicator = document.querySelector(".loading-indicator");
-
 
     var urlParams = new URLSearchParams(window.location.search);
     var courseId = urlParams.get("courseId");
@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var price = urlParams.get("price");
     var chinese = window.location.href.includes("cn");
     var organizationId = urlParams.get("organizationId");
+
+    const isSandiego = organizationId == "66bf6a0dcdae5300148e3a2c" || organizationId == "6713eacd00dcfc85b65c206a";
 
     loginForm.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -40,8 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
             token = data.id;
             accountId = data.userId;
             
-
-            updateAccount({ preferedLanguage: chinese ? "Chinese" : "English" }, accountId,acc_token ,token);
+            updateAccount({ preferedLanguage: chinese ? "Chinese" : "English" }, accountId, acc_token, token);
         })
         .catch((error) => {
             console.error("Login failed", error);
@@ -65,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
         fetch(`${baseUrl}Account/${accountId}/?access_token=${token}`, {
             method: "PATCH",
             headers: {
-                
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${token}`
             },
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
         .then(() => {
-            if (organizationId === "66bf6a0dcdae5300148e3a2c") {
+            if (isSandiego) {
                 // Redirect to San Diego pricing page
                 Toastify({
                     text: "Login Success! Redirecting to San Diego pricing page.",

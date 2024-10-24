@@ -1,6 +1,18 @@
 ---
-layout: default
+layout: locationdefault
 ---
+
+{% assign parts = page.url | split: '/' %}
+
+{% if page.url contains '/cn/' %}
+{% assign location_name = parts[2] %}
+{% assign logo_url = '/cn/' | append: location_name %}
+{% assign translated_url = page.url | replace: '/cn/', '/' %}
+{% else %}
+{% assign location_name = parts[1] %}
+{% assign logo_url = '/' | append: location_name %}
+{% assign translated_url = '/cn' | append: page.url %}
+{% endif %}
 <section class="wrapper bg-light">
   <div class="container pt-8 pt-md-12 pb-8 pb-md-8">
     <div class="row gx-lg-8 gx-xl-0 gy-10 align-items-center">
@@ -77,3 +89,4 @@ layout: default
 <script src="/js/register.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+

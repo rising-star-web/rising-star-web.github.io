@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var registerForm = document.getElementById("registerForm");
   var loadingIndicator = document.querySelector(".loading-indicator");
+  var isSandiego = organizationId == "66bf6a0dcdae5300148e3a2c" || organizationId == "6713eacd00dcfc85b65c206a";
+
 
   registerForm.addEventListener("submit", function (event) {
     console.log("Form submitted");
@@ -26,6 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
       firstName: formData.get("firstName"),
       lastName: formData.get("lastName"),
       grade: formData.get("grade"),
+      dateOfBirth: formData.get("dateOfBirth"),
+      parentFirstName: formData.get("parent_first_name"),
+      parentLastName: formData.get("parent_last_name"),
       organizationId: organizationId,
       username: (
         formData.get("firstName") + formData.get("lastName")
@@ -34,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
       dateOfBirth: new Date(),
     };
 
-    console.log("Post data:", postData);
+    // console.log("Post data:", postData);
 
     if (postData.password !== postData.confirmPassword) {
       alert("Passwords do not match.");
@@ -192,7 +197,7 @@ function attachStudentToCourse(
       },
     })
       .then(() => {
-        if (organizationId === "66bf6a0dcdae5300148e3a2c") {
+        if (isSandiego) {
           // Redirect to San Diego pricing page
         Toastify({
                     text: "Registration Success! Redirecting to checkout page.",

@@ -1,6 +1,18 @@
 ---
-layout: default
+layout: locationdefault
 ---
+
+{% assign parts = page.url | split: '/' %}
+
+{% if page.url contains '/cn/' %}
+{% assign location_name = parts[2] %}
+{% assign logo_url = '/cn/' | append: location_name %}
+{% assign translated_url = page.url | replace: '/cn/', '/' %}
+{% else %}
+{% assign location_name = parts[1] %}
+{% assign logo_url = '/' | append: location_name %}
+{% assign translated_url = '/cn' | append: page.url %}
+{% endif %}
 <!DOCTYPE html>
 <style>
     .table-striped {
@@ -78,9 +90,7 @@ layout: default
                     </table>
                     <div class="text-center">
                         <a class="btn btn-primary rounded-pill btn-send mb-3" id="loginLink">{{ site.data.course-info-register[page.locale].course-info-register.login }}</a>
-
                         <a class="btn btn-primary rounded-pill btn-send mb-3" id="registerLink">{{ site.data.course-info-register[page.locale].course-info-register.register }}</a>
-
                     </div>
                     <!-- <div class="text-center">
                     </div> -->
