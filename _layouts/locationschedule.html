@@ -286,12 +286,15 @@ layout: locationdefault
   }
 function createCourseCard(course, schedule) {
     var startTime = schedule.Time.split(' - ')[0];
+    var scheduleIndex = course.Schedule.findIndex(s => 
+        s.Day === schedule.Day && s.Time === schedule.Time
+    );
 
     // Create the card container
     var $card = $('<div>', { 
         class: 'course-card', 
         'data-start-time': startTime,
-        'data-registration': course.Registration
+        'data-registration': course.Registration[scheduleIndex]
     });
 
     // Build the inner content
@@ -303,7 +306,7 @@ function createCourseCard(course, schedule) {
     var $joinTodayButton = $('<button>', {
         class: 'btn-learn-more btn-join-today',
         text: 'Join Today',
-        'data-registration': course.Registration
+        'data-registration': course.Registration[scheduleIndex]
     });
 
     // Add click event directly to the "Join Today" button
