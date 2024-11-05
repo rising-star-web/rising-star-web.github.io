@@ -131,31 +131,37 @@ var theme = {
     if(grids != null) {
       grids.forEach(g => {
         var grid = g.querySelector('.isotope');
-        var filtersElem = g.querySelector('.isotope-filter');
-        var buttonGroups = g.querySelectorAll('.isotope-filter');
-        var iso = new Isotope(grid, {
-          itemSelector: '.item',
-          layoutMode: 'masonry',
-          masonry: {
-            columnWidth: grid.offsetWidth / 12
-          },
-          percentPosition: true,
-          transitionDuration: '0.7s'
-        });
-        imagesLoaded(grid).on("progress", function() {
-          iso.layout({
+        if (grid) {
+          var filtersElem = g.querySelector('.isotope-filter');
+          var buttonGroups = g.querySelectorAll('.isotope-filter');
+          var iso = new Isotope(grid, {
+            itemSelector: '.item',
+            layoutMode: 'masonry',
             masonry: {
               columnWidth: grid.offsetWidth / 12
-            }
-          })
-        }),
-        window.addEventListener("resize", function() {
-          iso.arrange({
-            masonry: {
-              columnWidth: grid.offsetWidth / 12
-            }
+            },
+            percentPosition: true,
+            transitionDuration: '0.7s'
           });
-        }, true);
+          imagesLoaded(grid).on("progress", function() {
+            iso.layout({
+              masonry: {
+                columnWidth: grid.offsetWidth / 12
+              }
+            })
+          }),
+          // Adjust layout on resize
+          window.addEventListener("resize", function() {
+            iso.arrange({
+              masonry: {
+                columnWidth: grid.offsetWidth / 12
+              }
+            });
+          }, true);
+
+
+        }
+
         if(filtersElem != null) {
           filtersElem.addEventListener('click', function(event) {
             if(!matchesSelector(event.target, '.filter-item')) {
@@ -741,7 +747,7 @@ var theme = {
         navbarFixed.style.paddingRight = '';
       }
       if(pageProgress != null) {
-       pageProgress.style.marginRight = '';
+        pageProgress.style.marginRight = '';
       }
     }
     myModalEl.forEach(myModalEl => {
