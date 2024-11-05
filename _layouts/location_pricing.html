@@ -37,7 +37,7 @@ logo_url = '/' | append: location_name %} {% endif %}
                     <div class="card shadow-lg">
                         <div class="d-flex flex-column">
                             <div class="pricing-wrapper">
-                                                            {% if location_name == 'west-lafayette' or location_name ==
+                            {% if location_name == 'west-lafayette' or location_name ==
                             'sandiego' %}
                             <div class="tab-container">
                                 <button class="tab-button active" onclick="showTab('monthly')">
@@ -98,7 +98,7 @@ logo_url = '/' | append: location_name %} {% endif %}
                                             <p>1 class/week</p>
                                             <p><strong>$200</strong> per month</p>
                                             <button class="subscribe-button"
-                                                onclick="handleSubscribe('price_1QHYspP2pSpFqYXA9Y41Ybjm', 20000, 'Group Class Membership')">
+                                                onclick="handleSubscribe('price_1QHAF0P2pSpFqYXAts0m8dMQ', 20000, 'Group Class Membership')">
                                                 Subscribe
                                             </button>
                                         </div>
@@ -237,7 +237,6 @@ logo_url = '/' | append: location_name %} {% endif %}
         const daysRemaining = lastDay - now.getDate() + 1;
         const dailyRate = monthlyPrice / lastDay;
         const proratedAmount = (dailyRate * daysRemaining).toFixed(2);
-
         const nextBillingDate = new Date(currentYear, currentMonth + 1, 1);
 
         return {
