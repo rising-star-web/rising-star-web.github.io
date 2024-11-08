@@ -14,10 +14,10 @@ layout: locationdefault
 
 <div class="pricing-table">
     <div class="pricing-card">
-        <h2>Monthly Membership</h2>
+        <h2>Membership</h2>
         <div class="price-details">
             <div class="price-row">
-                <span>Regular monthly price:</span>
+                <span>Regular price:</span>
                 <span class="regular-price" id="regularPrice"></span>
             </div>
             <div class="price-row">
@@ -46,7 +46,7 @@ layout: locationdefault
             </div>
         </div>
         <button id="checkoutButton" class="checkout-button" onclick="redirectToCheckout()">
-            Subscribe Now
+            Register Now
         </button>
         <p class="price-notice" id="priceNotice"></p>
     </div>
@@ -79,7 +79,7 @@ layout: locationdefault
                 document.getElementById("nextBillingDate").textContent = 
                     'Immediately';
                 document.getElementById("priceNotice").textContent = 
-                    'Your subscription will start immediately with the processing fee included.';
+                    'Your membership will start immediately with the processing fee included.';
 
                 // Update labels if not already done in HTML
                 document.querySelector('.price-row:nth-child(2) span:first-child').textContent = 
@@ -87,7 +87,7 @@ layout: locationdefault
                 document.querySelector('.price-row.highlight span:first-child').textContent = 
                     'Total amount due today:';
                 document.querySelector('.price-row:nth-child(4) span:first-child').textContent = 
-                    'Subscription starts:';
+                    'Membership starts:';
             } else {
                 document.getElementById("regularPrice").textContent = `$${monthlyPrice.toFixed(2)}`;
                 // West Lafayette: Show proration

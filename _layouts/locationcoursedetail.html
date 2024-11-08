@@ -164,7 +164,11 @@ layout: locationdefault
 
                 <div class="card-footer">
                   <ul class="post-meta text-dark d-flex mb-0">
+                    {% if location_name == 'sandiego' %}
+                    <li class="post-desc1 fs-16"><i class="uil uil-gift text-primary"></i><span>Trial Class Available</span></li>
+                    {% else %}
                     <li class="post-desc1 fs-16"><i class="uil uil-gift text-primary"></i><span>{{ site.data.courses[page.locale].coursedetail.trial}}</span></li>
+                    {% endif %}
                     <li class="post-desc2 fs-16"><i class="uil uil-calendar-slash text-primary"></i><span>{{ site.data.courses[page.locale].coursedetail.cancel}}</span></li>
                   </ul>
                   <!-- /.post-meta -->

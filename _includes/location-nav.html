@@ -144,7 +144,7 @@
             </li>
             {% endif %}
             {% assign location_name = location_name | downcase | strip %}
-            {% unless location_name == "seattle" %}
+            {% unless location_name == "seattle" or location_name == "sandiego"%}
             <li class="nav-item d-none d-lg-block">
               <a href="{{ location_data.paymenturl }}" target="_blank" class="btn btn-sm btn-navy rounded-pill">Membership
                 Portal</a>

@@ -7,7 +7,7 @@ date: 2024-08-24
 
 ![Coding Mind Logo]({{site.logo}}){: width="150px" }
 
-**At the free trial class, you'll find out how Coding Mind's unique approach to coding can help your kids:**
+**At the trial class, you'll find out how Coding Mind's unique approach to coding can help your kids:**
 
 - Complete a personal project by the end of each course
 - Participate in at least one competition each semester

@@ -22,7 +22,11 @@ layout: locationdefault
       </div>
       <!--/column -->
       <div class="col-lg-6 col-xl-5 offset-xl-1 text-center">
+        {% if location_name == 'sandiego' %}
+        <h2 class="display-2 mb-3">Sign up for a Coding Mind account</h2>
+        {% else %}
         <h2 class="display-2 mb-3">{{ site.data.register[page.locale].register.header }}</h2>
+        {% endif %}
         <form id="registerForm" class="contact-form needs-validation" novalidate>
           <div class="messages"></div>
           <div class="form-floating mb-4">

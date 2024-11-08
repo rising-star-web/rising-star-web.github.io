@@ -33,8 +33,8 @@
           <div class="widget">
             <h4 class="widget-title mb-3 text-white">{{ site.data.footer[page.locale].footer.aboutHeader }}</h4>
             <ul class="list-unstyled mb-0">
-              <li><a href="{{ site.data.nav[page.locale].nav.URL }}about-us">{{ site.data.footer[page.locale].footer.ourStory }}</a></li>
-              <li><a href="{{ site.data.nav[page.locale].nav.URL }}contact-us">{{ site.data.footer[page.locale].footer.contact }}</a></li>
+              <li><a href="/{{ location_name }}/about">{{ site.data.footer[page.locale].footer.ourStory }}</a></li>
+              <li><a href="/{{ location_name }}/#info">{{ site.data.footer[page.locale].footer.contact }}</a></li>
               <li><a href="{{ site.data.nav[page.locale].nav.URL }}careers">{{ site.data.footer[page.locale].footer.careers }}</a></li>
               <li><a href="{{ site.data.nav[page.locale].nav.URL }}schools">{{ site.data.footer[page.locale].footer.schools }}</a></li>
               <li><a href="{{ site.data.nav[page.locale].nav.URL }}our-partners">{{ site.data.footer[page.locale].footer.partners }}</a></li>
@@ -113,7 +113,11 @@
               <li><a href="{{ site.data.nav[page.locale].nav.URL }}enrichment-passion-project">{{ site.data.footer[page.locale].footer.enrichment }}</a></li>
               <li><a href="{{ site.data.nav[page.locale].nav.URL }}instructors">{{ site.data.footer[page.locale].footer.instructors }}</a></li>
               <li><a href="{{ site.data.nav[page.locale].nav.URL }}competitions">{{ site.data.footer[page.locale].footer.competitions }}</a></li>
-              <li><a href="{{ site.data.nav[page.locale].nav.URL }}free-trial">{{ site.data.footer[page.locale].footer.trial }}</a></li>
+              {% if location_name == 'sandiego' %}
+                <li><a href="/{{ location_name }}/schedule-trial">Trial Class</a></li>
+              {% else %}
+                <li><a href="/{{ location_name }}/schedule-trial">{{ site.data.footer[page.locale].footer.trial }}</a></li>
+              {% endif %}
             </ul>
           </div>
           <!-- /.widget -->
