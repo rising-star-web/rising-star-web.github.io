@@ -7,6 +7,9 @@ assign location_name = parts[2] %} {% assign logo_url = '/cn/' | append:
 location_name %} {% else %} {% assign location_name = parts[1] %} {% assign
 logo_url = '/' | append: location_name %} {% endif %}
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/toastify.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/toastify.js"></script>
+
 <section class="wrapper bg-custom">
     <div class="container pt-10 pb-19 pt-md-10 pb-md-20 text-center">
         <div class="row">
@@ -206,6 +209,7 @@ logo_url = '/' | append: location_name %} {% endif %}
 <script src="https://js.stripe.com/v3/"></script>
 <script>
     const API_URL = 'https://prod-sharemyworks-backend.herokuapp.com/api/';
+    // const API_URL = 'http://localhost:3000/api/';
     const LOCATION_NAME = "{{ location_name }}";
     const STRIPE_PUBLIC_KEY = LOCATION_NAME === "sandiego" 
         ? "pk_live_51PykoAP2pSpFqYXAXHJtAjmYzwf3kZt6K877RmO6pYp0DFCdCw08VVdXxkMySVE1HU5CiqxZC8XHjQnTZPxAflND004piDnQ7w"
@@ -225,6 +229,22 @@ logo_url = '/' | append: location_name %} {% endif %}
         document
             .querySelector(`.tab-button[onclick="showTab('${tabId}')"]`)
             .classList.add("active");
+    }
+
+
+    function showFormCompletionToast() {
+        Toastify({
+            text: "Please complete the trial form first before proceeding, redirecting to form...",
+            duration: 2000,
+            gravity: "top",
+            position: "center",
+            style: {
+                background: "#ff6b6b",
+                borderRadius: "8px",
+                fontSize: "16px",
+                padding: "12px 20px"
+            },
+        }).showToast();
     }
 
     function calculateProration(monthlyPrice) {
@@ -282,8 +302,15 @@ logo_url = '/' | append: location_name %} {% endif %}
                 calculationType: details.type
             })
         );
-        // Redirect to proration details page
-        window.location.href = `/${LOCATION_NAME}/proration`;
+        const formCompleted = localStorage.getItem('formCompleted');
+        if (formCompleted === 'true') {
+            window.location.href = `/${LOCATION_NAME}/proration`;
+        } else {
+            showFormCompletionToast();
+            setTimeout(() => {
+                window.location.href = `/${LOCATION_NAME}/schedule-trial`;
+            }, 2000);
+        }    
     }
 </script>
 

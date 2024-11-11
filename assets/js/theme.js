@@ -927,16 +927,18 @@ var theme = {
                     // console.log('trial created', resp2);
                     // console.log('trial created');
                     if (campusLocation === 'San-diego') {
-                      // window.location.href = '/sandiego/trial_pricing';
+                      // if location is sandiego, set the sessionstorage of form Completed to true
+                      localStorage.setItem('formCompleted', 'true');
                       $('#form').prepend(
                         window.location.href.indexOf("cn") != -1 ? 
-                        '感谢您提交试课评估申请，我们的助理会尽快在第一时间联系您，确认试课细节。同时如果您有任何问题，请随时通过电话或者微信联系我们 (858) 588-7897':
+                        '感谢您提交试课评估申请，我们的助理会尽快在第一时间联系您，确认试课细节。同时如果您有任何问题，请随时通过电话或者微信联系我们 (858) 588-7897 ':
                         'Your trial class request has been processed. We will contact you shortly. Meanwhile, feel free to reach out us by +1 (858) 588-7897 or CodingMindSD@gmail.com if you have any questions.'
                       );
                       $('#formSpinner').css("display", "none");
                       $('#QRCode').css("display", "none");
                       $('#QRCodeCN').css("display", "none");
 
+                      window.location.href = '/sandiego/pricing';
                     } else {
                       $('#formSpinner').css("display", "none");
                       $('#formDescription').css("display", "none");
