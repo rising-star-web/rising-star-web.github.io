@@ -33,7 +33,7 @@
         }
       ],
       "Grade": "G1-2+",
-      "CourseInfo": "https://codingmind.com/sandiego/scratch1/",
+      "CourseInfo": "https://codingmind.com/sandiego/courses/scratch1/",
       "Registration": [
         "https://codingmind.com/sandiego/course-info-register?course_id=6728d5f27178d500159af8be&organizationId=66bf6a0dcdae5300148e3a2c",
         "https://codingmind.com/sandiego/course-info-register?course_id=672bb776b15b8300158d2cfd&organizationId=66bf6a0dcdae5300148e3a2c",
@@ -61,7 +61,7 @@
         }
       ],
       "Grade": "G2-3+",
-      "CourseInfo": "https://codingmind.com/sandiego/roblox1/",
+      "CourseInfo": "https://codingmind.com/sandiego/courses/roblox1/",
       "Registration": [
         "https://codingmind.com/sandiego/course-info-register?course_id=6728db6a7178d500159af971&organizationId=66bf6a0dcdae5300148e3a2c",
         "https://codingmind.com/sandiego/course-info-register?course_id=672bbfe6b15b8300158d2eec&organizationId=66bf6a0dcdae5300148e3a2c",
@@ -81,7 +81,7 @@
         }
       ],
       "Grade": "G2-3+",
-      "CourseInfo": "https://codingmind.com/sandiego/app-thunkable/",
+      "CourseInfo": "https://codingmind.com/sandiego/courses/app-thunkable/",
       "Registration": [
         "https://codingmind.com/sandiego/course-info-register?course_id=672bbb26b15b8300158d2dc5&organizationId=66bf6a0dcdae5300148e3a2c",
         "https://codingmind.com/sandiego/course-info-register?course_id=672bbcadb15b8300158d2e28&organizationId=66bf6a0dcdae5300148e3a2c"
@@ -120,7 +120,7 @@
         }
       ],
       "Grade": "G4+",
-      "CourseInfo": "https://codingmind.com/sandiego/python1/",
+      "CourseInfo": "https://codingmind.com/sandiego/courses/python1/",
       "Registration":[
         "https://codingmind.com/sandiego/course-info-register?course_id=6728d67e7178d500159af8d7&organizationId=66bf6a0dcdae5300148e3a2c",
         "https://codingmind.com/sandiego/course-info-register?course_id=6728d8747178d500159af90c&organizationId=66bf6a0dcdae5300148e3a2c",
@@ -182,7 +182,7 @@
         }
       ],
       "Grade": "G6+",
-      "CourseInfo": "https://codingmind.com/sandiego/flutter/",
+      "CourseInfo": "https://codingmind.com/sandiego/courses/flutter/",
       "Registration": [
         "https://codingmind.com/sandiego/course-info-register?course_id=6728da357178d500159af958&organizationId=66bf6a0dcdae5300148e3a2c",
         "https://codingmind.com/sandiego/course-info-register?course_id=6728e0227178d500159afa3f&organizationId=66bf6a0dcdae5300148e3a2c"
@@ -197,7 +197,7 @@
         }
       ],
       "Grade": "G6+",
-      "CourseInfo": "https://codingmind.com/sandiego/web1/",
+      "CourseInfo": "https://codingmind.com/sandiego/courses/web1/",
       "Registration": [
         "https://codingmind.com/sandiego/course-info-register?course_id=6728ddeb7178d500159af9bc&organizationId=66bf6a0dcdae5300148e3a2c"
       ]
@@ -215,7 +215,7 @@
         }
       ],
       "Grade": "G6+",
-      "CourseInfo": "https://codingmind.com/sandiego/unity1/",
+      "CourseInfo": "https://codingmind.com/sandiego/courses/unity1/",
       "Registration": [
         "https://codingmind.com/sandiego/course-info-register?course_id=672bbe9cb15b8300158d2ea3&organizationId=66bf6a0dcdae5300148e3a2c",
         "https://codingmind.com/sandiego/course-info-register?course_id=672bc2bdb15b8300158d2f97&organizationId=66bf6a0dcdae5300148e3a2c"
