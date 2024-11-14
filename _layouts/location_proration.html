@@ -11,7 +11,6 @@ layout: locationdefault
   {% assign logo_url = '/' | append: location_name %}
 {% endif %}
 
-
 <div class="pricing-table">
     <div class="pricing-card">
         <h2>Membership</h2>
@@ -25,7 +24,7 @@ layout: locationdefault
                     {% if location_name == 'sandiego' %}
                     Processing Fee (3.5%):
                     {% else %}
-                    Days remaining this month:
+                    Weeks remaining this month:
                     {% endif %}
                 </span>
                 <span id="daysRemaining">...</span>
@@ -103,7 +102,7 @@ layout: locationdefault
 
                 // Update labels if not already done in HTML
                 document.querySelector('.price-row:nth-child(2) span:first-child').textContent = 
-                    'Days remaining this month:';
+                    'Weeks remaining this month:';
                 document.querySelector('.price-row.highlight span:first-child').textContent = 
                     'Prorated amount due today:';
                 document.querySelector('.price-row:nth-child(4) span:first-child').textContent = 

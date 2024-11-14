@@ -251,18 +251,28 @@ logo_url = '/' | append: location_name %} {% endif %}
         const now = new Date();
         const currentMonth = now.getMonth();
         const currentYear = now.getFullYear();
-
+        
         const lastDay = new Date(currentYear, currentMonth + 1, 0).getDate();
-        const daysRemaining = lastDay - now.getDate() + 1;
-        const dailyRate = monthlyPrice / lastDay;
-        const proratedAmount = (dailyRate * daysRemaining).toFixed(2);
+        
+        // Calculate weeks remaining in the month
+        const currentDate = now.getDate();
+        const weeksInMonth = Math.ceil(lastDay / 7);
+        const currentWeek = Math.ceil(currentDate / 7);
+        const weeksRemaining = weeksInMonth - currentWeek + 1;
+        
+        // Calculate weekly rate from monthly price
+        const weeklyRate = monthlyPrice / weeksInMonth;
+        const proratedAmount = (weeklyRate * weeksRemaining).toFixed(2);
+        
+        // Next billing date remains the same - first day of next month
         const nextBillingDate = new Date(currentYear, currentMonth + 1, 1);
 
         return {
             proratedAmount: parseFloat(proratedAmount),
-            daysRemaining,
+            daysRemaining: weeksRemaining,
             nextBillingDate,
             monthlyPrice,
+            weeklyRate: parseFloat(weeklyRate.toFixed(2))
         };
     }
 
@@ -303,14 +313,18 @@ logo_url = '/' | append: location_name %} {% endif %}
             })
         );
         const formCompleted = localStorage.getItem('formCompleted');
-        if (formCompleted === 'true') {
+        if(LOCATION_NAME == 'sandiego') {
+            if (formCompleted === 'true') {
+                window.location.href = `/${LOCATION_NAME}/proration`;
+            } else {
+                showFormCompletionToast();
+                setTimeout(() => {
+                    window.location.href = `/${LOCATION_NAME}/schedule-trial`;
+                }, 2000);
+            }
+        } else if (LOCATION_NAME == 'west-lafayette') {
             window.location.href = `/${LOCATION_NAME}/proration`;
-        } else {
-            showFormCompletionToast();
-            setTimeout(() => {
-                window.location.href = `/${LOCATION_NAME}/schedule-trial`;
-            }, 2000);
-        }    
+        }   
     }
 </script>
 
