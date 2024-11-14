@@ -897,9 +897,10 @@ var theme = {
                   // Assign organizationId based on campus location, in Prod env
                   if (campusLocation === 'Seattle') {
                     trialData.organizationId = '6684406b10707d0014fb7369';
-                  } else if (campusLocation === 'San-diego') {
+                  } else if (campusLocation === 'San-diego' || campusLocation === 'Online-sd') {
                     trialData.organizationId = '66bf6a0dcdae5300148e3a2c';
                   }
+
                   // DEV env
                   // if (campusLocation === 'Seattle') {
                   //   trialData.organizationId = '66e83ed17eeda92766d31241';
@@ -926,7 +927,7 @@ var theme = {
                     let resp2 = await response.json();
                     // console.log('trial created', resp2);
                     // console.log('trial created');
-                    if (campusLocation === 'San-diego') {
+                    if (campusLocation === 'San-diego' || campusLocation === 'Online-sd') {
                       // if location is sandiego, set the sessionstorage of form Completed to true
                       localStorage.setItem('formCompleted', 'true');
                       $('#form').prepend(
