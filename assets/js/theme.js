@@ -839,10 +839,23 @@ var theme = {
                     .join('; ');
                 }
 
-                // Set availability based on location
-                const availability = (campusLocation === 'San-diego' || campusLocation === 'Seattle') 
-                  ? formatDateTimeSelections()
-                  : document.getElementById('availability').value;
+                  // Set availability based on location
+                  const availability = (campusLocation === 'San-diego' || campusLocation === 'Seattle') 
+                    ? formatDateTimeSelections()
+                    : document.getElementById('availability').value;
+
+                  let publicComment = '';
+                  
+                  if (campusLocation === 'San-diego' || campusLocation === 'Online-sd') {
+                    const classType = document.getElementById('classType').value;
+                    if (classType === 'group') {
+                      const className = document.getElementById('className').value;
+                      const classSchedule = document.getElementById('classSchedule').value;
+                      publicComment = `Group Class - ${className} (${classSchedule})`;
+                    } else {
+                      publicComment = 'Private';
+                    }
+                  }
 
                 // let baseUrl = 'http://localhost:3000/api/';
                 let baseUrl = 'https://prod-sharemyworks-backend.herokuapp.com/api/';
@@ -891,6 +904,12 @@ var theme = {
                     location: campusLocation,
                     signupTime: new Date(),
                     accountId: studentId,
+                    publicComment: publicComment
+
+                  }
+
+                  if (!publicComment) {
+                    delete trialData.publicComment;
                   }
 
                   // console.log('trialData: ', trialData);
