@@ -101,7 +101,7 @@ logo_url = '/' | append: location_name %} {% endif %}
                                             <p>1 class/week</p>
                                             <p><strong>$200</strong> per month</p>
                                             <button class="subscribe-button"
-                                                onclick="handleSubscribe('price_1QHAF0P2pSpFqYXAts0m8dMQ', 20000, 'Group Class Membership')">
+                                                onclick="handleSubscribe('prod_R3sLpntwYrK0p1', 20000, 'Group Class Membership')">
                                                 Register
                                             </button>
                                         </div>
@@ -113,7 +113,7 @@ logo_url = '/' | append: location_name %} {% endif %}
                                             <p>1 classes/week</p>
                                             <p><strong>$330</strong> per month</p>
                                             <button class="subscribe-button"
-                                                onclick="handleSubscribe('price_1QHAFqP2pSpFqYXAchipKWL7', 33000, '1v1 Junior Membership')">
+                                                onclick="handleSubscribe('prod_R3sOapNfypkx2g', 33000, '1v1 Junior Membership')">
                                                 Register
                                             </button>
                                         </div>
@@ -123,7 +123,7 @@ logo_url = '/' | append: location_name %} {% endif %}
                                             <p>1 classes/week</p>
                                             <p><strong>$370</strong> per month</p>
                                             <button class="subscribe-button"
-                                                onclick="handleSubscribe('price_1QHAH5P2pSpFqYXAahb2IzII', 37000, '1v1 Senior Membership')">
+                                                onclick="handleSubscribe('prod_R3sQfXDggSIO4T', 37000, '1v1 Senior Membership')">
                                                 Register
                                             </button>
                                         </div>
@@ -139,7 +139,7 @@ logo_url = '/' | append: location_name %} {% endif %}
                                             <p>Get a taste of our classes!</p>
                                             <p><strong>$29</strong> one-time payment</p>
                                             <button class="subscribe-button"
-                                                onclick="handleSubscribe('price_1Q3KpSP2pSpFqYXAjyw3PNCu', 2900, 'Free Trial')">
+                                                onclick="handleSubscribe('prod_QvBBSMzCIqf4YS', 2900, 'Free Trial')">
                                                 Sign Up
                                             </button>
                                         </div>
@@ -314,6 +314,7 @@ logo_url = '/' | append: location_name %} {% endif %}
         );
         const formCompleted = localStorage.getItem('formCompleted');
         if(LOCATION_NAME == 'sandiego') {
+            // formCompleted = 'true';
             if (formCompleted === 'true') {
                 window.location.href = `/${LOCATION_NAME}/proration`;
             } else {
