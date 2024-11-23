@@ -780,6 +780,22 @@ var theme = {
    */
   forms: () => {
     (function() {
+      function calculateProcessingFee(monthlyPrice) {
+        const processingFeePercent = 3.5;
+        const processingFee = (monthlyPrice * (processingFeePercent / 100)).toFixed(2);
+        const totalAmount = (parseFloat(monthlyPrice) + parseFloat(processingFee)).toFixed(2);
+        
+        return {
+          proratedAmount: parseFloat(totalAmount), 
+          processingFee: parseFloat(processingFee),
+          monthlyPrice: parseFloat(monthlyPrice),
+          processingFeePercent,
+          daysRemaining: null, 
+          nextBillingDate: new Date(),
+          type: 'processing_fee'
+        };
+      }
+
       "use strict";
       window.addEventListener("load", function() {
         var forms = document.querySelectorAll(".needs-validation");
@@ -845,7 +861,7 @@ var theme = {
                     : document.getElementById('availability').value;
 
                   let publicComment = '';
-                  
+
                   if (campusLocation === 'San-diego' || campusLocation === 'Online-sd') {
                     const classType = document.getElementById('classType').value;
                     if (classType === 'group') {
@@ -855,8 +871,70 @@ var theme = {
                     } else {
                       publicComment = 'Private';
                     }
-                  }
+    
+                    // Store the form data for SD campus and redirect
+                    const formData = {
+                      accountData: {
+                        email2: email,
+                        phone2: phone,
+                        username: (name.replace(' ','')).toLowerCase() + Math.floor(Math.random()*(999-100+1)+100),
+                        firstName: name.split(' ')[0],
+                        lastName: name.split(' ')[1] ? name.split(' ')[1] : ' ',
+                        password: '123',
+                        dateOfBirth: new Date(),
+                        grade: grade,
+                        referralName: referral,
+                        preferedLanguage: 'English'
+                      },
+                      trialData: {
+                        codingExperience: experience,
+                        availability: availability,
+                        comment: "",
+                        location: campusLocation,
+                        signupTime: new Date(),
+                        organizationId: '66bf6a0dcdae5300148e3a2c',
+                        publicComment: publicComment
+                      }
+                    };
+    
+                    localStorage.setItem('pendingRegistration', JSON.stringify(formData));
+                    const pricingDetails = {
+                      priceId: 'prod_QvBBSMzCIqf4YS', //SD Trial class product ID
+                      planName: 'SD Trial Class',
+                      amount: 2900, 
+                      proration: calculateProcessingFee(29.00),
+                      locationType: 'sandiego',
+                      calculationType: 'processing_fee'
+                    };
+                    localStorage.setItem('pricingDetails', JSON.stringify(pricingDetails));
+                    // Store recaptcha response
+                    if (inputRecaptcha && inputRecaptcha.value) {
+                      localStorage.setItem('recaptchaResponse', inputRecaptcha.value);
+                    }
+                    document.getElementById('formSpinner').style.display = "none";
 
+                    const confirmModal = new bootstrap.Modal(document.getElementById('confirmModal'));
+                    confirmModal.show();
+
+                    // Handle the confirmation button click
+                    document.getElementById('confirmRedirect').addEventListener('click', function() {
+                      Toastify({
+                        text: "Redirecting to payment page...",
+                        duration: 500,
+                        gravity: "top",
+                        position: 'right',
+                        style: {
+                          background: "green",
+                        },
+                        className: "info",
+                      }).showToast();
+
+                      confirmModal.hide();
+                      window.location.href = "/sandiego/proration";
+                    });
+                    return;
+                  }
+                  
                 // let baseUrl = 'http://localhost:3000/api/';
                 let baseUrl = 'https://prod-sharemyworks-backend.herokuapp.com/api/';
                 let username = (name.replace(' ','')).toLowerCase() + Math.floor(Math.random()*(999-100+1)+100);
@@ -892,9 +970,6 @@ var theme = {
                   body: formBody
                 }).then(async function (response) {
                   let resp = await response.json();
-                  // console.log('created', resp);
-                  // console.log('user created');
-                  // console.log('start login');
                   let studentId = resp.id;
 
                   let trialData= {
@@ -911,8 +986,6 @@ var theme = {
                   if (!publicComment) {
                     delete trialData.publicComment;
                   }
-
-                  // console.log('trialData: ', trialData);
                   // Assign organizationId based on campus location, in Prod env
                   if (campusLocation === 'Seattle') {
                     trialData.organizationId = '6684406b10707d0014fb7369';
