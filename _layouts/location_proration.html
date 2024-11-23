@@ -13,7 +13,7 @@ layout: locationdefault
 
 <div class="pricing-table">
     <div class="pricing-card">
-        <h2>Membership</h2>
+        <h2>Payment Details</h2>
         <div class="price-details">
             <div class="price-row">
                 <span>Regular price:</span>
@@ -54,18 +54,20 @@ layout: locationdefault
 <script src="https://js.stripe.com/v3/"></script>
 
 <script>
-    const API_URL = 'https://prod-sharemyworks-backend.herokuapp.com/api/';
-    // const API_URL = 'http://localhost:3000/api/';
-    const LOCATION_NAME = '{{ location_name }}';
+    // DEVELOPMENT 
+    //const API_URL = 'http://localhost:3000/api/';
+    //const STRIPE_PUBLIC_KEY = "pk_test_51PykoAP2pSpFqYXALxUFZVQxxxbSJP1jyyKVUJAQzr88cc7K1X6UjdX86gOxeebzRd4CQZwvOYWU57YzBnpZAjl600Yd8zgisy"
 
+    const API_URL = 'https://prod-sharemyworks-backend.herokuapp.com/api/';
     const STRIPE_PUBLIC_KEY = LOCATION_NAME === "sandiego" 
         ? "pk_live_51PykoAP2pSpFqYXAXHJtAjmYzwf3kZt6K877RmO6pYp0DFCdCw08VVdXxkMySVE1HU5CiqxZC8XHjQnTZPxAflND004piDnQ7w"
         : LOCATION_NAME === "west-lafayette"
             ? "pk_live_51OSVZRDvY5Eit5tr2N0bTXCpwgUxmtzjYY4K8YQQbvbr1bv3s0JDw1KV35xKQuDwDA7fAPWjQv821cs1wlcdzEvv00Db4GFVaz"
             : "";
-    function displayProrationDetails() {
-        const pricingDetails = JSON.parse(sessionStorage.getItem("pricingDetails"));
+    const LOCATION_NAME = '{{ location_name }}';
 
+    function displayProrationDetails() {
+        const pricingDetails = JSON.parse(localStorage.getItem("pricingDetails"));
         if (pricingDetails) {
             const { planName, amount, proration, calculationType } = pricingDetails;
             const { proratedAmount, daysRemaining, nextBillingDate, monthlyPrice } = proration;
@@ -78,16 +80,22 @@ layout: locationdefault
                     `$${proration.proratedAmount.toFixed(2)}`;
                 document.getElementById("nextBillingDate").textContent = 
                     'Immediately';
-                document.getElementById("priceNotice").textContent = 
-                    'Your membership will start immediately with the processing fee included.';
-
+                
                 // Update labels if not already done in HTML
                 document.querySelector('.price-row:nth-child(2) span:first-child').textContent = 
                     'Processing Fee (3.5%):';
                 document.querySelector('.price-row.highlight span:first-child').textContent = 
                     'Total amount due today:';
-                document.querySelector('.price-row:nth-child(4) span:first-child').textContent = 
-                    'Membership starts:';
+
+                if (planName === 'SD Trial Class') {
+                    document.querySelector('.price-row:nth-child(4) span:first-child').textContent = 
+                        'Effective:';
+                } else {
+                    document.querySelector('.price-row:nth-child(4) span:first-child').textContent = 
+                        'Membership starts:';
+                    document.getElementById("priceNotice").textContent = 
+                        'Your membership will start immediately with the processing fee included.';
+                }
             } else {
                 document.getElementById("regularPrice").textContent = `$${monthlyPrice.toFixed(2)}`;
                 // West Lafayette: Show proration
@@ -116,7 +124,7 @@ layout: locationdefault
     }
 
     async function redirectToCheckout() {
-        const pricingDetails = JSON.parse(sessionStorage.getItem("pricingDetails"));
+        const pricingDetails = JSON.parse(localStorage.getItem("pricingDetails"));
 
         if (pricingDetails) {
             const { priceId, proration } = pricingDetails;
