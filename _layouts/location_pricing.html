@@ -333,12 +333,6 @@ logo_url = '/' | append: location_name %} {% endif %}
         const formCompleted = localStorage.getItem('formCompleted');
         const pendingSignupData = localStorage.getItem('pendingSignupData');
         const pendingLoginData = localStorage.getItem('pendingLoginData');
-
-        console.log('formCompleted', formCompleted);
-        console.log('pendingSignupData', pendingSignupData);
-        console.log('pendingLoginData', pendingLoginData);
-        console.log('planName', planName);
-        console.log('priceDetails', localStorage.getItem('pricingDetails'));
         
         if (LOCATION_NAME === 'sandiego') {
             if (planName === 'SD Trial Class') {
@@ -353,10 +347,7 @@ logo_url = '/' | append: location_name %} {% endif %}
             } else {
                 // For non-trial class plans in San Diego
                 if (pendingSignupData || pendingLoginData) {
-                    setTimeout(() => {
-                        window.location.href = `/${LOCATION_NAME}/payment_details`;
-                    }, 10000);
-                    //window.location.href = `/${LOCATION_NAME}/payment_details`;
+                    window.location.href = `/${LOCATION_NAME}/payment_details`;
                 } else {
                     showSignUpToast();  
                     setTimeout(() => {
