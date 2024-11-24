@@ -930,7 +930,7 @@ var theme = {
                       }).showToast();
 
                       confirmModal.hide();
-                      window.location.href = "/sandiego/proration";
+                      window.location.href = "/sandiego/payment_details";
                     });
                     return;
                   }

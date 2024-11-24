@@ -249,6 +249,20 @@ logo_url = '/' | append: location_name %} {% endif %}
             },
         }).showToast();
     }
+    function showSignUpToast() {
+        Toastify({
+            text: "Please sign up first before proceeding, redirecting to schedule page...",
+            duration: 2000,
+            gravity: "top",
+            position: "center",
+            style: {
+                background: "#ff6b6b",
+                borderRadius: "8px",
+                fontSize: "16px",
+                padding: "12px 20px"
+            },
+        }).showToast();
+    }
 
     function calculateProration(monthlyPrice) {
         const now = new Date();
@@ -304,7 +318,7 @@ logo_url = '/' | append: location_name %} {% endif %}
         } else {
             details = calculateProration(baseAmount);
         }
-        sessionStorage.setItem(
+        localStorage.setItem(
             "pricingDetails",
             JSON.stringify({
                 priceId,
@@ -317,19 +331,42 @@ logo_url = '/' | append: location_name %} {% endif %}
         );
         // let  formCompleted = localStorage.getItem('formCompleted');
         const formCompleted = localStorage.getItem('formCompleted');
-        if(LOCATION_NAME == 'sandiego') {
-           // formCompleted = 'true';
-            if (formCompleted === 'true') {
-                window.location.href = `/${LOCATION_NAME}/proration`;
-            } else {
+        const pendingSignupData = localStorage.getItem('pendingSignupData');
+        const pendingLoginData = localStorage.getItem('pendingLoginData');
+
+        console.log('formCompleted', formCompleted);
+        console.log('pendingSignupData', pendingSignupData);
+        console.log('pendingLoginData', pendingLoginData);
+        console.log('planName', planName);
+        console.log('priceDetails', localStorage.getItem('pricingDetails'));
+        
+        if (LOCATION_NAME === 'sandiego') {
+            if (planName === 'SD Trial Class') {
+                if (formCompleted === 'true') {
+                    window.location.href = `/${LOCATION_NAME}/payment_details`;
+                } else {
                 showFormCompletionToast();
                 setTimeout(() => {
                     window.location.href = `/${LOCATION_NAME}/schedule-trial`;
-                }, 2000);
+                    }, 2000);
+                }
+            } else {
+                // For non-trial class plans in San Diego
+                if (pendingSignupData || pendingLoginData) {
+                    setTimeout(() => {
+                        window.location.href = `/${LOCATION_NAME}/payment_details`;
+                    }, 10000);
+                    //window.location.href = `/${LOCATION_NAME}/payment_details`;
+                } else {
+                    showSignUpToast();  
+                    setTimeout(() => {
+                        window.location.href = `/${LOCATION_NAME}/schedule`;
+                    }, 2000);
+                }
             }
-        } else if (LOCATION_NAME == 'west-lafayette') {
-            window.location.href = `/${LOCATION_NAME}/proration`;
-        }   
+        } else if (LOCATION_NAME === 'west-lafayette') {
+            window.location.href = `/${LOCATION_NAME}/payment_details`;
+        } 
     }
 </script>
 

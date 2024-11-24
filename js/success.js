@@ -237,6 +237,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           'Your registration and payment have been successfully processed.');
         
         localStorage.removeItem('pendingLoginData');
+        localStorage.removeItem('pricingDetails');
       } else if (pendingSignupData) {
         // Handle signup registration
         const signupData = JSON.parse(pendingSignupData);
@@ -247,6 +248,8 @@ document.addEventListener('DOMContentLoaded', async () => {
           'Your registration and payment have been successfully processed. We will contact you shortly with your course details.');
         
         localStorage.removeItem('pendingSignupData');
+        localStorage.removeItem('pricingDetails');
+
       } else {
         throw new Error('No registration data found');
       }
