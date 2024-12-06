@@ -1,0 +1,13 @@
+name: 中文
+
+subscribe:
+  subscribeHeader: 订阅我们的邮件资讯
+  subscribeSubheader: 订阅我们的邮件资讯，随时掌握最新动态！率先了解独家优惠、重磅新闻和实用贴士，这些内容将第一时间直达您的邮箱。
+  emailError: 请提供有效的邮箱地址
+  emailSuccess: 邮箱地址有效!
+  emailTag: 邮箱 *
+  submitSuccess: 感谢您的订阅！
+  submitError: 订阅失败，请重试。
+  alreadySubscribed: 您已成功订阅。
+  submitButton: 立即订阅
+

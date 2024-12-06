@@ -1,0 +1,12 @@
+name: EN
+
+subscribe:
+  subscribeHeader: Subscribe to our newsletter
+  subscribeSubheader: Join our email list to stay updated! Be the first to know about exclusive offers, exciting news, and helpful tips delivered straight to your inbox.
+  emailError: Please provide a valid email address
+  emailSuccess: Looks good!
+  emailTag: Email *
+  submitSuccess: Thank you for subscribing!
+  submitError: Something went wrong. Please try again.
+  alreadySubscribed: You are already subscribed.
+  submitButton: Subscribe

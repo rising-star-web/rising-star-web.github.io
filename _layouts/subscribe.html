@@ -1,0 +1,108 @@
+---
+layout: default
+---
+<section class="wrapper bg-light" style="margin-bottom: 4rem;">
+  <div class="container pt-8 pt-md-12 pb-8 pb-md-8">
+    <div class="row gx-lg-8 gx-xl-0 gy-10 align-items-center">
+      <div class="col-lg-6 col-xl-5 position-relative d-none d-lg-block -intro-x">
+        <div class="shape rounded-circle bg-soft-primary rellax w-21 h-21" data-rellax-speed="1"
+          style="top: 8rem; left: 2rem"></div>
+        <figure class="ps-xxl-10"><img class="img-fluid" src="/assets/img/illustrations/3d5.png"
+            srcset="/assets/img/illustrations/illustration.svg" alt="" /></figure>
+      </div>
+      <!--/column -->
+      <div class="col-lg-6 col-xl-5 offset-xl-1 text-center intro-x">
+        <h2 class="display-2 mb-3">{{ site.data.subscribe[page.locale].subscribe.subscribeHeader }}</h2>
+        <p id="formDescription" class="lead mb-8 pe-xl-10">{{ site.data.subscribe[page.locale].subscribe.subscribeSubheader }} </p>
+        <div class="d-flex justify-content-center">
+          <div id="formSpinner" class="spinner-border text-navy align-self-center" role="status"
+            style="width: 3rem; height: 3rem; display: none;">
+          </div>
+        </div>
+        <!-- Form -->
+        <form id="subscribePageForm" class="needs-validation" novalidate>
+          <!-- Email input -->
+          <div class="form-floating">
+            <input id="subscribePageEmailInput" type="email" name="emailInput" class="form-control" required="required" data-error="Valid email is required.">
+            <label for="emailAddress">{{ site.data.subscribe[page.locale].subscribe.emailTag }}</label>
+            <div class="valid-feedback">{{site.data.subscribe[page.locale].subscribe.emailSuccess }}</div>
+            <div class="invalid-feedback">{{site.data.subscribe[page.locale].subscribe.emailError }}</div>
+            <div id="subscribePageResponseMessage"></div>
+          </div>
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-sm btn-primary rounded-pill mt-3">
+            {{site.data.subscribe[page.locale].subscribe.submitButton }}
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  // Define the function that will handle the form submission
+  async function onSubscribe(event) {
+    // Prevent the default form submission
+    event.preventDefault();
+    // Check if form is valid
+    const form = document.getElementById('subscribePageForm');
+    form.classList.add('was-validated'); // Force validation message display
+    if (!form.checkValidity()) return;
+    // Flags
+    const responseMessage = document.getElementById("subscribePageResponseMessage");
+    const email = document.getElementById("subscribePageEmailInput").value;
+    const language = "{{page.locale}}"; // 'en' or 'cn'
+    // Send the email to SMW to be added to the mailing list
+    try {
+      const prod_url = 'https://prod-sharemyworks-backend.herokuapp.com/api/EmailNotifications/subscribe';
+      const dev_url = 'http://localhost:3000/api/EmailNotifications/subscribe';
+      const response = await fetch(prod_url, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ email, language })
+      });
+      if (!response.ok) throw new Error("Failed to subscribe");
+      // Set the response message
+      const result = await response.json();
+      const alreadySubscribed = result.message === "Already Subscribed!";
+      if (alreadySubscribed) responseMessage.textContent = "{{ site.data.subscribe[page.locale].subscribe.alreadySubscribed }}";
+      else responseMessage.textContent = "{{ site.data.subscribe[page.locale].subscribe.submitSuccess }}";
+      responseMessage.style.color = "green";
+    }
+    catch (error) {
+      responseMessage.style.color = "red";
+      responseMessage.textContent = "{{ site.data.subscribe[page.locale].subscribe.submitError }}";
+    }
+    // Show the response message for 4 seconds
+    form.reset();
+    setTimeout(() => responseMessage.textContent = "", 7000);
+  }
+  // Add an event listener to the form
+  document.getElementById("subscribePageForm").addEventListener("submit", onSubscribe);
+</script>
+
+<style>
+  .intro-x {
+    opacity: 0;
+    position: relative;
+    transform: translateX(50px);
+    animation: 0.4s intro-x-animation ease-in-out 0.33333s;
+    animation-fill-mode: forwards;
+    animation-delay: 100ms;
+  }
+  .-intro-x {
+    opacity: 0;
+    position: relative;
+    transform: translateX(-50px);
+    animation: 0.4s intro-x-animation ease-in-out 0.33333s;
+    animation-fill-mode: forwards;
+    animation-delay: 100ms;
+  }
+  @keyframes intro-x-animation {
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+</style>
