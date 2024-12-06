@@ -47,13 +47,50 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    //console.log("Post data:", postData);
+    if (isSandiego) {
+      // Store registration data in localStorage
+      const registrationInfo = {
+        registerData: postData,
+        courseId: courseId,
+        token: token,
+        price: price
+      };
 
-    if (accountId) {
-      updateAccount(postData, accountId, token);
+      localStorage.setItem('pendingSignupData', JSON.stringify(registrationInfo));
+      loadingIndicator.style.display = "none";
+
+      const confirmModal = new bootstrap.Modal(document.getElementById('confirmModal'));
+      confirmModal.show();
+
+      document.getElementById('confirmRedirect').addEventListener('click', function() {
+        Toastify({
+          text: "Redirecting to pricing page...",
+          duration: 1000,
+          close: true,
+          gravity: "top",
+          position: 'right',
+          style: {
+            background: "green",
+          },
+          className: "info",
+        }).showToast();
+
+        // Hide modal and redirect
+        confirmModal.hide();
+        setTimeout(() => {
+          window.location.href = "/sandiego/pricing";
+        }, 500);
+      });
+
     } else {
-      createAccount(postData);
+      // Original flow for non-San Diego users
+      if (accountId) {
+        updateAccount(postData, accountId, token);
+      } else {
+        createAccount(postData);
+      }
     }
+
   });
 
   function updateAccount(data, accountId, token) {

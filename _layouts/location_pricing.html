@@ -101,7 +101,7 @@ logo_url = '/' | append: location_name %} {% endif %}
                                             <p>1 class/week</p>
                                             <p><strong>$200</strong> per month</p>
                                             <button class="subscribe-button"
-                                                onclick="handleSubscribe('price_1QHAF0P2pSpFqYXAts0m8dMQ', 20000, 'Group Class Membership')">
+                                                onclick="handleSubscribe('prod_R3sLpntwYrK0p1', 20000, 'Group Class Membership')">
                                                 Register
                                             </button>
                                         </div>
@@ -113,7 +113,7 @@ logo_url = '/' | append: location_name %} {% endif %}
                                             <p>1 classes/week</p>
                                             <p><strong>$330</strong> per month</p>
                                             <button class="subscribe-button"
-                                                onclick="handleSubscribe('price_1QHAFqP2pSpFqYXAchipKWL7', 33000, '1v1 Junior Membership')">
+                                                onclick="handleSubscribe('prod_R3sOapNfypkx2g', 33000, '1v1 Junior Membership')">
                                                 Register
                                             </button>
                                         </div>
@@ -123,7 +123,7 @@ logo_url = '/' | append: location_name %} {% endif %}
                                             <p>1 classes/week</p>
                                             <p><strong>$370</strong> per month</p>
                                             <button class="subscribe-button"
-                                                onclick="handleSubscribe('price_1QHAH5P2pSpFqYXAahb2IzII', 37000, '1v1 Senior Membership')">
+                                                onclick="handleSubscribe('prod_R3sQfXDggSIO4T', 37000, '1v1 Senior Membership')">
                                                 Register
                                             </button>
                                         </div>
@@ -139,7 +139,7 @@ logo_url = '/' | append: location_name %} {% endif %}
                                             <p>Get a taste of our classes!</p>
                                             <p><strong>$29</strong> one-time payment</p>
                                             <button class="subscribe-button"
-                                                onclick="handleSubscribe('price_1Q3KpSP2pSpFqYXAjyw3PNCu', 2900, 'Free Trial')">
+                                                onclick="handleSubscribe('prod_QvBBSMzCIqf4YS', 2900, 'SD Trial Class')">
                                                 Sign Up
                                             </button>
                                         </div>
@@ -208,8 +208,11 @@ logo_url = '/' | append: location_name %} {% endif %}
 
 <script src="https://js.stripe.com/v3/"></script>
 <script>
+    // DEVELOPMENT 
+    // const STRIPE_PUBLIC_KEY = "pk_test_51PykoAP2pSpFqYXALxUFZVQxxxbSJP1jyyKVUJAQzr88cc7K1X6UjdX86gOxeebzRd4CQZwvOYWU57YzBnpZAjl600Yd8zgisy"
+    //const API_URL = 'http://localhost:3000/api/';
+
     const API_URL = 'https://prod-sharemyworks-backend.herokuapp.com/api/';
-    // const API_URL = 'http://localhost:3000/api/';
     const LOCATION_NAME = "{{ location_name }}";
     const STRIPE_PUBLIC_KEY = LOCATION_NAME === "sandiego" 
         ? "pk_live_51PykoAP2pSpFqYXAXHJtAjmYzwf3kZt6K877RmO6pYp0DFCdCw08VVdXxkMySVE1HU5CiqxZC8XHjQnTZPxAflND004piDnQ7w"
@@ -246,23 +249,47 @@ logo_url = '/' | append: location_name %} {% endif %}
             },
         }).showToast();
     }
+    function showSignUpToast() {
+        Toastify({
+            text: "Please sign up first before proceeding, redirecting to schedule page...",
+            duration: 2000,
+            gravity: "top",
+            position: "center",
+            style: {
+                background: "#ff6b6b",
+                borderRadius: "8px",
+                fontSize: "16px",
+                padding: "12px 20px"
+            },
+        }).showToast();
+    }
 
     function calculateProration(monthlyPrice) {
         const now = new Date();
         const currentMonth = now.getMonth();
         const currentYear = now.getFullYear();
-
+        
         const lastDay = new Date(currentYear, currentMonth + 1, 0).getDate();
-        const daysRemaining = lastDay - now.getDate() + 1;
-        const dailyRate = monthlyPrice / lastDay;
-        const proratedAmount = (dailyRate * daysRemaining).toFixed(2);
+        
+        // Calculate weeks remaining in the month
+        const currentDate = now.getDate();
+        const weeksInMonth = Math.ceil(lastDay / 7);
+        const currentWeek = Math.ceil(currentDate / 7);
+        const weeksRemaining = weeksInMonth - currentWeek + 1;
+        
+        // Calculate weekly rate from monthly price
+        const weeklyRate = monthlyPrice / weeksInMonth;
+        const proratedAmount = (weeklyRate * weeksRemaining).toFixed(2);
+        
+        // Next billing date remains the same - first day of next month
         const nextBillingDate = new Date(currentYear, currentMonth + 1, 1);
 
         return {
             proratedAmount: parseFloat(proratedAmount),
-            daysRemaining,
+            daysRemaining: weeksRemaining,
             nextBillingDate,
             monthlyPrice,
+            weeklyRate: parseFloat(weeklyRate.toFixed(2))
         };
     }
 
@@ -291,7 +318,7 @@ logo_url = '/' | append: location_name %} {% endif %}
         } else {
             details = calculateProration(baseAmount);
         }
-        sessionStorage.setItem(
+        localStorage.setItem(
             "pricingDetails",
             JSON.stringify({
                 priceId,
@@ -302,15 +329,35 @@ logo_url = '/' | append: location_name %} {% endif %}
                 calculationType: details.type
             })
         );
+        // let  formCompleted = localStorage.getItem('formCompleted');
         const formCompleted = localStorage.getItem('formCompleted');
-        if (formCompleted === 'true') {
-            window.location.href = `/${LOCATION_NAME}/proration`;
-        } else {
-            showFormCompletionToast();
-            setTimeout(() => {
-                window.location.href = `/${LOCATION_NAME}/schedule-trial`;
-            }, 2000);
-        }    
+        const pendingSignupData = localStorage.getItem('pendingSignupData');
+        const pendingLoginData = localStorage.getItem('pendingLoginData');
+        
+        if (LOCATION_NAME === 'sandiego') {
+            if (planName === 'SD Trial Class') {
+                if (formCompleted === 'true') {
+                    window.location.href = `/${LOCATION_NAME}/payment_details`;
+                } else {
+                showFormCompletionToast();
+                setTimeout(() => {
+                    window.location.href = `/${LOCATION_NAME}/schedule-trial`;
+                    }, 2000);
+                }
+            } else {
+                // For non-trial class plans in San Diego
+                if (pendingSignupData || pendingLoginData) {
+                    window.location.href = `/${LOCATION_NAME}/payment_details`;
+                } else {
+                    showSignUpToast();  
+                    setTimeout(() => {
+                        window.location.href = `/${LOCATION_NAME}/schedule`;
+                    }, 2000);
+                }
+            }
+        } else if (LOCATION_NAME === 'west-lafayette') {
+            window.location.href = `/${LOCATION_NAME}/payment_details`;
+        } 
     }
 </script>
 

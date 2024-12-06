@@ -2,7 +2,7 @@ let isSandiego = false;
 
 document.addEventListener("DOMContentLoaded", function () {
   const apiUrl = "https://backend4.sharemyworks.com/api/Course/";
-  //  const apiUrl = "http://localhost:3000/api/Course/";
+  // const apiUrl = "http://localhost:3000/api/Course/";
   const params = new URLSearchParams(window.location.search);
   const courseId = params.get("course_id");
   const token =

@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const baseUrl = "https://backend4.sharemyworks.com/api/";
+    const baseUrl = 'https://prod-sharemyworks-backend.herokuapp.com/api/';
+    // const baseUrl = "https://backend4.sharemyworks.com/api/";
     // const baseUrl = 'http://localhost:3000/api/'
     var loginForm = document.getElementById("loginForm");
     var loadingIndicator = document.querySelector(".loading-indicator");
@@ -14,52 +15,88 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const isSandiego = organizationId == "66bf6a0dcdae5300148e3a2c" || organizationId == "6713eacd00dcfc85b65c206a";
 
-    loginForm.addEventListener("submit", function (event) {
+    loginForm.addEventListener("submit", async function (event) {
         event.preventDefault();
         loadingIndicator.style.display = "block";
 
-        var formData = new FormData(loginForm);
-        var postData = {
-            username: formData.get("username"),
-            password: formData.get("loginPassword")
-        };
-        fetch(`${baseUrl}Account/login`, {
-            method: "POST",
-            
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(postData)
-        })
-        .then((response) => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
+        try {
+            var formData = new FormData(loginForm);
+            var postData = {
+                username: formData.get("username"),
+                password: formData.get("loginPassword")
+            };
+            const loginResponse = await fetch(`${baseUrl}Account/login`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(postData)
+            });
+            if (!loginResponse.ok) {
+                throw new Error('Login failed');
             }
-            return response.json();
-        })
-        .then((data) => {
-            var acc_token = token
-            token = data.id;
-            accountId = data.userId;
-            
-            updateAccount({ preferedLanguage: chinese ? "Chinese" : "English" }, accountId, acc_token, token);
-        })
-        .catch((error) => {
-            console.error("Login failed", error);
+    
+            const loginData = await loginResponse.json();
+            var acc_token = token;
+            token = loginData.id;
+            accountId = loginData.userId;
+
+            if (isSandiego) {
+                // Store login data in localStorage
+                const loginInfo = {
+                    accountId: accountId,
+                    token: token,
+                    acc_token: acc_token,
+                    courseId: courseId,
+                    price: price,
+                    language: chinese ? "Chinese" : "English",
+                    organizationId: organizationId
+                };
+                
+                localStorage.setItem('pendingLoginData', JSON.stringify(loginInfo));
+                loadingIndicator.style.display = "none";
+                const confirmModal = new bootstrap.Modal(document.getElementById('confirmModal'));
+                confirmModal.show();
+                
+                document.getElementById('confirmRedirect').addEventListener('click', function() {
+                    Toastify({
+                        text: "Redirecting to pricing page...",
+                        duration: 1000,
+                        close: true,
+                        gravity: "top",
+                        position: 'right',
+                        style: {
+                            background: "green",
+                        },
+                        className: "info",
+                    }).showToast();
+
+                    // Hide modal and redirect
+                    confirmModal.hide();
+                    setTimeout(() => {
+                        window.location.href = "/sandiego/pricing";
+                    }, 500);
+                });
+            } else {
+                // Original flow for non-San Diego users
+                await updateAccount({ preferedLanguage: chinese ? "Chinese" : "English" }, accountId, acc_token, token);
+            }
+
+        } catch (error) {
+            console.error("Process failed", error);
             Toastify({
-                text: "Login failed. Please check your credentials and try again. Or contact management for help.",
+                text: "Login failed. Please check your credentials and try again. Username can be found in your email. Please contact management for help if you are unable to login.",
                 duration: 5000,
                 close: true,
-                gravity: "top", 
+                gravity: "top",
                 position: 'right',
                 style: {
                     background: "red",
                 },
                 className: "info",
             }).showToast();
-
             loadingIndicator.style.display = "none";
-        });
+        }
     });
 
     function updateAccount(data, accountId, access_token, token) {

@@ -22,6 +22,7 @@ layout: locationdefault
       <!--/column -->
       <div class="col-lg-6 col-xl-5 offset-xl-1 text-center">
         <h2 class="display-2 mb-3">{{ site.data.login[page.locale].login.header }}</h2>
+          Your username can be found in the email sent when your account was created<br>
         <!-- <p class="lead mb-8">{{ site.data.free-trial[page.locale].login.lead }}</p> -->
         <form id="loginForm" class="contact-form needs-validation" novalidate>
           <div class="messages"></div>
@@ -58,6 +59,28 @@ layout: locationdefault
   <!-- /.container -->
 </section>
 <!-- /section -->
+
+<!-- Modal - Note the correct nesting of div tags -->
+<div id="confirmModal" class="modal fade" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Login Successful</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="alert alert-success" role="alert">
+          Login successful!
+        </div>
+        <p class="text-warning"><strong>Important:</strong> Please note that the registration process is not complete until you complete the payment on the next page.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="confirmRedirect">I Understand, Continue to Payment</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="/js/login.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>

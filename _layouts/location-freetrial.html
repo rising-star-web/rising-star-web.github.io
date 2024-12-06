@@ -34,6 +34,15 @@ layout: locationdefault
         </div>
 
         <form id="form" enctype="text/plain" class="contact-form needs-validation" novalidate>
+          {% if location_name == 'sandiego' %}
+          <div class="form-select-wrapper mb-4">
+            <select class="form-select" aria-label="Class Type Selection" required="required" id="classType" name="classType" data-error="Class Type is required.">
+              <option value="">Select Class Type *</option>
+              <option value="private">Private 1-on-1</option>
+              <option value="group">Group Class Trial</option>
+            </select>
+          </div>
+          {% endif %}
           <div class="messages"></div>
           <div class="form-floating mb-4">
             <input id="studentName" type="text" name="studentName" class="form-control" placeholder="Jane"
@@ -108,13 +117,30 @@ layout: locationdefault
               <option id="Online" value="Online">{{ site.data.free-trial[page.locale].freetrial.campus5 }}</option>
               {% elsif location_name == 'sandiego' %}
               <option id="San-diego" value="San-diego" selected>San Diego</option>
-              <option id="Online" value="Online">{{ site.data.free-trial[page.locale].freetrial.campus5 }}</option>
+              <option id="Online-sd" value="Online-sd">Online</option>
               {% else %}
               <!-- <option id="San-diego" value="San-diego">San Diego</option> -->
               <option id="Seattle" value="Seattle">Seattle</option>
               <option id="Online" value="Online">{{ site.data.free-trial[page.locale].freetrial.campus5 }}</option>
               {% endif %}
             </select>
+          </div>
+
+          <div id="groupClassFields" style="display: none;">
+            <div class="form-select-wrapper mb-4">
+              <div class="text-sm text-muted mt-2">
+                View detailed class schedule at <a href="https://codingmind.com/sandiego/schedule/" target="_blank">here</a>
+              </div>
+              <select class="form-select" aria-label="Class Name Selection" id="className" name="className">
+                <option value="">Select Class Name</option>
+              </select>
+            </div>
+
+            <div class="form-select-wrapper mb-4">
+              <select class="form-select" aria-label="Class Schedule Selection" id="classSchedule" name="classSchedule">
+                <option value="">Select Class Day & Time</option>
+              </select>
+            </div>
           </div>
 
           <div class="form-select-wrapper mb-4">
@@ -247,6 +273,27 @@ layout: locationdefault
 <!-- /section -->
 {%- endif -%}
 
+<div id="confirmModal" class="modal fade" tabindex="-1" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Registration Process</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Your form has been saved successfully!</p>
+        <p class="text-warning"><strong>Important:</strong> Please note that your registration is not complete until you complete the payment on the next page.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="confirmRedirect">I Understand, Continue to Payment</button>
+      </div>
+    </div>
+  </div>
+</div>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+
 <!-- Form submission code is located in assets/js/theme.js line 761 -->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"
   integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
@@ -341,6 +388,73 @@ layout: locationdefault
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const locationName = '{{ location_name }}';
+    const classTypeSelect = document.getElementById('classType');
+    const groupClassFields = document.getElementById('groupClassFields');
+    const dateTimeSelections = document.getElementById('dateTimeSelections');
+    const today = new Date().toISOString().split('T')[0];
+
+    // Set min attribute for all date inputs
+    const dateInputs = document.querySelectorAll('.date-input');
+    dateInputs.forEach(input => {
+      input.min = today;
+    });
+
+    document.querySelectorAll('.hour-select').forEach(select => {
+      for (let hour = 8; hour < 22; hour++) {
+        const hourString = hour.toString().padStart(2, '0');
+        select.innerHTML += `<option value="${hourString}">${hourString}</option>`;
+      }
+    });
+
+    const hourSelects = document.querySelectorAll('.hour-select');
+    hourSelects.forEach(select => {
+      for (let hour = 8; hour < 22; hour++) {
+        const hourString = hour.toString().padStart(2, '0');
+        select.innerHTML += `<option value="${hourString}">${hourString}</option>`;
+      }
+    });
+
+      // Fetch and populate schedule data
+    fetch('/assets/schedule.json')
+    .then(response => response.json())
+    .then(data => {
+      const scheduleData = data["San Diego"];
+      const classNameSelect = document.getElementById('className');
+      const classScheduleSelect = document.getElementById('classSchedule');
+
+      // Populate class names
+      classNameSelect.innerHTML = '<option value="">Select Class Name</option>';
+      scheduleData.forEach(course => {
+        classNameSelect.innerHTML += `<option value="${course.Name}">${course.Name}</option>`;
+      });
+
+      // Handle class name change
+      classNameSelect.addEventListener('change', function() {
+        classScheduleSelect.innerHTML = '<option value="">Select Class Day & Time</option>';
+        const course = scheduleData.find(c => c.Name === this.value);
+        if (course) {
+          course.Schedule.forEach(schedule => {
+            const value = `${schedule.Day}-${schedule.Time}`;
+            classScheduleSelect.innerHTML += `<option value="${value}">${schedule.Day} ${schedule.Time}</option>`;
+          });
+        }
+      });
+    });
+    
+    // Handle class type change
+    classTypeSelect.addEventListener('change', function() {
+      const isGroup = this.value === 'group';
+      groupClassFields.style.display = isGroup ? 'block' : 'none';
+      dateTimeSelections.style.display = isGroup ? 'none' : 'none';
+
+      // Toggle required attributes
+      const dateTimeInputs = dateTimeSelections.querySelectorAll('[required]');
+      const groupInputs = [document.getElementById('className'), document.getElementById('classSchedule')];
+      
+      dateTimeInputs.forEach(input => input.required = !isGroup);
+      groupInputs.forEach(input => input.required = isGroup);
+    });
+
     if (locationName === 'sandiego') {
       const dateTimeSelections = document.getElementById('dateTimeSelections');
       const requiredInputs = dateTimeSelections.querySelectorAll('[required]');
@@ -349,22 +463,5 @@ layout: locationdefault
       });
     }
   });
-  document.addEventListener('DOMContentLoaded', function () {
-    // Get today's date in YYYY-MM-DD format
-    const today = new Date().toISOString().split('T')[0];
 
-    // Set min attribute for all date inputs
-    const dateInputs = document.querySelectorAll('.date-input');
-    dateInputs.forEach(input => {
-      input.min = today;
-    });
-  });
-
-  const hourSelects = document.querySelectorAll('.hour-select');
-  hourSelects.forEach(select => {
-    for (let hour = 8; hour < 22; hour++) {
-      const hourString = hour.toString().padStart(2, '0');
-      select.innerHTML += `<option value="${hourString}">${hourString}</option>`;
-    }
-  });
 </script>
