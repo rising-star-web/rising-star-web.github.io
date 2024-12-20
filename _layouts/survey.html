@@ -1,0 +1,292 @@
+---
+layout: default
+---
+<html>
+<head>
+    <style>
+        .survey-item {
+            margin-bottom: 3.5rem;
+            padding: 1rem 0;
+            text-align: center;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .survey-question {
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
+            line-height: 1.6;
+        }
+        .rating-container {
+            display: flex;
+            margin: 20px auto;
+            align-items: center;
+            justify-content: center;
+            max-width: 900px;
+            position: relative;
+            padding: 0 20px;
+        }
+        .rating-buttons {
+            display: flex;
+            gap: 8px;
+            flex-wrap: nowrap;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        .rating-label-left, .rating-label-right {
+            color: #666;
+            font-size: 0.9rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 80px;
+        }
+        .rating-label-left {
+            right: calc(100% - 80px);
+            text-align: right;
+            margin-right: 15px;
+        }
+        .rating-label-right {
+            left: calc(100% - 80px);
+            text-align: left;
+            margin-left: 15px;
+        }
+        .survey-item {
+            margin-bottom: 3.5rem;
+            padding: 1rem 0;
+            text-align: center;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .survey-question {
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
+            line-height: 1.6;
+        }
+        .rating-button {
+            width: 45px;
+            height: 45px;
+            border: 2px solid #ddd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+            font-size: 1.1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .rating-button:hover {
+            border-color: #05a9f4;
+            transform: translateY(-2px);
+        }
+        .rating-button.selected {
+            background-color:#05a9f4;
+            color: white;
+            border-color: #05a9f4;
+            transform: translateY(-2px);
+        }
+
+
+               /* Mobile responsive styles */
+               @media (max-width: 768px) {
+            .rating-container {
+                flex-direction: column;
+                padding: 0 10px;
+                gap: 15px;
+            }
+            .rating-buttons {
+                width: 100%;
+                justify-content: flex-start;
+                padding: 10px;
+                gap: 12px;
+            }
+            .rating-button {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            .rating-label-left, .rating-label-right {
+                position: static;
+                transform: none;
+                width: auto;
+                margin: 0;
+                text-align: center;
+            }
+            .survey-question {
+                font-size: 1.1rem;
+                padding: 0 10px;
+            }
+        }
+
+        /* Small mobile screens */
+        @media (max-width: 480px) {
+            .rating-button {
+                width: 35px;
+                height: 35px;
+                font-size: 0.9rem;
+            }
+            .rating-buttons {
+                gap: 8px;
+            }
+            .survey-question {
+                font-size: 1rem;
+            }
+        }
+
+        /* Hide scrollbar but keep functionality */
+        .rating-buttons::-webkit-scrollbar {
+            display: none;
+        }
+        .rating-buttons {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body>
+    <section class="wrapper bg-custom">
+        <div class="container pt-10 pb-19 pt-md-14 text-center">
+            <div class="row">
+                <div class="col-md-10 col-xl-8 mx-auto">
+                    <div class="post-header">
+                        <div class="post-category text-line">
+                            <a class="hover" rel="category">{{ site.data.survey[page.locale].survey.survey }}</a>
+                        </div>
+                        <h1 class="display-1 mb-4">{{ site.data.survey[page.locale].survey.title }}</h1>
+                        <p>{{ site.data.survey[page.locale].survey.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wrapper bg-light">
+        <div class="container pb-14 pb-md-16">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="blog single mt-n17">
+                        <div class="card">
+                            <div class="card-body p-6 p-lg-8">
+                                <div class="classic-view">
+                                    <article class="post">
+                                        <div class="post-content mb-5">
+                                            <!-- Survey Questions Section -->
+                                            <div id="surveyQuestions">
+                                                <div class="survey-item" data-question="interest">
+                                                    <div class="survey-question">
+                                                        {{ site.data.survey[page.locale].survey.questions.interest }}
+                                                    </div>
+                                                    <div class="rating-container">
+                                                        <div class="rating-buttons"></div>
+                                                        <div class="rating-labels">
+                                                            <span class="rating-label-left">{{ site.data.survey[page.locale].survey.least_satisfied }}</span>
+                                                            <span class="rating-label-right">{{ site.data.survey[page.locale].survey.most_satisfied }}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="survey-item" data-question="skill_improvement">
+                                                    <div class="survey-question">
+                                                        {{ site.data.survey[page.locale].survey.questions.skill_improvement }}
+                                                    </div>
+                                                    <div class="rating-container">
+                                                        <div class="rating-label-left">{{ site.data.survey[page.locale].survey.least_satisfied }}</div>
+                                                        <div class="rating-buttons"></div>
+                                                        <div class="rating-label-right">{{ site.data.survey[page.locale].survey.most_satisfied }}</div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="survey-item" data-question="difficulty_appropriateness">
+                                                    <div class="survey-question">
+                                                        {{ site.data.survey[page.locale].survey.questions.difficulty_appropriateness }}
+                                                    </div>
+                                                    <div class="rating-container">
+                                                        <div class="rating-label-left">{{ site.data.survey[page.locale].survey.least_satisfied }}</div>
+                                                        <div class="rating-buttons"></div>
+                                                        <div class="rating-label-right">{{ site.data.survey[page.locale].survey.most_satisfied }}</div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="survey-item" data-question="teaching_satisfaction">
+                                                    <div class="survey-question">
+                                                        {{ site.data.survey[page.locale].survey.questions.teaching_satisfaction }}
+                                                    </div>
+                                                    <div class="rating-container">
+                                                        <div class="rating-label-left">{{ site.data.survey[page.locale].survey.least_satisfied }}</div>
+                                                        <div class="rating-buttons"></div>
+                                                        <div class="rating-label-right">{{ site.data.survey[page.locale].survey.most_satisfied }}</div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="survey-item" data-question="registration_clarity">
+                                                    <div class="survey-question">
+                                                        {{ site.data.survey[page.locale].survey.questions.registration_clarity }}
+                                                    </div>
+                                                    <div class="rating-container">
+                                                        <div class="rating-label-left">{{ site.data.survey[page.locale].survey.least_satisfied }}</div>
+                                                        <div class="rating-buttons"></div>
+                                                        <div class="rating-label-right">{{ site.data.survey[page.locale].survey.most_satisfied }}</div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="survey-item" data-question="customer_service">
+                                                    <div class="survey-question">
+                                                        {{ site.data.survey[page.locale].survey.questions.customer_service }}
+                                                    </div>
+                                                    <div class="rating-container">
+                                                        <div class="rating-label-left">{{ site.data.survey[page.locale].survey.least_satisfied }}</div>
+                                                        <div class="rating-buttons"></div>
+                                                        <div class="rating-label-right">{{ site.data.survey[page.locale].survey.most_satisfied }}</div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="survey-item" data-question="overall_satisfaction">
+                                                    <div class="survey-question">
+                                                        {{ site.data.survey[page.locale].survey.questions.overall_satisfaction }}
+                                                    </div>
+                                                    <div class="rating-container">                                                        
+                                                        <div class="rating-label-left">{{ site.data.survey[page.locale].survey.least_satisfied }}</div>
+                                                        <div class="rating-buttons"></div>
+                                                        <div class="rating-label-right">{{ site.data.survey[page.locale].survey.most_satisfied }}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <hr />
+                                            
+                                            <!-- Existing Comment Form -->
+                                            <h3 class="mb-3">{{ site.data.survey[page.locale].survey.improvement_question }}</h3>
+                                            <form class="comment-form" id="commentForm">
+                                                <div class="form-floating mb-4">
+                                                    <textarea name="textarea" class="form-control" placeholder="Comment"
+                                                        id="comment" style="height: 150px"></textarea>
+                                                    <label>{{ site.data.survey[page.locale].survey.message }}</label>
+                                                </div>
+                                                <button type="submit" id="submit" class="btn btn-primary rounded-pill mb-0">
+                                                    {{ site.data.survey[page.locale].survey.submit }}
+                                                </button>
+                                            </form>
+
+                                            <div class="contact-info text-center mt-4">
+                                                <p>{{ site.data.survey[page.locale].survey.contact_info }}</p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/js/survey.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>

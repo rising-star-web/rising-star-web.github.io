@@ -1,0 +1,20 @@
+name: EN
+
+survey:
+  survey: Parent Feedback
+  title: "Coding Mind Parent Feedback Form"
+  description: "Dear parents, thank you for supporting our programming courses! To better optimize our course content and teaching quality, we would love to hear your valuable feedback. Thank you!"
+  questions:
+    interest: "Child's Interest and Participation in the Course"
+    skill_improvement: "Skill Improvement and Achievement After Learning"
+    difficulty_appropriateness: "Appropriateness of Course Difficulty and Pace"
+    teaching_satisfaction: "Satisfaction with Teacher's Ability and Attitude"
+    registration_clarity: "Clarity of Registration, Course Arrangement and Notifications"
+    customer_service: "Customer Service Attitude, Response Time and Problem Resolution"
+    overall_satisfaction: "Overall Satisfaction with Coding Mind Learning Experience"
+  improvement_question: "What aspects of our courses or services do you think need improvement?"
+  contact_info: "For any additional feedback, please contact us at: (949) 236-7896 or hello@codingmind.com. We will respond and improve promptly!"
+  submit: "Submit"
+  message: "Please enter your suggestions"
+  least_satisfied: "Least Satisfied"
+  most_satisfied: "Most Satisfied"

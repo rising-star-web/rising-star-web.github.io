@@ -1,0 +1,20 @@
+name: CN
+
+survey:
+  survey: 家长反馈
+  title: "Coding Mind家长反馈表"
+  description: "尊敬的家长， 感谢您对我们编程课程的支持！为了更好地优化课程内容和教学质量，我们希望能听取您的宝贵意见，谢谢！"
+  questions:
+    interest: "孩子对课程的兴趣与参与度"
+    skill_improvement: "学习后孩子在技能上的提升与获取的成绩"
+    difficulty_appropriateness: "课程难度与进度的合适程度"
+    teaching_satisfaction: "您对老师教学能力和态度的满意度"
+    registration_clarity: "报名、课程安排与通知的清晰度"
+    customer_service: "客服服务的态度、响应速度与问题解决"
+    overall_satisfaction: "对整个 Coding Mind 学习体验的满意度"
+  improvement_question: "您认为我们的课程或服务有哪些地方需要改进？"
+  contact_info: "如有更多补充，您可以随时联系我们：(949) 236-7896 或 hello@codingmind.com 我们会尽快回复并改进课程！"
+  message: "请输入您的建议"
+  submit: "提交"
+  least_satisfied: "最不满意"
+  most_satisfied: "最满意"
