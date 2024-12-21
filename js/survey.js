@@ -18,7 +18,8 @@ async function initializeSurvey() {
         return; 
     }
     
-    generateRatingButtons();
+    // generateRatingButtons();
+    generateRatingElements();
     setupRatingHandlers();
     setupFormValidation();
     
@@ -35,6 +36,60 @@ async function initializeSurvey() {
     }
 }
 
+function generateRatingElements() {
+    document.querySelectorAll('.survey-item').forEach(item => {
+        const container = item.querySelector('.rating-container');
+        
+        // Generate buttons for desktop
+        const buttonsContainer = container.querySelector('.rating-buttons');
+        for (let i = 1; i <= 10; i++) {
+            const button = document.createElement('div');
+            button.className = 'rating-button';
+            button.setAttribute('data-value', i);
+            button.textContent = i;
+            buttonsContainer.appendChild(button);
+        }
+
+        // Generate slider for mobile
+        const sliderContainer = document.createElement('div');
+        sliderContainer.className = 'rating-slider-container';
+        
+        const valueDisplay = document.createElement('div');
+        valueDisplay.className = 'rating-value-display';
+        
+        const slider = document.createElement('input');
+        slider.type = 'range';
+        slider.className = 'rating-slider';
+        slider.min = '1';
+        slider.max = '10';
+        slider.value = '5';
+        slider.step = '1';
+
+        // Create tick marks container
+        //const ticksContainer = document.createElement('div');
+        //ticksContainer.className = 'slider-ticks';
+
+        // Add tick marks with numbers
+        // for (let i = 1; i <= 10; i++) {
+        //     const tick = document.createElement('div');
+        //     tick.className = 'tick';
+        //     const tickLabel = document.createElement('span');
+        //     tickLabel.className = 'tick-label';
+        //     tickLabel.textContent = i;
+        //     tick.appendChild(tickLabel);
+        //     ticksContainer.appendChild(tick);
+        // }
+
+        sliderContainer.appendChild(valueDisplay);
+        sliderContainer.appendChild(slider);
+        //sliderContainer.appendChild(ticksContainer);
+        container.appendChild(sliderContainer);
+
+        // Update value display initially
+        valueDisplay.textContent = slider.value;
+    });
+}
+
 function generateRatingButtons() {
     document.querySelectorAll('.rating-buttons').forEach(container => {
         for (let i = 1; i <= 10; i++) {
@@ -48,18 +103,56 @@ function generateRatingButtons() {
 }
 
 function setupRatingHandlers() {
-    document.querySelectorAll('.rating-button').forEach(button => {
-        button.addEventListener('click', function() {
-            const container = this.closest('.rating-container');
-            container.querySelectorAll('.rating-button').forEach(btn => {
-                btn.classList.remove('selected');
-            });
-            this.classList.add('selected');
+    // document.querySelectorAll('.rating-button').forEach(button => {
+    //     button.addEventListener('click', function() {
+    //         const container = this.closest('.rating-container');
+    //         container.querySelectorAll('.rating-button').forEach(btn => {
+    //             btn.classList.remove('selected');
+    //         });
+    //         this.classList.add('selected');
             
-            const surveyItem = this.closest('.survey-item');
-            clearError(surveyItem);
+    //         const surveyItem = this.closest('.survey-item');
+    //         clearError(surveyItem);
+    //     });
+    // });
+
+        // Desktop button handlers
+        document.querySelectorAll('.rating-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const surveyItem = this.closest('.survey-item');
+                const value = this.getAttribute('data-value');
+                updateRating(surveyItem, value);
+            });
         });
+    
+        // Mobile slider handlers
+        document.querySelectorAll('.rating-slider').forEach(slider => {
+            slider.addEventListener('input', function() {
+                const surveyItem = this.closest('.survey-item');
+                updateRating(surveyItem, this.value);
+            });
+        });
+}
+
+function updateRating(surveyItem, value) {
+    // Update buttons
+    surveyItem.querySelectorAll('.rating-button').forEach(btn => {
+        btn.classList.remove('selected');
+        if (btn.getAttribute('data-value') === value.toString()) {
+            btn.classList.add('selected');
+        }
     });
+
+    // Update slider
+    const slider = surveyItem.querySelector('.rating-slider');
+    if (slider) {
+        slider.value = value;
+        const valueDisplay = surveyItem.querySelector('.rating-value-display');
+        if (valueDisplay) {
+            valueDisplay.textContent = value;
+        }
+    }
+    clearError(surveyItem);
 }
 
 function setupFormValidation() {
@@ -133,9 +226,13 @@ async function loadExistingSurvey(surveyId) {
         'overall_satisfaction': survey.overallSatisfactionRating
     }).forEach(([question, rating]) => {
         if (rating) {
+            // const surveyItem = document.querySelector(`[data-question="${question}"]`);
+            // const button = surveyItem.querySelector(`[data-value="${rating}"]`);
+            // if (button) button.classList.add('selected');
             const surveyItem = document.querySelector(`[data-question="${question}"]`);
-            const button = surveyItem.querySelector(`[data-value="${rating}"]`);
-            if (button) button.classList.add('selected');
+            if (surveyItem) {
+                updateRating(surveyItem, rating);
+            }
         }
     });
 
@@ -185,12 +282,14 @@ function validateAndCollectRatings() {
     document.querySelectorAll('.survey-item').forEach(item => {
         const question = item.getAttribute('data-question');
         const selected = item.querySelector('.rating-button.selected');
+        const slider = item.querySelector('.rating-slider');
         
-        if (!selected) {
+        if (!selected && (!slider || !slider.value)) {
             hasErrors = true;
             showError(item);
         } else {
-            ratings[question] = selected.getAttribute('data-value');
+            // ratings[question] = selected.getAttribute('data-value');
+            ratings[question] = selected ? selected.getAttribute('data-value') : slider.value;
         }
     });
 

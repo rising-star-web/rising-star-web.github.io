@@ -5,148 +5,299 @@ layout: default
 <head>
     <style>
         .survey-item {
-            margin-bottom: 3.5rem;
-            padding: 1rem 0;
-            text-align: center;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .survey-question {
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            font-size: 1.25rem;
-            line-height: 1.6;
-        }
-        .rating-container {
-            display: flex;
-            margin: 20px auto;
-            align-items: center;
-            justify-content: center;
-            max-width: 900px;
-            position: relative;
-            padding: 0 20px;
-        }
-        .rating-buttons {
-            display: flex;
-            gap: 8px;
-            flex-wrap: nowrap;
-            justify-content: center;
-            margin: 0 auto;
-        }
-        .rating-label-left, .rating-label-right {
-            color: #666;
-            font-size: 0.9rem;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 80px;
-        }
-        .rating-label-left {
-            right: calc(100% - 80px);
-            text-align: right;
-            margin-right: 15px;
-        }
-        .rating-label-right {
-            left: calc(100% - 80px);
-            text-align: left;
-            margin-left: 15px;
-        }
-        .survey-item {
-            margin-bottom: 3.5rem;
-            padding: 1rem 0;
-            text-align: center;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .survey-question {
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            font-size: 1.25rem;
-            line-height: 1.6;
-        }
-        .rating-button {
-            width: 45px;
-            height: 45px;
-            border: 2px solid #ddd;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-weight: 500;
-            font-size: 1.1rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .rating-button:hover {
-            border-color: #05a9f4;
-            transform: translateY(-2px);
-        }
-        .rating-button.selected {
-            background-color:#05a9f4;
-            color: white;
-            border-color: #05a9f4;
-            transform: translateY(-2px);
-        }
+    margin-bottom: 3.5rem;
+    padding: 1rem 0;
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.survey-question {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+.rating-container {
+    display: flex;
+    margin: 20px auto;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    position: relative;
+    padding: 0 20px;
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+    .rating-slider-container,
+    .slider-ticks,
+    .tick,
+    .tick-label {
+        display: none !important;  /* Hide all mobile elements in desktop */
+    }
+}
+
+.rating-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.rating-label-left, .rating-label-right {
+    color: #666;
+    font-size: 0.9rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;
+}
+
+.rating-label-left {
+    right: calc(100% - 80px);
+    text-align: right;
+    margin-right: 15px;
+}
+
+.rating-label-right {
+    left: calc(100% - 80px);
+    text-align: left;
+    margin-left: 15px;
+}
+
+.rating-button {
+    width: 45px;
+    height: 45px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.rating-button:hover {
+    border-color: #05a9f4;
+    transform: translateY(-2px);
+}
+
+.rating-button.selected {
+    background-color: #05a9f4;
+    color: white;
+    border-color: #05a9f4;
+    transform: translateY(-2px);
+}
+
+/* Hide scrollbar but keep functionality */
+.rating-buttons::-webkit-scrollbar {
+    display: none;
+}
+
+.rating-buttons {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .rating-container {
+        flex-direction: column;
+        padding: 0 15px;
+        gap: 10px;
+        position: relative;
+    }
 
 
-               /* Mobile responsive styles */
-               @media (max-width: 768px) {
-            .rating-container {
-                flex-direction: column;
-                padding: 0 10px;
-                gap: 15px;
-            }
-            .rating-buttons {
-                width: 100%;
-                justify-content: flex-start;
-                padding: 10px;
-                gap: 12px;
-            }
-            .rating-button {
-                width: 40px;
-                height: 40px;
-                font-size: 1rem;
-            }
-            .rating-label-left, .rating-label-right {
-                position: static;
-                transform: none;
-                width: auto;
-                margin: 0;
-                text-align: center;
-            }
-            .survey-question {
-                font-size: 1.1rem;
-                padding: 0 10px;
-            }
-        }
+    .rating-buttons {
+        display: none; 
+    }
 
-        /* Small mobile screens */
-        @media (max-width: 480px) {
-            .rating-button {
-                width: 35px;
-                height: 35px;
-                font-size: 0.9rem;
-            }
-            .rating-buttons {
-                gap: 8px;
-            }
-            .survey-question {
-                font-size: 1rem;
-            }
-        }
+    .rating-slider-container {
+        width: 100%;
+        padding: 0 24px;
+        margin-bottom: 30px;
+        position: relative;
+    }
 
-        /* Hide scrollbar but keep functionality */
-        .rating-buttons::-webkit-scrollbar {
-            display: none;
-        }
-        .rating-buttons {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
+    /* Update labels positioning for mobile */
+    .rating-label-left, .rating-label-right {
+        position: static;
+        transform: none;
+        width: auto;
+        margin: 0;
+        text-align: center;
+        font-size: 0.75rem; /* Smaller font size */
+        color: #666;
+    }
+
+    .rating-label-left {
+        left: 0;
+        text-align: left;
+    }
+
+    .rating-label-right {
+        right: 0;
+        text-align: right;
+    }
+
+    .rating-slider {
+        width: 100%;
+        -webkit-appearance: none;
+        height: 6px;
+        border-radius: 3px;
+        background: #ddd;
+        outline: none;
+        margin: 15px 0 25px;
+        padding: 0;
+    }
+
+        /* Tick marks container */
+    .slider-ticks {
+        display: flex;
+        justify-content: space-between;
+        width: calc(100% + 12px);
+        margin-left: 0px; 
+        padding: 0;
+        position: relative;
+    }
+
+    /* Individual tick mark and number */
+    .tick {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        /* width: auto; */
+        flex: 1;
+        min-width: 30px; /* Match slider thumb width */
+    }
+
+    .tick::before {
+        content: '';
+        width: 1px;
+        height: 8px;
+        background: #666;
+        margin-bottom: 5px;
+    }
+
+    .tick-label {
+        font-size: 12px;
+        color: #666;
+        position: absolute;
+        top: 12px; /* Adjust based on your needs */
+        width: 30px;
+        text-align: center;
+    }
+
+    .rating-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: #05a9f4;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .rating-slider::-moz-range-thumb {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: #05a9f4;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        border: none;
+    }
+
+    .rating-value-display {
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #05a9f4;
+        margin: 10px 0;
+    }
+
+    .rating-label-left, .rating-label-right {
+        position: static;
+        transform: none;
+        width: auto;
+        margin: 0;
+        text-align: center;
+        font-size: 0.85rem;
+        color: #666;
+    }
+
+    .rating-labels {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: absolute;
+        bottom: -25px; /* Position below the tick marks */
+        left: 0;
+    }
+
+        /* Adjust first and last tick positioning */
+    .tick:first-child, .tick:last-child {
+        position: relative;
+    }
+
+    .tick:first-child .tick-label, .tick:last-child .tick-label {
+        margin-bottom: 25px; /* Make space for satisfaction labels */
+    }
+
+    .survey-question {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+    .survey-question {
+        font-size: 1rem;
+    }
+
+    .rating-slider-container {
+        padding: 0 5px;
+    }
+
+    .rating-value-display {
+        font-size: 1.1rem;
+    }
+
+    .rating-label-left, .rating-label-right {
+        font-size: 0.7rem;
+    }
+
+    .rating-slider::-webkit-slider-thumb {
+        width: 20px;
+        height: 20px;
+    }
+
+    .tick-label {
+        font-size: 11px;
+    }
+
+    .slider-ticks {
+        padding: 0 20px;
+    }
+
+    .rating-slider::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+    }
+}
     </style>
+
 </head>
 <body>
     <section class="wrapper bg-custom">
@@ -182,9 +333,9 @@ layout: default
                                                         {{ site.data.survey[page.locale].survey.questions.interest }}
                                                     </div>
                                                     <div class="rating-container">
-                                                        <div class="rating-buttons"></div>
                                                         <div class="rating-labels">
                                                             <span class="rating-label-left">{{ site.data.survey[page.locale].survey.least_satisfied }}</span>
+                                                            <div class="rating-buttons"></div>
                                                             <span class="rating-label-right">{{ site.data.survey[page.locale].survey.most_satisfied }}</span>
                                                         </div>
                                                     </div>
@@ -195,9 +346,11 @@ layout: default
                                                         {{ site.data.survey[page.locale].survey.questions.skill_improvement }}
                                                     </div>
                                                     <div class="rating-container">
-                                                        <div class="rating-label-left">{{ site.data.survey[page.locale].survey.least_satisfied }}</div>
-                                                        <div class="rating-buttons"></div>
-                                                        <div class="rating-label-right">{{ site.data.survey[page.locale].survey.most_satisfied }}</div>
+                                                        <div class="rating-labels">
+                                                            <span class="rating-label-left">{{ site.data.survey[page.locale].survey.least_satisfied }}</span>
+                                                            <div class="rating-buttons"></div>
+                                                            <span class="rating-label-right">{{ site.data.survey[page.locale].survey.most_satisfied }}</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 
@@ -206,9 +359,11 @@ layout: default
                                                         {{ site.data.survey[page.locale].survey.questions.difficulty_appropriateness }}
                                                     </div>
                                                     <div class="rating-container">
-                                                        <div class="rating-label-left">{{ site.data.survey[page.locale].survey.least_satisfied }}</div>
-                                                        <div class="rating-buttons"></div>
-                                                        <div class="rating-label-right">{{ site.data.survey[page.locale].survey.most_satisfied }}</div>
+                                                        <div class="rating-labels">
+                                                            <span class="rating-label-left">{{ site.data.survey[page.locale].survey.least_satisfied }}</span>
+                                                            <div class="rating-buttons"></div>
+                                                            <span class="rating-label-right">{{ site.data.survey[page.locale].survey.most_satisfied }}</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 
@@ -217,9 +372,11 @@ layout: default
                                                         {{ site.data.survey[page.locale].survey.questions.teaching_satisfaction }}
                                                     </div>
                                                     <div class="rating-container">
-                                                        <div class="rating-label-left">{{ site.data.survey[page.locale].survey.least_satisfied }}</div>
-                                                        <div class="rating-buttons"></div>
-                                                        <div class="rating-label-right">{{ site.data.survey[page.locale].survey.most_satisfied }}</div>
+                                                        <div class="rating-labels">
+                                                            <span class="rating-label-left">{{ site.data.survey[page.locale].survey.least_satisfied }}</span>
+                                                            <div class="rating-buttons"></div>
+                                                            <span class="rating-label-right">{{ site.data.survey[page.locale].survey.most_satisfied }}</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 
@@ -228,9 +385,11 @@ layout: default
                                                         {{ site.data.survey[page.locale].survey.questions.registration_clarity }}
                                                     </div>
                                                     <div class="rating-container">
-                                                        <div class="rating-label-left">{{ site.data.survey[page.locale].survey.least_satisfied }}</div>
-                                                        <div class="rating-buttons"></div>
-                                                        <div class="rating-label-right">{{ site.data.survey[page.locale].survey.most_satisfied }}</div>
+                                                        <div class="rating-labels">
+                                                            <span class="rating-label-left">{{ site.data.survey[page.locale].survey.least_satisfied }}</span>
+                                                            <div class="rating-buttons"></div>
+                                                            <span class="rating-label-right">{{ site.data.survey[page.locale].survey.most_satisfied }}</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 
@@ -239,9 +398,11 @@ layout: default
                                                         {{ site.data.survey[page.locale].survey.questions.customer_service }}
                                                     </div>
                                                     <div class="rating-container">
-                                                        <div class="rating-label-left">{{ site.data.survey[page.locale].survey.least_satisfied }}</div>
-                                                        <div class="rating-buttons"></div>
-                                                        <div class="rating-label-right">{{ site.data.survey[page.locale].survey.most_satisfied }}</div>
+                                                        <div class="rating-labels">
+                                                            <span class="rating-label-left">{{ site.data.survey[page.locale].survey.least_satisfied }}</span>
+                                                            <div class="rating-buttons"></div>
+                                                            <span class="rating-label-right">{{ site.data.survey[page.locale].survey.most_satisfied }}</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 
@@ -250,9 +411,11 @@ layout: default
                                                         {{ site.data.survey[page.locale].survey.questions.overall_satisfaction }}
                                                     </div>
                                                     <div class="rating-container">                                                        
-                                                        <div class="rating-label-left">{{ site.data.survey[page.locale].survey.least_satisfied }}</div>
-                                                        <div class="rating-buttons"></div>
-                                                        <div class="rating-label-right">{{ site.data.survey[page.locale].survey.most_satisfied }}</div>
+                                                        <div class="rating-labels">
+                                                            <span class="rating-label-left">{{ site.data.survey[page.locale].survey.least_satisfied }}</span>
+                                                            <div class="rating-buttons"></div>
+                                                            <span class="rating-label-right">{{ site.data.survey[page.locale].survey.most_satisfied }}</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
