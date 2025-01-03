@@ -1,0 +1,21 @@
+name: CN
+
+smw_instruction:
+  title: "Coding Minds 学生上课指南"
+  subtitle: "为了更好的保证同学们的学习质量和效率，Coding Minds独立开发教务管理系统来帮助同学们登陆自己的网络课堂教室。\n每次开课前五分钟同学们按照以下步骤进入教室"
+  sections:
+    access:
+      title: "1. 进入系统"
+      step1: "打开电脑浏览器，在浏览器的网址栏输入 www.sharemyworks.com 进入sharemyworks教学管理系统界面"
+      step2: "输入用户名及密码信息登陆"
+    interface:
+      title: "2. 学生界面"
+      description: "同学登陆之后来到学生主页。学生界面用来帮助同学显示剩余的所有课时。"
+      regular: "Regular表格中有同学余下的所有常规课时"
+      makeup: "Make Up表格中有同学余下的所有补课"
+    join:
+      title: "3. 登录课程"
+      step1: "同学选中当天要上的课程（以2021年4月11日的Thunkable课程为例）"
+      step2: "点击 START CLASS 按钮开始上课"
+      note: "注意START CLASS按钮会在课程开始30分钟前开启，其余时间点击无效"
+  footer: "以上就是ShareMyWorks登陆上课的使用方式。如遇到任何技术问题，请随时和我们的客服老师联系。"

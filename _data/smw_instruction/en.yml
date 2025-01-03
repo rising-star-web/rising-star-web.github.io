@@ -1,0 +1,21 @@
+name: EN
+
+smw_instruction:
+  title: "Coding Minds Student Class Guide"
+  subtitle: "To ensure better learning quality and efficiency, Coding Minds has developed an independent academic management system to help students log into their online classroom. \nFive minutes before each class, students can follow the steps below to enter the classroom."
+  sections:
+    access:
+      title: "1. Access the System"
+      step1: "Open your computer browser and enter www.sharemyworks.com in the address bar to access the ShareMyWorks teaching management system"
+      step2: "Enter your username and password to log in"
+    interface:
+      title: "2. Student Interface"
+      description: "After logging in, you'll arrive at the student homepage. The student interface helps display all your remaining class hours."
+      regular: "The Regular table shows all remaining regular class hours"
+      makeup: "The Make Up table shows all remaining makeup classes"
+    join:
+      title: "3. Join Class"
+      step1: "Select the class scheduled for the day (using the Thunkable class on April 11, 2021 as an example)"
+      step2: "Click the START CLASS button to begin the class"
+      note: "Note: The START CLASS button will only activate 30 minutes before class starts and is inactive at other times"
+  footer: "Above is the guide for logging into ShareMyWorks classes. If you encounter any technical issues, please contact our customer service staff at any time."

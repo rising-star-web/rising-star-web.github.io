@@ -1,0 +1,132 @@
+---
+layout: default
+---
+<head>
+    <style>
+        .wrapper {
+            width: 100%;
+            background-color: var(--light-bg, #f7f7f7);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 15px;
+        }
+        
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+            margin-top: -100px;
+        }
+        
+        .card-body {
+            padding: 2rem;
+        }
+        
+        .post-header {
+            text-align: center;
+            padding: 3rem 0;
+        }
+        
+        .display-1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .article__body img,
+        .instruction-section img {
+            width: 100%;
+            max-width: 600px; /* Set a maximum width for images */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            margin: 1.5rem auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .article__body img,
+            .instruction-section img {
+                height: 250px;
+            }
+        }
+        
+        .instruction-section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .instruction-section h2 {
+            color: #333;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .card {
+                margin-top: -50px;
+            }
+            
+            .card-body {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="wrapper bg-custom">
+        <div class="container pt-10 pb-19 pt-md-14 text-center">
+            <div class="row">
+                <div class="col-md-10 col-xl-8 mx-auto">
+                    <div class="post-header">
+                        <h1 class="display-1">{{ site.data.smw_instruction[page.locale].smw_instruction.title }}</h1>
+                        <p>{{ site.data.smw_instruction[page.locale].smw_instruction.subtitle }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wrapper bg-light">
+        <div class="container">
+            <div>
+                <div class="col-lg-10 mx-auto">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="instruction-section">
+                                <h2>{{ site.data.smw_instruction[page.locale].smw_instruction.sections.access.title }}</h2>
+                                <p>1. {{ site.data.smw_instruction[page.locale].smw_instruction.sections.access.step1 }}</p>
+                                <p>2. {{ site.data.smw_instruction[page.locale].smw_instruction.sections.access.step2 }}</p>
+                                <img alt="Login Screen" src="/assets/img/smw2/smw1.png">
+                            </div>
+
+                            <div class="instruction-section">
+                                <h2>{{ site.data.smw_instruction[page.locale].smw_instruction.sections.interface.title }}</h2>
+                                <p>{{ site.data.smw_instruction[page.locale].smw_instruction.sections.interface.description }}</p>
+                                <img alt="Student Dashboard" src="/assets/img/smw2/smw2.png">
+                                <p>{{ site.data.smw_instruction[page.locale].smw_instruction.sections.interface.regular }}</p>
+                                <img alt="Regular Classes" src="/assets/img/smw2/smw3.png">
+                                <p>{{ site.data.smw_instruction[page.locale].smw_instruction.sections.interface.makeup }}</p>
+                                <img alt="Makeup Classes" src="/assets/img/smw2/smw4.png">
+                            </div>
+
+                            <div class="instruction-section">
+                                <h2>{{ site.data.smw_instruction[page.locale].smw_instruction.sections.join.title }}</h2>
+                                <p>{{ site.data.smw_instruction[page.locale].smw_instruction.sections.join.step1 }}</p>
+                                <img alt="Course Selection" src="/assets/img/smw2/smw5.png">
+                                <p>{{ site.data.smw_instruction[page.locale].smw_instruction.sections.join.step2 }}</p>
+                                <p class="text-danger"><strong>{{ site.data.smw_instruction[page.locale].smw_instruction.sections.join.note }}</strong></p>
+                                <img alt="Start Class" src="/assets/img/smw2/smw6.png">
+                            </div>
+
+                            <p class="text-center mt-4">{{ site.data.smw_instruction[page.locale].smw_instruction.footer }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
