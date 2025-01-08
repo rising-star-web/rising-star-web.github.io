@@ -2,6 +2,37 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
+    const birthdayInput = document.getElementById("birthday");
+    function validateAge(birthDate) {
+        const today = new Date();
+        const minDate = new Date();
+        minDate.setFullYear(today.getFullYear() - 5); // Must be at least 5 years old
+        return birthDate <= minDate;
+    }
+    birthdayInput.addEventListener("change", function() {
+        const selectedDate = new Date(this.value);
+        if (!validateAge(selectedDate)) {
+            Toastify({
+                text: "Student must be at least 5 years old",
+                duration: 5000,
+                close: true,
+                gravity: "top",
+                position: 'right',
+                style: {
+                    background: "red",
+                },
+                className: "info",
+            }).showToast();
+            this.value = ''; // Clear the invalid date
+        }
+    });
+
+    const today = new Date();
+    const minDate = new Date();
+    minDate.setFullYear(today.getFullYear() - 100); // Reasonable minimum age
+    birthdayInput.max = today.toISOString().split('T')[0];
+    birthdayInput.min = minDate.toISOString().split('T')[0];
+
     var chinese = window.location.href.includes("cn");
     const daysEnglish = ['Every Monday', 'Every Tuesday', 'Every Wednesday', 'Every Thursday', 'Every Friday', 'Every Saturday', 'Every Sunday'];
     const daysChinese = ['每周一', '每周二', '每周三', '每周四', '每周五', '每周六', '每周日'];
@@ -10,8 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
     days.forEach(day => {
         const dayDiv = document.createElement('div');
         dayDiv.className = 'form-check';
-        
-        
         const dayLabel = document.createElement('label');
         dayLabel.textContent = day;
         dayDiv.appendChild(dayLabel);
