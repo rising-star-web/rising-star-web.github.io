@@ -4,8 +4,25 @@ const chinese = window.location.href.includes("cn");
 let currentSurveyId = null;
 
 document.addEventListener('DOMContentLoaded', function() {
-    initializeSurvey();
+    const url = new URL(window.location.href);
+    const success = url.searchParams.get("success");
+
+    if (success) {
+        showThankYouMessage();
+    } else {
+        initializeSurvey();
+    }
 });
+
+function showThankYouMessage() {
+    // Hide survey content
+    document.querySelector('.classic-view').innerHTML = `
+        <div class="text-center py-8">
+            <h2 class="display-4 mb-4">${chinese ? '感谢您的反馈！' : 'Thank you for your response!'}</h2>
+            <p class="lead mb-0">${chinese ? '您的反馈对我们非常重要。' : 'Your feedback is valuable to us.'}</p>
+        </div>
+    `;
+}
 
 async function initializeSurvey() {
     const url = new URL(window.location.href);
@@ -194,6 +211,11 @@ function setupFormValidation() {
                 await submitSurvey(surveyData);
                 showToast(chinese ? '问卷提交成功！' : 'Survey submitted successfully!', 'success');
             }
+
+            const url = new URL(window.location.href);
+            url.searchParams.set('success', 'true');
+            window.location.href = url.toString();
+
         } catch (error) {
             console.error('Survey submission error:', error);
             showToast(chinese ? '问卷提交失败！' : 'Failed to submit survey!', 'error');
