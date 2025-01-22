@@ -3,12 +3,12 @@ layout: career_detail
 
 [//]: # (Career Card)
 shiftLength: ""
-jobTitle: "Data Specialist"
+jobTitle: "Data Scientist"
 jobLocation: "Irvine, CA"
 jobSite: "On-Site"
 
 [//]: # (Career Details)
-jobDescription: "We are seeking a dedicated Data Specialist to manage and maintain backend databases, ensuring seamless documentation and data analysis processes. The role involves utilizing Python and SQL to debug and process data, conducting meetings with stakeholders to define project requirements, and creating tools like spreadsheets and databases to support project goals. Additionally, the candidate will analyze student performance data, develop insights to improve program effectiveness, and create visualizations to communicate findings. Collaboration with colleagues to implement data-driven strategies and continuous program evaluation are key responsibilities. Proficiency in Python, R, and statistical modeling is highly preferred."
+jobDescription: "We are seeking a dedicated Data Scientist to manage and maintain backend databases, ensuring seamless documentation and data analysis processes. The role involves utilizing Python and SQL to debug and process data, conducting meetings with stakeholders to define project requirements, and creating tools like spreadsheets and databases to support project goals. Additionally, the candidate will analyze student performance data, develop insights to improve program effectiveness, and create visualizations to communicate findings. Collaboration with colleagues to implement data-driven strategies and continuous program evaluation are key responsibilities. Proficiency in Python, R, and statistical modeling is highly preferred."
 responsibilities:
 - text: "Maintain the company's backend database and be responsible for preparing and maintaining project documentation, including spreadsheets, analysis tools,databases, and forms."
 - text: "Execute debug reporting for data processing problems using Python and SQL."
