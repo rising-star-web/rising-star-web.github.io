@@ -3,6 +3,7 @@ layout: locationpricing
 title: Summer Camp
 locale: en
 order: 5
+exclude: true
 ---
 
 <div class="block container px-4" >

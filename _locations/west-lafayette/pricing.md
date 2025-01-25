@@ -1,8 +1,9 @@
 ---
 layout: locationpricing
-title: Pricing
+title: Enroll Now
 locale: en
 order: 4
+exclude: true
 ---
 
 <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
