@@ -1,0 +1,746 @@
+---
+layout: locationdefault
+---
+<section class="wrapper bg-soft-primary">
+  <div class="container pt-10 pt-md-14 text-center">
+    <div class="row">
+      <div class="col-md-10 col-lg-8 col-xl-8 col-xxl-6 mx-auto" data-cues="slideInDown" data-group="page-title">
+        <h1 class="display-1 mb-4">
+          2025 Summercamp Schedule
+        </h1>
+        <p class="lead fs-lg px-xl-12 px-xxl-6 mb-7">
+          Our programming course schedule experience offers courses for every interest in a fun, learning environment.
+        </p>
+      </div>
+
+
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->
+
+<!-- <section class="wrapper bg-light">
+  <div class="container pt-8 pb-2 text-center">
+    <h2 class="display-4 mb-3">Back to School Promotion!</h2>
+    <p class="lead mb-6">Special offers for our programming courses</p>
+    <div class="row gx-lg-8 gx-xl-12 gy-6 process-wrapper">
+      <div class="col-md-4">
+        <div class="card shadow-lg">
+          <div class="card-body">
+            <h4 class="mb-1">Group Class</h4>
+            <p class="mb-0">All Levels & 1 HR</p>
+            <h3 class="price mt-2 mb-3">$180<span class="fs-18">/month(4)</span></h3>
+            <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
+              <li><span><i class="uil uil-check"></i></span><strong>10 Classes:</strong> <s>$450</s> $425 <span
+                  class="badge bg-pale-primary text-primary rounded">5% OFF</span></li>
+              <li><span><i class="uil uil-check"></i></span><strong>20 Classes:</strong> <s>$900</s> $810 <span
+                  class="badge bg-pale-primary text-primary rounded">10% OFF</span></li>
+              <li><span><i class="uil uil-check"></i></span><strong>30 Classes:</strong> <s>$1350</s> $1150 <span
+                  class="badge bg-pale-primary text-primary rounded">15% OFF</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-lg">
+          <div class="card-body">
+            <h4 class="mb-1">Private Class</h4>
+            <p class="mb-0">JR-L2 & 1 HR</p>
+            <h3 class="price mt-2 mb-3">$300<span class="fs-18">/month(4)</span></h3>
+            <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
+              <li><span><i class="uil uil-check"></i></span><strong>10 Classes:</strong> <s>$750</s> $715 <span
+                  class="badge bg-pale-primary text-primary rounded">5% OFF</span></li>
+              <li><span><i class="uil uil-check"></i></span><strong>20 Classes:</strong> <s>$1500</s> $1350 <span
+                  class="badge bg-pale-primary text-primary rounded">10% OFF</span></li>
+              <li><span><i class="uil uil-check"></i></span><strong>30 Classes:</strong> <s>$2250</s> $1910 <span
+                  class="badge bg-pale-primary text-primary rounded">15% OFF</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-lg">
+          <div class="card-body">
+            <h4 class="mb-1">Private Class</h4>
+            <p class="mb-0">L3+ & 1 HR</p>
+            <h3 class="price mt-2 mb-3">$340<span class="fs-18">/month(4)</span></h3>
+            <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
+              <li><span><i class="uil uil-check"></i></span><strong>10 Classes:</strong> <s>$850</s> $799 <span
+                  class="badge bg-pale-primary text-primary rounded">5% OFF</span></li>
+              <li><span><i class="uil uil-check"></i></span><strong>20 Classes:</strong> <s>$1700</s> $1530 <span
+                  class="badge bg-pale-primary text-primary rounded">10% OFF</span></li>
+              <li><span><i class="uil uil-check"></i></span><strong>30 Classes:</strong> <s>$2550</s> $2150 <span
+                  class="badge bg-pale-primary text-primary rounded">15% OFF</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<section class="wrapper bg-light">
+  <div class="schedule-container pt-2 pb-19 pt-md-14 pb-md-20 text-center">
+    <!-- <div class="mb-4">
+      <a href="../pricing" class="btn btn-primary btn-join-us">Join Today</a>
+    </div> -->
+    <div class="mx-2">
+      <label for="locationFilter" class="h3 text-primary mb-2" style="display: none;">Location:</label>
+      <select id="locationFilter" class="form-select" style="display: none;">
+      </select>
+    </div>
+    <div class="mx-2">
+      <label for="gradeFilter" class="h3 text-primary mb-2">Select Grade:</label>
+      <div id="gradeFilter" class="d-flex flex-wrap justify-content-center">
+        <!-- Options will be added dynamically -->
+        </select>
+      </div>
+    </div>
+    <br>
+    <div class="d-flex justify-content-center mb-4 w-100">
+      <div id="camp-registration-grid" class="schedule-grid">
+        <!-- Spinner and Content -->
+        <div class="d-flex justify-content-center">
+          <div id="formSpinner" class="spinner-border text-navy align-self-center" role="status"
+            style="width: 3rem; height: 3rem; display: none"></div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- /section -->
+
+<!-- The Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content p-0">
+      <div class="modal-header d-flex justify-content-center p-4">
+        <h5 class="modal-title text-center fs-28" id="myModalLabel">
+          {{ site.data.summercamp[page.locale].summer.modal }}
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0">
+        <iframe id="modalIframe" src="" frameborder="0" width="100%" height="500"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"
+  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"
+  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<script>
+  var preference = window.location.href.indexOf("cn") == -1 ? "en" : "cn";
+  var fileToFetch = "/assets/summercamp_seattle.json";
+
+  $(document).ready(function () {
+
+    setupModalListeners();
+    fetchAndPopulateFilters();
+
+    $(document).on('click', '.btn-join-today', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var $button = $(this);
+        var registrationUrl = $button.data('registration');
+        if (registrationUrl) {
+            window.open(registrationUrl, '_blank');
+        } else {
+            console.error('Registration URL not found');
+            // Fallback: try to get the URL from the parent card
+            var cardRegistrationUrl = $button.closest('.course-card').data('registration');
+            console.log('Fallback - Card Registration URL:', cardRegistrationUrl);
+            if (cardRegistrationUrl) {
+                console.log('Opening fallback URL:', cardRegistrationUrl);
+                window.open(cardRegistrationUrl, '_blank');
+            }
+        }
+    });
+    
+  });
+
+  function fetchAndPopulateFilters() {
+    $("#formSpinner").css("display", "block");
+    $.getJSON(fileToFetch)
+      .then(function (scheduleData) {
+        $("#formSpinner").css("display", "none");
+        populateLocationFilter(scheduleData);
+        populateGradeFilter(scheduleData);
+        fetchAndApplyFilters();
+      })
+      .catch(function (error) {
+        $("#formSpinner").css("display", "none");
+        alert("Error: " + error);
+        console.error("Error fetching JSON data:", error);
+      });
+  }
+
+  function populateLocationFilter(scheduleData) {
+    var locationSelect = document.getElementById("locationFilter");
+    Object.keys(scheduleData).forEach(function (location) {
+      var option = document.createElement("option");
+      option.value = location;
+      option.text = location;
+      locationSelect.appendChild(option);
+    });
+  }
+
+  function populateGradeFilter(scheduleData) {
+    var grades = new Set();
+    Object.values(scheduleData).flat().forEach(function (course) {
+      grades.add(course.Grade);
+    });
+
+    var $gradeFilter = $('#gradeFilter');
+    grades.forEach(function(grade) {
+      var $button = $('<button>', {
+        class: 'grade-btn',
+        'data-grade': grade,
+        text: grade
+      });
+      $gradeFilter.append($button);
+    });
+
+    // Add click event listener to grade buttons
+    $('.grade-btn').click(function() {
+      $(this).toggleClass('active');
+      fetchAndApplyFilters();
+    });
+  }
+
+  function getSelectedGrades() {
+    return $('.grade-btn.active').map(function() {
+      return $(this).data('grade');
+    }).get();
+  }
+
+  function fetchAndApplyFilters() {
+    $("#formSpinner").css("display", "block");
+    $.getJSON(fileToFetch)
+      .then(function (scheduleData) {
+        $("#formSpinner").css("display", "none");
+        var selectedLocation = $("#locationFilter").val();
+        var selectedGrades = getSelectedGrades();
+        populateFilteredGrid(scheduleData, selectedLocation, selectedGrades);
+      })
+      .catch(function (error) {
+        $("#formSpinner").css("display", "none");
+        alert("Error: " + error);
+        console.error("Error fetching JSON data:", error);
+      });
+  }
+
+  $("#locationFilter").change(fetchAndApplyFilters);
+
+
+  function populateFilteredGrid(scheduleData, selectedLocation, selectedGrades) {
+    var $grid = $("#camp-registration-grid");
+    $grid.empty();
+
+    var dateRanges = ['6/16 - 6/20',	'6/23 - 6/27',	'6/30 - 7/4',	'7/7 - 7/11',	'7/14 - 7/18', '7/21 - 7/25',	'7/28 - 8/1']
+
+    // Create the grid structure with date ranges
+    dateRanges.forEach(dateRange => {
+        var $dateColumn = $(`
+            <div class="day-column">
+                <h3 class="day-title">${dateRange}</h3>
+                <div class="course-container"></div>
+            </div>
+        `);
+        $grid.append($dateColumn);
+    });
+
+    // Populate the grid with courses
+    Object.entries(scheduleData).forEach(([location, courses]) => {
+        courses.forEach((course) => {
+            if (
+                (selectedLocation === "all" || location === selectedLocation) &&
+                (selectedGrades.length === 0 || selectedGrades.includes(course.Grade))
+            ) {
+                course.Schedule.forEach(schedule => {
+                    // Clean up date format to match exactly (handle cases like "6/16-6/20" vs "6/16 - 6/20")
+                    let formattedDate = schedule.Date.replace(/\s*-\s*/, ' - ');
+                    var dateIndex = dateRanges.indexOf(formattedDate);
+                    
+                    if (dateIndex !== -1) {
+                        var $courseCard = createCourseCard(course, schedule);
+                        $grid.find('.day-column').eq(dateIndex).find('.course-container').append($courseCard);
+                    }
+                });
+            }
+        });
+    });
+
+    // Sort courses within each date column by time
+    $('.day-column').each(function () {
+        var $column = $(this);
+        var $courses = $column.find('.course-card');
+        $courses.sort(function (a, b) {
+            // Convert time strings to comparable values for sorting
+            const getTimeValue = (timeStr) => {
+                if (!timeStr || timeStr === 'Time: TBD') return Number.MAX_VALUE;
+                const timeMatch = timeStr.match(/(\d+):(\d+)\s*(AM|PM)/i);
+                if (!timeMatch) return Number.MAX_VALUE;
+                
+                let [_, hours, minutes, period] = timeMatch;
+                hours = parseInt(hours);
+                if (period.toUpperCase() === 'PM' && hours !== 12) hours += 12;
+                if (period.toUpperCase() === 'AM' && hours === 12) hours = 0;
+                
+                return hours * 60 + parseInt(minutes);
+            };
+
+            const timeA = getTimeValue($(a).find('.course-info').first().text());
+            const timeB = getTimeValue($(b).find('.course-info').first().text());
+            return timeA - timeB;
+        });
+        $column.find('.course-container').empty().append($courses);
+    });
+  }
+//   function createCourseCard(course, schedule) {
+//     var startTime = schedule.Time.split(' - ')[0];
+//     var scheduleIndex = course.Schedule.findIndex(s => 
+//         s.Day === schedule.Day && s.Time === schedule.Time
+//     );
+
+//     // Create the card container
+//     var $card = $('<div>', { 
+//         class: 'course-card', 
+//         'data-start-time': startTime,
+//         'data-registration': course.Registration[scheduleIndex]
+//     });
+
+//     // Build the inner content
+//     var $title = $('<h4>', { class: 'course-title', text: course.Name });
+//     var $time = $('<p>', { class: 'course-info', text: 'Time: ' + schedule.Time });
+//     var $grade = $('<p>', { class: 'course-info', text: 'Grade: ' + course.Grade });
+
+//     // Create the "Join Today" button
+//     var $joinTodayButton = $('<button>', {
+//         class: 'btn-learn-more btn-join-today',
+//         text: 'Join Today',
+//         'data-registration': course.Registration[scheduleIndex]
+//     });
+
+//     // Add click event directly to the "Join Today" button
+//     $joinTodayButton.on('click', function(e) {
+//         e.preventDefault();
+//         e.stopPropagation();
+//         var registrationUrl = $(this).data('registration');
+//         if (registrationUrl) {
+//             window.open(registrationUrl, '_blank');
+//         } else {
+//             console.error('Registration URL not found');
+//         }
+//     });
+
+//     // Create the "Learn More" button
+//     var $learnMoreButton = $('<button>', {
+//         class: 'btn-learn-more',
+//         text: 'Learn More',
+//         'data-course-info': course.CourseInfo,
+//         'data-bs-toggle': 'modal',
+//         'data-bs-target': '#myModal'
+//     });
+
+//     // Event listener for the "Learn More" button
+//     $learnMoreButton.on('click', function(e) {
+//         e.preventDefault();
+//         e.stopPropagation();
+//         $("#myModal").find("#modalIframe").attr("src", course.CourseInfo);
+//         $("#myModal").modal("show");
+//     });
+
+//     // Append all elements to the card
+//     $card.append($title, $time, $grade, $joinTodayButton, $learnMoreButton);
+
+//     return $card;
+// }
+
+function createCourseCard(course, schedule) {
+    var scheduleIndex = course.Schedule.findIndex(s => 
+        s.Date === schedule.Date && s.Time === schedule.Time
+    );
+
+    // Create the card container
+    var $card = $('<div>', { 
+        class: 'course-card', 
+        'data-registration': course.Registration[scheduleIndex]
+    });
+
+    // Create content container
+    var $contentContainer = $('<div>', { class: 'content-container' });
+    
+    // Build the inner content
+    var $title = $('<h4>', { class: 'course-title', text: course.Name });
+    var $time = $('<p>', { class: 'course-info', text: schedule.Time || 'Time: TBD' });
+    var $grade = $('<p>', { class: 'course-info', text: 'Grade: ' + course.Grade });
+    
+    if (course.Price) {
+        var $price = $('<p>', { class: 'course-info', text: 'Price: ' + course.Price });
+        $contentContainer.append($price);
+    }
+
+    // Create button container
+    var $buttonContainer = $('<div>', { class: 'button-container' });
+
+    // Create the "Join Today" button
+    var $joinTodayButton = $('<button>', {
+        class: 'btn-join-today',
+        text: 'Join Today',
+        'data-registration': course.Registration[scheduleIndex]
+    });
+
+    // Create the "Learn More" button
+    var $learnMoreButton = $('<button>', {
+        class: 'btn-learn-more',
+        text: 'Learn More',
+        'data-course-info': course.CourseInfo,
+        'data-bs-toggle': 'modal',
+        'data-bs-target': '#myModal'
+    });
+
+    // Add buttons to button container
+    $buttonContainer.append($joinTodayButton, $learnMoreButton);
+
+    // Append content to card
+    $contentContainer.append($title, $time, $grade);
+    $card.append($contentContainer, $buttonContainer);
+
+    // Add click handlers
+    $joinTodayButton.on('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var registrationUrl = $(this).data('registration');
+        if (registrationUrl) {
+            window.open(registrationUrl, '_blank');
+        }
+    });
+
+    $learnMoreButton.on('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $("#myModal").find("#modalIframe").attr("src", course.CourseInfo);
+        $("#myModal").modal("show");
+    });
+
+    return $card;
+}
+
+
+  // Add this function to handle the modal content update
+  function setupModalListeners() {
+    $('#myModal').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget);
+      var courseInfo = button.data('course-info');  // Changed from 'CourseInfo' to 'course-info'
+      var modal = $(this);
+      modal.find('#modalIframe').attr('src', courseInfo);
+    });
+  }
+
+
+  function adjustTableForMobile() {
+    if ($(window).width() < 1200) {
+      $("th:not(:first-child)").hide();
+      $("td:not(:first-child)").hide();
+    } else {
+      $("th, td").show();
+      $(".header-row").off("click");
+    }
+  }
+
+  $(window).resize(adjustTableForMobile);
+
+  // Call this function after populating the grid
+  function initializeGrid() {
+    adjustGridForMobile();
+  }
+
+  function createImageElement(url, $container) {
+    var defaultImageUrl = "/img/my/app-dev-1.png";
+
+    $.get(url, function (data) {
+      var $html = $($.parseHTML(data));
+      var $image = $html.find('img:not([src$=".svg"])').eq(1);
+
+
+      var imageUrl;
+      if ($image.length) {
+        imageUrl = new URL($image.attr("src"), url).href;
+      } else {
+        imageUrl = defaultImageUrl;
+      }
+
+      var $imageElement = $("<img>", {
+        class: "card-img-top rounded-top rounded-0",
+        src: imageUrl,
+        style: "width: 100%; height: auto; display: block; margin-bottom: 5px; text-align: center;",
+      });
+      $container.prepend($imageElement);
+    }).fail(function () {
+      var $imageElement = $("<img>", {
+        class: "card-img-top rounded-top rounded-0",
+        src: defaultImageUrl,
+        style: "width: 100%; height: auto; display: block; margin-bottom: 5px; text-align: center;",
+      });
+      $container.prepend($imageElement);
+    });
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+  /* Container Layout */
+.schedule-container {
+  max-width: 2400px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.schedule-grid {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  overflow-x: auto;
+}
+
+/* Day Column Styles */
+.day-column {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  margin: 0 5px;
+}
+
+.day-title {
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  background-color: #f8f9fa;
+}
+
+/* Course Card Styles */
+.course-container {
+  padding: 10px;
+}
+
+.course-card {
+  background-color: #ffffff;
+  border: 2px solid #ebf9fe;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 8px;
+  transition: all 0.3s ease-in-out;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.course-card:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Course Content Styles */
+.course-title {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.course-time,
+.course-grade,
+.course-price {
+  font-size: 0.9em;
+  color: #6c757d;
+  margin-bottom: 3px;
+}
+
+.course-info {
+  font-size: 0.8em;
+  color: #6c757d;
+  margin-bottom: 2px;
+}
+
+/* Button Styles */
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  margin-bottom: 8px;
+}
+
+.btn-learn-more,
+.btn-join-today {
+  background-color: #04aaf4;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8em;
+  transition: background-color 0.3s ease;
+  width: 100px;
+  margin: 0 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+}
+
+.btn-learn-more:hover,
+.btn-join-today:hover {
+  background-color: #0056b3;
+}
+
+.btn-join-us {
+  background-color: #04aaf4;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 140px;
+  display: inline-block;
+}
+
+.btn-join-us:hover {
+  background-color: #0388c5;
+  color: white;
+}
+
+/* Grade Button Styles */
+.grade-btn {
+  border: 2px solid #04aaf4;
+  background-color: #ffffff;
+  color: #04aaf4;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.grade-btn:hover,
+.grade-btn.active {
+  background-color: #04aaf4;
+  color: #ffffff;
+}
+
+.grade-btn-text {
+  font-size: 0.8em;
+  display: block;
+  margin-top: 4px;
+}
+
+/* Pricing Styles */
+.price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #04aaf4;
+}
+
+.price span {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* Icon Styles */
+.icon-list {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+.icon-list li {
+  margin-bottom: 0.5rem;
+}
+
+.icon-svg {
+  width: 48px;
+  height: 48px;
+}
+
+.badge {
+  font-size: 0.7rem;
+  padding: 0.2em 0.5em;
+}
+
+/* Media Queries */
+@media (max-width: 1023px) {
+  .schedule-container {
+    max-width: none;
+    width: 100%;
+    padding: 0 5px;
+  }
+
+  .schedule-grid {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .day-column {
+    min-width: 200px;
+  }
+
+  .course-card {
+    padding: 6px;
+  }
+
+  .course-title {
+    font-size: 0.85em;
+  }
+
+  .course-info {
+    font-size: 0.75em;
+  }
+
+  .btn-learn-more {
+    font-size: 0.75em;
+    padding: 3px 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .schedule-container {
+    width: 100%;
+    padding: 0 5px;
+  }
+
+  .day-column {
+    min-width: 150px;
+  }
+
+  .course-card {
+    padding: 6px;
+  }
+
+  .course-title {
+    font-size: 0.8em;
+  }
+
+  .course-info {
+    font-size: 0.7em;
+  }
+
+  .btn-learn-more {
+    font-size: 0.7em;
+    padding: 3px 6px;
+  }
+}
+</style>

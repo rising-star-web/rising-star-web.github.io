@@ -1,0 +1,234 @@
+{
+  "Seattle": [
+    {
+      "Name": "Minecraft Programming",
+      "Schedule": [
+        {
+          "Date": "6/16 - 6/20",
+          "Time": "9:00 AM - 12:00 PM"
+        },
+        {
+          "Date": "6/30 - 7/4",
+          "Time": "1:00PM - 4:00PM"
+        },
+        {
+          "Date": "7/21 - 7/25",
+          "Time": "TBD"
+        }
+      ],
+      "Grade": "G1-4",
+      "CourseInfo": "https://codingmind.com/seattle/courses/minecraft-programming-cam",
+      "Registration": [
+        "https://codingmind.com/sandiego/course-info-register?course_id=6728d5f27178d500159af8be&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=672bb776b15b8300158d2cfd&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=672bb8f1b15b8300158d2d68&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=6728dc907178d500159af98a&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=6728de2d7178d500159af9d5&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=6728dee37178d500159afa0c&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=6728e1327178d500159afa63&organizationId=66bf6a0dcdae5300148e3a2c"
+      ],
+      "Price": "$300"
+    },
+    {
+      "Name": "Thunkable App Programming",
+      "Schedule": [
+        {
+          "Date": "6/16 - 6/20",
+          "Time": "1:00PM - 4:00PM"
+        },
+        {
+          "Date": "6/30 - 7/4",
+          "Time": "9:00 AM - 12:00 PM"
+        },
+        {
+          "Date": "7/21 - 7/25",
+          "Time": "TBD"
+        }
+      ],
+      "Grade": "G1-4",
+      "CourseInfo": "https://codingmind.com/seattle/courses/app-thunkable-camp",
+      "Registration": [
+        "https://codingmind.com/sandiego/course-info-register?course_id=6728db6a7178d500159af971&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=672bbfe6b15b8300158d2eec&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=672bc09eb15b8300158d2f1e&organizationId=66bf6a0dcdae5300148e3a2c"
+      ],
+      "Price": "$300"
+    },
+    {
+      "Name": "Roblox Creator",
+      "Schedule": [
+        {
+          "Date": "6/23 - 6/27",
+          "Time": "TBD"
+        },
+        {
+          "Date": "7/14 - 7/18",
+          "Time": "TBD"
+        }
+      ],
+      "Grade": "G1-4",
+      "CourseInfo": "https://codingmind.com/seattle/courses/roblox-camp/",
+      "Registration": [
+        "https://codingmind.com/sandiego/course-info-register?course_id=672bbb26b15b8300158d2dc5&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=672bbcadb15b8300158d2e28&organizationId=66bf6a0dcdae5300148e3a2c"
+      ],
+      "Price":"$300"
+    },
+    {
+      "Name": "Microbit",
+      "Schedule": [
+        {
+          "Date": "6/23 - 6/27",
+          "Time": "TBD"
+        },
+        {
+          "Date": "7/14 - 7/18",
+          "Time": "TBD"
+        }
+      ],
+      "Grade": "G1-4",
+      "CourseInfo": "https://codingmind.com/seattle/courses/app-thunkable/00000",
+      "Registration": [
+        "https://codingmind.com/sandiego/course-info-register?course_id=672bbb26b15b8300158d2dc5&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=672bbcadb15b8300158d2e28&organizationId=66bf6a0dcdae5300148e3a2c"
+      ],
+      "Price":"$300"
+    },
+    {
+      "Name": "Lego Robotics",
+      "Schedule": [
+        {
+          "Date": "7/7 - 7/11",
+          "Time": "TBD"
+        },
+        {
+          "Date": "7/28 - 8/1",
+          "Time": "TBD"
+        }
+      ],
+      "Grade": "G1-4",
+      "CourseInfo": "https://codingmind.com/seattle/courses/lego-mindstorm-camp",
+      "Registration": [
+        "https://codingmind.com/sandiego/course-info-register?course_id=672bbb26b15b8300158d2dc5&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=672bbcadb15b8300158d2e28&organizationId=66bf6a0dcdae5300148e3a2c"
+      ],
+      "Price": "$300"
+    },
+    {
+      "Name": "AI 4 kids",
+      "Schedule": [
+        {
+          "Date": "7/7 - 7/11",
+          "Time": "TBD"
+        },
+        {
+          "Date": "7/28 - 8/1",
+          "Time": "TBD"
+        }
+      ],
+      "Grade": "G1-4",
+      "CourseInfo": "https://codingmind.com/seattle/courses/lego-mindstorm-camp/00000",
+      "Registration": [
+        "https://codingmind.com/sandiego/course-info-register?course_id=672bbb26b15b8300158d2dc5&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=672bbcadb15b8300158d2e28&organizationId=66bf6a0dcdae5300148e3a2c"
+      ],
+      "Price": "$300"
+    },
+    {
+      "Name": "Python Programming and app development",
+      "Schedule": [
+        {
+          "Date": "6/16-6/20",
+          "Time": "TBD"
+        },
+        {
+          "Date": "6/30 - 7/4",
+          "Time": "TBD"
+        },
+        {
+          "Date": "7/14 - 7/18",
+          "Time": "TBD"
+        }
+      ],
+      "Grade": "G5-8",
+      "CourseInfo": "https://codingmind.com/seattle/courses/python-camp",
+      "Registration": [
+        "https://codingmind.com/sandiego/course-info-register?course_id=672bbb26b15b8300158d2dc5&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=672bbcadb15b8300158d2e28&organizationId=66bf6a0dcdae5300148e3a2c"
+      ],
+      "Price": "$350"
+    },
+    {
+      "Name": "Web development",
+      "Schedule": [
+        {
+          "Date": "6/16-6/20",
+          "Time": "TBD"
+        },
+        {
+          "Date": "6/30 - 7/4",
+          "Time": "TBD"
+        },
+        {
+          "Date": "7/14 - 7/18",
+          "Time": "TBD"
+        }
+      ],
+      "Grade": "G5-8",
+      "CourseInfo": "https://codingmind.com/seattle/courses/web-camp",
+      "Registration": [
+        "https://codingmind.com/sandiego/course-info-register?course_id=672bbb26b15b8300158d2dc5&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=672bbcadb15b8300158d2e28&organizationId=66bf6a0dcdae5300148e3a2c"
+      ],
+      "Price": "$350"
+    },
+    {
+      "Name": "Unity programming and Metaverse",
+      "Schedule": [
+        {
+          "Date": "6/23 - 6/27",
+          "Time": "TBD"
+        },
+        {
+          "Date": "7/7 - 7/11",
+          "Time": "TBD"
+        },
+        {
+          "Date": "7/21 - 7/25",
+          "Time": "TBD"
+        }
+      ],
+      "Grade": "G5-8",
+      "CourseInfo": "https://codingmind.com/seattle/courses/unity-camp",
+      "Registration": [
+        "https://codingmind.com/sandiego/course-info-register?course_id=672bbb26b15b8300158d2dc5&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=672bbcadb15b8300158d2e28&organizationId=66bf6a0dcdae5300148e3a2c"
+      ],
+      "Price": "$350"
+    },
+    {
+      "Name": "Generative AI",
+      "Schedule": [
+        {
+          "Date": "6/23 - 6/27",
+          "Time": "TBD"
+        },
+        {
+          "Date": "7/7 - 7/11",
+          "Time": "TBD"
+        },
+        {
+          "Date": "7/21 - 7/25",
+          "Time": "TBD"
+        }
+      ],
+      "Grade": "G5-8",
+      "CourseInfo": "https://codingmind.com/seattle/courses/ai-camp",
+      "Registration": [
+        "https://codingmind.com/sandiego/course-info-register?course_id=672bbb26b15b8300158d2dc5&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=672bbcadb15b8300158d2e28&organizationId=66bf6a0dcdae5300148e3a2c"
+      ],
+      "Price": "$350"
+    }
+  ]
+}
