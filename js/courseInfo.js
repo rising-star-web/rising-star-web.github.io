@@ -16,6 +16,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const organizationId = params.get("organizationId");
   isSandiego = organizationId == "66bf6a0dcdae5300148e3a2c" || organizationId == "6713eacd00dcfc85b65c206a";
 
+    // Check for 1v1 private class special case
+    if (courseId === "1v1" && isSandiego) {
+      // Handle 1v1 private class directly without API call
+      const privateClassDetails = {
+        name: "1v1 private class",
+        instructor: null,
+        dateStart: new Date().toISOString(),  // Current date as start
+        dateEnd: new Date().toISOString(),    // Current date as end
+        price: "TBD",
+        totalClasses: "TBD",
+        organizationId: organizationId
+      };
+      updatePageContent(privateClassDetails, courseId, accountId, token);
+    } else {
+      // Call fetchCourseDetails for all other cases
+      fetchCourseDetails(apiUrl, courseId, accountId, token);
+    }
+
   // Call fetchCourseDetails with all necessary parameters
   fetchCourseDetails(apiUrl, courseId, accountId, token);
 });
@@ -61,17 +79,28 @@ function updatePageContent(course, courseId, accountId, token) {
   document.getElementById("courseName").innerText = course.name;
   //document.getElementById("courseNameHeader").innerText = course.name;
 
-  document.getElementById("instructorName").innerText = course.instructor
+  // For 1v1 private class, show TBD for course time
+  if (courseId === "1v1" && organizationId === "66bf6a0dcdae5300148e3a2c") {
+    document.getElementById("courseTime").innerText = "TBD";
+    document.getElementById("instructorName").innerText = "TBD";
+    document.getElementById("courseDates").innerText = "TBD";
+    document.getElementById("coursePrice").innerText = "TBD";
+    document.getElementById("totalClasses").innerText = "TBD";
+  } else {
+    document.getElementById("instructorName").innerText = course.instructor
     ? `${course.instructor.firstName} ${course.instructor.lastName}`
     : "N/A";
     const courseTimeEl = document.getElementById('courseTime');
     const courseTimeRes = getCourseTime(course);
     courseTimeEl.innerText = courseTimeRes;
-  //document.getElementById("courseTime").innerText = getCourseTime(course);
-  document.getElementById("courseDates").innerText =
-    course.dateStart.split("T")[0] + " - " + course.dateEnd.split("T")[0];
-  document.getElementById("coursePrice").innerText = "$ "+course.price;
-  document.getElementById("totalClasses").innerText = course.totalClasses;
+    //document.getElementById("courseTime").innerText = getCourseTime(course);
+    document.getElementById("courseDates").innerText =
+      course.dateStart.split("T")[0] + " - " + course.dateEnd.split("T")[0];
+    document.getElementById("coursePrice").innerText = "$ "+course.price;
+    document.getElementById("totalClasses").innerText = course.totalClasses;
+  }
+
+
   var chinese = window.location.href.includes("cn");
   const queryParams = "courseId=" + courseId + 
   "&price=" + course.price + 

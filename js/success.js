@@ -129,19 +129,23 @@ document.addEventListener('DOMContentLoaded', async () => {
   
       const accountData = await response.json();
       const studentId = accountData.id;
-  
-      // Attach student to course
-      const courseResponse = await fetch(
-        `${baseUrl}Course/${registrationInfo.courseId}/students/rel/${studentId}`, {
-        method: "PUT",
-        headers: {
-          Authorization: `Bearer ${registrationInfo.token}`
+
+      if (registrationInfo.courseId !== '1v1') {
+        // Attach student to course
+        const courseResponse = await fetch(
+          `${baseUrl}Course/${registrationInfo.courseId}/students/rel/${studentId}`, {
+          method: "PUT",
+          headers: {
+            Authorization: `Bearer ${registrationInfo.token}`
+          }
+        });
+
+        if (!courseResponse.ok) {
+          throw new Error('Failed to attach student to course');
         }
-      });
-  
-      if (!courseResponse.ok) {
-        throw new Error('Failed to attach student to course');
+
       }
+
   
       // Simulate login to get new token
       const loginResponse = await fetch(`${baseUrl}Account/login`, {
@@ -184,19 +188,23 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (!accountResponse.ok) {
         throw new Error('Failed to update account preferences');
       }
-  
-      // Attach student to course
-      const courseResponse = await fetch(
-        `${baseUrl}Course/${loginData.courseId}/students/rel/${loginData.accountId}`, {
-        method: "PUT",
-        headers: {
-          Authorization: `Bearer ${loginData.token}`
+
+      if (loginData.courseId !== '1v1') {
+        // Attach student to course
+        const courseResponse = await fetch(
+          `${baseUrl}Course/${loginData.courseId}/students/rel/${loginData.accountId}`, {
+          method: "PUT",
+          headers: {
+            Authorization: `Bearer ${loginData.token}`
+          }
+        });
+    
+        if (!courseResponse.ok) {
+          throw new Error('Failed to attach student to course');
         }
-      });
-  
-      if (!courseResponse.ok) {
-        throw new Error('Failed to attach student to course');
       }
+  
+
   
       return loginData.accountId;
     }

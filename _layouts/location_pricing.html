@@ -344,8 +344,17 @@ logo_url = '/' | append: location_name %} {% endif %}
                     window.location.href = `/${LOCATION_NAME}/schedule-trial`;
                     }, 2000);
                 }
+            } else if (planName === '1v1 Junior Membership' || planName === '1v1 Senior Membership') {
+                if (pendingSignupData || pendingLoginData) {
+                    window.location.href = `/${LOCATION_NAME}/payment_details`;
+                } else {
+                    showSignUpToast();  
+                    setTimeout(() => {
+                        window.location.href = `/${LOCATION_NAME}/course-info-register/?organizationId=66bf6a0dcdae5300148e3a2c&course_id=1v1`;
+                    }, 2000);
+                }
             } else {
-                // For non-trial class plans in San Diego
+                // For non-trial, group class plans in San Diego
                 if (pendingSignupData || pendingLoginData) {
                     window.location.href = `/${LOCATION_NAME}/payment_details`;
                 } else {
@@ -354,6 +363,7 @@ logo_url = '/' | append: location_name %} {% endif %}
                         window.location.href = `/${LOCATION_NAME}/schedule`;
                     }, 2000);
                 }
+
             }
         } else if (LOCATION_NAME === 'west-lafayette') {
             window.location.href = `/${LOCATION_NAME}/payment_details`;
