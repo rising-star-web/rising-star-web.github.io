@@ -98,6 +98,13 @@ layout: locationdefault
         </select>
       </div>
     </div>
+
+    <div class="mx-2">
+      <label for="dateFilter" class="h3 text-primary mb-2">Select Dates:</label>
+      <div id="dateFilter" class="d-flex flex-wrap justify-content-center">
+          <!-- Options will be added dynamically -->
+      </div>
+  </div>
     <br>
     <div class="d-flex justify-content-center mb-4 w-100">
       <div id="camp-registration-grid" class="schedule-grid">
@@ -266,7 +273,6 @@ function getSelectedDates() {
         return $(this).data('date');
     }).get();
 }
-
 function populateFilteredGrid(scheduleData, selectedLocation, selectedGrades, selectedDates) {
     var $grid = $("#camp-registration-grid");
     $grid.empty();
@@ -276,164 +282,77 @@ function populateFilteredGrid(scheduleData, selectedLocation, selectedGrades, se
         '7/7 - 7/11', '7/14 - 7/18', '7/21 - 7/25', '7/28 - 8/1'
     ];
 
-    // Create table structure
-    var $table = $('<table class="table table-striped" style="width: 100%; table-layout: fixed;">');
-    var $thead = $("<thead>");
+    // Determine which dates to display
+    var displayedDates = selectedDates.length > 0 ? selectedDates : dateRanges;
 
-      var $headerRow = $('<tr>', { 
-        class: 'header-row',
-        role: 'row' 
-    });
+    // Create columns only for displayed dates
+    displayedDates.forEach(dateRange => {
+        var $dateColumn = $(`
+            <div class="day-column">
+                <h3 class="day-title">${dateRange}</h3>
+                <div class="course-container"></div>
+            </div>
+        `);
+        $grid.append($dateColumn);
 
-    // Add course name header
-    $headerRow.append('<th class="course-col d-none d-xl-table-cell">Course Name</th>');
-
-    // Add date headers
-    dateRanges.forEach(date => {
-        $headerRow.append(`<th class="date-col">${date}</th>`);
-    });
-
-    $thead.append($headerRow);
-    $table.append($thead);
-
-    var $tbody = $("<tbody>");
-
-    // Create course map for organizing data
-    let courseMap = new Map();
-
-    // Process data
-    Object.entries(scheduleData).forEach(([location, courses]) => {
-        courses.forEach((course) => {
-            if ((selectedLocation === "all" || location === selectedLocation) &&
-                (selectedGrades.length === 0 || selectedGrades.includes(course.Grade))) {
-                
-                let courseKey = course.Name + course.Grade;
-                let courseInfo = courseMap.get(courseKey) || {
-                    name: course.Name,
-                    grade: course.Grade,
-                    price: course.Price,
-                    courseInfo: course.CourseInfo,
-                    dates: new Map()
-                };
-
-                course.Schedule.forEach((schedule, index) => {
-                    courseInfo.dates.set(schedule.Date, {
-                        time: schedule.Time,
-                        registration: course.Registration[index]
+        // Add courses for this specific date
+        Object.entries(scheduleData).forEach(([location, courses]) => {
+            courses.forEach((course) => {
+                if ((selectedLocation === "all" || location === selectedLocation) &&
+                    (selectedGrades.length === 0 || selectedGrades.includes(course.Grade))) {
+                    
+                    course.Schedule.forEach(schedule => {
+                        let formattedDate = schedule.Date.replace(/\s*-\s*/, ' - ');
+                        if (formattedDate === dateRange) {
+                            var $courseCard = createCourseCard(course, schedule);
+                            $dateColumn.find('.course-container').append($courseCard);
+                        }
                     });
-                });
-
-                courseMap.set(courseKey, courseInfo);
-            }
-        });
-    });
-
-    // Create rows for each course
-    courseMap.forEach(course => {
-        var $row = $('<tr>');
-        
-        // Course info cell
-        var $courseCell = $('<td class="course-info-cell">');
-        var $courseContent = $('<div class="course-info-wrapper">');
-
-        // Add image container
-        var $imageContainer = $('<div class="course-image-container">');
-        var $defaultImage = $('<img>', {
-            class: 'table-course-image',
-            src: '/img/my/app-dev-1.png',
-            alt: course.name
-        });
-        $imageContainer.append($defaultImage);
-
-        if (course.courseInfo) {
-            $.get(course.courseInfo, function(data) {
-                var $html = $($.parseHTML(data));
-                var $image = $html.find('img:not([src$=".svg"])').eq(1);
-                if ($image.length) {
-                    var imageUrl = new URL($image.attr("src"), course.courseInfo).href;
-                    $defaultImage.attr('src', imageUrl);
                 }
             });
-        }
+        });
 
-        // Add course details
-        var $details = $('<div class="course-details">').append(
-            $('<h4>').text(course.name),
-            $('<p>').text(`Grade: ${course.grade}`),
-            $('<p>').text(`Price: ${course.price}`),
-            $('<button>', {
-                class: 'btn-learn-more',
-                text: 'Learn More',
-                'data-course-info': course.courseInfo,
-                'data-bs-toggle': 'modal',
-                'data-bs-target': '#myModal'
-            })
-        );
+        // Sort courses by time within this column
+        var $courses = $dateColumn.find('.course-card');
+        $courses.sort(function (a, b) {
+            const getTimeValue = (timeStr) => {
+                if (!timeStr || timeStr === 'Time: TBD') return Number.MAX_VALUE;
+                const timeMatch = timeStr.match(/(\d+):(\d+)\s*(AM|PM)/i);
+                if (!timeMatch) return Number.MAX_VALUE;
+                
+                let [_, hours, minutes, period] = timeMatch;
+                hours = parseInt(hours);
+                if (period.toUpperCase() === 'PM' && hours !== 12) hours += 12;
+                if (period.toUpperCase() === 'AM' && hours === 12) hours = 0;
+                
+                return hours * 60 + parseInt(minutes);
+            };
 
-        $courseContent.append($imageContainer, $details);
-        $courseCell.append($courseContent);
-        $row.append($courseCell);
-
-        // Add date cells
-        dateRanges.forEach(date => {
-          var $dateCell = $('<td class="date-cell">');
-          var scheduleInfo = course.dates.get(date);
-          
-          var $content = $('<div class="date-content">');
-          if (scheduleInfo) {
-              $content.append(
-                  $('<p class="time">').text(scheduleInfo.time),
-                  $('<button>', {
-                      class: 'btn-join-today',
-                      text: 'Join Today',
-                      'data-registration': scheduleInfo.registration
-                  }).click(function(e) {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      window.open($(this).data('registration'), '_blank');
-                  })
-              );
-          } else {
-              $content.append('<div class="no-class">-</div>');
-          }
-          
-          $dateCell.append($content); // Add this line
-          $row.append($dateCell);
-      });
-
-        $tbody.append($row);
+            const timeA = getTimeValue($(a).find('.course-info').first().text());
+            const timeB = getTimeValue($(b).find('.course-info').first().text());
+            return timeA - timeB;
+        });
+        $dateColumn.find('.course-container').empty().append($courses);
     });
 
-    $table.append($tbody);
-    $grid.append($table);
-
-    // Add event handlers
-    $('.btn-learn-more').click(function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        $("#myModal").find("#modalIframe").attr("src", $(this).data('course-info'));
-        $("#myModal").modal("show");
-    });
-
-    $('.btn-join-today').click(function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        var registrationUrl = $(this).data('registration');
-        if (registrationUrl) {
-            window.open(registrationUrl, '_blank');
-        }
-    });
-    $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-    var headerOffset = $('#gradeFilter').offset().top;
-    
-    if (scroll > headerOffset) {
-        $('.header-row').addClass('scrolled');
+    // Adjust grid layout for number of visible columns
+    if (displayedDates.length === 1) {
+        $('.day-column').css({
+            'flex': '0 0 30%',
+            'max-width': '30%',
+            'margin': '0 auto'
+        });
+    } else if (displayedDates.length === 2) {
+        $('.day-column').css({
+            'flex': '0 0 35%',
+            'max-width': '35%'
+        });
     } else {
-        $('.header-row').removeClass('scrolled');
+        $('.day-column').css({
+            'flex': '1',
+            'max-width': 'none'
+        });
     }
-});
-
 }
 
   // function populateFilteredGrid(scheduleData, selectedLocation, selectedGrades, selectedDates) {
@@ -826,8 +745,9 @@ function createCourseCard(course, schedule) {
   }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
 <style>
- /* Container Layout */
+  /* Container Layout */
 .schedule-container {
   max-width: 2400px;
   width: 90%;
@@ -835,139 +755,101 @@ function createCourseCard(course, schedule) {
   padding: 0 15px;
 }
 
-/* Table Styles */
-.table {
-    margin: 0;
-    background: white;
-    border-collapse: separate;
-    border-spacing: 0;
-    width: 100%;
-}
-
-.table thead {
-    position: sticky;
-    top: 72px; /* Adjust based on your header height */
-    z-index: 1020;
-    background: white;
-}
-
-.header-row {
-    background: white;
-    transition: all 0.3s ease;
-    top: 130px;
-}
-
-.header-row th {
-    padding: 1rem;
-    text-align: center;
-    font-weight: bold;
-    background-color: white;
-    border-bottom: 2px solid #dee2e6;
-    position: sticky;
-    top: 72px; /* Match thead top value */
-    z-index: 1020;
-}
-
-.header-row.scrolled {
-    background-color: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(8px);
-}
-
-.header-row.scrolled th {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
 .schedule-grid {
-    padding-top: 0; /* Remove extra padding */
-    margin-top: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  overflow-x: auto;
 }
 
-.course-col {
-    width: 300px;
+/* Day Column Styles */
+.day-column {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  margin: 0 5px;
 }
 
-.date-col {
-    min-width: 150px;
-    text-align: center;
-    vertical-align: middle;
+.day-title {
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  background-color: #f8f9fa;
 }
 
-.course-info-cell {
-    padding: 1rem;
-    vertical-align: top;
+.course-container {
+    padding: 10px;
 }
 
-.course-info-wrapper {
+.course-card {
+    background-color: #ffffff;
+    border: 2px solid #ebf9fe;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    height: 300px;
     display: flex;
-    align-items: center;
-    gap: 1rem;
     flex-direction: column;
-}
-
-.course-image-container {
-    width: 100%;
-    height: 120px;
-    margin-bottom: 0.5rem;
-    border-radius: 4px 4px 0 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
     overflow: hidden;
+    padding: 0;
 }
 
-.table-course-image {
+.course-card:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Image Styles */
+.image-container {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+}
+
+.course-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
-.course-details {
-    text-align: center;
-    padding: 0.5rem;
-    width: 100%;
+/* Content Styles */
+.content-container {
+    padding: 12px;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
+    gap: 4px;
 }
 
-.course-details h4 {
-    margin: 0;
-    font-size: 1rem;
+.course-title {
+    font-size: 1em;
     font-weight: bold;
-}
-
-.course-details p {
-    margin: 0.25rem 0;
-    font-size: 0.875rem;
-    color: #6c757d;
-}
-
-.date-cell {
-    text-align: center;
-    vertical-align: middle;
-    padding: 1rem;
-}
-
-.date-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.time {
     margin: 0;
-    font-size: 0.875rem;
+    line-height: 1.2;
+}
+
+.course-info {
+    font-size: 0.8em;
     color: #6c757d;
-}
-
-.no-class {
-    color: #adb5bd;
-}
-
-.table tbody tr:first-child td {
-    padding-top: 4rem;
+    margin: 0;
+    line-height: 1.2;
 }
 
 /* Button Styles */
+.button-container {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
 .btn-learn-more,
 .btn-join-today {
     background-color: #04aaf4;
@@ -983,7 +865,6 @@ function createCourseCard(course, schedule) {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
 }
 
 .btn-learn-more:hover,
@@ -992,47 +873,79 @@ function createCourseCard(course, schedule) {
 }
 
 .btn-join-us {
-    background-color: #04aaf4;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    width: 140px;
-    display: inline-block;
+  background-color: #04aaf4;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 140px;
+  display: inline-block;
 }
 
 .btn-join-us:hover {
-    background-color: #0388c5;
-    color: white;
+  background-color: #0388c5;
+  color: white;
 }
 
 /* Grade Button Styles */
 .grade-btn {
-    border: 2px solid #04aaf4;
-    background-color: #ffffff;
-    color: #04aaf4;
-    padding: 8px 16px;
-    margin: 5px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  border: 2px solid #04aaf4;
+  background-color: #ffffff;
+  color: #04aaf4;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .grade-btn:hover,
 .grade-btn.active {
-    background-color: #04aaf4;
-    color: #ffffff;
+  background-color: #04aaf4;
+  color: #ffffff;
 }
 
 .grade-btn-text {
-    font-size: 0.8em;
-    display: block;
-    margin-top: 4px;
+  font-size: 0.8em;
+  display: block;
+  margin-top: 4px;
 }
 
-/* Date Button Styles */
+/* Pricing Styles */
+.price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #04aaf4;
+}
+
+.price span {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* Icon Styles */
+.icon-list {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+.icon-list li {
+  margin-bottom: 0.5rem;
+}
+
+.icon-svg {
+  width: 48px;
+  height: 48px;
+}
+
+.badge {
+  font-size: 0.7rem;
+  padding: 0.2em 0.5em;
+}
+
 .date-btn {
     border: 2px solid #04aaf4;
     background-color: #ffffff;
@@ -1060,83 +973,66 @@ function createCourseCard(course, schedule) {
     margin-bottom: 20px;
 }
 
-/* Filter container styles */
-.schedule-grid {
-    position: relative;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    overflow-y: auto;
-    max-height: calc(100vh - 200px);
-    margin-top: 1rem;
-    height: calc(100vh - 300px);
-}
-
 /* Media Queries */
-@media (max-width: 1200px) {
-    .date-col, .date-cell {
-        display: none;
-    }
-    
-    .course-info-wrapper {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .course-details {
-        text-align: center;
-        padding: 1rem;
-    }
+@media (max-width: 1023px) {
+  .schedule-container {
+    max-width: none;
+    width: 100%;
+    padding: 0 5px;
+  }
 
-    .schedule-container {
-        width: 100%;
-        padding: 0 10px;
-    }
+  .schedule-grid {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 
-    .course-col {
-        width: 100%;
-    }
+  .day-column {
+    min-width: 200px;
+  }
 
-    .header-row th {
-        position: sticky;
-        top: 0;
-    }
+  .course-card {
+    padding: 6px;
+  }
 
-    .schedule-grid {
-        max-height: none;
-        overflow: visible;
-    }
-    .table tbody tr:first-child td {
-        padding-top: 1rem;
-    }
+  .course-title {
+    font-size: 0.85em;
+  }
+
+  .course-info {
+    font-size: 0.75em;
+  }
+
+  .btn-learn-more {
+    font-size: 0.75em;
+    padding: 3px 6px;
+  }
 }
 
 @media (max-width: 768px) {
-    .schedule-container {
-        padding: 0 5px;
-    }
+  .schedule-container {
+    width: 100%;
+    padding: 0 5px;
+  }
 
-    .course-image-container {
-        height: 100px;
-    }
+  .day-column {
+    min-width: 150px;
+  }
 
-    .course-details h4 {
-        font-size: 0.9rem;
-    }
+  .course-card {
+    padding: 6px;
+  }
 
-    .course-details p {
-        font-size: 0.8rem;
-    }
+  .course-title {
+    font-size: 0.8em;
+  }
 
-    .btn-learn-more,
-    .btn-join-today {
-        font-size: 0.75rem;
-        padding: 4px 8px;
-        width: 90px;
-    }
+  .course-info {
+    font-size: 0.7em;
+  }
 
-    .header-row th {
-        padding: 0.75rem;
-    }
+  .btn-learn-more {
+    font-size: 0.7em;
+    padding: 3px 6px;
+  }
 }
 </style>

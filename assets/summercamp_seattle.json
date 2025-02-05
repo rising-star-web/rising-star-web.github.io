@@ -8,24 +8,20 @@
           "Time": "9:00 AM - 12:00 PM"
         },
         {
-          "Date": "6/30 - 7/4",
+          "Date": "7/7 - 7/11",
           "Time": "1:00PM - 4:00PM"
         },
         {
-          "Date": "7/21 - 7/25",
-          "Time": "TBD"
+          "Date": "7/28 - 8/1",
+          "Time": "9:00 AM - 12:00 PM"
         }
       ],
       "Grade": "G1-4",
-      "CourseInfo": "https://codingmind.com/seattle/courses/minecraft-programming-cam",
+      "CourseInfo": "https://codingmind.com/seattle/courses/minecraft-programming-camp",
       "Registration": [
-        "https://codingmind.com/sandiego/course-info-register?course_id=6728d5f27178d500159af8be&organizationId=66bf6a0dcdae5300148e3a2c",
-        "https://codingmind.com/sandiego/course-info-register?course_id=672bb776b15b8300158d2cfd&organizationId=66bf6a0dcdae5300148e3a2c",
-        "https://codingmind.com/sandiego/course-info-register?course_id=672bb8f1b15b8300158d2d68&organizationId=66bf6a0dcdae5300148e3a2c",
-        "https://codingmind.com/sandiego/course-info-register?course_id=6728dc907178d500159af98a&organizationId=66bf6a0dcdae5300148e3a2c",
-        "https://codingmind.com/sandiego/course-info-register?course_id=6728de2d7178d500159af9d5&organizationId=66bf6a0dcdae5300148e3a2c",
-        "https://codingmind.com/sandiego/course-info-register?course_id=6728dee37178d500159afa0c&organizationId=66bf6a0dcdae5300148e3a2c",
-        "https://codingmind.com/sandiego/course-info-register?course_id=6728e1327178d500159afa63&organizationId=66bf6a0dcdae5300148e3a2c"
+        "https://codingmind.com/seattle/course-info-register?course_id=67a23ac686dcc1001586d1f5&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a264fa86dcc1001586d366&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a26b1186dcc1001586d3f8&organizationId=6684406b10707d0014fb7369"
       ],
       "Price": "$300"
     },
@@ -37,20 +33,20 @@
           "Time": "1:00PM - 4:00PM"
         },
         {
-          "Date": "6/30 - 7/4",
+          "Date": "7/7 - 7/11",
           "Time": "9:00 AM - 12:00 PM"
         },
         {
-          "Date": "7/21 - 7/25",
-          "Time": "TBD"
+          "Date": "7/28 - 8/1",
+          "Time": "9:00 AM - 12:00 PM"
         }
       ],
       "Grade": "G1-4",
       "CourseInfo": "https://codingmind.com/seattle/courses/app-thunkable-camp",
       "Registration": [
-        "https://codingmind.com/sandiego/course-info-register?course_id=6728db6a7178d500159af971&organizationId=66bf6a0dcdae5300148e3a2c",
-        "https://codingmind.com/sandiego/course-info-register?course_id=672bbfe6b15b8300158d2eec&organizationId=66bf6a0dcdae5300148e3a2c",
-        "https://codingmind.com/sandiego/course-info-register?course_id=672bc09eb15b8300158d2f1e&organizationId=66bf6a0dcdae5300148e3a2c"
+        "https://codingmind.com/seattle/course-info-register?course_id=67a23c0a86dcc1001586d223&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a2636386dcc1001586d34a&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a26c1086dcc1001586d414&organizationId=6684406b10707d0014fb7369"
       ],
       "Price": "$300"
     },
@@ -59,18 +55,18 @@
       "Schedule": [
         {
           "Date": "6/23 - 6/27",
-          "Time": "TBD"
+          "Time": "9:00 AM - 12:00 PM"
         },
         {
           "Date": "7/14 - 7/18",
-          "Time": "TBD"
+          "Time": "1:00PM - 4:00PM"
         }
       ],
       "Grade": "G1-4",
       "CourseInfo": "https://codingmind.com/seattle/courses/roblox-camp/",
       "Registration": [
-        "https://codingmind.com/sandiego/course-info-register?course_id=672bbb26b15b8300158d2dc5&organizationId=66bf6a0dcdae5300148e3a2c",
-        "https://codingmind.com/sandiego/course-info-register?course_id=672bbcadb15b8300158d2e28&organizationId=66bf6a0dcdae5300148e3a2c"
+        "https://codingmind.com/seattle/course-info-register?course_id=67a25d4a86dcc1001586d2d5&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a2675e86dcc1001586d3a0&organizationId=6684406b10707d0014fb7369"
       ],
       "Price":"$300"
     },
@@ -79,18 +75,18 @@
       "Schedule": [
         {
           "Date": "6/23 - 6/27",
-          "Time": "TBD"
+          "Time": "1:00PM - 4:00PM"
         },
         {
           "Date": "7/14 - 7/18",
-          "Time": "TBD"
+          "Time": "9:00 AM - 12:00 PM"
         }
       ],
       "Grade": "G1-4",
-      "CourseInfo": "https://codingmind.com/seattle/courses/app-thunkable/00000",
+      "CourseInfo": "https://codingmind.com/seattle/courses/web-camp",
       "Registration": [
-        "https://codingmind.com/sandiego/course-info-register?course_id=672bbb26b15b8300158d2dc5&organizationId=66bf6a0dcdae5300148e3a2c",
-        "https://codingmind.com/sandiego/course-info-register?course_id=672bbcadb15b8300158d2e28&organizationId=66bf6a0dcdae5300148e3a2c"
+        "https://codingmind.com/seattle/course-info-register?course_id=67a25e8a86dcc1001586d2f1&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a2662886dcc1001586d382&organizationId=6684406b10707d0014fb7369"
       ],
       "Price":"$300"
     },
@@ -98,19 +94,19 @@
       "Name": "Lego Robotics",
       "Schedule": [
         {
-          "Date": "7/7 - 7/11",
-          "Time": "TBD"
+          "Date": "6/30 - 7/11",
+          "Time": "9:00 AM - 12:00 PM"
         },
         {
-          "Date": "7/28 - 8/1",
-          "Time": "TBD"
+          "Date": "7/21 - 7/25",
+          "Time": "1:00PM - 4:00PM"
         }
       ],
       "Grade": "G1-4",
       "CourseInfo": "https://codingmind.com/seattle/courses/lego-mindstorm-camp",
       "Registration": [
-        "https://codingmind.com/sandiego/course-info-register?course_id=672bbb26b15b8300158d2dc5&organizationId=66bf6a0dcdae5300148e3a2c",
-        "https://codingmind.com/sandiego/course-info-register?course_id=672bbcadb15b8300158d2e28&organizationId=66bf6a0dcdae5300148e3a2c"
+        "https://codingmind.com/seattle/course-info-register?course_id=67a25fe986dcc1001586d30d&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a269f386dcc1001586d3d8&organizationId=6684406b10707d0014fb7369"
       ],
       "Price": "$300"
     },
@@ -118,19 +114,20 @@
       "Name": "AI 4 kids",
       "Schedule": [
         {
-          "Date": "7/7 - 7/11",
-          "Time": "TBD"
+          "Date": "6/30 - 7/11",
+          "Time": "1:00PM - 4:00PM"
+          
         },
         {
-          "Date": "7/28 - 8/1",
-          "Time": "TBD"
+          "Date": "7/21 - 7/25",
+          "Time": "9:00 AM - 12:00 PM"
         }
       ],
       "Grade": "G1-4",
-      "CourseInfo": "https://codingmind.com/seattle/courses/lego-mindstorm-camp/00000",
+      "CourseInfo": "https://codingmind.com/seattle/courses/ai-camp",
       "Registration": [
-        "https://codingmind.com/sandiego/course-info-register?course_id=672bbb26b15b8300158d2dc5&organizationId=66bf6a0dcdae5300148e3a2c",
-        "https://codingmind.com/sandiego/course-info-register?course_id=672bbcadb15b8300158d2e28&organizationId=66bf6a0dcdae5300148e3a2c"
+        "https://codingmind.com/seattle/course-info-register?course_id=67a261fd86dcc1001586d32a&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a268af86dcc1001586d3bc&organizationId=6684406b10707d0014fb7369"
       ],
       "Price": "$300"
     },
@@ -139,22 +136,29 @@
       "Schedule": [
         {
           "Date": "6/16-6/20",
-          "Time": "TBD"
+          "Time": "9:00 AM - 12:00 PM"
         },
         {
           "Date": "6/30 - 7/4",
-          "Time": "TBD"
+          "Time": "1:00PM - 4:00PM"
         },
         {
           "Date": "7/14 - 7/18",
-          "Time": "TBD"
+          "Time": "9:00 AM - 12:00 PM"
+        },
+        {
+          "Date": "7/28 - 8/1",
+          "Time": "1:00PM - 4:00PM"
         }
       ],
       "Grade": "G5-8",
       "CourseInfo": "https://codingmind.com/seattle/courses/python-camp",
       "Registration": [
-        "https://codingmind.com/sandiego/course-info-register?course_id=672bbb26b15b8300158d2dc5&organizationId=66bf6a0dcdae5300148e3a2c",
-        "https://codingmind.com/sandiego/course-info-register?course_id=672bbcadb15b8300158d2e28&organizationId=66bf6a0dcdae5300148e3a2c"
+        "https://codingmind.com/seattle/course-info-register?course_id=67a23b6c86dcc1001586d203&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a262a886dcc1001586d338&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a266cd86dcc1001586d392&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a26ca786dcc1001586d424&organizationId=6684406b10707d0014fb7369"
+
       ],
       "Price": "$350"
     },
@@ -163,22 +167,28 @@
       "Schedule": [
         {
           "Date": "6/16-6/20",
-          "Time": "TBD"
+          "Time":  "1:00PM - 4:00PM"
         },
         {
           "Date": "6/30 - 7/4",
-          "Time": "TBD"
+          "Time": "9:00 AM - 12:00 PM"
         },
         {
           "Date": "7/14 - 7/18",
-          "Time": "TBD"
+          "Time":"1:00PM - 4:00PM"
+        },
+        {
+          "Date": "7/28 - 8/1",
+          "Time": "9:00 AM - 12:00 PM"
         }
       ],
       "Grade": "G5-8",
       "CourseInfo": "https://codingmind.com/seattle/courses/web-camp",
       "Registration": [
-        "https://codingmind.com/sandiego/course-info-register?course_id=672bbb26b15b8300158d2dc5&organizationId=66bf6a0dcdae5300148e3a2c",
-        "https://codingmind.com/sandiego/course-info-register?course_id=672bbcadb15b8300158d2e28&organizationId=66bf6a0dcdae5300148e3a2c"
+        "https://codingmind.com/seattle/course-info-register?course_id=67a23c9b86dcc1001586d231&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a2610a86dcc1001586d31b&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a267fe86dcc1001586d3ae&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a26b8686dcc1001586d406&organizationId=6684406b10707d0014fb7369"
       ],
       "Price": "$350"
     },
@@ -187,22 +197,23 @@
       "Schedule": [
         {
           "Date": "6/23 - 6/27",
-          "Time": "TBD"
+          "Time": "1:00PM - 4:00PM"
         },
         {
           "Date": "7/7 - 7/11",
-          "Time": "TBD"
+          "Time": "9:00 AM - 12:00 PM"
         },
         {
           "Date": "7/21 - 7/25",
-          "Time": "TBD"
+          "Time": "1:00PM - 4:00PM"
         }
       ],
       "Grade": "G5-8",
       "CourseInfo": "https://codingmind.com/seattle/courses/unity-camp",
       "Registration": [
-        "https://codingmind.com/sandiego/course-info-register?course_id=672bbb26b15b8300158d2dc5&organizationId=66bf6a0dcdae5300148e3a2c",
-        "https://codingmind.com/sandiego/course-info-register?course_id=672bbcadb15b8300158d2e28&organizationId=66bf6a0dcdae5300148e3a2c"
+        "https://codingmind.com/seattle/course-info-register?course_id=67a25f0086dcc1001586d2ff&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a263f986dcc1001586d358&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a26a7c86dcc1001586d3e8&organizationId=6684406b10707d0014fb7369"
       ],
       "Price": "$350"
     },
@@ -211,24 +222,135 @@
       "Schedule": [
         {
           "Date": "6/23 - 6/27",
-          "Time": "TBD"
+          "Time": "9:00 AM - 12:00 PM"
         },
         {
           "Date": "7/7 - 7/11",
-          "Time": "TBD"
+          "Time": "1:00PM - 4:00PM"
         },
         {
           "Date": "7/21 - 7/25",
-          "Time": "TBD"
+          "Time": "9:00 AM - 12:00 PM"
         }
       ],
       "Grade": "G5-8",
       "CourseInfo": "https://codingmind.com/seattle/courses/ai-camp",
       "Registration": [
-        "https://codingmind.com/sandiego/course-info-register?course_id=672bbb26b15b8300158d2dc5&organizationId=66bf6a0dcdae5300148e3a2c",
-        "https://codingmind.com/sandiego/course-info-register?course_id=672bbcadb15b8300158d2e28&organizationId=66bf6a0dcdae5300148e3a2c"
+        "https://codingmind.com/seattle/course-info-register?course_id=67a25dc386dcc1001586d2e3&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a265a986dcc1001586d374&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a2695886dcc1001586d3ca&organizationId=6684406b10707d0014fb7369"
       ],
       "Price": "$350"
+    },
+    {
+      "Name": "AI创新工坊 - 打造科学竞赛项目",
+      "Schedule": [
+        {
+          "Date": "6/16-6/20",
+          "Time": "9:00 AM - 4:00 PM"
+        },
+        {
+          "Date": "6/30 - 7/4",
+          "Time": "9:00 AM - 4:00 PM"
+        },
+        {
+          "Date": "7/14 - 7/18",
+          "Time": "9:00 AM - 4:00 PM"
+        },
+        {
+          "Date": "7/28 - 8/1",
+          "Time": "9:00 AM - 4:00 PM"
+        }
+      ],
+      "Grade": "Entrepenur CAMP",
+      "CourseInfo": "https://codingmind.com/seattle/courses/science-fair-camp",
+      "Registration": [
+        "https://codingmind.com/seattle/course-info-register?course_id=67a23dbc86dcc1001586d23f&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a2796386dcc1001586d4f0&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a274f986dcc1001586d4a1&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a26fcc86dcc1001586d455&organizationId=6684406b10707d0014fb7369"
+      ],
+      "Price": "$900"
+    },
+    {
+      "Name": "科技初创公司101 - 青年软件创业者",
+      "Schedule": [
+        {
+          "Date": "6/16-6/20",
+          "Time": "9:00 AM - 4:00 PM"
+        },
+        {
+          "Date": "6/30 - 7/4",
+          "Time": "9:00 AM - 4:00 PM"
+        },
+        {
+          "Date": "7/14 - 7/18",
+          "Time": "9:00 AM - 4:00 PM"
+        },
+        {
+          "Date": "7/28 - 8/1",
+          "Time": "9:00 AM - 4:00 PM"
+        }
+      ],
+      "Grade": "Entrepenur CAMP",
+      "CourseInfo": "https://codingmind.com/seattle/courses/startup-camp",
+      "Registration": [
+        "https://codingmind.com/seattle/course-info-register?course_id=67a2438386dcc1001586d277&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a2864b86dcc1001586d53b&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a2762386dcc1001586d4b4&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a2710b86dcc1001586d468&organizationId=6684406b10707d0014fb7369"
+      ],
+      "Price": "$900"
+    },
+    {
+      "Name": "3D打印创造者 - 从概念到产品实现",
+      "Schedule": [
+        {
+          "Date": "6/23 - 6/27",
+          "Time": "9:00 AM - 4:00 PM"
+        },
+        {
+          "Date": "7/7 - 7/11",
+          "Time": "9:00 AM - 4:00 PM"
+        },
+        {
+          "Date": "7/21 - 7/25",
+          "Time": "9:00 AM - 4:00 PM"
+        }
+      ],
+      "Grade": "Entrepenur CAMP",
+      "CourseInfo": "https://codingmind.com/seattle/courses/3d-printing-camp",
+      "Registration": [
+        "https://codingmind.com/seattle/course-info-register?course_id=67a2851786dcc1001586d523&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a2775d86dcc1001586d4c7&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a272b486dcc1001586d47b&organizationId=6684406b10707d0014fb7369"
+      ],
+      "Price": "$900"
+    },
+    {
+      "Name": "智能科技探索 - 物联网系统创新设计",
+      "Schedule": [
+        {
+          "Date": "6/23 - 6/27",
+          "Time": "9:00 AM - 4:00 PM"
+        },
+        {
+          "Date": "7/7 - 7/11",
+          "Time": "9:00 AM - 4:00 PM"
+        },
+        {
+          "Date": "7/21 - 7/25",
+          "Time": "9:00 AM - 4:00 PM"
+        }
+      ],
+      "Grade": "Entrepenur CAMP",
+      "CourseInfo": "https://codingmind.com/seattle/courses/raspberry-pi-camp",
+      "Registration": [
+        "https://codingmind.com/seattle/course-info-register?course_id=67a27a6d86dcc1001586d505&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a2785f86dcc1001586d4da&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a273e786dcc1001586d48e&organizationId=6684406b10707d0014fb7369"
+      ],
+      "Price": "$900"
     }
   ]
 }

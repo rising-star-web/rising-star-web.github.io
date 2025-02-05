@@ -87,10 +87,27 @@ function updatePageContent(course, courseId, accountId, token) {
     document.getElementById("coursePrice").innerText = "TBD";
     document.getElementById("totalClasses").innerText = "TBD";
   } else {
+
     document.getElementById("instructorName").innerText = course.instructor
     ? `${course.instructor.firstName} ${course.instructor.lastName}`
     : "N/A";
+
     const courseTimeEl = document.getElementById('courseTime');
+    if (organizationId === "6684406b10707d0014fb7369") {
+      // Hide the entire row containing course time
+      const courseTimeRow = courseTimeEl.closest('tr');
+      if (courseTimeRow) {
+        courseTimeRow.style.display = "none";
+      }
+    } else {
+      const courseTimeRes = getCourseTime(course);
+      courseTimeEl.innerText = courseTimeRes;
+      // Make sure the row is visible for other organizations
+      const courseTimeRow = courseTimeEl.closest('tr');
+      if (courseTimeRow) {
+        courseTimeRow.style.display = "";
+      }
+    }
     const courseTimeRes = getCourseTime(course);
     courseTimeEl.innerText = courseTimeRes;
     //document.getElementById("courseTime").innerText = getCourseTime(course);
