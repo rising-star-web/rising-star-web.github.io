@@ -22,65 +22,6 @@ layout: locationdefault
 </section>
 <!-- /section -->
 
-<!-- <section class="wrapper bg-light">
-  <div class="container pt-8 pb-2 text-center">
-    <h2 class="display-4 mb-3">Back to School Promotion!</h2>
-    <p class="lead mb-6">Special offers for our programming courses</p>
-    <div class="row gx-lg-8 gx-xl-12 gy-6 process-wrapper">
-      <div class="col-md-4">
-        <div class="card shadow-lg">
-          <div class="card-body">
-            <h4 class="mb-1">Group Class</h4>
-            <p class="mb-0">All Levels & 1 HR</p>
-            <h3 class="price mt-2 mb-3">$180<span class="fs-18">/month(4)</span></h3>
-            <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
-              <li><span><i class="uil uil-check"></i></span><strong>10 Classes:</strong> <s>$450</s> $425 <span
-                  class="badge bg-pale-primary text-primary rounded">5% OFF</span></li>
-              <li><span><i class="uil uil-check"></i></span><strong>20 Classes:</strong> <s>$900</s> $810 <span
-                  class="badge bg-pale-primary text-primary rounded">10% OFF</span></li>
-              <li><span><i class="uil uil-check"></i></span><strong>30 Classes:</strong> <s>$1350</s> $1150 <span
-                  class="badge bg-pale-primary text-primary rounded">15% OFF</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card shadow-lg">
-          <div class="card-body">
-            <h4 class="mb-1">Private Class</h4>
-            <p class="mb-0">JR-L2 & 1 HR</p>
-            <h3 class="price mt-2 mb-3">$300<span class="fs-18">/month(4)</span></h3>
-            <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
-              <li><span><i class="uil uil-check"></i></span><strong>10 Classes:</strong> <s>$750</s> $715 <span
-                  class="badge bg-pale-primary text-primary rounded">5% OFF</span></li>
-              <li><span><i class="uil uil-check"></i></span><strong>20 Classes:</strong> <s>$1500</s> $1350 <span
-                  class="badge bg-pale-primary text-primary rounded">10% OFF</span></li>
-              <li><span><i class="uil uil-check"></i></span><strong>30 Classes:</strong> <s>$2250</s> $1910 <span
-                  class="badge bg-pale-primary text-primary rounded">15% OFF</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card shadow-lg">
-          <div class="card-body">
-            <h4 class="mb-1">Private Class</h4>
-            <p class="mb-0">L3+ & 1 HR</p>
-            <h3 class="price mt-2 mb-3">$340<span class="fs-18">/month(4)</span></h3>
-            <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
-              <li><span><i class="uil uil-check"></i></span><strong>10 Classes:</strong> <s>$850</s> $799 <span
-                  class="badge bg-pale-primary text-primary rounded">5% OFF</span></li>
-              <li><span><i class="uil uil-check"></i></span><strong>20 Classes:</strong> <s>$1700</s> $1530 <span
-                  class="badge bg-pale-primary text-primary rounded">10% OFF</span></li>
-              <li><span><i class="uil uil-check"></i></span><strong>30 Classes:</strong> <s>$2550</s> $2150 <span
-                  class="badge bg-pale-primary text-primary rounded">15% OFF</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
 <section class="wrapper bg-light">
   <div class="schedule-container pt-2 pb-19 pt-md-14 pb-md-20 text-center">
     <!-- <div class="mb-4">
@@ -267,6 +208,122 @@ function getSelectedDates() {
     }).get();
 }
 
+function createMobileCard(course) {
+    // Create main card container
+    var $card = $('<div>', { 
+        class: 'mobile-course-card'
+    });
+
+    // Create header section
+    var $header = $('<div>', { class: 'mobile-course-header' });
+    var $img = $('<img>', {
+        class: 'mobile-course-image',
+        src: '/img/my/app-dev-1.png',
+        alt: course.name
+    });
+    
+    var $info = $('<div>', { class: 'mobile-course-info' });
+    $info.append(
+        $('<h3>').text(course.name),
+        $('<div>', { class: 'mobile-course-age' }).text(`Ages: ${course.grade} • Beg-Adv`),
+        $('<div>', { class: 'mobile-course-age' }).text(`Price: ${course.price}`)
+    );
+    
+    $header.append($img, $info);
+
+    // Create action buttons
+    var $actions = $('<div>', { class: 'mobile-course-actions' });
+    var $courseInfoBtn = $('<button>', {
+        class: 'mobile-btn mobile-btn-outline',
+        text: 'Course info'
+    }).click(function() {
+        $("#myModal").find("#modalIframe").attr("src", course.courseInfo);
+        $("#myModal").modal("show");
+    });
+
+    var $viewDatesBtn = $('<button>', {
+        class: 'mobile-btn mobile-btn-dark',
+        text: 'View Dates'
+    }).click(function() {
+        var $datesSection = $(this).closest('.mobile-course-card').find('.mobile-dates-section');
+        var isVisible = $datesSection.is(':visible');
+        
+        $(this).text(isVisible ? 'View Dates' : 'Close Dates');
+        $datesSection.slideToggle();
+    });
+
+    $actions.append($courseInfoBtn, $viewDatesBtn);
+
+    // Create dates section
+    var $datesSection = $('<div>', { class: 'mobile-dates-section' });
+    
+    // Add date items
+    course.dates.forEach((scheduleInfo, date) => {
+        if (scheduleInfo) {
+            var $dateItem = createMobileDateItem(date, scheduleInfo);
+            $datesSection.append($dateItem);
+        }
+    });
+
+    // // Add "Try online" section
+    // var $tryOnline = $('<div>', { class: 'mobile-try-online' });
+    // $tryOnline.append(
+    //     $('<p>').text('Not finding a good option?'),
+    //     $('<button>', {
+    //         class: 'mobile-btn mobile-btn-outline',
+    //         text: 'Try online'
+    //     })
+    // );
+    
+    // $datesSection.append($tryOnline);
+
+    // Assemble the card
+    $card.append($header, $actions, $datesSection);
+
+    // Load actual image if available
+    if (course.courseInfo) {
+        $.get(course.courseInfo, function(data) {
+            var $html = $($.parseHTML(data));
+            var $image = $html.find('img:not([src$=".svg"])').eq(1);
+            if ($image.length) {
+                var imageUrl = new URL($image.attr("src"), course.courseInfo).href;
+                $img.attr('src', imageUrl);
+            }
+        });
+    }
+
+    return $card;
+}
+
+function createMobileDateItem(date, scheduleInfo) {
+    var $dateItem = $('<div>', { class: 'mobile-date-item' });
+    var $dateHeader = $('<div>', { class: 'mobile-date-header' });
+    
+    var $dateInfo = $('<div>', { class: 'mobile-date-info' });
+    $dateInfo.append(
+        $('<h4>').text(date),
+        $('<div>', { class: 'mobile-date-status' }).append(
+            $('<div>', { 
+                class: 'status-indicator ' + ('status-green')
+            }),
+            $('<span>').text('Open')
+        )
+    );
+
+    var $selectBtn = $('<button>', {
+        class: 'mobile-btn mobile-btn-dark',
+        text: 'Select Date',
+        'data-registration': scheduleInfo.registration
+    }).click(function() {
+        window.open($(this).data('registration'), '_blank');
+    });
+
+    $dateHeader.append($dateInfo, $selectBtn);
+    $dateItem.append($dateHeader);
+    
+    return $dateItem;
+}
+
 function populateFilteredGrid(scheduleData, selectedLocation, selectedGrades, selectedDates) {
     var $grid = $("#camp-registration-grid");
     $grid.empty();
@@ -275,28 +332,6 @@ function populateFilteredGrid(scheduleData, selectedLocation, selectedGrades, se
         '6/16 - 6/20', '6/23 - 6/27', '6/30 - 7/4', 
         '7/7 - 7/11', '7/14 - 7/18', '7/21 - 7/25', '7/28 - 8/1'
     ];
-
-    // Create table structure
-    var $table = $('<table class="table table-striped" style="width: 100%; table-layout: fixed;">');
-    var $thead = $("<thead>");
-
-      var $headerRow = $('<tr>', { 
-        class: 'header-row',
-        role: 'row' 
-    });
-
-    // Add course name header
-    $headerRow.append('<th class="course-col d-none d-xl-table-cell">Course Name</th>');
-
-    // Add date headers
-    dateRanges.forEach(date => {
-        $headerRow.append(`<th class="date-col">${date}</th>`);
-    });
-
-    $thead.append($headerRow);
-    $table.append($thead);
-
-    var $tbody = $("<tbody>");
 
     // Create course map for organizing data
     let courseMap = new Map();
@@ -327,6 +362,35 @@ function populateFilteredGrid(scheduleData, selectedLocation, selectedGrades, se
             }
         });
     });
+
+    // Create mobile view container
+    var $mobileCardsContainer = $('<div>', { class: 'mobile-cards-container' });
+    courseMap.forEach((course) => {
+        var $mobileCard = createMobileCard(course);
+        $mobileCardsContainer.append($mobileCard);
+    });
+
+    // Create desktop view container
+    var $desktopContainer = $('<div>', { class: 'desktop-container' });
+    var $table = $('<table class="table table-striped" style="width: 100%; table-layout: fixed;">');
+    var $thead = $("<thead>");
+    var $headerRow = $('<tr>', { 
+        class: 'header-row',
+        role: 'row' 
+    });
+
+    // Add course name header
+    $headerRow.append('<th class="course-col">Course Name</th>');
+
+    // Add date headers
+    dateRanges.forEach(date => {
+        $headerRow.append(`<th class="date-col">${date}</th>`);
+    });
+
+    $thead.append($headerRow);
+    $table.append($thead);
+
+    var $tbody = $("<tbody>");
 
     // Create rows for each course
     courseMap.forEach(course => {
@@ -376,38 +440,39 @@ function populateFilteredGrid(scheduleData, selectedLocation, selectedGrades, se
 
         // Add date cells
         dateRanges.forEach(date => {
-          var $dateCell = $('<td class="date-cell">');
-          var scheduleInfo = course.dates.get(date);
-          
-          var $content = $('<div class="date-content">');
-          if (scheduleInfo) {
-              $content.append(
-                  $('<p class="time">').text(scheduleInfo.time),
-                  $('<button>', {
-                      class: 'btn-join-today',
-                      text: 'Join Today',
-                      'data-registration': scheduleInfo.registration
-                  }).click(function(e) {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      window.open($(this).data('registration'), '_blank');
-                  })
-              );
-          } else {
-              $content.append('<div class="no-class">-</div>');
-          }
-          
-          $dateCell.append($content); // Add this line
-          $row.append($dateCell);
-      });
+            var $dateCell = $('<td class="date-cell">');
+            var scheduleInfo = course.dates.get(date);
+            
+            var $content = $('<div class="date-content">');
+            if (scheduleInfo) {
+                $content.append(
+                    $('<p class="time">').text(scheduleInfo.time),
+                    $('<button>', {
+                        class: 'btn-join-today',
+                        text: 'Join Today',
+                        'data-registration': scheduleInfo.registration
+                    })
+                );
+            } else {
+                $content.append('<div class="no-class">-</div>');
+            }
+            
+            $dateCell.append($content);
+            $row.append($dateCell);
+        });
 
         $tbody.append($row);
     });
 
     $table.append($tbody);
-    $grid.append($table);
+    $desktopContainer.append($table);
 
-    // Add event handlers
+    // Add both views to the grid with wrapper
+    var $gridWrapper = $('<div>', { class: 'grid-wrapper' });
+    $gridWrapper.append($mobileCardsContainer, $desktopContainer);
+    $grid.append($gridWrapper);
+
+    // Reinitialize event handlers
     $('.btn-learn-more').click(function(e) {
         e.preventDefault();
         e.stopPropagation();
@@ -423,252 +488,19 @@ function populateFilteredGrid(scheduleData, selectedLocation, selectedGrades, se
             window.open(registrationUrl, '_blank');
         }
     });
+
+    // Handle scroll for sticky header
     $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-    var headerOffset = $('#gradeFilter').offset().top;
-    
-    if (scroll > headerOffset) {
-        $('.header-row').addClass('scrolled');
-    } else {
-        $('.header-row').removeClass('scrolled');
-    }
-});
-
+        var scroll = $(window).scrollTop();
+        var headerOffset = $('#gradeFilter').offset().top;
+        
+        if (scroll > headerOffset) {
+            $('.header-row').addClass('scrolled');
+        } else {
+            $('.header-row').removeClass('scrolled');
+        }
+    });
 }
-
-  // function populateFilteredGrid(scheduleData, selectedLocation, selectedGrades, selectedDates) {
-  //   var $grid = $("#camp-registration-grid");
-  //   $grid.empty();
-
-  //   var dateRanges = [
-  //       '6/16 - 6/20', '6/23 - 6/27', '6/30 - 7/4', 
-  //       '7/7 - 7/11', '7/14 - 7/18', '7/21 - 7/25', '7/28 - 8/1'
-  //   ];
-
-  //   // Filter dateRanges if dates are selected
-  //   var displayedDates = selectedDates.length > 0 ? selectedDates : dateRanges;
-
-  //   // Create the grid structure with only the displayed dates
-  //   displayedDates.forEach(dateRange => {
-  //       var $dateColumn = $(`
-  //           <div class="day-column">
-  //               <h3 class="day-title">${dateRange}</h3>
-  //               <div class="course-container"></div>
-  //           </div>
-  //       `);
-  //       $grid.append($dateColumn);
-  //   });
-
-  //   // Populate the grid with courses
-  //   Object.entries(scheduleData).forEach(([location, courses]) => {
-  //       courses.forEach((course) => {
-  //           if (
-  //               (selectedLocation === "all" || location === selectedLocation) &&
-  //               (selectedGrades.length === 0 || selectedGrades.includes(course.Grade))
-  //           ) {
-  //               course.Schedule.forEach(schedule => {
-  //                   let formattedDate = schedule.Date.replace(/\s*-\s*/, ' - ');
-  //                   var dateIndex = displayedDates.indexOf(formattedDate);
-                    
-  //                   if (dateIndex !== -1) {
-  //                       var $courseCard = createCourseCard(course, schedule);
-  //                       $grid.find('.day-column').eq(dateIndex).find('.course-container').append($courseCard);
-  //                   }
-  //               });
-  //           }
-  //       });
-  //   });
-
-  //   // Sort courses within each date column by time
-  //   $('.day-column').each(function () {
-  //       var $column = $(this);
-  //       var $courses = $column.find('.course-card');
-  //       $courses.sort(function (a, b) {
-  //           // Convert time strings to comparable values for sorting
-  //           const getTimeValue = (timeStr) => {
-  //               if (!timeStr || timeStr === 'Time: TBD') return Number.MAX_VALUE;
-  //               const timeMatch = timeStr.match(/(\d+):(\d+)\s*(AM|PM)/i);
-  //               if (!timeMatch) return Number.MAX_VALUE;
-                
-  //               let [_, hours, minutes, period] = timeMatch;
-  //               hours = parseInt(hours);
-  //               if (period.toUpperCase() === 'PM' && hours !== 12) hours += 12;
-  //               if (period.toUpperCase() === 'AM' && hours === 12) hours = 0;
-                
-  //               return hours * 60 + parseInt(minutes);
-  //           };
-
-  //           const timeA = getTimeValue($(a).find('.course-info').first().text());
-  //           const timeB = getTimeValue($(b).find('.course-info').first().text());
-  //           return timeA - timeB;
-  //       });
-  //       $column.find('.course-container').empty().append($courses);
-  //   });
-  // }
-//   function createCourseCard(course, schedule) {
-//     var startTime = schedule.Time.split(' - ')[0];
-//     var scheduleIndex = course.Schedule.findIndex(s => 
-//         s.Day === schedule.Day && s.Time === schedule.Time
-//     );
-
-//     // Create the card container
-//     var $card = $('<div>', { 
-//         class: 'course-card', 
-//         'data-start-time': startTime,
-//         'data-registration': course.Registration[scheduleIndex]
-//     });
-
-//     // Build the inner content
-//     var $title = $('<h4>', { class: 'course-title', text: course.Name });
-//     var $time = $('<p>', { class: 'course-info', text: 'Time: ' + schedule.Time });
-//     var $grade = $('<p>', { class: 'course-info', text: 'Grade: ' + course.Grade });
-
-//     // Create the "Join Today" button
-//     var $joinTodayButton = $('<button>', {
-//         class: 'btn-learn-more btn-join-today',
-//         text: 'Join Today',
-//         'data-registration': course.Registration[scheduleIndex]
-//     });
-
-//     // Add click event directly to the "Join Today" button
-//     $joinTodayButton.on('click', function(e) {
-//         e.preventDefault();
-//         e.stopPropagation();
-//         var registrationUrl = $(this).data('registration');
-//         if (registrationUrl) {
-//             window.open(registrationUrl, '_blank');
-//         } else {
-//             console.error('Registration URL not found');
-//         }
-//     });
-
-//     // Create the "Learn More" button
-//     var $learnMoreButton = $('<button>', {
-//         class: 'btn-learn-more',
-//         text: 'Learn More',
-//         'data-course-info': course.CourseInfo,
-//         'data-bs-toggle': 'modal',
-//         'data-bs-target': '#myModal'
-//     });
-
-//     // Event listener for the "Learn More" button
-//     $learnMoreButton.on('click', function(e) {
-//         e.preventDefault();
-//         e.stopPropagation();
-//         $("#myModal").find("#modalIframe").attr("src", course.CourseInfo);
-//         $("#myModal").modal("show");
-//     });
-
-//     // Append all elements to the card
-//     $card.append($title, $time, $grade, $joinTodayButton, $learnMoreButton);
-
-//     return $card;
-// }
-
-// function createCourseCard(course, schedule) {
-//     var scheduleIndex = course.Schedule.findIndex(s => 
-//         s.Date === schedule.Date && s.Time === schedule.Time
-//     );
-
-//     // Create the card container
-//     var $card = $('<div>', { 
-//         class: 'course-card', 
-//         'data-registration': course.Registration[scheduleIndex]
-//     });
-
-//         // Create image container
-//     var $imageContainer = $('<div>', {
-//         class: 'image-container'
-//     });
-    
-//     // Add the image using createImageElement logic
-//     var defaultImageUrl = "/img/my/app-dev-1.png";
-//     if (course.CourseInfo) {
-//         $.get(course.CourseInfo, function(data) {
-//             var $html = $($.parseHTML(data));
-//             var $image = $html.find('img:not([src$=".svg"])').eq(1);
-            
-//             var imageUrl = $image.length ? 
-//                 new URL($image.attr("src"), course.CourseInfo).href : 
-//                 defaultImageUrl;
-                
-//             var $imageElement = $('<img>', {
-//                 class: 'course-image',
-//                 src: imageUrl,
-//                 alt: course.Name
-//             });
-//             $imageContainer.append($imageElement);
-//         }).fail(function() {
-//             var $imageElement = $('<img>', {
-//                 class: 'course-image',
-//                 src: defaultImageUrl,
-//                 alt: course.Name
-//             });
-//             $imageContainer.append($imageElement);
-//         });
-//     }
-
-//     // Create content container
-//     var $contentContainer = $('<div>', { class: 'content-container' });
-    
-//     // Build the inner content
-//     var $title = $('<h4>', { class: 'course-title', text: course.Name });
-//     var $time = $('<p>', { class: 'course-info', text: schedule.Time || 'Time: TBD' });
-//     var $grade = $('<p>', { class: 'course-info', text: 'Grade: ' + course.Grade });
-//     var $price = $('<p>', { class: 'course-info', text: 'Price: ' + course.Price });
-
-    
-//     // if (course.Price) {
-//     //     $contentContainer.append($price);
-//     // }
-
-//     // Create button container
-//     var $buttonContainer = $('<div>', { class: 'button-container' });
-
-//     // Create the "Join Today" button
-//     var $joinTodayButton = $('<button>', {
-//         class: 'btn-join-today',
-//         text: 'Join Today',
-//         'data-registration': course.Registration[scheduleIndex]
-//     });
-
-//     // Create the "Learn More" button
-//     var $learnMoreButton = $('<button>', {
-//         class: 'btn-learn-more',
-//         text: 'Learn More',
-//         'data-course-info': course.CourseInfo,
-//         'data-bs-toggle': 'modal',
-//         'data-bs-target': '#myModal'
-//     });
-
-//     // Add buttons to button container
-//     $buttonContainer.append($joinTodayButton, $learnMoreButton);
-
-//     // Append content to card
-//     $contentContainer.append($title, $time, $grade, $price);
-//     $card.append($imageContainer);
-//     $card.append($contentContainer, $buttonContainer);
-
-//     // Add click handlers
-//     $joinTodayButton.on('click', function(e) {
-//         e.preventDefault();
-//         e.stopPropagation();
-//         var registrationUrl = $(this).data('registration');
-//         if (registrationUrl) {
-//             window.open(registrationUrl, '_blank');
-//         }
-//     });
-
-//     $learnMoreButton.on('click', function(e) {
-//         e.preventDefault();
-//         e.stopPropagation();
-//         $("#myModal").find("#modalIframe").attr("src", course.CourseInfo);
-//         $("#myModal").modal("show");
-//     });
-
-//     return $card;
-// }
-
 
 function createCourseCard(course, schedule) {
     var scheduleIndex = course.Schedule.findIndex(s => 
@@ -827,12 +659,39 @@ function createCourseCard(course, schedule) {
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <style>
- /* Container Layout */
+/* Container and Grid Layout */
+.grid-wrapper {
+    width: 100%;
+    position: relative;
+    min-height: 200px;
+}
+
+.mobile-cards-container {
+    display: none;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+.desktop-container {
+    width: 100%;
+}
+
 .schedule-container {
-  max-width: 2400px;
-  width: 90%;
-  margin: 0 auto;
-  padding: 0 15px;
+    max-width: 2400px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
+    padding-bottom: 4rem;
+    min-height: 50vh;
+}
+
+.schedule-grid {
+    position: relative;
+    background: transparent;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 
 /* Table Styles */
@@ -846,7 +705,7 @@ function createCourseCard(course, schedule) {
 
 .table thead {
     position: sticky;
-    top: 72px; /* Adjust based on your header height */
+    top: 72px;
     z-index: 1020;
     background: white;
 }
@@ -864,7 +723,7 @@ function createCourseCard(course, schedule) {
     background-color: white;
     border-bottom: 2px solid #dee2e6;
     position: sticky;
-    top: 72px; /* Match thead top value */
+    top: 72px;
     z-index: 1020;
 }
 
@@ -877,11 +736,6 @@ function createCourseCard(course, schedule) {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-.schedule-grid {
-    padding-top: 0; /* Remove extra padding */
-    margin-top: 0;
-}
-
 .course-col {
     width: 300px;
 }
@@ -892,6 +746,7 @@ function createCourseCard(course, schedule) {
     vertical-align: middle;
 }
 
+/* Course Info Styles */
 .course-info-cell {
     padding: 1rem;
     vertical-align: top;
@@ -940,6 +795,7 @@ function createCourseCard(course, schedule) {
     color: #6c757d;
 }
 
+/* Date Cell Styles */
 .date-cell {
     text-align: center;
     vertical-align: middle;
@@ -963,8 +819,51 @@ function createCourseCard(course, schedule) {
     color: #adb5bd;
 }
 
-.table tbody tr:first-child td {
-    padding-top: 4rem;
+/* Mobile Course Card Styles */
+.mobile-course-card {
+    display: none;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.mobile-course-header {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    align-items: center;
+}
+
+.mobile-course-image {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.mobile-course-info {
+    flex-grow: 1;
+}
+
+.mobile-course-info h3 {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.mobile-course-age {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.mobile-course-actions {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
 }
 
 /* Button Styles */
@@ -1006,6 +905,33 @@ function createCourseCard(course, schedule) {
 .btn-join-us:hover {
     background-color: #0388c5;
     color: white;
+}
+
+.mobile-btn {
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.mobile-btn-outline {
+    border: 2px solid #04aaf4;
+    color: #04aaf4;
+    background: white;
+    max-width: 160px;
+    min-width: 90px
+}
+
+.mobile-btn-dark {
+    background: #1f2937;
+    color: white;
+    border: none;
+    min-width: 90px;
+    padding: 0.5rem 1rem;
 }
 
 /* Grade Button Styles */
@@ -1060,16 +986,56 @@ function createCourseCard(course, schedule) {
     margin-bottom: 20px;
 }
 
-/* Filter container styles */
-.schedule-grid {
-    position: relative;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    overflow-y: auto;
-    max-height: calc(100vh - 200px);
-    margin-top: 1rem;
-    height: calc(100vh - 300px);
+/* Mobile Dates Section */
+.mobile-dates-section {
+    display: none;
+    padding: 0.75rem;
+}
+
+.mobile-date-item {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.mobile-date-item:last-child {
+    border-bottom: none;
+}
+
+.mobile-date-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    gap: 0.5rem;
+}
+
+.mobile-date-info h4 {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.mobile-date-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.status-orange {
+    background-color: #f97316;
+}
+
+.status-green {
+    background-color: #22c55e;
 }
 
 /* Media Queries */
@@ -1106,14 +1072,58 @@ function createCourseCard(course, schedule) {
         max-height: none;
         overflow: visible;
     }
+
     .table tbody tr:first-child td {
         padding-top: 1rem;
     }
 }
 
 @media (max-width: 768px) {
+    .table {
+        display: none;
+    }
+    
+    .mobile-course-card {
+        display: block;
+    }
+
+    .desktop-container {
+        display: none;
+    }
+    
+    .mobile-cards-container {
+        display: block;
+    }
+
     .schedule-container {
-        padding: 0 5px;
+        width: 100%;
+        padding: 0 0.5rem;
+        padding-bottom: 60px;
+    }
+
+    .grid-wrapper {
+        margin-bottom: 2rem;
+    }
+
+    .mobile-btn-dark {
+        font-size: 0.8rem;
+        padding: 0.35rem 0.75rem;
+        min-width: 80px;
+        max-width: 160px;
+    }
+
+    .schedule-grid {
+        max-height: none;
+        overflow: visible;
+        box-shadow: none;
+        background: transparent;
+    }
+
+    .btn-learn-more,
+    .btn-join-today {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+        width: 90px;
     }
 
     .course-image-container {
@@ -1128,15 +1138,14 @@ function createCourseCard(course, schedule) {
         font-size: 0.8rem;
     }
 
-    .btn-learn-more,
-    .btn-join-today {
-        font-size: 0.75rem;
-        padding: 4px 8px;
-        width: 90px;
-    }
-
     .header-row th {
         padding: 0.75rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-container {
+        display: none;
     }
 }
 </style>
