@@ -112,6 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function createAccount(data) {
+    const password = data.password;
     data.username = `${data.username}${Math.floor(Math.random() * 900 + 100)}`; // Generates a random number from 100 to 999
     fetch(`${baseUrl}Account`, {
       method: "POST",
@@ -128,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
           token,
           price,
           data.username,
-          data.confirmPassword
+          password
         );
       })
       .catch((error) => {
@@ -265,21 +266,19 @@ function attachStudentToCourse(
   }
 
   function simulateLogin(username, password, studentId, courseId, price) {
-    //console.log("Simulating login", username, password);
-    password = password; // Password is not needed for this request
     fetch(`${baseUrl}Account/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ username,  password }),
+      body: JSON.stringify({
+        username: username,
+        password: password 
+       }),
     })
       .then((response) => response.json())
       .then((data) => {
-        //console.log("Logging in :", data);
-
-        token = data.id; // Update the token with a real, newly acquired one
-        //console.log("New token:", token);
+        // token = data.id; // Update the token with a real, newly acquired one
         fetchInvoices(studentId, courseId, price, token, true);
       })
       .catch((error) => {
