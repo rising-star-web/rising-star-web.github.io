@@ -278,7 +278,7 @@ function attachStudentToCourse(
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log("Login success", data);
+        // console.log("Login success", data);
         token = data.id; // Update the token with a real, newly acquired one
         fetchInvoices(studentId, courseId, price, token, true);
       })
