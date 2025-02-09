@@ -240,7 +240,8 @@ layout: locationdefault
     $info.append(
       $('<h3>').text(course.name),
       $('<div>', { class: 'mobile-course-age' }).text(`Ages: ${course.grade} • Beg-Adv`),
-      $('<div>', { class: 'mobile-course-age' }).text(`Price: ${course.price}`)
+      $('<div>', { class: 'mobile-course-age' }).text(`Price: ${course.price}`),
+      $('<div>', { class: 'mobile-course-age' }).text(`Discount: ${course.discount}`),
     );
 
     $header.append($img, $info);
@@ -361,6 +362,7 @@ layout: locationdefault
             name: course.Name,
             grade: course.Grade,
             price: course.Price,
+            discount: course.Discount,
             courseInfo: course.CourseInfo,
             dates: new Map()
           };
@@ -422,7 +424,6 @@ layout: locationdefault
         alt: course.name
       });
       $imageContainer.append($defaultImage);
-
       if (course.courseInfo) {
         $.get(course.courseInfo, function (data) {
           var $html = $($.parseHTML(data));
@@ -439,6 +440,7 @@ layout: locationdefault
         $('<h4>').text(course.name),
         $('<p>').text(`Grade: ${course.grade}`),
         $('<p>').text(`Price: ${course.price}`),
+        $('<p>').text(`Discount: ${course.discount}`),
         $('<button>', {
           class: 'btn-learn-more',
           text: 'Learn More',
@@ -562,9 +564,11 @@ layout: locationdefault
     var $time = $('<p>', { class: 'course-info', text: schedule.Time || 'Time: TBD' });
     var $grade = $('<p>', { class: 'course-info', text: 'Grade: ' + course.Grade });
     var $price = $('<p>', { class: 'course-info', text: 'Price: ' + course.Price });
+    var $discount = $('<p>', { class: 'course-info', text: 'Discount: ' + course.Discount });
+
 
     // Add content to content container
-    $contentContainer.append($title, $time, $grade, $price);
+    $contentContainer.append($title, $time, $grade, $price, $discount);
 
     // Create button container
     var $buttonContainer = $('<div>', { class: 'button-container' });
