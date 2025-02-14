@@ -3,7 +3,7 @@ layout: student_project_detail
 
 [//]: # (Project Card)
 coverImage: "/img/2025_update/Kevin_cover.jpg"
-pagePostDate: "14 January 2024"
+pagePostDate: "14 January 2025"
 studentName: "Kevin"
 projectName: "AI medical emergency training simulation system"
 projectCategory: "App Development"
