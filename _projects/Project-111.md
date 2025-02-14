@@ -15,5 +15,5 @@ bodyText1: "Kevin was admitted to the 2024 UC Berkeley CS program through the Ea
 bodyText2: "His path to success includes achievements such as Gold level in the Olympiad of Letters, development of an AI medical emergency training simulation system, an Apple Store app, university research internships, and community outreach, demonstrating his overall technical, academic, and social prowess. This achievement demonstrates his outstanding programming skills and highlights his innovative approach to solving real-world problems, making him an ideal candidate for the CS program at UC Berkeley."
 
 contentImage: "/img/2025_update/Kevin_1.jpg"
-contentImage2: "img/2025_update/Kevin_2.jpg"
+contentImage2: "/img/2025_update/Kevin_2.jpg"
 ---
