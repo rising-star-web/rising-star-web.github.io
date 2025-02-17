@@ -1,0 +1,17 @@
+name: CN
+
+location_summercamp:
+  header: 2025年夏令营注册
+  lead: 我们的夏令营体验在一个有趣的学习环境中提供了各种兴趣课程。
+  modal: 课程信息
+  gradeFilter: 选择年级
+  locationFilter: 全部地点
+  courseName: 课程名称
+  courseInfo: 课程信息
+  joinToday: 立即加入
+  learnMore: 了解更多
+  grade: 年级
+  price: 价格
+  discount: 折扣
+  availableDate: 开课日期
+  selectDate: 选择日期

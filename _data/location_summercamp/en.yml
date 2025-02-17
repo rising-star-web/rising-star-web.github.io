@@ -1,0 +1,17 @@
+name: EN
+
+location_summercamp:
+  header: 2025 Summer Camp Registration
+  lead: Our summer camp experience offers courses for every interest in a fun, learning environment.
+  modal: Course Info
+  gradeFilter: Select Grade
+  locationFilter: All Location
+  coursenName: Course Name
+  courseInfo: Course Info
+  joinToday: Join Today
+  learnMore: Learn More
+  grade: Grade
+  price: Price
+  discount: Discount
+  availableDate: Available Date
+  selectDate: Select Date

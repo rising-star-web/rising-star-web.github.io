@@ -6,10 +6,10 @@ layout: locationdefault
     <div class="row">
       <div class="col-md-10 col-lg-8 col-xl-8 col-xxl-6 mx-auto" data-cues="slideInDown" data-group="page-title">
         <h1 class="display-1 mb-4">
-          2025 Summercamp Schedule
+          {{ site.data.location_summercamp[page.locale].location_summercamp.header }}
         </h1>
         <p class="lead fs-lg px-xl-12 px-xxl-6 mb-7">
-          Our programming course schedule experience offers courses for every interest in a fun, learning environment.
+          {{ site.data.location_summercamp[page.locale].location_summercamp.lead }}
         </p>
       </div>
 
@@ -33,7 +33,8 @@ layout: locationdefault
       </select>
     </div>
     <div class="mx-2">
-      <label for="gradeFilter" class="h3 text-primary mb-2">Select Grade:</label>
+      <label for="gradeFilter" class="h3 text-primary mb-2"> {{ site.data.location_summercamp[page.locale].location_summercamp.gradeFilter }}
+      </label>
       <div id="gradeFilter" class="d-flex flex-wrap justify-content-center">
         <!-- Options will be added dynamically -->
         </select>
@@ -77,6 +78,13 @@ layout: locationdefault
 <script>
   var preference = window.location.href.indexOf("cn") == -1 ? "en" : "cn";
   var fileToFetch = "/assets/summercamp_seattle.json";
+
+  var translations = {
+    grade: '{{ site.data.location_summercamp[page.locale].location_summercamp.grade }}',
+    price: '{{ site.data.location_summercamp[page.locale].location_summercamp.price }}',
+    discount: '{{ site.data.location_summercamp[page.locale].location_summercamp.discount }}',
+    courseInfo: '{{ site.data.location_summercamp[page.locale].location_summercamp.courseInfo }}'
+  };
 
   $(document).ready(function () {
 
@@ -237,11 +245,11 @@ layout: locationdefault
     });
 
     var $info = $('<div>', { class: 'mobile-course-info' });
-    $info.append(
+      $info.append(
       $('<h3>').text(course.name),
-      $('<div>', { class: 'mobile-course-age' }).text(`Ages: ${course.grade} • Beg-Adv`),
-      $('<div>', { class: 'mobile-course-age' }).text(`Price: ${course.price}`),
-      $('<div>', { class: 'mobile-course-age' }).text(`Discount: ${course.discount}`),
+      $('<div>', { class: 'mobile-course-age' }).text(`${translations.grade}: ${course.grade}`),
+      $('<div>', { class: 'mobile-course-age' }).text(`${translations.price}: ${course.price}`),
+      $('<div>', { class: 'mobile-course-age' }).text(`${translations.discount}: ${course.discount}`)
     );
 
     $header.append($img, $info);
@@ -250,7 +258,7 @@ layout: locationdefault
     var $actions = $('<div>', { class: 'mobile-course-actions' });
     var $courseInfoBtn = $('<button>', {
       class: 'mobile-btn mobile-btn-outline',
-      text: 'Course info'
+      text: '{{ site.data.location_summercamp[page.locale].location_summercamp.joinToday }}',
     }).click(function () {
       $("#myModal").find("#modalIframe").attr("src", course.courseInfo);
       $("#myModal").modal("show");
@@ -258,7 +266,7 @@ layout: locationdefault
 
     var $viewDatesBtn = $('<button>', {
       class: 'mobile-btn mobile-btn-dark',
-      text: 'View Dates'
+      text: '{{ site.data.location_summercamp[page.locale].location_summercamp.availableDate }}',
     }).click(function () {
       var $datesSection = $(this).closest('.mobile-course-card').find('.mobile-dates-section');
       var isVisible = $datesSection.is(':visible');
@@ -327,7 +335,7 @@ layout: locationdefault
 
     var $selectBtn = $('<button>', {
       class: 'mobile-btn mobile-btn-dark',
-      text: 'Select Date',
+      text: '{{ site.data.location_summercamp[page.locale].location_summercamp.selectDate }}',
       'data-registration': scheduleInfo.registration
     }).click(function () {
       window.open($(this).data('registration'), '_blank');
@@ -396,7 +404,7 @@ layout: locationdefault
     });
 
     // Add course name header
-    $headerRow.append('<th class="course-col">Course Name</th>');
+    $headerRow.append('<th class="course-col">          {{ site.data.location_summercamp[page.locale].location_summercamp.courseName }}</th>');
 
     // Add date headers
     dateRanges.forEach(date => {
@@ -438,12 +446,12 @@ layout: locationdefault
       // Add course details
       var $details = $('<div class="course-details">').append(
         $('<h4>').text(course.name),
-        $('<p>').text(`Grade: ${course.grade}`),
-        $('<p>').text(`Price: ${course.price}`),
-        $('<p>').text(`Discount: ${course.discount}`),
+        $('<p>').text(`${translations.grade}: ${course.grade}`),
+        $('<p>').text(`${translations.price}: ${course.price}`),
+        $('<p>').text(`${translations.discount}: ${course.discount}`),
         $('<button>', {
           class: 'btn-learn-more',
-          text: 'Learn More',
+          text: '{{ site.data.location_summercamp[page.locale].location_summercamp.learnMore }}',
           'data-course-info': course.courseInfo,
           'data-bs-toggle': 'modal',
           'data-bs-target': '#myModal'
@@ -465,7 +473,7 @@ layout: locationdefault
             $('<p class="time">').text(scheduleInfo.time),
             $('<button>', {
               class: 'btn-join-today',
-              text: 'Join Today',
+              text: '{{ site.data.location_summercamp[page.locale].location_summercamp.joinToday }}',
               'data-registration': scheduleInfo.registration
             })
           );
@@ -562,9 +570,13 @@ layout: locationdefault
     // Build the inner content
     var $title = $('<h4>', { class: 'course-title', text: course.Name });
     var $time = $('<p>', { class: 'course-info', text: schedule.Time || 'Time: TBD' });
-    var $grade = $('<p>', { class: 'course-info', text: 'Grade: ' + course.Grade });
-    var $price = $('<p>', { class: 'course-info', text: 'Price: ' + course.Price });
-    var $discount = $('<p>', { class: 'course-info', text: 'Discount: ' + course.Discount });
+    // var $grade = $('<p>', { class: 'course-info', text: '{{ site.data.location_summercamp[page.locale].location_summercamp.grade }}: ' + course.Grade });
+    // var $price = $('<p>', { class: 'course-info', text: '{{ site.data.location_summercamp[page.locale].location_summercamp.price }}: ' + course.Price });
+    // var $discount = $('<p>', { class: 'course-info', text: '{{ site.data.location_summercamp[page.locale].location_summercamp.discount }}: ' + course.Discount });
+
+    var $grade = $('<p>', { class: 'course-info', text: translations.grade + ': ' + course.Grade });
+    var $price = $('<p>', { class: 'course-info', text: translations.price + ': ' + course.Price });
+    var $discount = $('<p>', { class: 'course-info', text: translations.discount + ': ' + course.Discount });
 
 
     // Add content to content container
@@ -576,13 +588,13 @@ layout: locationdefault
     // Create buttons
     var $joinTodayButton = $('<button>', {
       class: 'btn-join-today',
-      text: 'Join Today',
+      text: '{{ site.data.location_summercamp[page.locale].location_summercamp.joinToday }}',
       'data-registration': course.Registration[scheduleIndex]
     });
 
     var $learnMoreButton = $('<button>', {
       class: 'btn-learn-more',
-      text: 'Learn More',
+      text: '{{ site.data.location_summercamp[page.locale].location_summercamp.learnMore }}',
       'data-course-info': course.CourseInfo,
       'data-bs-toggle': 'modal',
       'data-bs-target': '#myModal'
