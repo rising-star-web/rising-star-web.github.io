@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/2025_update/Carolyn_cover.jpg"
+coverImage: "/img/2025_update/Carolyn-cover.jpg"
 pagePostDate: "16 January 2025"
 studentName: "Carolyn"
 projectName: "AI stock trading algorithm"
