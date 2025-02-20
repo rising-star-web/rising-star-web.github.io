@@ -5,7 +5,7 @@ layout: student_project_detail
 coverImage: "/img/2025_update/jay'cover.png"
 pagePostDate: "18 January 2025"
 studentName: "Jay"
-projectName: "AI AI voice sentiment analysis for elder"
+projectName: "AI voice sentiment analysis for elder"
 projectCategory: "App Development"
 projectDesc: "Admission to John Hopkins University"
 
