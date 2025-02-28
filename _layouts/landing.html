@@ -1,0 +1,880 @@
+---
+layout: default
+---
+<section id="free-trial" class="wrapper" style="overflow-x: clip; background-color: #e6f4ff;">
+  <div class="container pt-11 pt-md-13 pb-19 pb-md-17 position-relative">
+    <div class="position-absolute" style="top: -15%; left: 50%; transform: translateX(-50%); opacity:0.5;">
+      <img src="/assets/img/custom_photos/blurry.webp" data-cue="fadeIn" alt="">
+    </div>
+    <div class="row position-relative">
+      <!-- Image Column -->
+      <div class="col-lg-6 d-flex align-items-center justify-content-center position-relative">
+        <!-- Floating Elements -->
+        <div style="top: -5%; left: 15%;" data-cue="fadeIn" data-delay="1800" class="position-absolute shape primary w-12 d-none d-lg-block">
+          <figure>
+            <img src="/assets/img/custom_photos/lightbulb.png" alt="" class="">
+          </figure>
+        </div>
+        <div data-cue="fadeIn" data-delay="1800" style="bottom: 20%; left: 12%;" class="position-absolute shape primary w-10 d-none d-lg-block">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 457.71 446.45" data-inject-url="https://sandbox.elemisthemes.com/assets/img/svg/scribble.svg" class="svg-inject icon-svg w-100 h-100">
+            <path class="svg-fill" d="M205.62 442.54c-.51-.41-.99-.84-1.46-1.31-10.4-10.39-3.61-27.12 11.63-52.5 11.72-19.51 28.48-43.74 46.22-69.39 17.53-25.34 35.66-51.54 49.01-73.47 14.73-24.19-18.57-35.01 19.51-39.48-3.86-.28-13.15.3-33.78 6.52-19.71 5.94-43.09 14.92-65.7 23.6-63.8 24.49-85.35 31.41-96.51 19.5-3.21-3.43-7.62-11.04-1.12-23.54 2.49-4.79 6.64-10.51 12.68-17.5 10.4-12.03 25.04-26.34 40.55-41.49 14.02-13.7 28.53-27.87 39.53-40.11 9.93-11.04 14.15-17.43 15.94-20.82-3.43-.75-10.24-1.51-23.25-.92-14.99.68-33.44 2.89-51.28 5.02-46.92 5.61-74.09 8.33-86.81-.99-4.78-3.5-7.67-8.42-8.41-14.24-1.97-15.58 12.45-33.15 29.14-53.5 5.31-6.47 13.31-16.22 17.36-22.68-4.51-.38-12.43-.4-25.97 1.1-16.54 1.82-35.62 5.22-50.95 7.96-12.62 2.25-22.6 4.03-28.48 4.49C6.6 39.3.58 34.17.04 27.28c-.54-6.88 4.6-12.9 11.48-13.44 4.66-.37 14.58-2.13 26.06-4.18C54.56 6.63 75.7 2.86 94 1.07c26.41-2.6 40.16-.54 47.48 7.13 7.01 7.34 6.45 17.66-1.68 30.66-4.72 7.55-11.63 15.98-18.95 24.9-6.18 7.53-12.57 15.31-17.24 22.19-3.35 4.92-4.95 8.13-5.71 10.07 3 .54 9.09 1.08 20.87.43 13.21-.73 29.07-2.63 45.86-4.64 59.99-7.17 94.33-10.22 102.49 10.62 7.4 18.93-16.51 43.51-62.99 88.92-12.69 12.4-24.68 24.11-34.04 34.28-3.17 3.45-5.68 6.34-7.67 8.75 15.88-4.42 41.18-14.13 59.67-21.22 62.4-23.96 101.69-37.87 121.09-29.14 5.38 2.42 9.26 6.47 11.23 11.72 7.48 19.95-16.15 57.31-71.83 137.82-15.49 22.39-30.12 43.55-41.18 61.25-7.13 11.4-11.3 19.11-13.75 24.25 8.97-3.3 25.58-11 55.73-28.8 32.68-19.29 70.61-44.04 101.09-63.94 24.62-16.07 44.07-28.76 54.65-34.68 6.03-3.37 13.64-1.22 17.01 4.81 3.37 6.03 1.22 13.64-4.81 17.01-9.83 5.5-29.92 18.61-53.18 33.79-33.46 21.84-75.1 49.01-110.05 69.21-49.35 28.51-70.85 35.44-82.46 26.07z"></path>
+          </svg>
+        </div>
+        
+        <figure>
+          <img class="img-fluid" src="/assets/img/custom_photos/coders.webp" alt="Coding student">
+        </figure>
+      </div>
+      
+      <!-- Form Column -->
+      <div class="col-lg-6 text-center text-lg-start">
+        <!-- Header Content -->
+        <div class="text-center mb-5">
+          <h1 class="display-4 text-primary fw-bold mb-2" data-cue="slideInDown">
+            Coding Mind
+          </h1>
+          <h2 class="h3 mb-4" data-cue="slideInDown" data-delay="350">{{ site.data.landing[page.locale].home.header2 }}</h2>
+          <p id="formDescription" class="lead" data-cue="slideInDown">
+            {{ site.data.landing[page.locale].home.header3 }}
+          </p>
+          
+          <div class="d-flex justify-content-center">
+            <div id="formSpinner" class="spinner-border text-primary align-self-center" role="status" style="width: 3rem; height: 3rem; display: none;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Application Form -->
+        <div class="card shadow-lg mx-auto" style="max-width: 450px;" data-cue="fadeIn" data-delay="500">
+          <div class="card-body p-4">
+            <form id="form" class="contact-form needs-validation" novalidate>
+              <div class="messages"></div>
+              <div class="row gx-4">
+                <div class="col-md-12">
+                  <div class="form-floating mb-4">
+                    <input id="studentName" type="text" name="name" class="form-control" placeholder="{{ site.data.landing[page.locale].form.studentName }}" required>
+                    <label for="studentName">{{ site.data.landing[page.locale].form.studentName }}</label>
+                    <div class="invalid-feedback">
+                      Please provide student name.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-floating mb-4">
+                    <input id="studentGrade" type="text" name="studentGrade" class="form-control" placeholder="Ex: 5th Grade" required>
+                    <label for="studentGrade">{{ site.data.landing[page.locale].form.grade }}</label>
+                    <div class="invalid-feedback">
+                      Please provide student grade.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-select-wrapper mb-4">
+                    <select class="form-select" id="experience" name="experience" required>
+                      <option selected disabled value="">{{ site.data.landing[page.locale].form.experience }}</option>
+                      <option id="1" value="Never Learned Before">{{ site.data.landing[page.locale].form.none }}</option>
+                      <option id="2" value="Beginner">{{ site.data.landing[page.locale].form.beginner }}</option>
+                      <option id="3" value="Intermediate">{{ site.data.landing[page.locale].form.intermediate }}</option>
+                      <option id="4" value="Advanced">{{ site.data.landing[page.locale].form.advanced }}</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select coding experience.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-select-wrapper mb-4">
+                    <select class="form-select" id="campus" name="campus" required>
+                      <option selected disabled value="">{{ site.data.landing[page.locale].form.location }}</option>
+                      <option id="Irvine" value="Irvine">Irvine</option>
+                      <option id="Diamond Bar" value="Diamond Bar">Diamond Bar</option>
+                      <option id="Arcadia" value="Arcadia">Arcadia</option>
+                      <option id="West Lafayette" value="West Lafayette">West Lafayette</option>
+                      <option id="Online" value="Online">Online</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a location.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-floating mb-4">
+                    <input id="emailAddress" type="email" name="email" class="form-control" pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+$" placeholder="{{ site.data.landing[page.locale].form.parentEmail }}" required>
+                    <label for="emailAddress">{{ site.data.landing[page.locale].form.parentEmail }}</label>
+                    <div class="invalid-feedback">
+                      Please provide a valid email address.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-floating mb-4">
+                    <input id="phoneNumber" type="tel" name="phone" class="form-control" placeholder="{{ site.data.landing[page.locale].form.parentPhone }}" required>
+                    <label for="phoneNumber">{{ site.data.landing[page.locale].form.parentPhone }}</label>
+                    <div class="invalid-feedback">
+                      Please provide a valid phone number.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-select-wrapper mb-4">
+                    <select class="form-select" id="referral" name="referral" required>
+                      <option selected disabled value="">{{ site.data.landing[page.locale].form.hear }}</option>
+                      <option id="xiaohongshu" value="xiaohongshu">Xiaohongshu</option>
+                      <option id="Instagram" value="Instagram">Instagram</option>
+                      <option id="Facebook" value="Facebook">Facebook</option>
+                      <option id="WeChat" value="WeChat">WeChat</option>
+                      <option id="Official Website" value="Official Website">Official Website</option>
+                      <option id="Friend" value="Friend">Friend</option>
+                      <option id="Google" value="Google">Google</option>
+                      <option id="TikTok" value="TikTok">TikTok</option>
+                      <option id="Others" value="Others">Others</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select how you heard about us.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 mb-4">
+                  <textarea id="availability" name="availability" class="form-control" placeholder="{{ site.data.landing[page.locale].form.availability }}" style="height: 80px" required></textarea>
+                  <div class="invalid-feedback">
+                    Please provide your availability.
+                  </div>
+                </div>
+                <div class="col-12 text-center">
+                  <button type="submit" class="btn btn-primary rounded-pill btn-send w-100" style="background-color: #00a8ff;">{{ site.data.landing[page.locale].form.submit }}</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+        <!-- QR Code display -->
+        <div id="QRCode" class="col-xl-6 flex-column w-100 align-items-center mt-12" style="display: none;">
+          <div class="row">
+            <div class="mx-auto mt-8 mt-md-0 text-center">
+              <p class="lead text-center mb-10">{{ site.data.landing[page.locale].weChatDesc }}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="mx-auto mb-12">
+              <img class="h-22" src="/img/updated/qr.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Down Arrow -->
+    <div class="row mt-5">
+      <div class="col-12 text-center">
+        <a href="#program-overview" class="btn-scroll">
+          <i class="uil uil-arrow-down"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /section -->
+
+<!-- Stats Section -->
+<section class="wrapper bg-white">
+  <div class="container py-14 py-md-16">
+    <div class="row text-center">
+      <div class="col-lg-10 col-xl-8 col-xxl-7 mx-auto">
+        <h2 class="fs-16 text-uppercase text-primary mb-3">{{ site.data.landing[page.locale].stats.header }}</h2>
+        <h3 class="display-4 mb-10">{{ site.data.landing[page.locale].stats.lead }}</h3>
+      </div>
+    </div>
+    
+    <div class="row gx-lg-8 gy-8 text-center">
+      <!-- College Partners -->
+      <div class="col-md-3">
+        <div class="icon-box">
+          <div class="icon text-primary mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 2v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V2"></path>
+              <rect x="1" y="6" width="22" height="16" rx="2" ry="2"></rect>
+              <path d="M12 12h.01"></path>
+            </svg>
+          </div>
+          <h3 class="counter counter-lg text-primary">{{ site.data.landing[page.locale].stats.college }}</h3>
+          <p>{{ site.data.landing[page.locale].stats.collegeDesc }}</p>
+        </div>
+      </div>
+      
+      <!-- Unique Curriculum -->
+      <div class="col-md-3">
+        <div class="icon-box">
+          <div class="icon text-primary mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            </svg>
+          </div>
+          <h3 class="counter counter-lg text-primary">{{ site.data.landing[page.locale].stats.curriculum }}</h3>
+          <p>{{ site.data.landing[page.locale].stats.curriculumDesc }}</p>
+        </div>
+      </div>
+      
+      <!-- Instructors -->
+      <div class="col-md-3">
+        <div class="icon-box">
+          <div class="icon text-primary mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <h3 class="counter counter-lg text-primary">{{ site.data.landing[page.locale].stats.instructors }}</h3>
+          <p>{{ site.data.landing[page.locale].stats.instructorsDesc }}</p>
+        </div>
+      </div>
+      
+      <!-- Students Served -->
+      <div class="col-md-3">
+        <div class="icon-box">
+          <div class="icon text-primary mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3 class="counter counter-lg text-primary">{{ site.data.landing[page.locale].stats.students }}</h3>
+          <p>{{ site.data.landing[page.locale].stats.studentsDesc }}</p>
+        </div>
+      </div>
+      
+      <!-- Admissions -->
+      <div class="col-md-3">
+        <div class="icon-box">
+          <div class="icon text-primary mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <h3 class="counter counter-lg text-primary">{{ site.data.landing[page.locale].stats.admission }}</h3>
+          <p>{{ site.data.landing[page.locale].stats.admissionDesc }}</p>
+        </div>
+      </div>
+      
+      <!-- Research Projects -->
+      <div class="col-md-3">
+        <div class="icon-box">
+          <div class="icon text-primary mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </div>
+          <h3 class="counter counter-lg text-primary">{{ site.data.landing[page.locale].stats.research }}</h3>
+          <p>{{ site.data.landing[page.locale].stats.researchDesc }}</p>
+        </div>
+      </div>
+      
+      <!-- Competition Projects -->
+      <div class="col-md-3">
+        <div class="icon-box">
+          <div class="icon text-primary mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="7"></circle>
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+            </svg>
+          </div>
+          <h3 class="counter counter-lg text-primary">{{ site.data.landing[page.locale].stats.competition }}</h3>
+          <p>{{ site.data.landing[page.locale].stats.competitionDesc }}</p>
+        </div>
+      </div>
+      
+      <!-- Startup Projects -->
+      <div class="col-md-3">
+        <div class="icon-box">
+          <div class="icon text-primary mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+              <line x1="7" y1="7" x2="7.01" y2="7"></line>
+            </svg>
+          </div>
+          <h3 class="counter counter-lg text-primary">{{ site.data.landing[page.locale].stats.startup }}</h3>
+          <p>{{ site.data.landing[page.locale].stats.startupDesc }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /section -->
+
+  <!-- Pursuit of Excellence Cards -->
+  <section class="wrapper">
+    <div class="container pt-14">
+        <!--/column -->
+        <!-- <div class="row"> -->
+          <!-- <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mx-auto text-center">
+            <div class="post-category mb-3 text-primary">{{ site.data.home[page.locale].pursuit.header }}</div>
+            <h3 class="display-4 mb-10 px-xl-10 px-xxl-15">{{ site.data.home[page.locale].pursuit.lead }}</h3>
+          </div> -->
+          <!-- /column -->
+        <!-- </div> -->
+      <!--/.row -->
+
+      <div class="card mb-10 bg-soft-primary">
+        <div class="card-body pb-6 pt-6 px-6 px-md-12">
+          <div class="row">
+            <div class="col-lg-4 pb-12 align-self-center" data-cues="fadeIn">
+              <h3 class="h1 post-title mb-3">{{ site.data.landing[page.locale].pursuit.course }}</h3>
+              <p>{{ site.data.landing[page.locale].pursuit.coursedesc }}</p>
+              <a href="./courses" class="btn btn-primary rounded-pill mt-3">{{ site.data.home[page.locale].breakdown.learnMore }}</a>
+            </div>
+            <!-- /column -->
+            <div class="col-lg-7 offset-lg-1 align-self-end d-flex justify-content-center" data-cue="fadeIn">
+              <div class="w-md-75"><figure><img class="img-fluid h-50" src="/assets/img/showcases/research.webp" alt="" /></figure></div>
+            </div>
+            <!-- /column -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!--/.card-body -->
+      </div>
+
+      <div class="card mb-10 bg-soft-navy">
+        <div class="card-body pb-12 pt-6 pt-md-12 px-6 px-md-12">
+          <div class="row gy-10 align-items-center">
+            <div class="col-lg-4 order-lg-2 offset-lg-1" data-cues="fadeIn">
+              <h3 class="h1 post-title mb-3">{{ site.data.landing[page.locale].pursuit.project }}</h3>
+              <p>{{ site.data.landing[page.locale].pursuit.projectdesc }}</p>
+              <a href="./projects" class="btn btn-navy rounded-pill mt-3">{{ site.data.home[page.locale].breakdown.learnMore }}</a>
+            </div>
+            <!-- /column -->
+            <div class="col-lg-7" data-cue="fadeIn">
+              <figure><img class="img-fluid w-md-75" src="/assets/img/showcases/business.png" alt="" /></figure>
+            </div>
+            <!-- /column -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!--/.card-body -->
+      </div>
+
+  </div>
+    <!-- /.container -->
+  </section>
+  <!-- /section -->
+
+    <section class="wrapper bg-white">
+      <div class="container py-14 py-md-16">
+        <div class="row">
+          <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mx-auto text-center">
+            <h2 class="fs-15 text-uppercase text-primary mb-3">{{ site.data.landing[page.locale].success.header }}</h2>
+            <h3 class="display-4 mb-6 px-xl-10 px-xxl-15">{{ site.data.landing[page.locale].success.lead }}</h3>
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+        <div class="row gy-6">
+          <div class="col-md-4">
+            <div class="card shadow-lg">
+              <div class="card-body p-5">
+                <figure class="mb-5"><img src="/assets/img/avatars/u1.jpg" alt="" class="rounded-circle w-15 h-15" /></figure>
+                <h4 class="mb-1">{{ site.data.landing[page.locale].success.student1.name }}</h4>
+                <div class="meta mb-3">{{ site.data.landing[page.locale].success.student1.school }}</div>
+                <p class="mb-3">{{ site.data.landing[page.locale].success.student1.story }}</p>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            <div class="card shadow-lg">
+              <div class="card-body p-5">
+                <figure class="mb-5"><img src="/assets/img/avatars/u2.jpg" alt="" class="rounded-circle w-15 h-15" /></figure>
+                <h4 class="mb-1">{{ site.data.landing[page.locale].success.student2.name }}</h4>
+                <div class="meta mb-3">{{ site.data.landing[page.locale].success.student2.school }}</div>
+                <p class="mb-3">{{ site.data.landing[page.locale].success.student2.story }}</p>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            <div class="card shadow-lg">
+              <div class="card-body p-5">
+                <figure class="mb-5"><img src="/assets/img/avatars/u3.jpg" alt="" class="rounded-circle w-15 h-15" /></figure>
+                <h4 class="mb-1">{{ site.data.landing[page.locale].success.student3.name }}</h4>
+                <div class="meta mb-3">{{ site.data.landing[page.locale].success.student3.school }}</div>
+                <p class="mb-3">{{ site.data.landing[page.locale].success.student3.story }}</p>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+    
+<!-- Clients Section with Fixed Grid -->
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+    <div class="row">
+      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mx-auto text-center">
+        <h2 class="fs-15 text-uppercase text-primary mb-3">{{ site.data.landing[page.locale].clients.header }}</h2>
+        <h3 class="display-4 mb-10 px-xl-10 px-xxl-15">{{ site.data.landing[page.locale].clients.lead }}</h3>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    
+    <!-- Static client logo grid -->
+    <div class="row gx-lg-8 gy-5 justify-content-center">
+      <!-- Row 1 -->
+      <div class="col-6 col-md-4 col-lg-15">
+        <div class="px-md-3 px-lg-5 text-center client-logo">
+          <img src="/assets/img/partners/org1.jpg" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-15">
+        <div class="px-md-3 px-lg-5 text-center client-logo">
+          <img src="/assets/img/partners/org2.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-15">
+        <div class="px-md-3 px-lg-5 text-center client-logo">
+          <img src="/assets/img/partners/org3.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-15">
+        <div class="px-md-3 px-lg-5 text-center client-logo">
+          <img src="/assets/img/partners/org4.jpg" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-15">
+        <div class="px-md-3 px-lg-5 text-center client-logo">
+          <img src="/assets/img/partners/org5.jpg" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
+        </div>
+      </div>
+      
+      <!-- Row 2 -->
+      <div class="col-6 col-md-4 col-lg-15">
+        <div class="px-md-3 px-lg-5 text-center client-logo">
+          <img src="/assets/img/partners/org6.jpg" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-15">
+        <div class="px-md-3 px-lg-5 text-center client-logo">
+          <img src="/assets/img/partners/org7.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-15">
+        <div class="px-md-3 px-lg-5 text-center client-logo">
+          <img src="/assets/img/partners/org8.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-15">
+        <div class="px-md-3 px-lg-5 text-center client-logo">
+          <img src="/assets/img/partners/org9.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-15">
+        <div class="px-md-3 px-lg-5 text-center client-logo">
+          <img src="/assets/img/partners/org10.jpg" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
+        </div>
+      </div>
+      
+      <!-- Row 3 -->
+      <div class="col-6 col-md-4 col-lg-15">
+        <div class="px-md-3 px-lg-5 text-center client-logo">
+          <img src="/assets/img/partners/org11.jpg" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-15">
+        <div class="px-md-3 px-lg-5 text-center client-logo">
+          <img src="/assets/img/partners/org12.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-15">
+        <div class="px-md-3 px-lg-5 text-center client-logo">
+          <img src="/assets/img/partners/org13.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-15">
+        <div class="px-md-3 px-lg-5 text-center client-logo">
+          <img src="/assets/img/partners/org14.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-15">
+        <div class="px-md-3 px-lg-5 text-center client-logo">
+          <img src="/assets/img/partners/org15.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
+        </div>
+      </div>
+      
+      <!-- Row 4 -->
+      <div class="col-6 col-md-4 col-lg-15">
+        <div class="px-md-3 px-lg-5 text-center client-logo">
+          <img src="/assets/img/partners/university1.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-15">
+        <div class="px-md-3 px-lg-5 text-center client-logo">
+          <img src="/assets/img/partners/university2.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-15">
+        <div class="px-md-3 px-lg-5 text-center client-logo">
+          <img src="/assets/img/partners/university3.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-15">
+        <div class="px-md-3 px-lg-5 text-center client-logo">
+          <img src="/assets/img/partners/university4.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-15">
+        <div class="px-md-3 px-lg-5 text-center client-logo">
+          <img src="/assets/img/partners/university5.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+    
+    <style>
+      .col-lg-15 {
+        width: 20%;
+      }
+      
+      /* Make logos consistent size on all screens */
+      .client-logo {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      /* Responsive adjustments */
+      @media (max-width: 991.98px) {
+        .col-lg-15 {
+          width: 33.333%;
+        }
+      }
+      
+      @media (max-width: 767.98px) {
+        .col-lg-15 {
+          width: 50%;
+        }
+      }
+    </style>
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->
+    
+<!-- CTA Banner Section -->
+<section class="wrapper bg-gradient-primary">
+  <div class="container py-14 py-md-16 text-center">
+    <div class="row">
+      <div class="col-lg-10 col-xl-8 col-xxl-7 mx-auto">
+        <h2 class="display-4 mb-3 text-primary">{{ site.data.landing[page.locale].cta.header }}</h2>
+        <p class="lead fs-lg mb-6" style="color: #4a5568;">{{ site.data.landing[page.locale].cta.description }}</p>
+        <a href="#free-trial" class="btn btn-lg  btn-primary rounded-pill mb-0" >{{ site.data.landing[page.locale].cta.button }}</a>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->
+
+<!-- Trial Bottom-Side Button -->
+<div class="{{ site.data.landing[page.locale].trial.trialStyle }}">
+  <a href="#free-trial" class="btn btn-primary rounded-pill mt-3">
+    {{ site.data.landing[page.locale].trial.floatBtn }}
+    <!-- <img src="/assets/img/icons/solid/touchscreen.svg" class="svg-inject icon-svg icon-svg-xxs solid-mono w-4 ms-2 text-white h-4" alt="" /> -->
+  </a>
+</div>
+<!-- /.container -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<script type="text/javascript">
+  // Disable automated Bootstrap validation
+  window.addEventListener('load', function() {
+    // Find all forms with bootstrap validation and disable them
+    const bootstrapForms = document.querySelectorAll(".needs-validation");
+    if (bootstrapForms) {
+      bootstrapForms.forEach(form => {
+        form.classList.remove("needs-validation");
+      });
+    }
+  
+    // Phone formatting
+    const inputElement = document.getElementById('phoneNumber');
+    if (inputElement) {
+      inputElement.addEventListener('input', function(e) {
+        const x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+        e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? ' - ' + x[3] : '');
+      });
+    }
+    
+    // Completely remove any existing event handlers from the form
+    const formElement = document.getElementById('form');
+    if (formElement) {
+      // Clone and replace to remove all listeners
+      const formClone = formElement.cloneNode(true);
+      formElement.parentNode.replaceChild(formClone, formElement);
+      
+      // Disable default browser form submission
+      formClone.onsubmit = function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      };
+      
+      // Fix email pattern
+      const emailInput = formClone.querySelector('#emailAddress');
+      if (emailInput) {
+        emailInput.removeAttribute('pattern');
+      }
+      
+      const submitBtn = formClone.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        window.formSubmitted = false;
+        
+        submitBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+                    
+          if (window.formSubmitted) {
+            console.log("Form already submitted, preventing duplicate submission");
+            return false;
+          }
+          
+          // Custom validation
+          const formElements = formClone.querySelectorAll('input, select, textarea');
+          let isValid = true;
+          
+          formElements.forEach(el => {
+            if (el.hasAttribute('required') && !el.value) {
+              isValid = false;
+              el.classList.add('is-invalid');
+            } else {
+              el.classList.remove('is-invalid');
+            }
+            
+            // Email validation
+            if (el.type === 'email' && el.value) {
+              const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              if (!emailRegex.test(el.value)) {
+                isValid = false;
+                el.classList.add('is-invalid');
+              }
+            }
+          });
+          
+          if (!isValid) {
+            console.log("Form validation failed");
+            formClone.classList.add('was-validated');
+            return false;
+          }
+          
+          // Set global flag to prevent resubmission
+          window.formSubmitted = true;
+          
+          // Continue with submission
+          const formControls = document.querySelectorAll('#form *');
+          formControls.forEach(control => {
+            control.style.pointerEvents = "none";
+            control.style.opacity = "0";
+            control.style.transition = "opacity 0.5s ease";
+          });
+          
+          const spinner = document.getElementById('formSpinner');
+          if (spinner) spinner.style.display = "block";
+          
+          // Get form values using explicit IDs
+          const name = document.getElementById('studentName').value;
+          const email = document.getElementById('emailAddress').value;
+          const phone = document.getElementById('phoneNumber').value;
+          const grade = document.getElementById('studentGrade').value;
+          const experienceField = document.getElementById('experience');
+          const experience = experienceField.options[experienceField.selectedIndex].id;
+          const campusField = document.getElementById('campus');
+          const campusLocation = campusField.options[campusField.selectedIndex].id;
+          const referralField = document.getElementById('referral');
+          const referral = referralField.options[referralField.selectedIndex].id;
+          const availability = document.getElementById('availability').value;
+          
+          // API endpoint
+          let baseUrl = 'https://prod-sharemyworks-backend.herokuapp.com/api/';
+          
+          // Account data
+          let username = (name.replace(/\s+/g, '')).toLowerCase() + Math.floor(Math.random()*(999-100+1)+100);
+          let nameParts = name.split(' ');
+          let firstName = nameParts[0];
+          let lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : ' ';
+          
+          let accountData = {
+            email2: email,
+            phone2: phone,
+            username: username,
+            firstName: firstName,
+            lastName: lastName,
+            password: '123',
+            dateOfBirth: new Date().toISOString(),
+            grade: grade,
+            referralName: referral,
+            preferedLanguage: 'English'
+          };
+          
+          // Format for POST
+          var formBody = Object.keys(accountData)
+            .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(accountData[key]))
+            .join('&');
+                    
+          // First API call
+          fetch(baseUrl + 'Account', {
+            mode: "cors",
+            method: "post",
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+            },
+            body: formBody
+          })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+          })
+          .then(data => {
+            
+            // Trial class data
+            const studentId = data.id;
+            let trialData = {
+              codingExperience: experience,
+              availability: availability,
+              comment: "",
+              location: campusLocation,
+              signupTime: new Date().toISOString(),
+              accountId: studentId
+            };
+            
+            // Add organizationId based on location
+            if (campusLocation === 'Seattle') {
+              trialData.organizationId = '6684406b10707d0014fb7369';
+            } else if (campusLocation === 'San-diego' || campusLocation === 'Online-sd') {
+              trialData.organizationId = '66bf6a0dcdae5300148e3a2c';
+            }
+            
+            // Format for POST
+            var trialBody = Object.keys(trialData)
+              .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(trialData[key]))
+              .join('&');
+                        
+            // Second API call
+            return fetch(baseUrl + 'TrialClasses', {
+              mode: "cors",
+              method: "post",
+              headers: {
+                'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+              },
+              body: trialBody
+            });
+          })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+          })
+          .then(data => {
+            
+            const spinner = document.getElementById('formSpinner');
+            if (spinner) spinner.style.display = "none";
+            
+            const formDescription = document.getElementById('formDescription');
+            if (formDescription) formDescription.style.display = "none";
+            
+            const form = document.getElementById('form');
+            const messageElement = document.createElement('div');
+            messageElement.style.padding = "15px";
+            messageElement.style.marginBottom = "15px";
+            messageElement.style.color = "#155724";
+            messageElement.style.backgroundColor = "#d4edda";
+            messageElement.style.borderRadius = "4px";
+            
+            if (campusLocation === 'San-diego' || campusLocation === 'Online-sd') {
+              localStorage.setItem('formCompleted', 'true');
+              messageElement.textContent = window.location.href.indexOf("cn") != -1 ? 
+                '感谢您提交试课评估申请，我们的助理会尽快在第一时间联系您，确认试课细节。同时如果您有任何问题，请随时通过电话或者微信联系我们 (858) 588-7897 ' :
+                'Your trial class request has been processed. We will contact you shortly. Meanwhile, feel free to reach out us by +1 (858) 588-7897 or CodingMindSD@gmail.com if you have any questions.';
+              
+              form.innerHTML = '';
+              form.appendChild(messageElement);
+              
+              const qrCode = document.getElementById('QRCode');
+              if (qrCode) qrCode.style.display = "none";
+            } else {
+              messageElement.textContent = window.location.href.indexOf("cn") != -1 ? 
+                '感谢您提交试课评估申请，我们的助理会尽快在第一时间联系您，确认试课细节。同时如果您有任何问题，请随时通过电话或者微信联系我们 +1 (949) 236-7896' :
+                'Your free trial request has been processed. We will contact you shortly. Meanwhile, feel free to reach out us by +1 (949) 236-7896 if you have any questions.';
+              
+              form.innerHTML = '';
+              form.appendChild(messageElement);
+              
+              const qrCode = document.getElementById('QRCode');
+              if (qrCode) qrCode.style.display = "flex";
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            window.formSubmitted = false; // Reset flag to allow resubmission
+            
+            const spinner = document.getElementById('formSpinner');
+            if (spinner) spinner.style.display = "none";
+            
+            const formControls = document.querySelectorAll('#form *');
+            formControls.forEach(control => {
+              control.style.pointerEvents = "auto";
+              control.style.opacity = "1";
+            });
+            
+            const form = document.getElementById('form');
+            const errorMessage = document.createElement('div');
+            errorMessage.style.padding = "15px";
+            errorMessage.style.marginBottom = "15px";
+            errorMessage.style.color = "#721c24";
+            errorMessage.style.backgroundColor = "#f8d7da";
+            errorMessage.style.borderRadius = "4px";
+            errorMessage.textContent = 'An error has occurred. Please contact us at +1 (949) 236-7896 for help.';
+            
+            form.insertBefore(errorMessage, form.firstChild);
+          });
+        });
+      }
+    }
+    
+    // Smooth scrolling
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    anchorLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        if (this.getAttribute('href').startsWith('#')) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 20,
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    });
+  });
+  </script>

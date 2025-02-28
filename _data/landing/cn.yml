@@ -1,0 +1,138 @@
+name: 中文
+
+home:
+  header1: 学以致用
+  header2: "{ 编程助力名校申请 }"
+  header3: 免费试听
+  bullet1: 项目,
+  bullet2: 竞赛,
+  bullet3: 创业
+  bullet4: 名校
+  trial: 免费试听
+
+breakdown:
+  header: 我们的课程, 你们的收获
+  lead: 目标硬核成绩的课程选择
+  competitive: 竞技编程课程
+  coursebullet1: K-12 全课程体系
+  coursebullet2: 热门及应用主题
+  coursebullet3: 灵活的时间和课程模式选择
+  coursebullet4: 基于项目的学习
+  coursebullet5: 为竞赛做准备
+  enrichment: 背景提升项目
+  enrichmentbullet1: 为大学申请提升竞争力而设计
+  enrichmentbullet2: 以取得成绩为目标的项目计划
+  enrichmentbullet3: 针对不同专业申请的定制项目主题
+  enrichmentbullet4: 大学实验室实习机会
+  enrichmentbullet5: 成立创业公司、成为企业家
+  learnMore: 了解更多
+
+pursuit: 
+  header: 我们的学生成功
+  lead: 追求卓越之路
+  winner: 成为获胜者！
+  wheader: 赢得竞赛
+  wdesc: 在 Coding Mind，用创意取得胜利，学员们的项目为他们赢得了各种著名竞赛的荣誉！
+  developer: 成为开发者！
+  dheader: 开发产品
+  ddesc: 学员不仅仅是学习 - 他们还会将开发他们的创新项目发布到Apple、Google、Microsoft 和 Steam 等官方平台上，供全球用户下载！
+  scientist: 成为科学家！
+  sheader: 发表研究论文
+  sdesc: 在 Coding Mind，学生有机会在大学实验室中进行科学研究，并在顶级会议和期刊上发表学术论文。
+  entrepreneur: 成为企业家！
+  eheader: 启动创业公司
+  edesc: 在 Coding Mind，释放您的潜力 - 在青少年阶段开始把自己的项目变成创业公司，进行市场推广，产生收入。
+  influencer: 成为影响者！
+  iheader: 改变世界
+  idesc: 在 Coding Mind，激励社区，启发变革，我们学员的项目不仅仅局限于教室，还不断的通过科技在社区和社会中产生影响。
+  course: 探索我们的课程
+  coursedesc: 我们的课程注重"学以致用"，通过基于项目的作业提供真实世界的经验。我们超越传统教学方法，赋能学生通过创新项目应用编程技能，为竞赛、研究和创业挑战做好准备！
+  project: 学生项目
+  projectdesc: 探索由Coding Mind学生创建的精选作品集，展示他们的项目、编程能力等！在Coding Mind，赋能您的社区并激发变革，我们学生的项目超越课堂，创造真实世界的影响。
+
+trial:
+  header: 开启卓越之路
+  lead: 安排试听课程
+  header2: 从 Coding Mind 开始
+  lead2: 解锁您孩子的编码潜力，参加我们的免费试听与评估
+  btn: 预约您的免费试课
+  btn2: 预约您的免费试听
+  btn3: 预约您的试听课程
+  floatBtn: 免费试课
+  trialStyle: free-trial-wrap-cn
+
+stats:
+  header: 铺就你通往成功的道路
+  lead: 我们帮助学生圆梦
+  college: 15+
+  collegeDesc: 大学合作伙伴
+  curriculum: 100+
+  curriculumDesc: 独特课程
+  instructors: 250+
+  instructorsDesc: 优秀导师
+  students: 3000+
+  studentsDesc: 学生人数
+  admission: 90%+
+  admissionDesc: 进入前30名大学
+  research: 350+
+  researchDesc: 研究项目
+  competition: 450+
+  competitionDesc: 竞赛项目
+  startup: 500+
+  startupDesc: 创业项目
+
+form:
+  title: 申请免费试课
+  studentName: 学生姓名 *
+  experience: 学生编程经验 *
+  none: 无
+  beginner: 初学者
+  intermediate: 中级
+  advanced: 高级
+  period: 期望开始时间 *
+  asap: 尽快
+  weeks: 1-2周内
+  thisMonth: 本月内
+  nextMonth: 下个月
+  parentEmail: 家长电子邮箱 *
+  parentPhone: 家长电话 *
+  submit: 申请免费试课
+  required: 必填项
+  pleaseProvideName: 请提供名字
+  pleaseProvideEmail: 请提供邮箱
+  location: 请选择地点
+  availability: 请提供你想要试课的时间段
+  hear: 您是怎么了解到我们的
+  grade: 年级
+
+clients:
+  header: 我们的合作伙伴
+  lead: 受到这些顶尖学校和城市的信赖
+  client1: 伯克利联合学区
+  client2: 帕洛阿尔托联合学区
+  client3: 库比蒂诺联合学区
+  client4: 弗里蒙特联合学区
+
+cta:
+  header: 开启编程之旅
+  lead: 释放您孩子的编程潜能
+  description: 通过编程、人工智能和自信丰富您孩子的生活，让他们为未来做好准备。
+  button: 立即预约免费试课
+
+success:
+  header: 认识我们的校友
+  lead: 编程思维的学生及其成就
+  desc: 了解我们往届编程思维学生所取得的成就
+  seeall: 查看所有项目
+  student1:
+    name: "Mark Zhang"
+    school: "麻省理工学院电子工程与计算机科学"
+    story: "张浩在机器人领域主导了多个研究项目，发表了研究论文，并被麻省理工学院工程学院录取。"
+  student2:
+    name: "Jenna Li"
+    school: "加州大学伯克利分校计算机科学"
+    story: "李珍妮开发了一款利用计算机视觉和深度学习帮助早期检测眼疾的AI应用程序。她被加州大学伯克利分校计算机科学专业录取。"
+  student3:
+    name: "Matthew Wang"
+    school: "斯坦福人工智能"
+    story: "王马修创建了一款帮助老年人管理药物的移动应用，具有提醒和与护理人员连接等功能，现在已有数千人使用。"

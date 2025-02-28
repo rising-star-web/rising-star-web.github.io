@@ -1,0 +1,139 @@
+name: EN
+
+home:
+  header1: Learn By Doing
+  header2: "{ Your Way to Excellence }"
+  header3: Sign up for a free trial course at anywhere
+  bullet1: Projects,
+  bullet2: Competitions,
+  bullet3: More
+  bullet4: Premier Institutions
+  trial: Request a Free Trial
+
+breakdown:
+  header: Our Programs, Your Success
+  lead: Your Options at Coding Mind
+  competitive: Competitive Coding Courses
+  coursebullet1: Complete K-12 course pathway
+  coursebullet2: Trending and applied topics
+  coursebullet3: Flexible schedule and class mode choices
+  coursebullet4: Project-based Learning
+  coursebullet5: Prepare for Competitions
+  enrichment: Enrichment Passion Project
+  enrichmentbullet1: Designed for college application enrichment
+  enrichmentbullet2: Goal-driven project plan to gain accomplishments
+  enrichmentbullet3: Customized project topics for different majors
+  enrichmentbullet4: Conduct research in college labs
+  enrichmentbullet5: Launch your very own startup
+  learnMore: Learn More
+
+pursuit: 
+  header: OUR STUDENTS SUCCEED
+  lead: The Pursuit of Excellence
+  winner: Be a winner!
+  wheader: Win Competitions
+  wdesc: Turn ideas into victories with Coding Mind, where our students' projects pave the way to triumph in various prestigious competitions!
+  developer: Be a developer!
+  dheader: Make Products
+  ddesc: Students don't just learn - they create, launching their innovative projects on official platforms like Apple, Google, Microsoft, and Steam for the world to experience!
+  scientist: Be a scientist!
+  sheader: Publish Research Papers
+  sdesc: Students at Coding Mind gain opportunities to conduct scientific research in university labs and publish academic papers in top-tier conferences and journals.
+  entrepreneur: Be an entrepreneur!
+  eheader: Launch Startups
+  edesc: Unlock your potential with Coding Mind - where your projects can transform into thriving startups, generating real-world revenue.
+  influencer: Be a influencer!
+  iheader: Change The World
+  idesc: Empower your community and inspire change with Coding Mind, where our students' projects go beyond the classroom to create real-world impact. 
+  course: Explore Our Courses
+  coursedesc: Our courses focus on "Learning by Doing" with project-based assignments for real-world experience. We go beyond traditional methods, empowering students to apply coding skills through innovative projects that prepare them for competitions, research, and startup challenges!
+  project: Student Projects
+  projectdesc: Explore featured portfolios created by Coding Mind students that showcase their projects, programming abilities, and more! Empower your community and inspire change with Coding Mind, where our students' projects go beyond the classroom to create real-world impact.
+
+trial:
+  header: Start your way to excellence
+  lead: Schedule a Trial Class
+  header2: Get Started With Coding Mind
+  lead2: Unleash your child's coding potential with our free trial class.
+  btn: Book Your First Free Class
+  btn2: Book Your Free Trial
+  btn3: Book Your Trial Class
+  floatBtn: Request a Free Trial
+  trialStyle: free-trial-wrap
+
+stats:
+  header: Pave Your Way to Triumph
+  lead: We help students to pursuit their dreams
+  college: 15+
+  collegeDesc: College partners
+  curriculum: 100+
+  curriculumDesc: Unique curriculum
+  instructors: 250+
+  instructorsDesc: Instructors
+  students: 3000+
+  studentsDesc: Students served
+  admission: 90%+
+  admissionDesc: Admitted to the top 30
+  research: 350+
+  researchDesc: Research projects
+  competition: 450+
+  competitionDesc: Competition projects
+  startup: 500+
+  startupDesc: Entrepreneurial Projects
+
+form:
+  title: Request a Free Course
+  studentName: Student's Name *
+  experience: Student's Coding Experience *
+  none: None
+  beginner: Beginner
+  intermediate: Intermediate
+  advanced: Advanced
+  period: Preferred Course Starting Period *
+  asap: As soon as possible
+  weeks: 1-2 weeks
+  thisMonth: This month
+  nextMonth: Next month
+  parentEmail: Parent's Email Address *
+  parentPhone: Parent's Phone Number *
+  submit: Request a Free Course
+  required: These fields are required.
+  pleaseProvideName:  Please provide student name.
+  pleaseProvideEmail: Please provide parent email.
+  location: Please select location.
+  availability: Please share your available days/times for a free trial class
+  hear: How did you hear about us?
+  grade: Grade Level
+
+
+clients:
+  header: OUR CLIENTS
+  lead: Trusted By These Amazing Schools and Cities
+  client1: Berkeley Unified School District
+  client2: Palo Alto Unified School District
+  client3: Cupertino Union School District
+  client4: Fremont Unified School District
+
+cta:
+  header: START YOUR CODING JOURNEY
+  lead: Unleash Your Child's Coding Potential
+  description: Enrich your child's life with coding, AI, and confidence to prepare them for the future.
+  button: Book a Free Trial Today
+
+success:
+  header: Meet Our Alumni
+  lead: Coding Mind Student & Accompliments
+  desc: Check out what our previous Coding Mind students have achieved
+  seeall: See All Projects
+  student1:
+    name: "Mark Zhang"
+    school: "MIT EECS"
+    story: "Harry led multiple research projects in the field of robotics, published research papers, and was admitted to MIT's School of Engineering."
+  student2:
+    name: "Jenna Li"
+    school: "UC Berkeley CS"
+    story: "Janet developed an AI application that helps early detection of eye diseases using computer vision and deep learning. She was admitted to UC Berkeley's CS program."
+  student3:
+    name: "Matthew Wang"
+    school: "Stanford AI"
+    story: "Matthew created a mobile app to help elderly people manage medications, with features like reminders and connection to caregivers, now used by thousands."
