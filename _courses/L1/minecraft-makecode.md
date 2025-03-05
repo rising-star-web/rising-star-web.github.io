@@ -1,4 +1,3 @@
-@ -1,37 +1,37 @@
 ---
 layout: course_detail
 courseId: "CS101"
