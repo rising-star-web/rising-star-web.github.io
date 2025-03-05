@@ -4,7 +4,7 @@ courseId: CS101
 courseIconURL: https://firebasestorage.googleapis.com/v0/b/cm-base-f36b0.firebasestorage.app/o/uploads%2F1741216106734.png?alt=media&token=427d71a1-9c2d-49c6-b07a-63e2d38882c0
 price: TBD - not used yet
 extra: TBD - a backup field not used yet
-name: Minecraft Makecode 1: AI and Automation
+name: Minecraft Makecode 1 - AI and Automation
 coverImageURL: https://firebasestorage.googleapis.com/v0/b/cm-base-f36b0.firebasestorage.app/o/uploads%2F1741216106734.png?alt=media&token=427d71a1-9c2d-49c6-b07a-63e2d38882c0
 gradeLevel: L1 Block Programming
 pathway: Block Coding
