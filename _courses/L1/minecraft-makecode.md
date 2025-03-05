@@ -9,7 +9,7 @@ coverImageURL: https://firebasestorage.googleapis.com/v0/b/cm-base-f36b0.firebas
 gradeLevel: L1 Block Programming
 pathway: Block Coding
 skillLevel: Beginner
-shortDescription: Ignite Young Minds: Explore AI-Powered Adventures in Minecraft with Makecode Magic!
+shortDescription: Ignite Young Minds - Explore AI-Powered Adventures in Minecraft with Makecode Magic!
 description: Dive into the world of creativity and coding with our thrilling course, Minecraft Makecode 1: AI and Automation! Specially designed for young minds from 1st to 5th grade, this program introduces students to the engaging Makecode block programming language. As they navigate this intuitive learning journey, students will explore the exciting realms of Artificial Intelligence, unraveling its mysteries while crafting and automating enchanting Minecraft worlds. Perfect for budding tech enthusiasts, this course offers an exhilarating first programming experience that intertwines innovation with imagination, setting the foundation for their future in the tech-driven era.
 videoIntro: https://www.youtube.com/watch?v=bV9rn-BN8FM
 learningGoals:
