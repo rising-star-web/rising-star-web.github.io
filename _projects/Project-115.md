@@ -12,7 +12,7 @@ projectDesc: "Admission to NYU"
 [//]: # (Project Page/Showcase)
 headerTitle: "PlantSuperAI"
 bodyText1: "Dustin comes with a patented algorithm: simply take a picture of the soil surface, and the AI will automatically deconstruct the image texture and spectral data, and output a precise moisture level (Dry/Wet) and confidence report."
-bodyText2: "At the forefront of the intersection of science and technology and economy, he has built a comprehensive innovation platform with smart agriculture as a breakthrough, through component analysis and economic benefit assessment."
+bodyText2: "At the forefront of the intersection of science and technology and economy, he has built a comprehensive innovation platform with smart agriculture as a breakthrough, through component analysis and economic benefit assessment. His self-developed software and applied thesis patents formed a systematic, data-driven research system, which helped him successfully enroll in the economics program at NYU."
 
 contentImage: "/img/2025_update/Dustin_NYU.jpg"
 contentImage2: ""
