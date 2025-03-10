@@ -348,6 +348,10 @@ layout: locationdefault
     return $dateItem;
   }
 
+  function formatDateRange(range) {
+    return range.replace(/\b(\d\/)(\d)\b/g, (_, month, day) => `${month}0${day}`);
+  }
+
   function populateFilteredGrid(scheduleData, selectedLocation, selectedGrades, selectedDates) {
     var $grid = $("#camp-registration-grid");
     $grid.empty();
@@ -404,7 +408,7 @@ layout: locationdefault
 
     // Add date headers
     dateRanges.forEach(date => {
-      $headerRow.append(`<th class="date-col">${date}</th>`);
+      $headerRow.append(`<th class="date-col">${formatDateRange(date)}</th>`);
     });
 
     $thead.append($headerRow);
@@ -462,6 +466,7 @@ layout: locationdefault
       dateRanges.forEach(date => {
         var $dateCell = $('<td class="date-cell">');
         var scheduleInfo = course.dates.get(date);
+        console.log(scheduleInfo);
 
         var $content = $('<div class="date-content">');
         if (scheduleInfo) {
@@ -898,13 +903,11 @@ layout: locationdefault
     background-color: #04aaf4;
     color: white;
     border: none;
-    padding: 6px 12px;
+    padding: 6px 6px;
     border-radius: 4px;
     cursor: pointer;
     font-size: 0.8em;
     transition: background-color 0.3s ease;
-    width: 100px;
-    height: 28px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -141,7 +141,7 @@
         }
       ],
       "Grade": "G1-4",
-      "CourseInfo": "https://codingmind.com/seattle/courses/web-camp",
+      "CourseInfo": "https://codingmind.com/courses/microbit",
       "Registration": [
         "https://codingmind.com/seattle/course-info-register?course_id=67a25e8a86dcc1001586d2f1&organizationId=6684406b10707d0014fb7369",
         "https://codingmind.com/seattle/course-info-register?course_id=67a2662886dcc1001586d382&organizationId=6684406b10707d0014fb7369"
@@ -205,7 +205,7 @@
       "Name": "Python Programming and app development",
       "Schedule": [
         {
-          "Date": "6/16-6/20",
+          "Date": "6/16 - 6/20",
           "Time": "9:00 AM - 4:00 PM"
         },
         {
@@ -246,7 +246,7 @@
       "Name": "Web development",
       "Schedule": [
         {
-          "Date": "6/16-6/20",
+          "Date": "6/16 - 6/20",
           "Time": "9:00 AM - 4:00 PM"
         },
         {
@@ -320,7 +320,7 @@
       "Discount": "$630 for early bird registration before 4/15"
     },
     {
-      "Name": "Machine Learning",
+      "Name": "Generative AI 1 - Prompt Engineering",
       "Schedule": [
         {
           "Date": "6/23 - 6/27",
@@ -352,7 +352,7 @@
         }
       ],
       "Grade": "G5-8",
-      "CourseInfo": "https://codingmind.com/seattle/courses/ai-camp",
+      "CourseInfo": "https://codingmind.com/seattle/courses/gen-ai-1/",
       "Registration": [
         "https://codingmind.com/seattle/course-info-register?course_id=67a25dc386dcc1001586d2e3&organizationId=6684406b10707d0014fb7369",
         "https://codingmind.com/seattle/course-info-register?course_id=67a67ef61f24a300154dc550&organizationId=6684406b10707d0014fb7369",
@@ -369,7 +369,7 @@
       "Name": "AI创新工坊 - 打造科学竞赛项目",
       "Schedule": [
         {
-          "Date": "6/16-6/20",
+          "Date": "6/16 - 6/20",
           "Time": "9:00 AM - 4:00 PM"
         },
         {
@@ -400,7 +400,7 @@
       "Name": "科技初创公司101 - 青年软件创业者",
       "Schedule": [
         {
-          "Date": "6/16-6/20",
+          "Date": "6/16 - 6/20",
           "Time": "9:00 AM - 4:00 PM"
         },
         {
