@@ -333,6 +333,22 @@
         {
           "Date": "7/21 - 7/25",
           "Time": "9:00 AM - 4:00 PM"
+        },
+        {
+          "Date": "8/4 - 8/8",
+          "Time": "9:00 AM - 4:00 PM"
+        },
+        {
+          "Date": "8/11 - 8/15",
+          "Time": "9:00 AM - 4:00 PM"
+        },
+        {
+          "Date": "8/18 - 8/22",
+          "Time": "9:00 AM - 4:00 PM"
+        },
+        {
+          "Date": "8/25 - 8/29",
+          "Time": "9:00 AM - 4:00 PM"
         }
       ],
       "Grade": "G5-8",
@@ -340,7 +356,11 @@
       "Registration": [
         "https://codingmind.com/seattle/course-info-register?course_id=67a25dc386dcc1001586d2e3&organizationId=6684406b10707d0014fb7369",
         "https://codingmind.com/seattle/course-info-register?course_id=67a67ef61f24a300154dc550&organizationId=6684406b10707d0014fb7369",
-        "https://codingmind.com/seattle/course-info-register?course_id=67a2695886dcc1001586d3ca&organizationId=6684406b10707d0014fb7369"
+        "https://codingmind.com/seattle/course-info-register?course_id=67a2695886dcc1001586d3ca&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cdb19ba129130015c4fe7b&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cdb22da129130015c4fe89&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cdb2f3a129130015c4fe97&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cdb39fa129130015c4fea5&organizationId=6684406b10707d0014fb7369"
       ],
       "Price": "$700",
       "Discount": "$630 for early bird registration before 4/15"
