@@ -347,14 +347,10 @@ layout: default
         </div>
         <!--/.card-body -->
       </div>
-
   </div>
     <!-- /.container -->
-  </section>
-  <!-- /section -->
-
-    <section class="wrapper bg-white">
-      <div class="container py-14 py-md-16">
+    <section class="wrapper">
+      <div class="container py-7 py-md-14">
         <div class="row">
           <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mx-auto text-center">
             <h2 class="fs-15 text-uppercase text-primary mb-3">{{ site.data.landing[page.locale].success.header }}</h2>
@@ -362,54 +358,37 @@ layout: default
           </div>
           <!-- /column -->
         </div>
-        <!-- /.row -->
-        <div class="row gy-6">
-          <div class="col-md-4">
-            <div class="card shadow-lg">
-              <div class="card-body p-5">
-                <figure class="mb-5"><img src="/assets/img/avatars/u1.jpg" alt="" class="rounded-circle w-15 h-15" /></figure>
-                <h4 class="mb-1">{{ site.data.landing[page.locale].success.student1.name }}</h4>
-                <div class="meta mb-3">{{ site.data.landing[page.locale].success.student1.school }}</div>
-                <p class="mb-3">{{ site.data.landing[page.locale].success.student1.story }}</p>
+          <!--/column -->
+            <div class="swiper-container text-center mb-6" data-loop="true" data-autoplay="true" data-autoplaytime="5000" data-speed="5000" data-margin="30" data-dots="true" data-items-xl="3" data-items-md="2" data-items-xs="1">
+              <div class="swiper">
+                <div class="swiper-wrapper pb-10">
+                  {% for i in (1..10) %}
+                    {% assign studentKey = "student" | append: i %}
+                    <div class="swiper-slide">
+                      <div class="card shadow-lg flex-fill mt-10 mx-4" style="min-height: 90%">
+                        <div class="card-body p-5 d-flex flex-column">
+                          <figure class="mb-5">
+                            <img src="/img/updated/enrichment/student{{ i }}.png" alt="" class="rounded-circle w-15 h-15" />
+                          </figure>
+                          <h4 class="mb-1">{{ site.data.landing[page.locale].success[studentKey].name }}</h4>
+                          <div class="meta mb-3">{{ site.data.landing[page.locale].success[studentKey].school }}</div>
+                          <p class="mb-3">{{ site.data.landing[page.locale].success[studentKey].story }}</p>
+                        </div>
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+                <!--/.swiper-wrapper -->
               </div>
-              <!-- /.card-body -->
+              <!-- /.swiper -->
             </div>
-            <!-- /.card -->
-          </div>
-          <!-- /column -->
-          <div class="col-md-4">
-            <div class="card shadow-lg">
-              <div class="card-body p-5">
-                <figure class="mb-5"><img src="/assets/img/avatars/u2.jpg" alt="" class="rounded-circle w-15 h-15" /></figure>
-                <h4 class="mb-1">{{ site.data.landing[page.locale].success.student2.name }}</h4>
-                <div class="meta mb-3">{{ site.data.landing[page.locale].success.student2.school }}</div>
-                <p class="mb-3">{{ site.data.landing[page.locale].success.student2.story }}</p>
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
-          </div>
-          <!-- /column -->
-          <div class="col-md-4">
-            <div class="card shadow-lg">
-              <div class="card-body p-5">
-                <figure class="mb-5"><img src="/assets/img/avatars/u3.jpg" alt="" class="rounded-circle w-15 h-15" /></figure>
-                <h4 class="mb-1">{{ site.data.landing[page.locale].success.student3.name }}</h4>
-                <div class="meta mb-3">{{ site.data.landing[page.locale].success.student3.school }}</div>
-                <p class="mb-3">{{ site.data.landing[page.locale].success.student3.story }}</p>
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
-          </div>
-          <!-- /column -->
+            <!-- /.swiper-container -->
         </div>
-        <!-- /.row -->
+        <!--/.row -->
       </div>
       <!-- /.container -->
     </section>
-    <!-- /section -->
-    
+
 <!-- Clients Section with Fixed Grid -->
 <section class="wrapper bg-light">
   <div class="container py-14 py-md-16">

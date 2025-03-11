@@ -1,3 +1,6 @@
 node_modules
 **/.DS_Store
 _site
+
+# By Yu Cao (David): ignoring different local config files for Jekyll and vscode:
+.editorconfig

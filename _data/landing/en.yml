@@ -47,7 +47,7 @@ pursuit:
   idesc: Empower your community and inspire change with Coding Mind, where our students' projects go beyond the classroom to create real-world impact. 
   course: Explore Our Courses
   coursedesc: Our courses focus on "Learning by Doing" with project-based assignments for real-world experience. We go beyond traditional methods, empowering students to apply coding skills through innovative projects that prepare them for competitions, research, and startup challenges!
-  project: Student Projects
+  story: Student Projects
   projectdesc: Explore featured portfolios created by Coding Mind students that showcase their projects, programming abilities, and more! Empower your community and inspire change with Coding Mind, where our students' projects go beyond the classroom to create real-world impact.
 
 trial:
@@ -125,15 +125,43 @@ success:
   lead: Coding Mind Student & Accompliments
   desc: Check out what our previous Coding Mind students have achieved
   seeall: See All Projects
-  student1:
-    name: "Mark Zhang"
-    school: "MIT EECS"
-    story: "Harry led multiple research projects in the field of robotics, published research papers, and was admitted to MIT's School of Engineering."
-  student2:
-    name: "Jenna Li"
-    school: "UC Berkeley CS"
-    story: "Janet developed an AI application that helps early detection of eye diseases using computer vision and deep learning. She was admitted to UC Berkeley's CS program."
-  student3:
-    name: "Matthew Wang"
-    school: "Stanford AI"
-    story: "Matthew created a mobile app to help elderly people manage medications, with features like reminders and connection to caregivers, now used by thousands."
+  student1: 
+    name: Leo Lee
+    school: University of Pennsylvania
+    story: Developed a University Application Prediction App using AI and Big Data.
+  student2: 
+    name: Felliane Teng
+    school: California Institute of Technology
+    story: Developed a mobile app that locks users from accessing other applications until the alloted time is over.
+  student3: 
+    name: Kelvin Lee
+    school: UC Berkeley
+    story: Created a Time Management App using AI Chatbots to help students plan their activities automatically.
+  student4: 
+    name: Thomas Xiao
+    school: Carnegie Mellon University (Computer Science)
+    story: Thomas developed a safety driving software using IoT and computer vision algorithms that detects driver's level of alertness through facial recognition. He was admitted to the CMU Computer Science program.
+  student5: 
+    name: Andy Ma
+    school: NYU Stern (Business)
+    story: Andy analyzed entrepreneurial growth trends of small and medium-sized enterprises using big data analysis, published papers, and patents. He was admitted to NYU Stern Business School.
+  student6: 
+    name: Mark Zhang
+    school: MIT (Engineering)
+    story: Mark successfully reconstructed architectural facade images into design blueprints using artificial intelligence. He published papers and patents and was admitted to MIT's School of Engineering.
+  student7: 
+    name: Jenna Li
+    school: Cornell (Psychology)
+    story: Jenna designed an email efficiency enhancement plugin to boost user productivity from a psychological perspective. She published papers and patents and applied to Cornell's Psychology program.
+  student8: 
+    name: Matthew Wang
+    school: Stanford (Computer Science)
+    story: Matthew used AI algorithms to protect against network attacks targeting autonomous driving. He published papers and patents and was admitted to Stanford's Computer Science department.
+  student9: 
+    name: Arnold Gao
+    school: USC (Film Animation)
+    story: Arnold developed another intelligent movie editing software using computer vision. He released an app and obtained patents, leading to admission to USC's Film Animation program.
+  student10:
+    name: Angel Ge
+    school: Princeton (Data Science)
+    story: Angel innovatively improved the method of training large data models using artificial intelligence and machine learning. He won the Kaggle algorithm competition gold medal and was admitted to Princeton.
