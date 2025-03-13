@@ -358,8 +358,6 @@ layout: default
             <h2 class="fs-15 text-uppercase text-primary mb-3">{{ site.data.landing[page.locale].success.header }}</h2>
             <h3 class="display-4 mb-6 px-xl-10 px-xxl-15">{{ site.data.landing[page.locale].success.lead }}</h3>
           </div>
-          <!-- /column -->
-        </div>
           <!--/column -->
             <div class="swiper-container text-center mb-6" data-loop="true" data-autoplay="true" data-autoplaytime="5000" data-speed="5000" data-margin="30" data-dots="true" data-items-xl="3" data-items-md="2" data-items-xs="1">
               <div class="swiper">
@@ -405,113 +403,20 @@ layout: default
     
     <!-- Static client logo grid -->
     <div class="row gx-lg-8 gy-5 justify-content-center">
-      <!-- Row 1 -->
-      <div class="col-6 col-md-4 col-lg-15">
-        <div class="px-md-3 px-lg-5 text-center client-logo">
-          <img src="/assets/img/partners/org1.jpg" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
+      {% for i in (1..15) %}
+        <div class="col-6 col-md-4 col-lg-15">
+          <div class="px-md-3 px-lg-5 text-center client-logo">
+            <img src="/assets/img/partners/org{{ i }}.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
+          </div>
         </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-15">
-        <div class="px-md-3 px-lg-5 text-center client-logo">
-          <img src="/assets/img/partners/org2.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
+      {% endfor %}
+      {% for i in (1..5) %}
+        <div class="col-6 col-md-4 col-lg-15">
+          <div class="px-md-3 px-lg-5 text-center client-logo">
+            <img src="/assets/img/partners/university{{ i }}.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
+          </div>
         </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-15">
-        <div class="px-md-3 px-lg-5 text-center client-logo">
-          <img src="/assets/img/partners/org3.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-15">
-        <div class="px-md-3 px-lg-5 text-center client-logo">
-          <img src="/assets/img/partners/org4.jpg" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-15">
-        <div class="px-md-3 px-lg-5 text-center client-logo">
-          <img src="/assets/img/partners/org5.jpg" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
-        </div>
-      </div>
-      
-      <!-- Row 2 -->
-      <div class="col-6 col-md-4 col-lg-15">
-        <div class="px-md-3 px-lg-5 text-center client-logo">
-          <img src="/assets/img/partners/org6.jpg" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-15">
-        <div class="px-md-3 px-lg-5 text-center client-logo">
-          <img src="/assets/img/partners/org7.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-15">
-        <div class="px-md-3 px-lg-5 text-center client-logo">
-          <img src="/assets/img/partners/org8.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-15">
-        <div class="px-md-3 px-lg-5 text-center client-logo">
-          <img src="/assets/img/partners/org9.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-15">
-        <div class="px-md-3 px-lg-5 text-center client-logo">
-          <img src="/assets/img/partners/org10.jpg" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
-        </div>
-      </div>
-      
-      <!-- Row 3 -->
-      <div class="col-6 col-md-4 col-lg-15">
-        <div class="px-md-3 px-lg-5 text-center client-logo">
-          <img src="/assets/img/partners/org11.jpg" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-15">
-        <div class="px-md-3 px-lg-5 text-center client-logo">
-          <img src="/assets/img/partners/org12.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-15">
-        <div class="px-md-3 px-lg-5 text-center client-logo">
-          <img src="/assets/img/partners/org13.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-15">
-        <div class="px-md-3 px-lg-5 text-center client-logo">
-          <img src="/assets/img/partners/org14.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-15">
-        <div class="px-md-3 px-lg-5 text-center client-logo">
-          <img src="/assets/img/partners/org15.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
-        </div>
-      </div>
-      
-      <!-- Row 4 -->
-      <div class="col-6 col-md-4 col-lg-15">
-        <div class="px-md-3 px-lg-5 text-center client-logo">
-          <img src="/assets/img/partners/university1.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-15">
-        <div class="px-md-3 px-lg-5 text-center client-logo">
-          <img src="/assets/img/partners/university2.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-15">
-        <div class="px-md-3 px-lg-5 text-center client-logo">
-          <img src="/assets/img/partners/university3.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-15">
-        <div class="px-md-3 px-lg-5 text-center client-logo">
-          <img src="/assets/img/partners/university4.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-15">
-        <div class="px-md-3 px-lg-5 text-center client-logo">
-          <img src="/assets/img/partners/university5.png" alt="Client Logo" class="img-fluid" style="max-height: 60px; width: auto;">
-        </div>
-      </div>
+      {% endfor %}
     </div>
     <!-- /.row -->
     
