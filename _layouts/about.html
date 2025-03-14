@@ -59,48 +59,17 @@ layout: default
                     <div class="my-10"> 
                       <h2 class="h1 my-3">{{ site.data.about[page.locale].about.whyCM }}</h2>
                       <ul class="icon-list bullet-bg bullet-soft-primary">
-                        <li>
-                          <span><i class="uil uil-check"></i></span>
-                          
-                          <span>
-                            <h4 class="mb-1">{{ site.data.about[page.locale].about.point1 }}</h4>
-                            <p class="mb-0">{{ site.data.about[page.locale].about.point1Desc }}</p>
-                          </span>
-                         
-                        </li>
-                        <li>
-                          <span><i class="uil uil-check"></i></span>
-                          
-                          <span>
-                            <h4 class="mb-1">{{ site.data.about[page.locale].about.point2 }}</h4>
-                            <p class="mb-0">{{ site.data.about[page.locale].about.point2Desc }}</p>
-                          </span>
-                          
-                        </li>
-                        <li>
-                          <span><i class="uil uil-check"></i></span>
-                          <span>
-                            <h4 class="mb-1">{{ site.data.about[page.locale].about.point3 }}</h4>
-                            <p class="mb-0">{{ site.data.about[page.locale].about.point3Desc }}</p>
-                          </span>
-                          
-                        </li>
-                        <li>
-                          <span><i class="uil uil-check"></i></span>
-                          <span>
-                            <h4 class="mb-1">{{ site.data.about[page.locale].about.point4 }}</h4>
-                            <p class="mb-0">{{ site.data.about[page.locale].about.point4Desc }}</p>
-                          </span>
-                          
-                        </li>
-                        <li>
-                          <span><i class="uil uil-check"></i></span>
-                          <span>
-                            <h4 class="mb-1">{{ site.data.about[page.locale].about.point5 }}</h4>
-                            <p class="mb-0">{{ site.data.about[page.locale].about.point5Desc }}</p>
-                          </span>
-                          
-                        </li>
+                        {% for i in (1..5) %}
+                          {% assign pointKey = "point" | append: i %}
+                          {% assign pointDescKey = "point" | append: i | append: "Desc" %}
+                          <li>
+                            <span><i class="uil uil-check"></i></span>
+                            <span>
+                              <h4 class="mb-1">{{ site.data.about[page.locale].about[pointKey] }}</h4>
+                              <p class="mb-0">{{ site.data.about[page.locale].about[pointDescKey] }}</p>
+                            </span>
+                          </li>
+                        {% endfor %}
                       </ul>
                     </div>
 

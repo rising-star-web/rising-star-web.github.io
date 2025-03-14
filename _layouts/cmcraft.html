@@ -47,60 +47,16 @@ layout: default
                                 </p>
 
                                 <ul class="icon-list bullet-bg bullet-soft-primary">
-                                    <li>
-                                        <span><i class="uil uil-check"></i></span>
-
-                                        <span>
-                                            <p class="mb-0">{{ site.data.cmcraft[page.locale].features.p1 }}</p>
-                                        </span>
-
-                                    </li>
-                                    <li>
-                                        <span><i class="uil uil-check"></i></span>
-
-                                        <span>
-                                            <p class="mb-0">{{ site.data.cmcraft[page.locale].features.p2 }}
-                                            </p>
-                                        </span>
-
-                                    </li>
-                                    <li>
-                                        <span><i class="uil uil-check"></i></span>
-                                        <span>
-                                            <p class="mb-0">{{ site.data.cmcraft[page.locale].features.p3 }}
-                                            </p>
-                                        </span>
-
-                                    </li>
-                                    <li>
-                                        <span><i class="uil uil-check"></i></span>
-                                        <span>
-                                            <p class="mb-0">{{ site.data.cmcraft[page.locale].features.p4 }}
-                                            </p>
-                                        </span>
-
-                                    </li>
-                                    <li>
-                                        <span><i class="uil uil-check"></i></span>
-                                        <span>
-                                            <p class="mb-0">{{ site.data.cmcraft[page.locale].features.p5 }}
-                                            </p>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span><i class="uil uil-check"></i></span>
-                                        <span>
-                                            <p class="mb-0">{{ site.data.cmcraft[page.locale].features.p6 }}
-                                            </p>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span><i class="uil uil-check"></i></span>
-                                        <span>
-                                            <p class="mb-0">{{ site.data.cmcraft[page.locale].features.p7 }}
-                                            </p>
-                                        </span>
-                                    </li>
+                                    {% for i in (1..7) %}
+                                        {% assign key = "p" | append: i %}
+                                        <li>
+                                            <span><i class="uil uil-check"></i></span>
+                                            <span>
+                                                <p class="mb-0">{{ site.data.cmcraft[page.locale].features[key] }}
+                                                </p>
+                                            </span>
+                                        </li>
+                                    {% endfor %}
                                 </ul>
                             </div>
 
