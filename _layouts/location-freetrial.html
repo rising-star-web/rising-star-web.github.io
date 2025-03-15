@@ -118,6 +118,12 @@ layout: locationdefault
               {% elsif location_name == 'sandiego' %}
               <option id="San-diego" value="San-diego" selected>San Diego</option>
               <option id="Online-sd" value="Online-sd">Online</option>
+              {% elsif location_name == 'arcadia' %}
+              <option id="Arcadia" value="Arcadia">Arcadia</option>
+              <option id="Online" value="Online">{{ site.data.free-trial[page.locale].freetrial.campus5 }}</option>
+              {% elsif location_name == 'diamond-bar' %}
+              <option id="Diamond-bar" value="Diamond-bar">Diamond Bar</option>
+              <option id="Online" value="Online">{{ site.data.free-trial[page.locale].freetrial.campus5 }}</option>
               {% else %}
               <!-- <option id="San-diego" value="San-diego">San Diego</option> -->
               <option id="Seattle" value="Seattle">Seattle</option>
@@ -294,7 +300,7 @@ layout: locationdefault
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 
-<!-- Form submission code is located in assets/js/theme.js line 761 -->
+<!-- Form submission code is located in assets/js/theme.js line 781 -->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"
   integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 <script type="text/javascript">
