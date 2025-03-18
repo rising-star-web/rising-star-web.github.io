@@ -1,0 +1,739 @@
+---
+layout: default
+---
+<section class="wrapper bg-light" style="background-color: #e6f2ff;">
+    <div class="container pt-8 pt-md-12 pb-8 pb-md-8 ">
+        <div class="row gx-lg-8 gx-xl-0 gy-10 align-items-start ">
+            <!--/column -->
+            <div class="col-lg-8 col-xl-7 mx-auto p-5 rounded-3 text-center bg-gradient-primary">
+                <h2 class="display-2 mb-3">Application Form</h2>
+                <p id="formDescription" class="lead mb-8 pe-xl-10">Please complete all fields to submit your
+                    application.</p>
+
+                <div class="d-flex justify-content-center">
+                    <div id="formSpinner" class="spinner-border text-navy align-self-center" role="status"
+                        style="width: 3rem; height: 3rem; display: none;">
+                    </div>
+                </div>
+
+                <form id="form" enctype="multipart/form-data" class="contact-form needs-validation" novalidate>
+                    <div class="messages"></div>
+
+                    <!-- First Name -->
+                    <div class="form-floating mb-4">
+                        <input id="firstName" type="text" name="firstName" class="form-control" placeholder="First name"
+                            required="required" data-error="First name is required.">
+                        <label for="firstName">Legal First Name</label>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter your first name
+                        </div>
+                    </div>
+
+                    <!-- Preferred Name -->
+                    <div class="form-floating mb-4">
+                        <input id="preferredName" type="text" name="preferredName" class="form-control"
+                            placeholder="Preferred name">
+                        <label for="preferredName">Preferred Name</label>
+                    </div>
+
+                    <!-- Last Name -->
+                    <div class="form-floating mb-4">
+                        <input id="lastName" type="text" name="lastName" class="form-control" placeholder="Last name"
+                            required="required" data-error="Last name is required.">
+                        <label for="lastName">Legal Last Name</label>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter your last name
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-floating mb-4">
+                        <input id="emailAddress" type="email" name="emailAddress" class="form-control"
+                            pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+$" placeholder="email@example.com"
+                            required="required" data-error="Valid email is required.">
+                        <label for="emailAddress">Email</label>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter a valid email address
+                        </div>
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div class="form-floating mb-4">
+                        <input id="phoneNumber" type="tel" maxlength="16" name="phoneNumber" class="form-control"
+                            placeholder="(123)-456-7890" required="required"
+                            data-error="Valid phone number is required.">
+                        <label for="phoneNumber">Phone Number</label>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter a valid phone number
+                        </div>
+                    </div>
+
+                    <!-- Are you 18 years or older? -->
+                    <div class="form-floating mb-4">
+                        <select class="form-select" id="ageCheck" name="ageCheck" required>
+                            <option value="" selected disabled>Select an option</option>
+                            <option value="18 years or older">18 years or older</option>
+                            <option value="Less than 18 years old">Less than 18 years old</option>
+                        </select>
+                        <label for="ageCheck">Are you 18 years or older? <span class="text-danger">*</span></label>
+                        <div class="invalid-feedback">
+                            Please select an option
+                        </div>
+                    </div>
+
+                    <!-- Pronouns -->
+
+                    <div class="form-floating mb-4">
+                        <select class="form-select" id="pronouns" name="pronouns" required
+                            onchange="showOtherPronounsField()">
+                            <option value="" selected disabled>Select an option</option>
+                            <option value="he/him">he/him</option>
+                            <option value="she/her">she/her</option>
+                            <option value="he/they">he/they</option>
+                            <option value="she/they">she/they</option>
+                            <option value="they/them">they/them</option>
+                            <option value="Rather not say">Rather not say</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <label for="pronouns">Pronouns <span class="text-danger">*</span></label>
+                        <div class="invalid-feedback">
+                            Please select an option
+                        </div>
+                        <small class="form-text text-muted">This a subset that helps us in communication. If your
+                            preferred pronouns are not listed, please select "Other".</small>
+                    </div>
+                    <div id="otherPronounsField" class="mb-4" style="display: none;">
+                        <input type="text" class="form-control" id="otherPronounsText" name="otherPronounsText"
+                            placeholder="Please specify your pronouns">
+                    </div>
+
+                    <!-- Position -->
+                    <div class="form-floating mb-4">
+                        <select class="form-select" id="position" name="position" required>
+                            <option value="" selected disabled>Select an option</option>
+                            <option value="Operation"> Operation</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Web Developer">Web Developer</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <label for="availability">Applying Position <span class="text-danger">*</span></label>
+                        <div class="invalid-feedback">
+                            Please select an option
+                        </div>
+                    </div>
+                    <!-- Consistent Weekly Availability -->
+                    <div class="form-floating mb-4">
+                        <select class="form-select" id="availability" name="availability" required>
+                            <option value="" selected disabled>Select an option</option>
+                            <option value="I do not have consistent availability">I do not have consistent availability
+                            </option>
+                            <option value="I can only commit to less than 16 weeks (~4 months)">I can only commit to
+                                less than 16 weeks (~4 months)</option>
+                            <option value="I can commit to 16+ weeks, up to 1 year">I can commit to 16+ weeks, up to 1
+                                year</option>
+                            <option value="I am looking to work for over 1 year">I am looking to work for over 1 year
+                            </option>
+                        </select>
+                        <label for="availability">Consistent Weekly Availability <span
+                                class="text-danger">*</span></label>
+                        <div class="invalid-feedback">
+                            Please select an option
+                        </div>
+                    </div>
+
+
+                    <!-- Hours you are looking to work -->
+                    <div class="form-floating mb-4">
+                        <select class="form-select" id="hours" name="hours" required>
+                            <option value="" selected disabled>Select an option</option>
+                            <option value="0 - 4">0 - 4</option>
+                            <option value="5 - 9">5 - 9</option>
+                            <option value="10 - 19">10 - 19</option>
+                            <option value="20+">20+</option>
+                        </select>
+                        <label for="hours">Hours you are looking to work <span class="text-danger">*</span></label>
+                        <div class="invalid-feedback">
+                            Please select an option
+                        </div>
+                    </div>
+
+                    <!-- Major -->
+                    <div class="form-floating mb-4">
+                        <input id="major" type="text" name="major" class="form-control" placeholder="Your major"
+                            required="required" data-error="Major is required.">
+                        <label for="major">Major (Completed, intended or currently pursuing)</label>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter your major
+                        </div>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="form-floating mb-4">
+                        <select class="form-select" id="education" name="education" required>
+                            <option value="" selected disabled>Select an option</option>
+                            <option value="High School">High School</option>
+                            <option value="Associate's Degree">Associate's Degree</option>
+                            <option value="Bachelor's Degree">Bachelor's Degree</option>
+                            <option value="Master's Degree">Master's Degree</option>
+                            <option value="Doctorate Degree">Doctorate Degree</option>
+                        </select>
+                        <label for="education">Education (Highest level of education achieved or currently pursuing)
+                            <span class="text-danger">*</span></label>
+                        <div class="invalid-feedback">
+                            Please select an option
+                        </div>
+                    </div>
+
+                    <!-- School -->
+                    <div class="form-floating mb-4">
+                        <input id="school" type="text" name="school" class="form-control" placeholder="Your school"
+                            required="required" data-error="School is required.">
+                        <label for="school">School (Current school you are attending or last graduated)</label>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter your school
+                        </div>
+                    </div>
+
+                    <!-- Resume Upload -->
+                    <div class="mb-4">
+                        <label for="resume" class="form-label">Resume <span class="text-danger">*</span></label>
+                        <input class="form-control" type="file" id="resume" name="resume" required="required"
+                            accept=".pdf,.doc,.docx">
+                        <div class="invalid-feedback">
+                            Please upload your resume
+                        </div>
+                        <small class="form-text text-muted">Accepted formats: PDF, DOC, DOCX. Maximum file size:
+                            5MB.</small>
+                    </div>
+
+
+                    <!-- Select all subjects you have experience in -->
+                    <div class="form-group mb-4">
+                        <div class="row">
+                            <!-- Locations -->
+                            <div class="form-group mb-4">
+                                <label class="form-label">Locations <span class="text-danger">*</span></label>
+                                <small class="form-text text-muted d-block mb-2">We operate both online and in-person.
+                                    Our in-person classes home office is in Irvine, CA. We also do off-site classes in
+                                    several regions, so please select all that apply to you. In-person locations assume
+                                    you have reliable access to transportation. There are more incentives and
+                                    opportunities if you are local and able to come in the office and conduct in-person
+                                    classes.</small>
+
+                                <div id="locations-container">
+                                    <div class="form-check">
+                                        <input class="form-check-input location-checkbox" type="checkbox"
+                                            name="locations" id="irvine" value="Irvine, CA">
+                                        <label class="form-check-label" for="irvine">
+                                            Irvine, CA
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input location-checkbox" type="checkbox"
+                                            name="locations" id="arcadia" value="Arcadia, CA">
+                                        <label class="form-check-label" for="arcadia">
+                                            Arcadia, CA
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input location-checkbox" type="checkbox"
+                                            name="locations" id="diamondBar" value="Diamond Bar, CA">
+                                        <label class="form-check-label" for="diamondBar">
+                                            Diamond Bar, CA
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input location-checkbox" type="checkbox"
+                                            name="locations" id="westLafayette" value="West Lafayette, Indiana">
+                                        <label class="form-check-label" for="westLafayette">
+                                            West Lafayette, Indiana
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input location-checkbox" type="checkbox"
+                                            name="locations" id="bothell" value="Bothell, WA">
+                                        <label class="form-check-label" for="bothell">
+                                            Bothell, WA
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input location-checkbox" type="checkbox"
+                                            name="locations" id="redmond" value="Redmond, WA">
+                                        <label class="form-check-label" for="redmond">
+                                            Redmond, WA
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input location-checkbox" type="checkbox"
+                                            name="locations" id="sanDiego" value="San Diego, CA">
+                                        <label class="form-check-label" for="sanDiego">
+                                            San Diego, CA
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input location-checkbox" type="checkbox"
+                                            name="locations" id="online" value="Online">
+                                        <label class="form-check-label" for="online">
+                                            Online
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input location-checkbox" type="checkbox"
+                                            name="locations" id="factoria" value="Factoria, WA">
+                                        <label class="form-check-label" for="factoria">
+                                            Factoria, WA
+                                        </label>
+                                    </div>
+                                    <!-- Hidden input for validation -->
+                                    <input type="hidden" id="location-validator" name="location-validator" required>
+                                    <div class="invalid-feedback">
+                                        Please select at least one location
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Language Proficiency -->
+                            <div class="form-group mb-4">
+                                <label class="form-label">Language Proficiency</label>
+                                <small class="form-text text-muted d-block mb-2">The majority of our classes are taught
+                                    in English, but we do work with students more proficient in other languages.</small>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="languages" id="mandarin"
+                                        value="Chinese (Mandarin)">
+                                    <label class="form-check-label" for="mandarin">
+                                        Chinese (Mandarin)
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="languages" id="spanish"
+                                        value="Spanish">
+                                    <label class="form-check-label" for="spanish">
+                                        Spanish
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="languages" id="otherLanguage"
+                                        value="other">
+                                    <label class="form-check-label" for="otherLanguage">
+                                        Other:
+                                    </label>
+                                    <input type="text" class="form-control mt-1" id="otherLanguageText"
+                                        name="otherLanguageText" style="display: none;">
+                                </div>
+                            </div>
+
+                            <!-- How did you find this position? -->
+                            <div class="form-floating mb-4">
+                                <input id="referralSource" type="text" name="referralSource" class="form-control"
+                                    placeholder="How did you find this position?" required="required"
+                                    data-error="This field is required.">
+                                <label for="referralSource">How did you find this position?</label>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please tell us how you found this position
+                                </div>
+                            </div>
+
+                            <button type="submit" id="applicationButton"
+                                class="btn btn-primary rounded-pill btn-send mb-3">
+                                Submit Application
+                            </button>
+                </form>
+                <!-- /form -->
+            </div>
+            <!--/column -->
+        </div>
+        <!--/.row -->
+    </div>
+    <!-- /.container -->
+</section>
+<!-- /section -->
+
+
+<!-- Form submission script -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous">
+    </script>
+
+
+<script>
+    // Define the showOtherPronounsField function in the global scope
+    function showOtherPronounsField() {
+        const pronounsSelect = document.getElementById('pronouns');
+        const otherPronounsField = document.getElementById('otherPronounsField');
+
+        if (pronounsSelect && pronounsSelect.value === 'other') {
+            otherPronounsField.style.display = 'block';
+        } else if (otherPronounsField) {
+            otherPronounsField.style.display = 'none';
+        }
+    }
+
+    // Internship Application Form Handling Script
+    document.addEventListener('DOMContentLoaded', function () {
+        "use strict";
+
+        // Initialize the Other Language field event listener
+        const otherLanguageCheckbox = document.getElementById('otherLanguage');
+        if (otherLanguageCheckbox) {
+            otherLanguageCheckbox.addEventListener('change', function () {
+                const textField = document.getElementById('otherLanguageText');
+                if (textField) {
+                    textField.style.display = this.checked ? 'block' : 'none';
+                }
+            });
+        }
+
+        // Initialize pronouns field
+        const pronounsSelect = document.getElementById('pronouns');
+        if (pronounsSelect) {
+            // Call this once to set initial state
+            showOtherPronounsField();
+        }
+
+        // Phone number formatting script
+        const isNumericInput = (event) => {
+            const key = event.keyCode;
+            return ((key >= 48 && key <= 57) || // Allow number line
+                (key >= 96 && key <= 105)    // Allow number pad
+            );
+        };
+
+        const isModifierKey = (event) => {
+            const key = event.keyCode;
+            return (event.shiftKey === true || key === 35 || key === 36) || // Allow Shift, Home, End
+                (key === 8 || key === 9 || key === 13 || key === 46) || // Allow Backspace, Tab, Enter, Delete
+                (key > 36 && key < 41) || // Allow left, up, right, down
+                (
+                    // Allow Ctrl/Command + A,C,V,X,Z
+                    (event.ctrlKey === true || event.metaKey === true) &&
+                    (key === 65 || key === 67 || key === 86 || key === 88 || key === 90)
+                );
+        };
+
+        const enforceFormat = (event) => {
+            // Input must be of a valid number format or a modifier key, and not longer than ten digits
+            if (!isNumericInput(event) && !isModifierKey(event)) {
+                event.preventDefault();
+            }
+        };
+
+        const formatToPhone = (event) => {
+            if (isModifierKey(event)) { return; }
+
+            const input = event.target.value.replace(/\D/g, '').substring(0, 10); // First ten digits of input only
+            const areaCode = input.substring(0, 3);
+            const middle = input.substring(3, 6);
+            const last = input.substring(6, 10);
+
+            if (input.length > 6) { event.target.value = `(${areaCode}) ${middle} - ${last}`; }
+            else if (input.length > 3) { event.target.value = `(${areaCode}) ${middle}`; }
+            else if (input.length > 0) { event.target.value = `(${areaCode}`; }
+        };
+
+        const inputElement = document.getElementById('phoneNumber');
+        if (inputElement) {
+            inputElement.addEventListener('keydown', enforceFormat);
+            inputElement.addEventListener('keyup', formatToPhone);
+        }
+
+        // Form validation and submission
+        const form = document.getElementById('form');
+
+        const existingHiddenInput = document.getElementById('location-validator');
+
+        if (!existingHiddenInput && form) {
+            const hiddenLocationInput = document.createElement('input');
+            hiddenLocationInput.type = 'hidden';
+            hiddenLocationInput.id = 'location-validator';
+            hiddenLocationInput.name = 'location-validator';
+            hiddenLocationInput.required = true;
+
+            // Find the locations container to append the hidden input
+            const locationsContainer = document.querySelector('.form-group:has(.location-checkbox)') ||
+                document.querySelector('.form-group');
+
+            if (locationsContainer) {
+                locationsContainer.appendChild(hiddenLocationInput);
+            } else {
+                form.appendChild(hiddenLocationInput);
+            }
+        }
+
+        // Function to validate locations
+        function validateLocations() {
+            const locationCheckboxes = document.querySelectorAll('.location-checkbox');
+            const checkedLocations = document.querySelectorAll('.location-checkbox:checked');
+            const hiddenInput = document.getElementById('location-validator');
+
+            if (!hiddenInput) return;
+
+            if (checkedLocations.length > 0) {
+                hiddenInput.value = 'valid';
+                hiddenInput.setCustomValidity('');
+                hiddenInput.classList.remove('is-invalid');
+            } else {
+                hiddenInput.value = '';
+                hiddenInput.setCustomValidity('Please select at least one location');
+                hiddenInput.classList.add('is-invalid');
+            }
+        }
+
+        const locationCheckboxes = document.querySelectorAll('.location-checkbox');
+        locationCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', validateLocations);
+        });
+
+        // Initial location validation
+        validateLocations();
+
+        const forms = document.querySelectorAll('.needs-validation');
+
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                } else {
+                    event.preventDefault();
+                    // Show spinner
+                    const spinner = document.getElementById('formSpinner');
+                    if (spinner) {
+                        spinner.style.display = 'block';
+                    }
+                    // Hide form
+                    form.style.display = 'none';
+
+                    // Collect form data
+                    submitInternApplication(form);
+                }
+
+                form.classList.add('was-validated');
+            }, false);
+        });
+
+        function submitInternApplication(form) {
+            // Safely get element value
+            const getValue = (id) => {
+                const element = document.getElementById(id);
+                return element ? element.value : '';
+            };
+
+            // Get all form fields with null checks
+            const firstName = getValue('firstName');
+            const preferredName = getValue('preferredName') || firstName;
+            const lastName = getValue('lastName');
+            const emailAddress = getValue('emailAddress');
+            const phoneNumber = getValue('phoneNumber');
+
+            // Convert ageCheck to boolean
+            const ageCheckValue = getValue('ageCheck');
+            const ageCheck = ageCheckValue === '18 years or older' ? true : false;
+
+            // Get pronouns with special handling for "other"
+            const pronounsSelect = document.getElementById('pronouns');
+            let pronouns = pronounsSelect ? pronounsSelect.value : '';
+
+            // If "other" is selected, use the custom value instead
+            if (pronouns === 'other') {
+                const customPronouns = getValue('otherPronounsText');
+                pronouns = customPronouns || 'Not specified';
+            }
+
+            const position = getValue('position') || 'Not Provided';
+
+            // Get availability
+            const availability = getValue('availability');
+
+            // Get hours
+            const hours = getValue('hours');
+
+            // Get education info
+            const major = getValue('major');
+            const education = getValue('education');
+            const school = getValue('school');
+
+            // Get resume file
+            const resumeInput = document.getElementById('resume');
+            const resumeFile = resumeInput && resumeInput.files.length > 0 ? resumeInput.files[0] : null;
+
+            const locationCheckboxes = document.querySelectorAll('input[name="locations"]:checked');
+            const locations = Array.from(locationCheckboxes).map(cb => cb.value);
+
+            const languageCheckboxes = document.querySelectorAll('input[name="languages"]:checked');
+            const languages = Array.from(languageCheckboxes)
+                .filter(cb => cb.value !== 'other')
+                .map(cb => cb.value);
+
+            const otherLanguageChecked = Array.from(languageCheckboxes).some(cb => cb.value === 'other');
+            if (otherLanguageChecked) {
+                const otherLangValue = getValue('otherLanguageText');
+                if (otherLangValue) {
+                    languages.push(otherLangValue);
+                }
+            }
+
+            // Get referral source
+            const referralSource = getValue('referralSource');
+
+            // Current timestamp
+            const timeStamp = new Date().toISOString();
+
+            // API endpoint
+            const apiUrl = 'https://prod-sharemyworks-backend.herokuapp.com/api/';
+            // const apiUrl = 'http://localhost:3000/api/';
+
+            const internApplicationData = {
+                timeStamp: timeStamp,
+                firstName: firstName,
+                preferredName: preferredName,
+                lastName: lastName,
+                emailAddress: emailAddress,
+                phoneNumber: phoneNumber,
+                ageCheck: ageCheck,
+                pronouns: pronouns,
+                position: position,
+                availability: availability,
+                hours: hours,
+                major: major,
+                education: education,
+                school: school,
+                resume: {
+                    pending: true,
+                    filename: resumeFile ? resumeFile.name : ''
+                },
+                locations: locations,
+                languages: languages,
+                referralSource: referralSource,
+                status: "Applied",
+                comments: "",
+                trackChanges: {}
+            };
+
+            // Send the data to the server as JSON
+            fetch(apiUrl + 'InternApplications', {
+                mode: "cors",
+                method: "post",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(internApplicationData)
+            })
+                .then(async function (response) {
+                    if (!response.ok) {
+                        const errorText = await response.text();
+                        console.error('Server response:', errorText);
+                        throw new Error('Server response was not ok: ' + response.status);
+                    }
+
+                    let resp = await response.json();
+                    // console.log('Application submitted:', resp);
+
+                    if (resumeFile) {
+                        const applicationId = resp.id;
+
+                        const reader = new FileReader();
+
+                        return new Promise((resolve, reject) => {
+                            reader.onload = function (event) {
+                                const base64data = event.target.result.split(',')[1]; // Extract the base64 data
+
+                                // Create the resume object with the file data
+                                const resumeData = {
+                                    name: resumeFile.name,
+                                    type: resumeFile.type,
+                                    size: resumeFile.size,
+                                    data: base64data
+                                };
+
+                                fetch(apiUrl + 'InternApplications/upload-resume', {
+                                    mode: "cors",
+                                    method: "post",
+                                    headers: {
+                                        'Content-Type': 'application/json'
+                                    },
+                                    body: JSON.stringify({
+                                        applicationId: applicationId,
+                                        resume: resumeData
+                                    })
+                                })
+                                    .then(resumeResponse => {
+                                        if (!resumeResponse.ok) {
+                                            throw new Error('Resume upload failed');
+                                        }
+                                        return resumeResponse.json();
+                                    })
+                                    .then(data => {
+                                        // console.log('Resume uploaded:', data);
+                                        resolve(response);
+                                    })
+                                    .catch(error => {
+                                        console.error('Error uploading resume:', error);
+                                        reject(error);
+                                    });
+                            };
+
+                            reader.onerror = function () {
+                                console.error('Error reading file');
+                                reject(new Error('Error reading resume file'));
+                            };
+
+                            // Start reading the file as Data URL (base64)
+                            reader.readAsDataURL(resumeFile);
+                        });
+                    } else {
+                        return response;
+                    }
+                })
+                .then(function () {
+                    // Show success message
+                    const spinner = document.getElementById('formSpinner');
+                    if (spinner) {
+                        spinner.style.display = 'none';
+                    }
+
+                    const successMsg = document.createElement('div');
+                    successMsg.className = 'alert alert-success';
+                    successMsg.innerHTML = 'Thank you for your application! We will be in touch soon.';
+                    form.parentNode.insertBefore(successMsg, form);
+                })
+                .catch(function (err) {
+                    console.error('Error submitting application:', err);
+                    const spinner = document.getElementById('formSpinner');
+                    if (spinner) {
+                        spinner.style.display = 'none';
+                    }
+                    form.style.display = 'block';
+
+                    // Show error message
+                    const errorMsg = document.createElement('div');
+                    errorMsg.className = 'alert alert-danger';
+                    errorMsg.innerHTML = 'An error occurred while submitting your application. Please try again or contact us directly.';
+                    form.parentNode.insertBefore(errorMsg, form);
+                });
+
+        }
+    });
+</script>
