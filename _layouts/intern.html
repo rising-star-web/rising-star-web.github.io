@@ -216,11 +216,11 @@ layout: default
                     <div class="mb-4">
                         <label for="resume" class="form-label">Resume <span class="text-danger">*</span></label>
                         <input class="form-control" type="file" id="resume" name="resume" required="required"
-                            accept=".pdf,.doc,.docx">
+                            accept=".pdf">
                         <div class="invalid-feedback">
                             Please upload your resume
                         </div>
-                        <small class="form-text text-muted">Accepted formats: PDF, DOC, DOCX. Maximum file size:
+                        <small class="form-text text-muted">Accepted formats: PDF. Maximum file size:
                             5MB.</small>
                     </div>
 
@@ -379,6 +379,47 @@ layout: default
 
 
 <script>
+    function validateResumeFile() {
+        const resumeInput = document.getElementById('resume');
+        const file = resumeInput.files[0];
+
+        const existingError = document.getElementById('resume-custom-error');
+        if (existingError) {
+            existingError.remove();
+        }
+
+        resumeInput.setCustomValidity('');
+
+        if (!file) {
+            return true;
+        }
+
+        const errorMessage = document.createElement('div');
+        errorMessage.id = 'resume-custom-error';
+        errorMessage.className = 'invalid-feedback';
+        errorMessage.style.display = 'block';
+
+        const fileType = file.type;
+        const acceptablePdfTypes = ['application/pdf'];
+
+        if (!acceptablePdfTypes.includes(fileType)) {
+            errorMessage.textContent = 'Please upload a PDF file only.';
+            resumeInput.setCustomValidity('Invalid file type');
+            resumeInput.parentNode.appendChild(errorMessage);
+            return false;
+        }
+
+        // Check file size (5MB = 5 * 1024 * 1024 bytes)
+        const maxSize = 5 * 1024 * 1024;
+        if (file.size > maxSize) {
+            errorMessage.textContent = 'File size exceeds 5MB limit. Please upload a smaller file.';
+            resumeInput.setCustomValidity('File too large');
+            resumeInput.parentNode.appendChild(errorMessage);
+            return false;
+        }
+
+        return true;
+    }
     // Define the showOtherPronounsField function in the global scope
     function showOtherPronounsField() {
         const pronounsSelect = document.getElementById('pronouns');
@@ -577,7 +618,19 @@ layout: default
 
             // Get resume file
             const resumeInput = document.getElementById('resume');
+            if (resumeInput) {
+                resumeInput.addEventListener('change', validateResumeFile);
+            }
             const resumeFile = resumeInput && resumeInput.files.length > 0 ? resumeInput.files[0] : null;
+
+            if (!validateResumeFile()) {
+                form.style.display = 'block';
+                const spinner = document.getElementById('formSpinner');
+                if (spinner) {
+                    spinner.style.display = 'none';
+                }
+                return;
+            }
 
             const locationCheckboxes = document.querySelectorAll('input[name="locations"]:checked');
             const locations = Array.from(locationCheckboxes).map(cb => cb.value);
