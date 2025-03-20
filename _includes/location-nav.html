@@ -80,8 +80,7 @@
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="scheduleDropdown">
                     <li><a class="dropdown-item" href="{{ page.url }}">Group Class</a></li>
-                    <li><a class="dropdown-item" href="{% assign trial_page = site.locations | where: "layout", "location-freetrial" | where: "locale", page.locale | first %}{{ trial_page.url }}">Private Class</a></li>
-                  </ul>
+                    <li><a class="dropdown-item" href="{% assign trial_page = site.locations | where: "layout", "location-freetrial" | where: "locale", page.locale | where_exp: "item", "item.path contains location_name" | first %}{{ trial_page.url }}">Private Class</a></li>                  </ul>
                 </li>
               {% else %}
                 <li class="nav-item">
