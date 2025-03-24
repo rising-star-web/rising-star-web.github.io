@@ -1,14 +1,80 @@
 ---
 layout: default
 ---
+<!-- Landing Section -->
 <section class="wrapper bg-light" style="background-color: #e6f2ff;">
+    <div class="container pt-10 pt-md-14 pb-8 pb-md-10">
+        <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-1 mb-4">Internships</h1>
+                <h2 class="fs-24 text-navy mb-3">Internships in operations, marketing, software development, and
+                    education</h2>
+                <p class="lead fs-20 lh-sm mb-7">Join our team and gain valuable experience while working on real-world
+                    projects. We offer internships that provide meaningful work and professional growth opportunities.
+                </p>
+                <p>You can explore all open internship positions through our application form below. Whether you're
+                    interested in operations strategy, digital marketing, software development, or teaching & curriculum
+                    development, we have opportunities for you.</p>
+                <div class="d-flex justify-content-start">
+                    <a href="#applicationForm" class="btn btn-primary rounded-pill btn-send me-2 mb-3">Apply Now</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row gx-4 gy-4">
+                    <div class="col-6">
+                        <div class="card shadow-lg rounded-3 bg-primary h-100">
+                            <div class="card-body text-center p-5">
+                                <i class="uil uil-analytics display-3 text-white mb-3"></i>
+                                <h3 class="h4 text-white mb-2">Operations Strategy</h3>
+                                <p class="text-white-50 mb-0">Develop strategic initiatives and optimize business
+                                    processes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card shadow-lg rounded-3 bg-primary h-100">
+                            <div class="card-body text-center p-5">
+                                <i class="uil uil-megaphone display-3 text-white mb-3"></i>
+                                <h3 class="h4 text-white mb-2">Digital Marketing</h3>
+                                <p class="text-white-50 mb-0">Create compelling content and drive engagement strategies
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card shadow-lg rounded-3 bg-primary h-100">
+                            <div class="card-body text-center p-5">
+                                <i class="uil uil-browser display-3 text-white mb-3"></i>
+                                <h3 class="h4 text-white mb-2">Software Development</h3>
+                                <p class="text-white-50 mb-0">Build innovative applications and contribute to tech
+                                    solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card shadow-lg rounded-3 bg-primary h-100">
+                            <div class="card-body text-center p-5">
+                                <i class="uil uil-graduation-cap display-3 text-white mb-3"></i>
+                                <h3 class="h4 text-white mb-2">Teaching & Curriculum</h3>
+                                <p class="text-white-50 mb-0">Develop educational content and support learning
+                                    initiatives</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Link to Font Awesome or Unicons for icons -->
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+<section id="applicationForm" class="wrapper bg-light" style="background-color: #e6f2ff;">
     <div class="container pt-8 pt-md-12 pb-8 pb-md-8 ">
         <div class="row gx-lg-8 gx-xl-0 gy-10 align-items-start ">
             <!--/column -->
             <div class="col-lg-8 col-xl-7 mx-auto p-5 rounded-3 text-center bg-gradient-primary">
                 <h2 class="display-2 mb-3">Application Form</h2>
-                <p id="formDescription" class="lead mb-8 pe-xl-10">Please complete all fields to submit your
-                    application.</p>
 
                 <div class="d-flex justify-content-center">
                     <div id="formSpinner" class="spinner-border text-navy align-self-center" role="status"
@@ -23,7 +89,7 @@ layout: default
                     <div class="form-floating mb-4">
                         <input id="firstName" type="text" name="firstName" class="form-control" placeholder="First name"
                             required="required" data-error="First name is required.">
-                        <label for="firstName">Legal First Name</label>
+                        <label for="firstName">First Name <span class="text-danger">*</span></label>
                         <div class="valid-feedback">
                             Looks good!
                         </div>
@@ -33,7 +99,7 @@ layout: default
                     </div>
 
                     <!-- Preferred Name -->
-                    <div class="form-floating mb-4">
+                    <div class="form-floating mb-4" hidden>
                         <input id="preferredName" type="text" name="preferredName" class="form-control"
                             placeholder="Preferred name">
                         <label for="preferredName">Preferred Name</label>
@@ -43,7 +109,7 @@ layout: default
                     <div class="form-floating mb-4">
                         <input id="lastName" type="text" name="lastName" class="form-control" placeholder="Last name"
                             required="required" data-error="Last name is required.">
-                        <label for="lastName">Legal Last Name</label>
+                        <label for="lastName">Last Name <span class="text-danger">*</span></label>
                         <div class="valid-feedback">
                             Looks good!
                         </div>
@@ -57,7 +123,7 @@ layout: default
                         <input id="emailAddress" type="email" name="emailAddress" class="form-control"
                             pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+$" placeholder="email@example.com"
                             required="required" data-error="Valid email is required.">
-                        <label for="emailAddress">Email</label>
+                        <label for="emailAddress">Email <span class="text-danger">*</span></label>
                         <div class="valid-feedback">
                             Looks good!
                         </div>
@@ -71,7 +137,7 @@ layout: default
                         <input id="phoneNumber" type="tel" maxlength="16" name="phoneNumber" class="form-control"
                             placeholder="(123)-456-7890" required="required"
                             data-error="Valid phone number is required.">
-                        <label for="phoneNumber">Phone Number</label>
+                        <label for="phoneNumber">Phone Number <span class="text-danger">*</span></label>
                         <div class="valid-feedback">
                             Looks good!
                         </div>
@@ -93,46 +159,37 @@ layout: default
                         </div>
                     </div>
 
-                    <!-- Pronouns -->
-
-                    <div class="form-floating mb-4">
-                        <select class="form-select" id="pronouns" name="pronouns" required
-                            onchange="showOtherPronounsField()">
-                            <option value="" selected disabled>Select an option</option>
-                            <option value="he/him">he/him</option>
-                            <option value="she/her">she/her</option>
-                            <option value="he/they">he/they</option>
-                            <option value="she/they">she/they</option>
-                            <option value="they/them">they/them</option>
-                            <option value="Rather not say">Rather not say</option>
-                            <option value="other">Other</option>
-                        </select>
-                        <label for="pronouns">Pronouns <span class="text-danger">*</span></label>
-                        <div class="invalid-feedback">
-                            Please select an option
-                        </div>
-                        <small class="form-text text-muted">This a subset that helps us in communication. If your
-                            preferred pronouns are not listed, please select "Other".</small>
-                    </div>
-                    <div id="otherPronounsField" class="mb-4" style="display: none;">
-                        <input type="text" class="form-control" id="otherPronounsText" name="otherPronounsText"
-                            placeholder="Please specify your pronouns">
-                    </div>
-
                     <!-- Position -->
                     <div class="form-floating mb-4">
                         <select class="form-select" id="position" name="position" required>
                             <option value="" selected disabled>Select an option</option>
-                            <option value="Operation"> Operation</option>
-                            <option value="Marketing">Marketing</option>
-                            <option value="Web Developer">Web Developer</option>
-                            <option value="Other">Other</option>
+                            <option value="Operation"> Operations Strategy Intern</option>
+                            <option value="Marketing">Digital/Content Marketing Intern</option>
+                            <option value="Web Developer">Software Development Engineer Intern</option>
+                            <option value="Teaching & Curriculum Development">Teaching & Curriculum Development Intern
+                            </option>
                         </select>
                         <label for="availability">Applying Position <span class="text-danger">*</span></label>
                         <div class="invalid-feedback">
                             Please select an option
                         </div>
                     </div>
+
+                    <!-- Hours you are looking to work -->
+                    <div class="form-floating mb-4">
+                        <select class="form-select" id="hours" name="hours" required>
+                            <option value="" selected disabled>Select an option</option>
+                            <option value="0 - 4">0 - 4</option>
+                            <option value="5 - 9">5 - 9</option>
+                            <option value="10 - 19">10 - 19</option>
+                            <option value="20+">20+</option>
+                        </select>
+                        <label for="hours">Weekly Availability (in Hours) <span class="text-danger">*</span></label>
+                        <div class="invalid-feedback">
+                            Please select an option
+                        </div>
+                    </div>
+
                     <!-- Consistent Weekly Availability -->
                     <div class="form-floating mb-4">
                         <select class="form-select" id="availability" name="availability" required>
@@ -146,24 +203,7 @@ layout: default
                             <option value="I am looking to work for over 1 year">I am looking to work for over 1 year
                             </option>
                         </select>
-                        <label for="availability">Consistent Weekly Availability <span
-                                class="text-danger">*</span></label>
-                        <div class="invalid-feedback">
-                            Please select an option
-                        </div>
-                    </div>
-
-
-                    <!-- Hours you are looking to work -->
-                    <div class="form-floating mb-4">
-                        <select class="form-select" id="hours" name="hours" required>
-                            <option value="" selected disabled>Select an option</option>
-                            <option value="0 - 4">0 - 4</option>
-                            <option value="5 - 9">5 - 9</option>
-                            <option value="10 - 19">10 - 19</option>
-                            <option value="20+">20+</option>
-                        </select>
-                        <label for="hours">Hours you are looking to work <span class="text-danger">*</span></label>
+                        <label for="availability">Commitment Period <span class="text-danger">*</span></label>
                         <div class="invalid-feedback">
                             Please select an option
                         </div>
@@ -173,7 +213,8 @@ layout: default
                     <div class="form-floating mb-4">
                         <input id="major" type="text" name="major" class="form-control" placeholder="Your major"
                             required="required" data-error="Major is required.">
-                        <label for="major">Major (Completed, intended or currently pursuing)</label>
+                        <label for="major">Major (Completed, intended or currently pursuing) <span
+                                class="text-danger">*</span></label>
                         <div class="valid-feedback">
                             Looks good!
                         </div>
@@ -203,7 +244,8 @@ layout: default
                     <div class="form-floating mb-4">
                         <input id="school" type="text" name="school" class="form-control" placeholder="Your school"
                             required="required" data-error="School is required.">
-                        <label for="school">School (Current school you are attending or last graduated)</label>
+                        <label for="school">School (Current school you are attending or last graduated) <span
+                                class="text-danger">*</span></label>
                         <div class="valid-feedback">
                             Looks good!
                         </div>
@@ -231,12 +273,15 @@ layout: default
                             <!-- Locations -->
                             <div class="form-group mb-4">
                                 <label class="form-label">Locations <span class="text-danger">*</span></label>
-                                <small class="form-text text-muted d-block mb-2">We operate both online and in-person.
-                                    Our in-person classes home office is in Irvine, CA. We also do off-site classes in
-                                    several regions, so please select all that apply to you. In-person locations assume
-                                    you have reliable access to transportation. There are more incentives and
-                                    opportunities if you are local and able to come in the office and conduct in-person
-                                    classes.</small>
+                                <small class="form-text text-muted d-block mb-2">We offer both online and in-person
+                                    opportunities. Our main in-person location is based out of our headquarter office in
+                                    Irvine,
+                                    CA, and we also run off-site classes in various regions. Please select all locations
+                                    that apply to you.
+                                    Note: In-person roles assume you have reliable access to transportation.
+                                    Applicants who are local and able to teach or assist with in-person classes may be
+                                    eligible for additional incentives and growth opportunities.
+                                </small>
 
                                 <div id="locations-container">
                                     <div class="form-check">
@@ -264,7 +309,7 @@ layout: default
                                         <input class="form-check-input location-checkbox" type="checkbox"
                                             name="locations" id="westLafayette" value="West Lafayette, Indiana">
                                         <label class="form-check-label" for="westLafayette">
-                                            West Lafayette, Indiana
+                                            West Lafayette, IN
                                         </label>
                                     </div>
                                     <div class="form-check">
@@ -290,16 +335,16 @@ layout: default
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input location-checkbox" type="checkbox"
-                                            name="locations" id="online" value="Online">
-                                        <label class="form-check-label" for="online">
-                                            Online
+                                            name="locations" id="factoria" value="Factoria, WA">
+                                        <label class="form-check-label" for="factoria">
+                                            Factoria, WA
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input location-checkbox" type="checkbox"
-                                            name="locations" id="factoria" value="Factoria, WA">
-                                        <label class="form-check-label" for="factoria">
-                                            Factoria, WA
+                                            name="locations" id="online" value="Online">
+                                        <label class="form-check-label" for="online">
+                                            Online/Remote
                                         </label>
                                     </div>
                                     <!-- Hidden input for validation -->
@@ -314,8 +359,14 @@ layout: default
                             <!-- Language Proficiency -->
                             <div class="form-group mb-4">
                                 <label class="form-label">Language Proficiency</label>
-                                <small class="form-text text-muted d-block mb-2">The majority of our classes are taught
-                                    in English, but we do work with students more proficient in other languages.</small>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="languages" id="mandarin"
+                                        value="Chinese (Mandarin)">
+                                    <label class="form-check-label" for="mandarin">
+                                        English
+                                    </label>
+                                </div>
 
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="languages" id="mandarin"
@@ -331,6 +382,15 @@ layout: default
                                         Spanish
                                     </label>
                                 </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="languages" id="spanish"
+                                        value="Spanish">
+                                    <label class="form-check-label" for="spanish">
+                                        Korean
+                                    </label>
+                                </div>
+
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="languages" id="otherLanguage"
                                         value="other">
@@ -347,7 +407,8 @@ layout: default
                                 <input id="referralSource" type="text" name="referralSource" class="form-control"
                                     placeholder="How did you find this position?" required="required"
                                     data-error="This field is required.">
-                                <label for="referralSource">How did you find this position?</label>
+                                <label for="referralSource">How did you find this position? <span
+                                        class="text-danger">*</span></label>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
@@ -420,17 +481,6 @@ layout: default
 
         return true;
     }
-    // Define the showOtherPronounsField function in the global scope
-    function showOtherPronounsField() {
-        const pronounsSelect = document.getElementById('pronouns');
-        const otherPronounsField = document.getElementById('otherPronounsField');
-
-        if (pronounsSelect && pronounsSelect.value === 'other') {
-            otherPronounsField.style.display = 'block';
-        } else if (otherPronounsField) {
-            otherPronounsField.style.display = 'none';
-        }
-    }
 
     // Internship Application Form Handling Script
     document.addEventListener('DOMContentLoaded', function () {
@@ -445,13 +495,6 @@ layout: default
                     textField.style.display = this.checked ? 'block' : 'none';
                 }
             });
-        }
-
-        // Initialize pronouns field
-        const pronounsSelect = document.getElementById('pronouns');
-        if (pronounsSelect) {
-            // Call this once to set initial state
-            showOtherPronounsField();
         }
 
         // Phone number formatting script
@@ -593,16 +636,6 @@ layout: default
             const ageCheckValue = getValue('ageCheck');
             const ageCheck = ageCheckValue === '18 years or older' ? true : false;
 
-            // Get pronouns with special handling for "other"
-            const pronounsSelect = document.getElementById('pronouns');
-            let pronouns = pronounsSelect ? pronounsSelect.value : '';
-
-            // If "other" is selected, use the custom value instead
-            if (pronouns === 'other') {
-                const customPronouns = getValue('otherPronounsText');
-                pronouns = customPronouns || 'Not specified';
-            }
-
             const position = getValue('position') || 'Not Provided';
 
             // Get availability
@@ -666,7 +699,6 @@ layout: default
                 emailAddress: emailAddress,
                 phoneNumber: phoneNumber,
                 ageCheck: ageCheck,
-                pronouns: pronouns,
                 position: position,
                 availability: availability,
                 hours: hours,
