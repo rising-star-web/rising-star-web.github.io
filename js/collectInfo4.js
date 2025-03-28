@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var chinese = window.location.href.includes("cn");
 
     const baseUrl = "https://backend4.sharemyworks.com/api/";
+
     const params = new URLSearchParams(window.location.search);
     const accountId = params.get("accountId");
     const token = params.get("token");
@@ -88,8 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 "Content-Type": "application/json",
                             },
                             body: JSON.stringify({
-                                //email: "contact@codingmindsacademy.com",
-                                email:"paulgxqin@gmail.com",
+                                email: "contact@codingmindsacademy.com",
                                 content:
                                     `Student ${formData.firstName} ${formData.lastName} has updated his/her information:\n` +
                                     `First Name: ${formData.firstName}\n` +
