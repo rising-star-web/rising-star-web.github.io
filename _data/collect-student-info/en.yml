@@ -3,6 +3,7 @@ name: EN
 collect-student-info:
   header: Student Information Update
   description: The timely update of information helps us to speed up the scheduling process and improve communication between home and school. It also enables us to promptly provide feedback on your child's learning and homework situation.
+  description2: In order to ensure that the course path design meets the student's level and the subsequent competition arrangements, please update the student's current grade.
   firstName: First Name (Please keep it the same as the name used in class)
   lastName: Last Name (Please keep it the same as the name used in class)
   nameDescription: Please keep it the same as the name used in class
