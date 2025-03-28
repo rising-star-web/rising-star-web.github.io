@@ -856,7 +856,7 @@ var theme = {
                 }
 
                   // Set availability based on location
-                  const availability = (campusLocation === 'San-diego' || campusLocation === 'Seattle'
+                  const availability = (campusLocation === 'San-diego' || campusLocation === 'Redmond'
                     || campusLocation === "Arcadia" || campusLocation === "Diamond-bar" 
                     || campusLocation === "Bothell" || campusLocation === "Factoria"
                   ) 
@@ -990,7 +990,7 @@ var theme = {
                     delete trialData.publicComment;
                   }
                   // Assign organizationId based on campus location, in Prod env
-                  if (campusLocation === 'Seattle') {
+                  if (campusLocation === 'Redmond') {
                     trialData.organizationId = '6684406b10707d0014fb7369';
                   } else if (campusLocation === 'San-diego' || campusLocation === 'Online-sd') {
                     trialData.organizationId = '66bf6a0dcdae5300148e3a2c';
@@ -1046,7 +1046,7 @@ var theme = {
                     } else {
                       $('#formSpinner').css("display", "none");
                       $('#formDescription').css("display", "none");
-                      if (campusLocation === 'Seattle') {
+                      if (campusLocation === 'Redmond') {
                         $('#form').prepend(
                           window.location.href.indexOf("cn") != -1 ? 
                           '感谢您提交试课评估申请，我们的助理会尽快在第一时间联系您，确认试课细节。同时如果您有任何问题，请随时通过电话联系我们 (949) 236-7896':

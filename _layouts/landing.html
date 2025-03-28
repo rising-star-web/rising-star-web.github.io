@@ -91,7 +91,7 @@ layout: default
                       <option id="Arcadia" value="Arcadia">Arcadia</option>
                       <option id="West Lafayette" value="West Lafayette">West Lafayette</option>
                       <option id="San-diego" value="San-diego">San Diego</option>
-                      <option id="Seattle" value="Seattle">Seattle</option>
+                      <option id="Redmond" value="Redmond">Redmond</option>
                       <option id="Bothell" value="Bothell">Bothell</option>
                       <option id="Factoria" value="Factoria">Factoria</option>
                       <option id="Online" value="Online">Online</option>
@@ -644,10 +644,18 @@ layout: default
             };
             
             // Add organizationId based on location
-            if (campusLocation === 'Seattle') {
+            if (campusLocation === 'Redmond') {
               trialData.organizationId = '6684406b10707d0014fb7369';
             } else if (campusLocation === 'San-diego' || campusLocation === 'Online-sd') {
               trialData.organizationId = '66bf6a0dcdae5300148e3a2c';
+            } else if (campusLocation === 'Arcadia') {
+              trialData.organizationId = '6390e0c5476933001554f8c7';
+            } else if (campusLocation === 'Diamond-bar') {
+              trialData.organizationId = '64c442a403253a0013048f3a';
+            } else if (campusLocation === 'Bothell') {
+              trialData.organizationId = '67e0298d64033c0015ce31bb';
+            } else if (campusLocation === 'Factoria') {
+              trialData.organizationId = '67ae3ed6b172e100156401d5';
             }
             
             // Format for POST
