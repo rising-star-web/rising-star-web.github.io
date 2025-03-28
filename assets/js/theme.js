@@ -857,7 +857,8 @@ var theme = {
 
                   // Set availability based on location
                   const availability = (campusLocation === 'San-diego' || campusLocation === 'Seattle'
-                    || campusLocation === "Arcadia" || campusLocation === "Diamond-bar"
+                    || campusLocation === "Arcadia" || campusLocation === "Diamond-bar" 
+                    || campusLocation === "Bothell" || campusLocation === "Factoria"
                   ) 
                     ? formatDateTimeSelections()
                     : document.getElementById('availability').value;
@@ -997,6 +998,10 @@ var theme = {
                     trialData.organizationId = '6390e0c5476933001554f8c7';
                   } else if (campusLocation === 'Diamond-bar') {
                     trialData.organizationId = '64c442a403253a0013048f3a';
+                  } else if (campusLocation === 'Bothell') {
+                    trialData.organizationId = '67e0298d64033c0015ce31bb';
+                  } else if (campusLocation === 'Factoria') {
+                    trialData.organizationId = '67ae3ed6b172e100156401d5';
                   }
 
                   // DEV env

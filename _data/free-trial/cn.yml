@@ -25,6 +25,8 @@ freetrial:
   campus5: 线上
   campus6: 西雅图 
   campus7: 圣地亚哥
+  campus8: Bothell # Cannot find a translation for Bothell
+  campus9: Factoria # Cannot find a translation for Factoria
   sourceTag: 您从哪里了解到我们？ 
   source1: 小红书
   source2: Instagram
