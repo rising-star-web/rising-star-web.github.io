@@ -2,9 +2,9 @@ contact:
   email: wa@codingmind.com
   phone: (949) 236-7896
   address: |
-    4006 148th Ave NE Redmond, WA 98052
+    <b>Redmond campus:</b><br/> 4006 148th Ave NE Redmond, WA 98052
   address2: |
-    18120 97th AVE NE, Bothell WA 98011
+    <b>Bothell campus:</b><br/> 18120 97th AVE NE, Bothell WA 98011
   address3: |
-    14205 SE 36th ST, Suite 100, Bellevue, WA 98006
+    <b>Factoria Campus:</b><br/> 14205 SE 36th ST, Suite 100, Bellevue, WA 98006
 paymenturl: https://billing.stripe.com/p/login/eVa01A0XvdnJfLybII

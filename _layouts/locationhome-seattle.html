@@ -183,9 +183,9 @@ layout: locationdefault
                 <div class="d-flex flex-row">
                   <i class="uil uil-location-point me-4 "></i>
                   <div class="d-flex flex-column">
-                    <span>(1) {{ location_data.contact.address}}</span>
-                    <span>(2) {{ location_data.contact.address2}}</span>
-                    <span>(3) {{ location_data.contact.address3}}</span>
+                    <span>{{ location_data.contact.address}}</span>
+                    <span>{{ location_data.contact.address2}}</span>
+                    <span>{{ location_data.contact.address3}}</span>
                   </div>
                 </div>
               </div>
@@ -360,7 +360,7 @@ layout: locationdefault
     <div class="row d-flex align-items-start">
       <div class="col-lg-4 text-md-end">
         <div class="justify-content-md-end w-full">
-          <div class="align-self-start justify-content-start w-full">
+          <div class="align-self-start justify-content-start w-full text-end">
             <h5 class="mb-1">{{ site.data.contact-us[page.locale].contact.locations }}</h5>
             <div id="address1" class="btn btn-primary text-wrap p-2 w-100 my-2 text-white bg-primary">
               <address class="m-0">{{ location_data.contact.address}}</address>
