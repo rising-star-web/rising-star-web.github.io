@@ -1,0 +1,237 @@
+{
+  "尔湾校区": [
+    {
+      "Name": "Minecraft AI Lab – Exploring the Integration of Programming and Artificial Intelligence",
+      "Time": [
+        "9am - 12pm",
+        "1pm - 4pm",
+        "1pm - 4pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/courses/minecraft-programming-camp",
+      "Price": 500,
+      "Grade": "1-4",
+      "Dates": ["W1", "W2", "W4", "W5", "W7", "W8"],
+      "Registration Links": [
+        "https://codingmind.com/course-info-register?course_id=67d4ba9b123d310015941fb1&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4c8e0123d3100159421a1&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4cda2123d310015942222&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4cf62123d310015942237&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4bfd1123d31001594204a&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4d1b5123d31001594227c&organizationId=65f3061cf9e48a001424996a"
+      ]
+    },
+    {
+      "Name": "AI Game Creation – Roblox Development and Smart Game Logic",
+      "Time": [
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm"
+      ],
+      "CourseInfo": "https://codingmind.com/courses/app-thunkable-camp",
+      "Price": 500,
+      "Grade": "1-4",
+      "Dates": ["W2", "W5", "W8", "W10"],
+      "Registration Links": [
+        "https://codingmind.com/course-info-register?course_id=67d4bb86123d310015941fc5&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4bdb7123d31001594200f&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4bfd1123d31001594204a&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d86bb511213a0015554077&organizationId=65f3061cf9e48a001424996a"
+      ]
+    },
+    {
+      "Name": "AI Creative Workshop – From Concept to Intelligent Software Development",
+      "Time": [
+        "1pm - 4pm",
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm"
+      ],
+      "CourseInfo": "https://codingmind.com/courses/roblox-camp",
+      "Price": 500,
+      "Grade": "1-4",
+
+      "Dates": ["W1", "W3", "W4", "W6", "W7", "W9"],
+      "Registration Links": [
+        "https://codingmind.com/course-info-register?course_id=67d4c865123d31001594218c&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4bc39123d310015941fe1&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4bcf0123d310015941ffb&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4be6f123d310015942023&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4d108123d310015942265&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4c086123d31001594206d&organizationId=65f3061cf9e48a001424996a"
+      ]
+    },
+    {
+      "Name": "AI Enlightenment Journey – Cultivating Children's Artificial Intelligence Thinking",
+      "Time": [
+        "1pm - 4pm",
+        "1pm - 4pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/courses/lego-mindstorm-camp",
+      "Price": 500,
+      "Grade": "1-4",
+      "Dates": ["W3", "W6", "W9"],
+      "Registration Links": [
+        "https://codingmind.com/course-info-register?course_id=67d4cc95123d310015942211&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4e6c2123d310015942431&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4e7e6123d310015942443&organizationId=65f3061cf9e48a001424996a"
+      ]
+    },
+    {
+      "Name": "AI + Python – Intelligent Application Development and Practice",
+      "Time": [
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm"
+      ],
+      "CourseInfo": "https://codingmind.com/courses/python-camp",
+      "Price": 500,
+      "Grade": "5-8",
+      "Dates": ["W1", "W3", "W5", "W7", "W9"],
+      "Registration Links": [
+        "https://codingmind.com/course-info-register?course_id=67d4c209123d31001594208d&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4c494123d310015942100&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4c51f123d310015942126&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4c680123d310015942157&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4c7ae123d310015942179&organizationId=65f3061cf9e48a001424996a"
+      ]
+    },
+    {
+      "Name": "Generative AI Creativity Camp – Exploring Large Models and Smart Creation",
+      "Time": [
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm"
+      ],
+      "CourseInfo": "https://codingmind.com/courses/web-camp",
+      "Price": 500,
+      "Grade": "5-8",
+
+      "Dates": ["W2", "W4", "W6", "W8", "W10"],
+      "Registration Links": [
+        "https://codingmind.com/course-info-register?course_id=67d4c296123d31001594209e&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4c296123d31001594209f&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4c5cb123d310015942139&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4c705123d310015942168&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67cdb22da129130015c4fe89&organizationId=65f3061cf9e48a001424996a"
+      ]
+    },
+    {
+      "Name": "AI-Powered Web Development – From Frontend Interaction to Intelligent Systems",
+      "Time": [
+        "1pm - 4pm",
+        "1pm - 4pm",
+        "1pm - 4pm",
+        "1pm - 4pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/courses/ai-camp",
+      "Price": 500,
+      "Grade": "5-8",
+
+      "Dates": ["W1", "W3", "W5", "W7", "W9"],
+      "Registration Links": [
+        "https://codingmind.com/course-info-register?course_id=67d4d3b8123d3100159422a7&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4d4e1123d3100159422cb&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4d842123d31001594230e&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4d962123d31001594232c&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4dab5123d310015942349&organizationId=65f3061cf9e48a001424996a"
+      ]
+    },
+    {
+      "Name": "AI Art and Metaverse – Unity Smart Creation and Virtual World Building",
+      "Time": [
+        "1pm - 4pm",
+        "1pm - 4pm",
+        "1pm - 4pm",
+        "1pm - 4pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/courses/unity-camp",
+      "Price": 500,
+      "Grade": "5-8",
+      "Dates": ["W2", "W4", "W6", "W8", "W10"],
+      "Registration Links": [
+        "https://codingmind.com/course-info-register?course_id=67d4d44b123d3100159422b9&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4d5bc123d3100159422e0&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4d8d6123d31001594231d&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4da1e123d31001594233a&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4da1e123d31001594233a&organizationId=65f3061cf9e48a001424996a"
+      ]
+    },
+    {
+      "Name": "AI Innovation Workshop – Creating Science Competition Projects",
+      "Time": [
+        "9am - 4pm",
+        "9am - 4pm",
+        "9am - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/courses/usaco-1-camp",
+      "Price": 500,
+      "Grade": "7-12",
+      "Dates": ["W1", "W5", "W9"],
+      "Registration Links": [
+        "https://codingmind.com/course-info-register?course_id=67d4dbfa123d31001594235d&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4e025123d3100159423c9&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4e34b123d310015942406&organizationId=65f3061cf9e48a001424996a"
+      ]
+    },
+    {
+      "Name": "AI Business Practice – E-Commerce Platform Development and Intelligent Marketing Workflow",
+      "Time": [
+        "9am - 4pm",
+        "9am - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/courses/usaco-2-camp",
+      "Price": 500,
+      "Grade": "7-12",
+      "Dates": ["W2", "W6"],
+      "Registration Links": [
+        "https://codingmind.com/course-info-register?course_id=67d4dd68123d310015942376&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4e108123d3100159423de&organizationId=65f3061cf9e48a001424996a"
+      ]
+    },
+    {
+      "Name": "Private AI Lab – In-Depth Exploration of DeepSeek AI Development and Applications",
+      "Time": [
+        "9am - 4pm",
+        "9am - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/courses/apcsp-camp",
+      "Price": 500,
+      "Grade": "7-12",
+      "Dates": ["W3", "W7"],
+      "Registration Links": [
+        "https://codingmind.com/course-info-register?course_id=67d4de4f123d31001594238e&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4e1f3123d3100159423ef&organizationId=65f3061cf9e48a001424996a"
+      ]
+    },
+    {
+      "Name": "Smart Edge Computing Maker Camp – AI System Development with NVIDIA Jetson",
+      "Time": [
+        "9am - 4pm",
+        "9am - 4pm",
+        "9am - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/courses/apcsa-camp",
+      "Price": 500,
+      "Grade": "7-12",
+      "Dates": ["W4", "W8", "W10"],
+      "Registration Links": [
+        "https://codingmind.com/course-info-register?course_id=67d4df4b123d3100159423b4&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67d4e9f9123d310015942455&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/course-info-register?course_id=67e55c1b8891520015001858&organizationId=65f3061cf9e48a001424996a"
+      ]
+    }
+  ]
+}

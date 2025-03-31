@@ -1,0 +1,1141 @@
+---
+layout: default
+---
+<section class="wrapper bg-light" style="background-color: #e6f2ff;">
+  <div class="container pt-10 pt-md-14 pb-8 pb-md-10">
+      <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+          <div class="col-lg-6">
+              <h1 class="display-1 mb-4">{{ site.data.summercamp[page.locale].summer.landingTitle }}</h1>
+              <h2 class="fs-24 text-navy mb-3">{{ site.data.summercamp[page.locale].summer.landingSubtitle }}</h2>
+              <p class="lead fs-20 lh-sm mb-7">{{ site.data.summercamp[page.locale].summer.landingLead }}</p>
+              <p>{{ site.data.summercamp[page.locale].summer.landingText }}</p>
+              <div class="d-flex justify-content-start">
+                  <a href="#camp-registration-grid" class="btn btn-primary rounded-pill btn-send me-2 mb-3">{{ site.data.summercamp[page.locale].summer.exploreButton }}</a>
+              </div>
+          </div>
+          <div class="col-lg-6">
+              <div class="row gx-4 gy-4">
+                  <div class="col-6">
+                      <div class="card shadow-lg rounded-3 bg-primary h-100">
+                          <div class="card-body text-center p-5">
+                              <i class="uil uil-robot display-3 text-white mb-3"></i>
+                              <h3 class="h4 text-white mb-2">{{ site.data.summercamp[page.locale].summer.codingTitle }}</h3>
+                              <p class="text-white-50 mb-0">{{ site.data.summercamp[page.locale].summer.codingText }}</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-6">
+                      <div class="card shadow-lg rounded-3 bg-primary h-100">
+                          <div class="card-body text-center p-5">
+                              <i class="uil uil-game-structure display-3 text-white mb-3"></i>
+                              <h3 class="h4 text-white mb-2">{{ site.data.summercamp[page.locale].summer.gameTitle }}</h3>
+                              <p class="text-white-50 mb-0">{{ site.data.summercamp[page.locale].summer.gameText }}</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-6">
+                      <div class="card shadow-lg rounded-3 bg-primary h-100">
+                          <div class="card-body text-center p-5">
+                              <i class="uil uil-circuit display-3 text-white mb-3"></i>
+                              <h3 class="h4 text-white mb-2">{{ site.data.summercamp[page.locale].summer.aiTitle }}</h3>
+                              <p class="text-white-50 mb-0">{{ site.data.summercamp[page.locale].summer.aiText }}</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-6">
+                      <div class="card shadow-lg rounded-3 bg-primary h-100">
+                          <div class="card-body text-center p-5">
+                              <i class="uil uil-brackets-curly display-3 text-white mb-3"></i>
+                              <h3 class="h4 text-white mb-2">{{ site.data.summercamp[page.locale].summer.webTitle }}</h3>
+                              <p class="text-white-50 mb-0">{{ site.data.summercamp[page.locale].summer.webText }}</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<div class="mx-2" hidden>
+  <label for="locationFilter" class="h3 text-primary mb-2" style="display: none;">Location:</label>
+  <select id="locationFilter" class="form-select">
+    <!-- Options will be added dynamically -->
+  </select>
+</div>
+<div class="container text-center mb-4">
+  <label for="gradeFilter" class="h3 text-primary mb-2 text-center">{{ site.data.summercamp[page.locale].summer.gradeFilter
+    }}</label>
+  <div id="gradeFilter" class="d-flex flex-wrap justify-content-center">
+    <!-- Options will be added dynamically -->
+  </div>
+</div>
+<!-- Link to Unicons for icons -->
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+
+<section class="wrapper bg-light">
+  <div class="schedule-container pt-2 pb-19 pt-md-14 pb-md-20 text-center">
+    <div class="d-flex justify-content-center mb-4 w-100">
+      <div id="camp-registration-grid" class="schedule-grid">
+        <!-- Spinner and Content -->
+        <div class="d-flex justify-content-center">
+          <div id="formSpinner" class="spinner-border text-navy align-self-center" role="status"
+            style="width: 3rem; height: 3rem; display: none"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- /section -->
+
+<!-- The Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content p-0">
+      <div class="modal-header d-flex justify-content-center p-4">
+        <h5 class="modal-title text-center fs-28" id="myModalLabel">
+          {{ site.data.summercamp[page.locale].summer.modal }}
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0">
+        <iframe id="modalIframe" src="" frameborder="0" width="100%" height="500"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"
+  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<style>
+  /* Container and Grid Layout */
+  .grid-wrapper {
+    width: 100%;
+    position: relative;
+    min-height: 200px;
+  }
+
+  .mobile-cards-container {
+    display: none;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .desktop-container {
+    width: 100%;
+  }
+
+  .schedule-container {
+    max-width: 2400px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
+    padding-bottom: 4rem;
+    min-height: 50vh;
+  }
+
+  .schedule-grid {
+    position: relative;
+    background: transparent;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Table Styles */
+  .table {
+    margin: 0;
+    background: white;
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+  }
+
+  .table thead {
+    position: sticky;
+    top: 72px;
+    z-index: 1020;
+    background: white;
+  }
+
+  .header-row {
+    background: white;
+    transition: all 0.3s ease;
+    top: 130px;
+  }
+
+  .header-row th {
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    background-color: white;
+    border-bottom: 2px solid #dee2e6;
+    position: sticky;
+    top: 72px;
+    z-index: 1020;
+  }
+
+  .header-row.scrolled {
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(8px);
+  }
+
+  .header-row.scrolled th {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .course-col {
+    width: 300px;
+  }
+
+  .date-col {
+    min-width: 150px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  /* Course Info Styles */
+  .course-info-cell {
+    padding: 1rem;
+    vertical-align: top;
+  }
+
+  .course-info-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .course-image-container {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 0.5rem;
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+  }
+
+  .table-course-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .course-details {
+    text-align: center;
+    padding: 0.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .course-details h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .course-details p {
+    margin: 0.25rem 0;
+    font-size: 0.875rem;
+    color: #6c757d;
+  }
+
+  /* Date Cell Styles */
+  .date-cell {
+    text-align: center;
+    vertical-align: middle;
+    padding: 1rem;
+  }
+
+  .date-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .time {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #6c757d;
+  }
+
+  .no-class {
+    color: #adb5bd;
+  }
+
+  /* Mobile Course Card Styles */
+  .mobile-course-card {
+    display: none;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+
+  .mobile-course-header {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .mobile-course-image {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .mobile-course-info {
+    flex-grow: 1;
+  }
+
+  .mobile-course-info h3 {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  .mobile-course-age {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+
+  .mobile-course-actions {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  /* Button Styles */
+  .btn-learn-more,
+  .btn-join-today {
+    background-color: #04aaf4;
+    color: white;
+    border: none;
+    padding: 6px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .btn-learn-more:hover,
+  .btn-join-today:hover {
+    background-color: #0056b3;
+  }
+
+  .btn-join-us {
+    background-color: #04aaf4;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 140px;
+    display: inline-block;
+  }
+
+  .btn-join-us:hover {
+    background-color: #0388c5;
+    color: white;
+  }
+
+  .mobile-btn {
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .mobile-btn-outline {
+    border: 2px solid #04aaf4;
+    color: #04aaf4;
+    background: white;
+    max-width: 160px;
+    min-width: 90px
+  }
+
+  .mobile-btn-dark {
+    background: #1f2937;
+    color: white;
+    border: none;
+    min-width: 90px;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Grade Button Styles */
+  .grade-btn {
+    border: 2px solid #04aaf4;
+    background-color: #ffffff;
+    color: #04aaf4;
+    padding: 8px 16px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  .grade-btn:hover,
+  .grade-btn.active {
+    background-color: #04aaf4;
+    color: #ffffff;
+  }
+
+  .grade-btn-text {
+    font-size: 0.8em;
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* Mobile Dates Section */
+  .mobile-dates-section {
+    display: none;
+    padding: 0.75rem;
+  }
+
+  .mobile-date-item {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .mobile-date-item:last-child {
+    border-bottom: none;
+  }
+
+  .mobile-date-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .mobile-date-info h4 {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+
+  .mobile-date-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+
+  .status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  .status-orange {
+    background-color: #f97316;
+  }
+
+  .status-green {
+    background-color: #22c55e;
+  }
+
+  /* Media Queries */
+  @media (max-width: 1200px) {
+
+    .date-col,
+    .date-cell {
+      display: none;
+    }
+
+    .course-info-wrapper {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .course-details {
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .schedule-container {
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    .course-col {
+      width: 100%;
+    }
+
+    .header-row th {
+      position: sticky;
+      top: 0;
+    }
+
+    .schedule-grid {
+      max-height: none;
+      overflow: visible;
+    }
+
+    .table tbody tr:first-child td {
+      padding-top: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .table {
+      display: none;
+    }
+
+    .mobile-course-card {
+      display: block;
+    }
+
+    .desktop-container {
+      display: none;
+    }
+
+    .mobile-cards-container {
+      display: block;
+    }
+
+    .schedule-container {
+      width: 100%;
+      padding: 0 0.5rem;
+      padding-bottom: 60px;
+    }
+
+    .grid-wrapper {
+      margin-bottom: 2rem;
+    }
+
+    .mobile-btn-dark {
+      font-size: 0.8rem;
+      padding: 0.35rem 0.75rem;
+      min-width: 80px;
+      max-width: 160px;
+    }
+
+    .schedule-grid {
+      max-height: none;
+      overflow: visible;
+      box-shadow: none;
+      background: transparent;
+    }
+
+    .btn-learn-more,
+    .btn-join-today {
+      font-size: 0.75rem;
+      padding: 4px 8px;
+      width: 90px;
+    }
+
+    .course-image-container {
+      height: 100px;
+    }
+
+    .course-details h4 {
+      font-size: 0.9rem;
+    }
+
+    .course-details p {
+      font-size: 0.8rem;
+    }
+
+    .header-row th {
+      padding: 0.75rem;
+    }
+
+    .grade-btn {
+      -webkit-touch-callout: none;
+      user-select: none;
+    }
+
+    .grade-btn:active {
+      background-color: #04aaf4;
+      color: #ffffff;
+    }
+
+    .grade-btn:hover {
+      background-color: #ffffff;
+      color: #04aaf4;
+    }
+
+    .grade-btn.active:hover {
+      background-color: #04aaf4;
+      color: #ffffff;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .mobile-container {
+      display: none;
+    }
+  }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  var preference = window.location.href.indexOf("cn") == -1 ? "en" : "cn";
+  var fileToFetch = preference === "cn" ? "/assets/summer2025_cn.json" : "/assets/summer2025.json";
+
+  var translations = {
+    grade: '{{ site.data.summercamp[page.locale].summer.grade }}',
+    price: '{{ site.data.summercamp[page.locale].summer.price }}',
+    discount: '{% if site.data.summercamp[page.locale].summer.discount %}{{ site.data.summercamp[page.locale].summer.discount }}{% else %}Discount{% endif %}',
+    courseInfo: '{% if site.data.summercamp[page.locale].summer.courseInfo %}{{ site.data.summercamp[page.locale].summer.courseInfo }}{% else %}Course Info{% endif %}'
+  };
+
+  $(document).ready(function () {
+    // Set up modal listener
+    setupModalListeners();
+
+    // Initial data fetch and setup
+    fetchAndPopulateFilters();
+
+    // Add click handler for Join Today buttons
+    $(document).on('click', '.btn-join-today', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var $button = $(this);
+      var registrationUrl = $button.data('registration');
+      if (registrationUrl) {
+        window.open(registrationUrl, '_blank');
+      } else {
+        console.error('Registration URL not found');
+        // Fallback: try to get the URL from the parent card
+        var cardRegistrationUrl = $button.closest('.course-card').data('registration');
+        if (cardRegistrationUrl) {
+          window.open(cardRegistrationUrl, '_blank');
+        }
+      }
+    });
+  });
+
+  function fetchAndPopulateFilters() {
+    $("#formSpinner").css("display", "block");
+    $.getJSON(fileToFetch)
+      .then(function (coursesData) {
+        $("#formSpinner").css("display", "none");
+        populateLocationFilter(coursesData);
+        populateGradeFilter(coursesData);
+        fetchAndApplyFilters();
+      })
+      .catch(function (error) {
+        $("#formSpinner").css("display", "none");
+        alert("Error: " + error);
+        console.error("Error fetching JSON data:", error);
+      });
+  }
+
+  function populateLocationFilter(coursesData) {
+    var locationSelect = document.getElementById("locationFilter");
+    Object.keys(coursesData).forEach(function (location) {
+      var option = document.createElement("option");
+      option.value = location;
+      option.text = location;
+      locationSelect.appendChild(option);
+    });
+  }
+
+  function populateGradeFilter(coursesData) {
+    var grades = new Set();
+    Object.values(coursesData).flat().forEach(function (course) {
+      grades.add(course.Grade);
+    });
+
+    var $gradeFilter = $('#gradeFilter');
+    grades.forEach(function (grade) {
+      var $button = $('<button>', {
+        class: 'grade-btn',
+        'data-grade': grade,
+        text: grade
+      });
+      $gradeFilter.append($button);
+    });
+
+    $('.grade-btn').on('click touchend', function (e) {
+      e.preventDefault();
+      var $btn = $(this);
+
+      // Force redraw by triggering reflow
+      $btn.toggleClass('active');
+      $btn[0].offsetHeight;
+
+      // Apply active state immediately
+      if ($btn.hasClass('active')) {
+        $btn.css('background-color', '#04aaf4');
+        $btn.css('color', '#ffffff');
+      } else {
+        $btn.css('background-color', '#ffffff');
+        $btn.css('color', '#04aaf4');
+      }
+
+      fetchAndApplyFilters();
+    });
+  }
+
+  function getSelectedGrades() {
+    return $('.grade-btn.active').map(function () {
+      return $(this).data('grade');
+    }).get();
+  }
+
+  function fetchAndApplyFilters() {
+    $("#formSpinner").css("display", "block");
+
+    // First try to load dates.json
+    $.getJSON("/assets/dates.json")
+      .then(function (datesData) {
+        // Successfully loaded dates.json, now load courses data
+        return $.getJSON(fileToFetch)
+          .then(function (coursesData) {
+            applyFiltersWithData(datesData, coursesData);
+          });
+      })
+      .catch(function () {
+        // If dates.json fails to load, proceed with only courses data
+        console.warn("Could not load dates.json, proceeding with only course data");
+        return $.getJSON(fileToFetch)
+          .then(function (coursesData) {
+            applyFiltersWithData(null, coursesData);
+          });
+      })
+      .catch(function (error) {
+        // Final error handler if all data loading fails
+        $("#formSpinner").css("display", "none");
+        console.error("Error fetching JSON data:", error);
+        $("#camp-registration-grid").html('<div class="alert alert-danger">Error loading course data. Please try again later.</div>');
+      });
+  }
+
+  function applyFiltersWithData(datesData, coursesData) {
+    $("#formSpinner").css("display", "none");
+
+    var selectedLocation = $("#locationFilter").val() || "all";
+    var selectedGrades = getSelectedGrades();
+
+    populateFilteredGrid(datesData, coursesData, selectedLocation, selectedGrades);
+  }
+
+  // Add change event listener for location filter
+  $("#locationFilter").change(fetchAndApplyFilters);
+
+  function createMobileCard(course) {
+    // Create main card container
+    var $card = $('<div>', {
+      class: 'mobile-course-card'
+    });
+
+    // Create header section
+    var $header = $('<div>', { class: 'mobile-course-header' });
+    var $img = $('<img>', {
+      class: 'mobile-course-image',
+      src: '/img/my/app-dev-1.png',
+      alt: course.name
+    });
+
+    var $info = $('<div>', { class: 'mobile-course-info' });
+    $info.append(
+      $('<h3>').text(course.name),
+      $('<div>', { class: 'mobile-course-age' }).text(`${translations.grade}: ${course.grade}`),
+      $('<div>', { class: 'mobile-course-age' }).text(`${translations.price}: ${course.price}`)
+    );
+
+    // Add discount if available
+    if (course.discount) {
+      $info.append($('<div>', { class: 'mobile-course-age' }).text(`${translations.discount}: ${course.discount}`));
+    }
+
+    $header.append($img, $info);
+
+    // Create action buttons
+    var $actions = $('<div>', { class: 'mobile-course-actions' });
+    var $courseInfoBtn = $('<button>', {
+      class: 'mobile-btn mobile-btn-outline',
+      text: '{{ site.data.summercamp[page.locale].summer.learnMore }}',
+    }).click(function () {
+      $("#myModal").find("#modalIframe").attr("src", course.courseInfo);
+      $("#myModal").modal("show");
+    });
+
+    var $viewDatesBtn = $('<button>', {
+      class: 'mobile-btn mobile-btn-dark',
+      text: '{{ site.data.summercamp[page.locale].summer.availableDate }}',
+    }).click(function () {
+      var $datesSection = $(this).closest('.mobile-course-card').find('.mobile-dates-section');
+      var isVisible = $datesSection.is(':visible');
+
+      $(this).text(isVisible ?
+        '{{ site.data.summercamp[page.locale].summer.availableDate }}' :
+        '{% if site.data.summercamp[page.locale].summer.closeDates %}{{ site.data.summercamp[page.locale].summer.closeDates }}{% else %}Close Dates{% endif %}');
+      $datesSection.slideToggle();
+    });
+
+    $actions.append($courseInfoBtn, $viewDatesBtn);
+
+    // Create dates section
+    var $datesSection = $('<div>', { class: 'mobile-dates-section' });
+
+    // Add date items
+    course.dates.forEach((scheduleInfo, date) => {
+      if (scheduleInfo) {
+        var $dateItem = createMobileDateItem(date, scheduleInfo);
+        $datesSection.append($dateItem);
+      }
+    });
+
+    // Assemble the card
+    $card.append($header, $actions, $datesSection);
+
+    // Load actual image if available
+    if (course.courseInfo) {
+      $.get(course.courseInfo, function (data) {
+        var $html = $($.parseHTML(data));
+        var $image = $html.find('img:not([src$=".svg"])').eq(1);
+        if ($image.length) {
+          var imageUrl = new URL($image.attr("src"), course.courseInfo).href;
+          $img.attr('src', imageUrl);
+        }
+      });
+    }
+
+    return $card;
+  }
+
+  function createMobileDateItem(date, scheduleInfo) {
+    var $dateItem = $('<div>', { class: 'mobile-date-item' });
+    var $dateHeader = $('<div>', { class: 'mobile-date-header' });
+
+    var $dateInfo = $('<div>', { class: 'mobile-date-info' });
+    $dateInfo.append(
+      $('<h4>').text(date),
+      $('<div>', { class: 'mobile-date-status' }).append(
+        $('<div>', {
+          class: 'status-indicator status-green'
+        }),
+        $('<span>').text('Open')
+      )
+    );
+
+    var $selectBtn = $('<button>', {
+      class: 'mobile-btn mobile-btn-dark',
+      text: '{{ site.data.summercamp[page.locale].summer.joinToday }}',
+      'data-registration': scheduleInfo.registration
+    }).click(function () {
+      window.open($(this).data('registration'), '_blank');
+    });
+
+    $dateHeader.append($dateInfo, $selectBtn);
+    $dateItem.append($dateHeader);
+
+    return $dateItem;
+  }
+
+  function populateFilteredGrid(datesData, coursesData, selectedLocation, selectedGrades) {
+    var $grid = $("#camp-registration-grid");
+    $grid.empty();
+
+    // Check if we have valid data
+    if (!coursesData || Object.keys(coursesData).length === 0) {
+      $grid.html('<div class="alert alert-info">No course data available at this time. Please check back later.</div>');
+      return;
+    }
+
+    // Extract all date ranges from datesData or create from course data
+    var dateHeaders = [];
+    if (datesData && Object.keys(datesData).length > 0) {
+      dateHeaders = Object.values(datesData)
+        .reduce((acc, date) => {
+          if (date && !acc.includes(date)) {
+            acc.push(date);
+          }
+          return acc;
+        }, [])
+        .sort();
+    } else {
+      // If no dates.json, try to extract date codes from course data
+      var dateCodes = new Set();
+      Object.values(coursesData).forEach(courses => {
+        if (!Array.isArray(courses)) return;
+        courses.forEach(course => {
+          if (course && Array.isArray(course.Dates)) {
+            course.Dates.forEach(date => dateCodes.add(date));
+          }
+        });
+      });
+      dateHeaders = Array.from(dateCodes).sort();
+    }
+
+    if (dateHeaders.length === 0) {
+      $grid.html('<div class="alert alert-info">No dates available at this time. Please check back later.</div>');
+      return;
+    }
+
+    // Create course map for organizing data
+    let courseMap = new Map();
+
+    // Process data
+    Object.entries(coursesData || {}).forEach(([location, courses]) => {
+      if (!Array.isArray(courses)) return;
+
+      courses.forEach((course) => {
+        if (!course) return;
+
+        if ((selectedLocation === "all" || location === selectedLocation) &&
+          (selectedGrades.length === 0 || selectedGrades.includes(course.Grade))) {
+
+          let courseKey = course.Name + course.Grade;
+          let courseInfo = courseMap.get(courseKey) || {
+            name: course.Name || "Unnamed Course",
+            grade: course.Grade || "All Grades",
+            price: course.Price || "Contact for price",
+            discount: course.Discount || "",
+            courseInfo: course.CourseInfo || "",
+            dates: new Map()
+          };
+
+          // Handle the special case for your data structure
+          if (Array.isArray(course.Dates) && Array.isArray(course["Registration Links"])) {
+            course.Dates.forEach((dateCode, index) => {
+              if (!dateCode) return;
+
+              // Get time from the Time array if available
+              let timeValue = "";
+              if (Array.isArray(course.Time) && index < course.Time.length) {
+                timeValue = course.Time[index];
+              }
+
+              // Use either the date from datesData or the code itself
+              const dateText = datesData && datesData[dateCode] ? datesData[dateCode] : dateCode;
+
+              // Get registration link
+              const registrationLink = course["Registration Links"] &&
+                index < course["Registration Links"].length ?
+                course["Registration Links"][index] : "#";
+
+              courseInfo.dates.set(dateText, {
+                time: timeValue,
+                registration: registrationLink
+              });
+            });
+          }
+
+          courseMap.set(courseKey, courseInfo);
+        }
+      });
+    });
+
+    // Create mobile view container
+    var $mobileCardsContainer = $('<div>', { class: 'mobile-cards-container' });
+    courseMap.forEach((course) => {
+      var $mobileCard = createMobileCard(course);
+      $mobileCardsContainer.append($mobileCard);
+    });
+
+    // Create desktop view container
+    var $desktopContainer = $('<div>', { class: 'desktop-container' });
+    var $table = $('<table class="table table-striped" style="width: 100%; table-layout: fixed;">');
+    var $thead = $("<thead>");
+    var $headerRow = $('<tr>', {
+      class: 'header-row',
+      role: 'row'
+    });
+
+    // Add course name header
+    $headerRow.append('<th class="course-col">{{ site.data.summercamp[page.locale].summer.courseName }}</th>');
+
+    // Add date headers
+    dateHeaders.forEach(date => {
+      $headerRow.append(`<th class="date-col">${date}</th>`);
+    });
+
+    $thead.append($headerRow);
+    $table.append($thead);
+
+    var $tbody = $("<tbody>");
+
+    // Create rows for each course
+    courseMap.forEach(course => {
+      var $row = $('<tr>');
+
+      // Course info cell
+      var $courseCell = $('<td class="course-info-cell">');
+      var $courseContent = $('<div class="course-info-wrapper">');
+
+      // Add image container
+      var $imageContainer = $('<div class="course-image-container">');
+      var $defaultImage = $('<img>', {
+        class: 'table-course-image',
+        src: '/img/my/app-dev-1.png',
+        alt: course.name
+      });
+      $imageContainer.append($defaultImage);
+      if (course.courseInfo) {
+        $.get(course.courseInfo, function (data) {
+          var $html = $($.parseHTML(data));
+          var $image = $html.find('img:not([src$=".svg"])').eq(2);
+          if ($image.length) {
+            var imageUrl = new URL($image.attr("src"), course.courseInfo).href;
+            $defaultImage.attr('src', imageUrl);
+          }
+        });
+      }
+
+      // Add course details
+      var $details = $('<div class="course-details">').append(
+        $('<h4>').text(course.name),
+        $('<p>').text(`${translations.grade}: ${course.grade}`),
+        $('<p>').text(`${translations.price}: ${course.price}`)
+      );
+
+      // Add discount if available
+      if (course.discount) {
+        $details.append($('<p>').text(`${translations.discount}: ${course.discount}`));
+      }
+
+      // Add Learn More button
+      $details.append(
+        $('<button>', {
+          class: 'btn-learn-more',
+          text: '{{ site.data.summercamp[page.locale].summer.learnMore }}',
+          'data-course-info': course.courseInfo,
+          'data-bs-toggle': 'modal',
+          'data-bs-target': '#myModal'
+        })
+      );
+
+      $courseContent.append($imageContainer, $details);
+      $courseCell.append($courseContent);
+      $row.append($courseCell);
+
+      // Add date cells
+      dateHeaders.forEach(date => {
+        var $dateCell = $('<td class="date-cell">');
+        var scheduleInfo = course.dates.get(date);
+
+        var $content = $('<div class="date-content">');
+        if (scheduleInfo) {
+          if (scheduleInfo.time) {
+            $content.append($('<p class="time">').text(scheduleInfo.time));
+          }
+          $content.append(
+            $('<button>', {
+              class: 'btn-join-today',
+              text: '{{ site.data.summercamp[page.locale].summer.joinToday }}',
+              'data-registration': scheduleInfo.registration
+            })
+          );
+        } else {
+          $content.append('<div class="no-class">-</div>');
+        }
+
+        $dateCell.append($content);
+        $row.append($dateCell);
+      });
+
+      $tbody.append($row);
+    });
+
+    $table.append($tbody);
+    $desktopContainer.append($table);
+
+    // Add both views to the grid with wrapper
+    var $gridWrapper = $('<div>', { class: 'grid-wrapper' });
+    $gridWrapper.append($mobileCardsContainer, $desktopContainer);
+    $grid.append($gridWrapper);
+
+    // Reinitialize event handlers
+    $('.btn-learn-more').click(function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      $("#myModal").find("#modalIframe").attr("src", $(this).data('course-info'));
+      $("#myModal").modal("show");
+    });
+
+    // Handle scroll for sticky header
+    $(window).scroll(function () {
+      var scroll = $(window).scrollTop();
+      var headerOffset = $('#gradeFilter').offset().top;
+
+      if (scroll > headerOffset) {
+        $('.header-row').addClass('scrolled');
+      } else {
+        $('.header-row').removeClass('scrolled');
+      }
+    });
+
+    // Adjust display for mobile
+    adjustTableForMobile();
+  }
+
+  function setupModalListeners() {
+    $('#myModal').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget);
+      var courseInfo = button.data('course-info');
+      var modal = $(this);
+      modal.find('#modalIframe').attr('src', courseInfo);
+    });
+  }
+
+  function adjustTableForMobile() {
+    if ($(window).width() < 1200) {
+      $("th:not(:first-child)").hide();
+      $("td:not(:first-child)").hide();
+    } else {
+      $("th, td").show();
+      $(".header-row").off("click");
+    }
+  }
+
+  $(window).resize(adjustTableForMobile);
+
+  function createImageElement(url, $container) {
+    var defaultImageUrl = "/img/my/app-dev-1.png";
+
+    $.get(url, function (data) {
+      var $html = $($.parseHTML(data));
+      var $image = $html.find('img:not([src$=".svg"])').eq(2);
+
+      var imageUrl;
+      if ($image.length) {
+        imageUrl = new URL($image.attr("src"), url).href;
+      } else {
+        imageUrl = defaultImageUrl;
+      }
+
+      var $imageElement = $("<img>", {
+        class: "card-img-top rounded-top rounded-0",
+        src: imageUrl,
+        style: "width: 100%; height: auto; display: block; margin-bottom: 5px; text-align: center;",
+      });
+      $container.prepend($imageElement);
+    }).fail(function () {
+      var $imageElement = $("<img>", {
+        class: "card-img-top rounded-top rounded-0",
+        src: defaultImageUrl,
+        style: "width: 100%; height: auto; display: block; margin-bottom: 5px; text-align: center;",
+      });
+      $container.prepend($imageElement);
+    });
+  }
+</script>

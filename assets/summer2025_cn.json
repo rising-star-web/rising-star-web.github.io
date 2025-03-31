@@ -1,0 +1,237 @@
+{
+  "尔湾校区": [
+    {
+      "Name": "Minecraft AI实验室 - 编程与人工智能的融合探索",
+      "Time": [
+        "9am - 12pm",
+        "1pm - 4pm",
+        "1pm - 4pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/cn/courses/minecraft-programming-camp",
+      "Price": 500,
+      "Grade": "1-4",
+      "Dates": ["W1", "W2", "W4", "W5", "W7", "W8"],
+      "Registration Links": [
+        "https://codingmind.com/cn/course-info-register?course_id=67d4ba9b123d310015941fb1&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4c8e0123d3100159421a1&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4cda2123d310015942222&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4cf62123d310015942237&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4bfd1123d31001594204a&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4d1b5123d31001594227c&organizationId=65f3061cf9e48a001424996a"
+      ]
+    },
+    {
+      "Name": "AI游戏创作 - Roblox开发与智能游戏逻辑",
+      "Time": [
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm"
+      ],
+      "CourseInfo": "https://codingmind.com/cn/courses/app-thunkable-camp",
+      "Price": 500,
+      "Grade": "1-4",
+      "Dates": ["W2", "W5", "W8", "W10"],
+      "Registration Links": [
+        "https://codingmind.com/cn/course-info-register?course_id=67d4bb86123d310015941fc5&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4bdb7123d31001594200f&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4bfd1123d31001594204a&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d86bb511213a0015554077&organizationId=65f3061cf9e48a001424996a"
+      ]
+    },
+    {
+      "Name": "AI创意应用工坊 - 从概念到智能软件开发",
+      "Time": [
+        "1pm - 4pm",
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm"
+      ],
+      "CourseInfo": "https://codingmind.com/cn/courses/roblox-camp",
+      "Price": 500,
+      "Grade": "1-4",
+
+      "Dates": ["W1", "W3", "W4", "W6", "W7", "W9"],
+      "Registration Links": [
+        "https://codingmind.com/cn/course-info-register?course_id=67d4c865123d31001594218c&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4bc39123d310015941fe1&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4bcf0123d310015941ffb&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4be6f123d310015942023&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4d108123d310015942265&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4c086123d31001594206d&organizationId=65f3061cf9e48a001424996a"
+      ]
+    },
+    {
+      "Name": "AI启蒙之旅 - 少儿人工智能思维培养",
+      "Time": [
+        "1pm - 4pm",
+        "1pm - 4pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/cn/courses/lego-mindstorm-camp",
+      "Price": 500,
+      "Grade": "1-4",
+      "Dates": ["W3", "W6", "W9"],
+      "Registration Links": [
+        "https://codingmind.com/cn/course-info-register?course_id=67d4cc95123d310015942211&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4e6c2123d310015942431&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4e7e6123d310015942443&organizationId=65f3061cf9e48a001424996a"
+      ]
+    },
+    {
+      "Name": "AI+Python - 智能应用开发与实践",
+      "Time": [
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm"
+      ],
+      "CourseInfo": "https://codingmind.com/cn/courses/python-camp",
+      "Price": 500,
+      "Grade": "5-8",
+      "Dates": ["W1", "W3", "W5", "W7", "W9"],
+      "Registration Links": [
+        "https://codingmind.com/cn/course-info-register?course_id=67d4c209123d31001594208d&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4c494123d310015942100&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4c51f123d310015942126&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4c680123d310015942157&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4c7ae123d310015942179&organizationId=65f3061cf9e48a001424996a"
+      ]
+    },
+    {
+      "Name": "生成式AI创意营 - 探索大模型与智能创作",
+      "Time": [
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm"
+      ],
+      "CourseInfo": "https://codingmind.com/cn/courses/web-camp",
+      "Price": 500,
+      "Grade": "5-8",
+
+      "Dates": ["W2", "W4", "W6", "W8", "W10"],
+      "Registration Links": [
+        "https://codingmind.com/cn/course-info-register?course_id=67d4c296123d31001594209e&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4c296123d31001594209f&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4c5cb123d310015942139&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4c705123d310015942168&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67cdb22da129130015c4fe89&organizationId=65f3061cf9e48a001424996a"
+      ]
+    },
+    {
+      "Name": "AI驱动Web开发 - 从前端交互到智能系统",
+      "Time": [
+        "1pm - 4pm",
+        "1pm - 4pm",
+        "1pm - 4pm",
+        "1pm - 4pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/cn/courses/ai-camp",
+      "Price": 500,
+      "Grade": "5-8",
+
+      "Dates": ["W1", "W3", "W5", "W7", "W9"],
+      "Registration Links": [
+        "https://codingmind.com/cn/course-info-register?course_id=67d4d3b8123d3100159422a7&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4d4e1123d3100159422cb&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4d842123d31001594230e&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4d962123d31001594232c&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4dab5123d310015942349&organizationId=65f3061cf9e48a001424996a"
+      ]
+    },
+    {
+      "Name": "AI艺术与元宇宙 - Unity智能创作与虚拟世界构建",
+      "Time": [
+        "1pm - 4pm",
+        "1pm - 4pm",
+        "1pm - 4pm",
+        "1pm - 4pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/cn/courses/unity-camp",
+      "Price": 500,
+      "Grade": "5-8",
+      "Dates": ["W2", "W4", "W6", "W8", "W10"],
+      "Registration Links": [
+        "https://codingmind.com/cn/course-info-register?course_id=67d4d44b123d3100159422b9&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4d5bc123d3100159422e0&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4d8d6123d31001594231d&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4da1e123d31001594233a&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4da1e123d31001594233a&organizationId=65f3061cf9e48a001424996a"
+      ]
+    },
+    {
+      "Name": "AI 创新工坊 - 打造科学竞赛项目",
+      "Time": [
+        "9am - 4pm",
+        "9am - 4pm",
+        "9am - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/cn/courses/usaco-1-camp",
+      "Price": 500,
+      "Grade": "7-12",
+      "Dates": ["W1", "W5", "W9"],
+      "Registration Links": [
+        "https://codingmind.com/cn/course-info-register?course_id=67d4dbfa123d31001594235d&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4e025123d3100159423c9&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4e34b123d310015942406&organizationId=65f3061cf9e48a001424996a"
+      ]
+    },
+    {
+      "Name": "AI商业实战 - 电子商务平台开发与智能营销全流程",
+      "Time": [
+        "9am - 4pm",
+        "9am - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/cn/courses/usaco-2-camp",
+      "Price": 500,
+      "Grade": "7-12",
+      "Dates": ["W2", "W6"],
+      "Registration Links": [
+        "https://codingmind.com/cn/course-info-register?course_id=67d4dd68123d310015942376&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4e108123d3100159423de&organizationId=65f3061cf9e48a001424996a"
+      ]
+    },
+    {
+      "Name": "私有AI实验室 - 深入探索DeepSeek AI的构建与应用",
+      "Time": [
+        "9am - 4pm",
+        "9am - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/cn/courses/apcsp-camp",
+      "Price": 500,
+      "Grade": "7-12",
+      "Dates": ["W3", "W7"],
+      "Registration Links": [
+        "https://codingmind.com/cn/course-info-register?course_id=67d4de4f123d31001594238e&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4e1f3123d3100159423ef&organizationId=65f3061cf9e48a001424996a"
+      ]
+    },
+    {
+      "Name": "智能边缘计算创客营 - 基于英伟达Jetson的AI系统开发",
+      "Time": [
+        "9am - 4pm",
+        "9am - 4pm",
+        "9am - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/cn/courses/apcsa-camp",
+      "Price": 500,
+      "Grade": "7-12",
+      "Dates": ["W4", "W8", "W10"],
+      "Registration Links": [
+        "https://codingmind.com/cn/course-info-register?course_id=67d4df4b123d3100159423b4&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67d4e9f9123d310015942455&organizationId=65f3061cf9e48a001424996a",
+        "https://codingmind.com/cn/course-info-register?course_id=67e55c1b8891520015001858&organizationId=65f3061cf9e48a001424996a"
+      ]
+    }
+  ]
+}
