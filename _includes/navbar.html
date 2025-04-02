@@ -6,8 +6,9 @@
           <img class="h-9" src="{{ site.logo }}" alt="" />
         </a>
         <!-- Branch Selector Dropdown -->
-        <div class="branch-selector dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" id="branchDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        <div class="branch-selector dropdown " hidden>
+          <a class="nav-link dropdown-toggle" href="#" role="button" id="branchDropdown" data-bs-toggle="dropdown"
+            aria-expanded="false">
             {% if page.branch %}{{ page.branch }}{% else %}Change Location{% endif %}
           </a>
           <ul class="dropdown-menu" aria-labelledby="branchDropdown">
@@ -136,24 +137,12 @@
       <!-- /.navbar-collapse -->
       <div class="navbar-other w-100 d-flex ms-auto">
         <ul class="navbar-nav flex-row align-items-center ms-auto">
-          <li class="nav-item language-select text-uppercase">
-            <!-- <a class="nav-link" role="button"  
-              href="
-              {% if page.name == "index.html" %}
-                {{ site.data.nav[page.locale].nav.switchLangURL }}{{page.name | replace:'index.html','' }}
-              {% elsif page.collection.size %}
-                {{ site.data.nav[page.locale].nav.switchLangURL }}{{page.collection}}/{{page.slug | downcase }}
-              {% else %}
-                {{ site.data.nav[page.locale].nav.switchLangURL }}{{page.name | replace:'.html','' }}
-              {% endif %}
-              ">  
-              {{ site.data.nav[page.locale].nav.switchLang }}
-              </a> -->
+          <li class="nav-item language-select text-uppercase" id="language-switcher" {% if page.url
+            contains 'kids-coding-class' %}hidden{% endif %}>
             <a class="nav-link" role="button" href="javascript:void(0);"
               onclick="switchLanguageWithParams('{{ site.data.nav[page.locale].nav.switchLangURL }}', '{{ page.name }}', '{{ page.collection }}', '{{ page.slug | downcase }}')">
               {{ site.data.nav[page.locale].nav.switchLang }}
             </a>
-
           </li>
 
           <li class="nav-item d-none d-md-block">
@@ -202,67 +191,69 @@
   //   })
   // })
 
-  document.addEventListener('DOMContentLoaded', function() {
-  var dropdownToggle = document.querySelector('.branch-selector .dropdown-toggle');
-  var dropdownMenu = document.querySelector('.branch-selector .dropdown-menu');
-  var dropdownContainer = document.querySelector('.branch-selector');
+  document.addEventListener('DOMContentLoaded', function () {
+    var dropdownToggle = document.querySelector('.branch-selector .dropdown-toggle');
+    var dropdownMenu = document.querySelector('.branch-selector .dropdown-menu');
+    var dropdownContainer = document.querySelector('.branch-selector');
 
-  // Show dropdown on hover for non-touch devices
-  if (!('ontouchstart' in window)) {
-    dropdownContainer.addEventListener('mouseenter', function() {
-      dropdownMenu.style.display = 'block';
+    // Show dropdown on hover for non-touch devices
+    if (!('ontouchstart' in window)) {
+      dropdownContainer.addEventListener('mouseenter', function () {
+        dropdownMenu.style.display = 'block';
+      });
+
+      dropdownContainer.addEventListener('mouseleave', function () {
+        dropdownMenu.style.display = 'none';
+      });
+    }
+
+    // Handle click for touch devices
+    dropdownToggle.addEventListener('click', function (e) {
+      if ('ontouchstart' in window) {
+        e.preventDefault();
+        dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+      }
     });
 
-    dropdownContainer.addEventListener('mouseleave', function() {
-      dropdownMenu.style.display = 'none';
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function (e) {
+      if (!dropdownContainer.contains(e.target)) {
+        dropdownMenu.style.display = 'none';
+      }
     });
-  }
-
-  // Handle click for touch devices
-  dropdownToggle.addEventListener('click', function(e) {
-    if ('ontouchstart' in window) {
-      e.preventDefault();
-      dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-    }
   });
-
-  // Close dropdown when clicking outside
-  document.addEventListener('click', function(e) {
-    if (!dropdownContainer.contains(e.target)) {
-      dropdownMenu.style.display = 'none';
-    }
-  });
-});
 </script>
 
 <style>
-.navbar-brand {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.branch-selector:hover .dropdown-menu {
-  display: block;
-}
-.dropdown-menu {
-  display: none;
-  margin-top: 0;
-}
-.branch-selector .dropdown-toggle::after {
-  display: inline-block;
-  margin-left: 0.255em;
-  vertical-align: 0.255em;
-  content: "";
-  border-top: 0.3em solid;
-  border-right: 0.3em solid transparent;
-  border-bottom: 0;
-  border-left: 0.3em solid transparent;
-}
+  .navbar-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .branch-selector:hover .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu {
+    display: none;
+    margin-top: 0;
+  }
+
+  .branch-selector .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+  }
 
   @media (max-width: 991px) {
     .branch-selector {
       margin-bottom: 10px;
     }
   }
-
 </style>
