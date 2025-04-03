@@ -2,7 +2,7 @@
 title: "Come see how Coding Mind can benefit your kids"
 locale: "en"
 image: 
-date: 2024-08-24
+date: 2025-04-01
 ---
 
 ![Coding Mind Logo]({{site.logo}}){: width="150px" }

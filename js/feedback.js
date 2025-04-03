@@ -2,32 +2,32 @@ var competitionMap = {
     'cp520': {
         'id': 'cp520',
         'name': 'Congressional App编程项目竞赛',
-        'date': '2024年6月',
+        'date': '2025年6月',
     },
     'cp510': {
         'id': 'cp510',
         'name': 'IgniteCS Expo编程项目展',
-        'date': '2024年9月',
+        'date': '2025年9月',
     },
     'cp350': {
         'id': 'cp350',
         'name': 'USACO信息学竞赛',
-        'date': '2024年12月和2025年1月、2月、3月',
+        'date': '2025年12月和2026年1月、2月、3月',
     },
     'cp600': {
         'id': 'cp600',
         'name': 'Diamond Challenge项目竞赛',
-        'date': '2025年1月',
+        'date': '2026年1月',
     },
     'cp500': {
         'id': 'cp500',
         'name': 'Conrad Challenge项目竞赛',
-        'date': '2025年1月',
+        'date': '2026年1月',
     },
     'cp610': {
         'id': 'cp610',
         'name': 'Ignite Fellowship奖学金项目',
-        'date': '2025年1月',
+        'date': '2026年1月',
     },
 
     'cp300': {
@@ -50,32 +50,32 @@ var competitionMapEng = {
     'cp520': {
         'id': 'cp520',
         'name': 'Congressional App Challenge',
-        'date': 'June 2024',
+        'date': 'June 2025',
     },
     'cp510': {
         'id': 'cp510',
         'name': 'IgniteCS Expo',
-        'date': 'September 2024',
+        'date': 'September 2025',
     },
     'cp350': {
         'id': 'cp350',
         'name': 'USACO',
-        'date': 'December 2024 and January, February, March 2025',
+        'date': 'December 2025 and January, February, March 2026',
     },
     'cp600': {
         'id': 'cp600',
         'name': 'Diamond Challenge',
-        'date': 'January 2025',
+        'date': 'January 2026',
     },
     'cp500': {
         'id': 'cp500',
         'name': 'Conrad Challenge',
-        'date': 'January 2025',
+        'date': 'January 2026',
     },
     'cp610': {
         'id': 'cp610',
         'name': 'Ignite Fellowship',
-        'date': 'January 2025',
+        'date': 'January 2026',
     },
 
     'cp300': {

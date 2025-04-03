@@ -2,7 +2,7 @@
 title: 来看看 Coding Mind 如何帮助您的孩子
 locale: cn
 image: 
-date: 2024-08-24
+date: 2025-04-01
 ---
 
 ![Coding Mind Logo]({{site.logo}}){: width="150px" }
