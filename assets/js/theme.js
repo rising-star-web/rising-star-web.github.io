@@ -838,7 +838,11 @@ var theme = {
                 const referralField = document.getElementById('referral');
                 const referral = referralField.options[referralField.selectedIndex].id;
                 function formatDateTimeSelections() {
+
                   const dateTimeSelections = document.getElementById('dateTimeSelections');
+                  if (!dateTimeSelections) {
+                    return ''; // Return empty string if element doesn't exist
+                  }
                   const selections = dateTimeSelections.querySelectorAll('.date-time-selection');
                   return Array.from(selections)
                     .map(selection => {
@@ -856,10 +860,8 @@ var theme = {
                 }
 
                   // Set availability based on location
-                  const availability = (campusLocation === 'San-diego' || campusLocation === 'Redmond'
-                    || campusLocation === "Arcadia" || campusLocation === "Diamond-bar" 
-                    || campusLocation === "Bothell" || campusLocation === "Factoria"
-                  ) 
+                  // For San Diego only, use the dateTimeSelections
+                  const availability = (campusLocation === 'San-diego' ) 
                     ? formatDateTimeSelections()
                     : document.getElementById('availability').value;
 
@@ -938,8 +940,8 @@ var theme = {
                     return;
                   }
                   
-                // let baseUrl = 'http://localhost:3000/api/';
-                let baseUrl = 'https://prod-sharemyworks-backend.herokuapp.com/api/';
+                let baseUrl = 'http://localhost:3000/api/';
+                // let baseUrl = 'https://prod-sharemyworks-backend.herokuapp.com/api/';
                 let username = (name.replace(' ','')).toLowerCase() + Math.floor(Math.random()*(999-100+1)+100);
                 let firstName = name.split(' ')[0];
                 let lastName = name.split(' ')[1]? name.split(' ')[1]: ' ';
