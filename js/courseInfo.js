@@ -132,9 +132,13 @@ function updatePageContent(course, courseId, accountId, token) {
 }
 
 function getCourseTime(course) {
-    const Monday = course.classDay + ' '+ course.classTime + '-' + course.classEndTime;
+  if (course.organizationId === "65f3061cf9e48a001424996a") {
+    return `Monday to Friday ${course.classTime}-${course.classEndTime}`;
+  } else {
+    const Monday = course.classDay + ' ' + course.classTime + '-' + course.classEndTime;
     const restDays = course.classDays.map((day) => `${day.classDay} ${day.classTime}-${day.classEndTime}`).join("\n ");
-  return `${Monday}\n${restDays}`;
+    return `${Monday}\n${restDays}`;
+  }
 }
 
 function getTotalClassesCount(course) {
