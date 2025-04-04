@@ -31,7 +31,7 @@
         "9am - 12pm",
         "9am - 12pm"
       ],
-      "CourseInfo": "https://codingmind.com/courses/app-thunkable-camp",
+      "CourseInfo": "https://codingmind.com/courses/roblox-camp",
       "Price": 500,
       "Grade": "1-4",
       "Dates": ["W2", "W5", "W8", "W10"],
@@ -52,7 +52,7 @@
         "1pm - 4pm",
         "9am - 12pm"
       ],
-      "CourseInfo": "https://codingmind.com/courses/roblox-camp",
+      "CourseInfo": "https://codingmind.com/courses/ai-camp",
       "Price": 500,
       "Grade": "1-4",
 
@@ -73,7 +73,7 @@
         "1pm - 4pm",
         "1pm - 4pm"
       ],
-      "CourseInfo": "https://codingmind.com/courses/lego-mindstorm-camp",
+      "CourseInfo": "https://codingmind.com/courses/introductory-ai",
       "Price": 500,
       "Grade": "1-4",
       "Dates": ["W3", "W6", "W9"],
@@ -113,7 +113,7 @@
         "9am - 12pm",
         "9am - 12pm"
       ],
-      "CourseInfo": "https://codingmind.com/courses/web-camp",
+      "CourseInfo": "https://codingmind.com/courses/gen-ai-camp",
       "Price": 500,
       "Grade": "5-8",
 
@@ -135,7 +135,7 @@
         "1pm - 4pm",
         "1pm - 4pm"
       ],
-      "CourseInfo": "https://codingmind.com/courses/ai-camp",
+      "CourseInfo": "https://codingmind.com/courses/web-camp",
       "Price": 500,
       "Grade": "5-8",
 
@@ -176,7 +176,7 @@
         "9am - 4pm",
         "9am - 4pm"
       ],
-      "CourseInfo": "https://codingmind.com/courses/usaco-1-camp",
+      "CourseInfo": "https://codingmind.com/courses/science-fair-camp",
       "Price": 500,
       "Grade": "7-12",
       "Dates": ["W1", "W5", "W9"],
@@ -192,7 +192,7 @@
         "9am - 4pm",
         "9am - 4pm"
       ],
-      "CourseInfo": "https://codingmind.com/courses/usaco-2-camp",
+      "CourseInfo": "https://codingmind.com/courses/shopify-dropshipping",
       "Price": 500,
       "Grade": "7-12",
       "Dates": ["W2", "W6"],
@@ -207,7 +207,7 @@
         "9am - 4pm",
         "9am - 4pm"
       ],
-      "CourseInfo": "https://codingmind.com/courses/apcsp-camp",
+      "CourseInfo": "https://codingmind.com/courses/deepseek-camp",
       "Price": 500,
       "Grade": "7-12",
       "Dates": ["W3", "W7"],
@@ -223,7 +223,7 @@
         "9am - 4pm",
         "9am - 4pm"
       ],
-      "CourseInfo": "https://codingmind.com/courses/apcsa-camp",
+      "CourseInfo": "https://codingmind.com/courses/jetson-camp",
       "Price": 500,
       "Grade": "7-12",
       "Dates": ["W4", "W8", "W10"],
