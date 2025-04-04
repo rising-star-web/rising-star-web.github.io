@@ -23,7 +23,7 @@ title: null
 domain: codingmind.com 
 url: "https://codingmind.com" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: ""
-logo: /assets/img/CMLogo2024.png
+logo: /assets/img/codingmindlogo.png
 logo_white: /assets/img/CMLogo2024-white.png
 
 # Build settings
