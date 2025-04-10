@@ -11,11 +11,11 @@ summer:
   learnMore: Learn More
   grade: Grade
   price: Price
-  availableDate: Available Date
+  availableDate: Available Dates
   # New landing page translations
   landingTitle: Summer Camp 2025
   landingSubtitle: Engaging, educational, and fun summer programs for students of all ages
-  landingLead: Join us for an exciting summer of learning and creativity. Our camps offer hands-on experiences in technology, arts, and sciences guided by expert instructors in a supportive environment.
+  landingLead: Join us for an exciting summer of learning and creativity.
   landingText: Explore our diverse selection of summer camps designed to inspire curiosity and develop new skills. Whether your child is interested in coding, robotics, digital arts, or STEM activities, we have the perfect program to make their summer memorable.
   exploreButton: Explore Programs
   codingTitle: Coding & Robotics

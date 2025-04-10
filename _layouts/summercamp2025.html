@@ -269,46 +269,6 @@ layout: default
     color: #adb5bd;
   }
 
-  /* Mobile Course Card Styles */
-  .mobile-course-card {
-    display: none;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem;
-    overflow: hidden;
-  }
-
-  .mobile-course-header {
-    display: flex;
-    padding: 1rem;
-    gap: 1rem;
-    align-items: center;
-  }
-
-  .mobile-course-image {
-    width: 64px;
-    height: 64px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-
-  .mobile-course-info {
-    flex-grow: 1;
-  }
-
-  .mobile-course-info h3 {
-    margin: 0;
-    font-size: 1.125rem;
-    font-weight: 600;
-  }
-
-  .mobile-course-age {
-    color: #6b7280;
-    font-size: 0.875rem;
-    margin-top: 0.25rem;
-  }
-
   .mobile-course-actions {
     display: flex;
     gap: 0.5rem;
@@ -503,6 +463,9 @@ layout: default
   }
 
   @media (max-width: 768px) {
+    .mobile-course-card {
+      display: block !important;
+    }
     .table {
       display: none;
     }
@@ -585,6 +548,15 @@ layout: default
       background-color: #04aaf4;
       color: #ffffff;
     }
+
+    .mobile-cards-container {
+      display: block !important;
+    }
+    
+    /* This ensures the desktop view is hidden */
+    .desktop-container {
+      display: none;
+    }
   }
 
   @media (min-width: 769px) {
@@ -592,6 +564,50 @@ layout: default
       display: none;
     }
   }
+
+/* Mobile Course Card Styles */
+.mobile-course-card {
+  display: none;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.mobile-course-image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.mobile-course-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobile-course-info-container {
+  padding: 1rem;
+}
+
+.mobile-course-info {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.mobile-course-info h3 {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.mobile-course-age {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin: 0.25rem 0;
+}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
@@ -741,86 +757,93 @@ layout: default
   $("#locationFilter").change(fetchAndApplyFilters);
 
   function createMobileCard(course) {
-    // Create main card container
-    var $card = $('<div>', {
-      class: 'mobile-course-card'
-    });
+  // Create main card container
+  var $card = $('<div>', {
+    class: 'mobile-course-card',
+     style: 'display: block;'
+  });
 
-    // Create header section
-    var $header = $('<div>', { class: 'mobile-course-header' });
-    var $img = $('<img>', {
-      class: 'mobile-course-image',
-      src: '/img/my/app-dev-1.png',
-      alt: course.name
-    });
+  // Create image container at the top
+  var $imageContainer = $('<div>', { class: 'mobile-course-image-container' });
+  var $img = $('<img>', {
+    class: 'mobile-course-image',
+    src: '/img/my/app-dev-1.png',
+    alt: course.name
+  });
+  $imageContainer.append($img);
 
-    var $info = $('<div>', { class: 'mobile-course-info' });
-    $info.append(
-      $('<h3>').text(course.name),
-      $('<div>', { class: 'mobile-course-age' }).text(`${translations.grade}: ${course.grade}`),
-      $('<div>', { class: 'mobile-course-age' }).text(`${translations.price}: ${course.price}`)
-    );
+  // Create info container
+  var $infoContainer = $('<div>', { class: 'mobile-course-info-container' });
+  
+  // Add course information
+  var $info = $('<div>', { class: 'mobile-course-info' });
+  $info.append(
+    $('<h3>').text(course.name),
+    $('<div>', { class: 'mobile-course-age' }).text(`${translations.grade}: ${course.grade}`),
+    $('<div>', { class: 'mobile-course-age' }).text(`${translations.price}: $${course.price}`)
+  );
 
-    // Add discount if available
-    if (course.discount) {
-      $info.append($('<div>', { class: 'mobile-course-age' }).text(`${translations.discount}: ${course.discount}`));
+  // Add discount if available
+  if (course.discount) {
+    $info.append($('<div>', { class: 'mobile-course-age' }).text(`${translations.discount}: ${course.discount}`));
+  }
+
+  // Create action buttons
+  var $actions = $('<div>', { class: 'mobile-course-actions' });
+  var $courseInfoBtn = $('<button>', {
+    class: 'mobile-btn mobile-btn-outline',
+    text: '{{ site.data.summercamp[page.locale].summer.learnMore }}',
+  }).click(function () {
+    $("#myModal").find("#modalIframe").attr("src", course.courseInfo);
+    $("#myModal").modal("show");
+  });
+
+  var $viewDatesBtn = $('<button>', {
+    class: 'mobile-btn mobile-btn-dark',
+    text: '{{ site.data.summercamp[page.locale].summer.availableDate }}',
+  }).click(function () {
+    var $datesSection = $(this).closest('.mobile-course-card').find('.mobile-dates-section');
+    var isVisible = $datesSection.is(':visible');
+
+    $(this).text(isVisible ?
+      '{{ site.data.summercamp[page.locale].summer.availableDate }}' :
+      '{% if site.data.summercamp[page.locale].summer.closeDates %}{{ site.data.summercamp[page.locale].summer.closeDates }}{% else %}Close Dates{% endif %}');
+    $datesSection.slideToggle();
+  });
+
+  $actions.append($courseInfoBtn, $viewDatesBtn);
+  
+  // Add info and actions to info container
+  $infoContainer.append($info, $actions);
+
+  // Create dates section
+  var $datesSection = $('<div>', { class: 'mobile-dates-section' });
+
+  // Add date items
+  course.dates.forEach((scheduleInfo, date) => {
+    if (scheduleInfo) {
+      var $dateItem = createMobileDateItem(date, scheduleInfo);
+      $datesSection.append($dateItem);
     }
+  });
 
-    $header.append($img, $info);
+  // Assemble the card in the new order: image at top, then info/actions, then dates
+  $card.append($imageContainer, $infoContainer, $datesSection);
 
-    // Create action buttons
-    var $actions = $('<div>', { class: 'mobile-course-actions' });
-    var $courseInfoBtn = $('<button>', {
-      class: 'mobile-btn mobile-btn-outline',
-      text: '{{ site.data.summercamp[page.locale].summer.learnMore }}',
-    }).click(function () {
-      $("#myModal").find("#modalIframe").attr("src", course.courseInfo);
-      $("#myModal").modal("show");
-    });
-
-    var $viewDatesBtn = $('<button>', {
-      class: 'mobile-btn mobile-btn-dark',
-      text: '{{ site.data.summercamp[page.locale].summer.availableDate }}',
-    }).click(function () {
-      var $datesSection = $(this).closest('.mobile-course-card').find('.mobile-dates-section');
-      var isVisible = $datesSection.is(':visible');
-
-      $(this).text(isVisible ?
-        '{{ site.data.summercamp[page.locale].summer.availableDate }}' :
-        '{% if site.data.summercamp[page.locale].summer.closeDates %}{{ site.data.summercamp[page.locale].summer.closeDates }}{% else %}Close Dates{% endif %}');
-      $datesSection.slideToggle();
-    });
-
-    $actions.append($courseInfoBtn, $viewDatesBtn);
-
-    // Create dates section
-    var $datesSection = $('<div>', { class: 'mobile-dates-section' });
-
-    // Add date items
-    course.dates.forEach((scheduleInfo, date) => {
-      if (scheduleInfo) {
-        var $dateItem = createMobileDateItem(date, scheduleInfo);
-        $datesSection.append($dateItem);
+  // Load actual image if available
+  if (course.courseInfo) {
+    $.get(course.courseInfo, function (data) {
+      var $html = $($.parseHTML(data));
+      var $image = $html.find('img:not([src$=".svg"])').eq(2);
+      if ($image.length) {
+        var imageUrl = new URL($image.attr("src"), course.courseInfo).href;
+        $img.attr('src', imageUrl);
       }
     });
-
-    // Assemble the card
-    $card.append($header, $actions, $datesSection);
-
-    // Load actual image if available
-    if (course.courseInfo) {
-      $.get(course.courseInfo, function (data) {
-        var $html = $($.parseHTML(data));
-        var $image = $html.find('img:not([src$=".svg"])').eq(1);
-        if ($image.length) {
-          var imageUrl = new URL($image.attr("src"), course.courseInfo).href;
-          $img.attr('src', imageUrl);
-        }
-      });
-    }
-
-    return $card;
   }
+
+  return $card;
+}
 
   function createMobileDateItem(date, scheduleInfo) {
     var $dateItem = $('<div>', { class: 'mobile-date-item' });
@@ -1005,7 +1028,7 @@ layout: default
       var $details = $('<div class="course-details">').append(
         $('<h4>').text(course.name),
         $('<p>').text(`${translations.grade}: ${course.grade}`),
-        $('<p>').text(`${translations.price}: ${course.price}`)
+        $('<p>').text(`${translations.price}: $${course.price}`)
       );
 
       // Add discount if available
