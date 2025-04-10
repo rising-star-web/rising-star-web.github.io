@@ -3,42 +3,39 @@ layout: default
 ---
 <section class="wrapper bg-light">
   <div class="container pt-8 pt-md-12 pb-8 pb-md-8">
-    <div class="row gx-lg-8 gx-xl-0 gy-10 align-items-center">
-      <div class="col-lg-6 col-xl-5 position-relative d-none d-lg-block">
-        <figure class="ps-xxl-10"><img class="img-fluid" src="/assets/img/illustrations/3d5.png"
-            srcset="/assets/img/illustrations/3d5@2x.png 2x" alt="" /></figure>
-      </div>
+    <div class="row justify-content-center">
       <!--/column -->
       <div class="col-lg-6 col-xl-5 offset-xl-1 text-center">
-        <h2 class="display-2 mb-3">{{ site.data.register[page.locale].register.header }}</h2>
+                <!-- Course Info Card -->
+                <div class="card shadow-lg mb-5">
+                  <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">{% if site.data.register[page.locale].register.courseInfo %}{{ site.data.register[page.locale].register.courseInfo }}{% else %}Course Information{% endif %}</h5>
+                    <button id="toggleButton" class="btn btn-sm btn-primary text-white" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#courseInfoContent" 
+                          aria-expanded="true" aria-controls="courseInfoContent">
+                    <span id="toggleArrow">&#9650;</span> <!-- Default is Up -->
+                  </button>
+                  </div>
+                  <div class="collapse show" id="courseInfoContent">
+                    <div class="card-body">
+                      <div class="mb-3">
+                        <strong>{% if site.data.register[page.locale].register.courseName %}{{ site.data.register[page.locale].register.courseName }}{% else %}Course{% endif %}:</strong> 
+                        <span id="registerCourseName">-</span>
+                      </div>
+                      <div class="mb-3">
+                        <strong>{% if site.data.register[page.locale].register.courseDates %}{{ site.data.register[page.locale].register.courseDates }}{% else %}Dates{% endif %}:</strong> 
+                        <span id="registerCourseDates">-</span>
+                      </div>
+                      <div class="mb-3" id="priceContainer">
+                        <strong>{% if site.data.register[page.locale].register.price %}{{ site.data.register[page.locale].register.price }}{% else %}Price{% endif %}:</strong> 
+                        <span id="registerCoursePrice">-</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        <h2 class="display-2 mb-3">{{ site.data.register[page.locale].register.header }}</h2>  
         <form id="registerForm" class="contact-form needs-validation" novalidate>
           <div class="messages"></div>
-          <div class="form-floating mb-4">
-            <input type="email" name="email" class="form-control" placeholder="{{ site.data.register[page.locale].register.email }}" required>
-            <label for="email">{{ site.data.register[page.locale].register.email }}</label>
-          </div>
-          <div class="form-floating mb-4">
-            <input type="password" name="password" class="form-control" placeholder="{{ site.data.register[page.locale].register.password }}" required>
-            <label for="password">{{ site.data.register[page.locale].register.password }}</label>
-          </div>
-          <div class="form-floating mb-4">
-            <input type="password" name="confirm_password" class="form-control" placeholder="{{ site.data.register[page.locale].register.confirm_password }}" required>
-            <label for="confirm_password">{{ site.data.register[page.locale].register.confirm_password }}</label>
-          </div>
-          <div class="row gx-2">
-            <div class="col-sm-6 form-floating mb-4">
-              <input type="text" name="parent_first_name" class="form-control" placeholder="{{ site.data.register[page.locale].register.parent_first_name }}" required>
-              <label for="parent_first_name">{{ site.data.register[page.locale].register.parent_first_name }}</label>
-            </div>
-            <div class="col-sm-6 form-floating mb-4">
-              <input type="text" name="parent_last_name" class="form-control" placeholder="{{ site.data.register[page.locale].register.parent_last_name }}" required>
-              <label for="parent_last_name">{{ site.data.register[page.locale].register.parent_last_name }}</label>
-            </div>
-          </div>
-          <div class="form-floating mb-4">
-            <input type='tel' name="phone" class="form-control" placeholder="{{ site.data.register[page.locale].register.phone }}" required>
-            <label for="phone">{{ site.data.register[page.locale].register.phone }}</label>
-          </div>
           <div class="row gx-2">
             <div class="col-sm-6 form-floating mb-4">
               <input type="text" name="firstName" class="form-control" placeholder="{{ site.data.register[page.locale].register.firstname }}" required>
@@ -50,7 +47,34 @@ layout: default
             </div>
           </div>
           <div class="form-floating mb-4">
-            <input type="text" name="grade" class="form-control" placeholder="{{ site.data.register[page.locale].register.grade }}" required>
+            <input type="email" name="email" class="form-control" placeholder="{{ site.data.register[page.locale].register.email }}" required>
+            <label for="email">{{ site.data.register[page.locale].register.email }}</label>
+          </div>
+          <div class="form-floating mb-4">
+            <input type="password" name="password" class="form-control" placeholder="{{ site.data.register[page.locale].register.password }}" required>
+            <label for="password">{{ site.data.register[page.locale].register.password }}</label>
+          </div>
+          <div class="form-floating mb-4">
+            <input type='tel' name="phone" class="form-control" placeholder="{{ site.data.register[page.locale].register.phone }}" required>
+            <label for="phone">{{ site.data.register[page.locale].register.phone }}</label>
+          </div>
+
+          <div class="form-floating mb-4">
+            <select name="grade" class="form-select" required>
+              <option value="" selected disabled>{{ site.data.register[page.locale].register.grade }}</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
             <label for="grade">{{ site.data.register[page.locale].register.grade }}</label>
           </div>
           <div class="form-floating mb-4">
@@ -74,6 +98,28 @@ layout: default
   <!-- /.container -->
 </section>
 <!-- /section -->
+<!-- Add FontAwesome for the toggle icon -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dyZtVXnN4E+YkquJjF4ZnXqZEO8UN2eb4aG0ul7u1m4xTUMTXtdh1YzGpCM5yZsm+8FZ2ljbJ7E4MxJ5+5lPpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 <script src="/js/register.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleArrow = document.getElementById('toggleArrow');
+    const collapseEl = document.getElementById('courseInfoContent');
+
+    collapseEl.addEventListener('show.bs.collapse', function () {
+      toggleArrow.innerHTML = '&#9650;'; // ▲
+    });
+
+    collapseEl.addEventListener('hide.bs.collapse', function () {
+      toggleArrow.innerHTML = '&#9660;'; // ▼
+    });
+  });
+</script>
+

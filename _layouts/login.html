@@ -3,13 +3,36 @@ layout: default
 ---
 <section class="wrapper bg-light">
   <div class="container pt-8 pt-md-12 pb-8 pb-md-8">
-    <div class="row gx-lg-8 gx-xl-0 gy-10 align-items-center">
-      <div class="col-lg-6 col-xl-5 position-relative d-none d-lg-block">
-        <figure class="ps-xxl-10"><img class="img-fluid" src="/assets/img/illustrations/3d5.png"
-            srcset="/assets/img/illustrations/3d5@2x.png 2x" alt="" /></figure>
-      </div>
+    <div class="row justify-content-center">
       <!--/column -->
-      <div class="col-lg-6 col-xl-5 offset-xl-1 text-center">
+      <div class="col-lg-6 text-center">
+        <!-- Course Info Card -->
+        <div class="card shadow-lg mb-5">
+          <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+            <h5 class="card-title mb-0">{% if site.data.login[page.locale].login.courseInfo %}{{ site.data.login[page.locale].login.courseInfo }}{% else %}Course Information{% endif %}</h5>
+            <button id="toggleButton" class="btn btn-sm btn-primary text-white" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#courseInfoContent" 
+                    aria-expanded="true" aria-controls="courseInfoContent">
+              <span id="toggleArrow">&#9650;</span> <!-- Default is Up -->
+            </button>
+          </div>
+          <div class="collapse show" id="courseInfoContent">
+            <div class="card-body">
+              <div class="mb-3">
+                <strong>{% if site.data.login[page.locale].login.courseName %}{{ site.data.login[page.locale].login.courseName }}{% else %}Course{% endif %}:</strong> 
+                <span id="loginCourseName">-</span>
+              </div>
+              <div class="mb-3">
+                <strong>{% if site.data.login[page.locale].login.courseDates %}{{ site.data.login[page.locale].login.courseDates }}{% else %}Dates{% endif %}:</strong> 
+                <span id="loginCourseDates">-</span>
+              </div>
+              <div class="mb-3" id="priceContainer">
+                <strong>{% if site.data.login[page.locale].login.price %}{{ site.data.login[page.locale].login.price }}{% else %}Price{% endif %}:</strong> 
+                <span id="loginCoursePrice">-</span>
+              </div>
+            </div>
+          </div>
+        </div>
         <h2 class="display-2 mb-3">{{ site.data.login[page.locale].login.header }}</h2>
           Your username can be found in the email sent when your account was created<br>
         <!-- <p class="lead mb-8">{{ site.data.free-trial[page.locale].login.lead }}</p> -->
@@ -52,4 +75,18 @@ layout: default
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
+<!-- Script for toggle button -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleArrow = document.getElementById('toggleArrow');
+    const collapseEl = document.getElementById('courseInfoContent');
 
+    collapseEl.addEventListener('show.bs.collapse', function () {
+      toggleArrow.innerHTML = '&#9650;'; // ▲
+    });
+
+    collapseEl.addEventListener('hide.bs.collapse', function () {
+      toggleArrow.innerHTML = '&#9660;'; // ▼
+    });
+  });
+</script>

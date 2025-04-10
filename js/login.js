@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const baseUrl = 'https://prod-sharemyworks-backend.herokuapp.com/api/';
+     const baseUrl = 'https://prod-sharemyworks-backend.herokuapp.com/api/';
     // const baseUrl = "https://backend4.sharemyworks.com/api/";
-    // const baseUrl = 'http://localhost:3000/api/'
+    //const baseUrl = 'http://localhost:3000/api/'
     var loginForm = document.getElementById("loginForm");
     var loadingIndicator = document.querySelector(".loading-indicator");
 
@@ -14,6 +14,15 @@ document.addEventListener("DOMContentLoaded", function () {
     var organizationId = urlParams.get("organizationId");
 
     const isSandiego = organizationId == "66bf6a0dcdae5300148e3a2c" || organizationId == "6713eacd00dcfc85b65c206a";
+
+    if (courseId) {
+        populateCourseInfoCard(courseId, token);
+    } else {
+        const courseInfoCard = document.querySelector('.card.shadow-lg.mb-5');
+        if (courseInfoCard) {
+            courseInfoCard.style.display = 'none';
+        }
+    }
 
     loginForm.addEventListener("submit", async function (event) {
         event.preventDefault();
@@ -98,6 +107,53 @@ document.addEventListener("DOMContentLoaded", function () {
             loadingIndicator.style.display = "none";
         }
     });
+
+    function populateCourseInfoCard(courseId, token) {
+        // For 1v1 private class, show TBD
+        if (courseId === "1v1" && isSandiego) {
+            document.getElementById("loginCourseName").innerText = "1v1 private class";
+            document.getElementById("loginCourseDates").innerText = "TBD";
+            document.getElementById("loginCoursePrice").innerText = "TBD";
+            return;
+        }
+
+        const apiUrl = baseUrl + "Course/";
+        const url = `${apiUrl}${courseId}?filter=${encodeURIComponent(
+            JSON.stringify({ include: ["instructor", "classDays", "coursesDB"] })
+        )}`;
+
+        fetch(url, {
+            headers: { Authorization: `Bearer ${token}` },
+        })
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.json();
+            })
+            .then((course) => {
+                // Update course info card
+                document.getElementById("loginCourseName").innerText = course.name;
+                document.getElementById("loginCourseDates").innerText = 
+                    course.dateStart.split("T")[0] + " - " + course.dateEnd.split("T")[0];
+                
+                // Handle price display
+                if (course.price && course.price !== 0) {
+                    document.getElementById("loginCoursePrice").innerText = "$ " + course.price;
+                    document.getElementById("priceContainer").style.display = "block";
+                } else {
+                    document.getElementById("priceContainer").style.display = "none";
+                }
+            })
+            .catch((error) => {
+                console.error("Failed to fetch course details:", error);
+                // Hide the course info card if there's an error
+                const courseInfoCard = document.querySelector('.card.shadow-lg.mb-5');
+                if (courseInfoCard) {
+                    courseInfoCard.style.display = 'none';
+                }
+            });
+    }
 
     function updateAccount(data, accountId, access_token, token) {
         fetch(`${baseUrl}Account/${accountId}/?access_token=${token}`, {

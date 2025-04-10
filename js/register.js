@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const baseUrl = "https://backend4.sharemyworks.com/api/";
-  // const baseUrl = 'http://localhost:3000/api/'
+  //const baseUrl = 'http://localhost:3000/api/'
   var urlParams = new URLSearchParams(window.location.search);
   var courseId = urlParams.get("courseId");
   var accountId = urlParams.get("accountId");
@@ -13,6 +13,15 @@ document.addEventListener("DOMContentLoaded", function () {
   var loadingIndicator = document.querySelector(".loading-indicator");
   var isSandiego = organizationId == "66bf6a0dcdae5300148e3a2c" || organizationId == "6713eacd00dcfc85b65c206a";
 
+  if (courseId) {
+    populateCourseInfoCard(courseId, token);
+  } else {
+    const courseInfoCard = document.querySelector('.card.shadow-lg.mb-5');
+    if (courseInfoCard) {
+      courseInfoCard.style.display = 'none';
+    }
+  }
+
 
   registerForm.addEventListener("submit", function (event) {
     console.log("Form submitted");
@@ -23,14 +32,13 @@ document.addEventListener("DOMContentLoaded", function () {
     var postData = {
       email2: formData.get("email"),
       password: formData.get("password"),
-      confirmPassword: formData.get("confirm_password"),
       phone2: formData.get("phone"),
       firstName: formData.get("firstName"),
       lastName: formData.get("lastName"),
+      parentFirstName: "",
+      parentLastName: "",
       grade: formData.get("grade"),
       dateOfBirth: formData.get("dateOfBirth"),
-      parentFirstName: formData.get("parent_first_name"),
-      parentLastName: formData.get("parent_last_name"),
       organizationId: organizationId,
       username: (
         formData.get("firstName") + formData.get("lastName")
@@ -38,14 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
       preferedLanguage: chinese ? "Chinese" : "English",
       dateOfBirth: new Date(),
     };
-
-    // console.log("Post data:", postData);
-
-    if (postData.password !== postData.confirmPassword) {
-      alert("Passwords do not match.");
-      loadingIndicator.style.display = "none";
-      return;
-    }
 
     if (isSandiego) {
       // Store registration data in localStorage
@@ -92,6 +92,54 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
   });
+
+    // Function to populate the course info card
+    function populateCourseInfoCard(courseId, token) {
+      // For 1v1 private class, show TBD
+      if (courseId === "1v1" && isSandiego) {
+        document.getElementById("registerCourseName").innerText = "1v1 private class";
+        document.getElementById("registerCourseDates").innerText = "TBD";
+        document.getElementById("registerCoursePrice").innerText = "TBD";
+        return;
+      }
+  
+      const apiUrl = baseUrl + "Course/";
+      const url = `${apiUrl}${courseId}?filter=${encodeURIComponent(
+        JSON.stringify({ include: ["instructor", "classDays", "coursesDB"] })
+      )}`;
+  
+      fetch(url, {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then((course) => {
+          // Update course info card
+          document.getElementById("registerCourseName").innerText = course.name;
+          document.getElementById("registerCourseDates").innerText = 
+            course.dateStart.split("T")[0] + " - " + course.dateEnd.split("T")[0];
+          
+          // Handle price display
+          if (course.price && course.price !== 0) {
+            document.getElementById("registerCoursePrice").innerText = "$ " + course.price;
+            document.getElementById("priceContainer").style.display = "block";
+          } else {
+            document.getElementById("priceContainer").style.display = "none";
+          }
+        })
+        .catch((error) => {
+          console.error("Failed to fetch course details:", error);
+          // Hide the course info card if there's an error
+          const courseInfoCard = document.querySelector('.card.shadow-lg.mb-5');
+          if (courseInfoCard) {
+            courseInfoCard.style.display = 'none';
+          }
+        });
+    }
 
   function updateAccount(data, accountId, token) {
     fetch(`${baseUrl}Account/${accountId}`, {
