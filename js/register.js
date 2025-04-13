@@ -122,13 +122,15 @@ document.addEventListener("DOMContentLoaded", function () {
           document.getElementById("registerCourseName").innerText = course.name;
           document.getElementById("registerCourseDates").innerText = 
             course.dateStart.split("T")[0] + " - " + course.dateEnd.split("T")[0];
-          
-          // Handle price display
+
+          const priceContainer = document.getElementById("priceContainer");
           if (course.price && course.price !== 0) {
-            document.getElementById("registerCoursePrice").innerText = "$ " + course.price;
-            document.getElementById("priceContainer").style.display = "block";
+              document.getElementById("registerCoursePrice").innerText = "$" + course.price;
+              priceContainer.classList.remove("d-none");
+              priceContainer.classList.add("d-flex");
           } else {
-            document.getElementById("priceContainer").style.display = "none";
+              priceContainer.classList.add("d-none");
+              priceContainer.classList.remove("d-flex");
           }
         })
         .catch((error) => {

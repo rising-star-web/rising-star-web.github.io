@@ -8,6 +8,6 @@ course-info-register:
   courseDate: Course Date
   totalClasses: Total Classes
   price: Price
-  register: Register
-  login: Login
+  register: New students register here
+  login: Hava an account? Log in
   

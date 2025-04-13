@@ -14,3 +14,7 @@ register:
   register: 注册
   loading: 加载中...
   dateOfBirth: 出生日期
+  courseInfo: 课程信息
+  courseName: 课程名称
+  courseDate: 课程日期
+  price: 价格

@@ -17,24 +17,36 @@ layout: default
             </button>
           </div>
           <div class="collapse show" id="courseInfoContent">
-            <div class="card-body">
-              <div class="mb-3">
-                <strong>{% if site.data.login[page.locale].login.courseName %}{{ site.data.login[page.locale].login.courseName }}{% else %}Course{% endif %}:</strong> 
-                <span id="loginCourseName">-</span>
+            <div class="card-body text-start">
+              <div class="mb-3 row">
+                <div class="col-5 text-start">
+                  <strong>{% if site.data.login[page.locale].login.courseName %}{{ site.data.login[page.locale].login.courseName }}{% else %}Course{% endif %}:</strong>
+                </div>
+                <div class="col-7 text-start">
+                  <span id="loginCourseName">-</span>
+                </div>
               </div>
-              <div class="mb-3">
-                <strong>{% if site.data.login[page.locale].login.courseDates %}{{ site.data.login[page.locale].login.courseDates }}{% else %}Dates{% endif %}:</strong> 
-                <span id="loginCourseDates">-</span>
+              <div class="mb-3 row">
+                <div class="col-5 text-start">
+                  <strong>{% if site.data.login[page.locale].login.courseDate %}{{ site.data.login[page.locale].login.courseDate }}{% else %}Dates{% endif %}:</strong>
+                </div>
+                <div class="col-7 text-start">
+                  <span id="loginCourseDates">-</span>
+                </div>
               </div>
-              <div class="mb-3" id="priceContainer">
-                <strong>{% if site.data.login[page.locale].login.price %}{{ site.data.login[page.locale].login.price }}{% else %}Price{% endif %}:</strong> 
-                <span id="loginCoursePrice">-</span>
+              <div class="mb-3 row d-none" id="priceContainer">
+                <div class="col-5 text-start">
+                  <strong>{% if site.data.login[page.locale].login.price %}{{ site.data.login[page.locale].login.price }}{% else %}Price{% endif %}:</strong>
+                </div>
+                <div class="col-7 text-start">
+                  <span id="loginCoursePrice">-</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <h2 class="display-2 mb-3">{{ site.data.login[page.locale].login.header }}</h2>
-          Your username can be found in the email sent when your account was created<br>
+          {{ site.data.login[page.locale].login.tip }} <br>
         <!-- <p class="lead mb-8">{{ site.data.free-trial[page.locale].login.lead }}</p> -->
         <form id="loginForm" class="contact-form needs-validation" novalidate>
           <div class="messages"></div>

@@ -116,12 +116,12 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("loginCoursePrice").innerText = "TBD";
             return;
         }
-
+    
         const apiUrl = baseUrl + "Course/";
         const url = `${apiUrl}${courseId}?filter=${encodeURIComponent(
             JSON.stringify({ include: ["instructor", "classDays", "coursesDB"] })
         )}`;
-
+    
         fetch(url, {
             headers: { Authorization: `Bearer ${token}` },
         })
@@ -135,14 +135,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Update course info card
                 document.getElementById("loginCourseName").innerText = course.name;
                 document.getElementById("loginCourseDates").innerText = 
-                    course.dateStart.split("T")[0] + " - " + course.dateEnd.split("T")[0];
+                course.dateStart.split("T")[0] + " - " + course.dateEnd.split("T")[0];
                 
-                // Handle price display
+                const priceContainer = document.getElementById("priceContainer");
                 if (course.price && course.price !== 0) {
-                    document.getElementById("loginCoursePrice").innerText = "$ " + course.price;
-                    document.getElementById("priceContainer").style.display = "block";
+                    document.getElementById("loginCoursePrice").innerText = "$" + course.price;
+                    priceContainer.classList.remove("d-none");
+                    priceContainer.classList.add("d-flex");
                 } else {
-                    document.getElementById("priceContainer").style.display = "none";
+                    priceContainer.classList.add("d-none");
+                    priceContainer.classList.remove("d-flex");
                 }
             })
             .catch((error) => {

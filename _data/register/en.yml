@@ -14,3 +14,7 @@ register:
   register: Register
   loading: Loading...
   dateOfBirth: Date of Birth
+  courseInfo: Course Information
+  courseName: Course Name
+  courseDate: Course Date
+  price: Price

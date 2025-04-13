@@ -17,18 +17,30 @@ layout: default
                   </button>
                   </div>
                   <div class="collapse show" id="courseInfoContent">
-                    <div class="card-body">
-                      <div class="mb-3">
-                        <strong>{% if site.data.register[page.locale].register.courseName %}{{ site.data.register[page.locale].register.courseName }}{% else %}Course{% endif %}:</strong> 
-                        <span id="registerCourseName">-</span>
+                    <div class="card-body text-start">
+                      <div class="mb-3 row">
+                        <div class="col-5 text-start">
+                          <strong>{% if site.data.register[page.locale].register.courseName %}{{ site.data.register[page.locale].register.courseName }}{% else %}Course{% endif %}:</strong>
+                        </div>
+                        <div class="col-7 text-start">
+                          <span id="registerCourseName">-</span>
+                        </div>
                       </div>
-                      <div class="mb-3">
-                        <strong>{% if site.data.register[page.locale].register.courseDates %}{{ site.data.register[page.locale].register.courseDates }}{% else %}Dates{% endif %}:</strong> 
-                        <span id="registerCourseDates">-</span>
+                      <div class="mb-3 row">
+                        <div class="col-5 text-start">
+                          <strong>{% if site.data.register[page.locale].register.courseDate %}{{ site.data.register[page.locale].register.courseDate }}{% else %}Dates{% endif %}:</strong>
+                        </div>
+                        <div class="col-7 text-start">
+                          <span id="registerCourseDates">-</span>
+                        </div>
                       </div>
-                      <div class="mb-3" id="priceContainer">
-                        <strong>{% if site.data.register[page.locale].register.price %}{{ site.data.register[page.locale].register.price }}{% else %}Price{% endif %}:</strong> 
-                        <span id="registerCoursePrice">-</span>
+                      <div class="mb-3 row d-none" id="priceContainer">
+                        <div class="col-5 text-start">
+                          <strong>{% if site.data.register[page.locale].register.price %}{{ site.data.register[page.locale].register.price }}{% else %}Price{% endif %}:</strong>
+                        </div>
+                        <div class="col-7 text-start">
+                          <span id="registerCoursePrice">-</span>
+                        </div>
                       </div>
                     </div>
                   </div>

@@ -18,11 +18,11 @@ summer:
   landingLead: Join us for an exciting summer of learning and creativity.
   landingText: Explore our diverse selection of summer camps designed to inspire curiosity and develop new skills. Whether your child is interested in coding, robotics, digital arts, or STEM activities, we have the perfect program to make their summer memorable.
   exploreButton: Explore Programs
-  codingTitle: Coding & Robotics
-  codingText: Learn programming and build amazing robots
-  gameTitle: Game Development
-  gameText: Design and create your own interactive games
-  aiTitle: AI & Machine Learning
-  aiText: Explore the world of artificial intelligence
-  webTitle: Web Development
-  webText: Build websites and web applications
+  competitionTitle: Competition-Ready Projects
+  competitionText: Turn your camp project into a winning entry for national and global tech competitions
+  publishTitle: Publish on Real Platforms
+  publishText: Launch your project on the App Store, Google Play, Microsoft Store, or Steam
+  aiTitle: AI-First Thinking
+  aiText: Master AI tools and unleash creativity to stay ahead of the curve
+  startupTitle: From Idea to Startup
+  startupText: Solve real-world problems and build your first tech startup from scratch

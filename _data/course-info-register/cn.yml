@@ -8,5 +8,6 @@ course-info-register:
   courseDate: 课程日期
   totalClasses: 课程共计课时
   price: 价格
-  register: 注册账户
-  login: 登录
+  register: 新同学这里注册
+  login: 已有用户名登录
+
