@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Update course info card
                 document.getElementById("loginCourseName").innerText = course.name;
                 document.getElementById("loginCourseDates").innerText = 
-                course.dateStart.split("T")[0] + " - " + course.dateEnd.split("T")[0];
+                    course.dateStart.split("T")[0] + " - " + course.dateEnd.split("T")[0];
                 
                 const priceContainer = document.getElementById("priceContainer");
                 if (course.price && course.price !== 0) {
