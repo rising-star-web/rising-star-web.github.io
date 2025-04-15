@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded", function () {
 
     var chinese = window.location.href.includes("cn");
@@ -104,17 +102,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     );
                 })
                 .then(() => {
-                    Toastify({
-                        text: "Update Success!",
-                        duration: 5000,
-                        close: true,
-                        gravity: "top",
-                        position: 'right', 
-                        style: {
-                            background: "green",
-                        },
-                        className: "info",
-                    }).showToast();
+                    document.getElementById("studentInfoForm").style.display = "none";
+                    document.getElementById("successBanner").style.display = "block";
+                    
+                    // Scroll to the success banner
+                    document.getElementById("successBanner").scrollIntoView({ 
+                        behavior: 'smooth' 
+                    });
                 })
                 .catch((error) => {
                     console.error("Error updating information:", error);
