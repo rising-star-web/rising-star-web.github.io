@@ -1,0 +1,32 @@
+---
+layout: course_detail
+courseId: "cs607"
+courseIconURL: "TBD - not used yet"
+price: "TBD - not used yet"
+extra: "TBD - not used yet"
+name: "Tech Startups 101: Young Entrepreneurs' Journey"
+coverImageURL: "img/updated/enrichment/startup.jpg"
+gradeLevel: "L5 Competitive Programming"
+pathway: "Camp"
+skillLevel: "Advanced"
+shortDescription : "Startup Camp"
+description: "Our Science, Technology, Innovation, and Entrepreneurship Summer Camp aims to guide students from start to finish. Students will learn the process by which many startup companies get their ideas, from identifying the problem's points, to the whole process of technology development, and lastly finalizing an entrepreneurial prototype. This camp course will allow students to create their projects and be fully prepared to participate in the competition！"
+videoIntro : ""
+learningGoals:
+- "Stage 1. Problem Identification - In the morning: an opening ceremony, mentor introduction, team formation. In the afternoon, students will identify and discuss current trending issues in the social and technological fields and consider entrepreneurial opportunities."
+- "Stage 2. Topic Ideation and Market Research - All day, students will perform project ideation with their team, conduct market research and analyze requirements, and then begin initial solution development"
+- "Stage 3. Fundamentals of Technology Development - In the morning, students will begin basic programming and product design. In the afternoon, students will begin training and practicing the skills required for their project. In the evening, students will discuss their project plan."
+- "Stage 4. Solution Design - All day, students will perform discussion, design, and finalization of their project plans, begin designing their prototype, and discuss their plans with a mentor."
+- "Stage 5. Technology Development - All day, students will develop their project with the skills they learned and get feedback from their mentors as they go along."
+- "Stage 6. Technology Development Continued - All day, students will develop their project with the skills they learned and get feedback from their mentors as they go along."
+- "Stage 7. Programming Prototype - All day, students will work to finish their prototype and perform testing and optimization to deliver their product."
+- "Stage 8. Presentation Preparation - All day, students will prepare their project presentation and competition materials, as well as rehearse their presentation."
+- "Stage 9. Showcase and Competition - In the morning, students will rehearse and finalize their presentation. In the afternoon, students will present their projects and we will conduct an awards ceremony for outstanding projects."
+promotions:
+- title: "Innovate on Your Ideas, From Start to Finish"
+  text: "Reach deep into the realm of technological innovation and entrepreneurship! From identifying social problems that you could solve using technology, to building prototypes, your entrepreneurial journey is about to begin!"
+  imageURL: "img/updated/enrichment/project.jpg"
+- title: "Code, Create, and Compete: Join the Startup Challenge!"
+  text: "Ignite your passion for technology development and entrepreneurship by learning the fundamentals of programming, designing a product, and presenting your startup prototype in a short time frame."
+  imageURL: "img/updated/enrichment/research.jpg"
+---
