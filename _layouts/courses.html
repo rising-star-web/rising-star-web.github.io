@@ -112,6 +112,25 @@ layout: default
                     <label class="form-check-label"  for="flexCheckDefault"> {{ site.data.courses[page.locale].courses.L5title }} </label>
                   </div>
                 </li>
+                <li class="dropdown-item">
+                  <div class="form-check">
+                    <input class="form-check-input filter-item" type="checkbox" value="Level6" id="flexCheckDefault">
+                    <label class="form-check-label"  for="flexCheckDefault"> {{ site.data.courses[page.locale].courses.L6title }} </label>
+                  </div>
+                </li>
+                <li class="dropdown-item">
+                  <div class="form-check">
+                    <input class="form-check-input filter-item" type="checkbox" value="Level7" id="flexCheckDefault">
+                    <label class="form-check-label"  for="flexCheckDefault"> {{ site.data.courses[page.locale].courses.L7title }} </label>
+                  </div>
+                </li>
+                <li class="dropdown-item">
+                  <div class="form-check">
+                    <input class="form-check-input filter-item" type="checkbox" value="LevelT" id="flexCheckDefault">
+                    <label class="form-check-label"  for="flexCheckDefault"> {{ site.data.courses[page.locale].courses.LTtitle }} </label>
+                  </div>
+                </li>
+
                 <!-- <li class="dropdown-item">
                   <div class="form-check">
                     <input class="form-check-input filter-item" type="checkbox" value="Summer" id="flexCheckDefault">
@@ -138,7 +157,8 @@ layout: default
   <div class="container pb-8 mb-8">
     <!--/.row -->
       <div id="isotopeContainer" data-length="9" class="row g-6 row-cols-1 row-cols-md-2 row-cols-lg-3 isotope">
-          {% for course in courses %}
+        {% assign sorted_courses = courses | sort: "courseId" %}
+          {% for course in sorted_courses %}
 
           {%- assign level = course.gradeLevel -%}
           {%- case level -%}
@@ -152,6 +172,12 @@ layout: default
                   {%- assign levelFilter = 'Level4' %}
               {%- when site.data.courses[page.locale].courses.L5Filter -%}
                   {%- assign levelFilter = 'Level5' %}
+              {%- when site.data.courses[page.locale].courses.L6Filter -%}
+                  {%- assign levelFilter = 'Level6' %}
+              {%- when site.data.courses[page.locale].courses.L7Filter -%}
+                  {%- assign levelFilter = 'Level7' %}
+              {%- when site.data.courses[page.locale].courses.LTFilter -%}
+                  {%- assign levelFilter = 'LevelT' %}
               {%- when site.data.courses[page.locale].courses.SummerFilter -%}
                   {%- assign levelFilter = 'Summer' %}
               {%- else -%}
