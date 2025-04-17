@@ -47,6 +47,19 @@
         background-image: linear-gradient( 83.2deg,  rgba(150,93,233,1) 10.8%, rgba(99,88,238,1) 94.3% );
     }
 
+    .teal-gradient {
+        background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(0,206,201,1) 0%, rgba(2,128,144,1) 90% );
+    }
+
+    .coral-gradient {
+        background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(255,145,83,1) 0%, rgba(255,61,87,1) 90% );
+    }
+
+    .emerald-gradient {
+        background-image: radial-gradient( circle farthest-corner at 10% 20%, rgb(216, 99, 146) 0%, rgba(0,148,68,1) 90% );
+    }
+
+
     /* CAREER COLORS */
     .starburstred-gradient {
         background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(239,61,78,1) 0%, rgba(239,61,78,0.81) 51.8%, rgba(239,61,78,0.63) 84.6% );
