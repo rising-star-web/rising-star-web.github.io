@@ -1,0 +1,228 @@
+{
+  "阿卡迪亚校区": [
+    {
+      "Name": "Minecraft AI Lab – Exploring the Integration of Programming and Artificial Intelligence",
+      "Time": [
+        "9am - 12pm",
+        "1pm - 4pm",
+        "1pm - 4pm",
+        "1pm - 4pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/arcadia/courses/minecraft-programming-camp",
+      "Price": 500,
+      "Grade": "1-4",
+      "Dates": ["W1", "W2", "W4", "W5", "W7", "W8"],
+      "Registration Links": [
+        "https://codingmind.com/course-info-register?course_id=67e2db88009fbf00159a6687&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e546548891520015001708&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67fdb5d92fc9bb0015c3560e&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e547e38891520015001732&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e36889009fbf00159a6aaa&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=680786900e64e700150d4cf6&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67fdb7bd2fc9bb0015c35674&organizationId=6390e0c5476933001554f8c7"
+      ]
+    },
+    {
+      "Name": "AI Game Creation – Roblox Development and Smart Game Logic",
+      "Time": [
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm"
+      ],
+      "CourseInfo": "https://codingmind.com/arcadia/courses/roblox-camp",
+      "Price": 500,
+      "Grade": "1-4",
+      "Dates": ["W2", "W5", "W8"],
+      "Registration Links": [
+        "https://codingmind.com/course-info-register?course_id=67e2dd4d009fbf00159a66a8&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e36575009fbf00159a6a80&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67fd48c64f17460015cde9db&organizationId=6390e0c5476933001554f8c7"      ]
+    },
+    {
+      "Name": "AI Creative Workshop – From Concept to Intelligent Software Development",
+      "Time": [
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm",
+        "1pm - 4pm",
+        "9am - 12pm"
+      ],
+      "CourseInfo": "https://codingmind.com/arcadia/courses/app-thunkable-camp",
+      "Price": 500,
+      "Grade": "1-4",
+      "Dates": ["W1", "W3", "W4", "W6", "W7", "W9"],
+      "Registration Links": [
+        "https://codingmind.com/course-info-register?course_id=67e545f088915200150016fa&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e2dde5009fbf00159a66b7&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e361d0009fbf00159a6a68&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e36827009fbf00159a6a99&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e54940889152001500174e&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e54940889152001500174e&organizationId=6390e0c5476933001554f8c7"
+      ]
+    },
+    {
+      "Name": "AI + Python – Intelligent Application Development and Practice",
+      "Time": [
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm"
+      ],
+      "CourseInfo": "https://codingmind.com/arcadia/courses/python-camp",
+      "Price": 500,
+      "Grade": "5-8",
+      "Dates": ["W1", "W3", "W5", "W7", "W9"],
+      "Registration Links": [
+        "https://codingmind.com/course-info-register?course_id=67e38127009fbf00159a6b0d&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e40cd0009fbf00159a6b69&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e466e6889152001500147e&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e46787889152001500149a&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e4681988915200150014b6&organizationId=6390e0c5476933001554f8c7"
+      ]
+    },
+    {
+      "Name": "Generative AI Creativity Camp – Exploring Large Models and Smart Creation",
+      "Time": [
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm",
+        "9am - 12pm"
+      ],
+      "CourseInfo": "https://codingmind.com/arcadia/courses/gen-ai-camp",
+      "Price": 500,
+      "Grade": "5-8",
+      "Dates": ["W2", "W4", "W6", "W8"],
+      "Registration Links": [
+        "https://codingmind.com/course-info-register?course_id=67e40bbb009fbf00159a6b58&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e466928891520015001470&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e46738889152001500148c&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e467d088915200150014a8&organizationId=6390e0c5476933001554f8c7"
+      ]
+    },
+    {
+      "Name": "AI Enlightenment Journey – Cultivating Children's Artificial Intelligence Thinking",
+      "Time": [
+        "1pm - 4pm",
+        "1pm - 4pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/arcadia/courses/introductory-ai",
+      "Price": 500,
+      "Grade": "1-4",
+      "Dates": ["W3", "W6", "W9"],
+      "Registration Links": [
+        "https://codingmind.com/course-info-register?course_id=67e5473c8891520015001716&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e5489b8891520015001740&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e54a09889152001500176a&organizationId=6390e0c5476933001554f8c7"
+      ]
+    },
+    {
+      "Name": "AI-Powered Web Development – From Frontend Interaction to Intelligent Systems",
+      "Time": [
+        "1pm - 4pm",
+        "1pm - 4pm",
+        "1pm - 4pm",
+        "1pm - 4pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/arcadia/courses/web-camp",
+      "Price": 500,
+      "Grade": "5-8",
+
+      "Dates": ["W1", "W3", "W5", "W7", "W9"],
+      "Registration Links": [
+        "https://codingmind.com/course-info-register?course_id=67e54ce788915200150017aa&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e54da188915200150017c6&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e54e9788915200150017d4&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e551af88915200150017f0&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e555198891520015001814&organizationId=6390e0c5476933001554f8c7"
+      ]
+    },
+    {
+      "Name": "AI Art and Metaverse – Unity Smart Creation and Virtual World Building",
+      "Time": [
+        "1pm - 4pm",
+        "1pm - 4pm",
+        "1pm - 4pm",
+        "1pm - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/arcadia/courses/unity-camp",
+      "Price": 500,
+      "Grade": "5-8",
+      "Dates": ["W2", "W4", "W6", "W8"],
+      "Registration Links": [
+        "https://codingmind.com/course-info-register?course_id=67e54d4788915200150017b8&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e547908891520015001724&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e5513288915200150017e2&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e5542888915200150017fe&organizationId=6390e0c5476933001554f8c7"
+      ]
+    },
+    {
+      "Name": "AI Innovation Workshop – Creating Science Competition Projects",
+      "Time": [
+        "9am - 4pm",
+        "9am - 4pm",
+        "9am - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/arcadia/courses/science-fair-camp",
+      "Price": 1000,
+      "Grade": "7-12",
+      "Dates": ["W1", "W5", "W9"],
+      "Registration Links": [
+        "https://codingmind.com/course-info-register?course_id=67e55e53889152001500186e&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e5602888915200150018a6&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e5638588915200150018de&organizationId=6390e0c5476933001554f8c7"
+      ]
+    },
+    {
+      "Name": "AI Business Practice – E-Commerce Platform Development and Intelligent Marketing Workflow",
+      "Time": [
+        "9am - 4pm",
+        "9am - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/arcadia/courses/shopify-dropshipping",
+      "Price": 1000,
+      "Grade": "7-12",
+      "Dates": ["W2", "W6"],
+      "Registration Links": [
+        "https://codingmind.com/course-info-register?course_id=67fdc5d849c3a70015b920d9&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67fdc76949c3a70015b92124&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67fdc8d449c3a70015b92163&organizationId=6390e0c5476933001554f8c7"
+      ]
+    },
+    {
+      "Name": "Private AI Lab – In-Depth Exploration of DeepSeek AI Development and Applications",
+      "Time": [
+        "9am - 4pm",
+        "9am - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/arcadia/courses/deepseek-camp",
+      "Price": 1000,
+      "Grade": "7-12",
+      "Dates": ["W3", "W7"],
+      "Registration Links": [
+        "https://codingmind.com/course-info-register?course_id=67e55f47889152001500188a&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e562d488915200150018c2&organizationId=6390e0c5476933001554f8c7"
+      ]
+    },
+    {
+      "Name": "Smart Edge Computing Maker Camp – AI System Development with NVIDIA Jetson",
+      "Time": [
+        "9am - 4pm",
+        "9am - 4pm",
+        "9am - 4pm"
+      ],
+      "CourseInfo": "https://codingmind.com/arcadia/courses/jetson-camp",
+      "Price": 1000,
+      "Grade": "7-12",
+      "Dates": ["W4", "W8"],
+      "Registration Links": [
+        "https://codingmind.com/course-info-register?course_id=67e55fb88891520015001898&organizationId=6390e0c5476933001554f8c7",
+        "https://codingmind.com/course-info-register?course_id=67e5632888915200150018d0&organizationId=6390e0c5476933001554f8c7"      ]
+    }
+  ]
+}
