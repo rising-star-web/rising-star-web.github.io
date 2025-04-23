@@ -1,0 +1,257 @@
+{
+  "Seattle": [
+    {
+      "Name": "Minecraft AI Lab – Exploring the Integration of Programming and Artificial Intelligence",
+      "Time": [
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/seattle/courses/minecraft-programming-camp",
+      "Price": 600,
+      "Grade": "1-4",
+      "Dates": ["W1", "W4", "W6", "W7", "W8", "W9", "W10", "W11"],
+      "Registration Links": [
+        "https://codingmind.com/seattle/course-info-register?course_id=67a23ac686dcc1001586d1f5&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a67e2b1f24a300154dc542&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cd12b7a129130015c4fd11&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a26b1186dcc1001586d3f8&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cd14d1a129130015c4fd2e&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cd161ea129130015c4fd6a&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cda5a2a129130015c4fe19&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cda61da129130015c4fe27&organizationId=6684406b10707d0014fb7369"
+      ]
+    },
+    {
+      "Name": "AI Creative Workshop – From Concept to Intelligent Software Development",
+      "Time": [
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/seattle/courses/app-thunkable-camp",
+      "Price": 600,
+      "Grade": "1-4",
+      "Dates": ["W1", "W4", "W7", "W9", "W11"],
+      "Waitlist": ["W1"],
+      "Registration Links": [
+        "https://codingmind.com/seattle/course-info-register?course_id=67a23c0a86dcc1001586d223&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a67d061f24a300154dc51e&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a26c1086dcc1001586d414&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cdb72517cc4f0015b7b8a5&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cdb94717cc4f0015b7b8b5&organizationId=6684406b10707d0014fb7369"
+      ]
+    },
+    {
+      "Name": "AI Game Creation – Roblox Development and Smart Game Logic",
+      "Time": [
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/seattle/courses/roblox-camp/",
+      "Price": 600,
+      "Grade": "1-4",
+      "Dates": ["W2", "W5", "W8", "W9", "W10", "W11"],
+      "Waitlist": ["W8", "W11"],
+      "Registration Links": [
+        "https://codingmind.com/seattle/course-info-register?course_id=67a25d4a86dcc1001586d2d5&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a2675e86dcc1001586d3a0&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cdaa66a129130015c4fe40&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cdaae8a129130015c4fe4f&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cdab77a129130015c4fe5d&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cdaf73a129130015c4fe6d&organizationId=6684406b10707d0014fb7369"
+      ]
+    },
+    {
+      "Name": "Microbit",
+      "Time": [
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/courses/microbit",
+      "Price": 600,
+      "Grade": "1-4",
+      "Dates": ["W2", "W5"],
+      "Registration Links": [
+        "https://codingmind.com/seattle/course-info-register?course_id=67a25e8a86dcc1001586d2f1&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a2662886dcc1001586d382&organizationId=6684406b10707d0014fb7369"
+      ]
+    },
+    {
+      "Name": "AI Enlightenment Journey – Cultivating Children's Artificial Intelligence Thinking",
+      "Time": [
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/seattle/courses/introductory-ai",
+      "Price": 600,
+      "Grade": "1-4",
+      "Dates": ["W6", "W8", "W10"],
+      "Registration Links": [
+        "https://codingmind.com/seattle/course-info-register?course_id=67a268af86dcc1001586d3bc&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cdba1617cc4f0015b7b8c7&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cdba9517cc4f0015b7b8d7&organizationId=6684406b10707d0014fb7369"
+      ]
+    },
+    {
+      "Name": "AI + Python – Intelligent Application Development and Practice",
+      "Time": [
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/seattle/courses/python-camp",
+      "Price": 700,
+      "Grade": "5-8",
+      "Dates": ["W5", "W7", "W9", "W11"],
+      "Waitlist": ["W11"],
+      "Registration Links": [
+        "https://codingmind.com/seattle/course-info-register?course_id=67a266cd86dcc1001586d392&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a26ca786dcc1001586d424&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cdbb6c17cc4f0015b7b8e7&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cdbbe817cc4f0015b7b8f5&organizationId=6684406b10707d0014fb7369"
+      ]
+    },
+    {
+      "Name": "AI-Powered Web Development – From Frontend Interaction to Intelligent Systems",
+      "Time": [
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/seattle/courses/web-camp",
+      "Price": 700,
+      "Grade": "5-8",
+      "Dates": ["W5", "W7"],
+      "Registration Links": [
+        "https://codingmind.com/seattle/course-info-register?course_id=67a267fe86dcc1001586d3ae&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a26b8686dcc1001586d406&organizationId=6684406b10707d0014fb7369"
+      ]
+    },
+    {
+      "Name": "AI Art and Metaverse – Unity Smart Creation and Virtual World Building",
+      "Time": [
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/seattle/courses/unity-camp",
+      "Price": 700,
+      "Grade": "5-8",
+      "Dates": ["W2", "W4", "W6", "W8", "W10", "W11"],
+      "Waitlist": ["W2"],
+      "Registration Links": [
+        "https://codingmind.com/seattle/course-info-register?course_id=67a25f0086dcc1001586d2ff&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a67d8e1f24a300154dc52c&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a26a7c86dcc1001586d3e8&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cdb45317cc4f0015b7b86d&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cdb54217cc4f0015b7b889&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cdb61017cc4f0015b7b897&organizationId=6684406b10707d0014fb7369"
+      ]
+    },
+    {
+      "Name": "Generative AI Creativity Camp – Exploring Large Models and Smart Creation",
+      "Time": [
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/seattle/courses/gen-ai-camp",
+      "Price": 700,
+      "Grade": "5-8",
+      "Dates": ["W2", "W4", "W6", "W8", "W9", "W10", "W11"],
+      "Waitlist":["W8", "W9"],
+      "Registration Links": [
+        "https://codingmind.com/seattle/course-info-register?course_id=67a25dc386dcc1001586d2e3&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a67ef61f24a300154dc550&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a2695886dcc1001586d3ca&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cdb19ba129130015c4fe7b&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cdb22da129130015c4fe89&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cdb2f3a129130015c4fe97&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cdb39fa129130015c4fea5&organizationId=6684406b10707d0014fb7369"
+      ]
+    },
+    {
+      "Name": "AI Innovation Workshop – Creating Science Competition Projects",
+      "Time": [
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/seattle/courses/science-fair-camp",
+      "Price": 900,
+      "Grade": "7-12",
+      "Dates": ["W5", "W7"],
+      "Waitlist": ["W7"],
+      "Registration Links": [
+        "https://codingmind.com/seattle/course-info-register?course_id=67a274f986dcc1001586d4a1&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a26fcc86dcc1001586d455&organizationId=6684406b10707d0014fb7369"
+      ]
+    },
+    {
+      "Name": "科技初创公司101 - 青年软件创业者",
+      "Time": [
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/seattle/courses/startup-camp",
+      "Price": 900,
+      "Grade": "7-12",
+      "Dates": ["W5", "W7"],
+      "Waitlist": ["W7"],
+      "Registration Links": [
+        "https://codingmind.com/seattle/course-info-register?course_id=67a2762386dcc1001586d4b4&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a2710b86dcc1001586d468&organizationId=6684406b10707d0014fb7369"
+      ]
+    },
+    {
+      "Name": "3D打印创造者 - 从概念到产品实现",
+      "Time": [
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/seattle/courses/3d-printing-camp",
+      "Price": 900,
+      "Grade": "7-12",
+      "Dates": ["W2", "W4"],
+      "Registration Links": [
+        "https://codingmind.com/seattle/course-info-register?course_id=67a2851786dcc1001586d523&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a2775d86dcc1001586d4c7&organizationId=6684406b10707d0014fb7369"
+      ]
+    },
+    {
+      "Name": "智能科技探索 - 物联网系统创新设计",
+      "Time": [
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/seattle/courses/raspberry-pi-camp",
+      "Price": 900,
+      "Grade": "7-12",
+      "Dates": ["W2", "W4"],
+      "Registration Links": [
+        "https://codingmind.com/seattle/course-info-register?course_id=67a27a6d86dcc1001586d505&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a2785f86dcc1001586d4da&organizationId=6684406b10707d0014fb7369"
+      ]
+    }
+  ]
+}

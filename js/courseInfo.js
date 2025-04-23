@@ -95,10 +95,10 @@ function updatePageContent(course, courseId, accountId, token) {
     const courseTimeEl = document.getElementById('courseTime');
     if (organizationId === "6684406b10707d0014fb7369") {
       // Hide the entire row containing course time
-      const courseTimeRow = courseTimeEl.closest('tr');
-      if (courseTimeRow) {
-        courseTimeRow.style.display = "none";
-      }
+      // const courseTimeRow = courseTimeEl.closest('tr');
+      // if (courseTimeRow) {
+      //   courseTimeRow.style.display = "none";
+      // }
     } else {
       const courseTimeRes = getCourseTime(course);
       courseTimeEl.innerText = courseTimeRes;
