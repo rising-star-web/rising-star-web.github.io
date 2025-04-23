@@ -98,7 +98,10 @@ collections:
     output: true
     permalink: /cn/seattle/courses/:name/
     path: coursescn
-
+  courses_db:
+    output: true
+    permalink: /diamond-bar/courses/:name/
+    path: courses_db
     
 
 defaults:
@@ -149,6 +152,11 @@ defaults:
       type: courses_seattle
     values:
       permalink: /seattle/courses/:name/
+  - scope:
+      source: "_courses_db"
+      type: courses_db
+    values:
+      permalink: /diamond-bar/courses/:name/
   # Chinese
   - scope:
       path: "_courses/cn"

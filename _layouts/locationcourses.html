@@ -43,6 +43,8 @@ layout: locationdefault
     {% else %}
       {% assign courses = site.courses_seattle %}
     {% endif %}
+  {% when "diamond-bar" %}
+    {% assign courses = site.courses_db %}
   {% else %}
     {% assign courses = empty %}
 {% endcase %}
@@ -243,4 +245,3 @@ layout: locationdefault
 <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 <script src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
 <script src="/assets/js/custom-filter.js"></script>
-
