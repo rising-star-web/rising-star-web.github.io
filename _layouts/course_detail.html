@@ -40,6 +40,7 @@ layout: default
 
         <!-- Carousel -->
         <div class="col-lg-6">
+          {% if page.videoIntro != "N/A" %}
           <div class="player" id="player">
             <iframe
               src="{{page.videoIntro}}"
@@ -48,6 +49,11 @@ layout: default
               allow="autoplay"
             ></iframe>
           </div>
+          {% else %}
+          <div class="d-flex justify-content-center align-items-center h-100">
+            <img src="/assets/img/custom_photos/enrichment.png" class="img-fluid" style="max-width: 80%;" alt="Course image">
+          </div>
+          {% endif %}
         </div>
         <!-- /column -->
         
