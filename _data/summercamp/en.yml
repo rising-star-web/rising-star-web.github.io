@@ -8,6 +8,7 @@ summer:
   locationFilter: All Location
   courseName: Course Name
   joinToday: Join Today
+  joinWaitlist: Join Waitlist
   learnMore: Learn More
   grade: Grade
   price: Price

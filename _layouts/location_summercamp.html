@@ -1,46 +1,82 @@
 ---
-layout: locationdefault
+layout: default
 ---
-<section class="wrapper bg-soft-primary">
-  <div class="container pt-10 pt-md-14 text-center">
-    <div class="row">
-      <div class="col-md-10 col-lg-8 col-xl-8 col-xxl-6 mx-auto" data-cues="slideInDown" data-group="page-title">
-        <h1 class="display-1 mb-4">
-          {{ site.data.location_summercamp[page.locale].location_summercamp.header }}
-        </h1>
-        <p class="lead fs-lg px-xl-12 px-xxl-6 mb-7">
-          {{ site.data.location_summercamp[page.locale].location_summercamp.lead }}
-        </p>
+<section class="wrapper bg-light" style="background-color: #e6f2ff;">
+  <div class="container pt-10 pt-md-14 pb-8 pb-md-10">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+      <div class="col-lg-6">
+        <h1 class="display-1 mb-4">{{ site.data.summercamp[page.locale].summer.landingTitle }}</h1>
+        <h2 class="fs-24 text-navy mb-3">{{ site.data.summercamp[page.locale].summer.landingSubtitle }}</h2>
+        <p class="lead fs-20 lh-sm mb-7">{{ site.data.summercamp[page.locale].summer.landingLead }}</p>
+        <p>{{ site.data.summercamp[page.locale].summer.landingText }}</p>
+        <div class="d-flex justify-content-start">
+          <a href="#camp-registration-grid" class="btn btn-primary rounded-pill btn-send me-2 mb-3">{{
+            site.data.summercamp[page.locale].summer.exploreButton }}</a>
+        </div>
       </div>
-
-
-      <!-- /column -->
+      <div class="col-lg-6">
+        <div class="row gx-4 gy-4">
+          <div class="col-6">
+            <div class="card shadow-lg rounded-3 bg-primary h-100">
+              <div class="card-body text-center p-5">
+                <i class="uil uil-game-structure display-3 text-white mb-3"></i>
+                <h3 class="h4 text-white mb-2">{{ site.data.summercamp[page.locale].summer.competitionTitle }}</h3>
+                <p class="text-white-50 mb-0">{{ site.data.summercamp[page.locale].summer.competitionText }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card shadow-lg rounded-3 bg-primary h-100">
+              <div class="card-body text-center p-5">
+                <i class="uil uil-document-layout-center display-3 text-white mb-3"></i>
+                <h3 class="h4 text-white mb-2">{{ site.data.summercamp[page.locale].summer.publishTitle }}</h3>
+                <p class="text-white-50 mb-0">{{ site.data.summercamp[page.locale].summer.publishText }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card shadow-lg rounded-3 bg-primary h-100">
+              <div class="card-body text-center p-5">
+                <i class="uil uil-circuit display-3 text-white mb-3"></i>
+                <h3 class="h4 text-white mb-2">{{ site.data.summercamp[page.locale].summer.aiTitle }}</h3>
+                <p class="text-white-50 mb-0">{{ site.data.summercamp[page.locale].summer.aiText }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card shadow-lg rounded-3 bg-primary h-100">
+              <div class="card-body text-center p-5">
+                <i class="uil uil-rocket display-3 text-white mb-3"></i>
+                <h3 class="h4 text-white mb-2">{{ site.data.summercamp[page.locale].summer.startupTitle }}</h3>
+                <p class="text-white-50 mb-0">{{ site.data.summercamp[page.locale].summer.startupText }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- /.row -->
   </div>
-  <!-- /.container -->
 </section>
-<!-- /section -->
+<div class="mx-2" hidden>
+  <label for="locationFilter" class="h3 text-primary mb-2" style="display: none;">Location:</label>
+  <select id="locationFilter" class="form-select">
+    <!-- Options will be added dynamically -->
+  </select>
+</div>
+<div class="container text-center mb-4">
+  <label for="gradeFilter" class="h3 text-primary mb-2 text-center">{{
+    site.data.summercamp[page.locale].summer.gradeFilter
+    }}</label>
+  <div id="gradeFilter" class="d-flex flex-wrap justify-content-center">
+    <!-- Options will be added dynamically -->
+  </div>
+</div>
+<!-- Link to Unicons for icons -->
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
 
 <section class="wrapper bg-light">
   <div class="schedule-container pt-2 pb-19 pt-md-14 pb-md-20 text-center">
-    <!-- <div class="mb-4">
-      <a href="../pricing" class="btn btn-primary btn-join-us">Join Today</a>
-    </div> -->
-    <div class="mx-2">
-      <label for="locationFilter" class="h3 text-primary mb-2" style="display: none;">Location:</label>
-      <select id="locationFilter" class="form-select" style="display: none;">
-      </select>
-    </div>
-    <div class="mx-2">
-      <label for="gradeFilter" class="h3 text-primary mb-2"> {{ site.data.location_summercamp[page.locale].location_summercamp.gradeFilter }}
-      </label>
-      <div id="gradeFilter" class="d-flex flex-wrap justify-content-center">
-        <!-- Options will be added dynamically -->
-        </select>
-      </div>
-    </div>
-    <br>
     <div class="d-flex justify-content-center mb-4 w-100">
       <div id="camp-registration-grid" class="schedule-grid">
         <!-- Spinner and Content -->
@@ -50,6 +86,7 @@ layout: locationdefault
         </div>
       </div>
     </div>
+  </div>
 </section>
 
 <!-- /section -->
@@ -73,622 +110,6 @@ layout: locationdefault
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"
   integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"
-  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-<script>
-  var preference = window.location.href.indexOf("cn") == -1 ? "en" : "cn";
-  var fileToFetch = "/assets/summercamp_seattle.json";
-
-  var translations = {
-    grade: '{{ site.data.location_summercamp[page.locale].location_summercamp.grade }}',
-    price: '{{ site.data.location_summercamp[page.locale].location_summercamp.price }}',
-    discount: '{{ site.data.location_summercamp[page.locale].location_summercamp.discount }}',
-    courseInfo: '{{ site.data.location_summercamp[page.locale].location_summercamp.courseInfo }}'
-  };
-
-  var dateRanges = [
-      '6/16 - 6/20', '6/23 - 6/27', '6/30 - 7/4',
-      '7/7 - 7/11', '7/14 - 7/18', '7/21 - 7/25', '7/28 - 8/1', 
-      "8/4 - 8/8", "8/11 - 8/15", "8/18 - 8/22", "8/25 - 8/29"
-  ];
-
-  $(document).ready(function () {
-
-    setupModalListeners();
-    fetchAndPopulateFilters();
-    populateDateFilter();
-
-    $(document).on('click', '.btn-join-today', function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      var $button = $(this);
-      var registrationUrl = $button.data('registration');
-      if (registrationUrl) {
-        window.open(registrationUrl, '_blank');
-      } else {
-        console.error('Registration URL not found');
-        // Fallback: try to get the URL from the parent card
-        var cardRegistrationUrl = $button.closest('.course-card').data('registration');
-        console.log('Fallback - Card Registration URL:', cardRegistrationUrl);
-        if (cardRegistrationUrl) {
-          console.log('Opening fallback URL:', cardRegistrationUrl);
-          window.open(cardRegistrationUrl, '_blank');
-        }
-      }
-    });
-
-  });
-
-  function fetchAndPopulateFilters() {
-    $("#formSpinner").css("display", "block");
-    $.getJSON(fileToFetch)
-      .then(function (scheduleData) {
-        $("#formSpinner").css("display", "none");
-        populateLocationFilter(scheduleData);
-        populateGradeFilter(scheduleData);
-        fetchAndApplyFilters();
-      })
-      .catch(function (error) {
-        $("#formSpinner").css("display", "none");
-        alert("Error: " + error);
-        console.error("Error fetching JSON data:", error);
-      });
-  }
-
-  function populateLocationFilter(scheduleData) {
-    var locationSelect = document.getElementById("locationFilter");
-    Object.keys(scheduleData).forEach(function (location) {
-      var option = document.createElement("option");
-      option.value = location;
-      option.text = location;
-      locationSelect.appendChild(option);
-    });
-  }
-
-  function populateGradeFilter(scheduleData) {
-    var grades = new Set();
-    Object.values(scheduleData).flat().forEach(function (course) {
-      grades.add(course.Grade);
-    });
-
-    var $gradeFilter = $('#gradeFilter');
-    grades.forEach(function (grade) {
-      var $button = $('<button>', {
-        class: 'grade-btn',
-        'data-grade': grade,
-        text: grade
-      });
-      $gradeFilter.append($button);
-    });
-
-    $('.grade-btn').on('click touchend', function (e) {
-      e.preventDefault();
-      var $btn = $(this);
-
-      // Force redraw by triggering reflow
-      $btn.toggleClass('active');
-      $btn[0].offsetHeight;
-
-      // Apply active state immediately
-      if ($btn.hasClass('active')) {
-        $btn.css('background-color', '#04aaf4');
-        $btn.css('color', '#ffffff');
-      } else {
-        $btn.css('background-color', '#ffffff');
-        $btn.css('color', '#04aaf4');
-      }
-
-      fetchAndApplyFilters();
-    });
-  }
-
-  function getSelectedGrades() {
-    return $('.grade-btn.active').map(function () {
-      return $(this).data('grade');
-    }).get();
-  }
-
-  function fetchAndApplyFilters() {
-    $("#formSpinner").css("display", "block");
-    $.getJSON(fileToFetch)
-      .then(function (scheduleData) {
-        $("#formSpinner").css("display", "none");
-        var selectedLocation = $("#locationFilter").val();
-        var selectedGrades = getSelectedGrades();
-        var selectedDates = getSelectedDates();
-        populateFilteredGrid(scheduleData, selectedLocation, selectedGrades, selectedDates); 
-      })
-      .catch(function (error) {
-        $("#formSpinner").css("display", "none");
-        alert("Error: " + error);
-        console.error("Error fetching JSON data:", error);
-      });
-  }
-
-  $("#locationFilter").change(fetchAndApplyFilters);
-
-  function populateDateFilter() {
-    var $dateFilter = $('#dateFilter');
-    dateRanges.forEach(function (date) {
-      var $button = $('<button>', {
-        class: 'date-btn',
-        'data-date': date,
-        text: date
-      });
-      $dateFilter.append($button);
-    });
-
-    // Add click event listener to date buttons
-    $('.date-btn').click(function () {
-      $(this).toggleClass('active');
-      fetchAndApplyFilters();
-    });
-  }
-
-  function getSelectedDates() {
-    return $('.date-btn.active').map(function () {
-      return $(this).data('date');
-    }).get();
-  }
-
-  function createMobileCard(course) {
-    // Create main card container
-    var $card = $('<div>', {
-      class: 'mobile-course-card'
-    });
-
-    // Create header section
-    var $header = $('<div>', { class: 'mobile-course-header' });
-    var $img = $('<img>', {
-      class: 'mobile-course-image',
-      src: '/img/my/app-dev-1.png',
-      alt: course.name
-    });
-
-    var $info = $('<div>', { class: 'mobile-course-info' });
-      $info.append(
-      $('<h3>').text(course.name),
-      $('<div>', { class: 'mobile-course-age' }).text(`${translations.grade}: ${course.grade}`),
-      $('<div>', { class: 'mobile-course-age' }).text(`${translations.price}: ${course.price}`),
-      $('<div>', { class: 'mobile-course-age' }).text(`${translations.discount}: ${course.discount}`)
-    );
-
-    $header.append($img, $info);
-
-    // Create action buttons
-    var $actions = $('<div>', { class: 'mobile-course-actions' });
-    var $courseInfoBtn = $('<button>', {
-      class: 'mobile-btn mobile-btn-outline',
-      text: '{{ site.data.location_summercamp[page.locale].location_summercamp.joinToday }}',
-    }).click(function () {
-      $("#myModal").find("#modalIframe").attr("src", course.courseInfo);
-      $("#myModal").modal("show");
-    });
-
-    var $viewDatesBtn = $('<button>', {
-      class: 'mobile-btn mobile-btn-dark',
-      text: '{{ site.data.location_summercamp[page.locale].location_summercamp.availableDate }}',
-    }).click(function () {
-      var $datesSection = $(this).closest('.mobile-course-card').find('.mobile-dates-section');
-      var isVisible = $datesSection.is(':visible');
-
-      $(this).text(isVisible ? 'View Dates' : 'Close Dates');
-      $datesSection.slideToggle();
-    });
-
-    $actions.append($courseInfoBtn, $viewDatesBtn);
-
-    // Create dates section
-    var $datesSection = $('<div>', { class: 'mobile-dates-section' });
-
-    // Add date items
-    course.dates.forEach((scheduleInfo, date) => {
-      if (scheduleInfo) {
-        var $dateItem = createMobileDateItem(date, scheduleInfo);
-        $datesSection.append($dateItem);
-      }
-    });
-
-    // // Add "Try online" section
-    // var $tryOnline = $('<div>', { class: 'mobile-try-online' });
-    // $tryOnline.append(
-    //     $('<p>').text('Not finding a good option?'),
-    //     $('<button>', {
-    //         class: 'mobile-btn mobile-btn-outline',
-    //         text: 'Try online'
-    //     })
-    // );
-
-    // $datesSection.append($tryOnline);
-
-    // Assemble the card
-    $card.append($header, $actions, $datesSection);
-
-    // Load actual image if available
-    if (course.courseInfo) {
-      $.get(course.courseInfo, function (data) {
-        var $html = $($.parseHTML(data));
-        var $image = $html.find('img:not([src$=".svg"])').eq(1);
-        if ($image.length) {
-          var imageUrl = new URL($image.attr("src"), course.courseInfo).href;
-          $img.attr('src', imageUrl);
-        }
-      });
-    }
-
-    return $card;
-  }
-
-  function createMobileDateItem(date, scheduleInfo) {
-    var $dateItem = $('<div>', { class: 'mobile-date-item' });
-    var $dateHeader = $('<div>', { class: 'mobile-date-header' });
-
-    var $dateInfo = $('<div>', { class: 'mobile-date-info' });
-    $dateInfo.append(
-      $('<h4>').text(date),
-      $('<div>', { class: 'mobile-date-status' }).append(
-        $('<div>', {
-          class: 'status-indicator ' + ('status-green')
-        }),
-        $('<span>').text('Open')
-      )
-    );
-
-    var $selectBtn = $('<button>', {
-      class: 'mobile-btn mobile-btn-dark',
-      text: '{{ site.data.location_summercamp[page.locale].location_summercamp.selectDate }}',
-      'data-registration': scheduleInfo.registration
-    }).click(function () {
-      window.open($(this).data('registration'), '_blank');
-    });
-
-    $dateHeader.append($dateInfo, $selectBtn);
-    $dateItem.append($dateHeader);
-
-    return $dateItem;
-  }
-
-  function formatDateRange(range) {
-    return range.replace(/\b(\d\/)(\d)\b/g, (_, month, day) => `${month}0${day}`);
-  }
-
-  function populateFilteredGrid(scheduleData, selectedLocation, selectedGrades, selectedDates) {
-    var $grid = $("#camp-registration-grid");
-    $grid.empty();
-
-    // Create course map for organizing data
-    let courseMap = new Map();
-
-    // Process data
-    Object.entries(scheduleData).forEach(([location, courses]) => {
-      courses.forEach((course) => {
-        if ((selectedLocation === "all" || location === selectedLocation) &&
-          (selectedGrades.length === 0 || selectedGrades.includes(course.Grade))) {
-
-          let courseKey = course.Name + course.Grade;
-          let courseInfo = courseMap.get(courseKey) || {
-            name: course.Name,
-            grade: course.Grade,
-            price: course.Price,
-            discount: course.Discount,
-            courseInfo: course.CourseInfo,
-            dates: new Map()
-          };
-
-          course.Schedule.forEach((schedule, index) => {
-            courseInfo.dates.set(schedule.Date, {
-              time: schedule.Time,
-              registration: course.Registration[index]
-            });
-          });
-
-          courseMap.set(courseKey, courseInfo);
-        }
-      });
-    });
-
-    // Create mobile view container
-    var $mobileCardsContainer = $('<div>', { class: 'mobile-cards-container' });
-    courseMap.forEach((course) => {
-      var $mobileCard = createMobileCard(course);
-      $mobileCardsContainer.append($mobileCard);
-    });
-
-    // Create desktop view container
-    var $desktopContainer = $('<div>', { class: 'desktop-container' });
-    var $table = $('<table class="table table-striped" style="width: 100%; table-layout: fixed;">');
-    var $thead = $("<thead>");
-    var $headerRow = $('<tr>', {
-      class: 'header-row',
-      role: 'row'
-    });
-
-    // Add course name header
-    $headerRow.append('<th class="course-col">          {{ site.data.location_summercamp[page.locale].location_summercamp.courseName }}</th>');
-
-    // Add date headers
-    dateRanges.forEach(date => {
-      $headerRow.append(`<th class="date-col">${formatDateRange(date)}</th>`);
-    });
-
-    $thead.append($headerRow);
-    $table.append($thead);
-
-    var $tbody = $("<tbody>");
-
-    // Create rows for each course
-    courseMap.forEach(course => {
-      var $row = $('<tr>');
-
-      // Course info cell
-      var $courseCell = $('<td class="course-info-cell">');
-      var $courseContent = $('<div class="course-info-wrapper">');
-
-      // Add image container
-      var $imageContainer = $('<div class="course-image-container">');
-      var $defaultImage = $('<img>', {
-        class: 'table-course-image',
-        src: '/img/my/app-dev-1.png',
-        alt: course.name
-      });
-      $imageContainer.append($defaultImage);
-      if (course.courseInfo) {
-        $.get(course.courseInfo, function (data) {
-          var $html = $($.parseHTML(data));
-          var $image = $html.find('img:not([src$=".svg"])').eq(1);
-          if ($image.length) {
-            var imageUrl = new URL($image.attr("src"), course.courseInfo).href;
-            $defaultImage.attr('src', imageUrl);
-          }
-        });
-      }
-
-      // Add course details
-      var $details = $('<div class="course-details">').append(
-        $('<h4>').text(course.name),
-        $('<p>').text(`${translations.grade}: ${course.grade}`),
-        $('<p>').text(`${translations.price}: ${course.price}`),
-        $('<p>').text(`${translations.discount}: ${course.discount}`),
-        $('<button>', {
-          class: 'btn-learn-more',
-          text: '{{ site.data.location_summercamp[page.locale].location_summercamp.learnMore }}',
-          'data-course-info': course.courseInfo,
-          'data-bs-toggle': 'modal',
-          'data-bs-target': '#myModal'
-        })
-      );
-
-      $courseContent.append($imageContainer, $details);
-      $courseCell.append($courseContent);
-      $row.append($courseCell);
-
-      // Add date cells
-      dateRanges.forEach(date => {
-        var $dateCell = $('<td class="date-cell">');
-        var scheduleInfo = course.dates.get(date);
-        console.log(scheduleInfo);
-
-        var $content = $('<div class="date-content">');
-        if (scheduleInfo) {
-          $content.append(
-            $('<p class="time">').text(scheduleInfo.time),
-            $('<button>', {
-              class: 'btn-join-today',
-              text: '{{ site.data.location_summercamp[page.locale].location_summercamp.joinToday }}',
-              'data-registration': scheduleInfo.registration
-            })
-          );
-        } else {
-          $content.append('<div class="no-class">-</div>');
-        }
-
-        $dateCell.append($content);
-        $row.append($dateCell);
-      });
-
-      $tbody.append($row);
-    });
-
-    $table.append($tbody);
-    $desktopContainer.append($table);
-
-    // Add both views to the grid with wrapper
-    var $gridWrapper = $('<div>', { class: 'grid-wrapper' });
-    $gridWrapper.append($mobileCardsContainer, $desktopContainer);
-    $grid.append($gridWrapper);
-
-    // Reinitialize event handlers
-    $('.btn-learn-more').click(function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      $("#myModal").find("#modalIframe").attr("src", $(this).data('course-info'));
-      $("#myModal").modal("show");
-    });
-
-    $('.btn-join-today').click(function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      var registrationUrl = $(this).data('registration');
-      if (registrationUrl) {
-        window.open(registrationUrl, '_blank');
-      }
-    });
-
-    // Handle scroll for sticky header
-    $(window).scroll(function () {
-      var scroll = $(window).scrollTop();
-      var headerOffset = $('#gradeFilter').offset().top;
-
-      if (scroll > headerOffset) {
-        $('.header-row').addClass('scrolled');
-      } else {
-        $('.header-row').removeClass('scrolled');
-      }
-    });
-  }
-
-  function createCourseCard(course, schedule) {
-    var scheduleIndex = course.Schedule.findIndex(s =>
-      s.Date === schedule.Date && s.Time === schedule.Time
-    );
-
-    // Create the card container
-    var $card = $('<div>', {
-      class: 'course-card',
-      'data-registration': course.Registration[scheduleIndex]
-    });
-
-    // Create image container
-    var $imageContainer = $('<div>', {
-      class: 'image-container'
-    });
-
-    // Add default image immediately
-    var defaultImageUrl = "/img/my/app-dev-1.png";
-    var $defaultImage = $('<img>', {
-      class: 'course-image',
-      src: defaultImageUrl,
-      alt: course.Name
-    });
-    $imageContainer.append($defaultImage);
-
-    // Then try to load the actual image
-    if (course.CourseInfo) {
-      $.get(course.CourseInfo, function (data) {
-        var $html = $($.parseHTML(data));
-        var $image = $html.find('img:not([src$=".svg"])').eq(1);
-
-        if ($image.length) {
-          var imageUrl = new URL($image.attr("src"), course.CourseInfo).href;
-          $defaultImage.attr('src', imageUrl);
-        }
-      });
-    }
-
-    // Create content container
-    var $contentContainer = $('<div>', { class: 'content-container' });
-
-    // Build the inner content
-    var $title = $('<h4>', { class: 'course-title', text: course.Name });
-    var $time = $('<p>', { class: 'course-info', text: schedule.Time || 'Time: TBD' });
-    // var $grade = $('<p>', { class: 'course-info', text: '{{ site.data.location_summercamp[page.locale].location_summercamp.grade }}: ' + course.Grade });
-    // var $price = $('<p>', { class: 'course-info', text: '{{ site.data.location_summercamp[page.locale].location_summercamp.price }}: ' + course.Price });
-    // var $discount = $('<p>', { class: 'course-info', text: '{{ site.data.location_summercamp[page.locale].location_summercamp.discount }}: ' + course.Discount });
-
-    var $grade = $('<p>', { class: 'course-info', text: translations.grade + ': ' + course.Grade });
-    var $price = $('<p>', { class: 'course-info', text: translations.price + ': ' + course.Price });
-    var $discount = $('<p>', { class: 'course-info', text: translations.discount + ': ' + course.Discount });
-
-
-    // Add content to content container
-    $contentContainer.append($title, $time, $grade, $price, $discount);
-
-    // Create button container
-    var $buttonContainer = $('<div>', { class: 'button-container' });
-
-    // Create buttons
-    var $joinTodayButton = $('<button>', {
-      class: 'btn-join-today',
-      text: '{{ site.data.location_summercamp[page.locale].location_summercamp.joinToday }}',
-      'data-registration': course.Registration[scheduleIndex]
-    });
-
-    var $learnMoreButton = $('<button>', {
-      class: 'btn-learn-more',
-      text: '{{ site.data.location_summercamp[page.locale].location_summercamp.learnMore }}',
-      'data-course-info': course.CourseInfo,
-      'data-bs-toggle': 'modal',
-      'data-bs-target': '#myModal'
-    });
-
-    // Add buttons to button container
-    $buttonContainer.append($joinTodayButton, $learnMoreButton);
-
-    // Assemble the card in order
-    $card.append($imageContainer);
-    $card.append($contentContainer);
-    $card.append($buttonContainer);
-
-    // Add click handlers
-    $joinTodayButton.on('click', function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      var registrationUrl = $(this).data('registration');
-      if (registrationUrl) {
-        window.open(registrationUrl, '_blank');
-      }
-    });
-
-    $learnMoreButton.on('click', function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      $("#myModal").find("#modalIframe").attr("src", course.CourseInfo);
-      $("#myModal").modal("show");
-    });
-
-    return $card;
-  }
-
-  // Add this function to handle the modal content update
-  function setupModalListeners() {
-    $('#myModal').on('show.bs.modal', function (event) {
-      var button = $(event.relatedTarget);
-      var courseInfo = button.data('course-info');
-      var modal = $(this);
-      modal.find('#modalIframe').attr('src', courseInfo);
-    });
-  }
-
-
-  function adjustTableForMobile() {
-    if ($(window).width() < 1200) {
-      $("th:not(:first-child)").hide();
-      $("td:not(:first-child)").hide();
-    } else {
-      $("th, td").show();
-      $(".header-row").off("click");
-    }
-  }
-
-  $(window).resize(adjustTableForMobile);
-
-  // Call this function after populating the grid
-  function initializeGrid() {
-    adjustGridForMobile();
-  }
-
-  function createImageElement(url, $container) {
-    var defaultImageUrl = "/img/my/app-dev-1.png";
-
-    $.get(url, function (data) {
-      var $html = $($.parseHTML(data));
-      var $image = $html.find('img:not([src$=".svg"])').eq(1);
-
-
-      var imageUrl;
-      if ($image.length) {
-        imageUrl = new URL($image.attr("src"), url).href;
-      } else {
-        imageUrl = defaultImageUrl;
-      }
-
-      var $imageElement = $("<img>", {
-        class: "card-img-top rounded-top rounded-0",
-        src: imageUrl,
-        style: "width: 100%; height: auto; display: block; margin-bottom: 5px; text-align: center;",
-      });
-      $container.prepend($imageElement);
-    }).fail(function () {
-      var $imageElement = $("<img>", {
-        class: "card-img-top rounded-top rounded-0",
-        src: defaultImageUrl,
-        style: "width: 100%; height: auto; display: block; margin-bottom: 5px; text-align: center;",
-      });
-      $container.prepend($imageElement);
-    });
-  }
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <style>
   /* Container and Grid Layout */
   .grid-wrapper {
@@ -850,46 +271,6 @@ layout: locationdefault
     color: #adb5bd;
   }
 
-  /* Mobile Course Card Styles */
-  .mobile-course-card {
-    display: none;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem;
-    overflow: hidden;
-  }
-
-  .mobile-course-header {
-    display: flex;
-    padding: 1rem;
-    gap: 1rem;
-    align-items: center;
-  }
-
-  .mobile-course-image {
-    width: 64px;
-    height: 64px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-
-  .mobile-course-info {
-    flex-grow: 1;
-  }
-
-  .mobile-course-info h3 {
-    margin: 0;
-    font-size: 1.125rem;
-    font-weight: 600;
-  }
-
-  .mobile-course-age {
-    color: #6b7280;
-    font-size: 0.875rem;
-    margin-top: 0.25rem;
-  }
-
   .mobile-course-actions {
     display: flex;
     gap: 0.5rem;
@@ -917,6 +298,25 @@ layout: locationdefault
   .btn-learn-more:hover,
   .btn-join-today:hover {
     background-color: #0056b3;
+  }
+
+  .btn-join-waitlist {
+    background-color: #f97316;
+    color: white;
+    border: none;
+    padding: 6px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .btn-join-waitlist:hover {
+    background-color: #ea580c;
   }
 
   .btn-join-us {
@@ -987,34 +387,6 @@ layout: locationdefault
     font-size: 0.8em;
     display: block;
     margin-top: 4px;
-  }
-
-  /* Date Button Styles */
-  .date-btn {
-    border: 2px solid #04aaf4;
-    background-color: #ffffff;
-    color: #04aaf4;
-    padding: 8px 16px;
-    margin: 5px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 0.9em;
-  }
-
-  .date-btn:hover,
-  .date-btn.active {
-    background-color: #04aaf4;
-    color: #ffffff;
-  }
-
-  #dateFilter {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 20px;
-    margin-bottom: 20px;
   }
 
   /* Mobile Dates Section */
@@ -1112,6 +484,10 @@ layout: locationdefault
   }
 
   @media (max-width: 768px) {
+    .mobile-course-card {
+      display: block !important;
+    }
+
     .table {
       display: none;
     }
@@ -1194,6 +570,14 @@ layout: locationdefault
       background-color: #04aaf4;
       color: #ffffff;
     }
+
+    .mobile-cards-container {
+      display: block !important;
+    }
+
+    .desktop-container {
+      display: none;
+    }
   }
 
   @media (min-width: 769px) {
@@ -1201,4 +585,774 @@ layout: locationdefault
       display: none;
     }
   }
+
+  /* Tablet/iPad Specific Styles - must come after mobile styles */
+  @media (min-width: 769px) and (max-width: 1200px) {
+    .table {
+      display: none !important;
+    }
+
+    .desktop-container {
+      display: none !important;
+    }
+
+    .mobile-cards-container {
+      display: flex !important;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    /* Make cards display in a 2-column layout with fixed height */
+    .mobile-course-card {
+      display: flex !important;
+      width: calc(50% - 0.5rem);
+      margin-bottom: 1rem;
+      height: 450px;
+    }
+
+    .mobile-course-info {
+      flex-grow: 0;
+      flex-shrink: 0;
+      text-align: center;
+      margin-bottom: 1rem;
+      min-height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .mobile-course-info-container {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .mobile-course-info h3 {
+      margin: 0.5rem 0;
+      font-size: 1.125rem;
+      font-weight: 600;
+      line-height: 1.3;
+      max-height: 2.6em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .mobile-course-actions {
+      margin-top: auto;
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+
+    .mobile-course-image-container {
+      height: 150px;
+    }
+  }
+
+  /* Mobile Course Card Styles */
+  .mobile-course-card {
+    display: none;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    overflow: hidden;
+    flex-direction: column;
+  }
+
+  .mobile-course-image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .mobile-course-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .mobile-course-info-container {
+    padding: 1rem;
+  }
+
+  .mobile-course-info {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .mobile-course-info h3 {
+    margin: 0.5rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .mobile-course-age {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin: 0.25rem 0;
+  }
 </style>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  var locationName = extractLocationFromURL();
+  var preference = window.location.href.indexOf("cn") == -1 ? "en" : "cn";
+  var fileToFetch = preference === "cn" ? "/assets/summer2025_cn.json" : "/assets/summer2025.json";
+
+  var translations = {
+    grade: '{{ site.data.summercamp[page.locale].summer.grade }}',
+    price: '{{ site.data.summercamp[page.locale].summer.price }}',
+    discount: '{% if site.data.summercamp[page.locale].summer.discount %}{{ site.data.summercamp[page.locale].summer.discount }}{% else %}Discount{% endif %}',
+    courseInfo: '{% if site.data.summercamp[page.locale].summer.courseInfo %}{{ site.data.summercamp[page.locale].summer.courseInfo }}{% else %}Course Info{% endif %}'
+  };
+
+  $(document).ready(function () {
+    // Set up modal listener
+    setupModalListeners();
+
+    // Initial data fetch and setup
+    fetchAndPopulateFilters();
+
+    // Add click handler for Join Today buttons
+    $(document).on('click', '.btn-join-today', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var $button = $(this);
+      var registrationUrl = $button.data('registration');
+      if (registrationUrl) {
+        window.open(registrationUrl, '_blank');
+      } else {
+        console.error('Registration URL not found');
+        // Fallback: try to get the URL from the parent card
+        var cardRegistrationUrl = $button.closest('.course-card').data('registration');
+        if (cardRegistrationUrl) {
+          window.open(cardRegistrationUrl, '_blank');
+        }
+      }
+    });
+  });
+
+  function extractLocationFromURL() {
+    var pathArray = window.location.pathname.split('/');
+    pathArray = pathArray.filter(function (path) {
+      return path !== '';
+    });
+
+    var isChinese = pathArray.includes('cn');
+
+    var locationName = '';
+
+    if (isChinese) {
+      var cnIndex = pathArray.indexOf('cn');
+      if (cnIndex + 1 < pathArray.length) {
+        locationName = pathArray[cnIndex + 1];
+      }
+    } else {
+      if (pathArray.length > 0) {
+        locationName = pathArray[0];
+      }
+    }
+
+    if (!locationName || locationName === 'cn') {
+      locationName = 'default';
+    }
+
+    // For debugging
+    // console.log('Detected location:', locationName);
+    // console.log('Is Chinese:', isChinese);
+
+    return locationName;
+  }
+
+  function fetchAndPopulateFilters() {
+    $("#formSpinner").css("display", "block");
+    var preference = window.location.href.indexOf("cn") == -1 ? "en" : "cn";
+    var coursesFileToFetch = preference === "cn" ?
+      `/assets/summer2025_${locationName}_cn.json` :
+      `/assets/summer2025_${locationName}.json`;
+    var defaultCoursesFile = preference === "cn" ? "/assets/summer2025_cn.json" : "/assets/summer2025.json";
+    console.log("Fetching courses from:", coursesFileToFetch);
+
+    $.getJSON(coursesFileToFetch)
+      .then(function (coursesData) {
+        $("#formSpinner").css("display", "none");
+        populateLocationFilter(coursesData);
+        populateGradeFilter(coursesData);
+        fetchAndApplyFilters();
+      })
+      .catch(function (error) {
+        $("#formSpinner").css("display", "none");
+        alert("Error: " + error);
+        console.error("Error fetching JSON data:", error);
+      });
+  }
+
+  function populateLocationFilter(coursesData) {
+    var locationSelect = document.getElementById("locationFilter");
+    Object.keys(coursesData).forEach(function (location) {
+      var option = document.createElement("option");
+      option.value = location;
+      option.text = location;
+      locationSelect.appendChild(option);
+    });
+  }
+
+  function populateGradeFilter(coursesData) {
+    var grades = new Set();
+    Object.values(coursesData).flat().forEach(function (course) {
+      grades.add(course.Grade);
+    });
+
+    var $gradeFilter = $('#gradeFilter');
+    grades.forEach(function (grade) {
+      var $button = $('<button>', {
+        class: 'grade-btn',
+        'data-grade': grade,
+        text: grade
+      });
+      $gradeFilter.append($button);
+    });
+
+    $('.grade-btn').on('click touchend', function (e) {
+      e.preventDefault();
+      var $btn = $(this);
+
+      // Force redraw by triggering reflow
+      $btn.toggleClass('active');
+      $btn[0].offsetHeight;
+
+      // Apply active state immediately
+      if ($btn.hasClass('active')) {
+        $btn.css('background-color', '#04aaf4');
+        $btn.css('color', '#ffffff');
+      } else {
+        $btn.css('background-color', '#ffffff');
+        $btn.css('color', '#04aaf4');
+      }
+
+      fetchAndApplyFilters();
+    });
+  }
+
+  function getSelectedGrades() {
+    return $('.grade-btn.active').map(function () {
+      return $(this).data('grade');
+    }).get();
+  }
+
+  function fetchAndApplyFilters() {
+    $("#formSpinner").css("display", "block");
+
+    if (!locationName) {
+      locationName = extractLocationFromURL();
+    }
+
+    var preference = window.location.href.indexOf("cn") == -1 ? "en" : "cn";
+    var datesFileToFetch = `/assets/dates_${locationName}.json`;
+    var defaultDatesFile = "/assets/dates.json";
+    var coursesFileToFetch = preference === "cn" ?
+      `/assets/summer2025_${locationName}_cn.json` :
+      `/assets/summer2025_${locationName}.json`;
+    var defaultCoursesFile = preference === "cn" ? "/assets/summer2025_cn.json" : "/assets/summer2025.json";
+    console.log("Fetching courses from:", coursesFileToFetch);
+    console.log("Fetching dates from:", datesFileToFetch);
+
+
+
+    // First try to load dates.json
+    $.getJSON(datesFileToFetch)
+      .then(function (datesData) {
+        // Successfully loaded dates.json, now load courses data
+        return $.getJSON(coursesFileToFetch)
+          .then(function (coursesData) {
+            applyFiltersWithData(datesData, coursesData);
+          });
+      })
+      .catch(function () {
+        // If dates.json fails to load, proceed with only courses data
+        console.warn("Could not load dates.json, proceeding with only course data");
+        return $.getJSON(defaultCoursesFile)
+          .then(function (coursesData) {
+            applyFiltersWithData(null, coursesData);
+          });
+      })
+      .catch(function (error) {
+        // Final error handler if all data loading fails
+        $("#formSpinner").css("display", "none");
+        console.error("Error fetching JSON data:", error);
+        $("#camp-registration-grid").html('<div class="alert alert-danger">Error loading course data. Please try again later.</div>');
+      });
+  }
+
+  function applyFiltersWithData(datesData, coursesData) {
+    $("#formSpinner").css("display", "none");
+
+    var selectedLocation = $("#locationFilter").val() || "all";
+    var selectedGrades = getSelectedGrades();
+
+    populateFilteredGrid(datesData, coursesData, selectedLocation, selectedGrades);
+  }
+
+  // Add change event listener for location filter
+  $("#locationFilter").change(fetchAndApplyFilters);
+
+  function createMobileCard(course) {
+    // Create main card container
+    var $card = $('<div>', {
+      class: 'mobile-course-card',
+      //style: 'display: block;'
+      style: 'display: flex; flex-direction: column; height: 100%;'
+    });
+
+    // Create image container at the top
+    var $imageContainer = $('<div>', {
+      class: 'mobile-course-image-container',
+      style: 'flex-shrink: 0;'
+    });
+    var $img = $('<img>', {
+      class: 'mobile-course-image',
+      src: '/img/my/app-dev-1.png',
+      alt: course.name
+    });
+    $imageContainer.append($img);
+
+    // Create info container
+    var $infoContainer = $('<div>', {
+      class: 'mobile-course-info-container',
+      style: 'display: flex; flex-direction: column; flex: 1;'
+    });
+
+    // Add course information
+    var $info = $('<div>', {
+      class: 'mobile-course-info',
+      style: 'flex: 1;'
+    });
+    $info.append(
+      $('<h3>').text(course.name),
+      $('<div>', { class: 'mobile-course-age' }).text(`${translations.grade}: ${course.grade}`),
+      $('<div>', { class: 'mobile-course-age' }).text(`${translations.price}: $${course.price}`)
+    );
+
+    // Add discount if available
+    if (course.discount) {
+      $info.append($('<div>', { class: 'mobile-course-age' }).text(`${translations.discount}: ${course.discount}`));
+    }
+
+    // Create action buttons
+    var $actions = $('<div>', {
+      class: 'mobile-course-actions',
+      style: 'margin-top: auto;'
+    });
+    var $courseInfoBtn = $('<button>', {
+      class: 'mobile-btn mobile-btn-outline',
+      text: '{{ site.data.summercamp[page.locale].summer.learnMore }}',
+    }).click(function () {
+      $("#myModal").find("#modalIframe").attr("src", course.courseInfo);
+      $("#myModal").modal("show");
+    });
+
+    var $viewDatesBtn = $('<button>', {
+      class: 'mobile-btn mobile-btn-dark',
+      text: '{{ site.data.summercamp[page.locale].summer.availableDate }}',
+    }).click(function () {
+      var $datesSection = $(this).closest('.mobile-course-card').find('.mobile-dates-section');
+      var isVisible = $datesSection.is(':visible');
+
+      $(this).text(isVisible ?
+        '{{ site.data.summercamp[page.locale].summer.availableDate }}' :
+        '{% if site.data.summercamp[page.locale].summer.closeDates %}{{ site.data.summercamp[page.locale].summer.closeDates }}{% else %}Close Dates{% endif %}');
+      $datesSection.slideToggle();
+    });
+
+    $actions.append($courseInfoBtn, $viewDatesBtn);
+
+    // Add info and actions to info container
+    $infoContainer.append($info, $actions);
+
+    // Create dates section
+    var $datesSection = $('<div>', { class: 'mobile-dates-section' });
+
+    // Add date items
+    course.dates.forEach((scheduleInfo, date) => {
+      if (scheduleInfo) {
+        var $dateItem = createMobileDateItem(date, scheduleInfo);
+        $datesSection.append($dateItem);
+      }
+    });
+
+    // Assemble the card in the new order: image at top, then info/actions, then dates
+    $card.append($imageContainer, $infoContainer, $datesSection);
+
+    // Load actual image if available
+    if (course.courseInfo) {
+      $.get(course.courseInfo, function (data) {
+        var $html = $($.parseHTML(data));
+        var $image = $html.find('img:not([src$=".svg"])').eq(2);
+        if ($image.length) {
+          var imageUrl = new URL($image.attr("src"), course.courseInfo).href;
+          $img.attr('src', imageUrl);
+        }
+      });
+    }
+
+    return $card;
+  }
+
+  function createMobileDateItem(date, scheduleInfo) {
+    var $dateItem = $('<div>', { class: 'mobile-date-item' });
+    var $dateHeader = $('<div>', { class: 'mobile-date-header' });
+
+    var $dateInfo = $('<div>', { class: 'mobile-date-info' });
+    $dateInfo.append(
+      $('<h4>').text(date),
+      $('<div>', { class: 'mobile-date-status' }).append(
+        $('<div>', {
+          class: 'status-indicator ' + (scheduleInfo.isWaitlist ? 'status-orange' : 'status-green')
+        }),
+        $('<span>').text(scheduleInfo.isWaitlist ? 'Waitlist' : 'Open')
+      )
+    );
+
+    if (scheduleInfo.isWaitlist) {
+      var waitlistFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdfqVH23TWPHwmqoOV7GeU2s2_xT4fV6KOfxb_DvREkcYjKJQ/viewform?usp=sharing";
+
+      var $selectBtn = $('<button>', {
+        class: 'mobile-btn mobile-btn-dark',
+        text: '{{ site.data.summercamp[page.locale].summer.joinWaitlist}}',
+        'data-waitlist-form': waitlistFormUrl
+      }).click(function () {
+        window.open($(this).data('waitlist-form'), '_blank');
+      });
+
+      // Set orange background color
+      $selectBtn.css('background-color', '#f97316');
+    } else {
+      // Regular registration button for non-waitlisted courses
+      var $selectBtn = $('<button>', {
+        class: 'mobile-btn mobile-btn-dark',
+        text: '{{ site.data.summercamp[page.locale].summer.joinToday }}',
+        'data-registration': scheduleInfo.registration
+      }).click(function () {
+        window.open($(this).data('registration'), '_blank');
+      });
+    }
+
+    if (scheduleInfo.isWaitlist) {
+      $selectBtn.css('background-color', '#f97316');
+    }
+
+    $dateHeader.append($dateInfo, $selectBtn);
+    $dateItem.append($dateHeader);
+
+    return $dateItem;
+  }
+
+  function populateFilteredGrid(datesData, coursesData, selectedLocation, selectedGrades) {
+    var $grid = $("#camp-registration-grid");
+    $grid.empty();
+
+    // Check if we have valid data
+    if (!coursesData || Object.keys(coursesData).length === 0) {
+      $grid.html('<div class="alert alert-info">No course data available at this time. Please check back later.</div>');
+      return;
+    }
+
+    // Extract all date ranges from datesData or create from course data
+    var dateHeaders = [];
+    if (datesData && Object.keys(datesData).length > 0) {
+      dateHeaders = Object.values(datesData)
+        .reduce((acc, date) => {
+          if (date && !acc.includes(date)) {
+            acc.push(date);
+          }
+          return acc;
+        }, [])
+        .sort();
+    } else {
+      // If no dates.json, try to extract date codes from course data
+      var dateCodes = new Set();
+      Object.values(coursesData).forEach(courses => {
+        if (!Array.isArray(courses)) return;
+        courses.forEach(course => {
+          if (course && Array.isArray(course.Dates)) {
+            course.Dates.forEach(date => dateCodes.add(date));
+          }
+        });
+      });
+      dateHeaders = Array.from(dateCodes).sort();
+    }
+
+    if (dateHeaders.length === 0) {
+      $grid.html('<div class="alert alert-info">No dates available at this time. Please check back later.</div>');
+      return;
+    }
+
+    // Create course map for organizing data
+    let courseMap = new Map();
+
+    // Process data
+    Object.entries(coursesData || {}).forEach(([location, courses]) => {
+      if (!Array.isArray(courses)) return;
+
+      courses.forEach((course) => {
+        if (!course) return;
+
+        if ((selectedLocation === "all" || location === selectedLocation) &&
+          (selectedGrades.length === 0 || selectedGrades.includes(course.Grade))) {
+
+          let courseKey = course.Name + course.Grade;
+          let courseInfo = courseMap.get(courseKey) || {
+            name: course.Name || "Unnamed Course",
+            grade: course.Grade || "All Grades",
+            price: course.Price || "Contact for price",
+            discount: course.Discount || "",
+            courseInfo: course.CourseInfo || "",
+            dates: new Map()
+          };
+
+          // Handle the special case for your data structure
+          if (Array.isArray(course.Dates) && Array.isArray(course["Registration Links"])) {
+            course.Dates.forEach((dateCode, index) => {
+              if (!dateCode) return;
+
+              // Get time from the Time array if available
+              let timeValue = "";
+              if (Array.isArray(course.Time) && index < course.Time.length) {
+                timeValue = course.Time[index];
+              }
+
+              // Use either the date from datesData or the code itself
+              const dateText = datesData && datesData[dateCode] ? datesData[dateCode] : dateCode;
+
+              // Get registration link
+              const registrationLink = course["Registration Links"] &&
+                index < course["Registration Links"].length ?
+                course["Registration Links"][index] : "#";
+
+              const isWaitlist = Array.isArray(course.Waitlist) && course.Waitlist.includes(dateCode);
+
+
+              courseInfo.dates.set(dateText, {
+                time: timeValue,
+                registration: registrationLink,
+                isWaitlist: isWaitlist
+              });
+            });
+          }
+
+          courseMap.set(courseKey, courseInfo);
+        }
+      });
+    });
+
+    // Create mobile view container
+    var $mobileCardsContainer = $('<div>', { class: 'mobile-cards-container' });
+    courseMap.forEach((course) => {
+      var $mobileCard = createMobileCard(course);
+      $mobileCardsContainer.append($mobileCard);
+    });
+
+    // Create desktop view container
+    var $desktopContainer = $('<div>', { class: 'desktop-container' });
+    var $table = $('<table class="table table-striped" style="width: 100%; table-layout: fixed;">');
+    var $thead = $("<thead>");
+    var $headerRow = $('<tr>', {
+      class: 'header-row',
+      role: 'row'
+    });
+
+    // Add course name header
+    $headerRow.append('<th class="course-col">{{ site.data.summercamp[page.locale].summer.courseName }}</th>');
+
+    // Add date headers
+    dateHeaders.forEach(date => {
+      $headerRow.append(`<th class="date-col">${date}</th>`);
+    });
+
+    $thead.append($headerRow);
+    $table.append($thead);
+
+    var $tbody = $("<tbody>");
+
+    // Create rows for each course
+    courseMap.forEach(course => {
+      var $row = $('<tr>');
+
+      // Course info cell
+      var $courseCell = $('<td class="course-info-cell">');
+      var $courseContent = $('<div class="course-info-wrapper">');
+
+      // Add image container
+      var $imageContainer = $('<div class="course-image-container">');
+      var $defaultImage = $('<img>', {
+        class: 'table-course-image',
+        src: '/img/my/app-dev-1.png',
+        alt: course.name
+      });
+      $imageContainer.append($defaultImage);
+      if (course.courseInfo) {
+        $.get(course.courseInfo, function (data) {
+          var $html = $($.parseHTML(data));
+          var $image = $html.find('img:not([src$=".svg"])').eq(2);
+          if ($image.length) {
+            var imageUrl = new URL($image.attr("src"), course.courseInfo).href;
+            $defaultImage.attr('src', imageUrl);
+          }
+        });
+      }
+
+      // Add course details
+      var $details = $('<div class="course-details">').append(
+        $('<h4>').text(course.name),
+        $('<p>').text(`${translations.grade}: ${course.grade}`),
+        $('<p>').text(`${translations.price}: $${course.price}`)
+      );
+
+      // Add discount if available
+      if (course.discount) {
+        $details.append($('<p>').text(`${translations.discount}: ${course.discount}`));
+      }
+
+      // Add Learn More button
+      $details.append(
+        $('<button>', {
+          class: 'btn-learn-more',
+          text: '{{ site.data.summercamp[page.locale].summer.learnMore }}',
+          'data-course-info': course.courseInfo,
+          'data-bs-toggle': 'modal',
+          'data-bs-target': '#myModal'
+        })
+      );
+
+      $courseContent.append($imageContainer, $details);
+      $courseCell.append($courseContent);
+      $row.append($courseCell);
+
+      // Add date cells
+      dateHeaders.forEach(date => {
+        var $dateCell = $('<td class="date-cell">');
+        var scheduleInfo = course.dates.get(date);
+
+        var $content = $('<div class="date-content">');
+          if (scheduleInfo) {
+            if (scheduleInfo.time) {
+              $content.append($('<p class="time">').text(scheduleInfo.time));
+            }
+
+            if (scheduleInfo.isWaitlist) {
+              var waitlistFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdfqVH23TWPHwmqoOV7GeU2s2_xT4fV6KOfxb_DvREkcYjKJQ/viewform?usp=sharing";
+              
+              $content.append(
+                $('<button>', {
+                  class: 'btn-join-waitlist',
+                  text: '{{ site.data.summercamp[page.locale].summer.joinWaitlist}}',
+                  'data-waitlist-form': waitlistFormUrl
+                }).click(function() {
+                  window.open($(this).data('waitlist-form'), '_blank');
+                })
+              );
+            } else {
+              $content.append(
+                $('<button>', {
+                  class: 'btn-join-today',
+                  text: '{{ site.data.summercamp[page.locale].summer.joinToday }}',
+                  'data-registration': scheduleInfo.registration
+                })
+              );
+            }
+          } else {
+            $content.append('<div class="no-class">-</div>');
+          }
+
+        $dateCell.append($content);
+        $row.append($dateCell);
+      });
+
+      $tbody.append($row);
+    });
+
+    $table.append($tbody);
+    $desktopContainer.append($table);
+
+    // Add both views to the grid with wrapper
+    var $gridWrapper = $('<div>', { class: 'grid-wrapper' });
+    $gridWrapper.append($mobileCardsContainer, $desktopContainer);
+    $grid.append($gridWrapper);
+
+    // Reinitialize event handlers
+    $('.btn-learn-more').click(function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      $("#myModal").find("#modalIframe").attr("src", $(this).data('course-info'));
+      $("#myModal").modal("show");
+    });
+
+    // Handle scroll for sticky header
+    $(window).scroll(function () {
+      var scroll = $(window).scrollTop();
+      var headerOffset = $('#gradeFilter').offset().top;
+
+      if (scroll > headerOffset) {
+        $('.header-row').addClass('scrolled');
+      } else {
+        $('.header-row').removeClass('scrolled');
+      }
+    });
+
+    // Adjust display for mobile
+    adjustTableForMobile();
+  }
+
+  function setupModalListeners() {
+    $('#myModal').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget);
+      var courseInfo = button.data('course-info');
+      var modal = $(this);
+      modal.find('#modalIframe').attr('src', courseInfo);
+    });
+  }
+
+  function adjustTableForMobile() {
+    if ($(window).width() < 1200) {
+      $("th:not(:first-child)").hide();
+      $("td:not(:first-child)").hide();
+    } else {
+      $("th, td").show();
+      $(".header-row").off("click");
+    }
+  }
+
+  $(window).resize(adjustTableForMobile);
+
+  function createImageElement(url, $container) {
+    var defaultImageUrl = "/img/my/app-dev-1.png";
+
+    $.get(url, function (data) {
+      var $html = $($.parseHTML(data));
+      var $image = $html.find('img:not([src$=".svg"])').eq(2);
+
+      var imageUrl;
+      if ($image.length) {
+        imageUrl = new URL($image.attr("src"), url).href;
+      } else {
+        imageUrl = defaultImageUrl;
+      }
+
+      var $imageElement = $("<img>", {
+        class: "card-img-top rounded-top rounded-0",
+        src: imageUrl,
+        style: "width: 100%; height: auto; display: block; margin-bottom: 5px; text-align: center;",
+      });
+      $container.prepend($imageElement);
+    }).fail(function () {
+      var $imageElement = $("<img>", {
+        class: "card-img-top rounded-top rounded-0",
+        src: defaultImageUrl,
+        style: "width: 100%; height: auto; display: block; margin-bottom: 5px; text-align: center;",
+      });
+      $container.prepend($imageElement);
+    });
+  }
+</script>
