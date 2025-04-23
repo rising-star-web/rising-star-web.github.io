@@ -135,9 +135,22 @@ function getCourseTime(course) {
   if (course.organizationId === "65f3061cf9e48a001424996a") {
     return `Monday to Friday ${course.classTime}-${course.classEndTime}`;
   } else {
-    const Monday = course.classDay + ' ' + course.classTime + '-' + course.classEndTime;
-    const restDays = course.classDays.map((day) => `${day.classDay} ${day.classTime}-${day.classEndTime}`).join("\n ");
-    return `${Monday}\n${restDays}`;
+    const uniqueSchedules = new Set();
+    
+    // Add the main classDay if it exists
+    if (course.classDay && course.classTime && course.classEndTime) {
+      uniqueSchedules.add(`${course.classDay} ${course.classTime}-${course.classEndTime}`);
+    }
+    
+    if (course.classDays && Array.isArray(course.classDays)) {
+      course.classDays.forEach(day => {
+        if (day.classDay && day.classTime && day.classEndTime) {
+          uniqueSchedules.add(`${day.classDay} ${day.classTime}-${day.classEndTime}`);
+        }
+      });
+    }
+    
+    return Array.from(uniqueSchedules).join('\n');
   }
 }
 
