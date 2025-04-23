@@ -45,6 +45,8 @@ layout: locationdefault
     {% endif %}
   {% when "diamond-bar" %}
     {% assign courses = site.courses_db %}
+  {% when "arcadia" %}
+    {% assign courses = site.courses_ar %}
   {% else %}
     {% assign courses = empty %}
 {% endcase %}

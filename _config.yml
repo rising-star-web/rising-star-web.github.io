@@ -102,6 +102,10 @@ collections:
     output: true
     permalink: /diamond-bar/courses/:name/
     path: courses_db
+  courses_ar:
+    output: true
+    permalink: /arcadia/courses/:name/
+    path: courses_ar
     
 
 defaults:
@@ -157,6 +161,11 @@ defaults:
       type: courses_db
     values:
       permalink: /diamond-bar/courses/:name/
+  - scope:
+      source: "_courses_ar"
+      type: courses_ar
+    values:
+      permalink: /arcadia/courses/:name/
   # Chinese
   - scope:
       path: "_courses/cn"
