@@ -11,7 +11,7 @@ pathway: "USACO"
 skillLevel: "Advanced"
 shortDescription: "Master the Core of Competitive Programming with USACO's Essential Data Structures and Algorithms!"
 description: "Dive deep into the heart of computational mastery with USACO 2: Data Structures and Algorithms! This dynamic course empowers students to unravel complex problems by mastering essential data structures and algorithmic strategies. Engage with captivating, real-world problems and elevate your problem-solving prowess while grasping the foundations of today's most groundbreaking technological advancements. Ideal for those passionate about computer science, mathematics, or competitive programming, this course offers an exhilarating journey through linear and non-linear data structures and algorithms pivotal to success in coding competitions."
-videoIntro: "https://open.spotify.com/track/6A8NfypDHuwiLWbo4a1yca?si=ec380e6b7bf84234"
+videoIntro: "https://www.youtube.com/watch?v=apN_UAdcDcI&pp=ygULaW50cm8gdXNhY28%3D"
 learningGoals:
 - "Master fundamental data structures such as arrays, lists, stacks, queues, and trees."
 - "Develop problem-solving skills applicable to competitive programming."

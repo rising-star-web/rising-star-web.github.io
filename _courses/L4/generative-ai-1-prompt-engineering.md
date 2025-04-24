@@ -11,7 +11,7 @@ pathway: "Summer Camp"
 skillLevel: "Intermediate - Advanced"
 shortDescription: "Unlock Creativity and Efficiency: Master Generative AI to Revolutionize Your World"
 description: "Embark on an exciting journey with our generative AI camp! This course will serve as your gateway into the revolutionary world of artificial intelligence. In this innovative course, you'll delve deep into the mechanics of cutting-edge AI models like ChatGPT and DALLE, unlocking their potential to transform your everyday experience. Discover the art of prompting and explore the vibrant possibilities of generative AI in optimizing creativity and efficiency. Gain an in-depth understanding of AI dynamics, preparing you to be at the forefront of this ever-evolving tech frontier, where imagination meets automation, and the future is crafted by intelligent design."
-videoIntro: "N/A"
+videoIntro: "https://www.youtube.com/watch?v=OGmDr8TLtTo"
 learningGoals:
 - "Understand the fundamentals of generative AI and how to effectively implement it in various applications."
 - "Develop prompt engineering skills to optimize interactions with generative AI platforms like ChatGPT and DALLE."
