@@ -1,0 +1,298 @@
+---
+layout: default
+---
+
+<!-- example: http://127.0.0.1:4000/mothers-day?video=QV5pglqKDGQ -->
+<div class="content-wrapper">
+    <!-- Username Input Section -->
+    <div
+        id="usernameSection"
+        class="wrapper pt-8 pt-md-12"
+        style="background: linear-gradient(180deg, #fff8f8 0%, #ffffff 100%)"
+    >
+        <div class="container pb-19 pb-md-20 text-center">
+            <div class="row">
+                <div class="col-md-6 col-xl-5 mx-auto">
+                    <div
+                        class="card"
+                        style="
+                            border-radius: 15px;
+                            box-shadow: 0 0 40px rgba(255, 107, 107, 0.1);
+                        "
+                    >
+                        <div class="card-body p-5">
+                            <div class="mb-4">
+                                <i
+                                    class="uil uil-heart-alt"
+                                    style="font-size: 3rem; color: #ff6b6b"
+                                ></i>
+                            </div>
+                            <h2 class="mb-4">Enter Username</h2>
+                            <div class="form-group">
+                                <input
+                                    type="text"
+                                    id="usernameInput"
+                                    class="form-control mb-3"
+                                    placeholder="Username"
+                                    style="border-radius: 8px; padding: 12px"
+                                />
+                                <button
+                                    onclick="fetchUserData()"
+                                    class="btn"
+                                    style="
+                                        background: #ffe4e1;
+                                        padding: 1rem 2rem;
+                                        border-radius: 12px;
+                                        font-family: 'Arial', sans-serif;
+                                        border: none;
+                                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                                        color: #8b4513;
+                                        font-weight: 500;
+                                        transition: all 0.3s ease;
+                                        cursor: pointer;
+                                    "
+                                    onmouseover="this.style.background='#FFD1C9'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.15)'"
+                                    onmouseout="this.style.background='#FFE4E1'; this.style.transform='none'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.1)'"
+                                >
+                                    View Message
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Section (Initially Hidden) -->
+    <section
+        id="mainContent"
+        class="wrapper pt-8 pt-md-12"
+        style="
+            display: none;
+            background: linear-gradient(180deg, #fff8f8 0%, #ffffff 100%);
+        "
+    >
+        <div class="container pb-19 pb-md-20 text-center">
+            <!-- Decorative elements -->
+            <div
+                class="position-absolute"
+                style="top: 0; left: 5%; opacity: 0.1"
+            >
+                <i
+                    class="uil uil-heart"
+                    style="font-size: 4rem; color: #ff6b6b"
+                ></i>
+            </div>
+            <div
+                class="position-absolute"
+                style="top: 20%; right: 8%; opacity: 0.1"
+            >
+                <i
+                    class="uil uil-flower"
+                    style="font-size: 3rem; color: #ff6b6b"
+                ></i>
+            </div>
+            <div
+                class="position-absolute"
+                style="top: 30%; left: 10%; opacity: 0.1"
+            >
+                <i
+                    class="uil uil-heart"
+                    style="font-size: 3rem; color: #ff6b6b"
+                ></i>
+            </div>
+
+            <div class="row">
+                <div class="col-md-10 col-xl-8 mx-auto">
+                    <div class="post-header">
+                        <div class="mb-4">
+                            <i
+                                class="uil uil-heart-alt"
+                                style="font-size: 3rem; color: #ff6b6b"
+                            ></i>
+                        </div>
+                        <h1 class="display-1 mb-4" id="messageTitle"></h1>
+                        <!-- <p class="lead mb-5" style="color: #7c7c7c">
+                            A special tribute to celebrate the love and
+                            dedication of mothers everywhere
+                        </p> -->
+                        <ul
+                            class="post-meta"
+                            style="
+                                background: rgba(255, 107, 107, 0.1);
+                                padding: 1rem;
+                                border-radius: 10px;
+                            "
+                        >
+                            <li class="post-date">
+                                <i class="uil uil-calendar-alt"></i
+                                ><span id="createdDate"></span>
+                            </li>
+                            <li class="post-author">
+                                <i class="uil uil-user"></i
+                                ><span id="studentName"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section
+        id="videoSection"
+        class="wrapper"
+        style="display: none"
+    >
+        <div class="container pb-14 pb-md-16">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="blog single mt-n17">
+                        <div
+                            class="card"
+                            style="
+                                border-radius: 15px;
+                                box-shadow: 0 0 40px rgba(255, 107, 107, 0.1);
+                            "
+                        >
+                            <div
+                                style="
+                                    position: relative;
+                                    padding-bottom: 56.25%;
+                                    height: 0;
+                                    overflow: hidden;
+                                    border-radius: 15px 15px 0 0;
+                                "
+                            >
+                                <iframe
+                                    id="youtubeEmbed"
+                                    style="
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        border: 0;
+                                    "
+                                    allowfullscreen
+                                >
+                                </iframe>
+                            </div>
+                            <div class="card-body p-5">
+                                <div class="text-center">
+                                    <h3 class="h2 mb-4">
+                                        <span id="messageTitle"></span>
+                                    </h3>
+                                    <p
+                                        id="studentMessage"
+                                        class="text-muted"
+                                    ></p>
+                                    <button
+                                        class="mt-4 mb-3"
+                                        style="
+                                            background: #ffe4e1;
+                                            padding: 1rem 2rem;
+                                            border-radius: 12px;
+                                            font-family: 'Arial', sans-serif;
+                                            border: none;
+                                            box-shadow: 0 2px 4px
+                                                rgba(0, 0, 0, 0.1);
+                                            color: #8b4513;
+                                            font-weight: 500;
+                                            transition: all 0.3s ease;
+                                            cursor: pointer;
+                                        "
+                                        onmouseover="this.style.background='#FFD1C9'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.15)'"
+                                        onmouseout="this.style.background='#FFE4E1'; this.style.transform='none'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.1)'"
+                                        onclick="copyToClipboard()"
+                                    >
+                                        Share this with your friends and family!
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const username = urlParams.get("username");
+
+    if (username) {
+        fetchUserData(username);
+    }
+
+    async function fetchUserData(u) {
+        let username;
+        if (!u) {
+            username = document.getElementById("usernameInput").value;
+        } else {
+            username = u;
+        }
+        if (!username) {
+            alert("Please enter a username");
+            return;
+        }
+
+        try {
+            const response = await fetch(
+                `http://localhost:3000/api/MothersDayProjects/getStudentProjectsByUserName?username=${encodeURIComponent(
+                    username
+                )}`
+            );
+            if (!response.ok) {
+                throw new Error("Failed to fetch data");
+            }
+            const res = await response.json();
+            const data = res[0];
+
+            document.getElementById(
+                "youtubeEmbed"
+            ).src = `https://www.youtube.com/embed/${data.videoId}`;
+            document.getElementById("studentName").textContent = username;
+            // document.getElementById(
+            //     "messageTitle"
+            // ).textContent = `${username}'s Mother's Day Message`;
+            document.getElementById("messageTitle").textContent =
+                "Mom, Happy Mother’s day! from " + username;
+            document.getElementById("studentMessage").textContent =
+                data.message;
+
+            const dateValue =
+                data.createdAt ||
+                data.created_at ||
+                data.createdDate ||
+                data.created ||
+                new Date().toISOString();
+
+            document.getElementById("createdDate").textContent = new Date(
+                dateValue
+            ).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+            });
+
+            document.getElementById("usernameSection").style.display = "none";
+            document.getElementById("videoSection").style.display = "block";
+            document.getElementById("mainContent").style.display = "block";
+        } catch (error) {
+            alert("Error fetching data. Please try again.");
+            console.error("Error:", error);
+        }
+    }
+
+    function copyToClipboard() {
+        const text =
+            window.location.href +
+            "?username=" +
+            document.getElementById("usernameInput").value;
+        navigator.clipboard.writeText(text);
+        alert("Copied to clipboard");
+    }
+</script>
