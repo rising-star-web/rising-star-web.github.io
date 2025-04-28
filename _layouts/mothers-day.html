@@ -4,69 +4,36 @@ layout: default
 
 <!-- example: http://127.0.0.1:4000/mothers-day?video=QV5pglqKDGQ -->
 <div class="content-wrapper">
-    <!-- Username Input Section -->
-    <div
-        id="usernameSection"
-        class="wrapper pt-8 pt-md-12"
-        style="background: linear-gradient(180deg, #fff8f8 0%, #ffffff 100%)"
-    >
-        <div class="container pb-19 pb-md-20 text-center">
-            <div class="row">
-                <div class="col-md-6 col-xl-5 mx-auto">
-                    <div
-                        class="card"
-                        style="
-                            border-radius: 15px;
-                            box-shadow: 0 0 40px rgba(255, 107, 107, 0.1);
-                        "
-                    >
-                        <div class="card-body p-5">
-                            <div class="mb-4">
-                                <i
-                                    class="uil uil-heart-alt"
-                                    style="font-size: 3rem; color: #ff6b6b"
-                                ></i>
-                            </div>
-                            <h2 class="mb-4">Enter Username</h2>
-                            <div class="form-group">
-                                <input
-                                    type="text"
-                                    id="usernameInput"
-                                    class="form-control mb-3"
-                                    placeholder="Username"
-                                    style="border-radius: 8px; padding: 12px"
-                                />
-                                <button
-                                    onclick="fetchUserData()"
-                                    class="btn"
-                                    style="
-                                        background: #ffe4e1;
-                                        padding: 1rem 2rem;
-                                        border-radius: 12px;
-                                        font-family: 'Arial', sans-serif;
-                                        border: none;
-                                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                                        color: #8b4513;
-                                        font-weight: 500;
-                                        transition: all 0.3s ease;
-                                        cursor: pointer;
-                                    "
-                                    onmouseover="this.style.background='#FFD1C9'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.15)'"
-                                    onmouseout="this.style.background='#FFE4E1'; this.style.transform='none'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.1)'"
-                                >
-                                    View Message
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="envelope-wrapper">
         <div class="lid one"></div>
         <div class="lid two"></div>
         <div class="envelope"></div>
+        <div id="usernameSection" class="stamp">
+            <div
+                class="stamp-heart"
+                style="
+                    font-size: 2.2rem;
+                    margin-bottom: 0.2em;
+                    color: #fff;
+                    text-shadow: 0 2px 8px #fb7171;
+                "
+            >
+                <i class="uil uil-heart-alt"></i>
+            </div>
+            <h2 class="stamp-title">Enter Username</h2>
+            <input
+                type="text"
+                id="usernameInput"
+                class="stamp-input"
+                placeholder="Username"
+            />
+            <button
+                onclick="fetchUserData()"
+                class="stamp-btn"
+            >
+                View Message
+            </button>
+        </div>
         <div class="letter">
             <!-- Main Content Section (Initially Hidden) -->
             <section
@@ -232,19 +199,105 @@ layout: default
 </div>
 <style>
     /* reference url: https://codepen.io/Coding-Star/pen/WNpbvwB */
+    .stamp {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 90%;
+        width: auto;
+        aspect-ratio: 1 / 1;
+        background: radial-gradient(
+            circle at 60% 40%,
+            #fb7171 80%,
+            #ffbdbd 100%
+        );
+        border-radius: 50%;
+        border: 4px dashed #fff8f8;
+        box-shadow: 0 0 40px rgba(255, 107, 107, 0.15),
+            0 8px 32px 0 rgba(0, 0, 0, 0.08);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        box-sizing: border-box;
+        padding: 1.5em 1em;
+        overflow: hidden;
+        color: #fff;
+        text-align: center;
+    }
+    .stamp-heart {
+        margin-bottom: 0.2em;
+    }
+    .stamp-title {
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 1em;
+        color: #fff;
+        letter-spacing: 0.02em;
+        text-shadow: 0 2px 8px #fb7171;
+    }
+    .stamp-input {
+        width: 80%;
+        max-width: 180px;
+        min-width: 0;
+        margin-bottom: 1em;
+        font-size: 1.1em;
+        box-sizing: border-box;
+        text-align: center;
+        border-radius: 8px;
+        padding: 0.7em 1em;
+        border: 2px solid #fff8f8;
+        background: #fff8f8;
+        font-family: "Dancing Script", "Comic Sans MS", cursive, sans-serif;
+        color: #fb7171;
+        box-shadow: 0 2px 8px rgba(255, 107, 107, 0.08);
+        outline: none;
+        transition: border 0.2s;
+    }
+    .stamp-input:focus {
+        border: 2px solid #ff6b6b;
+    }
+    .stamp-btn {
+        width: 80%;
+        max-width: 180px;
+        min-width: 0;
+        font-size: 1.1em;
+        padding: 0.7em 1em;
+        box-sizing: border-box;
+        border-radius: 10px;
+        background: #ffe4e1;
+        color: #8b4513;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-weight: 600;
+        border: none;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+        cursor: pointer;
+        transition: all 0.3s;
+        margin-bottom: 0.2em;
+    }
+    .stamp-btn:hover,
+    .stamp-btn:focus {
+        background: #ffd1c9;
+        color: #8b4513;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
 
     .envelope-wrapper {
-        height: 25vw;
-        width: 50%;
+        height: 35vw;
+        width: 70%;
         background-color: transparent;
         position: relative;
         display: flex;
         justify-content: center;
         z-index: 0;
         margin: 2rem auto;
-        margin-top: 30vw;
+        margin-top: 20vw;
         margin-bottom: 20vw;
         transition: margin 0.5s ease-in-out;
+        
     }
 
     .lid {
@@ -253,16 +306,16 @@ layout: default
         width: 0;
         top: 0;
         left: 0;
-        border-right: 25vw solid transparent;
-        border-bottom: 12.5vw solid transparent;
-        border-left: 25vw solid transparent;
+        border-right: 35vw solid transparent;
+        border-bottom: 17.5vw solid transparent;
+        border-left: 35vw solid transparent;
         transform-origin: top;
         transition: transform 0.4s ease-in-out;
     }
 
     /* Lid when closed */
     .lid.one {
-        border-top: 12.5vw solid #ffe4e1;
+        border-top: 17.5vw solid #ffe4e1;
         transform: rotateX(0deg);
         z-index: 3;
         transition-delay: 0.4s;
@@ -270,7 +323,7 @@ layout: default
 
     /* Lid when opened */
     .lid.two {
-        border-top: 12.5vw solid #ffd1c9;
+        border-top: 17.5vw solid #ffd1c9;
         transform: rotateX(90deg);
         z-index: 1;
         transition-delay: 0.2s;
@@ -282,10 +335,10 @@ layout: default
         width: 0;
         top: 0;
         left: 0;
-        border-top: 12.5vw solid transparent;
-        border-right: 25vw solid #ffe4e1;
-        border-bottom: 12.5vw solid #ffe4e1;
-        border-left: 25vw solid #ffe4e1;
+        border-top: 17.5vw solid transparent;
+        border-right: 35vw solid #ffe4e1;
+        border-bottom: 17.5vw solid #ffe4e1;
+        border-left: 35vw solid #ffe4e1;
         z-index: 3;
         filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
     }
@@ -293,8 +346,8 @@ layout: default
     .letter {
         position: absolute;
         top: 1vw;
-        width: calc(50vw - 30px);
-        height: 23vw;
+        width: calc(70vw - 30px);
+        height: 33vw;
         background-color: white;
         border-radius: 15px;
         z-index: 2;
@@ -304,23 +357,38 @@ layout: default
         overflow-y: scroll;
     }
 
-    .envelope-wrapper:hover .lid.one {
+    .envelope-wrapper.can-open:hover .lid.one {
         transform: rotateX(90deg);
         transition-delay: 0s;
     }
 
-    .envelope-wrapper:hover .lid.two {
+    .envelope-wrapper.can-open:hover .lid.two {
         transform: rotateX(180deg);
         transition-delay: 0.2s;
     }
 
-    .envelope-wrapper:hover {
+    .envelope-wrapper.can-open:hover {
         margin-top: 60vw;
     }
 
-    .envelope-wrapper:hover .letter {
+    .envelope-wrapper.can-open:hover .letter {
         transform: translateY(-50vw);
         height: 50vw;
+        transition-delay: 0.5s;
+    }
+
+    @keyframes shake {
+        0% { transform: rotate(0deg); }
+        20% { transform: rotate(4deg); }
+        40% { transform: rotate(-4deg); }
+        60% { transform: rotate(4deg); }
+        80% { transform: rotate(-4deg); }
+        100% { transform: rotate(0deg); }
+    }
+
+    .envelope-wrapper:not(.can-open) {
+        animation: shake 0.5s;
+        animation-iteration-count: 2;
     }
 </style>
 <script>
@@ -359,9 +427,6 @@ layout: default
                 "youtubeEmbed"
             ).src = `https://www.youtube.com/embed/${data.videoId}`;
             document.getElementById("studentName").textContent = username;
-            // document.getElementById(
-            //     "messageTitle"
-            // ).textContent = `${username}'s Mother's Day Message`;
             document.getElementById("messageTitle").textContent =
                 "Mom, Happy Mother's day! from " + username;
             document.getElementById("studentMessage").textContent =
@@ -383,8 +448,12 @@ layout: default
             });
 
             document.getElementById("usernameSection").style.display = "none";
-            document.getElementById("videoSection").style.display = "block";
             document.getElementById("mainContent").style.display = "flex";
+            document.getElementById("videoSection").style.display = "block";
+            // Enable envelope opening on hover
+            document
+                .querySelector(".envelope-wrapper")
+                .classList.add("can-open");
         } catch (error) {
             alert("Error fetching data. Please try again.");
             console.error("Error:", error);
