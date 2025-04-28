@@ -4,193 +4,210 @@ layout: default
 
 <!-- example: http://127.0.0.1:4000/mothers-day?video=QV5pglqKDGQ -->
 <div class="content-wrapper">
-    <div class="envelope-wrapper">
-        <div class="lid one"></div>
-        <div class="lid two"></div>
-        <div class="envelope"></div>
-        <div id="usernameSection" class="stamp" style="display: none">
-            <div
-                class="stamp-heart"
-                style="
-                    font-size: 2.2rem;
-                    margin-bottom: 0.2em;
-                    color: #fff;
-                    text-shadow: 0 2px 8px #fb7171;
-                "
-            >
-                <i class="uil uil-heart-alt"></i>
+    <div class="envelope-shake-wrapper">
+        <div class="envelope-wrapper">
+            <div class="lid one"></div>
+            <div class="lid two"></div>
+            <div class="envelope"></div>
+            <div id="usernameSection" class="stamp" style="display: none">
+                <div
+                    class="stamp-heart"
+                    style="
+                        font-size: 2.2rem;
+                        margin-bottom: 0.2em;
+                        color: #fff;
+                        text-shadow: 0 2px 8px #fb7171;
+                    "
+                >
+                    <i class="uil uil-heart-alt"></i>
+                </div>
+                <h2 class="stamp-title">Enter Username</h2>
+                <input
+                    type="text"
+                    id="usernameInput"
+                    class="stamp-input"
+                    placeholder="Username"
+                />
+                <button onclick="fetchUserData()" class="stamp-btn">
+                    View Message
+                </button>
             </div>
-            <h2 class="stamp-title">Enter Username</h2>
-            <input
-                type="text"
-                id="usernameInput"
-                class="stamp-input"
-                placeholder="Username"
-            />
-            <button onclick="fetchUserData()" class="stamp-btn">
-                View Message
-            </button>
-        </div>
-        <div class="letter">
-            <!-- Main Content Section (Initially Hidden) -->
-            <section
-                id="mainContent"
-                class="wrapper pt-8 pt-md-12"
-                style="
-                    display: none;
-                    background: linear-gradient(
-                        180deg,
-                        #fff8f8 0%,
-                        #ffffff 100%
-                    );
-                "
-            >
-                <div class="container pb-19 pb-md-20 text-center">
-                    <!-- Decorative elements -->
-                    <div
-                        class="position-absolute"
-                        style="top: 0; left: 5%; opacity: 0.1"
-                    >
-                        <i
-                            class="uil uil-heart"
-                            style="font-size: 4rem; color: #ff6b6b"
-                        ></i>
-                    </div>
-                    <div
-                        class="position-absolute"
-                        style="top: 20%; right: 8%; opacity: 0.1"
-                    >
-                        <i
-                            class="uil uil-flower"
-                            style="font-size: 3rem; color: #ff6b6b"
-                        ></i>
-                    </div>
-                    <div
-                        class="position-absolute"
-                        style="top: 30%; left: 10%; opacity: 0.1"
-                    >
-                        <i
-                            class="uil uil-heart"
-                            style="font-size: 3rem; color: #ff6b6b"
-                        ></i>
-                    </div>
+            <div class="letter">
+                <!-- Main Content Section (Initially Hidden) -->
+                <section
+                    id="mainContent"
+                    class="wrapper pt-8 pt-md-12"
+                    style="
+                        display: none;
+                        background: linear-gradient(
+                            180deg,
+                            #fff8f8 0%,
+                            #ffffff 100%
+                        );
+                    "
+                >
+                    <div class="container pb-19 pb-md-20 text-center">
+                        <!-- Decorative elements -->
+                        <div
+                            class="position-absolute"
+                            style="top: 0; left: 5%; opacity: 0.1"
+                        >
+                            <i
+                                class="uil uil-heart"
+                                style="font-size: 4rem; color: #ff6b6b"
+                            ></i>
+                        </div>
+                        <div
+                            class="position-absolute"
+                            style="top: 20%; right: 8%; opacity: 0.1"
+                        >
+                            <i
+                                class="uil uil-flower"
+                                style="font-size: 3rem; color: #ff6b6b"
+                            ></i>
+                        </div>
+                        <div
+                            class="position-absolute"
+                            style="top: 30%; left: 10%; opacity: 0.1"
+                        >
+                            <i
+                                class="uil uil-heart"
+                                style="font-size: 3rem; color: #ff6b6b"
+                            ></i>
+                        </div>
 
-                    <div class="row">
-                        <div class="col-md-10 col-xl-8 mx-auto">
-                            <div class="post-header">
-                                <div class="mb-4">
-                                    <i
-                                        class="uil uil-heart-alt"
-                                        style="font-size: 3rem; color: #ff6b6b"
-                                    ></i>
+                        <div class="row">
+                            <div class="col-md-10 col-xl-8 mx-auto">
+                                <div class="post-header">
+                                    <div class="mb-4">
+                                        <i
+                                            class="uil uil-heart-alt"
+                                            style="
+                                                font-size: 3rem;
+                                                color: #ff6b6b;
+                                            "
+                                        ></i>
+                                    </div>
+                                    <h1
+                                        class="display-1 mb-4"
+                                        id="messageTitle"
+                                    ></h1>
+                                    <!-- <p class="lead mb-5" style="color: #7c7c7c">
+                                    A special tribute to celebrate the love and
+                                    dedication of mothers everywhere
+                                </p> -->
+                                    <ul
+                                        class="post-meta"
+                                        style="
+                                            background: rgba(
+                                                255,
+                                                107,
+                                                107,
+                                                0.1
+                                            );
+                                            padding: 1rem;
+                                            border-radius: 10px;
+                                        "
+                                    >
+                                        <li class="post-date">
+                                            <i class="uil uil-calendar-alt"></i
+                                            ><span id="createdDate"></span>
+                                        </li>
+                                        <li class="post-author">
+                                            <i class="uil uil-user"></i
+                                            ><span id="studentName"></span>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <h1
-                                    class="display-1 mb-4"
-                                    id="messageTitle"
-                                ></h1>
-                                <!-- <p class="lead mb-5" style="color: #7c7c7c">
-                                A special tribute to celebrate the love and
-                                dedication of mothers everywhere
-                            </p> -->
-                                <ul
-                                    class="post-meta"
-                                    style="
-                                        background: rgba(255, 107, 107, 0.1);
-                                        padding: 1rem;
-                                        border-radius: 10px;
-                                    "
-                                >
-                                    <li class="post-date">
-                                        <i class="uil uil-calendar-alt"></i
-                                        ><span id="createdDate"></span>
-                                    </li>
-                                    <li class="post-author">
-                                        <i class="uil uil-user"></i
-                                        ><span id="studentName"></span>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section id="videoSection" class="wrapper" style="display: none">
-                <div class="container pb-14 pb-md-16">
-                    <div class="row">
-                        <div class="col-lg-10 mx-auto">
-                            <div class="blog single mt-n17">
-                                <div
-                                    class="card"
-                                    style="
-                                        border-radius: 15px;
-                                        box-shadow: 0 0 40px
-                                            rgba(255, 107, 107, 0.1);
-                                    "
-                                >
+                <section
+                    id="videoSection"
+                    class="wrapper"
+                    style="display: none"
+                >
+                    <div class="container pb-14 pb-md-16">
+                        <div class="row">
+                            <div class="col-lg-10 mx-auto">
+                                <div class="blog single mt-n17">
                                     <div
+                                        class="card"
                                         style="
-                                            position: relative;
-                                            padding-bottom: 56.25%;
-                                            height: 0;
-                                            overflow: hidden;
-                                            border-radius: 15px 15px 0 0;
+                                            border-radius: 15px;
+                                            box-shadow: 0 0 40px
+                                                rgba(255, 107, 107, 0.1);
                                         "
                                     >
-                                        <iframe
-                                            id="youtubeEmbed"
+                                        <div
                                             style="
-                                                position: absolute;
-                                                top: 0;
-                                                left: 0;
-                                                width: 100%;
-                                                height: 100%;
-                                                border: 0;
+                                                position: relative;
+                                                padding-bottom: 56.25%;
+                                                height: 0;
+                                                overflow: hidden;
+                                                border-radius: 15px 15px 0 0;
                                             "
-                                            allowfullscreen
                                         >
-                                        </iframe>
-                                    </div>
-                                    <div class="card-body p-5">
-                                        <div class="text-center">
-                                            <h3 class="h2 mb-4">
-                                                <span id="messageTitle"></span>
-                                            </h3>
-                                            <p
-                                                id="studentMessage"
-                                                class="text-muted"
-                                            ></p>
-                                            <button
-                                                class="mt-4 mb-3"
+                                            <iframe
+                                                id="youtubeEmbed"
                                                 style="
-                                                    background: #ffe4e1;
-                                                    padding: 1rem 2rem;
-                                                    border-radius: 12px;
-                                                    font-family: 'Arial',
-                                                        sans-serif;
-                                                    border: none;
-                                                    box-shadow: 0 2px 4px
-                                                        rgba(0, 0, 0, 0.1);
-                                                    color: #8b4513;
-                                                    font-weight: 500;
-                                                    transition: all 0.3s ease;
-                                                    cursor: pointer;
+                                                    position: absolute;
+                                                    top: 0;
+                                                    left: 0;
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    border: 0;
                                                 "
-                                                onmouseover="this.style.background='#FFD1C9'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.15)'"
-                                                onmouseout="this.style.background='#FFE4E1'; this.style.transform='none'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.1)'"
-                                                onclick="copyToClipboard()"
+                                                allowfullscreen
                                             >
-                                                Share this with your friends and
-                                                family!
-                                            </button>
+                                            </iframe>
+                                        </div>
+                                        <div class="card-body p-5">
+                                            <div class="text-center">
+                                                <h3 class="h2 mb-4">
+                                                    <span
+                                                        id="messageTitle"
+                                                    ></span>
+                                                </h3>
+                                                <p
+                                                    id="studentMessage"
+                                                    class="text-muted"
+                                                ></p>
+                                                <button
+                                                    class="mt-4 mb-3"
+                                                    style="
+                                                        background: #ffe4e1;
+                                                        padding: 1rem 2rem;
+                                                        border-radius: 12px;
+                                                        font-family: 'Arial',
+                                                            sans-serif;
+                                                        border: none;
+                                                        box-shadow: 0 2px 4px
+                                                            rgba(0, 0, 0, 0.1);
+                                                        color: #8b4513;
+                                                        font-weight: 500;
+                                                        transition: all 0.3s
+                                                            ease;
+                                                        cursor: pointer;
+                                                    "
+                                                    onmouseover="this.style.background='#FFD1C9'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.15)'"
+                                                    onmouseout="this.style.background='#FFE4E1'; this.style.transform='none'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.1)'"
+                                                    onclick="copyToClipboard()"
+                                                >
+                                                    Share this with your friends
+                                                    and family!
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
     </div>
 </div>
@@ -224,9 +241,11 @@ layout: default
         color: #fff;
         text-align: center;
     }
+
     .stamp-heart {
         margin-bottom: 0.2em;
     }
+
     .stamp-title {
         font-family: "Montserrat", Arial, sans-serif;
         font-size: 1.3rem;
@@ -236,6 +255,7 @@ layout: default
         letter-spacing: 0.02em;
         text-shadow: 0 2px 8px #fb7171;
     }
+
     .stamp-input {
         width: 80%;
         max-width: 180px;
@@ -254,9 +274,11 @@ layout: default
         outline: none;
         transition: border 0.2s;
     }
+
     .stamp-input:focus {
         border: 2px solid #ff6b6b;
     }
+
     .stamp-btn {
         width: 80%;
         max-width: 180px;
@@ -275,6 +297,7 @@ layout: default
         transition: all 0.3s;
         margin-bottom: 0.2em;
     }
+
     .stamp-btn:hover,
     .stamp-btn:focus {
         background: #ffd1c9;
@@ -342,7 +365,7 @@ layout: default
     .letter {
         position: absolute;
         top: 1vw;
-        width: calc(70vw - 30px);
+        width: calc(70vw - 10px);
         height: 33vw;
         background-color: white;
         border-radius: 15px;
@@ -351,6 +374,7 @@ layout: default
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         overflow: visible;
         overflow-y: scroll;
+        margin-left: 1.5vw;
     }
 
     .envelope-wrapper.can-open:hover .lid.one {
@@ -369,8 +393,11 @@ layout: default
 
     .envelope-wrapper.can-open:hover .letter {
         transform: translateY(-50vw);
-        height: 50vw;
+        height: calc(
+            50vw + 33vw
+        ); /* 50vw is the height of the envelope, 33vw is the height of the letter, not 35vw to prevent overflow from the bottom of the envelope*/
         transition-delay: 0.5s;
+        padding-bottom: 23vw;
     }
 
     @keyframes shake {
@@ -394,16 +421,59 @@ layout: default
         }
     }
 
-    .envelope-wrapper:not(.can-open) {
+    .envelope-shake-wrapper.shake {
         animation: shake 0.5s;
         animation-iteration-count: 2;
+    }
+
+    @media (max-width: 1024px) {
+        .envelope-wrapper {
+            width: 80%;
+            height: 40vw;
+        }
+
+        .lid {
+            border-right: 40vw solid transparent;
+            border-bottom: 20vw solid transparent;
+            border-left: 40vw solid transparent;
+        }
+
+        .lid.one {
+            border-top: 20vw solid #ffe4e1;
+        }
+
+        .lid.two {
+            border-top: 20vw solid #ffd1c9;
+        }
+
+        .envelope {
+            border-top: 20vw solid transparent;
+            border-right: 40vw solid #ffe4e1;
+            border-bottom: 20vw solid #ffe4e1;
+            border-left: 40vw solid #ffe4e1;
+        }
+
+        .letter {
+            width: calc(80vw - 10px);
+            height: calc(40vw - 10px);
+        }
+
+        .envelope-wrapper.can-open:hover {
+            margin-top: 60vw;
+        }
+
+        .envelope-wrapper.can-open:hover .letter {
+            transform: translateY(-50vw);
+            height: calc(50vw + 37vw);
+            transition-delay: 0.5s;
+            padding-bottom: 30vw;
+        }
     }
 
     @media (max-width: 768px) {
         .envelope-wrapper {
             width: 90%;
             height: 50vw;
-            padding-bottom: 10px;
         }
 
         .lid {
@@ -438,9 +508,9 @@ layout: default
 
         .envelope-wrapper.can-open:hover .letter {
             transform: translateY(-50vh);
-            height: calc(50vh + 45vw);
+            height: calc(50vh + 43vw);
             transition-delay: 0.5s;
-            padding-bottom: 10px;
+            padding-bottom: 23vw;
         }
     }
 </style>
@@ -450,6 +520,8 @@ layout: default
 
     if (username) {
         fetchUserData(username);
+    } else {
+        document.getElementById("usernameSection").style.display = "block";
     }
 
     async function fetchUserData(u) {
@@ -503,13 +575,12 @@ layout: default
             // document.getElementById("usernameSection").style.display = "none";
             document.getElementById("mainContent").style.display = "flex";
             document.getElementById("videoSection").style.display = "block";
+            document.getElementById("usernameSection").style.display = "none";
             // Enable envelope opening on hover
             document
                 .querySelector(".envelope-wrapper")
                 .classList.add("can-open");
         } catch (error) {
-            document.getElementById("usernameSection").style.display = "block";
-
             alert("Error fetching data. Please try again.");
             console.error("Error:", error);
         }
@@ -523,4 +594,27 @@ layout: default
         navigator.clipboard.writeText(text);
         alert("Copied to clipboard");
     }
+
+    function triggerEnvelopeShake() {
+        const shakeWrapper = document.querySelector(".envelope-shake-wrapper");
+        const env = document.querySelector(".envelope-wrapper");
+        if (!env.classList.contains("can-open")) {
+            shakeWrapper.classList.add("shake");
+            setTimeout(() => {
+                shakeWrapper.classList.remove("shake");
+            }, 1000); // slightly longer than animation
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const env = document.querySelector(".envelope-wrapper");
+        // Only trigger shake on desktop (width > 768px)
+        if (window.innerWidth > 768) {
+            env.addEventListener("mouseenter", function (e) {
+                if (!env.classList.contains("can-open")) {
+                    triggerEnvelopeShake();
+                }
+            });
+        }
+    });
 </script>
