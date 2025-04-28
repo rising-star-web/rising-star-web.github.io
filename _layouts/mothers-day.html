@@ -8,7 +8,7 @@ layout: default
         <div class="lid one"></div>
         <div class="lid two"></div>
         <div class="envelope"></div>
-        <div id="usernameSection" class="stamp">
+        <div id="usernameSection" class="stamp" style="display: none">
             <div
                 class="stamp-heart"
                 style="
@@ -27,10 +27,7 @@ layout: default
                 class="stamp-input"
                 placeholder="Username"
             />
-            <button
-                onclick="fetchUserData()"
-                class="stamp-btn"
-            >
+            <button onclick="fetchUserData()" class="stamp-btn">
                 View Message
             </button>
         </div>
@@ -297,7 +294,6 @@ layout: default
         margin-top: 20vw;
         margin-bottom: 20vw;
         transition: margin 0.5s ease-in-out;
-        
     }
 
     .lid {
@@ -378,17 +374,74 @@ layout: default
     }
 
     @keyframes shake {
-        0% { transform: rotate(0deg); }
-        20% { transform: rotate(4deg); }
-        40% { transform: rotate(-4deg); }
-        60% { transform: rotate(4deg); }
-        80% { transform: rotate(-4deg); }
-        100% { transform: rotate(0deg); }
+        0% {
+            transform: rotate(0deg);
+        }
+        20% {
+            transform: rotate(4deg);
+        }
+        40% {
+            transform: rotate(-4deg);
+        }
+        60% {
+            transform: rotate(4deg);
+        }
+        80% {
+            transform: rotate(-4deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
     }
 
     .envelope-wrapper:not(.can-open) {
         animation: shake 0.5s;
         animation-iteration-count: 2;
+    }
+
+    @media (max-width: 768px) {
+        .envelope-wrapper {
+            width: 90%;
+            height: 50vw;
+            padding-bottom: 10px;
+        }
+
+        .lid {
+            border-right: 45vw solid transparent;
+            border-bottom: 25vw solid transparent;
+            border-left: 45vw solid transparent;
+        }
+
+        .lid.one {
+            border-top: 25vw solid #ffe4e1;
+        }
+
+        .lid.two {
+            border-top: 25vw solid #ffd1c9;
+        }
+
+        .envelope {
+            border-top: 25vw solid transparent;
+            border-right: 45vw solid #ffe4e1;
+            border-bottom: 25vw solid #ffe4e1;
+            border-left: 45vw solid #ffe4e1;
+        }
+
+        .letter {
+            width: calc(90vw - 30px);
+            height: calc(50vw - 10px);
+        }
+
+        .envelope-wrapper.can-open:hover {
+            margin-top: 60vh;
+        }
+
+        .envelope-wrapper.can-open:hover .letter {
+            transform: translateY(-50vh);
+            height: calc(50vh + 45vw);
+            transition-delay: 0.5s;
+            padding-bottom: 10px;
+        }
     }
 </style>
 <script>
@@ -447,7 +500,7 @@ layout: default
                 day: "numeric",
             });
 
-            document.getElementById("usernameSection").style.display = "none";
+            // document.getElementById("usernameSection").style.display = "none";
             document.getElementById("mainContent").style.display = "flex";
             document.getElementById("videoSection").style.display = "block";
             // Enable envelope opening on hover
@@ -455,6 +508,8 @@ layout: default
                 .querySelector(".envelope-wrapper")
                 .classList.add("can-open");
         } catch (error) {
+            document.getElementById("usernameSection").style.display = "block";
+
             alert("Error fetching data. Please try again.");
             console.error("Error:", error);
         }
