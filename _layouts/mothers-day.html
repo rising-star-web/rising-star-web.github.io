@@ -374,24 +374,24 @@ layout: default
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         overflow: visible;
         overflow-y: scroll;
-        margin-left: 1.5vw;
+        margin-left: 1vw;
     }
 
-    .envelope-wrapper.can-open:hover .lid.one {
+    .envelope-wrapper.can-open.open .lid.one {
         transform: rotateX(90deg);
         transition-delay: 0s;
     }
 
-    .envelope-wrapper.can-open:hover .lid.two {
+    .envelope-wrapper.can-open.open .lid.two {
         transform: rotateX(180deg);
         transition-delay: 0.2s;
     }
 
-    .envelope-wrapper.can-open:hover {
+    .envelope-wrapper.can-open.open {
         margin-top: 60vw;
     }
 
-    .envelope-wrapper.can-open:hover .letter {
+    .envelope-wrapper.can-open.open .letter {
         transform: translateY(-50vw);
         height: calc(
             50vw + 33vw
@@ -458,11 +458,11 @@ layout: default
             height: calc(40vw - 10px);
         }
 
-        .envelope-wrapper.can-open:hover {
+        .envelope-wrapper.can-open.open {
             margin-top: 60vw;
         }
 
-        .envelope-wrapper.can-open:hover .letter {
+        .envelope-wrapper.can-open.open .letter {
             transform: translateY(-50vw);
             height: calc(50vw + 37vw);
             transition-delay: 0.5s;
@@ -502,11 +502,11 @@ layout: default
             height: calc(50vw - 10px);
         }
 
-        .envelope-wrapper.can-open:hover {
+        .envelope-wrapper.can-open.open {
             margin-top: 60vh;
         }
 
-        .envelope-wrapper.can-open:hover .letter {
+        .envelope-wrapper.can-open.open .letter {
             transform: translateY(-50vh);
             height: calc(50vh + 43vw);
             transition-delay: 0.5s;
@@ -521,7 +521,7 @@ layout: default
     if (username) {
         fetchUserData(username);
     } else {
-        document.getElementById("usernameSection").style.display = "block";
+        document.getElementById("usernameSection").style.display = "flex";
     }
 
     async function fetchUserData(u) {
@@ -608,13 +608,12 @@ layout: default
 
     document.addEventListener("DOMContentLoaded", function () {
         const env = document.querySelector(".envelope-wrapper");
-        // Only trigger shake on desktop (width > 768px)
-        if (window.innerWidth > 768) {
-            env.addEventListener("mouseenter", function (e) {
-                if (!env.classList.contains("can-open")) {
-                    triggerEnvelopeShake();
-                }
-            });
-        }
+        env.addEventListener("click", function () {
+            if (env.classList.contains("can-open")) {
+                env.classList.toggle("open");
+            } else {
+                triggerEnvelopeShake();
+            }
+        });
     });
 </script>
