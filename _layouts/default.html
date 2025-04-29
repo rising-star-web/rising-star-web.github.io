@@ -6,6 +6,24 @@ layout: navbar
 
 {% seo %}
 
+<!-- Metadata for SEO and Social Sharing -->
+<title>{% if page.title %}{{ 'Coding Minds - ' | append: page.title }} | {% endif %}{{ site.title }}</title>
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta name="author" content="{{ site.author | default: 'Coding Minds' }}">
+<meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
+<!-- Open Graph / Facebook -->
+<meta property="og:title" content="{% if page.title %}{{ 'Coding Minds - ' | append: page.title }} | {% endif %}{{ site.title }}">
+<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ page.og_image | default: 'assets/img/og-image.png' }}">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{% if page.title %}{{ 'Coding Minds - ' | append: page.title }} | {% endif %}{{ site.title }}">
+<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta name="twitter:image" content="{{ page.og_image | default: 'assets/img/og-image.png' }}">
+<!-- End SEO -->
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">

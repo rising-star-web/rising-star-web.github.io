@@ -18,8 +18,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-name: ""
-title: null
+name: "Coding Minds"
+title: "Coding Minds - Coding Unlocks Endless Possibilities"
+keywords: "coding, programming, education, coding classes, coding courses, coding classes for kids, coding classes for adults, coding classes for teens, coding classes for beginners, coding classes for advanced, coding classes for professionals"
 domain: codingmind.com 
 url: "https://codingmind.com" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: ""
