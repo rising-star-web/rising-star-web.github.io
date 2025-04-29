@@ -68,7 +68,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const formData = {
                 firstName: document.getElementById("firstName").value,
                 lastName: document.getElementById("lastName").value,
-                grade: document.getElementById("grade").value
+                grade: document.getElementById("grade").value,
+                gradeLastUpdateAt: new Date().toISOString()
             };
 
             // PATCH request to update account information
