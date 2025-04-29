@@ -10,15 +10,7 @@ layout: default
             <div class="lid two"></div>
             <div class="envelope"></div>
             <div id="usernameSection" class="stamp" style="display: none">
-                <div
-                    class="stamp-heart"
-                    style="
-                        font-size: 2.2rem;
-                        margin-bottom: 0.2em;
-                        color: #fff;
-                        text-shadow: 0 2px 8px #fb7171;
-                    "
-                >
+                <div class="stamp-heart">
                     <i class="uil uil-heart-alt"></i>
                 </div>
                 <h2 class="stamp-title">Enter Username</h2>
@@ -242,10 +234,6 @@ layout: default
         text-align: center;
     }
 
-    .stamp-heart {
-        margin-bottom: 0.2em;
-    }
-
     .stamp-title {
         font-family: "Montserrat", Arial, sans-serif;
         font-size: 1.3rem;
@@ -254,6 +242,15 @@ layout: default
         color: #fff;
         letter-spacing: 0.02em;
         text-shadow: 0 2px 8px #fb7171;
+    }
+
+    .stamp-heart {
+        font-size: 2.2rem;
+        margin-bottom: 1em;
+        color: #fff;
+        text-shadow: 0 2px 8px #fb7171;
+        width: 50px;
+        height: 50px;
     }
 
     .stamp-input {
@@ -365,7 +362,7 @@ layout: default
     .letter {
         position: absolute;
         top: 1vw;
-        width: calc(70vw - 10px);
+        width: calc(70vw - 20px);
         height: 33vw;
         background-color: white;
         border-radius: 15px;
@@ -511,6 +508,56 @@ layout: default
             height: calc(50vh + 43vw);
             transition-delay: 0.5s;
             padding-bottom: 23vw;
+        }
+
+        .stamp {
+            padding: 1em 0.5em;
+            height: 100%;
+        }
+
+        .stamp-heart {
+            margin-bottom: 10px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .stamp-title {
+            font-size: 1rem;
+            margin-bottom: 0.7em;
+        }
+
+        .stamp-input {
+            font-size: 0.9em;
+            padding: 0.5em 0.7em;
+            max-width: 140px;
+        }
+
+        .stamp-btn {
+            font-size: 0.9em;
+            padding: 0.5em 0.7em;
+            max-width: 140px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .stamp {
+            padding: 0.7em 0.3em;
+        }
+
+        .stamp-title {
+            font-size: 0.85rem;
+        }
+
+        .stamp-input {
+            font-size: 0.8em;
+            padding: 0.4em 0.5em;
+            max-width: 110px;
+        }
+
+        .stamp-btn {
+            font-size: 0.8em;
+            padding: 0.4em 0.5em;
+            max-width: 110px;
         }
     }
 </style>
