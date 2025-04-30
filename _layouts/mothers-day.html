@@ -38,7 +38,7 @@ layout: default
                         );
                     "
                 >
-                    <div class="container pb-19 pb-md-20 text-center">
+                    <div class="container pb-19 pb-md-20">
                         <!-- Decorative elements -->
                         <div
                             class="position-absolute"
@@ -68,7 +68,7 @@ layout: default
                             ></i>
                         </div>
 
-                        <div class="row">
+                        <div class="row text-center">
                             <div class="col-md-10 col-xl-8 mx-auto">
                                 <div class="post-header">
                                     <div class="mb-4">
@@ -83,12 +83,14 @@ layout: default
                                     <h1
                                         class="display-1 mb-4"
                                         id="messageTitle"
-                                    ></h1>
+                                    >
+                                        Happy Mother's Day!
+                                    </h1>
                                     <!-- <p class="lead mb-5" style="color: #7c7c7c">
                                     A special tribute to celebrate the love and
                                     dedication of mothers everywhere
                                 </p> -->
-                                    <ul
+                                    <!-- <ul
                                         class="post-meta"
                                         style="
                                             background: rgba(
@@ -101,16 +103,36 @@ layout: default
                                             border-radius: 10px;
                                         "
                                     >
-                                        <li class="post-date">
-                                            <i class="uil uil-calendar-alt"></i
-                                            ><span id="createdDate"></span>
-                                        </li>
                                         <li class="post-author">
-                                            <i class="uil uil-user"></i
-                                            ><span id="studentName"></span>
+                                            <i class="uil uil-heart"></i>
+                                            <span>With love from </span>
+                                            <span id="studentName"></span>
                                         </li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body text-left letterContent">
+                            <div class="text-left">
+                                <h3 class="h2 mb-4">Dear Mom,</h3>
+                                <p class="mb-4">
+                                    Thank you for being the most amazing mother
+                                    in the world. Your love, care, and
+                                    dedication have shaped who I am today. You
+                                    are my inspiration, my strength, and my
+                                    guiding light. I am so grateful for all the
+                                    sacrifices you've made and the endless love
+                                    you've given me.
+                                </p>
+                                <p class="mb-4">
+                                    I've made this special video just for you to
+                                    show how much you mean to me.
+                                </p>
+                                <!-- <p class="text-muted mb-4">
+                                    With all my love,<br>
+                                    <span id="studentSignature"></span>
+                                </p> -->
                             </div>
                         </div>
                     </div>
@@ -156,46 +178,32 @@ layout: default
                                             >
                                             </iframe>
                                         </div>
-                                        <div class="card-body p-5">
-                                            <div class="text-center">
-                                                <h3 class="h2 mb-4">
-                                                    <span
-                                                        id="messageTitle"
-                                                    ></span>
-                                                </h3>
-                                                <p
-                                                    id="studentMessage"
-                                                    class="text-muted"
-                                                ></p>
-                                                <button
-                                                    class="mt-4 mb-3"
-                                                    style="
-                                                        background: #ffe4e1;
-                                                        padding: 1rem 2rem;
-                                                        border-radius: 12px;
-                                                        font-family: 'Arial',
-                                                            sans-serif;
-                                                        border: none;
-                                                        box-shadow: 0 2px 4px
-                                                            rgba(0, 0, 0, 0.1);
-                                                        color: #8b4513;
-                                                        font-weight: 500;
-                                                        transition: all 0.3s
-                                                            ease;
-                                                        cursor: pointer;
-                                                    "
-                                                    onmouseover="this.style.background='#FFD1C9'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.15)'"
-                                                    onmouseout="this.style.background='#FFE4E1'; this.style.transform='none'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.1)'"
-                                                    onclick="copyToClipboard()"
-                                                >
-                                                    Share this with your friends
-                                                    and family!
-                                                </button>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <button
+                                style="
+                                    background: #ffe4e1;
+                                    padding: 1rem 2rem;
+                                    border-radius: 12px;
+                                    font-family: 'Arial', sans-serif;
+                                    border: none;
+                                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                                    color: #8b4513;
+                                    font-weight: 500;
+                                    transition: all 0.3s ease;
+                                    cursor: pointer;
+                                    display: block;
+                                    margin: 2rem auto;
+                                    width: auto;
+                                    min-width: min-content;
+                                "
+                                onmouseover="this.style.background='#FFD1C9'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.15)'"
+                                onmouseout="this.style.background='#FFE4E1'; this.style.transform='none'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.1)'"
+                                onclick="copyToClipboard()"
+                            >
+                                Share this with your friends and family!
+                            </button>
                         </div>
                     </div>
                 </section>
@@ -205,6 +213,12 @@ layout: default
 </div>
 <style>
     /* reference url: https://codepen.io/Coding-Star/pen/WNpbvwB */
+
+    .letterContent {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
     .stamp {
         position: absolute;
         top: 50%;
@@ -465,6 +479,11 @@ layout: default
             transition-delay: 0.5s;
             padding-bottom: 30vw;
         }
+
+        .letterContent {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
 
     @media (max-width: 768px) {
@@ -537,6 +556,11 @@ layout: default
             padding: 0.5em 0.7em;
             max-width: 140px;
         }
+
+        .letterContent {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
     }
 
     @media (max-width: 480px) {
@@ -558,6 +582,11 @@ layout: default
             font-size: 0.8em;
             padding: 0.4em 0.5em;
             max-width: 110px;
+        }
+
+        .letterContent {
+            padding-left: 5px;
+            padding-right: 5px;
         }
     }
 </style>
@@ -600,26 +629,8 @@ layout: default
             document.getElementById(
                 "youtubeEmbed"
             ).src = `https://www.youtube.com/embed/${data.videoId}`;
-            document.getElementById("studentName").textContent = username;
-            document.getElementById("messageTitle").textContent =
-                "Mom, Happy Mother's day! from " + username;
-            document.getElementById("studentMessage").textContent =
-                data.message;
-
-            const dateValue =
-                data.createdAt ||
-                data.created_at ||
-                data.createdDate ||
-                data.created ||
-                new Date().toISOString();
-
-            document.getElementById("createdDate").textContent = new Date(
-                dateValue
-            ).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-            });
+            // document.getElementById("studentName").textContent = username;
+            // document.getElementById("studentSignature").textContent = username;
 
             // document.getElementById("usernameSection").style.display = "none";
             document.getElementById("mainContent").style.display = "flex";
