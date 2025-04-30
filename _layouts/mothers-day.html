@@ -84,7 +84,9 @@ layout: default
                                         class="display-1 mb-4"
                                         id="messageTitle"
                                     >
-                                        Happy Mother's Day!
+                                        {{
+                                        site.data.mothers-day[page.locale].title
+                                        }}
                                     </h1>
                                     <!-- <p class="lead mb-5" style="color: #7c7c7c">
                                     A special tribute to celebrate the love and
@@ -115,22 +117,23 @@ layout: default
 
                         <div class="card-body text-left letterContent">
                             <div class="text-left">
-                                <h3 class="h2 mb-4">Dear Mom,</h3>
+                                <h3 class="h2 mb-4">
+                                    {{
+                                    site.data.mothers-day[page.locale].greeting
+                                    }}
+                                </h3>
                                 <p class="mb-4">
-                                    Thank you for being the most amazing mother
-                                    in the world. Your love, care, and
-                                    dedication have shaped who I am today. You
-                                    are my inspiration, my strength, and my
-                                    guiding light. I am so grateful for all the
-                                    sacrifices you've made and the endless love
-                                    you've given me.
+                                    {{
+                                    site.data.mothers-day[page.locale].message_1
+                                    }}
                                 </p>
                                 <p class="mb-4">
-                                    I've made this special video just for you to
-                                    show how much you mean to me.
+                                    {{
+                                    site.data.mothers-day[page.locale].message_2
+                                    }}
                                 </p>
                                 <!-- <p class="text-muted mb-4">
-                                    With all my love,<br>
+                                    {{ site.data.mothers-day[page.locale].signature }}<br>
                                     <span id="studentSignature"></span>
                                 </p> -->
                             </div>
@@ -143,7 +146,7 @@ layout: default
                     class="wrapper"
                     style="display: none"
                 >
-                    <div class="container pb-14 pb-md-16">
+                    <div class="container">
                         <div class="row">
                             <div class="col-lg-10 mx-auto">
                                 <div class="blog single mt-n17">
@@ -202,11 +205,48 @@ layout: default
                                 onmouseout="this.style.background='#FFE4E1'; this.style.transform='none'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.1)'"
                                 onclick="copyToClipboard()"
                             >
-                                Share this with your friends and family!
+                                {{
+                                site.data.mothers-day[page.locale].share_button
+                                }}
                             </button>
                         </div>
                     </div>
                 </section>
+
+                <!-- Subtle Promotional Button -->
+                <div class="container pb-14 pb-md-16">
+                    <div class="row">
+                        <div class="col-lg-10 mx-auto">
+                            <a
+                                href="{% if page.locale == 'cn' %}/cn/free-trial{% else %}/free-trial{% endif %}"
+                                style="
+                                    background: #ffe4e1;
+                                    padding: 1rem 2rem;
+                                    border-radius: 12px;
+                                    font-family: 'Arial', sans-serif;
+                                    border: none;
+                                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                                    color: #8b4513;
+                                    font-weight: 500;
+                                    transition: all 0.3s ease;
+                                    cursor: pointer;
+                                    display: block;
+                                    margin: 2rem auto;
+                                    width: auto;
+                                    min-width: min-content;
+                                    text-decoration: none;
+                                    text-align: center;
+                                "
+                                onmouseover="this.style.background='#FFD1C9'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.15)'"
+                                onmouseout="this.style.background='#FFE4E1'; this.style.transform='none'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.1)'"
+                            >
+                                {{
+                                site.data.mothers-day[page.locale].promo_message
+                                }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -647,10 +687,11 @@ layout: default
     }
 
     function copyToClipboard() {
-        const text =
-            window.location.href +
-            "?username=" +
-            document.getElementById("usernameInput").value;
+        const text = window.location.href.includes("username")
+            ? window.location.href
+            : window.location.href +
+              "?username=" +
+              document.getElementById("usernameInput").value;
         navigator.clipboard.writeText(text);
         alert("Copied to clipboard");
     }
