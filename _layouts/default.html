@@ -1,116 +1,214 @@
 ---
 layout: navbar
 ---
+
 <!DOCTYPE html>
 <html lang="en">
+    {% seo %}
 
-{% seo %}
+    <!-- Metadata for SEO and Social Sharing -->
+    <title>
+        {% if page.title %}{{ 'Coding Minds - ' | append: page.title }} | {%
+        endif %}{{ site.title }}
+    </title>
+    <meta
+        name="description"
+        content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
+    />
+    <meta name="author" content="{{ site.author | default: 'Coding Minds' }}" />
+    <meta
+        name="keywords"
+        content="{{ page.keywords | default: site.keywords }}"
+    />
+    <!-- Open Graph / Facebook -->
+    <meta
+        property="og:title"
+        content="{% if page.title %}{{ 'Coding Minds - ' | append: page.title }} | {% endif %}{{ site.title }}"
+    />
+    <meta
+        property="og:description"
+        content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    <meta
+        property="og:image"
+        content="{{ page.og_image | default: 'assets/img/og-image.png' }}"
+    />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+        name="twitter:title"
+        content="{% if page.title %}{{ 'Coding Minds - ' | append: page.title }} | {% endif %}{{ site.title }}"
+    />
+    <meta
+        name="twitter:description"
+        content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
+    />
+    <meta
+        name="twitter:image"
+        content="{{ page.og_image | default: 'assets/img/og-image.png' }}"
+    />
+    <!-- End SEO -->
+    <link rel="icon" href="assets/img/og-image.png" type="image/x-icon" />
+    <link
+        rel="shortcut icon"
+        href="assets/img/og-image.png"
+        type="image/x-icon"
+    />
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/og-image.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/og-image.png" />
+    <link
+        rel="apple-touch-icon"
+        sizes="114x114"
+        href="assets/img/og-image.png"
+    />
+    <link
+        rel="apple-touch-icon"
+        sizes="144x144"
+        href="assets/img/og-image.png"
+    />
+    <style type="text/css">
+        #flwindow0 {
+            position: absolute;
+            left: 0%;
+        }
+        #flwindow1 {
+            position: absolute;
+            left: 100%;
+        }
+        #flwindow2 {
+            position: absolute;
+            left: 200%;
+        }
+        #flwindow3 {
+            position: absolute;
+            left: 300%;
+        }
+        #flwindow4 {
+            position: absolute;
+            left: 400%;
+        }
+        #flwindow5 {
+            position: absolute;
+            left: 500%;
+        }
+        #flwindow6 {
+            position: absolute;
+            left: 600%;
+        }
+        #flwindow7 {
+            position: absolute;
+            left: 700%;
+        }
+        #flwindow8 {
+            position: absolute;
+            left: 800%;
+        }
+    </style>
 
-<!-- Metadata for SEO and Social Sharing -->
-<title>{% if page.title %}{{ 'Coding Minds - ' | append: page.title }} | {% endif %}{{ site.title }}</title>
-<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-<meta name="author" content="{{ site.author | default: 'Coding Minds' }}">
-<meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
-<!-- Open Graph / Facebook -->
-<meta property="og:title" content="{% if page.title %}{{ 'Coding Minds - ' | append: page.title }} | {% endif %}{{ site.title }}">
-<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-<meta property="og:type" content="website">
-<meta property="og:url" content="{{ page.url | absolute_url }}">
-<meta property="og:image" content="{{ page.og_image | default: 'assets/img/og-image.png' }}">
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{% if page.title %}{{ 'Coding Minds - ' | append: page.title }} | {% endif %}{{ site.title }}">
-<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-<meta name="twitter:image" content="{{ page.og_image | default: 'assets/img/og-image.png' }}">
-<!-- End SEO -->
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            @font-face {
+                font-family: "Alibaba PuHuiTi";
+                src: url("https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-3-55-Regular/AlibabaPuHuiTi-3-55-Regular.woff2")
+                    format("woff2");
+                font-weight: normal;
+                font-style: normal;
+                font-display: swap;
+            }
+            @font-face {
+                font-family: "Alibaba PuHuiTi";
+                src: url("https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-3-85-Bold/AlibabaPuHuiTi-3-85-Bold.woff2")
+                    format("woff2");
+                font-weight: bold;
+                font-style: normal;
+                font-display: swap;
+            }
+        </style>
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-1602P72VSQ"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="/assets/img/favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    @font-face {
-      font-family: 'Alibaba PuHuiTi';
-      src: url('https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-3-55-Regular/AlibabaPuHuiTi-3-55-Regular.woff2') format('woff2');
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Alibaba PuHuiTi';
-      src: url('https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlibabaPuHuiTi-3-85-Bold/AlibabaPuHuiTi-3-85-Bold.woff2') format('woff2');
-      font-weight: bold;
-      font-style: normal;
-      font-display: swap;
-    }
-  </style>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1602P72VSQ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+            gtag("config", "G-1602P72VSQ");
+        </script>
+        <link rel="stylesheet" href="/assets/css/custom.css" />
+        <link rel="stylesheet" href="/assets/css/main.css" />
+        <link rel="stylesheet" href="/assets/css/plugins.css" />
+        <link rel="stylesheet" href="/assets/css/theocss.css" />
+    </head>
 
-    gtag('config', 'G-1602P72VSQ');
-  </script>
-  <link rel="stylesheet" href="/assets/css/custom.css">
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="stylesheet" href="/assets/css/plugins.css">
-  <link rel="stylesheet" href="/assets/css/theocss.css">
-</head>
+    <body>
+        <div class="content-wrapper">
+            {% include navbar.html %} {{ content }}
+        </div>
+        {% include footer.html %}
+        <div class="progress-wrap">
+            <svg
+                class="progress-circle svg-content"
+                width="100%"
+                height="100%"
+                viewBox="-1 -1 102 102"
+            >
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            </svg>
+        </div>
 
-<body>  
-  <div class="content-wrapper">
-    {% include navbar.html %}
-    {{ content }}
-  </div>
-  {% include footer.html %}
-  <div class="progress-wrap">
-    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-    </svg>
-  </div>
+        <script>
+            var usrlang = navigator.language || navigator.userLanguage; // Detect browser language
 
-  <script>
-    var usrlang = navigator.language || navigator.userLanguage;                                     // Detect browser language
+            var lang = usrlang.toString().split("-")[0]; // Check if browser language starts with "zh"
+            console.log("User's preferred language is: " + lang);
 
-		var lang = usrlang.toString().split('-')[0];                                                    // Check if browser language starts with "zh"
-    console.log("User's preferred language is: " + lang );
+            if (
+                window.location.href.indexOf("cn") == -1 &&
+                lang == "zh" &&
+                !sessionStorage.alreadyClicked
+            ) {
+                // Check if url is already cn, language is zh, and first time opened tab
+                // User can freely change back to EN without redirecting unless a new tab is opened
+                //window.location.replace("/cn" + window.location.pathname) var currentUrl = window.location.href;
+                var currentUrl = window.location.href;
+                var queryString = window.location.search;
 
-    if (window.location.href.indexOf("cn") == -1 && lang == "zh" && !sessionStorage.alreadyClicked) // Check if url is already cn, language is zh, and first time opened tab
-    {
-      // User can freely change back to EN without redirecting unless a new tab is opened
-      //window.location.replace("/cn" + window.location.pathname) var currentUrl = window.location.href;
-      var currentUrl = window.location.href;
-      var queryString = window.location.search;
+                // Redirect to /cn path with preserved query parameters
+                var newUrl = "/cn" + window.location.pathname + queryString;
+                window.location.replace(newUrl);
+                // Delay redirection to see console.log messages
+                // setTimeout(function() {
+                //   window.location.replace(newUrl);
+                //   console.log("Redirecting to /cn site...");
+                // }, 5000); //delay
+                sessionStorage.alreadyClicked = 1;
+            }
+            // http redirect to /cn site
 
-      // Redirect to /cn path with preserved query parameters
-      var newUrl = "/cn" + window.location.pathname + queryString;
-      window.location.replace(newUrl);  
-      // Delay redirection to see console.log messages
-      // setTimeout(function() {
-      //   window.location.replace(newUrl);
-      //   console.log("Redirecting to /cn site...");
-      // }, 5000); //delay
-      sessionStorage.alreadyClicked = 1;                                 
+            // Go to EN if in CN url on first tab load if browser language is EN
+            // else if (window.location.href.indexOf("cn") != -1 && lang == "en" && !sessionStorage.alreadyClicked) {
+            //   var URL = window.location.pathname;
+            //   var redirectURL = URL.replace('cn/', '');
 
-      }
-        // http redirect to /cn site
-    
-    
-    // Go to EN if in CN url on first tab load if browser language is EN
-    // else if (window.location.href.indexOf("cn") != -1 && lang == "en" && !sessionStorage.alreadyClicked) {  
-    //   var URL = window.location.pathname;
-    //   var redirectURL = URL.replace('cn/', '');
+            //   window.location.replace(redirectURL)
+            //   sessionStorage.alreadyClicked = 1;
+            // }
+        </script>
 
-    //   window.location.replace(redirectURL)                                     
-    //   sessionStorage.alreadyClicked = 1;                                                            
-    // }
-  </script>
-
-  <script src="/assets/js/plugins.js"></script>
-  <script src="/assets/js/theme.js"></script>
-</body>
-
+        <script src="/assets/js/plugins.js"></script>
+        <script src="/assets/js/theme.js"></script>
+    </body>
 </html>
