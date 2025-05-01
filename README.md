@@ -14,7 +14,7 @@ You can reach the documentation as follows:
 Contains markdown files that affect the content of the website, similar to JSON
 | Folder  | Location |
 | ------------- | ------------- | 
-|  _careers |  https://codingmind.com/careers | 
+| _careers | https://codingmind.com/careers | 
 | _courses | https://codingmind.com/courses |
 | _projects | https://codingmind.com/projects |
 
