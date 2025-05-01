@@ -3,13 +3,16 @@ layout: navbar
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{% if page.locale == 'cn' %}zh{% else %}en{% endif %}">
     {% seo %}
 
     <!-- Metadata for SEO and Social Sharing -->
     <title>
-        {% if page.title %}{{ 'Coding Minds - ' | append: page.title }} | {%
-        endif %}{{ site.title }}
+        {% if page.locale == 'cn' %}
+            {% if page.title_cn %}{{ page.title_cn }}{% else %}{{ page.title }}{% endif %} | {{ site.title_cn | default: site.title }}
+        {% else %}
+            {% if page.title %}{{ 'Coding Minds - ' | append: page.title }} | {% endif %}{{ site.title }}
+        {% endif %}
     </title>
     <meta
         name="description"
@@ -18,12 +21,12 @@ layout: navbar
     <meta name="author" content="{{ site.author | default: 'Coding Minds' }}" />
     <meta
         name="keywords"
-        content="{{ page.keywords | default: site.keywords }}"
+        content="{% if page.locale == 'cn' %}{{ page.keywords_cn | default: site.keywords_cn | default: page.keywords | default: site.keywords }}{% else %}{{ page.keywords | default: site.keywords }}{% endif %}"
     />
     <!-- Open Graph / Facebook -->
     <meta
         property="og:title"
-        content="{% if page.title %}{{ 'Coding Minds - ' | append: page.title }} | {% endif %}{{ site.title }}"
+        content="{% if page.locale == 'cn' %}{% if page.title_cn %}{{ page.title_cn }}{% else %}{{ page.title }}{% endif %} | {{ site.title_cn | default: site.title }}{% else %}{% if page.title %}{{ 'Coding Minds - ' | append: page.title }} | {% endif %}{{ site.title }}{% endif %}"
     />
     <meta
         property="og:description"
@@ -39,7 +42,7 @@ layout: navbar
     <meta name="twitter:card" content="summary_large_image" />
     <meta
         name="twitter:title"
-        content="{% if page.title %}{{ 'Coding Minds - ' | append: page.title }} | {% endif %}{{ site.title }}"
+        content="{% if page.locale == 'cn' %}{% if page.title_cn %}{{ page.title_cn }}{% else %}{{ page.title }}{% endif %} | {{ site.title_cn | default: site.title }}{% else %}{% if page.title %}{{ 'Coding Minds - ' | append: page.title }} | {% endif %}{{ site.title }}{% endif %}"
     />
     <meta
         name="twitter:description"

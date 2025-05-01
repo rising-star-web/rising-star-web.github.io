@@ -655,28 +655,27 @@ layout: default
         }
 
         try {
-            const response = await fetch(
-                `http://localhost:3000/api/MothersDayProjects/getStudentProjectsByUserName?username=${encodeURIComponent(
-                    username
-                )}`
-            );
-            if (!response.ok) {
-                throw new Error("Failed to fetch data");
-            }
-            const res = await response.json();
-            const data = res[0];
+            // const response = await fetch(
+            //     `http://localhost:3000/api/MothersDayProjects/getStudentProjectsByUserName?username=${encodeURIComponent(
+            //         username
+            //     )}`
+            // );
+            // if (!response.ok) {
+            //     throw new Error("Failed to fetch data");
+            // }
+            // const res = await response.json();
+            // const data = res[0];
 
+            // document.getElementById(
+            //     "youtubeEmbed"
+            // ).src = `https://www.youtube.com/embed/${data.videoId}`;
             document.getElementById(
                 "youtubeEmbed"
-            ).src = `https://www.youtube.com/embed/${data.videoId}`;
-            // document.getElementById("studentName").textContent = username;
-            // document.getElementById("studentSignature").textContent = username;
+            ).src = `https://www.youtube.com/embed/QV5pglqKDGQ`;
 
-            // document.getElementById("usernameSection").style.display = "none";
             document.getElementById("mainContent").style.display = "flex";
             document.getElementById("videoSection").style.display = "block";
             document.getElementById("usernameSection").style.display = "none";
-            // Enable envelope opening on hover
             document
                 .querySelector(".envelope-wrapper")
                 .classList.add("can-open");
