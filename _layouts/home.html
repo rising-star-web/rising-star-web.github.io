@@ -346,7 +346,7 @@ layout: default
 
     <!-- Trial Bottom-Side Button -->
     <div class="{{ site.data.home[page.locale].trial.trialStyle }}">
-      <a href="./free-trial" class="btn btn-primary rounded-pill">
+      <a href="{% if page.locale == 'cn' %}https://work.weixin.qq.com/kfid/kfc7606457a10e999e6{% else %}./free-trial{% endif %}" class="btn btn-primary rounded-pill">
         {{ site.data.home[page.locale].trial.floatBtn }}
         <img src="/assets/img/icons/solid/touchscreen.svg" class="svg-inject icon-svg icon-svg-xxs solid-mono w-4 ms-2 text-white h-4" alt="" />
       </a>
