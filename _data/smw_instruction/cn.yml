@@ -1,8 +1,8 @@
 name: CN
 
 smw_instruction:
-  title: "Coding Minds 学生上课指南"
-  subtitle: "为了更好的保证同学们的学习质量和效率，Coding Minds独立开发教务管理系统来帮助同学们登陆自己的网络课堂教室。\n每次开课前五分钟同学们按照以下步骤进入教室"
+  title: "Coding Mind 学生上课指南"
+  subtitle: "为了更好的保证同学们的学习质量和效率，Coding Mind独立开发教务管理系统来帮助同学们登陆自己的网络课堂教室。\n每次开课前五分钟同学们按照以下步骤进入教室"
   sections:
     access:
       title: "1. 进入系统"

@@ -3,17 +3,17 @@ name: EN
 intro:
   header: Introducing CM Craft
   lead: Dear Parents and Students,
-  p1: Coding Minds Craft, or CM Craft, is a new system that we developed to assist students in their programming journey. CM Craft is a great tool that your child can use to practice their programming skills at their own pace and get a boost on their computer science journey. We encourage your child to use this system as much as they would like in their own time to hone their programming skills.
-  p2: "Many students who are completely new to programming can struggle when it comes to understanding the bigger picture, which can lead to them failing to complete their homework and understand material in advanced courses. You can access Coding Minds Craft here:"
+  p1: Coding Mind Craft, or CM Craft, is a new system that we developed to assist students in their programming journey. CM Craft is a great tool that your child can use to practice their programming skills at their own pace and get a boost on their computer science journey. We encourage your child to use this system as much as they would like in their own time to hone their programming skills.
+  p2: "Many students who are completely new to programming can struggle when it comes to understanding the bigger picture, which can lead to them failing to complete their homework and understand material in advanced courses. You can access Coding Mind Craft here:"
 
 whycmcraft:
   header: Why use CM Craft?
-  p:  Programming classes at Coding Minds are often taught once a week. Students with a clear passion in programming are able to understand the material and can do assignments in between classes. However, we also understand that for many other students this is not the case. Some students have difficulty retaining information and recalling it again after a week of exposure to it. Many students who are completely new to programming can struggle when it comes to understanding the bigger picture, which can lead to them failing to complete their homework and understand material in advanced courses. In such cases, the best way for your child to stay on track is to practice programming in between classes. CM Craft exists for that purpose. 
+  p:  Programming classes at Coding Mind are often taught once a week. Students with a clear passion in programming are able to understand the material and can do assignments in between classes. However, we also understand that for many other students this is not the case. Some students have difficulty retaining information and recalling it again after a week of exposure to it. Many students who are completely new to programming can struggle when it comes to understanding the bigger picture, which can lead to them failing to complete their homework and understand material in advanced courses. In such cases, the best way for your child to stay on track is to practice programming in between classes. CM Craft exists for that purpose. 
 
 features:
   header: Features
   lead: "CM Craft is designed to be as simple as possible for your child to use so that they can get to programming as soon as possible. Here are a list of features: "
-  p1: A dashboard which shows performance over the last 2 weeks, and a leaderboard against all other Coding Minds students.
+  p1: A dashboard which shows performance over the last 2 weeks, and a leaderboard against all other Coding Mind students.
   p2: A full suite of 22 Python assessments of various topics, each with at least 50 questions each.
   p3: A set of video lectures for Python topics. 
   p4: A growing suite of 11 Java assessments of various topics, with at least 30 questions each.

@@ -11,8 +11,8 @@ projectDesc: "Creativity "
 
 [//]: # (Project Page/Showcase)
 headerTitle: "AI and Machine Learning Methods"
-bodyText1: " Devin,a student from Coding Minds, has delivered a stunning piece. This multiplayer game on American history showcases his prowess, rivaling professional game developers."
-bodyText2: "Devin's game perfectly blends learning with entertainment. He once again demonstrates the creativity and potential of the youth, making Coding Minds proud."
+bodyText1: " Devin,a student from Coding Mind, has delivered a stunning piece. This multiplayer game on American history showcases his prowess, rivaling professional game developers."
+bodyText2: "Devin's game perfectly blends learning with entertainment. He once again demonstrates the creativity and potential of the youth, making Coding Mind proud."
 projectURL: "https://www.google.com/"
 awardsDesc: "Creativity "
 contentImage: "/img/updated/projects/IMG_6249.jpg"
