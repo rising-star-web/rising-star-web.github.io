@@ -494,6 +494,8 @@ layout: default
     const urlParams = new URLSearchParams(window.location.search);
     const projectId = urlParams.get("projectId");
 
+    // const baseUrl = "http://localhost:3000/";
+    const baseUrl = "https://explorer.sharemyworks.com/";
     if (projectId) {
         fetchUserData(projectId);
     }
@@ -501,12 +503,12 @@ layout: default
     async function fetchUserData(projectId) {
         try {
             console.log(
-                `http://localhost:3000/api/Activity/${encodeURIComponent(
+                `${baseUrl}api/Activity/${encodeURIComponent(
                     projectId
                 )}`
             );
             const response = await fetch(
-                `http://localhost:3000/api/Activity/${encodeURIComponent(
+                `${baseUrl}api/Activity/${encodeURIComponent(
                     projectId
                 )}`
             );
@@ -524,7 +526,7 @@ layout: default
 
             if (data.videoUrl == "") {
                 const videos = await fetch(
-                    `http://localhost:3000/api/Activity/${encodeURIComponent(
+                    `${baseUrl}api/Activity/${encodeURIComponent(
                         projectId
                     )}/getVideos`
                 );
