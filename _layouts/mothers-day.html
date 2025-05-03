@@ -152,6 +152,21 @@ layout: default
                                                 border-radius: 15px 15px 0 0;
                                             "
                                         >
+                                            <video
+                                                src="https://sharemyworks-projects.s3.us-west-1.amazonaws.com/data/users/5adbee4fee3da0002f416229/activities/5b1794092a7298001499ce6c/egg_timer_in_super_slow_motion_draining%20(1080p).mp4"
+                                                id="videoPlayer"
+                                                style="
+                                                    position: absolute;
+                                                    top: 0;
+                                                    left: 0;
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    border: 0;
+                                                    display: none;
+                                                "
+                                                controls
+                                                allowfullscreen
+                                            ></video>
                                             <iframe
                                                 id="youtubeEmbed"
                                                 style="
@@ -161,6 +176,7 @@ layout: default
                                                     width: 100%;
                                                     height: 100%;
                                                     border: 0;
+                                                    display: none;
                                                 "
                                                 allowfullscreen
                                             >
@@ -504,12 +520,41 @@ layout: default
                 return;
             }
 
-            const videoLink = data.videoUrl;
-            const videoId = videoLink.split("v=")[1].split("&")[0];
-
-            document.getElementById(
-                "youtubeEmbed"
-            ).src = `https://www.youtube.com/embed/${videoId}`;
+            if (data.videoUrl == "") {
+                const videos = await fetch(
+                    `http://localhost:3000/api/Activity/${encodeURIComponent(
+                        projectId
+                    )}/getVideos`
+                );
+                const videosData = await videos.json();
+                console.log(videosData);
+                const video = videosData.videos[0].s3Link;
+                console.log(video);
+                document.getElementById("videoPlayer").src = video;
+                document.getElementById("videoPlayer").style.display = "block";
+                document.getElementById("youtubeEmbed").style.display = "none";
+            } else {
+                const videoLink = data.videoUrl;
+                function extractYouTubeId(url) {
+                    // Handles both youtu.be and youtube.com/watch?v= formats
+                    const regExp =
+                        /(?:youtube\.com\/.*v=|youtu\.be\/)([^&?/]+)/;
+                    const match = url.match(regExp);
+                    return match ? match[1] : null;
+                }
+                const videoId = extractYouTubeId(videoLink);
+                if (videoId) {
+                    document.getElementById(
+                        "youtubeEmbed"
+                    ).src = `https://www.youtube.com/embed/${videoId}`;
+                    document.getElementById("youtubeEmbed").style.display =
+                        "block";
+                    document.getElementById("videoPlayer").style.display =
+                        "none";
+                } else {
+                    alert("Invalid YouTube URL");
+                }
+            }
 
             document.getElementById("mainContent").style.display = "flex";
             document.getElementById("videoSection").style.display = "block";
