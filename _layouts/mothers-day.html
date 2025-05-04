@@ -630,9 +630,7 @@ layout: default
                 canonicalLink.rel = "canonical";
                 document.head.appendChild(canonicalLink);
             }
-            canonicalLink.href =
-                "https://codingmind.com/mothers-day?projectId=" +
-                projectId;
+            canonicalLink.href = window.location.href;
         } catch (error) {
             alert("Error fetching data. Please try again.");
             console.error("Error:", error);
