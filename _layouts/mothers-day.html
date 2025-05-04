@@ -107,12 +107,12 @@ layout: default
                                     site.data.mothers-day[page.locale].greeting
                                     }}
                                 </h3>
-                                <p class="mb-4">
+                                <p class="mb-4" id="message1">
                                     {{
                                     site.data.mothers-day[page.locale].message_1
                                     }}
                                 </p>
-                                <p class="mb-4">
+                                <p class="mb-4" id="message2">
                                     {{
                                     site.data.mothers-day[page.locale].message_2
                                     }}
@@ -613,11 +613,26 @@ layout: default
                 }
             }
 
+            if (data.description) {
+                document.getElementById("message1").innerText =
+                    data.description;
+            }
+
             document.getElementById("mainContent").style.display = "flex";
             document.getElementById("videoSection").style.display = "block";
             document
                 .querySelector(".envelope-wrapper")
                 .classList.add("can-open");
+
+            let canonicalLink = document.querySelector('link[rel="canonical"]');
+            if (!canonicalLink) {
+                canonicalLink = document.createElement("link");
+                canonicalLink.rel = "canonical";
+                document.head.appendChild(canonicalLink);
+            }
+            canonicalLink.href =
+                "https://codingmind.com/mothers-day?projectId=" +
+                projectId;
         } catch (error) {
             alert("Error fetching data. Please try again.");
             console.error("Error:", error);
@@ -679,6 +694,14 @@ layout: default
             "width=600,height=400"
         );
     }
+
+    const url = new URL(window.location.href);
+    url.searchParams.set("utm_source", "mobile_share"); // Add or update a parameter
+    navigator.share({
+        url: url.toString(),
+        title: "Check this out!",
+        text: "Here is something interesting.",
+    });
     // function showWeChatQR() {
     //     document.getElementById("wechatQRModal").style.display = "flex";
     // }
