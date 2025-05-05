@@ -640,6 +640,9 @@ layout: default
     function copyToClipboard() {
         const text = window.location.href;
         navigator.clipboard.writeText(text);
+        navigator.share({
+            url: text,
+        });
         alert("Copied to clipboard");
     }
 
@@ -657,7 +660,10 @@ layout: default
     document.addEventListener("DOMContentLoaded", function () {
         const env = document.querySelector(".envelope-wrapper");
         env.addEventListener("click", function () {
-            if (env.classList.contains("can-open") && !env.classList.contains("open")) {
+            if (
+                env.classList.contains("can-open") &&
+                !env.classList.contains("open")
+            ) {
                 env.classList.add("open");
                 // Fire confetti when opening
                 if (window.confetti) {
@@ -690,13 +696,13 @@ layout: default
         );
     }
 
-    const url = new URL(window.location.href);
-    url.searchParams.set("utm_source", "mobile_share"); // Add or update a parameter
-    navigator.share({
-        url: url.toString(),
-        title: "Check this out!",
-        text: "Here is something interesting.",
-    });
+    // const url = new URL(window.location.href);
+    // url.searchParams.set("utm_source", "mobile_share"); // Add or update a parameter
+    // navigator.share({
+    //     url: url.toString(),
+    //     title: "Check this out!",
+    //     text: "Here is something interesting.",
+    // });
     // function showWeChatQR() {
     //     document.getElementById("wechatQRModal").style.display = "flex";
     // }
