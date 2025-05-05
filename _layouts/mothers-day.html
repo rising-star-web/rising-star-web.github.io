@@ -657,27 +657,24 @@ layout: default
     document.addEventListener("DOMContentLoaded", function () {
         const env = document.querySelector(".envelope-wrapper");
         env.addEventListener("click", function () {
-            if (env.classList.contains("can-open")) {
-                const willOpen = !env.classList.contains("open");
-                env.classList.toggle("open");
-                if (willOpen) {
-                    // Fire confetti when opening
-                    if (window.confetti) {
+            if (env.classList.contains("can-open") && !env.classList.contains("open")) {
+                env.classList.add("open");
+                // Fire confetti when opening
+                if (window.confetti) {
+                    confetti({
+                        particleCount: 120,
+                        spread: 80,
+                        origin: { y: 0.5 },
+                    });
+                    setTimeout(() => {
                         confetti({
-                            particleCount: 120,
-                            spread: 80,
-                            origin: { y: 0.5 },
+                            particleCount: 80,
+                            spread: 60,
+                            origin: { y: 0.7 },
                         });
-                        setTimeout(() => {
-                            confetti({
-                                particleCount: 80,
-                                spread: 60,
-                                origin: { y: 0.7 },
-                            });
-                        }, 300);
-                    }
+                    }, 300);
                 }
-            } else {
+            } else if (!env.classList.contains("can-open")) {
                 triggerEnvelopeShake();
             }
         });
