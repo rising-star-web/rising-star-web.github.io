@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-     const baseUrl = 'https://prod-sharemyworks-backend.herokuapp.com/api/';
-    // const baseUrl = "https://backend4.sharemyworks.com/api/";
+    const baseUrl = "https://backend4.sharemyworks.com/api/";
     //const baseUrl = 'http://localhost:3000/api/'
     var loginForm = document.getElementById("loginForm");
     var loadingIndicator = document.querySelector(".loading-indicator");
