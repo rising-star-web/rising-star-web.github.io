@@ -837,6 +837,7 @@ var theme = {
                 const campusLocation = campusField.options[campusField.selectedIndex].id;
                 const referralField = document.getElementById('referral');
                 const referral = referralField.options[referralField.selectedIndex].id;
+
                 function formatDateTimeSelections() {
 
                   const dateTimeSelections = document.getElementById('dateTimeSelections');
@@ -882,9 +883,9 @@ var theme = {
                       accountData: {
                         email2: email,
                         phone2: phone,
-                        username: (name.replace(' ','')).toLowerCase() + Math.floor(Math.random()*(999-100+1)+100),
-                        firstName: name.split(' ')[0],
-                        lastName: name.split(' ')[1] ? name.split(' ')[1] : ' ',
+                        username: name.replace(/\s+/g, '').toLowerCase() + Math.floor(Math.random()*(999-100+1)+100),
+                        firstName: name.split(/\s+/)[0],
+                        lastName: name.split(/\s+/).slice(1).join(' ').trim() || ' ',
                         password: '123',
                         dateOfBirth: new Date(),
                         grade: grade,
@@ -940,11 +941,22 @@ var theme = {
                     return;
                   }
                   
-                let baseUrl = 'http://localhost:3000/api/';
-                // let baseUrl = 'https://prod-sharemyworks-backend.herokuapp.com/api/';
-                let username = (name.replace(' ','')).toLowerCase() + Math.floor(Math.random()*(999-100+1)+100);
-                let firstName = name.split(' ')[0];
-                let lastName = name.split(' ')[1]? name.split(' ')[1]: ' ';
+                 //let baseUrl = 'http://localhost:3000/api/';
+                let baseUrl = 'https://backend4.sharemyworks.com/api/';
+
+                baseUrl = baseUrl.replace(/"/g, '');
+
+                let nameParts = name.trim().split(/\s+/); 
+                let firstName = nameParts[0];
+                let lastName = '';
+                let username = name.replace(/\s+/g, '').toLowerCase() + Math.floor(Math.random()*(999-100+1)+100);
+
+                
+                if (nameParts.length > 1) {
+                  lastName = nameParts.slice(1).join(' ').trim();
+                } else {
+                  lastName = ' ';
+                }
 
                 let accountData = {
                   email2: email,
@@ -958,7 +970,7 @@ var theme = {
                   referralName: referral,
                   preferedLanguage: 'English'
                 };
-                // console.log('accountData: ', accountData);
+
                 var formBody = [];
                 for (var property in accountData) {
                   var encodedKey = encodeURIComponent(property);
@@ -1030,8 +1042,6 @@ var theme = {
                     body: formBody2
                   }).then(async function (response) {
                     let resp2 = await response.json();
-                    // console.log('trial created', resp2);
-                    // console.log('trial created');
                     if (campusLocation === 'San-diego' || campusLocation === 'Online-sd') {
                       // if location is sandiego, set the sessionstorage of form Completed to true
                       localStorage.setItem('formCompleted', 'true');
