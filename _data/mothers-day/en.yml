@@ -13,4 +13,6 @@ message_2: I've created this special coding project just for you,
 signature: "With all my love,"
 promo_message: "Want your child to learn coding? Try a free class!"
 promo_button: "Start Your Child's Coding Journey"
-share_button: "Share with your friends and family"
+from: "From"
+from_message: "Happy Mother's Day! I love you forever!"
+share: "Share with your friends and family"
