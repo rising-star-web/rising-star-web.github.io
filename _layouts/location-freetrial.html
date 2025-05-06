@@ -36,7 +36,8 @@ layout: locationdefault
         <form id="form" enctype="text/plain" class="contact-form needs-validation" novalidate>
           {% if location_name == 'sandiego' %}
           <div class="form-select-wrapper mb-4">
-            <select class="form-select" aria-label="Class Type Selection" required="required" id="classType" name="classType" data-error="Class Type is required.">
+            <select class="form-select" aria-label="Class Type Selection" required="required" id="classType"
+              name="classType" data-error="Class Type is required.">
               <option value="">Select Class Type *</option>
               <option value="private">Private 1-on-1</option>
               <option value="group">Group Class Trial</option>
@@ -139,7 +140,8 @@ layout: locationdefault
           <div id="groupClassFields" style="display: none;">
             <div class="form-select-wrapper mb-4">
               <div class="text-sm text-muted mt-2">
-                View detailed class schedule at <a href="https://codingmind.com/sandiego/schedule/" target="_blank">here</a>
+                View detailed class schedule at <a href="https://codingmind.com/sandiego/schedule/"
+                  target="_blank">here</a>
               </div>
               <select class="form-select" aria-label="Class Name Selection" id="className" name="className">
                 <option value="">Select Class Name</option>
@@ -158,22 +160,25 @@ layout: locationdefault
               name="referral">
               <option value="">{{ site.data.free-trial[page.locale].freetrial.sourceTag }}</option>
               {% if location_name == 'sandiego' %}
-                <option value="Google Search">Google Search</option>
-                <option value="Friend Referral">Friend Referral</option>
-                <option value="Social Media">Social Media</option>
-                <option value="Flyer">Flyer</option>
-                <option value="Walk-in">Walk-in</option>
-                <option value="Event">Event</option>
+              <option value="Google Search">Google Search</option>
+              <option value="Friend Referral">Friend Referral</option>
+              <option value="Social Media">Social Media</option>
+              <option value="Flyer">Flyer</option>
+              <option value="Walk-in">Walk-in</option>
+              <option value="Event">Event</option>
               {% else %}
-                <option id="xiaohongshu" value="xiaohongshu">{{ site.data.free-trial[page.locale].freetrial.source1 }}</option>
-                <option id="Instagram" value="Instagram">{{ site.data.free-trial[page.locale].freetrial.source2 }}</option>
-                <option id="Facebook" value="Facebook">{{ site.data.free-trial[page.locale].freetrial.source3 }}</option>
-                <option id="WeChat" value="WeChat">{{ site.data.free-trial[page.locale].freetrial.source4 }}</option>
-                <option id="Official Website" value="Official Website">{{ site.data.free-trial[page.locale].freetrial.source5 }}</option>
-                <option id="Friend" value="Friend">{{ site.data.free-trial[page.locale].freetrial.source6 }}</option>
-                <option id="Google" value="Google">{{ site.data.free-trial[page.locale].freetrial.source7 }}</option>
-                <option id="TikTok" value="TikTok">{{ site.data.free-trial[page.locale].freetrial.source8 }}</option>
-                <option id="Others" value="Others">{{ site.data.free-trial[page.locale].freetrial.source9 }}</option>
+              <option id="xiaohongshu" value="xiaohongshu">{{ site.data.free-trial[page.locale].freetrial.source1 }}
+              </option>
+              <option id="Instagram" value="Instagram">{{ site.data.free-trial[page.locale].freetrial.source2 }}
+              </option>
+              <option id="Facebook" value="Facebook">{{ site.data.free-trial[page.locale].freetrial.source3 }}</option>
+              <option id="WeChat" value="WeChat">{{ site.data.free-trial[page.locale].freetrial.source4 }}</option>
+              <option id="Official Website" value="Official Website">{{
+                site.data.free-trial[page.locale].freetrial.source5 }}</option>
+              <option id="Friend" value="Friend">{{ site.data.free-trial[page.locale].freetrial.source6 }}</option>
+              <option id="Google" value="Google">{{ site.data.free-trial[page.locale].freetrial.source7 }}</option>
+              <option id="TikTok" value="TikTok">{{ site.data.free-trial[page.locale].freetrial.source8 }}</option>
+              <option id="Others" value="Others">{{ site.data.free-trial[page.locale].freetrial.source9 }}</option>
               {% endif %}
             </select>
           </div>
@@ -203,10 +208,10 @@ layout: locationdefault
             <div class="date-time-selection mb-3">
               <input type="date" class="form-control mb-2 date-input">
               <div class="d-flex">
-                <select class="form-control me-2 hour-select" >
+                <select class="form-control me-2 hour-select">
                   <option value="">{{ site.data.free-trial[page.locale].freetrial.hour }}</option>
                 </select>
-                <select class="form-control minute-select" >
+                <select class="form-control minute-select">
                   <option value="">{{ site.data.free-trial[page.locale].freetrial.minute }}</option>
                   <option value="00">00</option>
                   <option value="30">30</option>
@@ -216,10 +221,10 @@ layout: locationdefault
             <div class="date-time-selection mb-3">
               <input type="date" class="form-control mb-2 date-input">
               <div class="d-flex">
-                <select class="form-control me-2 hour-select" >
+                <select class="form-control me-2 hour-select">
                   <option value="">{{ site.data.free-trial[page.locale].freetrial.hour }}</option>
                 </select>
-                <select class="form-control minute-select" >
+                <select class="form-control minute-select">
                   <option value="">{{ site.data.free-trial[page.locale].freetrial.minute }}</option>
                   <option value="00">00</option>
                   <option value="30">30</option>
@@ -292,7 +297,8 @@ layout: locationdefault
       </div>
       <div class="modal-body">
         <p>Your form has been saved successfully!</p>
-        <p class="text-warning"><strong>Important:</strong> Please note that your registration is not complete until you complete the payment on the next page.</p>
+        <p class="text-warning"><strong>Important:</strong> Please note that your registration is not complete until you
+          complete the payment on the next page.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" id="confirmRedirect">I Understand, Continue to Payment</button>
@@ -375,7 +381,7 @@ layout: locationdefault
   const pathSegments = path.split('/');
   const isChinese = pathSegments.includes('cn');
   let campus;
-  if(isChinese){
+  if (isChinese) {
     campus = pathSegments[2];
   } else {
     campus = pathSegments[1];
@@ -385,7 +391,7 @@ layout: locationdefault
     dateTimeHeader.textContent = "请至少选择1个首选日期和时间进行试听课:";
   }
   const campusDescriptions = {
-    "seattle": isChinese 
+    "seattle": isChinese
       ? "请填写此表格以预约西雅图校区的试听课，我们会尽快与您联系。欢迎来体验课程，看看是否适合您。"
       : "Schedule for a trial class at our Seattle campus by filling out this form, and we will get back to you shortly. Try out a class and see if it's the right fit for you.",
     "sandiego": "Schedule for a trial class in San Diego for $29 by filling out this form, and we will get back to you shortly. Try out a class to see if it's right for you."
@@ -396,7 +402,7 @@ layout: locationdefault
   document.getElementById('formDescription').innerText = description;
 </script>
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     const locationName = '{{ location_name }}';
     const classTypeSelect = document.getElementById('classType');
     const groupClassFields = document.getElementById('groupClassFields');
@@ -424,46 +430,67 @@ layout: locationdefault
       }
     });
 
-      // Fetch and populate schedule data
-    fetch('/assets/schedule.json')
-    .then(response => response.json())
-    .then(data => {
-      const scheduleData = data["San Diego"];
-      const classNameSelect = document.getElementById('className');
-      const classScheduleSelect = document.getElementById('classSchedule');
+    // Only add event listener if classTypeSelect exists (San Diego specific)
+    if (classTypeSelect) {
+      // Fetch and populate schedule data for San Diego
+      if (locationName === 'sandiego') {
+        fetch('/assets/schedule.json')
+          .then(response => response.json())
+          .then(data => {
+            const scheduleData = data["San Diego"];
+            const classNameSelect = document.getElementById('className');
+            const classScheduleSelect = document.getElementById('classSchedule');
 
-      // Populate class names
-      classNameSelect.innerHTML = '<option value="">Select Class Name</option>';
-      scheduleData.forEach(course => {
-        classNameSelect.innerHTML += `<option value="${course.Name}">${course.Name}</option>`;
-      });
+            // Populate class names
+            classNameSelect.innerHTML = '<option value="">Select Class Name</option>';
+            scheduleData.forEach(course => {
+              classNameSelect.innerHTML += `<option value="${course.Name}">${course.Name}</option>`;
+            });
 
-      // Handle class name change
-      classNameSelect.addEventListener('change', function() {
-        classScheduleSelect.innerHTML = '<option value="">Select Class Day & Time</option>';
-        const course = scheduleData.find(c => c.Name === this.value);
-        if (course) {
-          course.Schedule.forEach(schedule => {
-            const value = `${schedule.Day}-${schedule.Time}`;
-            classScheduleSelect.innerHTML += `<option value="${value}">${schedule.Day} ${schedule.Time}</option>`;
+            // Handle class name change
+            classNameSelect.addEventListener('change', function () {
+              classScheduleSelect.innerHTML = '<option value="">Select Class Day & Time</option>';
+              const course = scheduleData.find(c => c.Name === this.value);
+              if (course) {
+                course.Schedule.forEach(schedule => {
+                  const value = `${schedule.Day}-${schedule.Time}`;
+                  classScheduleSelect.innerHTML += `<option value="${value}">${schedule.Day} ${schedule.Time}</option>`;
+                });
+              }
+            });
+          })
+          .catch(error => {
+            console.error("Error loading schedule data:", error);
+          });
+      }
+      // Handle class type change
+      classTypeSelect.addEventListener('change', function () {
+        const isGroup = this.value === 'group';
+        if (groupClassFields) {
+          groupClassFields.style.display = isGroup ? 'block' : 'none';
+        }
+        if (dateTimeSelections) {
+          dateTimeSelections.style.display = isGroup ? 'none' : 'block';
+        }
+
+        // Toggle required attributes
+        if (dateTimeSelections) {
+          const dateTimeInputs = dateTimeSelections.querySelectorAll('[required]');
+          dateTimeInputs.forEach(input => input.required = !isGroup);
+        }
+
+        if (groupClassFields) {
+          const groupInputs = [
+            document.getElementById('className'),
+            document.getElementById('classSchedule')
+          ].filter(Boolean); // Filter out null elements
+          groupInputs.forEach(input => {
+            if (input) input.required = isGroup;
           });
         }
       });
-    });
-    
-    // Handle class type change
-    classTypeSelect.addEventListener('change', function() {
-      const isGroup = this.value === 'group';
-      groupClassFields.style.display = isGroup ? 'block' : 'none';
-      dateTimeSelections.style.display = isGroup ? 'none' : 'none';
+    }
 
-      // Toggle required attributes
-      const dateTimeInputs = dateTimeSelections.querySelectorAll('[required]');
-      const groupInputs = [document.getElementById('className'), document.getElementById('classSchedule')];
-      
-      dateTimeInputs.forEach(input => input.required = !isGroup);
-      groupInputs.forEach(input => input.required = isGroup);
-    });
 
     if (locationName === 'sandiego') {
       const dateTimeSelections = document.getElementById('dateTimeSelections');
