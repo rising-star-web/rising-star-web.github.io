@@ -77,29 +77,6 @@ layout: default
                                         site.data.mothers-day[page.locale].title
                                         }}
                                     </h1>
-                                    <!-- <p class="lead mb-5" style="color: #7c7c7c">
-                                    A special tribute to celebrate the love and
-                                    dedication of mothers everywhere
-                                </p> -->
-                                    <!-- <ul
-                                        class="post-meta"
-                                        style="
-                                            background: rgba(
-                                                255,
-                                                107,
-                                                107,
-                                                0.1
-                                            );
-                                            padding: 1rem;
-                                            border-radius: 10px;
-                                        "
-                                    >
-                                        <li class="post-author">
-                                            <i class="uil uil-heart"></i>
-                                            <span>With love from </span>
-                                            <span id="studentName"></span>
-                                        </li>
-                                    </ul> -->
                                 </div>
                             </div>
                         </div>
@@ -122,10 +99,6 @@ layout: default
                                     }}
                                 </p>
                                 <p class="mb-4" id="fromStudentSection"></p>
-                                <!-- <p class="text-muted mb-4">
-                                    {{ site.data.mothers-day[page.locale].signature }}<br>
-                                    <span id="studentSignature"></span>
-                                </p> -->
                             </div>
                         </div>
                     </div>
@@ -213,30 +186,6 @@ layout: default
                                     margin: 2rem auto;
                                 "
                             >
-                                <!-- <a
-                                    href="https://www.facebook.com/sharer/sharer.php?u="
-                                    onclick="shareOnFacebook(event)"
-                                    class="social-icon"
-                                    title="Facebook"
-                                >
-                                    <img
-                                        src="assets/img/icons/social/facebook.png"
-                                        alt="Facebook"
-                                        style="width: 36px; height: 36px"
-                                    />
-                                </a> -->
-                                <!-- <button
-                                    type="button"
-                                    class="social-icon"
-                                    title="WeChat"
-                                    onclick="showWeChatQR()"
-                                >
-                                    <img
-                                        src="assets/img/icons/social/wechat.png"
-                                        alt="WeChat"
-                                        style="width: 36px; height: 36px"
-                                    />
-                                </button> -->
                                 <button
                                     type="button"
                                     class="social-icon"
@@ -624,9 +573,9 @@ layout: default
                 ).innerText = `${from} ${name}`;
             }
 
-            console.log(
-                `${baseUrl}api/Activity/${encodeURIComponent(projectId)}`
-            );
+            // console.log(
+            //     `${baseUrl}api/Activity/${encodeURIComponent(projectId)}`
+            // );
             const response = await fetch(
                 `${baseUrl}api/Activity/${encodeURIComponent(projectId)}`
             );
@@ -635,7 +584,7 @@ layout: default
             }
             const data = await response.json();
 
-            console.log(data);
+            // console.log(data);
 
             // if (data.type !== "mothers-day-project") {
             //     alert("Invalid project type");
@@ -716,11 +665,12 @@ layout: default
 
     function copyToClipboard() {
         const text = window.location.href;
-        navigator.clipboard.writeText(text);
-        navigator.share({
-            url: text,
+        navigator.clipboard.writeText(text).then(() => {
+            if (navigator.share) {
+                navigator.share({ url: text }).catch(() => {});
+            }
+            alert("Copied to clipboard");
         });
-        alert("Copied to clipboard");
     }
 
     function triggerEnvelopeShake() {
@@ -772,65 +722,4 @@ layout: default
             "width=600,height=400"
         );
     }
-
-    // const url = new URL(window.location.href);
-    // url.searchParams.set("utm_source", "mobile_share"); // Add or update a parameter
-    // navigator.share({
-    //     url: url.toString(),
-    //     title: "Check this out!",
-    //     text: "Here is something interesting.",
-    // });
-    // function showWeChatQR() {
-    //     document.getElementById("wechatQRModal").style.display = "flex";
-    // }
-    // function hideWeChatQR() {
-    //     document.getElementById("wechatQRModal").style.display = "none";
-    // }
 </script>
-
-<!-- 
-<div
-    id="wechatQRModal"
-    style="
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.4);
-        z-index: 9999;
-        align-items: center;
-        justify-content: center;
-    "
->
-    <div
-        style="
-            background: #fff;
-            padding: 2rem;
-            border-radius: 16px;
-            text-align: center;
-            position: relative;
-            max-width: 90vw;
-            max-height: 90vh;
-        "
-    >
-        <span
-            style="
-                position: absolute;
-                top: 0.5rem;
-                right: 1rem;
-                font-size: 2rem;
-                cursor: pointer;
-            "
-            onclick="hideWeChatQR()"
-            >&times;</span
-        >
-        <h4 style="margin-bottom: 1rem">Scan to share on WeChat</h4>
-        <img
-            src="/img/updated/qr.png"
-            alt="WeChat QR"
-            style="width: 180px; height: 180px"
-        />
-    </div>
-</div> -->
