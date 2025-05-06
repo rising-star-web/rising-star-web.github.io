@@ -549,6 +549,7 @@ layout: default
 
     var fromMessage = "{{ site.data.mothers-day[page.locale].from_message }}";
     var from = "{{ site.data.mothers-day[page.locale].from }}";
+    var clickHint = "{{ site.data.mothers-day[page.locale].click_hint }}";
     async function fetchUserData(projectId) {
         try {
             const studentName = await fetch(
@@ -567,7 +568,7 @@ layout: default
                 }`.trim();
                 document.getElementById(
                     "fromStudentOnEnvelope"
-                ).innerText = `${fromMessage}\n${name}`;
+                ).innerText = `${fromMessage}${name} \n ${clickHint}`;
                 document.getElementById(
                     "fromStudentSection"
                 ).innerText = `${from} ${name}`;
