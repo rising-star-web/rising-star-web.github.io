@@ -4,23 +4,11 @@ layout: default
 
 <!-- example: http://127.0.0.1:4000/mothers-day?video=QV5pglqKDGQ -->
 <div class="content-wrapper">
-    <div
-        id="fromStudentFront"
-        style="
-            text-align: center;
-            font-size: 1.5rem;
-            color: #b85c5c;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-        "
-    ></div>
     <div class="envelope-shake-wrapper">
         <div class="envelope-wrapper">
             <div
                 class="from-student-on-envelope"
                 id="fromStudentOnEnvelope"
-                data-from-message-en="With all my love,"
-                data-from-message-cn="妈妈，节日快乐！永远爱你的"
             ></div>
             <div class="lid one"></div>
             <div class="lid two"></div>
@@ -123,16 +111,6 @@ layout: default
                                     site.data.mothers-day[page.locale].greeting
                                     }}
                                 </h3>
-                                <div
-                                    id="fromStudent"
-                                    style="
-                                        text-align: center;
-                                        font-size: 1.3rem;
-                                        color: #b85c5c;
-                                        font-weight: 600;
-                                        margin-bottom: 1.5rem;
-                                    "
-                                ></div>
                                 <p class="mb-4" id="message1">
                                     {{
                                     site.data.mothers-day[page.locale].message_1
@@ -160,7 +138,7 @@ layout: default
                 >
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-10 mx-auto">
+                            <div class="col-lg-10 mx-auto" id="videoContainer">
                                 <div class="blog single mt-n17">
                                     <div
                                         class="card"
@@ -659,11 +637,11 @@ layout: default
 
             console.log(data);
 
-            if (data.type !== "mothers-day-project") {
-                alert("Invalid project type");
-                return;
-            }
-
+            // if (data.type !== "mothers-day-project") {
+            //     alert("Invalid project type");
+            //     return;
+            // }
+            let hasVideo = false;
             if (data.videoUrl == "") {
                 // loading video from s3
                 const videos = await fetch(
@@ -672,12 +650,16 @@ layout: default
                     )}/getVideos`
                 );
                 const videosData = await videos.json();
-                console.log(videosData);
-                const video = videosData.videos[0].s3Link;
-                console.log(video);
-                document.getElementById("videoPlayer").src = video;
-                document.getElementById("videoPlayer").style.display = "block";
-                document.getElementById("youtubeEmbed").style.display = "none";
+                if (videosData.videos.length > 0) {
+                    hasVideo = true;
+                    const video = videosData.videos[0].s3Link;
+                    console.log(video);
+                    document.getElementById("videoPlayer").src = video;
+                    document.getElementById("videoPlayer").style.display =
+                        "block";
+                    document.getElementById("youtubeEmbed").style.display =
+                        "none";
+                }
             } else {
                 // parsing youtube url
                 const videoLink = data.videoUrl;
@@ -690,6 +672,7 @@ layout: default
                 }
                 const videoId = extractYouTubeId(videoLink);
                 if (videoId) {
+                    hasVideo = true;
                     document.getElementById(
                         "youtubeEmbed"
                     ).src = `https://www.youtube.com/embed/${videoId}`;
@@ -700,6 +683,11 @@ layout: default
                 } else {
                     alert("Invalid YouTube URL");
                 }
+            }
+
+            if (!hasVideo) {
+                document.getElementById("videoContainer").style.display =
+                    "none";
             }
 
             if (data.description) {
