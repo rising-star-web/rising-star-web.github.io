@@ -1,5 +1,5 @@
 
-var baseUrl = "https://prod-sharemyworks-backend.herokuapp.com/api/Account/getSemesterFeedback"  + new URLSearchParams({
+var baseUrl = "https://backend4.sharemyworks.com/api/Account/getSemesterFeedback"  + new URLSearchParams({
       accountId: '622ae8cc0543c300150170ce',
       courseId: '6462be33803c0f001324f872'});
 
