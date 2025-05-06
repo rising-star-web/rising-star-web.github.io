@@ -584,6 +584,7 @@ layout: default
 </style>
 <!-- Confetti CDN -->
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
 <script>
     const urlParams = new URLSearchParams(window.location.search);
     const projectId = urlParams.get("projectId");
@@ -805,6 +806,8 @@ layout: default
                 )}`
             );
             const config = await resp.json();
+
+            console.log(config);
 
             wx.config({
                 debug: false,
