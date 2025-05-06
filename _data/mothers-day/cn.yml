@@ -11,4 +11,6 @@ message_2: 这是我特别为您制作的编程作品，
 signature: "爱您的"
 promo_message: "想让孩子学习编程？免费试听课程！"
 promo_button: "开启孩子的编程之旅"
-share_button: "分享给您的家人和朋友"
+from: "来自"
+from_message: "妈妈，节日快乐！永远爱你的"
+share: "分享给您的家人和朋友"

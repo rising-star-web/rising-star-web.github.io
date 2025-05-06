@@ -4,8 +4,24 @@ layout: default
 
 <!-- example: http://127.0.0.1:4000/mothers-day?video=QV5pglqKDGQ -->
 <div class="content-wrapper">
+    <div
+        id="fromStudentFront"
+        style="
+            text-align: center;
+            font-size: 1.5rem;
+            color: #b85c5c;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        "
+    ></div>
     <div class="envelope-shake-wrapper">
         <div class="envelope-wrapper">
+            <div
+                class="from-student-on-envelope"
+                id="fromStudentOnEnvelope"
+                data-from-message-en="With all my love,"
+                data-from-message-cn="妈妈，节日快乐！永远爱你的"
+            ></div>
             <div class="lid one"></div>
             <div class="lid two"></div>
             <div class="envelope"></div>
@@ -107,6 +123,16 @@ layout: default
                                     site.data.mothers-day[page.locale].greeting
                                     }}
                                 </h3>
+                                <div
+                                    id="fromStudent"
+                                    style="
+                                        text-align: center;
+                                        font-size: 1.3rem;
+                                        color: #b85c5c;
+                                        font-weight: 600;
+                                        margin-bottom: 1.5rem;
+                                    "
+                                ></div>
                                 <p class="mb-4" id="message1">
                                     {{
                                     site.data.mothers-day[page.locale].message_1
@@ -117,6 +143,7 @@ layout: default
                                     site.data.mothers-day[page.locale].message_2
                                     }}
                                 </p>
+                                <p class="mb-4" id="fromStudentSection"></p>
                                 <!-- <p class="text-muted mb-4">
                                     {{ site.data.mothers-day[page.locale].signature }}<br>
                                     <span id="studentSignature"></span>
@@ -197,7 +224,7 @@ layout: default
                                     font-size: 1.2rem;
                                 "
                             >
-                                Share:
+                                {{ site.data.mothers-day[page.locale].share }}
                             </div>
                             <div
                                 class="social-share-row"
@@ -544,6 +571,42 @@ layout: default
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
         filter: brightness(1.1);
     }
+
+    .from-student-on-envelope {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        font-size: 2.1rem;
+        color: #b85c5c;
+        font-family: "Great Vibes", "Pacifico", cursive, "Arial", sans-serif;
+        font-weight: 400;
+        text-align: center;
+        pointer-events: none;
+        width: 80%;
+        line-height: 1.3;
+        letter-spacing: 1.5px;
+        text-shadow: 0 2px 8px rgba(255, 107, 107, 0.12), 0 1px 0 #fff;
+        transition: opacity 0.4s;
+        opacity: 1;
+    }
+
+    .envelope-wrapper.open .from-student-on-envelope {
+        opacity: 0;
+    }
+
+    @media (max-width: 768px) {
+        .from-student-on-envelope {
+            font-size: 1.8rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .from-student-on-envelope {
+            font-size: 1.5rem;
+        }
+    }
 </style>
 <!-- Confetti CDN -->
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
@@ -557,8 +620,32 @@ layout: default
         fetchUserData(projectId);
     }
 
+    var fromMessage = "{{ site.data.mothers-day[page.locale].from_message }}";
+    var from = "{{ site.data.mothers-day[page.locale].from }}";
     async function fetchUserData(projectId) {
         try {
+            const studentName = await fetch(
+                `${baseUrl}api/Activity/${projectId}/student`
+            );
+            const student = await studentName.json();
+            // console.log(student);
+
+            // console.log(student.firstName);
+            // console.log(student.lastName);
+
+            // Set the from message
+            if (student.firstName || student.lastName) {
+                const name = `${student.firstName ? student.firstName : ""}${
+                    student.lastName ? " " + student.lastName : ""
+                }`.trim();
+                document.getElementById(
+                    "fromStudentOnEnvelope"
+                ).innerText = `${fromMessage}\n${name}`;
+                document.getElementById(
+                    "fromStudentSection"
+                ).innerText = `${from} ${name}`;
+            }
+
             console.log(
                 `${baseUrl}api/Activity/${encodeURIComponent(projectId)}`
             );
@@ -578,6 +665,7 @@ layout: default
             }
 
             if (data.videoUrl == "") {
+                // loading video from s3
                 const videos = await fetch(
                     `${baseUrl}api/Activity/${encodeURIComponent(
                         projectId
@@ -591,6 +679,7 @@ layout: default
                 document.getElementById("videoPlayer").style.display = "block";
                 document.getElementById("youtubeEmbed").style.display = "none";
             } else {
+                // parsing youtube url
                 const videoLink = data.videoUrl;
                 function extractYouTubeId(url) {
                     // Handles both youtu.be and youtube.com/watch?v= formats
