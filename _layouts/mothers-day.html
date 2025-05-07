@@ -584,7 +584,7 @@ layout: default
 </style>
 <!-- Confetti CDN -->
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-<script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+<!-- <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script> -->
 <script>
     const urlParams = new URLSearchParams(window.location.search);
     const projectId = urlParams.get("projectId");
@@ -720,7 +720,13 @@ layout: default
                 .writeText(text)
                 .then(() => {
                     if (navigator.share) {
-                        navigator.share({ url: text }).catch(() => {});
+                        navigator
+                            .share({
+                                url: text,
+                                title: "{{ site.data.mothers-day[page.locale].share_title }}",
+                                text: "{{ site.data.mothers-day[page.locale].share_description }}",
+                            })
+                            .catch(() => {});
                     }
                     alert("Copied to clipboard");
                 })
@@ -797,49 +803,49 @@ layout: default
     //     );
     // }
 
-    async function setupWeChat() {
-        try {
-            const currentUrl = window.location.href;
-            const resp = await fetch(
-                `https://wechat-signature-server.onrender.com/wechat-signature?url=${encodeURIComponent(
-                    currentUrl
-                )}`
-            );
-            const config = await resp.json();
+    // async function setupWeChat() {
+    //     try {
+    //         const currentUrl = window.location.href;
+    //         const resp = await fetch(
+    //             `https://wechat-signature-server.onrender.com/wechat-signature?url=${encodeURIComponent(
+    //                 currentUrl
+    //             )}`
+    //         );
+    //         const config = await resp.json();
 
-            console.log(config);
+    //         console.log(config);
 
-            wx.config({
-                debug: false,
-                appId: config.appId,
-                timestamp: config.timestamp,
-                nonceStr: config.nonceStr,
-                signature: config.signature,
-                jsApiList: [
-                    "updateAppMessageShareData",
-                    "updateTimelineShareData",
-                ],
-            });
+    //         wx.config({
+    //             debug: false,
+    //             appId: config.appId,
+    //             timestamp: config.timestamp,
+    //             nonceStr: config.nonceStr,
+    //             signature: config.signature,
+    //             jsApiList: [
+    //                 "updateAppMessageShareData",
+    //                 "updateTimelineShareData",
+    //             ],
+    //         });
 
-            wx.ready(() => {
-                const shareData = {
-                    title: "{{ site.data.mothers-day[page.locale].share_title }}",
-                    desc: "{{ site.data.mothers-day[page.locale].share_description }}",
-                    link: currentUrl,
-                    imgUrl: "https://codingmind.com/assets/img/og-image.png",
-                };
+    //         wx.ready(() => {
+    //             const shareData = {
+    //                 title: "{{ site.data.mothers-day[page.locale].share_title }}",
+    //                 desc: "{{ site.data.mothers-day[page.locale].share_description }}",
+    //                 link: currentUrl,
+    //                 imgUrl: "https://codingmind.com/assets/img/og-image.png",
+    //             };
 
-                wx.updateAppMessageShareData(shareData); // share to friends
-                wx.updateTimelineShareData(shareData); // share to timeline
-            });
+    //             wx.updateAppMessageShareData(shareData); // share to friends
+    //             wx.updateTimelineShareData(shareData); // share to timeline
+    //         });
 
-            wx.error((err) => {
-                console.error("WeChat config error:", err);
-            });
-        } catch (error) {
-            console.error("WeChat config error:", error);
-        }
-    }
+    //         wx.error((err) => {
+    //             console.error("WeChat config error:", err);
+    //         });
+    //     } catch (error) {
+    //         console.error("WeChat config error:", error);
+    //     }
+    // }
 
-    setupWeChat();
+    // setupWeChat();
 </script>
