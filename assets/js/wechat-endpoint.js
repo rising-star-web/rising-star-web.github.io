@@ -12,6 +12,10 @@ function loadWeChatSDK(callback) {
 
 async function setupWeChat() {
   try {
+
+    const description_meta_tag = document.querySelector('meta[name="description"]');
+    const description = description_meta_tag ? description_meta_tag.content : ''; 
+
     const currentUrl = window.location.href;
     const resp = await fetch(
       `https://wechat-signature-server.onrender.com/wechat-signature?url=${encodeURIComponent(
@@ -37,7 +41,7 @@ async function setupWeChat() {
     wx.ready(() => {
       const shareData = {
         title: window.WECHAT_SHARE_TITLE || document.title,
-        desc: window.WECHAT_SHARE_DESC || '',
+        desc: window.WECHAT_SHARE_DESC || description,
         link: window.WECHAT_SHARE_LINK || currentUrl,
         imgUrl: window.WECHAT_SHARE_IMG || "https://codingmind.com/assets/img/og-image.png",
       };
