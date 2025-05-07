@@ -8,11 +8,10 @@ layout: navbar
 
     <!-- Metadata for SEO and Social Sharing -->
     <title>
-        {% if page.locale == 'cn' %}
-            {% if page.title_cn %}{{ page.title_cn }}{% else %}{{ page.title }}{% endif %} | {{ site.title_cn | default: site.title }}
-        {% else %}
-            {% if page.title %}{{ 'Coding Mind - ' | append: page.title }} | {% endif %}{{ site.title }}
-        {% endif %}
+        {% if page.locale == 'cn' %} {% if page.title_cn %}{{ page.title_cn }}{%
+        else %}{{ page.title }}{% endif %} | {{ site.title_cn | default:
+        site.title }} {% else %} {% if page.title %}{{ 'Coding Mind - ' |
+        append: page.title }} | {% endif %}{{ site.title }} {% endif %}
     </title>
     <meta
         name="description"
@@ -36,7 +35,19 @@ layout: navbar
     <meta property="og:url" content="{{ page.url | absolute_url }}" />
     <meta
         property="og:image"
-        content="{{ page.og_image | default: 'assets/img/og-image.png' }}"
+        content="{{ page.og_image | default: 'https://codingmind.com/assets/img/og-image.png' }}"
+    />
+    <meta
+        itemprop="image"
+        content="{{ page.og_image | default: 'https://codingmind.com/assets/img/og-image.png' }}"
+    />
+    <meta
+        name="image"
+        content="{{ page.og_image | default: 'https://codingmind.com/assets/img/og-image.png' }}"
+    />
+    <link
+        rel="image_src"
+        href="{{ page.og_image | default: 'https://codingmind.com/assets/img/og-image.png' }}"
     />
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -50,26 +61,38 @@ layout: navbar
     />
     <meta
         name="twitter:image"
-        content="{{ page.og_image | default: 'assets/img/og-image.png' }}"
+        content="{{ page.og_image | default: 'https://codingmind.com/assets/img/og-image.png' }}"
     />
     <!-- End SEO -->
-    <link rel="icon" href="assets/img/og-image.png" type="image/x-icon" />
     <link
-        rel="shortcut icon"
-        href="assets/img/og-image.png"
+        rel="icon"
+        href="https://codingmind.com/assets/img/og-image.png"
         type="image/x-icon"
     />
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/og-image.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/og-image.png" />
+    <link
+        rel="shortcut icon"
+        href="https://codingmind.com/assets/img/og-image.png"
+        type="image/x-icon"
+    />
+    <link
+        rel="apple-touch-icon"
+        sizes="57x57"
+        href="https://codingmind.com/assets/img/og-image.png"
+    />
+    <link
+        rel="apple-touch-icon"
+        sizes="72x72"
+        href="https://codingmind.com/assets/img/og-image.png"
+    />
     <link
         rel="apple-touch-icon"
         sizes="114x114"
-        href="assets/img/og-image.png"
+        href="https://codingmind.com/assets/img/og-image.png"
     />
     <link
         rel="apple-touch-icon"
         sizes="144x144"
-        href="assets/img/og-image.png"
+        href="https://codingmind.com/assets/img/og-image.png"
     />
     <style type="text/css">
         #flwindow0 {
