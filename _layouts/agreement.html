@@ -5,21 +5,28 @@ layout: default
 <section class="wrapper bg-light">
   <div class="container pt-12 pt-md-14 pb-14 pb-md-16">
     <div class="row">
-      <div class="col-lg-10 col-xl-9 mx-auto">
+      <div class="col-lg-10 col-xl-9 mx-auto text-center">
         <h2 class="mb-4">课程服务协议</h2>
 
-        <div style="height: 70vh; overflow: hidden; border: 1px solid #ccc;" class="mb-4">
-          <iframe src="https://drive.google.com/file/d/1hWDCqH2hpX9tSW6Rp0g9eSVLId3nRqLG/view?usp=sharing" width="100%" height="100%" frameborder="0"></iframe>
-        </div>
+        <p class="lead mb-4">
+          请点击下方按钮打开课程服务协议 PDF，阅读完成后勾选下方确认按钮。
+        </p>
 
-        <div class="text-center">
+        <a href="/assets/docs/课程服务协议_2025.pdf" target="_blank" class="btn btn-outline-primary rounded-pill mb-5">
+          📄 点击查看课程服务协议（PDF）
+        </a>
+
+        <div class="mt-4">
           <label>
             <input type="checkbox" id="agree" onchange="document.getElementById('submitBtn').disabled = !this.checked" />
             我已阅读并同意课程服务协议内容
           </label>
-          <br><br>
-          <button id="submitBtn" disabled class="btn btn-primary rounded-pill" onclick="confirmAgreement()">确认提交</button>
         </div>
+
+        <br>
+        <button id="submitBtn" disabled class="btn btn-primary rounded-pill mt-2" onclick="confirmAgreement()">
+          确认提交
+        </button>
       </div>
     </div>
   </div>
@@ -30,5 +37,6 @@ layout: default
     window.location.href = "/confirmed";
   }
 </script>
+
 
 
