@@ -1,46 +1,32 @@
 ---
 layout: default
 ---
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>课程服务协议</title>
-  <style>
-    body { font-family: sans-serif; padding: 20px; background: #f8f8f8; }
-    .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
-    .iframe-wrapper { height: 70vh; overflow: hidden; border: 1px solid #ccc; margin-bottom: 20px; }
-    iframe { width: 100%; height: 100%; border: none; }
-    .confirm-section { margin-top: 20px; }
-    button[disabled] { background: #ccc; }
-    button { padding: 10px 20px; background: #007BFF; color: white; border: none; border-radius: 4px; cursor: pointer; }
-    button:hover:not([disabled]) { background: #0056b3; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h2>课程服务协议</h2>
+<section class="wrapper bg-light">
+  <div class="container pt-12 pt-md-14 pb-14 pb-md-16">
+    <div class="row">
+      <div class="col-lg-10 col-xl-9 mx-auto">
+        <h2 class="mb-4">课程服务协议</h2>
 
-    <div class="iframe-wrapper">
-      <iframe src="https://docs.google.com/document/d/1PTAW8nTCfK1Galj3ZOBHMFkVg_it7VE6Jwlsacw2j9g/edit?usp=sharing"></iframe>
-    </div>
+        <div style="height: 70vh; overflow: hidden; border: 1px solid #ccc;" class="mb-4">
+          <iframe src="https://docs.google.com/document/d/1PTAW8nTCfK1Galj3ZOBHMFkVg_it7VE6Jwlsacw2j9g/edit?usp=sharing" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
 
-    <div class="confirm-section">
-      <label>
-        <input type="checkbox" id="agree" onchange="document.getElementById('submitBtn').disabled = !this.checked" />
-        我已阅读并同意课程服务协议内容
-      </label>
-      <br><br>
-      <button id="submitBtn" disabled onclick="confirmAgreement()">确认提交</button>
+        <div class="text-center">
+          <label>
+            <input type="checkbox" id="agree" onchange="document.getElementById('submitBtn').disabled = !this.checked" />
+            我已阅读并同意课程服务协议内容
+          </label>
+          <br><br>
+          <button id="submitBtn" disabled class="btn btn-primary rounded-pill" onclick="confirmAgreement()">确认提交</button>
+        </div>
+      </div>
     </div>
   </div>
+</section>
 
-  <script>
-    function confirmAgreement() {
-      // 可在此处添加表单提交或数据记录逻辑
-      window.location.href = "confirmed.html";
-    }
-  </script>
-</body>
-</html>
+<script>
+  function confirmAgreement() {
+    window.location.href = "/confirmed";
+  }
+</script>
+
