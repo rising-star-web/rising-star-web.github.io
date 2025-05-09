@@ -18,13 +18,13 @@ async function setupWeChat() {
 
     const currentUrl = window.location.href;
     const resp = await fetch(
-      `https://backend4.sharemyworks.com/wechat-signature?url=${encodeURIComponent(
+      `https://wechat-signature-server.onrender.com/wechat-signature?url=${encodeURIComponent(
         currentUrl
       )}`
     );
     const config = await resp.json();
 
-    // console.log(config);
+    console.log(config);
 
     wx.config({
       debug: false,
