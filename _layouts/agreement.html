@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<section class="wrapper bg-light">
+  <div class="container pt-12 pt-md-14 pb-14 pb-md-16">
+    <div class="row">
+      <div class="col-lg-10 col-xl-9 mx-auto text-center">
+        <h2 class="mb-4">课程服务协议</h2>
+
+        <p class="lead mb-4">
+          请点击下方按钮打开课程服务协议 PDF，阅读完成后勾选下方确认按钮。
+        </p>
+
+        <a href="/assets/docs/课程服务协议_2025.pdf" target="_blank" class="btn btn-outline-primary rounded-pill mb-5">
+          📄 点击查看课程服务协议（PDF）
+        </a>
+
+        <div class="mt-4">
+          <label>
+            <input type="checkbox" id="agree" onchange="document.getElementById('submitBtn').disabled = !this.checked" />
+            我已阅读并同意课程服务协议内容
+          </label>
+        </div>
+
+        <br>
+        <button id="submitBtn" disabled class="btn btn-primary rounded-pill mt-2" onclick="confirmAgreement()">
+          确认提交
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function confirmAgreement() {
+    window.location.href = "https://codingmind.com/confirmed";
+  }
+</script>
+
+
+
