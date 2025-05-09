@@ -622,6 +622,57 @@ layout: default
                 ).innerText = `${from} ${name}`;
             }
 
+            // Set share title and description with student's first name
+            let firstName = student.firstName ? student.firstName : '';
+            let shareTitle, shareDescription;
+            if (firstName) {
+                const locale = "{{ site.data.mothers-day[page.locale].name }}"
+                console.log(locale);
+                if (locale === 'CN') {
+                    shareTitle = `${firstName} 给您的母亲节祝福`;
+                    shareDescription = `${firstName} 为您录制了一段母亲节祝福视频，快来看看吧！`;
+                } else {
+                    shareTitle = `A Mother's Day message from ${firstName}`;
+                    shareDescription = `${firstName} has created a special Mother's Day message for you!`;
+                }
+            } else {
+                shareTitle = "{{ site.data.mothers-day[page.locale].share_title }}";
+                shareDescription = "{{ site.data.mothers-day[page.locale].share_description }}";
+            }
+            window.WECHAT_SHARE_TITLE = shareTitle;
+            window.WECHAT_SHARE_DESC = shareDescription;
+            window.MOTHERS_DAY_SHARE_TITLE = shareTitle;
+            window.MOTHERS_DAY_SHARE_DESC = shareDescription;
+
+            // Dynamically update <title> and <meta name="description">
+            document.title = shareTitle;
+            let descMeta = document.querySelector('meta[name="description"]');
+            if (!descMeta) {
+                descMeta = document.createElement('meta');
+                descMeta.name = "description";
+                document.head.appendChild(descMeta);
+            }
+            descMeta.content = shareDescription;
+
+            // Dynamically update og:title, og:description, twitter:title, twitter:description
+            // function setOrCreateMeta(property, content, attrType = 'property') {
+            //     // Update all existing meta tags with this property/name
+            //     let metas = document.querySelectorAll(`meta[${attrType}='${property}']`);
+            //     if (metas.length > 0) {
+            //         metas.forEach(meta => meta.setAttribute('content', content));
+            //     } else {
+            //         // If none exist, create one
+            //         let meta = document.createElement('meta');
+            //         meta.setAttribute(attrType, property);
+            //         meta.setAttribute('content', content);
+            //         document.head.appendChild(meta);
+            //     }
+            // }
+            // setOrCreateMeta('og:title', shareTitle);
+            // setOrCreateMeta('og:description', shareDescription);
+            // setOrCreateMeta('twitter:title', shareTitle, 'name');
+            // setOrCreateMeta('twitter:description', shareDescription, 'name');
+
             // console.log(
             //     `${baseUrl}api/Activity/${encodeURIComponent(projectId)}`
             // );
@@ -723,8 +774,8 @@ layout: default
                         navigator
                             .share({
                                 url: text,
-                                title: "{{ site.data.mothers-day[page.locale].share_title }}",
-                                text: "{{ site.data.mothers-day[page.locale].share_description }}",
+                                title: window.MOTHERS_DAY_SHARE_TITLE || "{{ site.data.mothers-day[page.locale].share_title }}",
+                                text: window.MOTHERS_DAY_SHARE_DESC || "{{ site.data.mothers-day[page.locale].share_description }}",
                             })
                             .catch(() => {});
                     }
