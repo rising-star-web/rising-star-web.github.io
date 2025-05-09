@@ -1,11 +1,9 @@
 ---
 title: "Come see how Coding Mind can benefit your kids"
 locale: "en"
-image: 
+image: /assets/img/locations/coding.jpg
 date: 2025-04-01
 ---
-
-![Coding Mind Logo]({{site.logo}}){: width="150px" }
 
 **At the free trial class, you'll find out how Coding Mind's unique approach to coding can help your kids:**
 

@@ -223,7 +223,7 @@ layout: locationdefault
         <div class="col-lg-10 mx-auto">
           <div class="blog classic-view mt-n17 z-0">
             {% assign location_events = location_name | append: "/events/" %}
-            {% assign events = site.locations | where_exp: "item", "item.path contains location_events" | where: "locale", page.locale %}
+            {% assign events = site.locations | where_exp: "item", "item.path contains location_events" | where: "locale", page.locale | sort: "date" | reverse %}
             {% for event in events %}
             <article class="post">
               <div class="card">

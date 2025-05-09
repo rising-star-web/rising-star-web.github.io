@@ -1,11 +1,9 @@
 ---
 title: 来看看 Coding Mind 如何帮助您的孩子
 locale: cn
-image: 
+image: /assets/img/locations/coding.jpg
 date: 2025-04-01
 ---
-
-![Coding Mind Logo]({{site.logo}}){: width="150px" }
 
 **在免费的试用课上，您将了解 Coding Mind 独特的编程方法如何帮助您的孩子：**
 
