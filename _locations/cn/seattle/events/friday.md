@@ -5,7 +5,7 @@ image: /assets/img/locations/friday.jpg
 date: 2025-05-09
 ---
 
-**时间：**五月十六日，周五晚7点至9点  
+**时间：**隔周星期五：请查看注册表以获取最新日期
 **地点：**Coding Mind Academy: 4006 148th AVE NE, Redmond WA 98052  
 **联系方式：**微信号：CodingMindSeattle，电话(206) 887-5698，Email：wa@codingmind.com  
 **费用：**十美元，可用Zelle支付（206 887-5698），或者现金。现学员免费。

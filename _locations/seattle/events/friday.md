@@ -5,7 +5,7 @@ image: /assets/img/locations/friday.jpg
 date: 2025-05-09
 ---
 
-**Event Timing:** Friday, May 16th, 2025, 7-9pm  
+**Event Timing:** Every other Friday: Please see the registration form for the latest date.
 **Event Address:** Coding Mind Academy: 4006 148th AVE NE, Redmond WA 98052  
 **Contact us at:** (206) 887-5698 or wa@codingmind.com  
 **Cost:** $10, can pay via Zelle (206-887-5698), or cash at door. Free for current students.
