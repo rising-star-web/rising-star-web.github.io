@@ -9,22 +9,29 @@ layout: default
         <h2 class="mb-4">课程服务协议</h2>
 
         <p class="lead mb-4">
-          请点击下方按钮打开课程服务协议 PDF，阅读完成后勾选下方确认按钮。
+          请在下方查看课程服务协议，阅读完成后勾选确认按钮。
         </p>
 
-        <a href="/assets/docs/课程服务协议_2025.pdf" target="_blank" class="btn btn-outline-primary rounded-pill mb-5">
-          📄 点击查看课程服务协议（PDF）
-        </a>
+        <!-- 嵌入式 PDF 查看器 -->
+        <div class="pdf-container border rounded shadow-sm mb-5" style="height: 600px; overflow: hidden;">
+          <iframe 
+            src="/assets/docs/课程服务协议_2025.pdf" 
+            width="100%" 
+            height="100%" 
+            style="border: none;"
+            title="课程服务协议 PDF">
+            <p>您的浏览器不支持嵌入式 PDF 查看。<a href="/assets/docs/课程服务协议_2025.pdf" target="_blank">请点击这里下载查看</a></p>
+          </iframe>
+        </div>
 
-        <div class="mt-4">
-          <label>
-            <input type="checkbox" id="agree" onchange="document.getElementById('submitBtn').disabled = !this.checked" />
-            我已阅读并同意课程服务协议内容
-          </label>
+        <div class="mt-4" style="display: flex; align-items: center; justify-content: center; cursor: pointer;" onclick="toggleCheckbox()">
+          <div id="customCheckbox" class="custom-checkbox"></div>
+          <span id="agreementText" style="color: #6c757d; font-size: 16px; margin-left: 10px; user-select: none;">我已阅读并同意课程服务协议内容</span>
         </div>
 
         <br>
-        <button id="submitBtn" disabled class="btn btn-primary rounded-pill mt-2" onclick="confirmAgreement()">
+        <br>
+        <button id="submitBtn" disabled class="btn btn-primary rounded-pill" onclick="confirmAgreement()">
           确认提交
         </button>
       </div>
@@ -33,10 +40,70 @@ layout: default
 </section>
 
 <script>
+  let isChecked = false;
+  
+  function toggleCheckbox() {
+    isChecked = !isChecked;
+    const customCheckbox = document.getElementById('customCheckbox');
+    const submitBtn = document.getElementById('submitBtn');
+    const agreementText = document.getElementById('agreementText');
+    
+    if (isChecked) {
+      customCheckbox.classList.add('checked');
+      agreementText.style.color = '#000';
+      submitBtn.disabled = false;
+    } else {
+      customCheckbox.classList.remove('checked');
+      agreementText.style.color = '#6c757d';
+      submitBtn.disabled = true;
+    }
+  }
+  
   function confirmAgreement() {
     window.location.href = "https://codingmind.com/confirmed";
   }
 </script>
 
-
-
+<style>
+  .pdf-container {
+    background-color: #f8f9fa;
+    position: relative;
+  }
+  
+  .custom-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--bs-primary, #007bff);
+    border-radius: 3px;
+    background-color: white;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .custom-checkbox.checked {
+    background-color: var(--bs-primary, #007bff);
+  }
+  
+  .custom-checkbox.checked::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 6px;
+    height: 11px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  #agreementText {
+    transition: color 0.3s ease;
+  }
+  
+  /* 响应式高度调整 */
+  @media (max-width: 768px) {
+    .pdf-container {
+      height: 400px !important;
+    }
+  }
+</style>
