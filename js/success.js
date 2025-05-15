@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const statusMessage = document.getElementById('statusMessage');
     const backButton = document.getElementById('backButton');
     
-    const baseUrl = 'https://prod-sharemyworks-backend.herokuapp.com/api/';
+    const baseUrl = "https://backend4.sharemyworks.com/api/";
     // const baseUrl = 'http://localhost:3000/api/';
 
     function updateUI(state, title, message) {
@@ -204,8 +204,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
       }
   
-
-  
       return loginData.accountId;
     }
 
@@ -214,54 +212,72 @@ document.addEventListener('DOMContentLoaded', async () => {
       const urlParams = new URLSearchParams(window.location.search);
       const sessionId = urlParams.get('session_id');
 
+      let paymentVerified = false;
+
       if (!sessionId) {
         throw new Error('No session ID found');
       }
 
-      await verifyStripeSession(sessionId);
-      // Check which type of registration we're handling
-      const pendingTrialRegistration = localStorage.getItem('pendingRegistration');
-      const pendingCourseRegistration = localStorage.getItem('pendingLoginData');
-      const pendingSignupData = localStorage.getItem('pendingSignupData');
+      try {
+        await verifyStripeSession(sessionId);
+        paymentVerified = true;
+        // Check which type of registration we're handling
+        const pendingTrialRegistration = localStorage.getItem('pendingRegistration');
+        const pendingCourseRegistration = localStorage.getItem('pendingLoginData');
+        const pendingSignupData = localStorage.getItem('pendingSignupData');
 
-      if (pendingTrialRegistration) {
-        // Handle trial class registration
-        const formData = JSON.parse(pendingTrialRegistration);
-        await handleTrialRegistration(formData);
-        
-        updateUI('success', 'Trial Class Registration Complete!', 
-          'Your registration and payment have been successfully processed. We will contact you shortly with your trial class details.');
-        
-        localStorage.removeItem('pendingRegistration');
-        localStorage.setItem('formCompleted', 'true');
-        localStorage.removeItem('pricingDetails');
+        if (pendingTrialRegistration) {
+          // Handle trial class registration
+          const formData = JSON.parse(pendingTrialRegistration);
+          await handleTrialRegistration(formData);
+          
+          updateUI('success', 'Trial Class Registration Complete!', 
+            'Your registration and payment have been successfully processed. We will contact you shortly with your trial class details.');
+          
+          localStorage.removeItem('pendingRegistration');
+          // localStorage.setItem('formCompleted', 'true');
+          localStorage.removeItem('pricingDetails');
+    
+        } else if (pendingCourseRegistration) {
+          // Handle login registration
+          const loginData = JSON.parse(pendingCourseRegistration);
+          await handleCourseRegistration(loginData);
+          
+          updateUI('success', 'Course Registration Complete!', 
+            'Your registration and payment have been successfully processed. We will contact you shortly with your course details.');
+          
+          localStorage.removeItem('pendingLoginData');
+          localStorage.removeItem('pricingDetails');
+        } else if (pendingSignupData) {
+          // Handle signup registration
+          const signupData = JSON.parse(pendingSignupData);
+          await handleRegistration(signupData);
   
-      } else if (pendingCourseRegistration) {
-        // Handle login registration
-        const loginData = JSON.parse(pendingCourseRegistration);
-        await handleCourseRegistration(loginData);
-        
-        updateUI('success', 'Course Registration Complete!', 
-          'Your registration and payment have been successfully processed.');
-        
-        localStorage.removeItem('pendingLoginData');
-        localStorage.removeItem('pricingDetails');
-      } else if (pendingSignupData) {
-        // Handle signup registration
-        const signupData = JSON.parse(pendingSignupData);
-        await handleRegistration(signupData);
+  
+          updateUI('success', 'Registration Complete!', 
+            'Your registration and payment have been successfully processed. We will contact you shortly with your course details.');
+          
+          localStorage.removeItem('pendingSignupData');
+          localStorage.removeItem('pricingDetails');
+  
+        } else {
+          throw new Error('No registration data found');
+        }
 
-
-        updateUI('success', 'Registration Complete!', 
-          'Your registration and payment have been successfully processed. We will contact you shortly with your course details.');
         
-        localStorage.removeItem('pendingSignupData');
-        localStorage.removeItem('pricingDetails');
+      } catch (error) {
+        console.error('Registration process error:', error);
 
-      } else {
-        throw new Error('No registration data found');
+        if (paymentVerified) {
+          // Payment succeeded but registration failed
+          updateUI('error', 'Registration Processing Issue', 
+            'Your payment was successful, but we encountered an issue while creating your account or adding you to the course. Please contact us at (858) 588-7897 or CodingMindSD@gmail.com for assistance. Reference this payment session: ' + sessionId);
+        } else {
+          // Payment verification failed
+          updateUI('error', 'Payment Verification Error',
+            'There was an error verifying your payment. Please contact us at (858) 588-7897 or CodingMindSD@gmail.com for assistance. Reference this payment session: ' + sessionId);
+        }
       }
-  
     } catch (error) {
       console.error('Registration error:', error);
       updateUI('error', 'Registration Error',
