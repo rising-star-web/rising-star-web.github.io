@@ -10,7 +10,7 @@ projectCategory: "App Development"
 projectDesc: "Admission to UCLA"
 
 [//]: # (Project Page/Showcase)
-headerTitle: "Hardware AI motion detection skating Game"
+headerTitle: "StarSeek: interest group and team management platform"
 bodyText1: "Rebecca created 'StarSeek', an interest group and team management platform for students worldwide, which aims to help students form teams based on their interests, post announcements, organize meetings, and find like-minded partners through an AI recommendation system. "
 bodyText2: "From conceptualization to practical application, she has fully honed her project management, user experience design, and technical implementation skills."
 
