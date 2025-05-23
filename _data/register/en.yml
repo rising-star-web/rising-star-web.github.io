@@ -1,7 +1,7 @@
 name: EN
 
 register:
-  header: Sign up a Coding Mind account
+  header: Sign up for a Coding Mind account
   email: Email
   password: Password
   confirm_password: Confirm Password
