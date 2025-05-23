@@ -1,0 +1,307 @@
+---
+layout: default
+---
+
+<div class="content-wrapper text-center" x-data="projectData()" x-init="loadProject()">
+  <section class="wrapper pt-8 pt-md-12">
+    <div class="container pb-19 pb-md-20">
+      <div class="row">
+        <div class="col-md-10 col-xl-8 mx-auto">
+          <div class="post-header">
+            <div class="post-category mb-4">
+              <span class="badge bg-primary rounded-pill px-3">Student Project</span>
+            </div>
+            <h1 class="display-1 mb-4" x-text="project.title"></h1>
+            <ul class="post-meta">
+              <li class="post-date"><i class="uil uil-calendar-alt"></i><span x-text="formattedDate"></span></li>
+              <li class="post-author"><i class="uil uil-user"></i><span x-text="studentFullName"></span></li>
+              <li class="post-views"><i class="uil uil-eye"></i><span x-text="project.viewCount || 0"></span> views</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrapper">
+    <div class="container pb-14 pb-md-16">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="blog single mt-n17">
+            <div class="card">
+              <figure class="card-img-top hover-scale" x-show="project.imageUrl">
+                <img :src="project.imageUrl" alt="" class="img-fluid"/>
+              </figure>
+              <div class="card-body">
+                <div class="classic-view">
+                  <article class="post">
+                    <div class="post-content">
+                      <div class="post-description">
+                        <p x-text="project.description" class="lead mb-6"></p>
+                      </div>
+
+                      <div x-show="showVideo" class="mb-8">
+                        <!-- YouTube Video -->
+                        <div x-show="youtubeVideoId" class="mb-4" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 0.4rem;">
+                          <iframe :src="`https://www.youtube.com/embed/${youtubeVideoId}`" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
+                        </div>
+                        
+                        <!-- File Videos -->
+                        <template x-if="fileVideos.length > 0">
+                          <div class="video-container">
+                            <template x-for="video in fileVideos" :key="video.s3Link">
+                              <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 0.4rem;">
+                                <video :src="video.s3Link" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" controls></video>
+                              </div>
+                            </template>
+                          </div>
+                        </template>
+                      </div>
+
+                      <div x-show="images.length > 0" class="row g-3 mb-8 justify-content-center">
+                        <template x-for="image in images" :key="image.s3Link">
+                          <div class="col-md-6 text-center">
+                            <figure class="hover-scale rounded cursor-dark">
+                              <a :href="image.s3Link" data-glightbox data-gallery="project">
+                                <img :src="image.s3Link" alt="" class="img-fluid rounded" />
+                              </a>
+                            </figure>
+                          </div>
+                        </template>
+                      </div>
+
+                      <div x-show="project.links && project.links.length > 0" class="mb-8">
+                        <h3 class="h2 mb-4">Project Links</h3>
+                        <ul class="icon-list list-unstyled">
+                          <template x-for="link in project.links" :key="link">
+                            <li class="link-container">
+                              <i class="uil uil-link-alt"></i>
+                              <a :href="link" target="_blank" class="hover" x-text="link"></a>
+                            </li>
+                          </template>
+                        </ul>
+                      </div>
+
+                      <div x-show="project.extra" class="mb-8">
+                        <h3 class="h2 mb-4">Additional Information</h3>
+                        <p x-text="project.extra"></p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Share Section -->
+  <section class="wrapper bg-light">
+    <div class="container py-10 py-md-12">
+      <div class="row">
+        <div class="col-lg-10 mx-auto text-center">
+          <h3 class="display-4 mb-6">Share This Project</h3>
+          <div class="social-share-row">
+            <button type="button" class="btn btn-soft-primary rounded-pill" @click="copyToClipboard()">
+              <i class="uil uil-link"></i> Copy Link
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Alpine.js -->
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<script>
+function projectData() {
+  return {
+    project: {},
+    student: {},
+    images: [],
+    fileVideos: [],
+    youtubeVideoId: '',
+    projectId: new URLSearchParams(window.location.search).get("projectId"),
+    baseUrl: "http://localhost:3000/",
+    // baseUrl: "https://backend4.sharemyworks.com/",
+
+    get formattedDate() {
+      return this.project.dateCreate ? new Date(this.project.dateCreate).toLocaleDateString() : '';
+    },
+
+    get studentFullName() {
+      return this.student.firstName && this.student.lastName ? `${this.student.firstName} ${this.student.lastName}` : '';
+    },
+
+    get showVideo() {
+      return this.youtubeVideoId || this.fileVideos.length > 0;
+    },
+
+    async loadProject() {
+      if (!this.projectId) {
+        console.error('No project ID provided');
+        return;
+      }
+
+      try {
+        // Load project data
+        const response = await fetch(`${this.baseUrl}api/Activity/${this.projectId}`);
+        this.project = await response.json();
+
+        // Load student data
+        const studentResponse = await fetch(`${this.baseUrl}api/Activity/${this.projectId}/student`);
+        this.student = await studentResponse.json();
+
+        // Handle video content
+        if (this.project.videoUrl) {
+          this.youtubeVideoId = this.extractYouTubeId(this.project.videoUrl);
+        }
+        
+        // Always check for uploaded videos
+        const videosResponse = await fetch(`${this.baseUrl}api/Activity/${this.projectId}/getVideos`);
+        const videosData = await videosResponse.json();
+        if (videosData.videos?.length > 0) {
+          this.fileVideos = videosData.videos;
+        }
+
+        // Load project images
+        const imagesResponse = await fetch(`${this.baseUrl}api/Activity/${this.projectId}/getImages`);
+        const imagesData = await imagesResponse.json();
+        if (imagesData.images?.length > 0) {
+          this.images = imagesData.images;
+        }
+
+      } catch (error) {
+        console.error('Error loading project:', error);
+      }
+    },
+
+    extractYouTubeId(url) {
+      const regExp = /(?:youtube\.com\/.*v=|youtu\.be\/)([^&?/]+)/;
+      const match = url.match(regExp);
+      return match ? match[1] : null;
+    },
+
+    copyToClipboard() {
+      const text = window.location.href;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text)
+          .then(() => {
+            alert("Link copied to clipboard!");
+          })
+          .catch(() => {
+            this.fallbackCopy(text);
+          });
+      } else {
+        this.fallbackCopy(text);
+      }
+    },
+
+    fallbackCopy(text) {
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand("copy");
+        alert("Link copied to clipboard!");
+      } catch (err) {
+        console.error('Failed to copy:', err);
+        alert("Please copy the link manually: " + text);
+      }
+      document.body.removeChild(textarea);
+    }
+  }
+}
+</script>
+
+<style>
+.post-meta {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.post-meta li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.post-meta i {
+  color: #3f78e0;
+}
+
+.hover-scale {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+.social-share-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Fixed icon alignment for links */
+.icon-list li {
+  margin-bottom: 0.8rem;
+}
+
+.icon-list li i {
+  color: #3f78e0;
+  font-size: 1rem;
+}
+
+.icon-list li a {
+  color: #60697b;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.icon-list li a:hover {
+  color: #3f78e0;
+}
+
+/* Updated link styling */
+.link-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.link-container i {
+  color: #3f78e0;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.link-container a {
+  color: #60697b;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.link-container a:hover {
+  color: #3f78e0;
+}
+
+/* Video container styling */
+.video-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+</style>
