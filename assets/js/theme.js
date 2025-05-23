@@ -837,6 +837,16 @@ var theme = {
                 const campusLocation = campusField.options[campusField.selectedIndex].id;
                 const referralField = document.getElementById('referral');
                 const referral = referralField.options[referralField.selectedIndex].id;
+                
+                // Handle sales and others referral details
+                let referralDetail = '';
+                if (referral === 'Sales') {
+                  const salesUsername = document.getElementById('salesUsername').value;
+                  referralDetail = salesUsername;
+                } else if (referral === 'Others') {
+                  const otherReferral = document.getElementById('otherReferral').value;
+                  referralDetail = otherReferral;
+                }
 
                 function formatDateTimeSelections() {
 
@@ -889,7 +899,7 @@ var theme = {
                         password: '123',
                         dateOfBirth: new Date(),
                         grade: grade,
-                        referralName: referral,
+                        referralName: referralDetail ? `${referral}: ${referralDetail}` : referral,
                         preferedLanguage: 'English'
                       },
                       trialData: {
@@ -967,7 +977,7 @@ var theme = {
                   password: '123',
                   dateOfBirth: new Date(),
                   grade: grade,
-                  referralName: referral,
+                  referralName: referralDetail ? `${referral}: ${referralDetail}` : referral,
                   preferedLanguage: 'English'
                 };
 

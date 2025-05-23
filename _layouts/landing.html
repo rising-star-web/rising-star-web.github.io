@@ -131,11 +131,25 @@ layout: default
                       <option id="Friend" value="Friend">Friend</option>
                       <option id="Google" value="Google">Google</option>
                       <option id="TikTok" value="TikTok">TikTok</option>
+                      <option id="Sales" value="Sales">Sales</option>
                       <option id="Others" value="Others">Others</option>
                     </select>
                     <div class="invalid-feedback">
                       Please select how you heard about us.
                     </div>
+                  </div>
+                </div>
+                <div id="salesDetails" class="col-md-12" style="display: none;">
+                  <div class="form-floating mb-4">
+                    <input id="salesUsername" type="text" name="salesUsername" class="form-control" placeholder="Sales username">
+                    <label for="salesUsername">Sales Name</label>
+                  </div>
+                </div>
+
+                <div id="otherDetails" class="col-md-12" style="display: none;">
+                  <div class="form-floating mb-4">
+                    <input id="otherReferral" type="text" name="otherReferral" class="form-control" placeholder="Please specify">
+                    <label for="otherReferral">Please specify</label>
                   </div>
                 </div>
                 <div class="col-md-12 mb-4">
@@ -588,6 +602,14 @@ layout: default
           const referral = referralField.options[referralField.selectedIndex].id;
           const availability = document.getElementById('availability').value;
           
+          // Get additional details for Sales and Others options
+          let referralDetails = '';
+          if (referral === 'Sales' && document.getElementById('salesUsername')) {
+            referralDetails = document.getElementById('salesUsername').value;
+          } else if (referral === 'Others' && document.getElementById('otherReferral')) {
+            referralDetails = document.getElementById('otherReferral').value;
+          }
+          
           // API endpoint
           let baseUrl = "https://backend4.sharemyworks.com/api/";
           
@@ -607,6 +629,7 @@ layout: default
             dateOfBirth: new Date().toISOString(),
             grade: grade,
             referralName: referral,
+            referralDetails: referralDetails,
             preferedLanguage: 'English'
           };
           
@@ -762,6 +785,23 @@ layout: default
           }
         }
       });
+    });
+    
+    // Show/hide additional input fields based on referral selection
+    document.getElementById('referral').addEventListener('change', function() {
+      const salesDetails = document.getElementById('salesDetails');
+      const otherDetails = document.getElementById('otherDetails');
+      
+      // Hide both by default
+      salesDetails.style.display = 'none';
+      otherDetails.style.display = 'none';
+      
+      // Show the appropriate one based on selection
+      if (this.value === 'Sales') {
+        salesDetails.style.display = 'block';
+      } else if (this.value === 'Others') {
+        otherDetails.style.display = 'block';
+      }
     });
   });
   </script>

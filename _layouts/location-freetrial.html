@@ -178,9 +178,20 @@ layout: locationdefault
               <option id="Friend" value="Friend">{{ site.data.free-trial[page.locale].freetrial.source6 }}</option>
               <option id="Google" value="Google">{{ site.data.free-trial[page.locale].freetrial.source7 }}</option>
               <option id="TikTok" value="TikTok">{{ site.data.free-trial[page.locale].freetrial.source8 }}</option>
-              <option id="Others" value="Others">{{ site.data.free-trial[page.locale].freetrial.source9 }}</option>
+              <option id="Sales" value="Sales">{{ site.data.free-trial[page.locale].freetrial.source9 }}</option>
+              <option id="Others" value="Others">{{ site.data.free-trial[page.locale].freetrial.source10 }}</option>
               {% endif %}
             </select>
+          </div>
+
+          <div id="salesDetails" class="form-floating mb-4" style="display: none;">
+            <input id="salesUsername" type="text" name="salesUsername" class="form-control" placeholder="Sales username">
+            <label for="salesUsername">Sales Name</label>
+          </div>
+
+          <div id="otherDetails" class="form-floating mb-4" style="display: none;">
+            <input id="otherReferral" type="text" name="otherReferral" class="form-control" placeholder="Please specify">
+            <label for="otherReferral">Please specify</label>
           </div>
 
           <!-- <div class="form-select-wrapper mb-4">
@@ -356,6 +367,23 @@ layout: locationdefault
   const inputElement = document.getElementById('phoneNumber');
   inputElement.addEventListener('keydown', enforceFormat);
   inputElement.addEventListener('keyup', formatToPhone);
+
+  // Show/hide additional input fields based on referral selection
+  document.getElementById('referral').addEventListener('change', function() {
+    const salesDetails = document.getElementById('salesDetails');
+    const otherDetails = document.getElementById('otherDetails');
+    
+    // Hide both by default
+    salesDetails.style.display = 'none';
+    otherDetails.style.display = 'none';
+    
+    // Show the appropriate one based on selection
+    if (this.value === 'Sales') {
+      salesDetails.style.display = 'block';
+    } else if (this.value === 'Others') {
+      otherDetails.style.display = 'block';
+    }
+  });
 </script>
 <style>
   .required::after {
