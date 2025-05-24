@@ -10,7 +10,7 @@ gradeLevel: "L4 Applied Programming"
 pathway: "Generative AI"
 skillLevel: "Intermediate - Advanced"
 shortDescription: "Master the Future: Build Next-Gen Apps with Generative AI and ChatGPT's Cutting-Edge API."
-description: "Dive into the transformative world of Generative AI with our advanced course, Generative AI 2: API and Application Development. This immersive experience empowers you to harness the ChatGPT API in Python, unlocking the potential to create smart, interactive applications that transcend simple chatbot functionalities. As AI continues to revolutionize industries, understanding API integration becomes paramount. Our course guides you through comprehensive app development, climaxing in the deployment of your own web app using the dynamic Streamlit framework. Elevate your skills in this burgeoning field and position yourself at the forefront of technological innovation."
+description: "Dive into the transformative world of Generative AI with our advanced course, Generative AI: API and Application Development. This immersive experience empowers you to harness the ChatGPT API in Python, unlocking the potential to create smart, interactive applications that transcend simple chatbot functionalities. As AI continues to revolutionize industries, understanding API integration becomes paramount. Our course guides you through comprehensive app development, climaxing in the deployment of your own web app using the dynamic Streamlit framework. Elevate your skills in this burgeoning field and position yourself at the forefront of technological innovation."
 videoIntro: "https://www.youtube.com/watch?v=OGmDr8TLtTo"
 learningGoals:
 - "Master the usage of ChatGPT API in Python applications."

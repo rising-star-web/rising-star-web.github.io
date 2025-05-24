@@ -10,7 +10,7 @@ gradeLevel: "L4 应用编程"
 pathway: "生成性人工智能"
 skillLevel: "中级 - 高级"
 shortDescription: "掌握未来：使用生成式AI和ChatGPT的尖端API构建下一代应用程序。"
-description: "深入生成式AI的变革世界，加入我们的高级课程“生成式AI 2：API与应用开发”。这个沉浸式课程让您掌握ChatGPT API在Python中的应用，释放创建智能交互应用的潜力，超越简单聊天机器人功能。随着AI继续颠覆行业，理解API集成变得至关重要。我们的课程带您全面掌握应用开发，最后使用动态的Streamlit框架部署您自己的网络应用。在这个迅速发展的领域提升您的技能，将自己定位为技术创新的前沿。"
+description: "深入生成式AI的变革世界，加入我们的高级课程“生成式AI：API与应用开发”。这个沉浸式课程让您掌握ChatGPT API在Python中的应用，释放创建智能交互应用的潜力，超越简单聊天机器人功能。随着AI继续颠覆行业，理解API集成变得至关重要。我们的课程带您全面掌握应用开发，最后使用动态的Streamlit框架部署您自己的网络应用。在这个迅速发展的领域提升您的技能，将自己定位为技术创新的前沿。"
 videoIntro: "https://www.youtube.com/watch?v=OGmDr8TLtTo"
 learningGoals:
 - "掌握在Python应用程序中使用ChatGPT API的技巧。"
