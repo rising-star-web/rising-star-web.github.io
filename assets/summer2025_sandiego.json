@@ -1,0 +1,111 @@
+{
+  "San-Diego": [
+    {
+      "Name": "Minecraft AI Lab – Exploring the Integration of Programming and Artificial Intelligence",
+      "Time": [
+        "9:00 AM - 12:00 PM",
+        "9:00 AM - 12:00 PM",
+        "1:00 PM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/sandiego/courses/minecraft-programming-camp",
+      "Price": 349,
+      "Grade": "G1+",
+      "Dates": ["W1", "W2", "W5"],
+      "Registration Links": [
+        "https://codingmind.com/sandiego/course-info-register?course_id=682f6f75d2b31e00125a0ace&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=682f71fbd2b31e00125a0b14&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=682f724cd2b31e00125a0b1f&organizationId=66bf6a0dcdae5300148e3a2c"
+      ]
+    },
+    {
+      "Name": "AI Creative Workshop – From Concept to Intelligent Software Development",
+      "Time": [
+        "9:00 AM - 12:00 PM",
+        "1:00 PM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/sandiego/courses/app-thunkable-camp",
+      "Price": 349,
+      "Grade": "G2+",
+      "Dates": ["W3"],
+      "Registration Links": [
+        "https://codingmind.com/sandiego/course-info-register?course_id=682f7350d2b31e00125a0b4d&organizationId=66bf6a0dcdae5300148e3a2c"
+      ]
+    },
+    {
+      "Name": "AI Game Creation – Roblox Development and Smart Game Logic",
+      "Time": [
+        "9:00 AM - 12:00 PM",
+        "1:00 PM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/sandiego/courses/roblox-camp/",
+      "Price": 349,
+      "Grade": "G1+",
+      "Dates": ["W4", "W6"],
+      "Registration Links": [
+        "https://codingmind.com/sandiego/course-info-register?course_id=682f72a3d2b31e00125a0b31&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=682f72f3d2b31e00125a0b3f&organizationId=66bf6a0dcdae5300148e3a2c"
+      ]
+    },
+    {
+      "Name": "AI + Python – Intelligent Application Development and Practice",
+      "Time": [
+        "1:00 PM - 4:00 PM",
+        "9:00 AM - 12:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/sandiego/courses/python-camp",
+      "Price": 349,
+      "Grade": "G4+",
+      "Dates": ["W2", "W6"],
+      "Registration Links": [
+        "https://codingmind.com/sandiego/course-info-register?course_id=682f6d94d2b31e00125a0a98&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=682f6e02d2b31e00125a0aa3&organizationId=66bf6a0dcdae5300148e3a2c"
+      ]
+    },
+    {
+      "Name": "AI-Powered Web Development – From Frontend Interaction to Intelligent Systems",
+      "Time": [
+        "9:00 AM - 12:00 PM",
+        "1:00 PM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/sandiego/courses/web-camp",
+      "Price": 349,
+      "Grade": "G4+",
+      "Dates": ["W5", "W5"],
+      "Registration Links": [
+        "https://codingmind.com/sandiego/course-info-register?course_id=682f6ef3d2b31e00125a0ac0&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=682f71a7d2b31e00125a0b06&organizationId=66bf6a0dcdae5300148e3a2c"
+      ]
+    },
+    {
+      "Name": "Generative AI Creativity Camp – Exploring Large Models and Smart Creation",
+      "Time": [
+        "1:00 PM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/sandiego/courses/gen-ai-camp",
+      "Price": 349,
+      "Grade": "G4+",
+      "Dates": ["W5"],
+      "Registration Links": [
+        "https://codingmind.com/sandiego/course-info-register?course_id=682f6e77d2b31e00125a0ab1&organizationId=66bf6a0dcdae5300148e3a2c"
+      ]
+    },
+    {
+      "Name": "AI ROBOT DOG",
+      "Time": [
+        "9:00 AM - 12:00 PM",
+        "1:00 PM - 4:00 PM",
+        "1:00 PM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/sandiego/courses/science-fair-camp",
+      "Price": 399,
+      "Grade": "G3+",
+      "Dates": ["W1", "W3", "W4"],
+      "Waitlist": ["W7"],
+      "Registration Links": [
+        "https://codingmind.com/sandiego/course-info-register?course_id=682f703cd2b31e00125a0adc&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=682f708ad2b31e00125a0aea&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=682f70d5d2b31e00125a0af8&organizationId=66bf6a0dcdae5300148e3a2c"
+      ]
+    }
+  ]
+}
