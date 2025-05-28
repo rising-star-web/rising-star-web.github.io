@@ -3,9 +3,9 @@
     {
       "Name": "Minecraft AI Lab – Exploring the Integration of Programming and Artificial Intelligence",
       "Time": [
+        "1:00 PM - 4:00 PM",
         "9:00 AM - 12:00 PM",
-        "9:00 AM - 12:00 PM",
-        "1:00 PM - 4:00 PM"
+        "9:00 AM - 12:00 PM"
       ],
       "CourseInfo": "https://codingmind.com/sandiego/courses/minecraft-programming-camp",
       "Price": 349,
@@ -70,7 +70,7 @@
       "CourseInfo": "https://codingmind.com/sandiego/courses/web-camp",
       "Price": 349,
       "Grade": "G4+",
-      "Dates": ["W5", "W5"],
+      "Dates": ["W1", "W1"],
       "Registration Links": [
         "https://codingmind.com/sandiego/course-info-register?course_id=682f6ef3d2b31e00125a0ac0&organizationId=66bf6a0dcdae5300148e3a2c",
         "https://codingmind.com/sandiego/course-info-register?course_id=682f71a7d2b31e00125a0b06&organizationId=66bf6a0dcdae5300148e3a2c"
