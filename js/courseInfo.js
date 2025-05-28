@@ -150,7 +150,24 @@ function getCourseTime(course) {
       });
     }
     
-    return Array.from(uniqueSchedules).join('\n');
+    const dayOrder = {
+      'Monday': 0,
+      'Tuesday': 1,
+      'Wednesday': 2,
+      'Thursday': 3,
+      'Friday': 4,
+      'Saturday': 5,
+      'Sunday': 6
+    };
+    
+    // Sort schedules by day of the week
+    return Array.from(uniqueSchedules)
+      .sort((a, b) => {
+        const dayA = a.split(' ')[0];
+        const dayB = b.split(' ')[0];
+        return dayOrder[dayA] - dayOrder[dayB];
+      })
+      .join('\n');
   }
 }
 
