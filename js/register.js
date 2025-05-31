@@ -97,9 +97,18 @@ document.addEventListener("DOMContentLoaded", function () {
     function populateCourseInfoCard(courseId, token) {
       // For 1v1 private class, show TBD
       if (courseId === "1v1" && isSandiego) {
-        document.getElementById("registerCourseName").innerText = "1v1 private class";
-        document.getElementById("registerCourseDates").innerText = "TBD";
-        document.getElementById("registerCoursePrice").innerText = "TBD";
+        // This fix is due to that because those ids doesn't exist,
+        // this causes the populateCourseInfoCard to fail which halt the
+        // later on execution of binding the form submit event to the form.
+        // It seems that those forms exist inside register.html, but not in
+        // location_register.html, thus adding a temporary fix with try catch.
+        try {
+          document.getElementById("registerCourseName").innerText = "1v1 private class";
+          document.getElementById("registerCourseDates").innerText = "TBD";
+          document.getElementById("registerCoursePrice").innerText = "TBD";
+        } catch {
+          console.error("Failed to populate course info card");
+        }
         return;
       }
   
