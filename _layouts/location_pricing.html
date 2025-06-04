@@ -261,6 +261,8 @@ logo_url = '/' | append: location_name %} {% endif %}
             ? "pk_live_51OSVZRDvY5Eit5tr2N0bTXCpwgUxmtzjYY4K8YQQbvbr1bv3s0JDw1KV35xKQuDwDA7fAPWjQv821cs1wlcdzEvv00Db4GFVaz"
             : "";
 
+    const params = new URL(window.location.href).searchParams;
+
     function showTab(tabId) {
         document.querySelectorAll(".tab-content").forEach((content) => {
             content.style.display = "none";
@@ -273,8 +275,12 @@ logo_url = '/' | append: location_name %} {% endif %}
         document
             .querySelector(`.tab-button[onclick="showTab('${tabId}')"]`)
             .classList.add("active");
+        params.set('tab', tabId);
+        window.history.replaceState(null, document.title, `${window.location.pathname}?${params.toString()}`)
     }
 
+    const selectedTab = params.get('tab');
+    if (selectedTab && document.getElementById(selectedTab)) showTab(selectedTab);
 
     function showFormCompletionToast() {
         Toastify({
