@@ -12,7 +12,6 @@ logo_url = '/' | append: location_name %} {% endif %}
 
 <section class="wrapper bg-custom">
     <div class="container pt-10 pb-19 pt-md-10 pb-md-20 text-center">
-        <div class="row">
             <div class="col-md-10 col-xl-8 mx-auto">
                 <h1 class="display-2 mb-5">
                     {% if page.description %}{{ page.description }}{% else %}{{ page.title
@@ -144,17 +143,6 @@ logo_url = '/' | append: location_name %} {% endif %}
                                 {% if location_name == 'sandiego' %}
                                 <div id="trial-class" class="tab-content" style="display: none">
                                     <div class="pricing-container">
-                                        <!-- <div class="pricing-card"></div> -->
-                                    </div>
-                                </div>
-                                <div id="summer-camp" class="tab-content" style="display: none">
-                                    <div class="pricing-container">
-                                        <!-- <div class="pricing-card"></div> -->
-                                    </div>
-                                </div>
-
-                                <div id="one-time" class="tab-content" style="display: none">
-                                    <div class="pricing-container">
                                         <div class="pricing-card">
                                             <h2>Coding Mind Trial Class</h2>
                                             <p>Get a taste of our classes!</p>
@@ -164,6 +152,10 @@ logo_url = '/' | append: location_name %} {% endif %}
                                                 Sign Up
                                             </button>
                                         </div>
+                                    </div>
+                                </div>
+                                <div id="summer-camp" class="tab-content" style="display: none">
+                                    <div class="pricing-container">
                                         <div class="pricing-card">
                                             <h2>Coding Mind Summer Camp</h2>
                                             <p>Learn to code and have a blast this summer!</p>
@@ -182,6 +174,13 @@ logo_url = '/' | append: location_name %} {% endif %}
                                                 Sign Up
                                             </button>
                                         </div>
+                                    </div>
+                                </div>
+
+                                <div id="one-time" class="tab-content" style="display: none">
+                                    <div class="pricing-container">
+
+
                                     </div>
                                 </div>
                                 {% endif %}
