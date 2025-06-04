@@ -1,0 +1,353 @@
+---
+layout: default
+---
+
+<!-- Alpine.js -->
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<section class="wrapper bg-light" x-data="studentProfileData()">
+    <div class="container pt-10 pt-md-14 pb-14 pb-md-16">
+        <!-- Profile Info Card at the top, matching project grid width -->
+        <div class="row justify-content-center mb-6">
+            <div class="col-12 col-md-10 col-lg-8">
+                <div class="card shadow-lg profile-card animated-profile-card compact-profile-card" style="border-radius: 15px;">
+                    <div class="card-body p-4 d-flex flex-column align-items-center">
+                        <!-- Cartoon Avatar -->
+                        <div class="profile-avatar mb-2 animated-fade-in" style="animation-delay:0.1s;">
+                            <div class="avatar-bg">
+                                <i class="uil uil-smile"></i>
+                            </div>
+                        </div>
+                        <!-- Name & Role -->
+                        <h2 class="mb-1 animated-fade-in text-center" style="animation-delay:0.2s; font-size:1.4rem; font-weight:600;" x-text="profile.fullName || profile.username || 'Loading...'"></h2>
+                        <template x-if="profile.roleName">
+                            <h3 class="fs-16 mb-2 text-primary animated-fade-in text-center" style="animation-delay:0.3s; font-size:1rem; font-weight:400;" x-text="profile.roleName"></h3>
+                        </template>
+                        <!-- Activity Count -->
+                        <div class="animated-fade-in text-center mt-2 mb-2" style="animation-delay:0.35s;">
+                            <span class="fs-16 text-muted">{{ site.data.student-profile[page.locale].studentProfile.activitiesCount }}:</span>
+                            <span class="fs-16 fw-bold text-primary ms-2" x-text="profile.activityCount || 0"></span>
+                        </div>
+                        <!-- About -->
+                        <div class="mt-2 animated-fade-in w-100" style="animation-delay:0.4s;">
+                            <h4 class="mb-2 text-center" style="font-size:1.05rem; font-weight:500;">{{ site.data.student-profile[page.locale].studentProfile.about }}</h4>
+                            <p class="mb-0 text-center" style="font-size:1rem;" x-text="profile.about || 'No description provided'"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Activities Grid below, same container for alignment -->
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                <div class="row g-4">
+                    <!-- Loading State -->
+                    <div class="col-12" x-show="loading">
+                        <div class="text-center">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">{{ site.data.student-profile[page.locale].studentProfile.loading }}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Error State -->
+                    <div class="col-12" x-show="error" x-cloak>
+                        <div class="alert alert-danger text-center" role="alert" x-text="error">
+                        </div>
+                    </div>
+
+                    <!-- Empty State -->
+                    <div class="col-12" x-show="!loading && !error && activities.length === 0" x-cloak>
+                        <div class="text-center">
+                            <i class="uil uil-desert fs-40 text-muted mb-3"></i>
+                            <p class="text-muted">{{ site.data.student-profile[page.locale].studentProfile.noActivities }}</p>
+                        </div>
+                    </div>
+
+                    <!-- Activities -->
+                    <template x-for="activity in activities" :key="activity.id">
+                        <div class="col-md-6">
+                            <div class="card shadow-lg h-100" style="border-radius: 15px;">
+                                <!-- Cartoon Elements -->
+                                <div class="cartoon-elements">
+                                    <div class="cartoon-rocket">
+                                        <i class="uil uil-rocket"></i>
+                                    </div>
+                                    <div class="cartoon-stars">
+                                        <i class="uil uil-star"></i>
+                                        <i class="uil uil-star"></i>
+                                        <i class="uil uil-star"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="card-body p-5">
+                                    <div class="d-flex flex-row align-items-center mb-3">
+                                        <div>
+                                            <h3 class="h4 mb-0" x-text="activity.title || 'Untitled Project'"></h3>
+                                            <span class="text-muted fs-14" x-text="formatDate(activity.dateCreate)"></span>
+                                        </div>
+                                    </div>
+                                    <p class="mb-4" x-text="activity.description || 'No description available'"></p>
+                                    
+                                    <!-- Activity Stats with Cartoon Style -->
+                                    <div class="d-flex align-items-center gap-4 mb-4">
+                                        <div class="d-flex align-items-center cartoon-stat">
+                                            <i class="uil uil-eye me-1"></i>
+                                            <span x-text="activity.viewCount || 0"></span>
+                                        </div>
+                                        <div class="d-flex align-items-center cartoon-stat">
+                                            <i class="uil uil-star me-1"></i>
+                                            <span x-text="activity.points || 0"></span>
+                                        </div>
+                                    </div>
+
+                                    <a :href="getProjectUrl(activity)" 
+                                       class="btn btn-primary rounded-pill cartoon-button">
+                                        <i class="uil uil-arrow-right me-1"></i>
+                                        {{ site.data.student-profile[page.locale].studentProfile.viewProject }}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+function studentProfileData() {
+    console.log('studentProfileData');
+    return {
+        baseUrl: 'https://backend4.sharemyworks.com/',
+        loading: true,
+        error: null,
+        profile: {},
+        activities: [],
+        studentId: new URLSearchParams(window.location.search).get('student-id'),
+
+        // Computed property for location
+        get location() {
+            return [this.profile.addressCity, this.profile.addressState]
+                .filter(Boolean)
+                .join(', ') || 'Location not specified';
+        },
+
+        // Initialize data
+        async init() {
+            if (!this.studentId) {
+                this.error = 'No student ID provided';
+                this.loading = false;
+                return;
+            }
+
+            try {
+                const response = await fetch(
+                    `${this.baseUrl}api/Account/public?id=${encodeURIComponent(this.studentId)}&activityLimit=50`
+                );
+                
+                if (!response.ok) {
+                    throw new Error('Failed to fetch student data');
+                }
+
+                const data = await response.json();
+                console.log(data);
+                
+                if (data.profile.private === true) {
+                    throw new Error('This profile is private');
+                }
+
+                this.profile = data.profile;
+                this.activities = data.activities || [];
+            } catch (error) {
+                console.error('Error:', error);
+                this.error = error.message || 'An error occurred while loading the profile';
+            } finally {
+                this.loading = false;
+            }
+        },
+
+        // Helper methods
+        formatDate(dateString) {
+            return new Date(dateString).toLocaleDateString(undefined, {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        },
+
+        getProjectUrl(activity) {
+            if (activity.type === 'mothers-day-project') {
+                return `/mothers-day?projectId=${activity.id}`;
+            }
+            return `/student-project?projectId=${activity.id}`;
+        },
+
+        getYoutubeEmbedUrl(url) {
+            const videoId = this.extractYoutubeId(url);
+            return videoId ? `https://www.youtube.com/embed/${videoId}` : '';
+        },
+
+        extractYoutubeId(url) {
+            const regExp = /(?:youtube\.com\/.*v=|youtu\.be\/)([^&?/]+)/;
+            const match = url.match(regExp);
+            return match ? match[1] : null;
+        }
+    }
+}
+</script>
+
+<style>
+    [x-cloak] {
+        display: none !important;
+    }
+    
+    .card {
+        transition: transform 0.2s ease-in-out;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .fs-40 {
+        font-size: 2.5rem;
+    }
+
+    /* Cartoon Elements Styling */
+    .cartoon-elements {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        overflow: hidden;
+        border-radius: 15px;
+    }
+
+    .cartoon-rocket {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        font-size: 2rem;
+        transform: rotate(45deg);
+        opacity: 0.1;
+        transition: all 0.3s ease;
+    }
+
+    .card:hover .cartoon-rocket {
+        transform: rotate(45deg) translate(-10px, 10px);
+        opacity: 0.2;
+    }
+
+    .cartoon-stars {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 1rem;
+        opacity: 0.1;
+    }
+
+    .cartoon-stars i {
+        margin-right: 5px;
+        animation: twinkle 1.5s infinite;
+    }
+
+    .cartoon-stars i:nth-child(2) {
+        animation-delay: 0.5s;
+    }
+
+    .cartoon-stars i:nth-child(3) {
+        animation-delay: 1s;
+    }
+
+    @keyframes twinkle {
+        0%, 100% { opacity: 0.1; transform: scale(1); }
+        50% { opacity: 0.3; transform: scale(1.2); }
+    }
+
+    /* Cartoon Stats Styling */
+    .cartoon-stat {
+        background: rgba(63, 120, 224, 0.1);
+        padding: 5px 12px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .cartoon-stat:hover {
+        transform: scale(1.1);
+        background: rgba(63, 120, 224, 0.2);
+    }
+
+    .cartoon-stat i {
+        color: #3f78e0;
+        font-size: 1.2rem;
+    }
+
+    /* Cartoon Button Styling */
+    .cartoon-button {
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .cartoon-button:hover {
+        transform: translateX(5px);
+    }
+
+    .cartoon-button i {
+        transition: transform 0.3s ease;
+    }
+
+    .cartoon-button:hover i {
+        transform: translateX(3px);
+    }
+
+    /* Card Enhancement */
+    .card {
+        transition: transform 0.2s ease-in-out;
+        background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+        border: none;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    /* Add a subtle pattern to cards */
+    .card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: radial-gradient(#3f78e0 1px, transparent 1px);
+        background-size: 20px 20px;
+        opacity: 0.03;
+        border-radius: 15px;
+    }
+
+    .compact-profile-card {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        min-height: unset;
+        box-shadow: 0 4px 16px rgba(63,120,224,0.08);
+    }
+    .profile-avatar {
+        margin-bottom: 0.5rem !important;
+    }
+    .avatar-bg {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #ffe4e1 0%, #c9e7ff 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        color: #3f78e0;
+        border: 2px solid #fff;
+        margin-bottom: 0.2rem;
+    }
+</style>

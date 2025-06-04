@@ -22,6 +22,7 @@ async function setupWeChat() {
         currentUrl
       )}`
     );
+    console.log(resp);
     const config = await resp.json();
 
     console.log(config);

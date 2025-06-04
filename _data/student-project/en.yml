@@ -1,0 +1,9 @@
+name: EN
+
+studentProject:
+  title: Student Projects
+  description: Explore our students' projects and see how they apply programming skills to real-world problems. From web development to machine learning, our students are creating innovative solutions that are making a positive impact.
+  projectLinks: Project Links
+  share: Share This Project
+  copyLink: Copy Link
+  additionalInfo: Additional Information

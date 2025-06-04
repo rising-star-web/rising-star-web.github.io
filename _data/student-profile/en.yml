@@ -1,0 +1,10 @@
+name: EN
+
+studentProfile:
+  title: Student Profile
+  description: Explore our students' profiles and see how they apply programming skills to real-world problems. From web development to machine learning, our students are creating innovative solutions that are making a positive impact.
+  viewProject: View Project
+  activitiesCount: Activities Count
+  about: About
+  noActivities: No Activities found
+  loading: Loading...
