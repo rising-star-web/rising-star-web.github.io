@@ -40,17 +40,27 @@ logo_url = '/' | append: location_name %} {% endif %}
                     <div class="card shadow-lg">
                         <div class="d-flex flex-column">
                             <div class="pricing-wrapper">
-                            {% if location_name == 'west-lafayette' or location_name ==
-                            'sandiego' %}
-                            <div class="tab-container">
-                                <button class="tab-button active" onclick="showTab('monthly')">
-                                    Monthly
-                                </button>
-                                <button class="tab-button" onclick="showTab('one-time')">
-                                    One Time Payment
-                                </button>
-                            </div>
-                            {% endif %}
+                                {% if location_name == 'west-lafayette' or location_name ==
+                                'sandiego' %}
+                                <div class="tab-container">
+                                    <button class="tab-button active" onclick="showTab('monthly')">
+                                        Monthly
+                                    </button>
+                                    {% if location_name == 'west-lafayette' %}
+                                    <button class="tab-button" onclick="showTab('one-time')">
+                                        One Time Payment
+                                    </button>
+                                    {% endif %}
+                                    {% if location_name == 'sandiego' %}
+                                    <button class="tab-button" onclick="showTab('summer-camp')">
+                                        Summer Camp
+                                    </button>
+                                    <button class="tab-button" onclick="showTab('trial-class')">
+                                        Trial Class
+                                    </button>
+                                    {% endif %}
+                                </div>
+                                {% endif %}
                                 <div id="monthly" class="tab-content">
                                     <div class="pricing-container">
                                         {% if location_name == 'west-lafayette' %}
@@ -132,6 +142,17 @@ logo_url = '/' | append: location_name %} {% endif %}
                                 </div>
 
                                 {% if location_name == 'sandiego' %}
+                                <div id="trial-class" class="tab-content" style="display: none">
+                                    <div class="pricing-container">
+                                        <!-- <div class="pricing-card"></div> -->
+                                    </div>
+                                </div>
+                                <div id="summer-camp" class="tab-content" style="display: none">
+                                    <div class="pricing-container">
+                                        <!-- <div class="pricing-card"></div> -->
+                                    </div>
+                                </div>
+
                                 <div id="one-time" class="tab-content" style="display: none">
                                     <div class="pricing-container">
                                         <div class="pricing-card">
@@ -232,9 +253,9 @@ logo_url = '/' | append: location_name %} {% endif %}
     //const API_URL = 'http://localhost:3000/api/';
 
     const API_URL = 'https://backend4.sharemyworks.com/api/';
-    
+
     const LOCATION_NAME = "{{ location_name }}";
-    const STRIPE_PUBLIC_KEY = LOCATION_NAME === "sandiego" 
+    const STRIPE_PUBLIC_KEY = LOCATION_NAME === "sandiego"
         ? "pk_live_51PykoAP2pSpFqYXAXHJtAjmYzwf3kZt6K877RmO6pYp0DFCdCw08VVdXxkMySVE1HU5CiqxZC8XHjQnTZPxAflND004piDnQ7w"
         : LOCATION_NAME === "west-lafayette"
             ? "pk_live_51OSVZRDvY5Eit5tr2N0bTXCpwgUxmtzjYY4K8YQQbvbr1bv3s0JDw1KV35xKQuDwDA7fAPWjQv821cs1wlcdzEvv00Db4GFVaz"
@@ -288,19 +309,19 @@ logo_url = '/' | append: location_name %} {% endif %}
         const now = new Date();
         const currentMonth = now.getMonth();
         const currentYear = now.getFullYear();
-        
+
         const lastDay = new Date(currentYear, currentMonth + 1, 0).getDate();
-        
+
         // Calculate weeks remaining in the month
         const currentDate = now.getDate();
         const weeksInMonth = Math.ceil(lastDay / 7);
         const currentWeek = Math.ceil(currentDate / 7);
         const weeksRemaining = weeksInMonth - currentWeek + 1;
-        
+
         // Calculate weekly rate from monthly price
         const weeklyRate = monthlyPrice / weeksInMonth;
         const proratedAmount = (weeklyRate * weeksRemaining).toFixed(2);
-        
+
         // Next billing date remains the same - first day of next month
         const nextBillingDate = new Date(currentYear, currentMonth + 1, 1);
 
@@ -317,13 +338,13 @@ logo_url = '/' | append: location_name %} {% endif %}
         const processingFeePercent = 3.5;
         const processingFee = (monthlyPrice * (processingFeePercent / 100)).toFixed(2);
         const totalAmount = (parseFloat(monthlyPrice) + parseFloat(processingFee)).toFixed(2);
-        
+
         return {
-            proratedAmount: parseFloat(totalAmount), 
+            proratedAmount: parseFloat(totalAmount),
             processingFee: parseFloat(processingFee),
             monthlyPrice: parseFloat(monthlyPrice),
             processingFeePercent,
-            daysRemaining: null, 
+            daysRemaining: null,
             nextBillingDate: new Date(),
             type: 'processing_fee'
         };
@@ -353,22 +374,22 @@ logo_url = '/' | append: location_name %} {% endif %}
         const formCompleted = localStorage.getItem('formCompleted');
         const pendingSignupData = localStorage.getItem('pendingSignupData');
         const pendingLoginData = localStorage.getItem('pendingLoginData');
-        
+
         if (LOCATION_NAME === 'sandiego') {
             if (planName === 'SD Trial Class') {
                 if (formCompleted === 'true') {
                     window.location.href = `/${LOCATION_NAME}/payment_details`;
                 } else {
-                showFormCompletionToast();
-                setTimeout(() => {
-                    window.location.href = `/${LOCATION_NAME}/schedule-trial`;
+                    showFormCompletionToast();
+                    setTimeout(() => {
+                        window.location.href = `/${LOCATION_NAME}/schedule-trial`;
                     }, 2000);
                 }
             } else if (planName === '1v1 Junior Membership' || planName === '1v1 Senior Membership') {
                 if (pendingSignupData || pendingLoginData) {
                     window.location.href = `/${LOCATION_NAME}/payment_details`;
                 } else {
-                    showSignUpToast();  
+                    showSignUpToast();
                     setTimeout(() => {
                         window.location.href = `/${LOCATION_NAME}/course-info-register/?organizationId=66bf6a0dcdae5300148e3a2c&course_id=1v1`;
                     }, 2000);
@@ -378,7 +399,7 @@ logo_url = '/' | append: location_name %} {% endif %}
                 if (pendingSignupData || pendingLoginData) {
                     window.location.href = `/${LOCATION_NAME}/payment_details`;
                 } else {
-                    showSignUpToast();  
+                    showSignUpToast();
                     setTimeout(() => {
                         window.location.href = `/${LOCATION_NAME}/schedule`;
                     }, 2000);
@@ -387,7 +408,7 @@ logo_url = '/' | append: location_name %} {% endif %}
             }
         } else if (LOCATION_NAME === 'west-lafayette') {
             window.location.href = `/${LOCATION_NAME}/payment_details`;
-        } 
+        }
     }
 </script>
 
@@ -483,7 +504,8 @@ logo_url = '/' | append: location_name %} {% endif %}
     }
 
     .pricing-card h2 {
-        color: #fff; /* Sets the title color to white */
+        color: #fff;
+        /* Sets the title color to white */
     }
 
     /* Responsive adjustments */
