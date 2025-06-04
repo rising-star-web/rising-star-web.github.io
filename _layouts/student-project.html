@@ -126,8 +126,8 @@ function projectData() {
     fileVideos: [],
     youtubeVideoId: '',
     projectId: new URLSearchParams(window.location.search).get("projectId"),
-    baseUrl: "http://localhost:3000/",
-    // baseUrl: "https://backend4.sharemyworks.com/",
+    // baseUrl: "http://localhost:3000/",
+    baseUrl: "https://backend4.sharemyworks.com/",
 
     get formattedDate() {
       return this.project.dateCreate ? new Date(this.project.dateCreate).toLocaleDateString() : '';
