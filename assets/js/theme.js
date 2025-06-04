@@ -834,6 +834,12 @@ var theme = {
                 const experienceField = document.getElementById('experience');
                 const experience = experienceField.options[experienceField.selectedIndex].id;
                 const campusField = document.getElementById('campus');
+                if (!campusField) {
+                  console.error('Campus field not found');
+                  $('#formSpinner').css("display", "none");
+                  $('#form').prepend('An error has occurred. Please contact us at +1 (949) 236-7896 for help.');
+                  return;
+                }
                 const campusLocation = campusField.options[campusField.selectedIndex].id;
                 const referralField = document.getElementById('referral');
                 const referral = referralField.options[referralField.selectedIndex].id;

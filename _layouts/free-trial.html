@@ -105,6 +105,13 @@ layout: default
             </select>
           </div>
 
+          <div id="sanDiegoMessage" class="alert alert-info mb-4" style="display: none;">
+            <strong>San Diego Campus:</strong> For San Diego campus registration, please visit our dedicated scheduling page: 
+            <a href="https://codingmind.com/sandiego/schedule-trial/" target="_blank" style="color: #0c5460; font-weight: bold;">
+              https://codingmind.com/sandiego/schedule-trial/
+            </a>
+          </div>
+
           <div class="form-select-wrapper mb-4">
             <select class="form-select" aria-label="Default select example" required="required" id="referral"
               name="referral">
@@ -259,4 +266,39 @@ layout: default
       otherDetails.style.display = 'block';
     }
   });
+  document.getElementById('campus').addEventListener('change', function() {
+    const sanDiegoMessage = document.getElementById('sanDiegoMessage');
+    const submitButton = document.getElementById('trialButton');
+    const selectedId = this.options[this.selectedIndex].id;
+    
+    if (selectedId === 'San-diego') {
+      // Show San Diego message
+      sanDiegoMessage.style.display = 'block';
+      // Disable submit button
+      submitButton.disabled = true;
+    } else if (this.value !== '') {
+      // Hide San Diego message
+      sanDiegoMessage.style.display = 'none';
+      // Enable submit button
+      submitButton.disabled = false;
+    } else {
+      // No selection - hide message but keep button disabled until valid selection
+      sanDiegoMessage.style.display = 'none';
+      submitButton.disabled = true;
+    }
+  });
+  document.getElementById('trialButton').disabled = true;
+
 </script>
+<style>
+  .alert {
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.alert-info {
+  background-color: #e7f3ff;
+  border: 1px solid #b8daff;
+  color: #0c5460;
+}
+</style>
