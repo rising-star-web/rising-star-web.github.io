@@ -25,12 +25,12 @@ layout: default
                         </template>
                         <!-- Activity Count -->
                         <div class="animated-fade-in text-center mt-2 mb-2" style="animation-delay:0.35s;">
-                            <span class="fs-16 text-muted">Activities Count:</span>
+                            <span class="fs-16 text-muted">{{ site.data.student-profile[page.locale].studentProfile.activitiesCount }}:</span>
                             <span class="fs-16 fw-bold text-primary ms-2" x-text="profile.activityCount || 0"></span>
                         </div>
                         <!-- About -->
                         <div class="mt-2 animated-fade-in w-100" style="animation-delay:0.4s;">
-                            <h4 class="mb-2 text-center" style="font-size:1.05rem; font-weight:500;">About</h4>
+                            <h4 class="mb-2 text-center" style="font-size:1.05rem; font-weight:500;">{{ site.data.student-profile[page.locale].studentProfile.about }}</h4>
                             <p class="mb-0 text-center" style="font-size:1rem;" x-text="profile.about || 'No description provided'"></p>
                         </div>
                     </div>
@@ -45,7 +45,7 @@ layout: default
                     <div class="col-12" x-show="loading">
                         <div class="text-center">
                             <div class="spinner-border text-primary" role="status">
-                                <span class="visually-hidden">Loading...</span>
+                                <span class="visually-hidden">{{ site.data.student-profile[page.locale].studentProfile.loading }}</span>
                             </div>
                         </div>
                     </div>
@@ -60,7 +60,7 @@ layout: default
                     <div class="col-12" x-show="!loading && !error && activities.length === 0" x-cloak>
                         <div class="text-center">
                             <i class="uil uil-desert fs-40 text-muted mb-3"></i>
-                            <p class="text-muted">No activities found</p>
+                            <p class="text-muted">{{ site.data.student-profile[page.locale].studentProfile.noActivities }}</p>
                         </div>
                     </div>
 
@@ -104,7 +104,7 @@ layout: default
                                     <a :href="getProjectUrl(activity)" 
                                        class="btn btn-primary rounded-pill cartoon-button">
                                         <i class="uil uil-arrow-right me-1"></i>
-                                        View Project
+                                        {{ site.data.student-profile[page.locale].studentProfile.viewProject }}
                                     </a>
                                 </div>
                             </div>

@@ -1,0 +1,10 @@
+name: CN
+
+studentProfile:
+  title: 学生个人主页
+  description: 查看我们学生的个人主页，了解他们如何将编程技能应用于实际问题。从网页开发到机器学习，我们的学生正在创造创新的解决方案，正在产生积极影响。
+  viewProject: 查看项目
+  activitiesCount: 活动数量
+  about: 个人简介
+  noActivities: 暂无活动
+  loading: 加载中...

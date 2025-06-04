@@ -2,14 +2,14 @@
 layout: default
 ---
 
-<div class="content-wrapper text-center" x-data="projectData()" x-init="loadProject()">
+<div class="content-wrapper text-center" x-data="projectData()" x-init="loadProject()" x-cloak>
   <section class="wrapper pt-8 pt-md-12">
     <div class="container pb-19 pb-md-20">
       <div class="row">
         <div class="col-md-10 col-xl-8 mx-auto">
           <div class="post-header">
             <div class="post-category mb-4">
-              <span class="badge bg-primary rounded-pill px-3">Student Project</span>
+              <span class="badge bg-primary rounded-pill px-3">{{ site.data.student-project[page.locale].studentProject.title }}</span>
             </div>
             <h1 class="display-1 mb-4" x-text="project.title"></h1>
             <ul class="post-meta">
@@ -71,7 +71,7 @@ layout: default
                       </div>
 
                       <div x-show="project.links && project.links.length > 0" class="mb-8">
-                        <h3 class="h2 mb-4">Project Links</h3>
+                        <h3 class="h2 mb-4">{{ site.data.student-project[page.locale].studentProject.projectLinks }}</h3>
                         <ul class="icon-list list-unstyled">
                           <template x-for="link in project.links" :key="link">
                             <li class="link-container">
@@ -83,7 +83,7 @@ layout: default
                       </div>
 
                       <div x-show="project.extra" class="mb-8">
-                        <h3 class="h2 mb-4">Additional Information</h3>
+                        <h3 class="h2 mb-4">{{ site.data.student-project[page.locale].studentProject.additionalInfo }}</h3>
                         <p x-text="project.extra"></p>
                       </div>
                     </div>
@@ -102,10 +102,10 @@ layout: default
     <div class="container py-10 py-md-12">
       <div class="row">
         <div class="col-lg-10 mx-auto text-center">
-          <h3 class="display-4 mb-6">Share This Project</h3>
+          <h3 class="display-4 mb-6">{{ site.data.student-project[page.locale].studentProject.share }}</h3>
           <div class="social-share-row">
             <button type="button" class="btn btn-soft-primary rounded-pill" @click="copyToClipboard()">
-              <i class="uil uil-link"></i> Copy Link
+              <i class="uil uil-link"></i> {{ site.data.student-project[page.locale].studentProject.copyLink }}
             </button>
           </div>
         </div>
@@ -177,6 +177,7 @@ function projectData() {
 
       } catch (error) {
         console.error('Error loading project:', error);
+        alert('Error loading project');
       }
     },
 
