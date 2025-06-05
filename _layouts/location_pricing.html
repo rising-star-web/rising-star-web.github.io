@@ -278,13 +278,10 @@ logo_url = '/' | append: location_name %} {% endif %}
         window.history.replaceState(null, document.title, `${window.location.pathname}?${params.toString()}`)
     }
 
-    const selectedProgram = localStorage.get('selectedProgram');
-    const selectedTab = params.get('tab');
+    const selectedProgram = localStorage.getItem('selectedProgram');
+    const selectedTab = params.get('tab') || selectedProgram;
     if (selectedTab && document.getElementById(selectedTab)) showTab(selectedTab);
-    if (selectedProgram && document.getElementById(selectedProgram)) {
-        showTab(selectedTab);
-        localStorage.removeItem('selectedProgram');
-    }
+    localStorage.removeItem('selectedProgram');
 
     function showFormCompletionToast() {
         Toastify({
