@@ -279,9 +279,19 @@ logo_url = '/' | append: location_name %} {% endif %}
     }
 
     const selectedProgram = localStorage.getItem('selectedProgram');
+    const selectedPrice = localStorage.getItem('selectedPrice');
     const selectedTab = params.get('tab') || selectedProgram;
     if (selectedTab && document.getElementById(selectedTab)) showTab(selectedTab);
-    localStorage.removeItem('selectedProgram');
+    if (LOCATION_NAME === "sandiego" && selectedPrice && selectedTab) {
+        const inactiveTabs = [...document.querySelectorAll('.tab-container > :not(.active)')];
+        inactiveTabs.forEach((el) => el.classList.add('d-none'))
+
+        const priceCards = [...document.querySelectorAll('.pricing-container > .pricing-card')];
+        priceCards
+            .filter((el) => el.querySelector('p > strong').innerHTML !== `\$${selectedPrice}`)
+            .forEach((el) => el.classList.add('d-none'));
+    }
+
 
     function showFormCompletionToast() {
         Toastify({
@@ -383,6 +393,8 @@ logo_url = '/' | append: location_name %} {% endif %}
         const pendingLoginData = localStorage.getItem('pendingLoginData');
 
         if (LOCATION_NAME === 'sandiego') {
+            localStorage.removeItem('selectedProgram');
+            localStorage.removeItem('selectedPrice');
             if (planName === 'SD Trial Class') {
                 if (formCompleted === 'true') {
                     localStorage.removeItem('formCompleted');
