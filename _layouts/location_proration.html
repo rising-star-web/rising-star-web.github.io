@@ -156,12 +156,16 @@ layout: locationdefault
                 }
 
                 const result = await response.json();
+                console.log("Checkout session response:", result);  
 
                 if (result && result.sessionId) {
+                    console.log("Checkout session created successfully:", result);
                     // Store the customer ID if returned
                     if (result.customerId) {
                         localStorage.setItem("customerId", result.customerId);
                     }
+
+                    localStorage.removeItem("pricingDetails");
                     
                     // Redirect to Stripe checkout
                     const stripe = Stripe(STRIPE_PUBLIC_KEY);
