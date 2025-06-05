@@ -4,3 +4,5 @@ _site
 
 # By Yu Cao (David): ignoring different local config files for Jekyll and vscode:
 .editorconfig
+
+.jekyll-metadata
