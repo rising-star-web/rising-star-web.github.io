@@ -12,20 +12,20 @@ logo_url = '/' | append: location_name %} {% endif %}
 
 <section class="wrapper bg-custom">
     <div class="container pt-10 pb-19 pt-md-10 pb-md-20 text-center">
-            <div class="col-md-10 col-xl-8 mx-auto">
-                <h1 class="display-2 mb-5">
-                    {% if page.description %}{{ page.description }}{% else %}{{ page.title
-                    }}{% endif %}
-                </h1>
-                {% if page.image %}
-                <div
-                    style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}/posts/{{ page.ref }}.jpg')">
-                </div>
-                {% endif %}
+        <div class="col-md-10 col-xl-8 mx-auto">
+            <h1 class="display-2 mb-5">
+                {% if page.description %}{{ page.description }}{% else %}{{ page.title
+                }}{% endif %}
+            </h1>
+            {% if page.image %}
+            <div
+                style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}/posts/{{ page.ref }}.jpg')">
             </div>
-            <!-- /column -->
+            {% endif %}
         </div>
-        <!-- /.row -->
+        <!-- /column -->
+    </div>
+    <!-- /.row -->
     </div>
     <!-- /.container -->
 </section>
@@ -278,8 +278,13 @@ logo_url = '/' | append: location_name %} {% endif %}
         window.history.replaceState(null, document.title, `${window.location.pathname}?${params.toString()}`)
     }
 
+    const selectedProgram = localStorage.get('selectedProgram');
     const selectedTab = params.get('tab');
     if (selectedTab && document.getElementById(selectedTab)) showTab(selectedTab);
+    if (selectedProgram && document.getElementById(selectedProgram)) {
+        showTab(selectedTab);
+        localStorage.removeItem('selectedProgram');
+    }
 
     function showFormCompletionToast() {
         Toastify({
