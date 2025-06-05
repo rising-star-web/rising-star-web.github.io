@@ -11,7 +11,7 @@ pathway: "USACO (美国计算机奥林匹克)"
 skillLevel: "高级"
 shortDescription: "掌握竞赛编程核心：USACO 之数据结构与算法！"
 description: "通过USACO 2：数据结构与算法深入掌握计算的核心！这门充满活力的课程让学生掌握基本的数据结构和算法策略，从而解决复杂的问题。在掌握当今最具开创性的技术进步的基础上，参与解决现实世界中的迷人问题，提升您解决问题的能力。本课程非常适合那些对计算机科学、数学或编程竞赛充满热情的人，通过线性和非线性数据结构以及在编码竞赛中取得成功的关键算法，为您提供一个令人兴奋的旅程。"
-videoIntro: "https://open.spotify.com/track/6A8NfypDHuwiLWbo4a1yca?si=ec380e6b7bf84234"
+videoIntro: "https://www.youtube.com/watch?v=apN_UAdcDcI&pp=ygULaW50cm8gdXNhY28%3D"
 learningGoals:
 - "掌握基本的数据结构，如数组、列表、栈、队列和树。"
 - "培养适用于竞赛编程的问题解决能力。"
