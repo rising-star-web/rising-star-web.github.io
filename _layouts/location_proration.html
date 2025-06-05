@@ -137,6 +137,8 @@ layout: locationdefault
                 customerId: customerId ? String(customerId) : undefined
             };
 
+            console.log("Request data for checkout:", requestData);
+
             try {
                 // Choose endpoint based on location
                 const endpoint = LOCATION_NAME === 'sandiego' 
