@@ -383,6 +383,7 @@ logo_url = '/' | append: location_name %} {% endif %}
         if (LOCATION_NAME === 'sandiego') {
             if (planName === 'SD Trial Class') {
                 if (formCompleted === 'true') {
+                    localStorage.removeItem('formCompleted');
                     window.location.href = `/${LOCATION_NAME}/payment_details`;
                 } else {
                     showFormCompletionToast();
