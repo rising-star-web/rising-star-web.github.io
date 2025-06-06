@@ -58,7 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     courseId: courseId,
                     price: price,
                     language: chinese ? "Chinese" : "English",
-                    organizationId: organizationId
+                    organizationId: organizationId,
+                    timestamp: new Date().toISOString()
                 };
                 
                 localStorage.setItem('pendingLoginData', JSON.stringify(loginInfo));

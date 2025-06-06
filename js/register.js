@@ -53,7 +53,8 @@ document.addEventListener("DOMContentLoaded", function () {
         registerData: postData,
         courseId: courseId,
         token: token,
-        price: price
+        price: price,
+        timestamp: new Date().toISOString()
       };
 
       localStorage.setItem('pendingSignupData', JSON.stringify(registrationInfo));

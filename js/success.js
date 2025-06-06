@@ -223,8 +223,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         paymentVerified = true;
         // Check which type of registration we're handling
         const pendingTrialRegistration = localStorage.getItem('pendingRegistration');
-        const pendingCourseRegistration = localStorage.getItem('pendingLoginData');
         const pendingSignupData = localStorage.getItem('pendingSignupData');
+        const pendingCourseRegistration = localStorage.getItem('pendingLoginData');
 
         if (pendingTrialRegistration) {
           // Handle trial class registration
@@ -235,7 +235,35 @@ document.addEventListener('DOMContentLoaded', async () => {
             'Your registration and payment have been successfully processed. We will contact you shortly with your trial class details.');
           
           localStorage.removeItem('pendingRegistration');
-          // localStorage.setItem('formCompleted', 'true');
+          localStorage.removeItem('pendingLoginData');
+          localStorage.removeItem('pendingSignupData');
+          localStorage.removeItem('formCompleted');
+          localStorage.removeItem('pricingDetails');
+    
+        } else if (pendingCourseRegistration && pendingSignupData) {
+          // Both exist - compare timestamps and process the most recent one
+          const loginData = JSON.parse(pendingCourseRegistration);
+          const signupData = JSON.parse(pendingSignupData);
+          
+          const loginTimestamp = new Date(loginData.timestamp || 0);
+          const signupTimestamp = new Date(signupData.timestamp || 0);
+          
+          if (signupTimestamp > loginTimestamp) {
+            // Signup is more recent
+            await handleRegistration(signupData);
+            updateUI('success', 'Registration Complete!', 
+              'Your registration and payment have been successfully processed. We will contact you shortly with your course details.');
+          } else {
+            // Login is more recent or timestamps are equal
+            await handleCourseRegistration(loginData);
+            updateUI('success', 'Course Registration Complete!', 
+              'Your registration and payment have been successfully processed. We will contact you shortly with your course details.');
+          }
+          
+          // Remove both regardless of which one was processed
+          localStorage.removeItem('pendingLoginData');
+          localStorage.removeItem('pendingRegistration');
+          localStorage.removeItem('pendingSignupData');
           localStorage.removeItem('pricingDetails');
     
         } else if (pendingCourseRegistration) {
@@ -246,8 +274,10 @@ document.addEventListener('DOMContentLoaded', async () => {
           updateUI('success', 'Course Registration Complete!', 
             'Your registration and payment have been successfully processed. We will contact you shortly with your course details.');
           
-          localStorage.removeItem('pendingLoginData');
-          localStorage.removeItem('pricingDetails');
+            localStorage.removeItem('pendingLoginData');
+            localStorage.removeItem('pendingRegistration');
+            localStorage.removeItem('pendingSignupData');
+            localStorage.removeItem('pricingDetails');
         } else if (pendingSignupData) {
           // Handle signup registration
           const signupData = JSON.parse(pendingSignupData);
@@ -257,8 +287,10 @@ document.addEventListener('DOMContentLoaded', async () => {
           updateUI('success', 'Registration Complete!', 
             'Your registration and payment have been successfully processed. We will contact you shortly with your course details.');
           
-          localStorage.removeItem('pendingSignupData');
-          localStorage.removeItem('pricingDetails');
+            localStorage.removeItem('pendingLoginData');
+            localStorage.removeItem('pendingRegistration');
+            localStorage.removeItem('pendingSignupData');
+            localStorage.removeItem('pricingDetails');
   
         } else {
           throw new Error('No registration data found');
