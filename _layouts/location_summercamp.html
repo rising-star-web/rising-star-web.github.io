@@ -722,6 +722,11 @@ layout: locationdefault
       var $button = $(this);
       var registrationUrl = $button.data('registration');
       if (registrationUrl) {
+        let price = $button.closest('tr').find('td:first').find('.course-details').find('p:last').get(0).innerText;
+        price = price.split('$')[1]
+        console.log(price);
+        localStorage.setItem('selectedProgram', 'summer-camp');
+        localStorage.setItem('selectedPrice', price);
         window.open(registrationUrl, '_blank');
       } else {
         console.error('Registration URL not found');
@@ -1236,35 +1241,35 @@ layout: locationdefault
         var scheduleInfo = course.dates.get(date);
 
         var $content = $('<div class="date-content">');
-          if (scheduleInfo) {
-            if (scheduleInfo.time) {
-              $content.append($('<p class="time">').text(scheduleInfo.time));
-            }
-
-            if (scheduleInfo.isWaitlist) {
-              var waitlistFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdfqVH23TWPHwmqoOV7GeU2s2_xT4fV6KOfxb_DvREkcYjKJQ/viewform?usp=sharing";
-              
-              $content.append(
-                $('<button>', {
-                  class: 'btn-join-waitlist',
-                  text: '{{ site.data.summercamp[page.locale].summer.joinWaitlist}}',
-                  'data-waitlist-form': waitlistFormUrl
-                }).click(function() {
-                  window.open($(this).data('waitlist-form'), '_blank');
-                })
-              );
-            } else {
-              $content.append(
-                $('<button>', {
-                  class: 'btn-join-today',
-                  text: '{{ site.data.summercamp[page.locale].summer.joinToday }}',
-                  'data-registration': scheduleInfo.registration
-                })
-              );
-            }
-          } else {
-            $content.append('<div class="no-class">-</div>');
+        if (scheduleInfo) {
+          if (scheduleInfo.time) {
+            $content.append($('<p class="time">').text(scheduleInfo.time));
           }
+
+          if (scheduleInfo.isWaitlist) {
+            var waitlistFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdfqVH23TWPHwmqoOV7GeU2s2_xT4fV6KOfxb_DvREkcYjKJQ/viewform?usp=sharing";
+
+            $content.append(
+              $('<button>', {
+                class: 'btn-join-waitlist',
+                text: '{{ site.data.summercamp[page.locale].summer.joinWaitlist}}',
+                'data-waitlist-form': waitlistFormUrl
+              }).click(function () {
+                window.open($(this).data('waitlist-form'), '_blank');
+              })
+            );
+          } else {
+            $content.append(
+              $('<button>', {
+                class: 'btn-join-today',
+                text: '{{ site.data.summercamp[page.locale].summer.joinToday }}',
+                'data-registration': scheduleInfo.registration
+              })
+            );
+          }
+        } else {
+          $content.append('<div class="no-class">-</div>');
+        }
 
         $dateCell.append($content);
         $row.append($dateCell);

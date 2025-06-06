@@ -12,20 +12,20 @@ logo_url = '/' | append: location_name %} {% endif %}
 
 <section class="wrapper bg-custom">
     <div class="container pt-10 pb-19 pt-md-10 pb-md-20 text-center">
-            <div class="col-md-10 col-xl-8 mx-auto">
-                <h1 class="display-2 mb-5">
-                    {% if page.description %}{{ page.description }}{% else %}{{ page.title
-                    }}{% endif %}
-                </h1>
-                {% if page.image %}
-                <div
-                    style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}/posts/{{ page.ref }}.jpg')">
-                </div>
-                {% endif %}
+        <div class="col-md-10 col-xl-8 mx-auto">
+            <h1 class="display-2 mb-5">
+                {% if page.description %}{{ page.description }}{% else %}{{ page.title
+                }}{% endif %}
+            </h1>
+            {% if page.image %}
+            <div
+                style="background-image: url('{{ site.baseurl }}{{ site.assets }}{{ site.images }}/posts/{{ page.ref }}.jpg')">
             </div>
-            <!-- /column -->
+            {% endif %}
         </div>
-        <!-- /.row -->
+        <!-- /column -->
+    </div>
+    <!-- /.row -->
     </div>
     <!-- /.container -->
 </section>
@@ -278,8 +278,20 @@ logo_url = '/' | append: location_name %} {% endif %}
         window.history.replaceState(null, document.title, `${window.location.pathname}?${params.toString()}`)
     }
 
-    const selectedTab = params.get('tab');
+    const selectedProgram = localStorage.getItem('selectedProgram');
+    const selectedPrice = localStorage.getItem('selectedPrice');
+    const selectedTab = params.get('tab') || selectedProgram;
     if (selectedTab && document.getElementById(selectedTab)) showTab(selectedTab);
+    if (LOCATION_NAME === "sandiego" && selectedPrice && selectedTab) {
+        const inactiveTabs = [...document.querySelectorAll('.tab-container > :not(.active)')];
+        inactiveTabs.forEach((el) => el.classList.add('d-none'))
+
+        const priceCards = [...document.querySelectorAll('.pricing-container > .pricing-card')];
+        priceCards
+            .filter((el) => el.querySelector('p > strong').innerHTML !== `\$${selectedPrice}`)
+            .forEach((el) => el.classList.add('d-none'));
+    }
+
 
     function showFormCompletionToast() {
         Toastify({
@@ -381,6 +393,8 @@ logo_url = '/' | append: location_name %} {% endif %}
         const pendingLoginData = localStorage.getItem('pendingLoginData');
 
         if (LOCATION_NAME === 'sandiego') {
+            localStorage.removeItem('selectedProgram');
+            localStorage.removeItem('selectedPrice');
             if (planName === 'SD Trial Class') {
                 if (formCompleted === 'true') {
                     localStorage.removeItem('formCompleted');
