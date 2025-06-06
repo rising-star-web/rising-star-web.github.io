@@ -26,25 +26,30 @@ document.addEventListener("DOMContentLoaded", function () {
   registerForm.addEventListener("submit", function (event) {
     console.log("Form submitted");
     event.preventDefault();
+
+    // Validate form first
+    if (!registerForm.checkValidity()) {
+      registerForm.classList.add('was-validated');
+      return; // Stop execution if form is invalid
+    }
     loadingIndicator.style.display = "block";
 
+
     var formData = new FormData(registerForm);
+
     var postData = {
       email2: formData.get("email"),
       password: formData.get("password"),
       phone2: formData.get("phone"),
       firstName: formData.get("firstName"),
       lastName: formData.get("lastName"),
-      parentFirstName: "",
-      parentLastName: "",
       grade: formData.get("grade"),
-      dateOfBirth: formData.get("dateOfBirth"),
+      dateOfBirth: formData.get("dateOfBirth") || new Date().toISOString().split('T')[0],
       organizationId: organizationId,
       username: (
         formData.get("firstName") + formData.get("lastName")
       ).toLowerCase(),
       preferedLanguage: chinese ? "Chinese" : "English",
-      dateOfBirth: new Date(),
     };
 
     if (isSandiego) {
