@@ -708,6 +708,29 @@ layout: locationdefault
     courseInfo: '{% if site.data.summercamp[page.locale].summer.courseInfo %}{{ site.data.summercamp[page.locale].summer.courseInfo }}{% else %}Course Info{% endif %}'
   };
 
+  // Helper function to check if a date has passed - ADDED FROM FIRST FILE
+  function isDatePassed(dateString) {
+    var currentYear = new Date().getFullYear();
+    var today = new Date();
+    
+    var startDateStr = dateString.split(' - ')[0].trim();
+    
+    var dateParts = startDateStr.split('/');
+    if (dateParts.length === 2) {
+      var month = parseInt(dateParts[0]) - 1;
+      var day = parseInt(dateParts[1]);
+      
+      var courseDate = new Date(currentYear, month, day);
+      
+      var todayDate = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+      var courseDateOnly = new Date(courseDate.getFullYear(), courseDate.getMonth(), courseDate.getDate());
+      
+      return courseDateOnly < todayDate;
+    }
+    
+    return false;
+  }
+
   $(document).ready(function () {
     // Set up modal listener
     setupModalListeners();
@@ -979,9 +1002,9 @@ layout: locationdefault
     // Create dates section
     var $datesSection = $('<div>', { class: 'mobile-dates-section' });
 
-    // Add date items
+    // Add date items - UPDATED TO FILTER OUT PAST DATES
     course.dates.forEach((scheduleInfo, date) => {
-      if (scheduleInfo) {
+      if (scheduleInfo && !isDatePassed(date)) {
         var $dateItem = createMobileDateItem(date, scheduleInfo);
         $datesSection.append($dateItem);
       }
@@ -1089,8 +1112,11 @@ layout: locationdefault
       dateHeaders = Array.from(dateCodes).sort();
     }
 
-    if (dateHeaders.length === 0) {
-      $grid.html('<div class="alert alert-info">No dates available at this time. Please check back later.</div>');
+    // Filter out past dates - ADDED FROM FIRST FILE
+    var visibleDateHeaders = dateHeaders.filter(date => !isDatePassed(date));
+
+    if (visibleDateHeaders.length === 0) {
+      $grid.html('<div class="alert alert-info">No upcoming dates available at this time. Please check back later.</div>');
       return;
     }
 
@@ -1131,19 +1157,21 @@ layout: locationdefault
               // Use either the date from datesData or the code itself
               const dateText = datesData && datesData[dateCode] ? datesData[dateCode] : dateCode;
 
-              // Get registration link
-              const registrationLink = course["Registration Links"] &&
-                index < course["Registration Links"].length ?
-                course["Registration Links"][index] : "#";
+              // Only include future dates - ADDED FROM FIRST FILE
+              if (!isDatePassed(dateText)) {
+                // Get registration link
+                const registrationLink = course["Registration Links"] &&
+                  index < course["Registration Links"].length ?
+                  course["Registration Links"][index] : "#";
 
-              const isWaitlist = Array.isArray(course.Waitlist) && course.Waitlist.includes(dateCode);
+                const isWaitlist = Array.isArray(course.Waitlist) && course.Waitlist.includes(dateCode);
 
-
-              courseInfo.dates.set(dateText, {
-                time: timeValue,
-                registration: registrationLink,
-                isWaitlist: isWaitlist
-              });
+                courseInfo.dates.set(dateText, {
+                  time: timeValue,
+                  registration: registrationLink,
+                  isWaitlist: isWaitlist
+                });
+              }
             });
           }
 
@@ -1171,8 +1199,8 @@ layout: locationdefault
     // Add course name header
     $headerRow.append('<th class="course-col">{{ site.data.summercamp[page.locale].summer.courseName }}</th>');
 
-    // Add date headers
-    dateHeaders.forEach(date => {
+    // Add date headers - only for visible (future) dates - UPDATED FROM FIRST FILE
+    visibleDateHeaders.forEach(date => {
       $headerRow.append(`<th class="date-col">${date}</th>`);
     });
 
@@ -1212,7 +1240,7 @@ layout: locationdefault
       var $details = $('<div class="course-details">').append(
         $('<h4>').text(course.name),
         $('<p>').text(`${translations.grade}: ${course.grade}`),
-        $('<p>').text(`${translations.price}: $${course.price}`)
+        $('<p>').text(`${translations.price}: ${course.price}`)
       );
 
       // Add discount if available
@@ -1235,8 +1263,8 @@ layout: locationdefault
       $courseCell.append($courseContent);
       $row.append($courseCell);
 
-      // Add date cells
-      dateHeaders.forEach(date => {
+      // Add date cells - only for visible (future) dates - UPDATED FROM FIRST FILE
+      visibleDateHeaders.forEach(date => {
         var $dateCell = $('<td class="date-cell">');
         var scheduleInfo = course.dates.get(date);
 
