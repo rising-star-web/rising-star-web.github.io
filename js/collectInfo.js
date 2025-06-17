@@ -155,7 +155,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 timeZone: document.getElementById("timeZone").value,
                 gender: document.getElementById("gender").value,
                 dateOfBirth: document.getElementById("birthday").value,
-                availableTime: JSON.stringify(availableTimes)
+                availableTime: JSON.stringify(availableTimes),
+                phoneNumber: document.getElementById("studentPhone").value,
+                email: document.getElementById("studentEmail").value
             };
 
             // PATCH request to update account information
@@ -181,13 +183,16 @@ document.addEventListener("DOMContentLoaded", function () {
                                     `Student ${formData.firstName} ${formData.lastName} has updated his/her information:\n` +
                                     `First Name: ${formData.firstName}\n` +
                                     `Last Name: ${formData.lastName}\n` +
-                                    `Email: ${formData.email2}\n` +
-                                    `Phone: ${formData.phone2}\n` +
+                                    `Parent Email: ${formData.email2}\n` +
+                                    `Parent Phone: ${formData.phone2}\n` +
+                                    `Student Email: ${formData.email}\n` +
+                                    `Student Phone: ${formData.phoneNumber}\n` +
                                     `Grade: ${formData.grade}\n` +
                                     `Time Zone: ${formData.timeZone}\n` +
                                     `Gender: ${formData.gender}\n` +
                                     `Date of Birth: ${formData.dateOfBirth}\n` +
                                     `Available Time: ${formData.availableTime}\n`,
+
                             }),
                         }
                     );

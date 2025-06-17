@@ -72,6 +72,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 lastName: document.getElementById("lastName").value,
                 email2: document.getElementById("email").value,
                 phone2: document.getElementById("phone").value,
+                studentEmail: document.getElementById("studentEmail").value,
+                studentPhone: document.getElementById("studentPhone").value,
             };
 
             // PATCH request to update account information
@@ -97,8 +99,10 @@ document.addEventListener("DOMContentLoaded", function () {
                                     `Student ${formData.firstName} ${formData.lastName} has updated his/her information:\n` +
                                     `First Name: ${formData.firstName}\n` +
                                     `Last Name: ${formData.lastName}\n` +
-                                    `Email: ${formData.email2}\n` +
-                                    `Phone: ${formData.phone2}\n`,
+                                    `Parent Email: ${formData.email2}\n` +
+                                    `Parent Phone: ${formData.phone2}\n` +
+                                    `Student Email: ${formData.studentEmail}\n` +
+                                    `Student Phone: ${formData.studentPhone}\n`
                             }),
                         }
                     );
