@@ -99,6 +99,14 @@ layout: default
                             <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone" required>
                             <label for="phone">{{ site.data.collect-student-info[page.locale].collect-student-info.parentPhone}}</label>
                         </div>
+                        <div class="form-floating mb-4">
+                            <input type="tel" class="form-control" id="studentPhone" name="studentPhone" placeholder="Student Phone">
+                            <label for="studentPhone">{{ site.data.collect-student-info[page.locale].collect-student-info.studentPhone}}</label>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input type="email" class="form-control" id="studentEmail" name="studentEmail" placeholder="Student Email">
+                            <label for="studentEmail">{{ site.data.collect-student-info[page.locale].collect-student-info.studentEmail}}</label>
+                        </div>
                         <br>
                         <br>
                         <button type="submit" class="btn btn-primary rounded-pill btn-send">{{ site.data.collect-student-info[page.locale].collect-student-info.submit}}</button>

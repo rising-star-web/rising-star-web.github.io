@@ -117,6 +117,14 @@ layout: default
                             <label for="phone">{{ site.data.collect-student-info[page.locale].collect-student-info.parentPhone}}</label>
                         </div>
                         <div class="form-floating mb-4">
+                            <input type="tel" class="form-control" id="studentPhone" name="studentPhone" placeholder="Student Phone">
+                            <label for="studentPhone">{{ site.data.collect-student-info[page.locale].collect-student-info.studentPhone}}</label>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input type="email" class="form-control" id="studentEmail" name="studentEmail" placeholder="Student Email">
+                            <label for="studentEmail">{{ site.data.collect-student-info[page.locale].collect-student-info.studentEmail}}</label>
+                        </div>
+                        <div class="form-floating mb-4">
                             <!-- <label for="timeZone">{{ site.data.collect-student-info[page.locale].collect-student-info.timezone}}</label> -->
                             <select class="form-select" id="timeZone" name="timeZone" aria-label="Floating label select example" required>
                                 <option value="America/Los_Angeles">{{ site.data.collect-student-info[page.locale].collect-student-info.utcn7}}</option>

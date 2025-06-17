@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("lastName").value = account.lastName || "";
             document.getElementById("email").value = account.email2 || "";
             document.getElementById("phone").value = account.phone2 || "";            
+            document.getElementById("studentPhone").value = account.phoneNumber || "";
+            document.getElementById("studentEmail").value = account.email || "";
         })
         .catch((error) => {
             Toastify({

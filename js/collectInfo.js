@@ -100,9 +100,9 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("grade").value = account.grade || "";
             document.getElementById("timeZone").value = account.timeZone || "";
             document.getElementById("gender").value = account.gender || "";
+            document.getElementById("studentPhone").value = account.phoneNumber || "";
+            document.getElementById("studentEmail").value = account.email || "";
 
-
-            
             if (account.dateOfBirth) {
                 const dateOfBirth = new Date(account.dateOfBirth);
                 document.getElementById("birthday").value = dateOfBirth.toISOString().split("T")[0];

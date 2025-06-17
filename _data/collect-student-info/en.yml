@@ -11,6 +11,8 @@ collect-student-info:
   birthday: Student's Birthday
   parentEmail: Parent's Email (Used to confirm courses and provide feedback reports)
   parentPhone: Parent's Phone (Used for SMS reminders and emergency notifications, not for telemarketing)
+  studentPhone: Student's Phone
+  studentEmail: Student's Email
   grade: Grade
   timezone: Please Select Your Timezone
   availableTime: Please Select Your Available Time (Monday to Sunday)

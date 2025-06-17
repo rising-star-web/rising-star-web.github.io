@@ -11,6 +11,8 @@ collect-student-info:
   birthday: 学生生日
   parentEmail: 家长邮箱 (用于确认课程以及提供反馈报告)
   parentPhone: 家长电话 (用于短信提醒和紧急情况通知 而非电话营销)
+  studentPhone: 学生电话
+  studentEmail: 学生邮箱
   grade: 年级
   timezone: 请选择你所在的时区
   availableTime: 请选择可用时间 (星期一到星期日)
