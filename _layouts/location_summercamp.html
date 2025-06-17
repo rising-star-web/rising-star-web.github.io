@@ -747,7 +747,7 @@ layout: locationdefault
       if (registrationUrl) {
         let price = $button.closest('tr').find('td:first').find('.course-details').find('p:last').get(0).innerText;
         price = price.split('$')[1]
-        console.log(price);
+        console.log('price: ', price);
         localStorage.setItem('selectedProgram', 'summer-camp');
         localStorage.setItem('selectedPrice', price);
         window.open(registrationUrl, '_blank');
@@ -960,7 +960,7 @@ layout: locationdefault
     $info.append(
       $('<h3>').text(course.name),
       $('<div>', { class: 'mobile-course-age' }).text(`${translations.grade}: ${course.grade}`),
-      $('<div>', { class: 'mobile-course-age' }).text(`${translations.price}: $${course.price}`)
+      $('<div>', { class: 'mobile-course-age' }).text(`${translations.price}: ${course.price}`)
     );
 
     // Add discount if available
@@ -1062,8 +1062,22 @@ layout: locationdefault
         class: 'mobile-btn mobile-btn-dark',
         text: '{{ site.data.summercamp[page.locale].summer.joinToday }}',
         'data-registration': scheduleInfo.registration
-      }).click(function () {
-        window.open($(this).data('registration'), '_blank');
+      }).click(function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var $button = $(this);
+        var registrationUrl = $button.data('registration');
+        if (registrationUrl) {
+          // Get price from the mobile card
+          let price = $button.closest('.mobile-course-card').find('.mobile-course-age').filter(function() {
+            return $(this).text().includes('Price:') || $(this).text().includes('${translations.price}:');
+          }).text();
+          price = price.split('$')[1] || price.split(':')[1]?.trim();
+          console.log('price on mobile: ', price);
+          localStorage.setItem('selectedProgram', 'summer-camp');
+          localStorage.setItem('selectedPrice', price);
+          window.open(registrationUrl, '_blank');
+        }
       });
     }
 
@@ -1137,7 +1151,7 @@ layout: locationdefault
           let courseInfo = courseMap.get(courseKey) || {
             name: course.Name || "Unnamed Course",
             grade: course.Grade || "All Grades",
-            price: course.Price || "Contact for price",
+            price: `$${course.Price}`|| "Contact for price",
             discount: course.Discount || "",
             courseInfo: course.CourseInfo || "",
             dates: new Map()
