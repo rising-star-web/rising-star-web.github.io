@@ -152,6 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 email2: document.getElementById("email").value,
                 phone2: document.getElementById("phone").value,
                 grade: document.getElementById("grade").value,
+                gradeLastUpdateAt: new Date().toISOString(),
                 timeZone: document.getElementById("timeZone").value,
                 gender: document.getElementById("gender").value,
                 dateOfBirth: document.getElementById("birthday").value,
