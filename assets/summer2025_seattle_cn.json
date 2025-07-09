@@ -1,0 +1,108 @@
+{
+  "Seattle": [
+    {
+      "Name": "Minecraft AI实验室 - 编程与人工智能的融合探索",
+      "Time": [
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/seattle/courses/minecraft-programming-camp",
+      "Price": 600,
+      "Grade": "1-4",
+      "Dates": ["W4", "W6", "W8", "W10"],
+      "Registration Links": [
+        "https://codingmind.com/seattle/course-info-register?course_id=67a67e2b1f24a300154dc542&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cd12b7a129130015c4fd11&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cd14d1a129130015c4fd2e&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cda5a2a129130015c4fe19&organizationId=6684406b10707d0014fb7369"      ]
+    },
+    {
+      "Name": "AI游戏创作 - Roblox开发与智能游戏逻辑",
+      "Time": [
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/seattle/courses/roblox-camp/",
+      "Price": 600,
+      "Grade": "1-4",
+      "Dates": ["W5", "W9"],
+      "Waitlist": ["W8", "W11"],
+      "Registration Links": [
+        "https://codingmind.com/seattle/course-info-register?course_id=67a2675e86dcc1001586d3a0&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cdaae8a129130015c4fe4f&organizationId=6684406b10707d0014fb7369"
+      ]
+    },
+    {
+      "Name": "AI启蒙之旅 - 少儿人工智能思维培养",
+      "Time": [
+        "9:00 AM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/seattle/courses/introductory-ai",
+      "Price": 600,
+      "Grade": "1-4",
+      "Dates": ["W10"],
+      "Registration Links": [
+        "https://codingmind.com/seattle/course-info-register?course_id=67cdba9517cc4f0015b7b8d7&organizationId=6684406b10707d0014fb7369"
+      ]
+    },
+    {
+      "Name": "AI+Python - 智能应用开发与实践",
+      "Time": [
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/seattle/courses/python-camp",
+      "Price": 700,
+      "Grade": "5-8",
+      "Dates": ["W5", "W9"],
+      "Registration Links": [
+        "https://codingmind.com/seattle/course-info-register?course_id=67a266cd86dcc1001586d392&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cdbb6c17cc4f0015b7b8e7&organizationId=6684406b10707d0014fb7369"
+      ]
+    },
+    {
+      "Name": "AI驱动Web开发 - 从前端交互到智能系统",
+      "Time": [
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/seattle/courses/web-camp",
+      "Price": 700,
+      "Grade": "5-8",
+      "Dates": ["W5", "W7"],
+      "Registration Links": [
+        "https://codingmind.com/seattle/course-info-register?course_id=67a267fe86dcc1001586d3ae&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67a26b8686dcc1001586d406&organizationId=6684406b10707d0014fb7369"
+      ]
+    },
+    {
+      "Name": "生成式AI创意营 - 探索大模型与智能创作",
+      "Time": [
+        "9:00 AM - 4:00 PM",
+        "9:00 AM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/seattle/courses/gen-ai-camp",
+      "Price": 700,
+      "Grade": "5-8",
+      "Dates": ["W6", "W8"],
+      "Registration Links": [
+        "https://codingmind.com/seattle/course-info-register?course_id=67a2695886dcc1001586d3ca&organizationId=6684406b10707d0014fb7369",
+        "https://codingmind.com/seattle/course-info-register?course_id=67cdb19ba129130015c4fe7b&organizationId=6684406b10707d0014fb7369"      ]
+    },
+    {
+      "Name": "科技初创公司101 - 青年软件创业者",
+      "Time": [
+        "9:00 AM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/seattle/courses/startup-camp",
+      "Price": 900,
+      "Grade": "7-12",
+      "Dates": ["W8"],
+      "Registration Links": [
+        "https://codingmind.com/seattle/course-info-register?course_id=67a2762386dcc1001586d4b4&organizationId=6684406b10707d0014fb7369"
+      ]
+    }
+  ]
+}
