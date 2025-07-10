@@ -63,21 +63,6 @@
       ]
     },
     {
-      "Name": "AI-Powered Web Development – From Frontend Interaction to Intelligent Systems",
-      "Time": [
-        "9:00 AM - 4:00 PM",
-        "9:00 AM - 4:00 PM"
-      ],
-      "CourseInfo": "https://codingmind.com/seattle/courses/web-camp",
-      "Price": 700,
-      "Grade": "5-8",
-      "Dates": ["W5", "W7"],
-      "Registration Links": [
-        "https://codingmind.com/seattle/course-info-register?course_id=67a267fe86dcc1001586d3ae&organizationId=6684406b10707d0014fb7369",
-        "https://codingmind.com/seattle/course-info-register?course_id=67a26b8686dcc1001586d406&organizationId=6684406b10707d0014fb7369"
-      ]
-    },
-    {
       "Name": "Generative AI Creativity Camp – Exploring Large Models and Smart Creation",
       "Time": [
         "9:00 AM - 4:00 PM",
@@ -102,6 +87,19 @@
       "Dates": ["W8"],
       "Registration Links": [
         "https://codingmind.com/seattle/course-info-register?course_id=67a2762386dcc1001586d4b4&organizationId=6684406b10707d0014fb7369"
+      ]
+    },
+    {
+      "Name": "AI Art and Metaverse – Unity Smart Creation and Virtual World Building",
+      "Time": [
+        "9:00 AM - 4:00 PM"
+      ],
+      "CourseInfo": "https://codingmind.com/seattle/courses/unity-camp",
+      "Price": 700,
+      "Grade": "5-8",
+      "Dates": ["W11"],
+      "Registration Links": [
+        "https://codingmind.com/seattle/course-info-register?course_id=67cdb61017cc4f0015b7b897&organizationId=6684406b10707d0014fb7369"
       ]
     }
   ]
