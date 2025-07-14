@@ -283,7 +283,17 @@ logo_url = '/' | append: location_name %} {% endif %}
 
     const selectedProgram = localStorage.getItem('selectedProgram');
     const selectedPrice = localStorage.getItem('selectedPrice');
-    const selectedTab = params.get('tab') || selectedProgram;
+    const urlTab = params.get('tab');
+
+    let selectedTab;
+    if (urlTab && document.getElementById(urlTab)) {
+        selectedTab = urlTab;
+    } else if (selectedProgram && document.getElementById(selectedProgram)) {
+        selectedTab = selectedProgram;
+    } else {
+        selectedTab = 'monthly'; // Default tab
+    }
+
     if (selectedTab && document.getElementById(selectedTab)) showTab(selectedTab);
     if (LOCATION_NAME === "sandiego" && selectedPrice && selectedTab) {
         const inactiveTabs = [...document.querySelectorAll('.tab-container > :not(.active)')];
@@ -295,6 +305,10 @@ logo_url = '/' | append: location_name %} {% endif %}
             .forEach((el) => el.classList.add('d-none'));
     }
 
+    if (selectedProgram || selectedPrice) {
+        localStorage.removeItem('selectedProgram');
+        localStorage.removeItem('selectedPrice');
+    }
 
     function showFormCompletionToast() {
         Toastify({
