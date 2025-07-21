@@ -159,7 +159,7 @@ function studentProfileData() {
                 }
 
                 this.profile = data.profile;
-                this.activities = data.activities || [];
+                this.activities = (data.activities || []).sort((a, b) => new Date(b.dateCreate) - new Date(a.dateCreate));
             } catch (error) {
                 console.error('Error:', error);
                 this.error = error.message || 'An error occurred while loading the profile';
@@ -349,5 +349,14 @@ function studentProfileData() {
         color: #3f78e0;
         border: 2px solid #fff;
         margin-bottom: 0.2rem;
+    }
+    .card p {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        max-height: none;
     }
 </style>
