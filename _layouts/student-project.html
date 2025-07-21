@@ -14,7 +14,7 @@ layout: default
             <h1 class="display-1 mb-4" x-text="project.title"></h1>
             <ul class="post-meta">
               <li class="post-date"><i class="uil uil-calendar-alt"></i><span x-text="formattedDate"></span></li>
-              <li class="post-author"><i class="uil uil-user"></i><span x-text="studentFullName"></span></li>
+              <li class="post-author"><i class="uil uil-user"></i><a :href="studentProfileUrl" x-text="studentFullName" style="cursor:pointer; text-decoration:underline;"></a></li>
               <li class="post-views"><i class="uil uil-eye"></i><span x-text="project.viewCount || 0"></span> views</li>
             </ul>
           </div>
@@ -135,6 +135,10 @@ function projectData() {
 
     get studentFullName() {
       return this.student.firstName && this.student.lastName ? `${this.student.firstName} ${this.student.lastName}` : '';
+    },
+
+    get studentProfileUrl() {
+      return this.student.id ? `/student-profile?student-id=${this.student.id}` : '#';
     },
 
     get showVideo() {
