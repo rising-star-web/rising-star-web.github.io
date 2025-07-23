@@ -5,9 +5,9 @@
 
 class CourseResponseHandler {
     constructor() {
-        //this.baseUrl = "https://backend4.sharemyworks.com/api/";
-        this.baseUrl = "http://localhost:3001/api/";
-        this.apiUrl = this.baseUrl + "feedbacks/courseResponse";
+        this.baseUrl = "https://backend4.sharemyworks.com/api/";
+        //this.baseUrl = "http://localhost:3000/api/";
+        this.apiUrl = this.baseUrl + "Feedback/courseResponse";
     }
 
     // Get URL parameters
@@ -80,12 +80,15 @@ class CourseResponseHandler {
             }
 
             const data = await response.json();
+            console.log('Response recorded:', data);
+            const result = data.result;
             
-            if (!data.success) {
-                throw new Error(data.message || 'Failed to record response');
+            if (!result.success) {
+                console.log('result.success: ', result.success);
+                throw new Error(result.message || 'Failed to record response');
             }
 
-            return { success: true, data: data };
+            return { success: true, data: result };
         } catch (error) {
             console.error('Error recording response:', error);
             return { success: false, error: error.message };
