@@ -22,10 +22,7 @@ async function setupWeChat() {
         currentUrl
       )}`
     );
-    console.log(resp);
     const config = await resp.json();
-
-    console.log(config);
 
     wx.config({
       debug: false,
@@ -46,8 +43,6 @@ async function setupWeChat() {
         link: window.WECHAT_SHARE_LINK || currentUrl,
         imgUrl: window.WECHAT_SHARE_IMG || "https://codingmind.com/assets/img/og-image.png",
       };
-
-      console.log(shareData);
 
       wx.updateAppMessageShareData(shareData); // share to friends
       wx.updateTimelineShareData(shareData); // share to timeline
