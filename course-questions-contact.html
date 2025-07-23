@@ -111,15 +111,4 @@ locale: en
     </div>
 </section>
 
-<script>
-document.getElementById('questionsForm').addEventListener('submit', function(e) {
-    // This would normally submit to your backend
-    // For now, just show a confirmation
-    e.preventDefault();
-    
-    // Hide the form header, form, and show success message
-    document.getElementById('formHeader').style.display = 'none';
-    document.getElementById('questionsForm').style.display = 'none';
-    document.getElementById('successMessage').style.display = 'block';
-});
-</script>
+<script src="/js/course-response.js"></script>
