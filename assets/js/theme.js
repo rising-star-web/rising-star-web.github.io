@@ -821,11 +821,13 @@ var theme = {
               form.classList.remove("was-validated");
               // Send message only if the form has class .contact-form
               var isContactForm = form.classList.contains('contact-form');
+              console.log('Form submitted, isContactForm:', isContactForm);
               if(isContactForm) {
                 var alertClass = 'alert-danger';
                 $('#form *').css("pointer-events","none");
                 $('#form *').fadeOut(500);
                 $('#formSpinner').css("display", "block");
+                console.log('Form processing started');
 
                 const name = document.getElementById('studentName').value;
                 const email = document.getElementById('emailAddress').value;
@@ -841,6 +843,8 @@ var theme = {
                   return;
                 }
                 const campusLocation = campusField.options[campusField.selectedIndex].id;
+                console.log('campusLocation:', campusLocation);
+                console.log('Form validation passed, processing campus:', campusLocation);
                 const referralField = document.getElementById('referral');
                 const referral = referralField.options[referralField.selectedIndex].id;
                 
@@ -885,76 +889,22 @@ var theme = {
                   let publicComment = '';
 
                   if (campusLocation === 'San-diego' || campusLocation === 'Online-sd') {
+                    console.log('San Diego campus detected, processing...');
                     const classType = document.getElementById('classType').value;
+                    console.log('Class type:', classType);
                     if (classType === 'group') {
                       const className = document.getElementById('className').value;
                       const classSchedule = document.getElementById('classSchedule').value;
                       publicComment = `Group Class - ${className} (${classSchedule})`;
+                      console.log('Group class details:', className, classSchedule);
                     } else {
                       publicComment = 'Private';
+                      console.log('Private class selected');
                     }
-    
-                    // Store the form data for SD campus and redirect
-                    const formData = {
-                      accountData: {
-                        email2: email,
-                        phone2: phone,
-                        username: name.replace(/\s+/g, '').toLowerCase() + Math.floor(Math.random()*(999-100+1)+100),
-                        firstName: name.split(/\s+/)[0],
-                        lastName: name.split(/\s+/).slice(1).join(' ').trim() || ' ',
-                        password: '123',
-                        dateOfBirth: new Date(),
-                        grade: grade,
-                        referralName: referralDetail ? `${referral}: ${referralDetail}` : referral,
-                        preferedLanguage: 'English'
-                      },
-                      trialData: {
-                        codingExperience: experience,
-                        availability: availability,
-                        comment: "",
-                        location: campusLocation,
-                        signupTime: new Date(),
-                        organizationId: '66bf6a0dcdae5300148e3a2c',
-                        publicComment: publicComment
-                      }
-                    };
-    
-                    localStorage.setItem('pendingRegistration', JSON.stringify(formData));
-                    const pricingDetails = {
-                      priceId: 'prod_QvBBSMzCIqf4YS', //SD Trial class product ID
-                      planName: 'SD Trial Class',
-                      amount: 2900, 
-                      proration: calculateProcessingFee(29.00),
-                      locationType: 'sandiego',
-                      calculationType: 'processing_fee'
-                    };
-                    localStorage.setItem('pricingDetails', JSON.stringify(pricingDetails));
-                    // Store recaptcha response
-                    if (inputRecaptcha && inputRecaptcha.value) {
-                      localStorage.setItem('recaptchaResponse', inputRecaptcha.value);
-                    }
-                    document.getElementById('formSpinner').style.display = "none";
-
-                    const confirmModal = new bootstrap.Modal(document.getElementById('confirmModal'));
-                    confirmModal.show();
-
-                    // Handle the confirmation button click
-                    document.getElementById('confirmRedirect').addEventListener('click', function() {
-                      Toastify({
-                        text: "Redirecting to payment page...",
-                        duration: 500,
-                        gravity: "top",
-                        position: 'right',
-                        style: {
-                          background: "green",
-                        },
-                        className: "info",
-                      }).showToast();
-
-                      confirmModal.hide();
-                      window.location.href = "/sandiego/payment_details";
-                    });
-                    return;
+                    
+                    // For San Diego, create account and trial class immediately with "Payment Pending" status
+                    // This will continue with the normal flow below but skip the redirect
+                    console.log('Continuing with account creation...');
                   }
                   
                  //let baseUrl = 'http://localhost:3000/api/';
@@ -980,12 +930,16 @@ var theme = {
                   username: username,
                   firstName: firstName,
                   lastName: lastName,
-                  password: '123',
+                  password: 'codingminds',
                   dateOfBirth: new Date(),
                   grade: grade,
                   referralName: referralDetail ? `${referral}: ${referralDetail}` : referral,
                   preferedLanguage: 'English'
                 };
+
+                if (campusLocation === 'San-diego' || campusLocation === 'Online-sd') {
+                  accountData.organizationId = '66bf6a0dcdae5300148e3a2c';
+                }
 
                 var formBody = [];
                 for (var property in accountData) {
@@ -1008,7 +962,7 @@ var theme = {
                   let trialData= {
                     codingExperience: experience,
                     availability: availability,
-                    comment: "",
+                    comment: (campusLocation === 'San-diego' || campusLocation === 'Online-sd') ? "Payment Pending" : "",
                     location: campusLocation,
                     signupTime: new Date(),
                     accountId: studentId,
@@ -1058,19 +1012,55 @@ var theme = {
                     body: formBody2
                   }).then(async function (response) {
                     let resp2 = await response.json();
+                    console.log('Trial class creation response:', resp2);
                     if (campusLocation === 'San-diego' || campusLocation === 'Online-sd') {
-                      // if location is sandiego, set the sessionstorage of form Completed to true
+                      console.log('San Diego trial class created, setting up payment flow...');
+                      // Store trial class ID and setup payment flow
+                      const trialClassId = resp2.id;
+                      console.log('Trial class ID:', trialClassId);
+                      localStorage.setItem('trialClassId', trialClassId);
                       localStorage.setItem('formCompleted', 'true');
-                      $('#form').prepend(
-                        window.location.href.indexOf("cn") != -1 ? 
-                        '感谢您提交试课评估申请，我们的助理会尽快在第一时间联系您，确认试课细节。同时如果您有任何问题，请随时通过电话或者微信联系我们 (858) 588-7897 ':
-                        'Your trial class request has been processed. We will contact you shortly. Meanwhile, feel free to reach out us by +1 (858) 588-7897 or CodingMindSD@gmail.com if you have any questions.'
-                      );
+                      
+                      // Store pricing details for payment
+                      const pricingDetails = {
+                        priceId: 'prod_QvBBSMzCIqf4YS', //SD Trial class product ID
+                        planName: 'SD Trial Class',
+                        amount: 2900, 
+                        proration: calculateProcessingFee(29.00),
+                        locationType: 'sandiego',
+                        calculationType: 'processing_fee'
+                      };
+                      localStorage.setItem('pricingDetails', JSON.stringify(pricingDetails));
+                      
+                      // Store recaptcha response if available
+                      if (inputRecaptcha && inputRecaptcha.value) {
+                        localStorage.setItem('recaptchaResponse', inputRecaptcha.value);
+                      }
+                      
                       $('#formSpinner').css("display", "none");
-                      $('#QRCode').css("display", "none");
-                      $('#QRCodeCN').css("display", "none");
+                      
+                      // Show confirmation modal for payment
+                      console.log('Showing confirmation modal...');
+                      const confirmModal = new bootstrap.Modal(document.getElementById('confirmModal'));
+                      confirmModal.show();
+                      console.log('Modal should be visible now');
 
-                      window.location.href = '/sandiego/pricing';
+                      // Handle the confirmation button click
+                      document.getElementById('confirmRedirect').addEventListener('click', function() {
+                        Toastify({
+                          text: "Redirecting to payment page...",
+                          duration: 500,
+                          gravity: "top",
+                          position: 'right',
+                          style: {
+                            background: "green",
+                          },
+                          className: "info",
+                        }).showToast();
+
+                        confirmModal.hide();
+                        window.location.href = "/sandiego/payment_details";
+                      });
                     } else {
                       $('#formSpinner').css("display", "none");
                       $('#formDescription').css("display", "none");

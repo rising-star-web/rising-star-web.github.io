@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const backButton = document.getElementById('backButton');
     
     const baseUrl = "https://backend4.sharemyworks.com/api/";
-    // const baseUrl = 'http://localhost:3000/api/';
+    //const baseUrl = 'http://localhost:3000/api/';
 
     function updateUI(state, title, message) {
       loadingSpinner.style.display = state === 'loading' ? 'block' : 'none';
@@ -105,6 +105,36 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
       }
       return studentId;
+    }
+
+    // Update trial class comment with payment confirmation
+    async function updateTrialClassPayment(trialClassId, sessionId) {
+      const updateData = {
+        comment: `Paid, transaction id: ${sessionId}`
+      };
+
+      var formBody = [];
+      for (var property in updateData) {
+        var encodedKey = encodeURIComponent(property);
+        var encodedValue = encodeURIComponent(updateData[property]);
+        formBody.push(encodedKey + "=" + encodedValue);
+      }
+      formBody = formBody.join("&");
+
+      const response = await fetch(`${baseUrl}TrialClasses/${trialClassId}`, {
+        mode: "cors",
+        method: "PATCH",
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+        },
+        body: formBody
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to update trial class payment status');
+      }
+
+      return await response.json();
     }
 
     // Handle add student to course through SIGNUP
@@ -239,8 +269,22 @@ document.addEventListener('DOMContentLoaded', async () => {
           localStorage.removeItem('pendingSignupData');
           localStorage.removeItem('formCompleted');
           localStorage.removeItem('pricingDetails');
-    
-        } else if (pendingCourseRegistration && pendingSignupData) {
+
+        } else {
+          // Check if there's a trial class that needs payment confirmation
+          const trialClassId = localStorage.getItem('trialClassId');
+          if (trialClassId) {
+            // Update trial class payment status
+            await updateTrialClassPayment(trialClassId, sessionId);
+            
+            updateUI('success', 'Trial Class Payment Complete!', 
+              'Your payment has been successfully processed. We will contact you shortly with your trial class details.');
+            
+            localStorage.removeItem('trialClassId');
+            localStorage.removeItem('formCompleted');
+            localStorage.removeItem('pricingDetails');
+            
+          } else if (pendingCourseRegistration && pendingSignupData) {
           // Both exist - compare timestamps and process the most recent one
           const loginData = JSON.parse(pendingCourseRegistration);
           const signupData = JSON.parse(pendingSignupData);
@@ -292,8 +336,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             localStorage.removeItem('pendingSignupData');
             localStorage.removeItem('pricingDetails');
   
-        } else {
-          throw new Error('No registration data found');
+          } else {
+            throw new Error('No registration data found');
+          }
         }
 
         
