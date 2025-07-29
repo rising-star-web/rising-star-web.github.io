@@ -47,65 +47,6 @@ document.addEventListener('DOMContentLoaded', async () => {
       return result;
     }
 
-    async function handleTrialRegistration(formData) {      
-      // Create account with proper encoding
-      var formBody = [];
-      for (var property in formData.accountData) {
-        var encodedKey = encodeURIComponent(property);
-        var encodedValue = encodeURIComponent(formData.accountData[property]);
-        formBody.push(encodedKey + "=" + encodedValue);
-      }
-      formBody = formBody.join("&");
-  
-      const accountResponse = await fetch(`${baseUrl}Account`, {
-        mode: "cors",
-        method: "post",
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-        },
-        body: formBody
-      });
-  
-      if (!accountResponse.ok) {
-        throw new Error('Failed to create account');
-      }
-  
-      const accountResult = await accountResponse.json();
-      const studentId = accountResult.id;
-    
-      if (!studentId) {
-        throw new Error('No student ID returned');
-      } else if (studentId) {
-  
-        // Create trial class with proper encoding
-        const trialData = {
-          ...formData.trialData,
-          accountId: studentId
-        };
-    
-        var formBody2 = [];
-        for (var property in trialData) {
-          var encodedKey = encodeURIComponent(property);
-          var encodedValue = encodeURIComponent(trialData[property]);
-          formBody2.push(encodedKey + "=" + encodedValue);
-        }
-        formBody2 = formBody2.join("&");
-    
-        const trialResponse = await fetch(`${baseUrl}TrialClasses`, {
-          mode: "cors",
-          method: "post",
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-          },
-          body: formBody2
-        });
-    
-        if (!trialResponse.ok) {
-          throw new Error('Failed to create trial class');
-        }
-      }
-      return studentId;
-    }
 
     // Update trial class comment with payment confirmation
     async function updateTrialClassPayment(trialClassId, sessionId) {
@@ -242,49 +183,34 @@ document.addEventListener('DOMContentLoaded', async () => {
       const urlParams = new URLSearchParams(window.location.search);
       const sessionId = urlParams.get('session_id');
 
-      let paymentVerified = false;
-
       if (!sessionId) {
         throw new Error('No session ID found');
       }
 
       try {
         await verifyStripeSession(sessionId);
-        paymentVerified = true;
+        const paymentVerified = true;
         // Check which type of registration we're handling
-        const pendingTrialRegistration = localStorage.getItem('pendingRegistration');
         const pendingSignupData = localStorage.getItem('pendingSignupData');
         const pendingCourseRegistration = localStorage.getItem('pendingLoginData');
 
-        if (pendingTrialRegistration) {
-          // Handle trial class registration
-          const formData = JSON.parse(pendingTrialRegistration);
-          await handleTrialRegistration(formData);
+        // Check if there's a trial class that needs payment confirmation (San Diego)
+        const trialClassId = localStorage.getItem('trialClassId');
+        if (trialClassId) {
+          // Update trial class payment status
+          await updateTrialClassPayment(trialClassId, sessionId);
           
-          updateUI('success', 'Trial Class Registration Complete!', 
-            'Your registration and payment have been successfully processed. We will contact you shortly with your trial class details.');
+          updateUI('success', 'Trial Class Payment Complete!', 
+            'Your payment has been successfully processed. We will contact you shortly with your trial class details.');
           
+          localStorage.removeItem('trialClassId');
+          localStorage.removeItem('formCompleted');
+          localStorage.removeItem('pricingDetails');
           localStorage.removeItem('pendingRegistration');
           localStorage.removeItem('pendingLoginData');
           localStorage.removeItem('pendingSignupData');
-          localStorage.removeItem('formCompleted');
-          localStorage.removeItem('pricingDetails');
-
-        } else {
-          // Check if there's a trial class that needs payment confirmation
-          const trialClassId = localStorage.getItem('trialClassId');
-          if (trialClassId) {
-            // Update trial class payment status
-            await updateTrialClassPayment(trialClassId, sessionId);
-            
-            updateUI('success', 'Trial Class Payment Complete!', 
-              'Your payment has been successfully processed. We will contact you shortly with your trial class details.');
-            
-            localStorage.removeItem('trialClassId');
-            localStorage.removeItem('formCompleted');
-            localStorage.removeItem('pricingDetails');
-            
-          } else if (pendingCourseRegistration && pendingSignupData) {
+          
+        } else if (pendingCourseRegistration && pendingSignupData) {
           // Both exist - compare timestamps and process the most recent one
           const loginData = JSON.parse(pendingCourseRegistration);
           const signupData = JSON.parse(pendingSignupData);
@@ -336,11 +262,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             localStorage.removeItem('pendingSignupData');
             localStorage.removeItem('pricingDetails');
   
-          } else {
-            throw new Error('No registration data found');
-          }
+        } else {
+          throw new Error('No registration data found');
         }
-
         
       } catch (error) {
         console.error('Registration process error:', error);

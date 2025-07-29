@@ -1041,9 +1041,16 @@ var theme = {
                       
                       // Show confirmation modal for payment
                       console.log('Showing confirmation modal...');
-                      const confirmModal = new bootstrap.Modal(document.getElementById('confirmModal'));
-                      confirmModal.show();
-                      console.log('Modal should be visible now');
+                      const modalElement = document.getElementById('confirmModal');
+                      if (modalElement && typeof bootstrap !== 'undefined' && bootstrap.Modal) {
+                        const confirmModal = new bootstrap.Modal(modalElement);
+                        confirmModal.show();
+                        console.log('Modal should be visible now');
+                      } else {
+                        console.error('Bootstrap Modal not available or modal element missing');
+                        // Fallback: redirect directly to payment
+                        window.location.href = "/sandiego/payment_details";
+                      }
 
                       // Handle the confirmation button click
                       document.getElementById('confirmRedirect').addEventListener('click', function() {

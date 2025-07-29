@@ -443,15 +443,8 @@ layout: locationdefault
       input.min = today;
     });
 
+    // Populate hour options for date/time selections
     document.querySelectorAll('.hour-select').forEach(select => {
-      for (let hour = 8; hour < 22; hour++) {
-        const hourString = hour.toString().padStart(2, '0');
-        select.innerHTML += `<option value="${hourString}">${hourString}</option>`;
-      }
-    });
-
-    const hourSelects = document.querySelectorAll('.hour-select');
-    hourSelects.forEach(select => {
       for (let hour = 8; hour < 22; hour++) {
         const hourString = hour.toString().padStart(2, '0');
         select.innerHTML += `<option value="${hourString}">${hourString}</option>`;
@@ -463,9 +456,18 @@ layout: locationdefault
       // Fetch and populate schedule data for San Diego
       if (locationName === 'sandiego') {
         fetch('/assets/schedule.json')
-          .then(response => response.json())
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+            return response.json();
+          })
           .then(data => {
             const scheduleData = data["San Diego"];
+            if (!scheduleData || !Array.isArray(scheduleData)) {
+              throw new Error('Invalid schedule data format');
+            }
+            
             const classNameSelect = document.getElementById('className');
             const classScheduleSelect = document.getElementById('classSchedule');
 
@@ -489,6 +491,32 @@ layout: locationdefault
           })
           .catch(error => {
             console.error("Error loading schedule data:", error);
+            
+            // Provide user feedback
+            const classNameSelect = document.getElementById('className');
+            const classScheduleSelect = document.getElementById('classSchedule');
+            
+            if (classNameSelect) {
+              classNameSelect.innerHTML = '<option value="">⚠️ Schedule loading failed</option>';
+              classNameSelect.disabled = true;
+            }
+            if (classScheduleSelect) {
+              classScheduleSelect.innerHTML = '<option value="">⚠️ Please refresh and try again</option>';
+              classScheduleSelect.disabled = true;
+            }
+            
+            // Show user-friendly error message
+            const groupClassFields = document.getElementById('groupClassFields');
+            if (groupClassFields) {
+              const errorDiv = document.createElement('div');
+              errorDiv.className = 'alert alert-warning mt-2';
+              errorDiv.innerHTML = `
+                <strong>⚠️ Schedule Loading Error</strong><br>
+                Unable to load class schedules. Please <a href="javascript:location.reload()">refresh the page</a> 
+                or contact us at <a href="tel:+18585887897">(858) 588-7897</a> for assistance.
+              `;
+              groupClassFields.appendChild(errorDiv);
+            }
           });
       }
       // Handle class type change
@@ -520,13 +548,8 @@ layout: locationdefault
     }
 
 
-    if (locationName === 'sandiego') {
-      const dateTimeSelections = document.getElementById('dateTimeSelections');
-      const requiredInputs = dateTimeSelections.querySelectorAll('[required]');
-      requiredInputs.forEach(input => {
-        input.removeAttribute('required');
-      });
-    }
+    // San Diego date/time required handling is done in classType change event
+    // No blanket removal of required attributes here
   });
 
 </script>
