@@ -404,10 +404,9 @@ logo_url = '/' | append: location_name %} {% endif %}
                 calculationType: details.type
             })
         );
-        // let  formCompleted = localStorage.getItem('formCompleted');
+        
         const formCompleted = localStorage.getItem('formCompleted');
-        const pendingSignupData = localStorage.getItem('pendingSignupData');
-        const pendingLoginData = localStorage.getItem('pendingLoginData');
+        const registrationAccountId = localStorage.getItem('registrationAccountId');
 
         if (LOCATION_NAME === 'sandiego') {
             localStorage.removeItem('selectedProgram');
@@ -423,7 +422,7 @@ logo_url = '/' | append: location_name %} {% endif %}
                     }, 2000);
                 }
             } else if (planName === '1v1 Junior Membership' || planName === '1v1 Senior Membership') {
-                if (pendingSignupData || pendingLoginData) {
+                if (registrationAccountId) {
                     window.location.href = `/${LOCATION_NAME}/payment_details`;
                 } else {
                     showSignUpToast();
@@ -433,7 +432,7 @@ logo_url = '/' | append: location_name %} {% endif %}
                 }
             } else {
                 // For non-trial, group class plans in San Diego
-                if (pendingSignupData || pendingLoginData) {
+                if (registrationAccountId) {
                     window.location.href = `/${LOCATION_NAME}/payment_details`;
                 } else {
                     showSignUpToast();
