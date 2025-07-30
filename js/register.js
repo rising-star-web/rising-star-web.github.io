@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-  registerForm.addEventListener("submit", function (event) {
+  registerForm.addEventListener("submit", async function (event) {
     console.log("Form submitted");
     event.preventDefault();
 
@@ -38,7 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var formData = new FormData(registerForm);
 
     var postData = {
-      email2: formData.get("email"),
+      email: formData.get("studentEmail"),
+      email2: formData.get("parentEmail"),
       password: formData.get("password"),
       phone2: formData.get("phone"),
       firstName: formData.get("firstName"),
@@ -48,45 +49,137 @@ document.addEventListener("DOMContentLoaded", function () {
       organizationId: organizationId,
       username: (
         formData.get("firstName") + formData.get("lastName")
-      ).toLowerCase(),
+      ).toLowerCase() + Math.floor(Math.random() * 900 + 100),
       preferedLanguage: chinese ? "Chinese" : "English",
     };
 
     if (isSandiego) {
-      // Store registration data in localStorage
-      const registrationInfo = {
-        registerData: postData,
-        courseId: courseId,
-        token: token,
-        price: price,
-        timestamp: new Date().toISOString()
-      };
+      // For San Diego, create account and course linking immediately
+      console.log('San Diego registration - creating account immediately');
+      
+      try {
+        // Create account immediately
+        const response = await fetch(`${baseUrl}Account`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(postData)
+        });
 
-      localStorage.setItem('pendingSignupData', JSON.stringify(registrationInfo));
-      loadingIndicator.style.display = "none";
+        if (!response.ok) {
+          throw new Error('Failed to create account');
+        }
 
-      const confirmModal = new bootstrap.Modal(document.getElementById('confirmModal'));
-      confirmModal.show();
+        const accountData = await response.json();
+        const studentId = accountData.id;
+        console.log('Account created with ID:', studentId);
 
-      document.getElementById('confirmRedirect').addEventListener('click', function() {
+        // Handle course linking and payment history
+        if (courseId) {
+          if (courseId !== '1v1') {
+            // Link student to regular course
+            console.log('Linking student to course:', courseId);
+            const courseResponse = await fetch(
+              `${baseUrl}Course/${courseId}/students/rel/${studentId}`, {
+              method: "PUT",
+              headers: {
+                Authorization: `Bearer ${token}`
+              }
+            });
+            
+            if (!courseResponse.ok) {
+              console.error('Failed to attach student to course');
+              // Continue anyway - can be fixed manually
+            } else {
+              console.log('Student successfully linked to course');
+            }
+          }
+          
+          // Add payment history record for both regular and 1v1 courses
+          try {
+            const paymentData = {
+              accountId: studentId,
+              status: "payment_pending"
+            };
+            
+            if (courseId === '1v1') {
+              paymentData.comment = "1v1 - payment pending";
+            } else {
+              paymentData.courseId = courseId;
+              paymentData.comment = "Course registration - payment pending";
+            }
+            
+            const paymentHistoryResponse = await fetch(`${baseUrl}Account/updatePaymentHistory`, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(paymentData)
+            });
+            
+            if (paymentHistoryResponse.ok) {
+              console.log('Payment history record created');
+            } else {
+              console.error('Failed to create payment history record');
+            }
+          } catch (error) {
+            console.error('Error creating payment history record:', error);
+          }
+        }
+
+        // Store account info for payment processing
+        localStorage.setItem('registrationAccountId', studentId);
+        localStorage.setItem('registrationCourseId', courseId || '');
+        localStorage.setItem('registrationToken', token);
+        
+        loadingIndicator.style.display = "none";
+
+        const confirmModal = new bootstrap.Modal(document.getElementById('confirmModal'));
+        confirmModal.show();
+
+        document.getElementById('confirmRedirect').addEventListener('click', function() {
+          Toastify({
+            text: "Redirecting to pricing page...",
+            duration: 1000,
+            close: true,
+            gravity: "top",
+            position: 'right',
+            style: {
+              background: "green",
+            },
+            className: "info",
+          }).showToast();
+
+          // Hide modal and redirect
+          confirmModal.hide();
+          setTimeout(() => {
+            window.location.href = "/sandiego/pricing";
+          }, 500);
+        });
+
+      } catch (error) {
+        console.error('San Diego registration failed:', error);
+        loadingIndicator.style.display = "none";
+        
+        // Show error message to user
         Toastify({
-          text: "Redirecting to pricing page...",
-          duration: 1000,
+          text: "Registration failed. Please try again or contact us at (858) 588-7897 for assistance.",
+          duration: 5000,
           close: true,
           gravity: "top",
           position: 'right',
           style: {
-            background: "green",
+            background: "red",
           },
           className: "info",
         }).showToast();
-
-        // Hide modal and redirect
-        confirmModal.hide();
-        setTimeout(() => {
-          window.location.href = "/sandiego/pricing";
-        }, 500);
-      });
+        
+        // Re-enable form
+        document.querySelectorAll('#registerForm input, #registerForm select, #registerForm button').forEach(el => {
+          el.disabled = false;
+        });
+      }
 
     } else {
       // Original flow for non-San Diego users
@@ -300,28 +393,9 @@ function attachStudentToCourse(
       },
     })
       .then(() => {
-        if (isSandiego) {
-          // Redirect to San Diego pricing page
-        Toastify({
-                    text: "Registration Success! Redirecting to checkout page.",
-                    duration: 5000,
-                    close: true,
-                    gravity: "top",
-                    position: 'right', 
-                    style: {
-                        background: "green",
-                    },
-                    className: "info",
-                }).showToast();
-          setTimeout(() => {
-            window.location.href = "/sandiego/pricing"
-          }, 0);
-        } else {
-          // Proceed with the original flow
-          // Suppose to get a new token upon registration, simulate login to get the real token
-          simulateLogin(username, password, studentId, courseId, price);
-        }
-        // simulateLogin(username, password, studentId, courseId, price);
+        // Proceed with the original flow (non-San Diego only)
+        // Suppose to get a new token upon registration, simulate login to get the real token
+        simulateLogin(username, password, studentId, courseId, price);
       })
       .catch((error) => {
         console.error("Failed to attach student", error);

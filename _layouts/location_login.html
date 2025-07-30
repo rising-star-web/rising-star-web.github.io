@@ -22,14 +22,14 @@ layout: locationdefault
       <!--/column -->
       <div class="col-lg-6 col-xl-5 offset-xl-1 text-center">
         <h2 class="display-2 mb-3">{{ site.data.login[page.locale].login.header }}</h2>
-          Your username can be found in the email sent when your account was created<br>
+          Email refers to student's email you used to register. Your username can be found in the email sent when you created your account. <br>
         <!-- <p class="lead mb-8">{{ site.data.free-trial[page.locale].login.lead }}</p> -->
         <form id="loginForm" class="contact-form needs-validation" novalidate>
           <div class="messages"></div>
           <div class="form-floating mb-4">
-            <input id="username" type="text" name="username" class="form-control"
-              placeholder="Username" required="required" data-error="Valid username is required.">
-            <label for="loginEmailPhone">{{ site.data.login[page.locale].login.username }}</label>
+            <input id="userinput" type="text" name="userinput" class="form-control"
+              placeholder="Username or Email" required="required" data-error="Valid username or email is required.">
+            <label for="userinput">{{ site.data.login[page.locale].login.userInput }}</label>
             <div class="invalid-feedback">
               {{ site.data.login[page.locale].login.errorEmail }}
             </div>

@@ -71,7 +71,7 @@ layout: locationdefault
 
           <div class="form-floating mb-4">
             <input id="emailAddress" type="email" name="emailAddress" class="form-control"
-              pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+$" placeholder="jane.doe@example.com"
+              pattern="^[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]+$" placeholder="jane.doe@example.com"
               required="required" data-error="Valid email is required.">
             <label for="emailAddress">{{ site.data.free-trial[page.locale].freetrial.parentEmailTag }}</label>
             <div class="valid-feedback">

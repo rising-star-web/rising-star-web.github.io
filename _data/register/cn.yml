@@ -2,7 +2,8 @@ name: CN
 
 register:
   header: 注册 Coding Mind 账号
-  email: 电子邮箱
+  parentEmail: 家长电子邮箱
+  studentEmail: 学生电子邮箱
   password: 密码
   confirm_password: 确认密码
   firstname: 学生 First Name

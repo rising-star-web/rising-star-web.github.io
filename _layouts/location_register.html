@@ -81,9 +81,14 @@ layout: locationdefault
               </div>
             </div>
             <div class="form-floating mb-4">
-              <input type="email" name="email" class="form-control"
-                placeholder="{{ site.data.register[page.locale].register.email }}" required>
-              <label for="email">{{ site.data.register[page.locale].register.email }}</label>
+              <input type="email" name="studentEmail" class="form-control"
+                placeholder="{{ site.data.register[page.locale].register.studentEmail }}" required>
+              <label for="studentEmail">{{ site.data.register[page.locale].register.studentEmail }}</label>
+            </div>
+            <div class="form-floating mb-4">
+              <input type="email" name="parentEmail" class="form-control"
+                placeholder="{{ site.data.register[page.locale].register.parentEmail }}" required>
+              <label for="parentEmail">{{ site.data.register[page.locale].register.parentEmail }}</label>
             </div>
             <div class="form-floating mb-4">
               <input type="password" name="password" class="form-control"

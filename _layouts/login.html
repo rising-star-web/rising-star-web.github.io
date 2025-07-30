@@ -51,9 +51,9 @@ layout: default
         <form id="loginForm" class="contact-form needs-validation" novalidate>
           <div class="messages"></div>
           <div class="form-floating mb-4">
-            <input id="username" type="text" name="username" class="form-control"
-              placeholder="Username" required="required" data-error="Valid username is required.">
-            <label for="loginEmailPhone">{{ site.data.login[page.locale].login.username }}</label>
+            <input id="userinput" type="text" name="userinput" class="form-control"
+              placeholder="Username or Email" required="required" data-error="Valid username or email is required.">
+            <label for="userinput">{{ site.data.login[page.locale].login.userInput }}</label>
             <div class="invalid-feedback">
               {{ site.data.login[page.locale].login.errorEmail }}
             </div>

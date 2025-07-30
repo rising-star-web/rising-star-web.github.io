@@ -907,7 +907,7 @@ var theme = {
                     console.log('Continuing with account creation...');
                   }
                   
-                 //let baseUrl = 'http://localhost:3000/api/';
+                //let baseUrl = 'http://localhost:3000/api/';
                 let baseUrl = 'https://backend4.sharemyworks.com/api/';
 
                 baseUrl = baseUrl.replace(/"/g, '');
@@ -1020,6 +1020,34 @@ var theme = {
                       console.log('Trial class ID:', trialClassId);
                       localStorage.setItem('trialClassId', trialClassId);
                       localStorage.setItem('formCompleted', 'true');
+                      
+                      // Add payment history record for trial class with pending status
+                      try {
+                        const paymentData = {
+                          accountId: studentId,
+                          courseId: trialClassId,
+                          status: "payment_pending",
+                          comment: "Trial class - payment pending"
+                        };
+                        
+                        fetch(baseUrl + 'Account/updatePaymentHistory', {
+                          method: "POST",
+                          headers: {
+                            "Content-Type": "application/json",
+                          },
+                          body: JSON.stringify(paymentData)
+                        }).then(response => {
+                          if (response.ok) {
+                            console.log('Trial payment history record created');
+                          } else {
+                            console.error('Failed to create trial payment history record');
+                          }
+                        }).catch(error => {
+                          console.error('Error creating trial payment history record:', error);
+                        });
+                      } catch (error) {
+                        console.error('Error creating trial payment history record:', error);
+                      }
                       
                       // Store pricing details for payment
                       const pricingDetails = {

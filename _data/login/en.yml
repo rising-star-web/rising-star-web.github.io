@@ -14,8 +14,8 @@ login:
   errorEmail: Please provide a valid email address
   errorPassword: Please provide a valid password
   loading: Loading...
-  username: Username
-  tip: Your username can be found in the email sent when your account was created
+  userInput: Student's Email or Username
+  tip: Email refers to student's email you used to register. Your username can be found in the email sent when you created your account. 
   courseInfo: Course Information
   courseName: Course Name
   courseDate: Course Date

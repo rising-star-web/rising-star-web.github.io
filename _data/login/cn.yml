@@ -15,8 +15,8 @@ login:
   errorEmail: 请提供有效的电子邮箱地址
   errorPassword: 请提供有效的密码
   loading: 加载中...
-  username: 用户名
-  tip: 您的用户名可以在创建账户时发送的电子邮件中找到。
+  userInput: 学生电子邮箱或用户名
+  tip: 您的用户名可以在创建账户时发送的电子邮件中找到。 电子邮箱指您注册时使用的学生电子邮箱。
   courseInfo: 课程信息
   courseName: 课程名称
   courseDate: 课程日期

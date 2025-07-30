@@ -29,10 +29,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
         try {
             var formData = new FormData(loginForm);
+            var userInput = formData.get("userinput");
+            var isEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(userInput);
+            
             var postData = {
-                username: formData.get("username"),
                 password: formData.get("loginPassword")
             };
+            
+            if (isEmail) {
+                postData.email = userInput;
+            } else {
+                postData.username = userInput;
+            }
             const loginResponse = await fetch(`${baseUrl}Account/login`, {
                 method: "POST",
                 headers: {
@@ -50,42 +58,123 @@ document.addEventListener("DOMContentLoaded", function () {
             accountId = loginData.userId;
 
             if (isSandiego) {
-                // Store login data in localStorage
-                const loginInfo = {
-                    accountId: accountId,
-                    token: token,
-                    acc_token: acc_token,
-                    courseId: courseId,
-                    price: price,
-                    language: chinese ? "Chinese" : "English",
-                    organizationId: organizationId,
-                    timestamp: new Date().toISOString()
-                };
+                // For San Diego, update account and link to course immediately
+                console.log('San Diego login - processing account immediately');
                 
-                localStorage.setItem('pendingLoginData', JSON.stringify(loginInfo));
-                loadingIndicator.style.display = "none";
-                const confirmModal = new bootstrap.Modal(document.getElementById('confirmModal'));
-                confirmModal.show();
-                
-                document.getElementById('confirmRedirect').addEventListener('click', function() {
+                try {
+                    // Update account language preference directly (no course linking)
+                    const updateResponse = await fetch(`${baseUrl}Account/${accountId}/?access_token=${token}`, {
+                        method: "PATCH",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Authorization": `Bearer ${token}`
+                        },
+                        body: JSON.stringify({ preferedLanguage: chinese ? "Chinese" : "English" })
+                    });
+
+                    if (!updateResponse.ok) {
+                        console.error('Failed to update account preferences');
+                        // Continue anyway - not critical
+                    }
+                    
+                    // Handle course linking and payment history
+                    if (courseId) {
+                        if (courseId !== '1v1') {
+                            // Link to regular course
+                            console.log('Linking existing user to course:', courseId);
+                            const courseResponse = await fetch(`${baseUrl}Course/${courseId}/students/rel/${accountId}`, {
+                                method: "PUT",
+                                headers: {
+                                    Authorization: `Bearer ${token}`
+                                }
+                            });
+
+                            if (!courseResponse.ok) {
+                                console.error('Failed to attach student to course');
+                                // Continue anyway - can be fixed manually
+                            } else {
+                                console.log('Student successfully linked to course');
+                            }
+                        }
+                        
+                        // Add payment history record for both regular and 1v1 courses
+                        try {
+                            const paymentData = {
+                                accountId: accountId,
+                                status: "payment_pending"
+                            };
+                            
+                            if (courseId === '1v1') {
+                                paymentData.comment = "1v1 - payment pending";
+                            } else {
+                                paymentData.courseId = courseId;
+                                paymentData.comment = "Course login - payment pending";
+                            }
+                            
+                            const paymentHistoryResponse = await fetch(`${baseUrl}Account/updatePaymentHistory`, {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type": "application/json",
+                                },
+                                body: JSON.stringify(paymentData)
+                            });
+                            
+                            if (paymentHistoryResponse.ok) {
+                                console.log('Payment history record created');
+                            } else {
+                                console.error('Failed to create payment history record');
+                            }
+                        } catch (error) {
+                            console.error('Error creating payment history record:', error);
+                        }
+                    }
+
+                    // Store account info for payment processing  
+                    localStorage.setItem('registrationAccountId', accountId);
+                    localStorage.setItem('registrationCourseId', courseId || '');
+                    localStorage.setItem('registrationToken', token);
+                    
+                    loadingIndicator.style.display = "none";
+                    const confirmModal = new bootstrap.Modal(document.getElementById('confirmModal'));
+                    confirmModal.show();
+                    
+                    document.getElementById('confirmRedirect').addEventListener('click', function() {
+                        Toastify({
+                            text: "Redirecting to pricing page...",
+                            duration: 1000,
+                            close: true,
+                            gravity: "top",
+                            position: 'right',
+                            style: {
+                                background: "green",
+                            },
+                            className: "info",
+                        }).showToast();
+
+                        // Hide modal and redirect
+                        confirmModal.hide();
+                        setTimeout(() => {
+                            window.location.href = "/sandiego/pricing";
+                        }, 500);
+                    });
+                    
+                } catch (error) {
+                    console.error('San Diego login processing failed:', error);
+                    loadingIndicator.style.display = "none";
+                    
+                    // Show error message to user
                     Toastify({
-                        text: "Redirecting to pricing page...",
-                        duration: 1000,
+                        text: "Login processing failed. Please try again or contact us at (858) 588-7897 for assistance.",
+                        duration: 5000,
                         close: true,
                         gravity: "top",
                         position: 'right',
                         style: {
-                            background: "green",
+                            background: "red",
                         },
                         className: "info",
                     }).showToast();
-
-                    // Hide modal and redirect
-                    confirmModal.hide();
-                    setTimeout(() => {
-                        window.location.href = "/sandiego/pricing";
-                    }, 500);
-                });
+                }
             } else {
                 // Original flow for non-San Diego users
                 await updateAccount({ preferedLanguage: chinese ? "Chinese" : "English" }, accountId, acc_token, token);

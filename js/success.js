@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
   
       const result = await response.json();
+      console.log('Stripe session verification result:', result);
       if (result.status !== 'paid') {
         throw new Error('Payment not complete');
       }
@@ -78,108 +79,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       return await response.json();
     }
 
-    // Handle add student to course through SIGNUP
-    async function handleRegistration(registrationInfo) {
-      // Create account
-      const registerData = {
-        ...registrationInfo.registerData,
-        username: `${registrationInfo.registerData.username}${Math.floor(Math.random() * 900 + 100)}`
-      };
-
-      const response = await fetch(`${baseUrl}Account`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(registerData)
-      });
-  
-      if (!response.ok) {
-        throw new Error('Failed to create account');
-      }
-  
-      const accountData = await response.json();
-      const studentId = accountData.id;
-
-      if (registrationInfo.courseId !== '1v1') {
-        // Attach student to course
-        const courseResponse = await fetch(
-          `${baseUrl}Course/${registrationInfo.courseId}/students/rel/${studentId}`, {
-          method: "PUT",
-          headers: {
-            Authorization: `Bearer ${registrationInfo.token}`
-          }
-        });
-
-        if (!courseResponse.ok) {
-          throw new Error('Failed to attach student to course');
-        }
-
-      }
-
-  
-      // Simulate login to get new token
-      const loginResponse = await fetch(`${baseUrl}Account/login`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ 
-          username: registerData.username,
-          password: registrationInfo.registerData.password 
-        })
-      });
-  
-      if (!loginResponse.ok) {
-        throw new Error('Failed to login after registration');
-      }
-  
-      const loginData = await loginResponse.json();
-      return {
-        studentId,
-        token: loginData.id
-      };
-    }
-
-    // Handle add student to course through LOGIN
-    async function handleCourseRegistration(loginData) {
-      // Update account language preference
-      const accountResponse = await fetch(
-        `${baseUrl}Account/${loginData.accountId}/?access_token=${loginData.token}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${loginData.token}`
-        },
-        body: JSON.stringify({
-          preferedLanguage: loginData.language
-        })
-      });
-  
-      if (!accountResponse.ok) {
-        throw new Error('Failed to update account preferences');
-      }
-
-      if (loginData.courseId !== '1v1') {
-        // Attach student to course
-        const courseResponse = await fetch(
-          `${baseUrl}Course/${loginData.courseId}/students/rel/${loginData.accountId}`, {
-          method: "PUT",
-          headers: {
-            Authorization: `Bearer ${loginData.token}`
-          }
-        });
-    
-        if (!courseResponse.ok) {
-          throw new Error('Failed to attach student to course');
-        }
-      }
-  
-      return loginData.accountId;
-    }
-
     try {
-      updateUI('loading', 'Processing...', 'Please wait while we complete your registration.');
+      updateUI('loading', 'Processing...', 'Please wait while we verify your payment.');
       const urlParams = new URLSearchParams(window.location.search);
       const sessionId = urlParams.get('session_id');
 
@@ -187,101 +88,103 @@ document.addEventListener('DOMContentLoaded', async () => {
         throw new Error('No session ID found');
       }
 
-      try {
-        await verifyStripeSession(sessionId);
-        const paymentVerified = true;
-        // Check which type of registration we're handling
-        const pendingSignupData = localStorage.getItem('pendingSignupData');
-        const pendingCourseRegistration = localStorage.getItem('pendingLoginData');
+      // Verify payment first
+      await verifyStripeSession(sessionId);
+      
+      // Check which type of payment we're processing
+      const trialClassId = localStorage.getItem('trialClassId');
+      const registrationAccountId = localStorage.getItem('registrationAccountId');
 
-        // Check if there's a trial class that needs payment confirmation (San Diego)
-        const trialClassId = localStorage.getItem('trialClassId');
-        if (trialClassId) {
-          // Update trial class payment status
-          await updateTrialClassPayment(trialClassId, sessionId);
-          
-          updateUI('success', 'Trial Class Payment Complete!', 
-            'Your payment has been successfully processed. We will contact you shortly with your trial class details.');
-          
-          localStorage.removeItem('trialClassId');
-          localStorage.removeItem('formCompleted');
-          localStorage.removeItem('pricingDetails');
-          localStorage.removeItem('pendingRegistration');
-          localStorage.removeItem('pendingLoginData');
-          localStorage.removeItem('pendingSignupData');
-          
-        } else if (pendingCourseRegistration && pendingSignupData) {
-          // Both exist - compare timestamps and process the most recent one
-          const loginData = JSON.parse(pendingCourseRegistration);
-          const signupData = JSON.parse(pendingSignupData);
-          
-          const loginTimestamp = new Date(loginData.timestamp || 0);
-          const signupTimestamp = new Date(signupData.timestamp || 0);
-          
-          if (signupTimestamp > loginTimestamp) {
-            // Signup is more recent
-            await handleRegistration(signupData);
-            updateUI('success', 'Registration Complete!', 
-              'Your registration and payment have been successfully processed. We will contact you shortly with your course details.');
-          } else {
-            // Login is more recent or timestamps are equal
-            await handleCourseRegistration(loginData);
-            updateUI('success', 'Course Registration Complete!', 
-              'Your registration and payment have been successfully processed. We will contact you shortly with your course details.');
+      if (trialClassId) {
+        // Handle trial class payment confirmation
+        await updateTrialClassPayment(trialClassId, sessionId);
+        
+        // Get the account ID from the trial class to update payment history
+        try {
+          const trialResponse = await fetch(`${baseUrl}TrialClasses/${trialClassId}`);
+          if (trialResponse.ok) {
+            const trialData = await trialResponse.json();
+            const accountId = trialData.accountId;
+            
+            // Update payment history to mark trial as paid using trialClassId as courseId
+            if (accountId) {
+              await fetch(`${baseUrl}Account/updatePaymentHistory`, {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  accountId: accountId,
+                  courseId: trialClassId,
+                  status: "paid",
+                  comment: `Trial class - Paid, transaction id: ${sessionId}`
+                })
+              });
+              console.log('Trial payment history updated to paid status');
+            }
           }
-          
-          // Remove both regardless of which one was processed
-          localStorage.removeItem('pendingLoginData');
-          localStorage.removeItem('pendingRegistration');
-          localStorage.removeItem('pendingSignupData');
-          localStorage.removeItem('pricingDetails');
-    
-        } else if (pendingCourseRegistration) {
-          // Handle login registration
-          const loginData = JSON.parse(pendingCourseRegistration);
-          await handleCourseRegistration(loginData);
-          
-          updateUI('success', 'Course Registration Complete!', 
-            'Your registration and payment have been successfully processed. We will contact you shortly with your course details.');
-          
-            localStorage.removeItem('pendingLoginData');
-            localStorage.removeItem('pendingRegistration');
-            localStorage.removeItem('pendingSignupData');
-            localStorage.removeItem('pricingDetails');
-        } else if (pendingSignupData) {
-          // Handle signup registration
-          const signupData = JSON.parse(pendingSignupData);
-          await handleRegistration(signupData);
-  
-  
-          updateUI('success', 'Registration Complete!', 
-            'Your registration and payment have been successfully processed. We will contact you shortly with your course details.');
-          
-            localStorage.removeItem('pendingLoginData');
-            localStorage.removeItem('pendingRegistration');
-            localStorage.removeItem('pendingSignupData');
-            localStorage.removeItem('pricingDetails');
-  
-        } else {
-          throw new Error('No registration data found');
+        } catch (error) {
+          console.error('Failed to update trial payment history:', error);
         }
         
-      } catch (error) {
-        console.error('Registration process error:', error);
-
-        if (paymentVerified) {
-          // Payment succeeded but registration failed
-          updateUI('error', 'Registration Processing Issue', 
-            'Your payment was successful, but we encountered an issue while creating your account or adding you to the course. Please contact us at (858) 588-7897 or CodingMindSD@gmail.com for assistance. Reference this payment session: ' + sessionId);
-        } else {
-          // Payment verification failed
-          updateUI('error', 'Payment Verification Error',
-            'There was an error verifying your payment. Please contact us at (858) 588-7897 or CodingMindSD@gmail.com for assistance. Reference this payment session: ' + sessionId);
+        updateUI('success', 'Trial Class Payment Complete!', 
+          'Your payment has been successfully processed. We will contact you shortly with your trial class details.');
+          
+      } else if (registrationAccountId) {
+        // Handle immediate registration payment confirmation
+        const courseId = localStorage.getItem('registrationCourseId');
+        
+        // Update payment history to mark as paid
+        try {
+          const paymentData = {
+            accountId: registrationAccountId,
+            status: "paid"
+          };
+          
+          if (courseId === '1v1') {
+            paymentData.comment = `1v1 - Paid, transaction id: ${sessionId}`;
+          } else if (courseId) {
+            paymentData.courseId = courseId;
+            paymentData.comment = `Paid, transaction id: ${sessionId}`;
+          } else {
+            paymentData.comment = `Paid, transaction id: ${sessionId}`;
+          }
+          
+          await fetch(`${baseUrl}Account/updatePaymentHistory`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(paymentData)
+          });
+          console.log('Payment history updated to paid status');
+        } catch (error) {
+          console.error('Failed to update payment history:', error);
         }
+        
+        updateUI('success', 'Registration Complete!', 
+          'Your payment has been successfully processed. Your account is now active and you have access to your course.');
+          
+      } else {
+        // Fallback - no specific data found but payment was verified
+        updateUI('success', 'Payment Complete!', 
+          'Your payment has been successfully processed. We will contact you shortly with details.');
       }
+      
+      // Comprehensive localStorage cleanup
+      localStorage.removeItem('trialClassId');
+      localStorage.removeItem('registrationAccountId');
+      localStorage.removeItem('registrationCourseId');
+      localStorage.removeItem('registrationToken');
+      localStorage.removeItem('formCompleted');
+      localStorage.removeItem('pricingDetails');
+      localStorage.removeItem('pendingRegistration');
+      localStorage.removeItem('pendingLoginData');
+      localStorage.removeItem('pendingSignupData');
+      
     } catch (error) {
-      console.error('Registration error:', error);
-      updateUI('error', 'Registration Error',
-        'There was an error processing your registration. Please contact us at (858) 588-7897 or CodingMindSD@gmail.com for assistance.');
+      console.error('Payment verification error:', error);
+      updateUI('error', 'Payment Verification Error',
+        'There was an error verifying your payment. Please contact us at (858) 588-7897 or CodingMindSD@gmail.com for assistance. Reference this payment session: ' + (new URLSearchParams(window.location.search).get('session_id') || 'N/A'));
     }
 });
