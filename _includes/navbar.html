@@ -30,6 +30,19 @@
         <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Locations</a>
+              <div class="dropdown-menu">
+                <ul class="list-unstyled">
+                  <li><a class="dropdown-item" href="/sandiego">San Diego</a></li>
+                  <li><a class="dropdown-item" href="/seattle">Seattle</a></li>
+                  <li><a class="dropdown-item" href="/west-lafayette">West Lafayette</a></li>
+                  <li><a class="dropdown-item" href="/arcadia">Arcadia</a></li>
+                  <li><a class="dropdown-item" href="/diamond-bar">Diamond Bar</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                 {{ site.data.nav[page.locale].nav.programs}}
               </a>
@@ -37,38 +50,26 @@
                 <div class="dropdown-content">
                   <div>
                     <ul class="list-unstyled">
-                      <li><a class="dropdown-item" href="{{ site.data.nav[page.locale].nav.URL }}competitive-courses">{{
-                          site.data.nav[page.locale].nav.competitivecourses }}</a></li>
-                      <li><a class="dropdown-item"
-                          href="{{ site.data.nav[page.locale].nav.URL }}enrichment-passion-project">{{
-                          site.data.nav[page.locale].nav.enrichment }}</a></li>
-                      <li><a class="dropdown-item" href="{{ site.data.nav[page.locale].nav.URL }}schools">{{
-                        site.data.nav[page.locale].nav.schools }}</a></li>
+                      <li><a class="dropdown-item" href="{{ site.data.nav[page.locale].nav.URL }}competitive-courses">{{ site.data.nav[page.locale].nav.competitivecourses }}</a></li>
+                      <li><a class="dropdown-item" href="{{ site.data.nav[page.locale].nav.URL }}enrichment-passion-project">{{ site.data.nav[page.locale].nav.enrichment }}</a></li>
+                      <li><a class="dropdown-item" href="{{ site.data.nav[page.locale].nav.URL }}schools">{{ site.data.nav[page.locale].nav.schools }}</a></li>
+                      <li><a class="dropdown-item" href="{{ site.data.nav[page.locale].nav.URL }}summercamp">{{ site.data.nav[page.locale].nav.summercamp }}</a></li>
                     </ul>
                   </div>
                 </div>
               </div>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link " href="{{ site.data.nav[page.locale].nav.URL }}courses">{{
-                site.data.nav[page.locale].nav.courses }}</a>
-            </li>
 
             <li class="nav-item ">
               <a class="nav-link " href="{{ site.data.nav[page.locale].nav.URL }}projects">{{
                 site.data.nav[page.locale].nav.studentProjects }}</a>
             </li>
 
-            <li class="nav-item ">
-              <a class="nav-link nav-text-solid" href="{{ site.data.nav[page.locale].nav.URL }}summercamp">
-                  <span class="underline-3 style-3 primary">{{ site.data.nav[page.locale].nav.summercamp }}</span>
-              </a>
-            </li>
+            
 
             <li class="nav-item">
-              <a class="nav-link " href="{{ site.data.nav[page.locale].nav.URL }}free-trial" id="nav-text-solid">{{
-                site.data.nav[page.locale].nav.freeTrial }}</a>
+              <a class="nav-link " href="{{ site.data.nav[page.locale].nav.URL }}free-trial" id="nav-text-solid">{{ site.data.nav[page.locale].nav.freeTrial }}</a>
             </li>
 
             <li class="nav-item dropdown">
