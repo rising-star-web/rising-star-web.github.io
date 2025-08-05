@@ -203,8 +203,20 @@ document.addEventListener("DOMContentLoaded", function () {
         // location_register.html, thus adding a temporary fix with try catch.
         try {
           document.getElementById("registerCourseName").innerText = "1v1 private class";
-          document.getElementById("registerCourseDates").innerText = "TBD";
-          document.getElementById("registerCoursePrice").innerText = "TBD";
+          // For San Diego: Hide dates and price elements
+          const datesElement = document.getElementById("registerCourseDates");
+          const priceContainer = document.getElementById("priceContainer");
+          
+          // Hide the entire date row (including "Course Date:" label)
+          if (datesElement) {
+            const dateRow = datesElement.closest('.row');
+            if (dateRow) {
+              dateRow.style.display = "none";
+            }
+          }
+          if (priceContainer) {
+            priceContainer.style.display = "none";
+          }
         } catch {
           console.error("Failed to populate course info card");
         }
@@ -228,17 +240,36 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((course) => {
           // Update course info card
           document.getElementById("registerCourseName").innerText = course.name;
-          document.getElementById("registerCourseDates").innerText = 
-            course.dateStart.split("T")[0] + " - " + course.dateEnd.split("T")[0];
-
-          const priceContainer = document.getElementById("priceContainer");
-          if (course.price && course.price !== 0) {
-              document.getElementById("registerCoursePrice").innerText = "$" + course.price;
-              priceContainer.classList.remove("d-none");
-              priceContainer.classList.add("d-flex");
+          
+          if (isSandiego) {
+            // For San Diego: Hide dates and price, only show course name
+            const datesElement = document.getElementById("registerCourseDates");
+            const priceContainer = document.getElementById("priceContainer");
+            
+            // Hide the entire date row (including "Course Date:" label)
+            if (datesElement) {
+              const dateRow = datesElement.closest('.row');
+              if (dateRow) {
+                dateRow.style.display = "none";
+              }
+            }
+            if (priceContainer) {
+              priceContainer.style.display = "none";
+            }
           } else {
-              priceContainer.classList.add("d-none");
-              priceContainer.classList.remove("d-flex");
+            // For other locations: Show dates and price as before
+            document.getElementById("registerCourseDates").innerText = 
+              course.dateStart.split("T")[0] + " - " + course.dateEnd.split("T")[0];
+
+            const priceContainer = document.getElementById("priceContainer");
+            if (course.price && course.price !== 0) {
+                document.getElementById("registerCoursePrice").innerText = "$" + course.price;
+                priceContainer.classList.remove("d-none");
+                priceContainer.classList.add("d-flex");
+            } else {
+                priceContainer.classList.add("d-none");
+                priceContainer.classList.remove("d-flex");
+            }
           }
         })
         .catch((error) => {

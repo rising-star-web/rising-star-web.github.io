@@ -3,7 +3,7 @@ name: EN
 register:
   header: Sign up for a Coding Mind account
   parentEmail: Parent/Guardian Email
-  studentEmail: Student Email
+  studentEmail: Student Email (Will be used for login)
   password: Password
   confirm_password: Confirm Password
   firstname: Student First Name

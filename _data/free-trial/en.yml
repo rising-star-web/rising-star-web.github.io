@@ -8,6 +8,8 @@ freetrial:
   errorName: Please enter your name.
   gradeTag: Student's Grade Level *
   errorGrade: Please provide a valid grade level.
+  studentEmailTag: Student's Email (Will be used as email login)*
+  errorStudentEmail: Please enter a valid student email address.
   parentEmailTag: Parent's Email Address *
   errorEmail: Please provide a valid email address.
   phoneNumberTag: "Parent's Phone Number: <i>Ex. 123-456-7890 </i> *"
