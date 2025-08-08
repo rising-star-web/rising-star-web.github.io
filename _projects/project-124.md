@@ -5,7 +5,7 @@ layout: student_project_detail
 coverImage: "/img/2025_update/Project-124-3-Rebecca.png"
 pagePostDate: "7 August 2025"
 studentName: "Rebecca"
-projectName: "Website generator"
+projectName: "Career AI Assitant"
 projectCategory: "App Development"
 projectDesc: "Admission to UC Berkeley"
 
