@@ -15,6 +15,6 @@ bodyText1: "At the early stage of experimenting with AI for career development, 
 bodyText2: "Rebecca’s project combines AI algorithms with practical career preparation strategies, delivering innovative and highly useful tools that address the two major pain points of time and effort in job hunting. The Career AI Assistant enables users to generate high-quality application materials and discover relevant opportunities quickly, boosting their confidence and success rate in the job search process."
 projectURL: ""
 awardsDesc: ""
-contentImage: "/img/2025_update/Project-124-1-Rebecca.png"
+contentImage: "/img/2025_update/Project-124-1-Rebecca.jpg"
 contentImage2: "/img/2025_update/Project-124-2-Rebecca.png"
 ---
