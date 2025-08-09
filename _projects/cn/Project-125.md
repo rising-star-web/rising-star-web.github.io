@@ -4,7 +4,7 @@ layout: student_project_detail
 
 [//]: # (Project Card)
 coverImage: "/img/2025_update/Project-125-1.jpg"
-pagePostDate: "8 August 2025"
+pagePostDate: "2025年8月8日"
 studentName: "Rebecca"
 projectName: "StarSeek-学生社交 AI 助手"
 projectCategory: "App Development"
