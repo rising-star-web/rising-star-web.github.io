@@ -5,7 +5,7 @@ layout: student_project_detail
 [//]: # (Project Card)
 coverImage: "/img/2025_updated/Project-124-3-Rebecca.png"
 pagePostDate: "2025年8月7日"
-studentName: "Rebecca"
+studentName: "Jayden"
 projectName: "求职 AI 小助手"
 projectCategory: "App Development"
 projectDesc: "学员创新作品"
