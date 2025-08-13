@@ -99,32 +99,31 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Handle trial class payment confirmation
         await updateTrialClassPayment(trialClassId, sessionId);
         
-        // Get the account ID from the trial class to update payment history
-        try {
-          const trialResponse = await fetch(`${baseUrl}TrialClasses/${trialClassId}`);
-          if (trialResponse.ok) {
-            const trialData = await trialResponse.json();
-            const accountId = trialData.accountId;
-            
-            // Update payment history to mark trial as paid using trialClassId field
-            if (accountId) {
-              await fetch(`${baseUrl}Account/updatePaymentHistory`, {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                  accountId: accountId,
-                  trialClassId: trialClassId,
-                  status: "paid",
-                  comment: `Trial class - Paid, transaction id: ${sessionId}`
-                })
-              });
-              console.log('Trial payment history updated to paid status');
-            }
+        // Update payment history using accountId from localStorage
+        // For returning trial users: registrationAccountId is set during login
+        // For new trial users: registrationAccountId is set during form submission
+        const accountId = localStorage.getItem('registrationAccountId');
+        if (accountId) {
+          try {
+            await fetch(`${baseUrl}Account/updatePaymentHistory`, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                accountId: accountId,
+                trialClassId: trialClassId,
+                status: "paid",
+                comment: `Trial class - Paid, transaction id: ${sessionId}`
+              })
+            });
+            console.log('Trial payment history updated to paid status');
+          } catch (error) {
+            console.error('Failed to update trial payment history:', error);
           }
-        } catch (error) {
-          console.error('Failed to update trial payment history:', error);
+        } else {
+          console.warn('No registrationAccountId found in localStorage for trial payment history update');
+          console.log('Available localStorage keys:', Object.keys(localStorage));
         }
         
         updateUI('success', 'Trial Class Payment Complete!', 
