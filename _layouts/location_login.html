@@ -21,9 +21,54 @@ layout: locationdefault
       </div>
       <!--/column -->
       <div class="col-lg-6 col-xl-5 offset-xl-1 text-center">
+        <!-- Course Info Card -->
+        <div class="card shadow-lg mb-5">
+          <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+            <h5 class="card-title mb-0">{% if site.data.login[page.locale].login.courseInfo %}{{
+              site.data.login[page.locale].login.courseInfo }}{% else %}Course Information{% endif %}</h5>
+            <button id="toggleButton" class="btn btn-sm btn-primary text-white" type="button" data-bs-toggle="collapse"
+              data-bs-target="#courseInfoContent" aria-expanded="true" aria-controls="courseInfoContent">
+              <span id="toggleArrow">&#9650;</span> <!-- Default is Up -->
+            </button>
+          </div>
+          <div class="collapse show" id="courseInfoContent">
+            <div class="card-body text-start">
+              <div class="mb-3 row">
+                <div class="col-5 text-start">
+                  <strong>{% if site.data.login[page.locale].login.courseName %}{{
+                    site.data.login[page.locale].login.courseName }}{% else %}Course{% endif %}:</strong>
+                </div>
+                <div class="col-7 text-start">
+                  <span id="loginCourseName">-</span>
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <div class="col-5 text-start">
+                  <strong>{% if site.data.login[page.locale].login.courseDate %}{{
+                    site.data.login[page.locale].login.courseDate }}{% else %}Dates{% endif %}:</strong>
+                </div>
+                <div class="col-7 text-start">
+                  <span id="loginCourseDates">-</span>
+                </div>
+              </div>
+              <div class="mb-3 row d-none" id="priceContainer">
+                <div class="col-5 text-start">
+                  <strong>{% if site.data.login[page.locale].login.price %}{{
+                    site.data.login[page.locale].login.price }}{% else %}Price{% endif %}:</strong>
+                </div>
+                <div class="col-7 text-start">
+                  <span id="loginCoursePrice">-</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <h2 class="display-2 mb-3">{{ site.data.login[page.locale].login.header }}</h2>
           Email refers to student's email you used to register. Your username can be found in the email sent when you created your account. <br>
         <!-- <p class="lead mb-8">{{ site.data.free-trial[page.locale].login.lead }}</p> -->
+        
+
+
         <form id="loginForm" class="contact-form needs-validation" novalidate>
           <div class="messages"></div>
           <div class="form-floating mb-4">
@@ -84,5 +129,20 @@ layout: locationdefault
 <script src="/js/login.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleArrow = document.getElementById('toggleArrow');
+    const collapseEl = document.getElementById('courseInfoContent');
+
+    collapseEl.addEventListener('show.bs.collapse', function () {
+      toggleArrow.innerHTML = '&#9650;'; // ▲
+    });
+
+    collapseEl.addEventListener('hide.bs.collapse', function () {
+      toggleArrow.innerHTML = '&#9660;'; // ▼
+    });
+  });
+</script>
 
 

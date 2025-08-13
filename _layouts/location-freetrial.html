@@ -70,6 +70,19 @@ layout: locationdefault
           </div>
 
           <div class="form-floating mb-4">
+            <input id="studentEmail" type="email" name="studentEmail" class="form-control"
+              pattern="^[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]+$" placeholder="student@example.com"
+              required="required" data-error="Valid student email is required.">
+            <label for="studentEmail">Student's Email *</label>
+            <div class="valid-feedback">
+              {{ site.data.free-trial[page.locale].freetrial.successIndicator }}
+            </div>
+            <div class="invalid-feedback">
+              Please enter a valid student email address.
+            </div>
+          </div>
+
+          <div class="form-floating mb-4">
             <input id="emailAddress" type="email" name="emailAddress" class="form-control"
               pattern="^[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]+$" placeholder="jane.doe@example.com"
               required="required" data-error="Valid email is required.">

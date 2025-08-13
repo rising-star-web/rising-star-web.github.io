@@ -831,6 +831,8 @@ var theme = {
 
                 const name = document.getElementById('studentName').value;
                 const email = document.getElementById('emailAddress').value;
+                const studentEmailElement = document.getElementById('studentEmail');
+                const studentEmail = studentEmailElement ? studentEmailElement.value : '';
                 const phone = document.getElementById('phoneNumber').value;
                 const grade = document.getElementById('studentGrade').value;
                 const experienceField = document.getElementById('experience');
@@ -851,11 +853,11 @@ var theme = {
                 // Handle sales and others referral details
                 let referralDetail = '';
                 if (referral === 'Sales') {
-                  const salesUsername = document.getElementById('salesUsername').value;
-                  referralDetail = salesUsername;
+                  const salesUsernameElement = document.getElementById('salesUsername');
+                  referralDetail = salesUsernameElement ? salesUsernameElement.value : '';
                 } else if (referral === 'Others') {
-                  const otherReferral = document.getElementById('otherReferral').value;
-                  referralDetail = otherReferral;
+                  const otherReferralElement = document.getElementById('otherReferral');
+                  referralDetail = otherReferralElement ? otherReferralElement.value : '';
                 }
 
                 function formatDateTimeSelections() {
@@ -890,11 +892,14 @@ var theme = {
 
                   if (campusLocation === 'San-diego' || campusLocation === 'Online-sd') {
                     console.log('San Diego campus detected, processing...');
-                    const classType = document.getElementById('classType').value;
+                    const classTypeElement = document.getElementById('classType');
+                    const classType = classTypeElement ? classTypeElement.value : '';
                     console.log('Class type:', classType);
                     if (classType === 'group') {
-                      const className = document.getElementById('className').value;
-                      const classSchedule = document.getElementById('classSchedule').value;
+                      const classNameElement = document.getElementById('className');
+                      const classScheduleElement = document.getElementById('classSchedule');
+                      const className = classNameElement ? classNameElement.value : '';
+                      const classSchedule = classScheduleElement ? classScheduleElement.value : '';
                       publicComment = `Group Class - ${className} (${classSchedule})`;
                       console.log('Group class details:', className, classSchedule);
                     } else {
@@ -925,6 +930,7 @@ var theme = {
                 }
 
                 let accountData = {
+                  email: studentEmail || '',
                   email2: email,
                   phone2: phone,
                   username: username,

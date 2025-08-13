@@ -8,6 +8,8 @@ freetrial:
   errorName: 请输入您的姓名。
   gradeTag: 学生年级 *
   errorGrade: 请提供有效的年级水平。
+  studentEmailTag: 学生电子邮箱 (将用作邮箱登录)*
+  errorStudentEmail: 请输入有效的学生电子邮箱地址。
   parentEmailTag: 家长电子邮箱地址 *
   errorEmail: 请提供有效的电子邮箱地址。
   phoneNumberTag: "家长手机号码：<i>例如：123-456-7890</i> *"
