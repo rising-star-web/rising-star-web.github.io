@@ -161,10 +161,14 @@ document.addEventListener('DOMContentLoaded', async () => {
           console.error('Failed to update payment history:', error);
         }
         
+        
         updateUI('success', 'Registration Complete!', 
           'Your payment has been successfully processed. Your account is now active and you have access to your course.');
           
       } else {
+
+        console.warn('No trialClassId or registrationAccountId found in localStorage');
+        console.log('Available localStorage keys:', Object.keys(localStorage));
         // Fallback - no specific data found but payment was verified
         updateUI('success', 'Payment Complete!', 
           'Your payment has been successfully processed. We will contact you shortly with details.');

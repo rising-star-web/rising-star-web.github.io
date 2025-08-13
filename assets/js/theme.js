@@ -1025,6 +1025,7 @@ var theme = {
                       const trialClassId = resp2.id;
                       console.log('Trial class ID:', trialClassId);
                       localStorage.setItem('trialClassId', trialClassId);
+                      localStorage.setItem('registrationAccountId', studentId);
                       localStorage.setItem('formCompleted', 'true');
                       
                       // Add payment history record for trial class with pending status
