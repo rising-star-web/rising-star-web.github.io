@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         const trialResponse = await fetch(`${baseUrl}TrialClasses/latest/${accountId}`);
                         
                         if (trialResponse.ok) {
-                            const result = await trialResponse.json();
+                            const result = await trialResponse.json().result;
                             if (result.success && result.trialClass) {
                                 console.log('Found trial class:', result.trialClass);
                                 localStorage.setItem('trialClassId', result.trialClass.id);
