@@ -248,6 +248,50 @@ logo_url = '/' | append: location_name %} {% endif %}
 </section>
 <!-- /section -->
 
+<!-- Trial User Options Modal -->
+<div id="trialUserOptionsModal" class="modal fade" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">Complete Your Trial Class Registration</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center mb-4">
+                    <i class="fas fa-question-circle fa-3x text-primary mb-3"></i>
+                </div>
+                <p class="lead text-center mb-4">
+                    To proceed with the trial class payment, we need to know a bit more about your student.
+                </p>
+                <div class="row g-3">
+                    <div class="col-12">
+                        <div class="card h-100 border-primary">
+                            <div class="card-body text-center">
+                                <h6 class="card-title">Already Have an Account?</h6>
+                                <p class="card-text small">If you previously filled out the trial form, log in to continue.</p>
+                                <button type="button" class="btn btn-primary btn-sm" onclick="redirectToLogin()">
+                                    Log In to Continue
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card h-100 border-success">
+                            <div class="card-body text-center">
+                                <h6 class="card-title">New to Coding Mind?</h6>
+                                <p class="card-text small">Fill out our quick trial form to get started.</p>
+                                <button type="button" class="btn btn-success btn-sm" onclick="redirectToTrialForm()">
+                                    Fill Out Trial Form
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="https://js.stripe.com/v3/"></script>
 <script>
     // DEVELOPMENT 
@@ -339,6 +383,28 @@ logo_url = '/' | append: location_name %} {% endif %}
         }).showToast();
     }
 
+    function showTrialUserOptionsModal() {
+        const modal = document.getElementById('trialUserOptionsModal');
+        if (modal) {
+            const bootstrapModal = new bootstrap.Modal(modal);
+            bootstrapModal.show();
+        } else {
+            // Fallback if modal doesn't exist - show form completion toast
+            showFormCompletionToast();
+            setTimeout(() => {
+                window.location.href = `/${LOCATION_NAME}/schedule-trial`;
+            }, 2000);
+        }
+    }
+
+    function redirectToLogin() {
+        window.location.href = `/${LOCATION_NAME}/login`;
+    }
+
+    function redirectToTrialForm() {
+        window.location.href = `/${LOCATION_NAME}/schedule-trial`;
+    }
+
     function calculateProration(monthlyPrice) {
         const now = new Date();
         const currentMonth = now.getMonth();
@@ -412,14 +478,13 @@ logo_url = '/' | append: location_name %} {% endif %}
             localStorage.removeItem('selectedProgram');
             localStorage.removeItem('selectedPrice');
             if (planName === 'SD Trial Class') {
-                if (formCompleted === 'true') {
+                if (formCompleted === 'true' || registrationAccountId) {
+                    // User has completed form or has logged in account
                     localStorage.removeItem('formCompleted');
                     window.location.href = `/${LOCATION_NAME}/payment_details`;
                 } else {
-                    showFormCompletionToast();
-                    setTimeout(() => {
-                        window.location.href = `/${LOCATION_NAME}/schedule-trial`;
-                    }, 2000);
+                    // No form completed and no account - ask user what they want to do
+                    showTrialUserOptionsModal();
                 }
             } else if (planName === '1v1 Junior Membership' || planName === '1v1 Senior Membership') {
                 if (registrationAccountId) {

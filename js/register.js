@@ -138,25 +138,32 @@ document.addEventListener("DOMContentLoaded", function () {
         const confirmModal = new bootstrap.Modal(document.getElementById('confirmModal'));
         confirmModal.show();
 
-        document.getElementById('confirmRedirect').addEventListener('click', function() {
-          Toastify({
-            text: "Redirecting to pricing page...",
-            duration: 1000,
-            close: true,
-            gravity: "top",
-            position: 'right',
-            style: {
-              background: "green",
-            },
-            className: "info",
-          }).showToast();
+        // Remove any existing event listeners and add new one
+        const confirmButton = document.getElementById('confirmRedirect');
+        if (confirmButton) {
+          const newButton = confirmButton.cloneNode(true);
+          confirmButton.parentNode.replaceChild(newButton, confirmButton);
+          
+          newButton.addEventListener('click', function() {
+            Toastify({
+              text: "Redirecting to pricing page...",
+              duration: 1000,
+              close: true,
+              gravity: "top",
+              position: 'right',
+              style: {
+                background: "green",
+              },
+              className: "info",
+            }).showToast();
 
-          // Hide modal and redirect
-          confirmModal.hide();
-          setTimeout(() => {
-            window.location.href = "/sandiego/pricing";
-          }, 500);
-        });
+            // Hide modal and redirect
+            confirmModal.hide();
+            setTimeout(() => {
+              window.location.href = "/sandiego/pricing";
+            }, 500);
+          });
+        }
 
       } catch (error) {
         console.error('San Diego registration failed:', error);

@@ -64,6 +64,11 @@ layout: locationdefault
           </div>
         </div>
         <h2 class="display-2 mb-3">{{ site.data.login[page.locale].login.header }}</h2>
+        {% if page.location_name == 'sandiego' %}
+        <div class="alert alert-info mb-4">
+          <strong>For Trial Class Participants:</strong> If you previously filled out the trial form but haven't completed payment, you can log in here to continue. Use the student email from your trial registration.
+        </div>
+        {% endif %}
           Email refers to student's email you used to register. Your username can be found in the email sent when you created your account. <br>
         <!-- <p class="lead mb-8">{{ site.data.free-trial[page.locale].login.lead }}</p> -->
         
@@ -135,13 +140,16 @@ layout: locationdefault
     const toggleArrow = document.getElementById('toggleArrow');
     const collapseEl = document.getElementById('courseInfoContent');
 
-    collapseEl.addEventListener('show.bs.collapse', function () {
-      toggleArrow.innerHTML = '&#9650;'; // ▲
-    });
+    // Only add event listeners if both elements exist
+    if (toggleArrow && collapseEl) {
+      collapseEl.addEventListener('show.bs.collapse', function () {
+        toggleArrow.innerHTML = '&#9650;'; // ▲
+      });
 
-    collapseEl.addEventListener('hide.bs.collapse', function () {
-      toggleArrow.innerHTML = '&#9660;'; // ▼
-    });
+      collapseEl.addEventListener('hide.bs.collapse', function () {
+        toggleArrow.innerHTML = '&#9660;'; // ▼
+      });
+    }
   });
 </script>
 

@@ -27,6 +27,12 @@ layout: locationdefault
         <h2 class="display-2 mb-3">{{ site.data.free-trial[page.locale].freetrial.header }}</h2>
         <p id="formDescription" class="lead mb-8 pe-xl-10">
         </p>
+        {% if location_name == 'sandiego' %}
+        <div class="alert alert-primary mb-4">
+          <strong>Already started your trial registration?</strong> 
+          <a href="/sandiego/login" class="btn btn-sm btn-outline-primary ms-2">Log In to Continue Payment</a>
+        </div>
+        {% endif %}
         <div class="d-flex justify-content-center">
           <div id="formSpinner" class="spinner-border text-navy align-self-center" role="status"
             style="width: 3rem; height: 3rem; display: none;">

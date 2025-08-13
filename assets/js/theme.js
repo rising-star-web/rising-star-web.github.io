@@ -1031,7 +1031,7 @@ var theme = {
                       try {
                         const paymentData = {
                           accountId: studentId,
-                          courseId: trialClassId,
+                          trialClassId: trialClassId,
                           status: "payment_pending",
                           comment: "Trial class - payment pending"
                         };
@@ -1076,32 +1076,47 @@ var theme = {
                       // Show confirmation modal for payment
                       console.log('Showing confirmation modal...');
                       const modalElement = document.getElementById('confirmModal');
+                      let confirmModal = null;
+                      
                       if (modalElement && typeof bootstrap !== 'undefined' && bootstrap.Modal) {
-                        const confirmModal = new bootstrap.Modal(modalElement);
+                        confirmModal = new bootstrap.Modal(modalElement);
                         confirmModal.show();
                         console.log('Modal should be visible now');
                       } else {
                         console.error('Bootstrap Modal not available or modal element missing');
                         // Fallback: redirect directly to payment
                         window.location.href = "/sandiego/payment_details";
+                        return; // Exit early if modal can't be created
                       }
 
                       // Handle the confirmation button click
-                      document.getElementById('confirmRedirect').addEventListener('click', function() {
-                        Toastify({
-                          text: "Redirecting to payment page...",
-                          duration: 500,
-                          gravity: "top",
-                          position: 'right',
-                          style: {
-                            background: "green",
-                          },
-                          className: "info",
-                        }).showToast();
+                      const confirmButton = document.getElementById('confirmRedirect');
+                      if (confirmButton) {
+                        // Remove any existing event listeners
+                        const newButton = confirmButton.cloneNode(true);
+                        confirmButton.parentNode.replaceChild(newButton, confirmButton);
+                        
+                        // Add new event listener
+                        newButton.addEventListener('click', function() {
+                          Toastify({
+                            text: "Redirecting to payment page...",
+                            duration: 500,
+                            gravity: "top",
+                            position: 'right',
+                            style: {
+                              background: "green",
+                            },
+                            className: "info",
+                          }).showToast();
 
-                        confirmModal.hide();
-                        window.location.href = "/sandiego/payment_details";
-                      });
+                          if (confirmModal) {
+                            confirmModal.hide();
+                          }
+                          setTimeout(() => {
+                            window.location.href = "/sandiego/payment_details";
+                          }, 600);
+                        });
+                      }
                     } else {
                       $('#formSpinner').css("display", "none");
                       $('#formDescription').css("display", "none");

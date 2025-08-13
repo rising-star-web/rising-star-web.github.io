@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const trialData = await trialResponse.json();
             const accountId = trialData.accountId;
             
-            // Update payment history to mark trial as paid using trialClassId as courseId
+            // Update payment history to mark trial as paid using trialClassId field
             if (accountId) {
               await fetch(`${baseUrl}Account/updatePaymentHistory`, {
                 method: "POST",
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 },
                 body: JSON.stringify({
                   accountId: accountId,
-                  courseId: trialClassId,
+                  trialClassId: trialClassId,
                   status: "paid",
                   comment: `Trial class - Paid, transaction id: ${sessionId}`
                 })
