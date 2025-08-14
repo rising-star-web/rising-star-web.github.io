@@ -149,14 +149,22 @@ document.addEventListener('DOMContentLoaded', async () => {
             paymentData.comment = `Paid, transaction id: ${sessionId}`;
           }
           
-          await fetch(`${baseUrl}Account/updatePaymentHistory`, {
+          console.log('Updating payment history with data:', paymentData);
+          
+          const response = await fetch(`${baseUrl}Account/updatePaymentHistory`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
             body: JSON.stringify(paymentData)
           });
-          console.log('Payment history updated to paid status');
+          
+          if (response.ok) {
+            console.log('Payment history updated to paid status');
+          } else {
+            const errorText = await response.text();
+            console.error('Failed to update payment history:', response.status, errorText);
+          }
         } catch (error) {
           console.error('Failed to update payment history:', error);
         }

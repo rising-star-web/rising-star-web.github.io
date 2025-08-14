@@ -143,21 +143,127 @@ document.addEventListener("DOMContentLoaded", function () {
                     
                     // Handle course linking and payment history
                     if (courseId) {
+                        let studentAlreadyLinked = false;
+                        
                         if (courseId !== '1v1') {
-                            // Link to regular course
-                            console.log('Linking existing user to course:', courseId);
-                            const courseResponse = await fetch(`${baseUrl}Course/${courseId}/students/rel/${accountId}`, {
-                                method: "PUT",
-                                headers: {
-                                    Authorization: `Bearer ${token}`
-                                }
-                            });
+                            // For San Diego: Check if student is already linked using new backend method
+                            if (isSandiego) {
+                                try {
+                                    console.log('SD: Checking payment history for courseId:', courseId);
+                                    const paymentCheckResponse = await fetch(`${baseUrl}Account/checkPaymentHistory?accountId=${accountId}&courseId=${courseId}`, {
+                                        method: "GET",
+                                        headers: {
+                                            "Authorization": `Bearer ${token}`
+                                        }
+                                    });
 
-                            if (!courseResponse.ok) {
-                                console.error('Failed to attach student to course');
-                                // Continue anyway - can be fixed manually
+                                    if (paymentCheckResponse.ok) {
+                                        const paymentCheck = await paymentCheckResponse.json();
+                                        console.log('SD: Payment check result:', paymentCheck);
+                                        
+                                        if (paymentCheck.result.found) {
+                                            const existingPayment = paymentCheck.result.entry;
+                                            console.log('SD: Found existing payment:', existingPayment);
+                                            studentAlreadyLinked = true;
+                                            
+                                            if (existingPayment.status && existingPayment.status.includes('paid')) {
+                                                console.log('SD: Student already paid for this course');
+                                                
+                                                // Clear localStorage before showing modal
+                                                const itemsToRemove = ['trialClassId', 'registrationAccountId', 'registrationCourseId', 'registrationToken', 'formCompleted', 'pricingDetails', 'pendingRegistration', 'pendingLoginData', 'pendingSignupData'];
+                                                itemsToRemove.forEach(item => {
+                                                    if (localStorage.getItem(item)) {
+                                                        localStorage.removeItem(item);
+                                                    }
+                                                });
+                                                
+                                                // Show message that they're already enrolled
+                                                const modalTitle = document.querySelector('#confirmModal .modal-title');
+                                                const modalBody = document.querySelector('#confirmModal .modal-body');
+                                                const confirmButton = document.getElementById('confirmRedirect');
+                                                
+                                                modalTitle.textContent = 'Already Enrolled';
+                                                modalBody.innerHTML = `
+                                                    <div class="alert alert-info" role="alert">
+                                                        <strong>You're already enrolled!</strong>
+                                                    </div>
+                                                    <p>You have already paid for and enrolled in this course.</p>
+                                                    <p>If you need assistance, please contact us at (858) 588-7897.</p>
+                                                `;
+                                                confirmButton.textContent = 'Go to Course Schedule';
+                                                
+                                                const confirmModal = new bootstrap.Modal(document.getElementById('confirmModal'));
+                                                confirmModal.show();
+                                                
+                                                if (confirmButton) {
+                                                    const newButton = confirmButton.cloneNode(true);
+                                                    confirmButton.parentNode.replaceChild(newButton, confirmButton);
+                                                    
+                                                    newButton.addEventListener('click', function() {
+                                                        window.location.href = "/sandiego/schedule";
+                                                    });
+                                                }
+                                                
+                                                loadingIndicator.style.display = "none";
+                                                return; // Exit early - don't proceed with payment flow
+                                            } else {
+                                                console.log('SD: Payment pending - skip course linking, redirect to pricing');
+                                                studentAlreadyLinked = true; // Skip course linking and payment history creation
+                                                
+                                                // Store account info for payment processing  
+                                                localStorage.setItem('registrationAccountId', accountId);
+                                                localStorage.setItem('registrationCourseId', courseId || '');
+                                                localStorage.setItem('registrationToken', token);
+                                                
+                                                loadingIndicator.style.display = "none";
+                                                
+                                                // Redirect directly to pricing page
+                                                Toastify({
+                                                    text: "Redirecting to complete your payment...",
+                                                    duration: 1000,
+                                                    close: true,
+                                                    gravity: "top",
+                                                    position: 'right',
+                                                    style: {
+                                                        background: "blue",
+                                                    },
+                                                    className: "info",
+                                                }).showToast();
+
+                                                setTimeout(() => {
+                                                    window.location.href = "/sandiego/pricing";
+                                                }, 500);
+                                                
+                                                return; // Exit early - don't proceed with normal flow
+                                            }
+                                        } else {
+                                            console.log('SD: No existing payment found for this course');
+                                        }
+                                    }
+                                } catch (error) {
+                                    console.error('SD: Error checking payment history:', error);
+                                    // Continue with normal flow if check fails
+                                }
+                            }
+                            
+                            // Link to regular course (only if not already linked)
+                            if (!studentAlreadyLinked) {
+                                console.log('Linking existing user to course:', courseId);
+                                const courseResponse = await fetch(`${baseUrl}Course/${courseId}/students/rel/${accountId}`, {
+                                    method: "PUT",
+                                    headers: {
+                                        Authorization: `Bearer ${token}`
+                                    }
+                                });
+
+                                if (!courseResponse.ok) {
+                                    console.error('Failed to attach student to course');
+                                    // Continue anyway - can be fixed manually
+                                } else {
+                                    console.log('Student successfully linked to course');
+                                }
                             } else {
-                                console.log('Student successfully linked to course');
+                                console.log('SD: Student already linked to course, skipping link step');
                             }
                         }
                         
@@ -315,7 +421,11 @@ document.addEventListener("DOMContentLoaded", function () {
                                 }
                                 
                                 setTimeout(() => {
-                                    window.location.href = "/sandiego/payment_details";
+                                    if (isTrialUser) {
+                                        window.location.href = "/sandiego/payment_details";
+                                    } else {
+                                        window.location.href = "/sandiego/pricing";
+                                    }
                                 }, 500);
                             }
                         });
