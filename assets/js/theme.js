@@ -962,6 +962,10 @@ var theme = {
                   },
                   body: formBody
                 }).then(async function (response) {
+                  if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error?.message || 'Failed to create account');
+                  }
                   let resp = await response.json();
                   let studentId = resp.id;
 
@@ -1153,7 +1157,16 @@ var theme = {
                 }).catch((err) => {
                   console.log(err);
                   $('#formSpinner').css("display", "none");
-                  $('#form').prepend('An error has occurred. Please contact us at +1 (949) 236-7896 for help.');
+                  
+                  // Handle duplicate email error
+                  let errorMessage;
+                  if (err.message && (err.message.includes('email` is not unique') || err.message.includes('Email already exists'))) {
+                    errorMessage = 'This email address is already registered. Please use a different email or contact us at +1 (949) 236-7896 if you need help accessing your existing account.';
+                  } else {
+                    errorMessage = err.message + '. Please try again or contact us at +1 (949) 236-7896 for help.';
+                  }
+                  
+                  $('#form').prepend('<div class="alert alert-danger">' + errorMessage + '</div>');
                 });
               }
             }

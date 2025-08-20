@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
       organizationId: organizationId,
       username: (
         formData.get("firstName") + formData.get("lastName")
-      ).toLowerCase() + Math.floor(Math.random() * 900 + 100),
+      ).replace(/[^a-zA-Z0-9]/g, '').toLowerCase() + Math.floor(Math.random() * 900 + 100),
       preferedLanguage: chinese ? "Chinese" : "English",
     };
 
@@ -68,7 +68,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         if (!response.ok) {
-          throw new Error('Failed to create account');
+          const errorData = await response.json();
+          console.error('Account creation failed:', errorData);
+          throw new Error(errorData.error?.message || 'Failed to create account');
         }
 
         const accountData = await response.json();
@@ -169,10 +171,18 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error('San Diego registration failed:', error);
         loadingIndicator.style.display = "none";
         
+        // Parse error message for duplicate email
+        let errorMessage;
+        if (error.message && (error.message.includes('is not unique') || error.message.includes('already exists'))) {
+          errorMessage = "This email address is already registered. Please use a different email or contact us at (858) 588-7897 if you need help accessing your existing account.";
+        } else {
+          errorMessage = error.message + ". Registration failed, please try again or contact us at (858) 588-7897 for assistance.";
+        }
+        
         // Show error message to user
         Toastify({
-          text: "Registration failed. Please try again or contact us at (858) 588-7897 for assistance.",
-          duration: 5000,
+          text: errorMessage,
+          duration: 6000,
           close: true,
           gravity: "top",
           position: 'right',
@@ -330,9 +340,16 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .catch((error) => {
         console.error("Registration failed", error);
+        
+        // Parse error message for duplicate email
+        let errorMessage = "Register failed. Please check your information and try again. Or contact management for help.";
+        if (error.message && (error.message.includes('email` is not unique') || error.message.includes('Email already exists'))) {
+          errorMessage = "This email address is already registered. Please use a different email or contact management for help accessing your existing account.";
+        }
+        
         Toastify({
-                text: "Register failed. Please check your information and try again. Or contact management for help.",
-                duration: 5000,
+                text: errorMessage,
+                duration: 6000,
                 close: true,
                 gravity: "top", 
                 position: 'right',
