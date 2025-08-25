@@ -6,6 +6,7 @@ nav:
   competitivecourses: 竞技编程课程
   enrichment: 背景提升项目  
   summercamp: 2025 夏令营
+  locations: 校区
   register: 注册
   course-info-register: 课程信息与注册
   courses: 课程体系
@@ -27,4 +28,23 @@ nav:
   switchLangURL: /
   switchLang: EN
   subscribe: 订阅
+
+location_list:
+  - name: 尔湾
+    id: irvine
+  - name: 圣地亚哥
+    id: sandiego
+  - name: 阿卡迪亚
+    id: arcadia
+  - name: 钻石吧
+    id: diamond-bar
+  - name: 贝尔维尤
+    id: bellevue
+  - name: 博瑟尔
+    id: bothell
+  - name: 法克托里亚
+    id: factoria
+  - name: 西拉法叶
+    id: west-lafayette
+  
 
