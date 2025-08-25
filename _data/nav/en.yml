@@ -6,6 +6,7 @@ nav:
   competitivecourses: Competitive Coding Courses
   enrichment: Enrichment Passion Project
   summercamp: 2025 Summer Camp
+  locations: Locations
   register: Register 
   course-info-register: Course Information & Register
   courses: Courses
@@ -27,3 +28,22 @@ nav:
   switchLangURL: /cn/ 
   switchLang: 中文
   subscribe: Subscribe
+
+location_list:
+  - name: Irvine, CA
+    id: irvine
+  - name: San Diego, CA
+    id: sandiego
+  - name: Arcadia, CA
+    id: arcadia
+  - name: Diamond Bar, CA
+    id: diamond-bar
+  - name: Bellevue, WA
+    id: bellevue
+  - name: Bothell, WA
+    id: bothell
+  - name: Factoria, WA
+    id: factoria
+  - name: West Lafayette, IN
+    id: west-lafayette
+  
