@@ -7,7 +7,7 @@ pagePostDate: "27 August 2025"
 studentName: "Sonia"
 projectName: "Community Resources Hub"
 projectCategory: "App Development"
-projectDesc: "ACCD ArtCenter College of Design 录取"
+projectDesc: "ACCD ArtCenter College of Design"
 
 [//]: # (Project Page/Showcase)
 headerTitle: "Community Resources Hub"
