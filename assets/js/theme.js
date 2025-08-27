@@ -1161,9 +1161,9 @@ var theme = {
                   // Handle duplicate email error
                   let errorMessage;
                   if (err.message && (err.message.includes('email` is not unique') || err.message.includes('Email already exists'))) {
-                    errorMessage = 'This email address is already registered. Please use a different email or contact us at +1 (949) 236-7896 if you need help accessing your existing account.';
+                    errorMessage = 'This email address is already registered. Please use a different email or contact us if you need help accessing your existing account.';
                   } else {
-                    errorMessage = err.message + '. Please try again or contact us at +1 (949) 236-7896 for help.';
+                    errorMessage = err.message + '. Please try again or contact us for help.';
                   }
                   
                   $('#form').prepend('<div class="alert alert-danger">' + errorMessage + '</div>');

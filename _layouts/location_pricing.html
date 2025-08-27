@@ -51,9 +51,12 @@ logo_url = '/' | append: location_name %} {% endif %}
                                     </button>
                                     {% endif %}
                                     {% if location_name == 'sandiego' %}
+                                    <!-- Summer Camp tab hidden - season is over -->
+                                    {% comment %}
                                     <button class="tab-button" onclick="showTab('summer-camp')">
                                         Summer Camp
                                     </button>
+                                    {% endcomment %}
                                     <button class="tab-button" onclick="showTab('trial-class')">
                                         Trial Class
                                     </button>
@@ -133,6 +136,15 @@ logo_url = '/' | append: location_name %} {% endif %}
                                             <p><strong>$370</strong> per month</p>
                                             <button class="subscribe-button"
                                                 onclick="handleSubscribe('prod_R3sQfXDggSIO4T', 37000, '1v1 Senior Membership')">
+                                                Register
+                                            </button>
+                                        </div>
+                                        <div class="pricing-card">
+                                            <h2>Coding Mind - 1v1 Monthly Fast Track Membership (All Level)</h2>
+                                            <p>2 classes/week</p>
+                                            <p><strong>$590</strong> per month</p>
+                                            <button class="subscribe-button"
+                                                onclick="handleSubscribe('prod_Swk1Q5NGj4sbeL', 59000, '1v1 Fast Membership')">
                                                 Register
                                             </button>
                                         </div>
@@ -486,7 +498,7 @@ logo_url = '/' | append: location_name %} {% endif %}
                     // No form completed and no account - ask user what they want to do
                     showTrialUserOptionsModal();
                 }
-            } else if (planName === '1v1 Junior Membership' || planName === '1v1 Senior Membership') {
+            } else if (planName === '1v1 Junior Membership' || planName === '1v1 Senior Membership' || planName === '1v1 Fast Membership') {
                 if (registrationAccountId) {
                     window.location.href = `/${LOCATION_NAME}/payment_details`;
                 } else {

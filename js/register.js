@@ -174,9 +174,9 @@ document.addEventListener("DOMContentLoaded", function () {
         // Parse error message for duplicate email
         let errorMessage;
         if (error.message && (error.message.includes('is not unique') || error.message.includes('already exists'))) {
-          errorMessage = "This email address is already registered. Please use a different email or contact us at (858) 588-7897 if you need help accessing your existing account.";
+          errorMessage = "This email address is already registered. Please use a different email or contact us if you need help accessing your existing account.";
         } else {
-          errorMessage = error.message + ". Registration failed, please try again or contact us at (858) 588-7897 for assistance.";
+          errorMessage = error.message + ". Registration failed, please try again or contact us for assistance.";
         }
         
         // Show error message to user
