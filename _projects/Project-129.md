@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/2026_update/Sonia-1.jpg"
+coverImage: "/img/2025_update/Sonia-1.jpg"
 pagePostDate: "27 August 2025"
 studentName: "Sonia"
 projectName: "Community Resources Hub"
@@ -15,6 +15,6 @@ bodyText1: "Community Resource Hub is a mobile application designed to assist ho
 bodyText2: "Sonia's project was developed using a modern web front-end framework to build a mobile-friendly interface, coupled with a cloud-based database for managing and updating resource information. The chat assistant module is powered by an NLP model API, enabling the system to provide tailored links and resources based on user input. The overall architecture is modular and scalable, allowing for future integration with Python-based backend services and more advanced AI algorithms."
 projectURL: "https://sunsonia2020.wixsite.com/my-site"
 awardsDesc: ""
-contentImage: "/img/2026_update/Sonia-2.jpg"
-contentImage2: "/img/2026_update/Sonia-3.jpg"
+contentImage: "/img/2025_update/Sonia-2.jpg"
+contentImage2: "/img/2025_update/Sonia-3.jpg"
 ---
