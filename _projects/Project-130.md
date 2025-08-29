@@ -2,7 +2,7 @@
 layout: student_project_detail
 
 [//]: # (Project Card)
-coverImage: "/img/2025_update/Cindy-img-3.jpg"
+coverImage: "/img/2025_update/CIndy-img-3.jpg"
 pagePostDate: "28 August 2025"
 studentName: "Cindy"
 projectName: "AI Deep Focus Music Generator"
