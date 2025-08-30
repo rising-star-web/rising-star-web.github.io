@@ -32,3 +32,16 @@ feedback:
   leaveComments: If you have any questions or feedback, please leave a message.
   message: Message
   submit: Submit
+
+regularFeedback:
+  header: Lesson Feedback
+  studentName: Student Name
+  date: Date
+  mainFeedback: Main Feedback
+  homeworkStatus: Homework Completion Status
+  homeworkCompleted: Student completed their homework
+  homeworkNotCompleted: Student did not complete their homework
+  performance: Performance
+  developmentSkills: Development Skills & Practices
+  behavior: Behavior
+  knowledgeRetention: Knowledge Retention

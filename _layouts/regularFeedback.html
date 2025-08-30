@@ -1,0 +1,140 @@
+---
+layout: default
+---
+<html>
+
+<body>
+    <style>
+        .feedback-section {
+            background: #f7fafc;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .homework-status {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .status-icon {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .status-icon.completed {
+            color: #10b981;
+        }
+
+        .status-icon.not-completed {
+            color: #ef4444;
+        }
+
+        #studentInfoTable {
+            font-size: 0.9rem;
+        }
+
+        .main-feedback {
+            font-size: 1rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+    </style>
+    
+    <section class="wrapper bg-custom">
+        <div class="container pt-10 pb-19 pt-md-14 text-center">
+            <div class="row">
+                <div class="col-md-10 col-xl-8 mx-auto">
+                    <div class="post-header">
+                        <h1 class="display-1 mb-4">{{ site.data.feedback[page.locale].regularFeedback.header }}</h1>
+                        <p><span id="studentNameDisplay"></span></p>
+                        <p><span id="dateDisplay"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wrapper bg-light">
+        <div class="container pb-14 pb-md-16">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="blog single mt-n17">
+                        <div class="card">
+                            <div class="card-body p-6 p-lg-8">
+                                <div class="classic-view">
+                                    <article class="post">
+                                        <div class="post-content mb-5">
+                                            
+                                            <!-- Student Info Table
+                                            <table class="table table-bordered fs-12">
+                                                <tbody id="studentInfoTable">
+                                                    <tr>
+                                                        <th scope="row">{{ site.data.feedback[page.locale].regularFeedback.studentName }}</th>
+                                                        <td id="studentName"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">{{ site.data.feedback[page.locale].regularFeedback.date }}</th>
+                                                        <td id="feedbackDate"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table> -->
+
+                                            <!-- Main Feedback Section -->
+                                            <h3 class="h2 mb-4 text-center">{{ site.data.feedback[page.locale].regularFeedback.mainFeedback }}</h3>
+                                            <div class="main-feedback" id="mainFeedbackContent">
+                                            </div>
+
+                                            <hr />
+
+                                            <!-- Homework Status Section -->
+                                            <h3 class="h2 mb-4 text-center">{{ site.data.feedback[page.locale].regularFeedback.homeworkStatus }}</h3>
+                                            <div class="feedback-section">
+                                                <div class="homework-status">
+                                                    <span class="status-icon" id="homeworkIcon"></span>
+                                                    <span id="homeworkStatusText"></span>
+                                                </div>
+                                            </div>
+
+                                            <!-- Performance Section -->
+                                            <h3 class="h2 mb-4 text-center">{{ site.data.feedback[page.locale].regularFeedback.performance }}</h3>
+                                            <div class="feedback-section">
+                                                <div id="performanceContent"></div>
+                                            </div>
+
+                                            <!-- Development Skills & Practices Section -->
+                                            <h3 class="h2 mb-4 text-center">{{ site.data.feedback[page.locale].regularFeedback.developmentSkills }}</h3>
+                                            <div class="feedback-section">
+                                                <div id="developmentSkillsContent"></div>
+                                            </div>
+
+                                            <!-- Behavior Section -->
+                                            <h3 class="h2 mb-4 text-center">{{ site.data.feedback[page.locale].regularFeedback.behavior }}</h3>
+                                            <div class="feedback-section">
+                                                <div id="behaviorContent"></div>
+                                            </div>
+
+                                            <!-- Knowledge Retention Section -->
+                                            <h3 class="h2 mb-4 text-center">{{ site.data.feedback[page.locale].regularFeedback.knowledgeRetention }}</h3>
+                                            <div class="feedback-section">
+                                                <div id="knowledgeRetentionContent"></div>
+                                            </div>
+
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="/js/regularFeedback.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
+</html>

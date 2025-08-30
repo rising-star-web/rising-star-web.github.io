@@ -33,3 +33,16 @@ feedback:
   message: 留言
   submit: 提交
 
+regularFeedback:
+  header: 课后反馈
+  studentName: 学生姓名
+  date: 日期
+  mainFeedback: 主要反馈
+  homeworkStatus: 作业完成情况
+  homeworkCompleted: 学生按时完成了作业
+  homeworkNotCompleted: 学生未完成作业
+  performance: 课堂表现
+  developmentSkills: 开发技能与实践
+  behavior: 课堂行为
+  knowledgeRetention: 知识掌握
+
