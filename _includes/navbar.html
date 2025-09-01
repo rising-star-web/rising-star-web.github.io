@@ -33,19 +33,14 @@
               <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{ site.data.nav[page.locale].nav.locations }}</a>
               <div class="dropdown-menu">
                 <ul class="list-unstyled">
-                  {% if page.locale == 'cn' %}
-                    {% for location in site.data.nav.cn.location_list %}
-                      <li><a class="dropdown-item" href="{{ site.data.nav.cn.nav.URL }}{{ location.id }}">{{ location.name }}</a></li>
-                    {% endfor %}
-                  {% else %}
-                    {% for location in site.data.nav.en.location_list %}
-                      {% if location.id == 'bellevue' or location.id == 'bothell' or location.id == 'factoria' %}
-                        <li><a class="dropdown-item" href="{{ site.data.nav.en.nav.URL }}seattle">{{ location.name }}</a></li>
-                      {% else %}
-                        <li><a class="dropdown-item" href="{{ site.data.nav.en.nav.URL }}{{ location.id }}">{{ location.name }}</a></li>
-                      {% endif %}
-                    {% endfor %}
-                  {% endif %}
+                  
+                  {% for location in site.data.nav[page.locale].location_list %}
+                    {% assign target = location.id %}
+                    {% if location.id == 'bellevue' or location.id == 'bothell' or location.id == 'factoria' %}
+                      {% assign target = 'seattle' %}
+                    {% endif %}
+                    <li><a class="dropdown-item" href="{{ site.data.nav[page.locale].nav.URL }}{{ target }}">{{ location.name }}</a></li>
+                  {% endfor %}
                 </ul>
               </div>
             </li>
