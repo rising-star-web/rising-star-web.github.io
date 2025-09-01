@@ -962,6 +962,10 @@ var theme = {
                   },
                   body: formBody
                 }).then(async function (response) {
+                  if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error?.message || 'Failed to create account');
+                  }
                   let resp = await response.json();
                   let studentId = resp.id;
 
@@ -1025,13 +1029,14 @@ var theme = {
                       const trialClassId = resp2.id;
                       console.log('Trial class ID:', trialClassId);
                       localStorage.setItem('trialClassId', trialClassId);
+                      localStorage.setItem('registrationAccountId', studentId);
                       localStorage.setItem('formCompleted', 'true');
                       
                       // Add payment history record for trial class with pending status
                       try {
                         const paymentData = {
                           accountId: studentId,
-                          courseId: trialClassId,
+                          trialClassId: trialClassId,
                           status: "payment_pending",
                           comment: "Trial class - payment pending"
                         };
@@ -1076,32 +1081,47 @@ var theme = {
                       // Show confirmation modal for payment
                       console.log('Showing confirmation modal...');
                       const modalElement = document.getElementById('confirmModal');
+                      let confirmModal = null;
+                      
                       if (modalElement && typeof bootstrap !== 'undefined' && bootstrap.Modal) {
-                        const confirmModal = new bootstrap.Modal(modalElement);
+                        confirmModal = new bootstrap.Modal(modalElement);
                         confirmModal.show();
                         console.log('Modal should be visible now');
                       } else {
                         console.error('Bootstrap Modal not available or modal element missing');
                         // Fallback: redirect directly to payment
                         window.location.href = "/sandiego/payment_details";
+                        return; // Exit early if modal can't be created
                       }
 
                       // Handle the confirmation button click
-                      document.getElementById('confirmRedirect').addEventListener('click', function() {
-                        Toastify({
-                          text: "Redirecting to payment page...",
-                          duration: 500,
-                          gravity: "top",
-                          position: 'right',
-                          style: {
-                            background: "green",
-                          },
-                          className: "info",
-                        }).showToast();
+                      const confirmButton = document.getElementById('confirmRedirect');
+                      if (confirmButton) {
+                        // Remove any existing event listeners
+                        const newButton = confirmButton.cloneNode(true);
+                        confirmButton.parentNode.replaceChild(newButton, confirmButton);
+                        
+                        // Add new event listener
+                        newButton.addEventListener('click', function() {
+                          Toastify({
+                            text: "Redirecting to payment page...",
+                            duration: 500,
+                            gravity: "top",
+                            position: 'right',
+                            style: {
+                              background: "green",
+                            },
+                            className: "info",
+                          }).showToast();
 
-                        confirmModal.hide();
-                        window.location.href = "/sandiego/payment_details";
-                      });
+                          if (confirmModal) {
+                            confirmModal.hide();
+                          }
+                          setTimeout(() => {
+                            window.location.href = "/sandiego/payment_details";
+                          }, 600);
+                        });
+                      }
                     } else {
                       $('#formSpinner').css("display", "none");
                       $('#formDescription').css("display", "none");
@@ -1137,7 +1157,16 @@ var theme = {
                 }).catch((err) => {
                   console.log(err);
                   $('#formSpinner').css("display", "none");
-                  $('#form').prepend('An error has occurred. Please contact us at +1 (949) 236-7896 for help.');
+                  
+                  // Handle duplicate email error
+                  let errorMessage;
+                  if (err.message && (err.message.includes('email` is not unique') || err.message.includes('Email already exists'))) {
+                    errorMessage = 'This email address is already registered. Please use a different email or contact us if you need help accessing your existing account.';
+                  } else {
+                    errorMessage = err.message + '. Please try again or contact us for help.';
+                  }
+                  
+                  $('#form').prepend('<div class="alert alert-danger">' + errorMessage + '</div>');
                 });
               }
             }

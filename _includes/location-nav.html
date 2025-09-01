@@ -106,9 +106,11 @@
                 <a class="nav-link dropdown-item" href="https://www.sharemyworks.com" target="_blank">{{
                   site.data.nav[page.locale].nav.learningCenter }}</a>
               </li>
+              {% unless location_name == 'sandiego' %}
               <li class="nav-item">
                 <a class="nav-link dropdown-item" href="{{ location_data.paymenturl }}" target="_blank">Membership Portal</a>
               </li>
+              {% endunless %}
 
             </ul>
             <!-- /.navbar-nav -->
@@ -141,7 +143,7 @@
             </li>
             {% endif %}
             {% assign location_name = location_name | downcase | strip %}
-            {% unless location_name == "seattle" or location_name == "sandiego"%}
+            {% unless location_name == "seattle"%}
             <li class="nav-item">
               <a href="/{{ location_name }}/pricing" target="_blank" class="btn btn-sm btn-navy rounded-pill">Enroll Now</a>
             </li>

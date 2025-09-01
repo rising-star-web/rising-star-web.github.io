@@ -99,32 +99,31 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Handle trial class payment confirmation
         await updateTrialClassPayment(trialClassId, sessionId);
         
-        // Get the account ID from the trial class to update payment history
-        try {
-          const trialResponse = await fetch(`${baseUrl}TrialClasses/${trialClassId}`);
-          if (trialResponse.ok) {
-            const trialData = await trialResponse.json();
-            const accountId = trialData.accountId;
-            
-            // Update payment history to mark trial as paid using trialClassId as courseId
-            if (accountId) {
-              await fetch(`${baseUrl}Account/updatePaymentHistory`, {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                  accountId: accountId,
-                  courseId: trialClassId,
-                  status: "paid",
-                  comment: `Trial class - Paid, transaction id: ${sessionId}`
-                })
-              });
-              console.log('Trial payment history updated to paid status');
-            }
+        // Update payment history using accountId from localStorage
+        // For returning trial users: registrationAccountId is set during login
+        // For new trial users: registrationAccountId is set during form submission
+        const accountId = localStorage.getItem('registrationAccountId');
+        if (accountId) {
+          try {
+            await fetch(`${baseUrl}Account/updatePaymentHistory`, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                accountId: accountId,
+                trialClassId: trialClassId,
+                status: "paid",
+                comment: `Trial class - Paid, transaction id: ${sessionId}`
+              })
+            });
+            console.log('Trial payment history updated to paid status');
+          } catch (error) {
+            console.error('Failed to update trial payment history:', error);
           }
-        } catch (error) {
-          console.error('Failed to update trial payment history:', error);
+        } else {
+          console.warn('No registrationAccountId found in localStorage for trial payment history update');
+          console.log('Available localStorage keys:', Object.keys(localStorage));
         }
         
         updateUI('success', 'Trial Class Payment Complete!', 
@@ -150,22 +149,34 @@ document.addEventListener('DOMContentLoaded', async () => {
             paymentData.comment = `Paid, transaction id: ${sessionId}`;
           }
           
-          await fetch(`${baseUrl}Account/updatePaymentHistory`, {
+          console.log('Updating payment history with data:', paymentData);
+          
+          const response = await fetch(`${baseUrl}Account/updatePaymentHistory`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
             body: JSON.stringify(paymentData)
           });
-          console.log('Payment history updated to paid status');
+          
+          if (response.ok) {
+            console.log('Payment history updated to paid status');
+          } else {
+            const errorText = await response.text();
+            console.error('Failed to update payment history:', response.status, errorText);
+          }
         } catch (error) {
           console.error('Failed to update payment history:', error);
         }
+        
         
         updateUI('success', 'Registration Complete!', 
           'Your payment has been successfully processed. Your account is now active and you have access to your course.');
           
       } else {
+
+        console.warn('No trialClassId or registrationAccountId found in localStorage');
+        console.log('Available localStorage keys:', Object.keys(localStorage));
         // Fallback - no specific data found but payment was verified
         updateUI('success', 'Payment Complete!', 
           'Your payment has been successfully processed. We will contact you shortly with details.');

@@ -1097,7 +1097,7 @@ layout: locationdefault
 
     // Check if we have valid data
     if (!coursesData || Object.keys(coursesData).length === 0) {
-      $grid.html('<div class="alert alert-info">No course data available at this time. Please check back later.</div>');
+      $grid.html('<div class="alert alert-info">Summer Camp 2025 is over. Please tune in for Summer Camp 2026!</div>');
       return;
     }
 
@@ -1130,7 +1130,7 @@ layout: locationdefault
     var visibleDateHeaders = dateHeaders.filter(date => !isDatePassed(date));
 
     if (visibleDateHeaders.length === 0) {
-      $grid.html('<div class="alert alert-info">No upcoming dates available at this time. Please check back later.</div>');
+      $grid.html('<div class="alert alert-info">Summer Camp 2025 is over. Please tune in for Summer Camp 2026!</div>');
       return;
     }
 
