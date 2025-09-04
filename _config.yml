@@ -109,6 +109,9 @@ collections:
     output: true
     permalink: /arcadia/courses/:name/
     path: courses_ar
+  locations_cn:
+    output: true
+    permalink: /cn/:collection/:name/
     
 
 defaults:
