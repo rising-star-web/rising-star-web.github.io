@@ -1,0 +1,174 @@
+{
+  "San Diego": [
+    {
+      "Name": "L1 - Scratch",
+      "Schedule": [
+        {
+          "Day": "Monday",
+          "Time": "15:15-16:15"
+        },
+        {
+          "Day": "Tuesday",
+          "Time": "17:10-18:10"
+        },
+        {
+          "Day": "Wednesday",
+          "Time": "16:10-17:10"
+        },
+        {
+          "Day": "Thursday",
+          "Time": "16:10-17:10"
+        },
+        {
+          "Day": "Friday",
+          "Time": "17:10-18:10"
+        },
+        {
+          "Day": "Saturday",
+          "Time": "11:00-12:00"
+        },
+        {
+          "Day": "Sunday",
+          "Time": "11:10-12:10"
+        }
+      ],
+      "Grade": "G1-2+",
+      "CourseInfo": "https://codingmind.com/sandiego/courses/scratch-1-block-programming-practice/",
+      "Registration": [
+        "https://codingmind.com/sandiego/course-info-register?course_id=6728d5f27178d500159af8be&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=672bb776b15b8300158d2cfd&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=672bb8f1b15b8300158d2d68&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=6728dc907178d500159af98a&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=68a49d12a96c730011d362dc&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=6728dee37178d500159afa0c&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=6728e1327178d500159afa63&organizationId=66bf6a0dcdae5300148e3a2c"
+      ]
+    },
+    {
+      "Name": "L2 - Roblox Programming",
+      "Schedule": [
+        {
+          "Day": "Monday",
+          "Time": "17:20-18:20"
+        }
+        ,{
+          "Day": "Thursday",
+          "Time": "18:10-19:10"
+        },
+        {
+          "Day":"Sunday",
+          "Time":"9:00-10:00"
+        }
+      ],
+      "Grade": "G2-3+",
+      "CourseInfo": "https://codingmind.com/sandiego/courses/roblox-1-game-development-and-basic-lua-programming/",
+      "Registration": [
+        "https://codingmind.com/sandiego/course-info-register?course_id=68a4a285a96c730011d364f6&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=6728db6a7178d500159af971&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=672bc09eb15b8300158d2f1e&organizationId=66bf6a0dcdae5300148e3a2c"
+      ]
+    },
+    {
+      "Name": "L3 - Python 1",
+      "Schedule": [
+        {
+          "Day": "Monday",
+          "Time": "18:20-19:20"
+        },
+        {
+          "Day": "Tuesday",
+          "Time": "18:10-19:10"
+        },
+        {
+          "Day": "Wednesday",
+          "Time": "14:30-15:30"
+        },
+        {
+          "Day": "Wednesday",
+          "Time": "17:30-18:30"
+        },
+        {
+          "Day": "Friday",
+          "Time": "17:40-18:40"
+        },
+        {
+          "Day": "Friday",
+          "Time": "18:10-19:10"
+        },
+        {
+          "Day": "Saturday",
+          "Time": "11:10-12:10"
+        }
+      ],
+      "Grade": "G4+",
+      "CourseInfo": "https://codingmind.com/sandiego/courses/python-1-core-introductory-programming/",
+      "Registration":[
+        "https://codingmind.com/sandiego/course-info-register?course_id=6728d67e7178d500159af8d7&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=6728d8747178d500159af90c&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=6728d9567178d500159af93e&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=6728dd407178d500159af9a3&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=6728df9d7178d500159afa26&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=6714350423917f00157c1361&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=6728e3057178d500159afa9b&organizationId=66bf6a0dcdae5300148e3a2c"
+      ]
+    },
+    {
+      "Name": "Jr Combo",
+      "Schedule": [
+        {
+          "Day": "Wednesday",
+          "Time": "16:10-17:10"
+        },
+        {
+          "Day": "Thursday",
+          "Time": "16:10-17:10"
+        },
+        {
+          "Day": "Saturday",
+          "Time": "11:10-12:10"
+        }
+      ],
+      "Grade": "G1-2+",
+      "CourseInfo": "https://codingmind.com/sandiego/courses/",
+      "Registration":[
+        "https://codingmind.com/sandiego/course-info-register?course_id=68b8d5800cf87d0012ad0dba&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=68b8d5dc0cf87d0012ad0df2&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=68b8d60c0cf87d0012ad0e27&organizationId=66bf6a0dcdae5300148e3a2c"
+      ]
+    },
+    {
+      "Name": "Minecraft Programming",
+      "Schedule": [
+        {
+          "Day": "Saturday",
+          "Time": "09:30-10:30"
+        },
+        {
+          "Day": "Sunday",
+          "Time": "12:30-13:30"
+        }
+      ],
+      "Grade": "G1-2+",
+      "CourseInfo": "https://codingmind.com/sandiego/courses/minecraft-makecode-1-ai-driven-automation-systems/",
+      "Registration":[
+        "https://codingmind.com/sandiego/course-info-register?course_id=68b8d64c0cf87d0012ad0e5c&organizationId=66bf6a0dcdae5300148e3a2c",
+        "https://codingmind.com/sandiego/course-info-register?course_id=68b8d6780cf87d0012ad0e93&organizationId=66bf6a0dcdae5300148e3a2c"
+      ]
+    },
+    {
+      "Name": "ACSL Competition",
+      "Schedule": [
+        {
+          "Day": "Sunday",
+          "Time": "10:00-11:00"
+        }
+      ],
+      "Grade": "G1-2+",
+      "CourseInfo": "https://codingmind.com/sandiego/courses/american-computer-science-league-training-and-enhancement/",
+      "Registration":[
+        "https://codingmind.com/sandiego/course-info-register?course_id=68b8d6a70cf87d0012ad0eca&organizationId=66bf6a0dcdae5300148e3a2c"
+
+      ]
+    }
+  ]
+}
