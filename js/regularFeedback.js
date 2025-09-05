@@ -317,14 +317,18 @@ function displayRegularFeedback(feedback) {
     const homeworkIcon = document.getElementById("homeworkIcon");
     const homeworkStatusText = document.getElementById("homeworkStatusText");
     
-    if (feedback.didHomework) {
+    if (feedback.didHomework == true) {
         homeworkIcon.textContent = "✓";
         homeworkIcon.className = "status-icon completed";
         homeworkStatusText.textContent = chinese ? "学生按时完成了作业" : "Student completed their homework";
-    } else {
+    } else if (feedback.didHomework == false) {
         homeworkIcon.textContent = "✗";
         homeworkIcon.className = "status-icon not-completed";
         homeworkStatusText.textContent = chinese ? "学生未完成作业" : "Student did not complete their homework";
+    } else {
+      homeworkIcon.textContent = "-";
+      homeworkIcon.className = "status-icon";
+      homeworkStatusText.textContent = chinese ? "这节课未布置作业" : "This class did not have homework";
     }
     
     // Update performance content - use translation if available
