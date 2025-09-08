@@ -39,7 +39,7 @@
                     {% if location.id == 'bellevue' or location.id == 'bothell' or location.id == 'factoria' %}
                       {% assign target = 'seattle' %}
                     {% elsif location.id == 'irvine' %}
-                      {% assign target = '' %}
+                      {% assign target = 'irvine' %}
                     {% endif %}
                     <li><a class="dropdown-item" href="{{ site.data.nav[page.locale].nav.URL }}{{ target }}">{{ location.name }}</a></li>
                   {% endfor %}
