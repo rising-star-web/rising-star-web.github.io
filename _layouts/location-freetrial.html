@@ -474,7 +474,7 @@ layout: locationdefault
     if (classTypeSelect) {
       // Fetch and populate schedule data for San Diego
       if (locationName === 'sandiego') {
-        fetch('/assets/schedule.json')
+        fetch('/assets/schedule_2025fall.json')
           .then(response => {
             if (!response.ok) {
               throw new Error(`HTTP ${response.status}: ${response.statusText}`);
