@@ -109,8 +109,8 @@ layout: default
         <div class="col-lg-10 mx-auto text-center">
           <h3 class="display-4 mb-6">{{ site.data.student-project[page.locale].studentProject.share }}</h3>
           <div class="social-share-row">
-            <button type="button" class="btn btn-soft-primary rounded-pill" @click="copyToClipboard()">
-              <i class="uil uil-link"></i> {{ site.data.student-project[page.locale].studentProject.copyLink }}
+            <button type="button" class="btn btn-soft-primary rounded-pill" @click="shareProject()">
+              <i class="uil uil-share-alt"></i> {{ site.data.student-project[page.locale].studentProject.share }}
             </button>
           </div>
         </div>
@@ -194,6 +194,29 @@ function projectData() {
       const regExp = /(?:youtube\.com\/.*v=|youtu\.be\/)([^&?/]+)/;
       const match = url.match(regExp);
       return match ? match[1] : null;
+    },
+
+    async shareProject() {
+      const shareData = {
+        url: window.location.href
+      };
+
+      // Check if Web Share API is supported
+      if (navigator.share) {
+        try {
+          await navigator.share(shareData);
+        } catch (error) {
+          // User cancelled sharing or error occurred
+          if (error.name !== 'AbortError') {
+            console.error('Error sharing:', error);
+            // Fallback to copy to clipboard
+            this.copyToClipboard();
+          }
+        }
+      } else {
+        // Fallback to copy to clipboard for browsers that don't support Web Share API
+        this.copyToClipboard();
+      }
     },
 
     copyToClipboard() {
