@@ -41,16 +41,22 @@ layout: default
 
                       <div x-show="showVideo" class="mb-8">
                         <!-- YouTube Video -->
-                        <div x-show="youtubeVideoId" class="mb-4" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 0.4rem;">
+                        <div x-show="youtubeVideoId" class="mb-4 video-wrapper" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 0.4rem;">
                           <iframe :src="`https://www.youtube.com/embed/${youtubeVideoId}`" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
+                          <button type="button" class="video-copy-btn" @click="copyVideoLink(project.videoUrl)" title="Copy video link">
+                            <i class="uil uil-link"></i>
+                          </button>
                         </div>
                         
                         <!-- File Videos -->
                         <template x-if="fileVideos.length > 0">
                           <div class="video-container">
                             <template x-for="video in fileVideos" :key="video.s3Link">
-                              <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 0.4rem;">
+                              <div class="video-wrapper" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 0.4rem;">
                                 <video :src="video.s3Link" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" controls></video>
+                                <button type="button" class="video-copy-btn" @click="copyVideoLink(video.s3Link)" title="Copy video link">
+                                  <i class="uil uil-link"></i>
+                                </button>
                               </div>
                             </template>
                           </div>
@@ -218,6 +224,25 @@ function projectData() {
         alert("Please copy the link manually: " + text);
       }
       document.body.removeChild(textarea);
+    },
+
+    copyVideoLink(videoUrl) {
+      if (!videoUrl) {
+        alert('No video URL available');
+        return;
+      }
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(videoUrl)
+          .then(() => {
+            alert("Video link copied to clipboard!");
+          })
+          .catch(() => {
+            this.fallbackCopy(videoUrl);
+          });
+      } else {
+        this.fallbackCopy(videoUrl);
+      }
     }
   }
 }
@@ -326,5 +351,53 @@ function projectData() {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+/* Video copy button overlay */
+.video-wrapper {
+  position: relative;
+}
+
+.video-copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  opacity: 0.8;
+}
+
+.video-copy-btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.video-copy-btn i {
+  font-size: 16px;
+}
+
+/* Mobile responsive for video copy button */
+@media (max-width: 767px) {
+  .video-copy-btn {
+    width: 35px;
+    height: 35px;
+    top: 8px;
+    right: 8px;
+  }
+  
+  .video-copy-btn i {
+    font-size: 14px;
+  }
 }
 </style>
