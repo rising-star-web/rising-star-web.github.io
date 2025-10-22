@@ -231,16 +231,35 @@ function projectData() {
   display: flex;
   justify-content: center;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .post-meta li {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  white-space: nowrap;
 }
 
 .post-meta i {
   color: #3f78e0;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 767px) {
+  .post-meta {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .post-meta li {
+    flex: 0 0 auto;
+  }
+  
+  /* Override the theme CSS that hides post-author on mobile */
+  .post-header .post-meta li.post-author {
+    display: flex !important;
+  }
 }
 
 .hover-scale {
