@@ -41,7 +41,7 @@ async function setupWeChat() {
         title: window.WECHAT_SHARE_TITLE || document.title,
         desc: window.WECHAT_SHARE_DESC || description,
         link: window.WECHAT_SHARE_LINK || currentUrl,
-        imgUrl: window.WECHAT_SHARE_IMG || "https://codingmind.com/assets/img/og-image.png",
+        imgUrl: window.WECHAT_SHARE_IMG || "https://codingmind.com/assets/img/no-text-logo.png",
       };
 
       wx.updateAppMessageShareData(shareData); // share to friends
