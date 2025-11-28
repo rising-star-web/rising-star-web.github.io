@@ -1,4 +1,5 @@
-let isSandiego = false; 
+let isSandiego = false;
+let isSeattle = false;
 
 document.addEventListener("DOMContentLoaded", function () {
   const apiUrl = "https://backend4.sharemyworks.com/api/Course/";
@@ -6,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const params = new URLSearchParams(window.location.search);
   const courseId = params.get("course_id");
   const token =
-    "k6s6WghHbQ0sFQMw9YTO5MWDCunX3SNAJu8kksejwO0cP1tEh73glea29CGWExEi"; 
+    "k6s6WghHbQ0sFQMw9YTO5MWDCunX3SNAJu8kksejwO0cP1tEh73glea29CGWExEi";
   if (!courseId) {
     console.error("Course ID is missing");
     return;
@@ -15,6 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const organizationId = params.get("organizationId");
   isSandiego = organizationId == "66bf6a0dcdae5300148e3a2c" || organizationId == "6713eacd00dcfc85b65c206a";
+  // Detect Seattle based on organizationId
+  isSeattle = organizationId == "6684406b10707d0014fb7369" || organizationId == "67ae3ed6b172e100156401d5" || organizationId == "67e0298d64033c0015ce31bb";
 
     // Check for 1v1 private class special case
     if (courseId === "1v1" && isSandiego) {
@@ -119,13 +122,26 @@ function updatePageContent(course, courseId, accountId, token) {
 
 
   var chinese = window.location.href.includes("cn");
-  const queryParams = "courseId=" + courseId + 
-  "&price=" + course.price + 
-  "&accountId=" + accountId + 
-  "&token=" + token + 
+  const queryParams = "courseId=" + courseId +
+  "&price=" + course.price +
+  "&accountId=" + accountId +
+  "&token=" + token +
   "&organizationId=" + organizationId;
-  const link = (chinese ? "/cn" : "") + (isSandiego ? "/sandiego/register/?" : "/register.html?") + queryParams;
-  const loginLink = (chinese ? "/cn" : "") + (isSandiego ? "/sandiego/login/?" : "/login.html?") + queryParams;
+
+  // Determine the correct register and login paths based on location
+  let registerPath = "/register.html?";
+  let loginPath = "/login.html?";
+
+  if (isSandiego) {
+    registerPath = "/sandiego/register/?";
+    loginPath = "/sandiego/login/?";
+  } else if (isSeattle) {
+    registerPath = "/seattle/register/?";
+    loginPath = "/seattle/login/?";
+  }
+
+  const link = (chinese ? "/cn" : "") + registerPath + queryParams;
+  const loginLink = (chinese ? "/cn" : "") + loginPath + queryParams;
   document.getElementById("registerLink").href = link;
   document.getElementById("loginLink").href = loginLink;
 
