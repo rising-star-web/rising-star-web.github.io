@@ -148,6 +148,11 @@ function updatePageContent(course, courseId, accountId, token) {
 }
 
 function getCourseTime(course) {
+  // Hardcoded time for specific course
+  if (course.id === "6905438da66f5c0012793511") {
+    return "Wednesday 14:30 - 15:30";
+  }
+
   if (course.organizationId === "65f3061cf9e48a001424996a") {
     return `Monday to Friday ${course.classTime}-${course.classEndTime}`;
   } else {
