@@ -12,6 +12,20 @@ document.addEventListener("DOMContentLoaded", function () {
   var registerForm = document.getElementById("registerForm");
   var loadingIndicator = document.querySelector(".loading-indicator");
   var isSandiego = organizationId == "66bf6a0dcdae5300148e3a2c" || organizationId == "6713eacd00dcfc85b65c206a";
+  var isSeattle = organizationId == "6684406b10707d0014fb7369" || organizationId == "67ae3ed6b172e100156401d5" || organizationId == "67e0298d64033c0015ce31bb";
+
+  // Hide grade dropdown for Seattle
+  if (isSeattle) {
+    const gradeField = document.querySelector('select[name="grade"]');
+    if (gradeField) {
+      const gradeContainer = gradeField.closest('.form-floating');
+      if (gradeContainer) {
+        gradeContainer.style.display = 'none';
+      }
+      // Remove required validation for Seattle
+      gradeField.removeAttribute('required');
+    }
+  }
 
   if (courseId) {
     populateCourseInfoCard(courseId, token);
@@ -44,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
       phone2: formData.get("phone"),
       firstName: formData.get("firstName"),
       lastName: formData.get("lastName"),
-      grade: formData.get("grade"),
+      grade: isSeattle ? "N/A" : formData.get("grade"),
       dateOfBirth: formData.get("dateOfBirth") || new Date().toISOString().split('T')[0],
       organizationId: organizationId,
       username: (
