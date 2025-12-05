@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
   //const apiUrl = "http://localhost:3000/api/Course/";
   const params = new URLSearchParams(window.location.search);
   const courseId = params.get("course_id");
-  const token =
-    "k6s6WghHbQ0sFQMw9YTO5MWDCunX3SNAJu8kksejwO0cP1tEh73glea29CGWExEi";
   if (!courseId) {
     console.error("Course ID is missing");
     return;
@@ -31,25 +29,23 @@ document.addEventListener("DOMContentLoaded", function () {
         totalClasses: "TBD",
         organizationId: organizationId
       };
-      updatePageContent(privateClassDetails, courseId, accountId, token);
+      updatePageContent(privateClassDetails, courseId, accountId);
     } else {
       // Call fetchCourseDetails for all other cases
-      fetchCourseDetails(apiUrl, courseId, accountId, token);
+      fetchCourseDetails(apiUrl, courseId, accountId);
     }
 
   // Call fetchCourseDetails with all necessary parameters
-  fetchCourseDetails(apiUrl, courseId, accountId, token);
+  fetchCourseDetails(apiUrl, courseId, accountId);
 });
 
-function fetchCourseDetails(apiUrl, courseId, accountId, token) {
+function fetchCourseDetails(apiUrl, courseId, accountId) {
   // Build the request URL and include necessary filters
   const url = `${apiUrl}${courseId}?filter=${encodeURIComponent(
     JSON.stringify({ include: ["instructor", "classDays", "coursesDB"] })
   )}`;
 
-  fetch(url, {
-    headers: { Authorization: `Bearer ${token}` },
-  })
+  fetch(url)
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -57,14 +53,14 @@ function fetchCourseDetails(apiUrl, courseId, accountId, token) {
       return response.json();
     })
     .then((course) => {
-      updatePageContent(course, courseId, accountId, token);
+      updatePageContent(course, courseId, accountId);
     })
     .catch((error) => {
       console.error("Failed to fetch course details:", error);
     });
 }
 
-function updatePageContent(course, courseId, accountId, token) {
+function updatePageContent(course, courseId, accountId) {
   function getExtraClassDayTime(classDays) {
     let classDayTimes = [];
     classDays.forEach((classDay) => {
@@ -125,7 +121,6 @@ function updatePageContent(course, courseId, accountId, token) {
   const queryParams = "courseId=" + courseId +
   "&price=" + course.price +
   "&accountId=" + accountId +
-  "&token=" + token +
   "&organizationId=" + organizationId;
 
   // Determine the correct register and login paths based on location
