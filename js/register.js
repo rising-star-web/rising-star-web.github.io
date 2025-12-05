@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
       phone2: formData.get("phone"),
       firstName: formData.get("firstName"),
       lastName: formData.get("lastName"),
-      grade: isSeattle ? "N/A" : formData.get("grade"),
+      grade: isSeattle ? "1" : formData.get("grade"),
       dateOfBirth: formData.get("dateOfBirth") || new Date().toISOString().split('T')[0],
       organizationId: organizationId,
       username: (
@@ -341,7 +341,15 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       body: JSON.stringify(data),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        return response.json().then(data => {
+          if (!response.ok) {
+            // If response is not ok, throw error with the API error message
+            throw new Error(data.message || 'Registration failed');
+          }
+          return data;
+        });
+      })
       .then((data) => {
         attachStudentToCourse(
           data.id,
@@ -354,18 +362,18 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .catch((error) => {
         console.error("Registration failed", error);
-        
+
         // Parse error message for duplicate email
         let errorMessage = "Register failed. Please check your information and try again. Or contact management for help.";
-        if (error.message && (error.message.includes('email` is not unique') || error.message.includes('Email already exists'))) {
+        if (error.message && (error.message.includes('is not unique') || error.message.includes('Email already exists') || error.message.includes('already exists'))) {
           errorMessage = "This email address is already registered. Please use a different email or contact management for help accessing your existing account.";
         }
-        
+
         Toastify({
                 text: errorMessage,
                 duration: 6000,
                 close: true,
-                gravity: "top", 
+                gravity: "top",
                 position: 'right',
                 style: {
                     background: "red",
